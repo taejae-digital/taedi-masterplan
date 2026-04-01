@@ -581,7 +581,7 @@ function ExecutionPlanPage() {
           </div>
           <div style={{ padding: "10px 12px", borderTop: "4px solid #333", background: C.bg }}>
             <div style={{ fontSize: 13, fontWeight: 800, color: C.dark, marginBottom: 2 }}>윤준영</div>
-            <div style={{ fontSize: 11.5, lineHeight: 1.6, color: C.gray, marginTop: 6 }}>국제 레짐 · 국제 규범 · 디지털경제</div>
+            <div style={{ fontSize: 11.5, lineHeight: 1.6, color: C.gray, marginTop: 6 }}>국제 레짐 · 국제 규범 · 디지털 경제</div>
           </div>
           <div style={{ padding: "10px 12px", borderTop: "4px solid #333", background: C.bg }}>
             <div style={{ fontSize: 13, fontWeight: 800, color: C.dark, marginBottom: 2 }}>김수연</div>
