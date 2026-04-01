@@ -1,48 +1,77 @@
 import Link from "next/link";
 
-const versions = [
-  { id: "mp/v0.1", label: "Master Plan v0.1", date: "2026.04", desc: "디지털 전환과 사회변혁팀 — 비전 선언 + 위협·통제 방안 + 연구 로드맵 + 연구 정리", color: "#1a2744" },
-  { id: "v6", label: "종합 보고서 초안", date: "2026.04", desc: "디지털의 본질·사회 변화·위협 시나리오·대책(구축→금지→승인→전환)·실행 계획", color: "#111" },
-  { id: "v6.3", label: "V6.3 Companion Report", date: "2026.04", desc: "이론적 배경과 상세한 논리 전개 — 종합 보고서 초안의 companion", color: "#333" },
-  { id: "v5.5.1", label: "V5.5.1", date: "2026.03", desc: "변화→통제→경제질서→거버넌스→공동체 재편", color: "#1a6b4a" },
-  { id: "v5.0", label: "V5.0", date: "2026.03", desc: "디지털 위협의 통제 — 4단계 흐름 (초기 버전)", color: "#2d6a4f" },
-  { id: "v4.4.2", label: "V4.4.2", date: "2026.03", desc: "정체성 실현권 + 돌봄 윤리 + 상호의존성", color: "#1a5276" },
-  { id: "v4.4", label: "V4.4", date: "2026.03", desc: "기술의 독점에서 자유의 확장으로 — 8장 체계", color: "#2c3e6b" },
-  { id: "v4.3.1", label: "V4.3.1", date: "2026.03", desc: "자유의 확장 — 컴팩트 backing report", color: "#555" },
-  { id: "v4.3", label: "V4.3", date: "2026.03", desc: "자유의 확장 — 정당 비전 포함", color: "#777" },
+const current = [
+  {
+    id: "mp/v0.1",
+    label: "Master Plan v0.1",
+    type: "4페이지 마스터플랜",
+    date: "2026.04",
+    desc: "비전 · 위협과 통제 방안 · 연구 내용 · 실행 계획",
+    docs: [
+      { name: "A3 종합 보고서", href: "/v6" },
+      { name: "Companion Report", href: "/v6.3" },
+    ],
+  },
+];
+
+const archive = [
+  { id: "archive/v5.5.1", label: "v5.5.1", date: "2026.03", desc: "변화→통제→경제질서→거버넌스→공동체 재편" },
+  { id: "archive/v5.0", label: "v5.0", date: "2026.03", desc: "디지털 위협의 통제 — 4단계 흐름" },
+  { id: "archive/v4.4.2", label: "v4.4.2", date: "2026.03", desc: "정체성 실현권 + 돌봄 윤리" },
+  { id: "archive/v4.4", label: "v4.4", date: "2026.03", desc: "기술의 독점에서 자유의 확장으로" },
+  { id: "archive/v4.3.1", label: "v4.3.1", date: "2026.03", desc: "자유의 확장 — 컴팩트" },
+  { id: "archive/v4.3", label: "v4.3", date: "2026.03", desc: "자유의 확장 — 정당 비전 포함" },
 ];
 
 export default function Home() {
   return (
-    <div style={{ maxWidth: 1000, margin: "0 auto", padding: "40px 20px" }}>
-      <h1 style={{ fontSize: 24, fontWeight: 800, marginBottom: 4 }}>A3 Viewer</h1>
-      <p style={{ fontSize: 14, color: "#777", marginBottom: 32 }}>
-        태재미래전략연구원 디지털 전환과 사회변혁팀 — 버전별 A3 요약
-      </p>
-      <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(280px, 1fr))", gap: 16 }}>
-        {versions.map((v) => (
-          <Link
-            key={v.id}
-            href={`/${v.id}`}
-            style={{
-              textDecoration: "none",
-              textAlign: "left",
-              padding: 20,
-              background: "#fff",
-              border: "1px solid #ddd",
-              borderLeft: `4px solid ${v.color}`,
-              borderRadius: 8,
-              display: "block",
-              transition: "box-shadow 0.15s",
-            }}
-          >
-            <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: 8 }}>
-              <span style={{ fontSize: 18, fontWeight: 800, color: v.color }}>{v.label}</span>
-              <span style={{ fontSize: 11, color: "#aaa" }}>{v.date}</span>
+    <div style={{ maxWidth: 1100, margin: "0 auto", padding: "48px 24px", fontFamily: "Pretendard, -apple-system, sans-serif" }}>
+      {/* Header */}
+      <div style={{ marginBottom: 40 }}>
+        <div style={{ fontSize: 11, letterSpacing: 3, color: "#999", marginBottom: 6, textTransform: "uppercase" }}>태재미래전략연구원</div>
+        <h1 style={{ fontSize: 32, fontWeight: 800, margin: "0 0 6px", color: "#111", lineHeight: 1.2 }}>디지털 전환과 사회변혁</h1>
+        <p style={{ fontSize: 15, color: "#666", margin: 0 }}>디지털이 초래할 위험성과 그 대책 — 마스터플랜 및 연구 문서</p>
+      </div>
+
+      {/* Current version */}
+      {current.map((v) => (
+        <div key={v.id} style={{ marginBottom: 40 }}>
+          <Link href={`/${v.id}`} style={{ textDecoration: "none", display: "block", padding: "28px 32px", background: "#1a2744", borderRadius: 12, color: "#fff", transition: "opacity 0.15s" }}>
+            <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", marginBottom: 12 }}>
+              <div>
+                <div style={{ fontSize: 11, letterSpacing: 2, opacity: 0.5, marginBottom: 4 }}>{v.type}</div>
+                <div style={{ fontSize: 24, fontWeight: 800 }}>{v.label}</div>
+              </div>
+              <div style={{ fontSize: 12, opacity: 0.4 }}>{v.date}</div>
             </div>
-            <p style={{ fontSize: 13, color: "#555", lineHeight: 1.4, margin: 0 }}>{v.desc}</p>
+            <p style={{ fontSize: 14, opacity: 0.7, margin: 0, lineHeight: 1.5 }}>{v.desc}</p>
           </Link>
-        ))}
+          {/* Related docs */}
+          <div style={{ display: "flex", gap: 12, marginTop: 12 }}>
+            {v.docs.map((d) => (
+              <Link key={d.name} href={d.href} style={{ textDecoration: "none", padding: "14px 20px", background: "#f8f9fa", border: "1px solid #e0e0e0", borderRadius: 8, flex: 1, transition: "border-color 0.15s" }}>
+                <div style={{ fontSize: 13, fontWeight: 700, color: "#333", marginBottom: 2 }}>{d.name}</div>
+                <div style={{ fontSize: 11, color: "#999" }}>{v.label} 기반</div>
+              </Link>
+            ))}
+          </div>
+        </div>
+      ))}
+
+      {/* Archive */}
+      <div style={{ marginTop: 32 }}>
+        <div style={{ fontSize: 12, letterSpacing: 2, color: "#999", marginBottom: 12, textTransform: "uppercase" }}>Archive — 이전 버전</div>
+        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(220px, 1fr))", gap: 10 }}>
+          {archive.map((v) => (
+            <Link key={v.id} href={`/${v.id}`} style={{ textDecoration: "none", padding: "12px 16px", background: "#fafafa", border: "1px solid #eee", borderRadius: 6, display: "block", transition: "border-color 0.15s" }}>
+              <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: 4 }}>
+                <span style={{ fontSize: 14, fontWeight: 700, color: "#555" }}>{v.label}</span>
+                <span style={{ fontSize: 10, color: "#bbb" }}>{v.date}</span>
+              </div>
+              <p style={{ fontSize: 11, color: "#999", lineHeight: 1.4, margin: 0 }}>{v.desc}</p>
+            </Link>
+          ))}
+        </div>
       </div>
     </div>
   );
