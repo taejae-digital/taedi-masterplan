@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>디지털 위협의 통제 — 안전한 미래를 위한 설계</title>
+<link href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" rel="stylesheet">
+<style>
+  *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+  :root {
+    --black: #111; --dark: #333; --gray: #777; --light: #bbb; --line: #ddd;
+    --bg: #f5f5f5; --white: #fff; --red: #8b2500; --green: #1a6b4a; --blue: #1a5276; --gold: #8c6d1f;
+  }
+  body { font-family: 'Pretendard', -apple-system, sans-serif; font-size: 15px; line-height: 1.5; color: var(--dark); background: var(--white); margin: 0; }
+  @media print { @page { size: A3 landscape; margin: 0; } }
+  .page { width: 420mm; height: 297mm; margin: 0 auto; padding: 12mm 16mm 10mm; display: flex; flex-direction: column; justify-content: space-between; overflow: hidden; }
+
+  header { display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 8px; border-bottom: 2.5px solid var(--black); padding-bottom: 5px; flex-shrink: 0; }
+  .h-title { font-size: 1.6rem; font-weight: 800; line-height: 1.1; letter-spacing: -0.03em; }
+  .h-sub { font-size: 0.85rem; color: var(--gray); margin-top: 2px; }
+  .h-meta { text-align: right; font-size: 0.8rem; color: var(--gray); line-height: 1.4; }
+  .h-meta strong { display: block; color: var(--dark); font-weight: 700; font-size: 0.88rem; }
+
+  .st { font-size: 0.95rem; font-weight: 700; margin-bottom: 4px; padding-bottom: 3px; border-bottom: 1px solid var(--gray); color: var(--dark); }
+  .sd { font-size: 0.82rem; line-height: 1.5; margin-bottom: 4px; }
+
+  .t { width: 100%; border-collapse: collapse; font-size: 0.78rem; line-height: 1.4; }
+  .t th { font-size: 0.68rem; font-weight: 400; padding: 3px 6px; text-align: left; border-bottom: 1.5px solid var(--black); }
+  .t td { padding: 4px 6px; border-bottom: 1px solid var(--line); vertical-align: top; }
+  .t .era { font-weight: 700; }
+
+  .fh { margin-bottom: 4px; padding-bottom: 3px; border-bottom: 1.5px solid var(--line); margin-top: 6px; }
+  .ft { font-size: 0.95rem; font-weight: 700; }
+  .fr { font-size: 0.78rem; line-height: 1.45; }
+  .frow { display: flex; gap: 6px; margin-bottom: 5px; }
+  .ftag { min-width: 50px; flex-shrink: 0; font-weight: 700; color: var(--gray); font-size: 0.72rem; }
+
+  .box { border: 1px solid var(--line); padding: 8px 10px; background: var(--bg); font-size: 0.78rem; line-height: 1.45; }
+  .box-title { font-weight: 700; margin-bottom: 3px; }
+
+  .flow { display: flex; align-items: center; gap: 0; margin: 12px 0; }
+  .flow-step { flex: 1; padding: 10px 12px; text-align: center; font-size: 0.78rem; font-weight: 600; position: relative; }
+  .flow-step.s1 { background: var(--dark); color: var(--white); }
+  .flow-step.s2 { background: var(--red); color: var(--white); }
+  .flow-step.s3 { background: var(--blue); color: var(--white); }
+  .flow-step.s4 { background: var(--green); color: var(--white); }
+  .flow-arr { font-size: 1.2rem; color: var(--gray); padding: 0 4px; }
+
+  .pq { background: #555; color: var(--white); padding: 8px 14px; text-align: center; font-size: 0.85rem; line-height: 1.45; }
+
+  footer { padding: 8px 16px; background: var(--bg); flex-shrink: 0; border-top: 1.5px solid var(--line); text-align: center; font-size: 0.82rem; line-height: 1.45; font-weight: 500; }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <header>
+    <div>
+      <div class="h-title">디지털 위협의 통제 — 안전한 미래를 위한 설계</div>
+      <div class="h-sub">위협을 정확히 알아야 통제할 수 있다</div>
+    </div>
+    <div class="h-meta"><strong>태재미래전략연구원</strong>디지털 전환과 사회변혁팀 · 2026. 3.</div>
+  </header>
+
+  <!-- ═══ FLOW DIAGRAM ═══ -->
+  <div class="flow">
+    <div class="flow-step s1">1. 핵심 기술<br><span style="font-weight:400; font-size:0.7rem;">무엇이 변하고 있는가</span></div>
+    <div class="flow-arr">→</div>
+    <div class="flow-step s2">2. 구체적 위협<br><span style="font-weight:400; font-size:0.7rem;">어떤 위험이 파생되는가</span></div>
+    <div class="flow-arr">→</div>
+    <div class="flow-step s3">3. 통제 설계<br><span style="font-weight:400; font-size:0.7rem;">어떻게 사전에 막을 것인가</span></div>
+    <div class="flow-arr">→</div>
+    <div class="flow-step s4">4. 새로운 질서<br><span style="font-weight:400; font-size:0.7rem;">어떤 세계를 만들 것인가</span></div>
+  </div>
+
+  <!-- ═══ MAIN CONTENT: 3-column ═══ -->
+  <div style="display:grid; grid-template-columns:1fr 1fr 1fr; gap:20px; flex:1; min-height:0;">
+
+    <!-- ═══ COLUMN 1: 기술 + 위협 ═══ -->
+    <div style="display:flex; flex-direction:column; gap:12px;">
+
+      <div>
+        <div class="st">1. 핵심 디지털 기술 — 무엇이 변하고 있는가</div>
+        <p class="sd" style="color:var(--gray);">기술 자체가 아니라 기술에서 파생되는 위험을 봐야 한다. 위험을 알아야 통제할 수 있다.</p>
+        <table class="t">
+          <thead><tr><th>기술</th><th>변화의 단계</th><th>파생 위험</th></tr></thead>
+          <tbody>
+            <tr><td class="era">대규모 언어모델</td><td>열매 단계 — 이미 보편화</td><td>정보 조작, 딥페이크, 전문가 대체</td></tr>
+            <tr><td class="era">AI 에이전트</td><td>싹 단계 — 급성장 중</td><td>자율적 의사결정, 통제 상실</td></tr>
+            <tr><td class="era">AI + 생명공학</td><td>씨앗 단계 — 초기</td><td>맞춤형 생물무기, 유전자 조작</td></tr>
+            <tr><td class="era">AI + 사이버</td><td>꽃 단계 — 실전 배치</td><td>인프라 파괴, 자동화된 공격</td></tr>
+            <tr><td class="era">AI + 군사</td><td>꽃 단계 — 군비 경쟁</td><td>자율살상무기, 핵 AI화</td></tr>
+            <tr><td class="era">휴머노이드 로봇</td><td>싹 단계 — 급성장 중</td><td>물리적 노동 대체, 자율 행동</td></tr>
+            <tr><td class="era">AGI/초지능</td><td>씨앗 단계 — 불확실</td><td>인류 통제 상실</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div>
+        <div class="st">2. 구체적 위협 — 우선순위</div>
+        <p class="sd" style="color:var(--gray);">추상적이면 안 된다. 어떤 기술이, 어떻게, 누구를 위험에 빠뜨리는가.</p>
+        <table class="t">
+          <thead><tr><th>위협</th><th>왜 위험한가</th><th>긴급도</th></tr></thead>
+          <tbody>
+            <tr><td class="era">AI 생물무기</td><td>대학원생도 설계 가능. 만든 쪽도 죽는다</td><td style="color:var(--red); font-weight:700;">긴급</td></tr>
+            <tr><td class="era">AI 사이버WMD</td><td>인프라 상호 파괴. WannaCry: 만든 미국도 피해</td><td style="color:var(--red); font-weight:700;">긴급</td></tr>
+            <tr><td class="era">핵 AI화</td><td>인간 판단 없는 핵 발사. 우발적 핵전쟁</td><td style="color:var(--red); font-weight:700;">긴급</td></tr>
+            <tr><td class="era">자율살상무기</td><td>AI가 살상 결정. 책임 소재 불명</td><td style="color:var(--gold); font-weight:700;">높음</td></tr>
+            <tr><td class="era">AGI 통제 상실</td><td>인간 의도와 무관한 자율적 행동</td><td style="color:var(--gold); font-weight:700;">높음</td></tr>
+            <tr><td class="era">감시·조작 체제</td><td>행동 예측→행동 조작. 민주주의 침식</td><td style="color:var(--blue); font-weight:700;">진행중</td></tr>
+            <tr><td class="era">대량 노동 대체</td><td>정체성 상실. "나는 뭘 하는 사람인가"</td><td style="color:var(--blue); font-weight:700;">진행중</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+    </div>
+
+    <!-- ═══ COLUMN 2: 통제 설계 ═══ -->
+    <div style="display:flex; flex-direction:column; gap:12px;">
+
+      <div>
+        <div class="st">3. 통제 설계 — 어떻게 사전에 막을 것인가</div>
+        <p class="sd" style="color:var(--gray);">핵 확산을 초기에 잡았으면 쉬웠다. 방치하면 북한까지 핵을 갖는다. 디지털 위협도 지금이 초기다.</p>
+      </div>
+
+      <div class="box">
+        <div class="box-title">원칙: FDA 모델</div>
+        약이 건강을 해치지 않는다는 것을 <strong>개발자가 증명</strong>해야 승인된다. 검사하는 측이 확인하는 게 아니라 개발하는 측이 책임진다. AI 기술도 마찬가지다 — <strong>개발자가 안전성을 증명</strong>해야 배포가 허용되는 구조.
+      </div>
+
+      <div>
+        <div class="fh"><span class="ft">통제의 세 층위</span></div>
+        <div class="fr">
+          <div class="frow"><span class="ftag" style="color:var(--red);">금지</span><span>만든 쪽도 죽는 기술은 절대 금지. AI 생물무기, 사이버WMD, 핵AI화, 통제 불가 AGI. 검증 기구(AI-IAEA)가 독립 사찰</span></div>
+          <div class="frow"><span class="ftag" style="color:var(--gold);">승인</span><span>FDA 모델 적용. 고위험 AI는 개발자가 안전성을 증명해야 배포 허용. 부작용 기록·공개 의무</span></div>
+          <div class="frow"><span class="ftag" style="color:var(--blue);">균형</span><span>독점 견제, 감시 제한, 군사화 제재. 인프라 접근권 보장. 이익의 사회 환원</span></div>
+        </div>
+      </div>
+
+      <div>
+        <div class="fh"><span class="ft">검증이 신뢰를 만든다 — 조약의 교훈</span></div>
+        <table class="t" style="font-size:0.72rem;">
+          <tbody>
+            <tr><td class="era">CWC (화학)</td><td>OPCW 독립 사찰 → 98% 폐기 성공</td><td style="color:var(--green);">검증 ○</td></tr>
+            <tr><td class="era">BWC (생물)</td><td>검증 없음 → 소련 20년 비밀 개발</td><td style="color:var(--red);">검증 ✕</td></tr>
+            <tr><td class="era">NPT (핵)</td><td>IAEA 사찰 있으나 강대국 특권 → 군축 실패</td><td style="color:var(--gold);">부분적</td></tr>
+          </tbody>
+        </table>
+        <p class="sd" style="font-size:0.72rem; color:var(--gray); margin-top:4px;">교훈: (1) 검증 없는 금지는 실패한다 (2) 강대국 특권을 인정하면 합의가 지속되지 않는다</p>
+      </div>
+
+      <div>
+        <div class="fh"><span class="ft">변하는 것과 변하지 않는 것</span></div>
+        <div class="fr">
+          <div class="frow"><span class="ftag">변하지 않음</span><span>개인은 자유를 원하고, 공동체는 질서를 원한다. 내 자유가 남의 자유를 해치면 안 된다.</span></div>
+          <div class="frow"><span class="ftag">변함</span><span>자유의 범위가 확장된다. 소유권(부동산→데이터→정체성), 노동(고용→자율→정체성 실현), 공동체(국가→블록→세계 정부)</span></div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- ═══ COLUMN 3: 새로운 질서 ═══ -->
+    <div style="display:flex; flex-direction:column; gap:12px;">
+
+      <div>
+        <div class="st">4. 새로운 질서 — 어떤 세계를 만들 것인가</div>
+        <p class="sd" style="color:var(--gray);">위협을 통제한 뒤, 그 자리에 무엇이 들어서야 하는가. 산업 시대의 질서(자본주의/공산주의)를 대체할 디지털 시대의 경제·정치 질서.</p>
+      </div>
+
+      <div>
+        <div class="fh"><span class="ft">미중 합의 — 경쟁에서 협력으로</span></div>
+        <div class="fr">
+          <p style="color:var(--gray); margin-bottom:4px;">지금 가는 대로 가면 미래가 없다. 미중 경쟁보다 대량살상무기·기후변화·인구폭발이 더 위험하다. 이 문제를 해결하지 않고는 이기든 지든 미래가 없다.</p>
+          <div class="frow"><span class="ftag" style="color:var(--red);">1단계</span><span>디지털 위협 공동 통제 — 만든 쪽도 죽는 위협부터</span></div>
+          <div class="frow"><span class="ftag" style="color:var(--gold);">2단계</span><span>산업 시대 위협 공동 대응 — 대량살상무기, 기후변화, 인구</span></div>
+          <div class="frow"><span class="ftag" style="color:var(--green);">3단계</span><span>새로운 세계 질서 공동 설계 — 경제·정치·기술 규범</span></div>
+        </div>
+      </div>
+
+      <div>
+        <div class="fh"><span class="ft">세계 정부 — 단계적 경로</span></div>
+        <div class="fr">
+          <p style="color:var(--gray); margin-bottom:4px;">UN은 권한도 능력도 없다. 화폐 발행, 금융 통제, 기술 규제를 할 수 있는 기구가 필요하다.</p>
+          <div class="frow"><span class="ftag">블록화</span><span>미국·EU·중국·인도·동남아·아메리카 블록 형성</span></div>
+          <div class="frow"><span class="ftag">통합</span><span>블록 간 합의 → 세계 의회 (상원: 국가 대표 / 하원: 인구 비례, 시민 직접 참여)</span></div>
+          <div class="frow"><span class="ftag">기능</span><span>세계 화폐 발행, 금융·기술 규제, 분쟁 해결, 위협 통제</span></div>
+        </div>
+      </div>
+
+      <div>
+        <div class="fh"><span class="ft">새로운 가치 — 정체성 실현권</span></div>
+        <div class="fr">
+          <p style="margin-bottom:4px;">산업 시대: "효율이 가치, 정체성 실현은 사치." 남의 꿈을 위해 노동.</p>
+          <p style="margin-bottom:4px;">디지털 시대: AI가 누구나 전문가급 역량을 제공. <strong>정체성 실현이 사치에서 보편적 권리로.</strong></p>
+          <p style="color:var(--gray);">참정권이 민주주의를 정의했듯, 정체성 실현권이 디지털 시대를 정의한다. 단, 내 자유가 남의 자유를 해치지 않는 범위 내에서.</p>
+        </div>
+      </div>
+
+      <div class="box">
+        <div class="box-title" style="color:var(--gold);">핵심 제안: 광화문 회의(가칭)</div>
+        현재 노력들은 "무엇을 막을 것인가"만 다룬다. 광화문 회의는 "어떤 세계를 만들 것인가"를 함께 다루는 최초의 장. AI 과학자 + 철학자·경제학자·시민사회가 함께 모여 새 시대의 가치 선언을 채택한다.
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- ═══ BOTTOM: 관찰 방법론 ═══ -->
+  <div class="pq" style="margin-top:10px;">
+    <strong>관찰의 원칙</strong> — 별을 보려면 망원경이, 세포를 보려면 현미경이 필요하다. 디지털 위협도 마찬가지다. 변하는 것과 변하지 않는 것을 구분하고, 변화의 단계(씨앗→싹→꽃→열매)를 파악하고, 초기에 잡아야 한다. 방치하면 핵처럼 수습이 안 된다.
+  </div>
+
+  <footer>
+    안전한 미래를 창조하는 계획 — 지속 불가능한 것을 안전하게 만들고, 미래의 불안 요소를 사전에 예방한다. 위험은 함께 막고, 자유는 최대한 누린다.
+  </footer>
+
+</div>
+</body>
+</html>
