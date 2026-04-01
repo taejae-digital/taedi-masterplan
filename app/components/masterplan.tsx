@@ -535,39 +535,41 @@ function ExecutionPlanPage() {
       <div style={{ margin: "0 32px 12px" }}>
         {sec("3", "국제 자문단 구성")}
         <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 16 }}>
-          <table style={{ width: "100%", borderCollapse: "collapse" }}>
-            <thead><tr><th style={hcell}>자문단 후보</th><th style={hcell}>소속</th><th style={hcell}>기여 영역</th></tr></thead>
-            <tbody>
-              {[
-                ["A. Hall", "Stanford GSB", "공공부문 AI 전환"],
-                ["Susskind", "Oxford", "AI와 노동"],
-                ["Bengio", "Mila/ARIA", "AI 실존적 위협"],
-                ["Russell", "UC Berkeley", "AI 정렬"],
-                ["Acemoglu", "MIT", "민주적 재방향화"],
-                ["Mazzucato", "UCL", "공공 투자"],
-                ["Payne", "King's", "AI 군비 경쟁"],
-                ["Brynjolfsson", "Stanford HAI", "AI 생산성"],
-                ["조경현", "NYU", "AI 안전"],
-                ["김경태", "Stanford MSx", "한미 비교 연구"],
-              ].map(([n, a, r]) => (
-                <tr key={n}><td style={{ ...cell, fontWeight: 700, fontSize: 11, padding: "3px 8px" }}>{n}</td><td style={{ ...cell, fontSize: 11, padding: "3px 8px" }}>{a}</td><td style={{ ...cell, fontSize: 11, padding: "3px 8px" }}>{r}</td></tr>
-              ))}
-            </tbody>
-          </table>
-          <table style={{ width: "100%", borderCollapse: "collapse" }}>
-            <thead><tr><th style={hcell}>협력 기관</th><th style={hcell}>협력 내용</th></tr></thead>
-            <tbody>
-              {[
-                ["한국 AI 안전연구소(AISI)", "AI 위험 지도 공동 개발, 시나리오 검증"],
-                ["Stanford HAI", "AI 거버넌스, 공공부문 AI 전환 연구"],
-                ["UK ARIA", "AI 안전, Bengio 과학이사 연결"],
-                ["OECD AI Policy Observatory", "국제 AI 정책 비교, 데이터"],
-                ["KAIST AI 철학 연구센터", "전자인 법적 범주, AI 윤리"],
-              ].map(([n, r]) => (
-                <tr key={n}><td style={{ ...cell, fontWeight: 700 }}>{n}</td><td style={cell}>{r}</td></tr>
-              ))}
-            </tbody>
-          </table>
+          {[
+            [
+              ["Yuval", "Harari", "Hebrew University of Jerusalem 역사학 교수", "『사피엔스』·『넥서스』의 거시역사학자. AI가 서사·의미 체계를 붕괴시키고 디지털 권위주의를 강화할 위험을 가장 명료하게 경고한 사상가.", "감시·조작 체제 / 빅테크 권력 독점 / 거버넌스 공백"],
+              ["Daron", "Acemoglu", "MIT 경제학 교수 (2024 노벨 경제학상 수상)", "『국가는 왜 실패하는가』 공저자. AI·자동화가 권력 구조의 선택임을 실증하고, 기술의 방향을 민주적으로 재설계하는 논거를 제시한 제도경제학 권위자.", "대량 실업·정체성 위기 / 빅테크 권력 독점 / 거버넌스 공백"],
+              ["Nick", "Bostrom", "Macrostrategy Research Initiative 수석 연구원 (前 Oxford FHI 창립 소장)", "초지능·실존적 위험 연구의 선구자. 『Superintelligence』·『Deep Utopia』로 AI 통제 문제와 노동 이후 사회의 의미 공백을 가장 체계적으로 탐구한 철학자.", "AI 통제 상실 / 핵AI화·자율살상 / 거버넌스 공백"],
+              ["Yoshua", "Bengio", "Université de Montréal 교수 / Mila 창립 과학 책임자 / LawZero 설립자", "딥러닝의 대부, 2018년 튜링상 수상. 스스로 개척한 기술의 위험을 경고하며 LawZero를 설립한 행동하는 과학자로, 프런티어 AI 안전 분야 최고 권위자.", "AI 통제 상실 / AI 생물무기 / 거버넌스 공백"],
+              ["Mustafa", "Suleyman", "Microsoft AI CEO (前 DeepMind 공동 창립자)", "DeepMind 공동 창업 후 Microsoft AI를 이끄는 산업 내부자. 『The Coming Wave』에서 기술 확산의 봉쇄 실패를 정면으로 다뤄 실천적 거버넌스 논의를 주도.", "AI 군사 비대칭 / AI 생물무기 / 사이버 WMD / 거버넌스 공백"],
+            ],
+            [
+              ["Shoshana", "Zuboff", "Harvard Business School 명예교수", "『감시 자본주의의 시대』로 빅테크의 행동 수정 경제를 해부. 플랫폼 권력이 민주주의를 침식하는 메커니즘을 가장 날카롭게 분석한 디지털 권력 이론가.", "감시·조작 체제 / 빅테크 권력 독점"],
+              ["Thomas", "Piketty", "Paris School of Economics 교수 / World Inequality Lab 공동 소장", "『21세기 자본』의 r>g 명제로 자본주의 불평등 동학을 실증. AI·디지털 자본의 초집중과 세습 불평등 심화를 분석하고 누진적 부유세·참여 사회주의를 제안한 경제학자.", "대량 실업·정체성 위기 / 빅테크 권력 독점 / 거버넌스 공백"],
+              ["Guy", "Standing", "University of London 경제학 교수 / BIEN(기본소득지구네트워크) 공동 창립자", "프레카리아트 개념 창안자. 플랫폼 자본주의가 낳는 불안정 계층의 다중 박탈과 지대 경제를 체계화했으며, 기본소득·커먼즈 배당 설계의 세계적 권위자.", "대량 실업·정체성 위기 / 빅테크 권력 독점"],
+              ["Daniel", "Susskind", "King's College London 경제학 교수 / Oxford Institute for Ethics in AI 선임 연구원", "『A World Without Work』에서 기술적 실업의 구조적 불가피성과 의미의 위기를 정면으로 다룬 경제학자. 장소·스킬·정체성 미스매치 분석과 조건부 기본소득 설계 분야 전문가.", "대량 실업·정체성 위기 / AI 통제 상실"],
+              ["Alvin", "Graylin", "HTC 글로벌 부사장 / ViveX Accelerator 공동 대표 (前 HTC China 대표)", "MIT AI·경영 석사, 30년간 AI·XR 산업을 이끈 기술경영 전문가. 미중 문화 전환을 직접 체험한 배경으로 미중 AI 경쟁의 본질을 재해석하고 AGI 시대 AI 권리장전을 제시.", "AI 군사 비대칭 / 빅테크 권력 독점 / 거버넌스 공백"],
+            ],
+          ].map((group, gi) => (
+            <table key={gi} style={{ width: "100%", borderCollapse: "collapse" }}>
+              <thead><tr>
+                <th style={{ ...hcell, textAlign: "center" as const }}>후보</th>
+                <th style={{ ...hcell, textAlign: "center" as const }}>소속 및 특이사항</th>
+                <th style={{ ...hcell, textAlign: "center" as const }}>선정 배경</th>
+                <th style={{ ...hcell, textAlign: "center" as const }}>기여 영역</th>
+              </tr></thead>
+              <tbody>
+                {group.map(([first, last, a, b, r]) => (
+                  <tr key={last}>
+                    <td style={{ ...cell, fontWeight: 700, fontSize: 10, padding: "4px 8px" }}>{first}<br/>{last}</td>
+                    <td style={{ ...cell, fontSize: 10, padding: "4px 8px" }}>{a}</td>
+                    <td style={{ ...cell, fontSize: 10, padding: "4px 8px" }}>{b}</td>
+                    <td style={{ ...cell, fontSize: 10, padding: "4px 8px" }}>{r}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          ))}
         </div>
       </div>
 
