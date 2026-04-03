@@ -10,20 +10,36 @@ export function ExecutionPlanPage() {
 
   return (
     <div style={{ pageBreakBefore: "always" }}>
-      <Header subtitle="4. 실행 계획 및 팀 업무 분장" />
+      <Header title="MASTER PLAN v0.1" subtitle="4. 실행 계획 및 팀 업무 분장" />
 
       {/* 01. 실행 일정 */}
       <div style={{ margin: "16px 32px 16px" }}>
         {sec("1", "실행 일정")}
-        <div style={{ display: "grid", gridTemplateColumns: "2fr 1fr 1fr", gap: 20 }}>
+        <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr 2fr", gap: 20 }}>
         <div>
-          <div style={{ fontSize: 14.5, fontWeight: 800, color: C.dark, marginBottom: 8 }}>금년 실행 일정 (2026)</div>
+          <div style={{ fontSize: 14.5, fontWeight: 800, color: C.dark, marginBottom: 8 }}>장기 목표 (2028~)</div>
+          <div style={{ fontSize: 14, lineHeight: 1.7, color: C.gray }}>
+            {["세계 의회 설립", "세계 정부 설립", "빅테크 컴퓨팅 자원 공정 접근 모델", "디지털 권리 헌장 초안", "현실화 — 입법 제안"].map((t, i) => (
+              <div key={i} style={{ padding: "4px 8px", background: C.bg, borderLeft: `3px solid ${C.dark}`, marginBottom: 4 }}>{t}</div>
+            ))}
+          </div>
+        </div>
+        <div>
+          <div style={{ fontSize: 14.5, fontWeight: 800, color: C.dark, marginBottom: 8 }}>중기 목표 (2027)</div>
+          <div style={{ fontSize: 14, lineHeight: 1.7, color: C.gray }}>
+            {["연구 보고서 퍼블리시", "국제 자문단 상설화", "해외 학술지 게재", "AI 거버넌스 국제 회의체 참여", "세계 의회 설립 논의 시작"].map((t, i) => (
+              <div key={i} style={{ padding: "4px 8px", background: C.bg, borderLeft: `3px solid ${C.dark}`, marginBottom: 4 }}>{t}</div>
+            ))}
+          </div>
+        </div>
+        <div>
+          <div style={{ fontSize: 14.5, fontWeight: 800, color: C.dark, marginBottom: 8 }}>2026년 실행 일정</div>
           <table style={{ width: "100%", borderCollapse: "collapse" }}>
             <thead><tr><th style={{ ...tlh, width: "18%" }}>시기</th><th style={tlh}>실행 내용</th><th style={{ ...tlh, width: "28%" }}>산출물</th></tr></thead>
             <tbody>
               {([
                 ["4~5월", "마스터플랜 확정 · 위협 검증 착수 · 자문단 섭외 시작", "위협 목록 확정"],
-                ["6~8월", "기술 통제 체계 설계 · 승인 체계 설계 · 전환 모델 연구 병행", "통제 방안 초안"],
+                ["6~8월", "통제 방안 연구 4개 병행 (금지·승인·전환·구축)", "통제 방안 초안"],
                 ["9~10월", "연구 보완 · 자문단 미팅 · 피드백 반영", "종합 연구 보고서"],
                 ["11~12월", "단행본 출판 · 컨퍼런스 개최", "단행본 출판본"],
               ] as const).map(([t, c, o]) => (
@@ -32,22 +48,6 @@ export function ExecutionPlanPage() {
             </tbody>
           </table>
         </div>
-        <div>
-          <div style={{ fontSize: 14.5, fontWeight: 800, color: C.dark, marginBottom: 8 }}>중기 목표 (2027~2028)</div>
-          <div style={{ fontSize: 14, lineHeight: 1.7, color: C.gray }}>
-            {["연구 보고서 퍼블리시", "국제 자문단 상설화", "해외 학술지 게재", "AI 거버넌스 국제 회의체 참여", "한국 내 입법 제안 · 정책화"].map((t, i) => (
-              <div key={i} style={{ padding: "4px 8px", background: C.bg, borderLeft: `3px solid ${C.dark}`, marginBottom: 4 }}>{t}</div>
-            ))}
-          </div>
-        </div>
-        <div>
-          <div style={{ fontSize: 14.5, fontWeight: 800, color: C.dark, marginBottom: 8 }}>장기 목표 (2029~)</div>
-          <div style={{ fontSize: 14, lineHeight: 1.7, color: C.gray }}>
-            {["빅테크 컴퓨팅 자원 공정 접근 모델", "디지털 권리 헌장 초안", "국가 간 AI 통제 협약 논의 참여", "세계 의회 설립 논의 기여 (민간)", "장기 비전 — 글로벌 AI 거버넌스"].map((t, i) => (
-              <div key={i} style={{ padding: "4px 8px", background: C.bg, borderLeft: `3px solid ${C.dark}`, marginBottom: 4 }}>{t}</div>
-            ))}
-          </div>
-        </div>
 
       </div>
 
@@ -55,21 +55,19 @@ export function ExecutionPlanPage() {
 
       {/* 02. 향후 연구 과제 */}
       <div style={{ margin: "0 32px 12px" }}>
-        {sec("2", "금년 핵심 연구 과제 (연구소가 직접 수행)")}
-        <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr 1fr", gap: 12 }}>
+        {sec("2", "향후 연구 과제")}
+        <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr 1fr 1fr", gap: 12 }}>
           {[
-            { t: "① 기술 통제 체계 설계", d: "기술 통제 관련 기존 체제 및 사례 분석. 핵심 기술 공급망 기반 수출통제 구조 검토. 분야별 통제 메커니즘 비교 분석. → 설계안을 만들어 정부에 제안." },
-            { t: "② 승인 체계 설계", d: "AI 안전청 설계(FDA 모델). 승인 등급·기준 수립. 킬스위치·행동 로그 의무화. 알고리즘 감사 체계. → 설계안을 만들어 정부에 제안." },
-            { t: "③ 전환 모델 설계", d: "AI 초과이윤 누진세 설계. 돌봄 인정소득 재원 산출. 컴퓨팅 자원 공정 접근 의무·데이터 주권·플랫폼 상호호환성. → 경제 질서 청사진 제시." },
+            { t: "[전제] 거버넌스 구축 경로", d: "세계 의회 경로 현실성 검증. 블레츨리 후속 추적. 미중 트랙2 외교. 중견국 외교(오타와 모델)." },
+            { t: "① 기술 통제 체제 설계", d: "기술 통제 관련 기존 체제 및 사례 분석. 핵심 기술 공급망 기반 수출통제 구조 검토. 분야별 통제 메커니즘 비교 분석." },
+            { t: "② 승인 체계 설계", d: "AI 안전청 설계(FDA 모델). 승인 등급·기준 수립. 킬스위치·행동 로그 의무화. 알고리즘 감사 체계." },
+            { t: "③ 전환 모델 설계", d: "AI 초과이윤 누진세 설계. 돌봄 인정소득 재원 산출. 컴퓨팅 자원 공정 접근 의무·데이터 주권·플랫폼 상호호환성." },
           ].map((s) => (
             <div key={s.t} style={{ padding: "8px 10px", borderTop: "3px solid #111" }}>
               <div style={{ fontSize: 15, fontWeight: 800, marginBottom: 4 }}>{s.t}</div>
               <div style={{ fontSize: 13.5, lineHeight: 1.6, color: C.gray }}>{s.d}</div>
             </div>
           ))}
-        </div>
-        <div style={{ marginTop: 8, padding: "6px 10px", background: "#f8f8f8", borderLeft: "3px solid #999", fontSize: 12, color: C.gray, lineHeight: 1.6 }}>
-          ※ 국가 간 협약 체결, 세계기구 설립 등 국가 간 외교 사안은 연구소가 직접 수행할 수 없는 영역. 연구소는 설계·제안·공론화에 집중하고, 실제 국가 간 교섭은 정부가 담당하도록 연결하는 역할을 한다.
         </div>
       </div>
 
