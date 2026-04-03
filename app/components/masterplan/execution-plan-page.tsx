@@ -58,7 +58,7 @@ export function ExecutionPlanPage() {
         <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr 1fr 1fr", gap: 12 }}>
           {[
             { t: "[전제] 거버넌스 구축 경로", d: "세계 의회 경로 현실성 검증. 블레츨리 후속 추적. 미중 트랙2 외교. 중견국 외교(오타와 모델)." },
-            { t: "① 금지 레짐 설계", d: "국제 협약 설계(CWC 모델). 칩 공급망 통제(ASML·TSMC·삼성·NVIDIA). AI 무기·생물무기 접근 차단. 수출 통제 체계." },
+            { t: "① 기술 통제 체제 분석 및 전문가 발굴", d: "국제 기술 통제 체제 분석(CWC 모델 등). 핵심 기술 공급망을 활용한 통제 체제 사례 검토(ASML·TSMC·삼성·NVIDIA). AI·생물 분야 접근 통제 체제 및 운영 메커니즘 조사. 관련 분야 전문가 및 협력 네트워크 발굴." },
             { t: "② 승인 체계 설계", d: "AI 안전청 설계(FDA 모델). 승인 등급·기준 수립. 킬스위치·행동 로그 의무화. 알고리즘 감사 체계." },
             { t: "③ 전환 모델 설계", d: "AI 초과이윤 누진세 설계. 돌봄 인정소득 재원 산출. 컴퓨팅 자원 공정 접근 의무·데이터 주권·플랫폼 상호호환성." },
           ].map((s) => (
@@ -122,7 +122,7 @@ export function ExecutionPlanPage() {
           </div>
           <div style={{ padding: "10px 12px", borderTop: "4px solid #333", background: C.bg }}>
             <div style={{ fontSize: 14.5, fontWeight: 800, color: C.dark, marginBottom: 2 }}>윤준영</div>
-            <div style={{ fontSize: 14, lineHeight: 1.6, color: C.gray, marginTop: 6 }}>① 금지 레짐 · 국제 협약 · 수출 통제</div>
+            <div style={{ fontSize: 14, lineHeight: 1.6, color: C.gray, marginTop: 6 }}>① 국제 레짐 · 국제 규범 · 경제 안보</div>
           </div>
           <div style={{ padding: "10px 12px", borderTop: "4px solid #333", background: C.bg }}>
             <div style={{ fontSize: 14.5, fontWeight: 800, color: C.dark, marginBottom: 2 }}>이규환</div>
