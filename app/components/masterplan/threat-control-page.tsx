@@ -131,7 +131,7 @@ export function ThreatControlPage() {
               <td style={{ ...tc, fontSize: 11.5, color: C.gray }}>클라우드 초국경성, 데이터 탈국경화</td>
               <td style={tc}>국가 단위 규제 무력 → 규제 차익으로 기업 이탈.</td>
               <td style={{ ...tc, fontWeight: 700 }}>구축</td>
-              <td style={tc}>세계 의회(입법) + AI 안전 기구(행정) + AI 분쟁 재판소(사법). 미중 트랙2 외교에서 시작.</td>
+              <td style={tc}>세계 의회(입법) + AI 안전 기구(행정) + AI 분쟁 재판소(사법).</td>
               <td style={{ ...tc, fontSize: 11.5, color: C.light }}>몬트리올 의정서(1987) 197개국</td></tr>
           </tbody>
         </table>
@@ -143,7 +143,6 @@ export function ThreatControlPage() {
         <div style={{ padding: "8px 12px", background: "#f8f9fa", borderLeft: `4px solid ${C.navy}`, marginBottom: 8 }}>
           <div style={{ fontSize: 14.5, fontWeight: 800, color: C.navy, marginBottom: 4 }}>[전제] 거버넌스 인프라 구축</div>
           <div style={{ fontSize: 11.5, lineHeight: 1.5, color: C.gray }}>
-            입법(세계 의회) · 행정(AI 안전 기구 + AI 안전청) · 사법(AI 분쟁 재판소). 경로: 미중 트랙2 → 블레츨리→조약 → 세계 의회 → 세계 정부.
           </div>
         </div>
         <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr 1fr", gap: 10 }}>
@@ -151,7 +150,7 @@ export function ThreatControlPage() {
             <div style={{ fontSize: 14, fontWeight: 800, color: "#b91c1c", marginBottom: 3 }}>① 금지</div>
             <div style={{ fontSize: 11.5, lineHeight: 1.5, color: C.gray }}>
               <p style={{ margin: "0 0 3px" }}><strong>적용 대상</strong> — AI 무기화 기술 (군사·생물무기·사이버 공격·핵 지휘통제)</p>
-              <p style={{ margin: "0 0 3px" }}><strong>통제점</strong> — 칩 공급망 4개사 (ASML·TSMC·삼성·NVIDIA)</p>
+              <p style={{ margin: "0 0 3px" }}><strong>통제 지점</strong> — 칩 공급망 4개사 (ASML·TSMC·삼성·NVIDIA)</p>
               <p style={{ margin: "0 0 3px" }}><strong>집행</strong> — 위반 시 칩·클라우드 접근 차단, 국제 기구 사찰</p>
               <p style={{ margin: 0, fontSize: 11, color: C.light }}>강대국 포함 예외 없이 적용</p>
             </div>
