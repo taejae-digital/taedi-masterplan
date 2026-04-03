@@ -70,43 +70,45 @@ export function ExecutionPlanPage() {
         </div>
       </div>
 
-      {/* 03. 국제 자문단 */}
+      {/* 03. 국제 자문단 — 윤준영 개편 버전 */}
       <div style={{ margin: "0 32px 12px" }}>
         {sec("3", "국제 자문단 구성")}
         <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 16 }}>
-          <table style={{ width: "100%", borderCollapse: "collapse" }}>
-            <thead><tr><th style={hcell}>자문단 후보</th><th style={hcell}>소속</th><th style={hcell}>기여 영역</th></tr></thead>
-            <tbody>
-              {[
-                ["A. Hall", "Stanford GSB", "공공부문 AI 전환"],
-                ["Susskind", "Oxford", "AI와 노동"],
-                ["Bengio", "Mila/ARIA", "AI 실존적 위협"],
-                ["Russell", "UC Berkeley", "AI 정렬"],
-                ["Acemoglu", "MIT", "민주적 재방향화"],
-                ["Mazzucato", "UCL", "공공 투자"],
-                ["Payne", "King's", "AI 군비 경쟁"],
-                ["Brynjolfsson", "Stanford HAI", "AI 생산성"],
-                ["조경현", "NYU", "AI 안전"],
-                ["김경태", "Stanford MSx", "한미 비교 연구"],
-              ].map(([n, a, r]) => (
-                <tr key={n}><td style={{ ...cell, fontWeight: 700, fontSize: 12.5, padding: "3px 8px" }}>{n}</td><td style={{ ...cell, fontSize: 12.5, padding: "3px 8px" }}>{a}</td><td style={{ ...cell, fontSize: 12.5, padding: "3px 8px" }}>{r}</td></tr>
-              ))}
-            </tbody>
-          </table>
-          <table style={{ width: "100%", borderCollapse: "collapse" }}>
-            <thead><tr><th style={hcell}>협력 기관</th><th style={hcell}>협력 내용</th></tr></thead>
-            <tbody>
-              {[
-                ["한국 AI 안전연구소(AISI)", "AI 위험 지도 공동 개발, 시나리오 검증"],
-                ["Stanford HAI", "AI 거버넌스, 공공부문 AI 전환 연구"],
-                ["UK ARIA", "AI 안전, Bengio 과학이사 연결"],
-                ["OECD AI Policy Observatory", "국제 AI 정책 비교, 데이터"],
-                ["KAIST AI 철학 연구센터", "전자인 법적 범주, AI 윤리"],
-              ].map(([n, r]) => (
-                <tr key={n}><td style={{ ...cell, fontWeight: 700 }}>{n}</td><td style={cell}>{r}</td></tr>
-              ))}
-            </tbody>
-          </table>
+          {[
+            [
+              ["Yuval", "Harari", "Hebrew University of Jerusalem", "거시역사학자. AI가 서사·의미 체계 붕괴와 디지털 권위주의 강화를 경고.", "감시·조작 / 빅테크 독점 / 거버넌스"],
+              ["Daron", "Acemoglu", "MIT (2024 노벨 경제학상)", "기술의 방향을 민주적으로 재설계하는 제도경제학 권위자.", "실업·정체성 / 빅테크 독점 / 거버넌스"],
+              ["Nick", "Bostrom", "Macrostrategy Research (前 Oxford FHI)", "초지능·실존적 위험 연구 선구자. AI 통제 문제 체계적 탐구.", "AI 통제 상실 / 핵AI화 / 거버넌스"],
+              ["Yoshua", "Bengio", "Mila / LawZero (2018 튜링상)", "딥러닝의 대부. 스스로 개척한 기술의 위험을 경고하는 행동하는 과학자.", "AI 통제 상실 / 생물무기 / 거버넌스"],
+              ["Mustafa", "Suleyman", "Microsoft AI CEO (前 DeepMind)", "『The Coming Wave』에서 기술 확산의 봉쇄 실패를 정면 직시.", "군사 비대칭 / 생물무기 / 사이버 WMD"],
+            ],
+            [
+              ["Shoshana", "Zuboff", "Harvard Business School", "감시 자본주의 해부. 플랫폼 권력의 민주주의 침식 메커니즘 분석.", "감시·조작 / 빅테크 독점"],
+              ["Thomas", "Piketty", "Paris School of Economics", "r>g 명제로 불평등 동학 실증. AI 자본 초집중과 누진적 부유세 제안.", "실업·정체성 / 빅테크 독점 / 거버넌스"],
+              ["Guy", "Standing", "University of London / BIEN", "프레카리아트 개념 창안. 기본소득·커먼즈 배당 세계적 권위자.", "실업·정체성 / 빅테크 독점"],
+              ["Daniel", "Susskind", "King's College London / Oxford", "기술적 실업의 구조적 불가피성과 의미의 위기를 정면 직시.", "실업·정체성 / AI 통제 상실"],
+              ["Alvin", "Graylin", "HTC 글로벌 부사장 (前 HTC China)", "미중 AI 경쟁 재해석. AGI 시대 AI 권리장전 제시.", "군사 비대칭 / 빅테크 독점 / 거버넌스"],
+            ],
+          ].map((group, gi) => (
+            <table key={gi} style={{ width: "100%", borderCollapse: "collapse" }}>
+              <thead><tr>
+                <th style={{ ...hcell, textAlign: "center" as const, width: "12%" }}>후보</th>
+                <th style={{ ...hcell, textAlign: "center" as const, width: "22%" }}>소속</th>
+                <th style={{ ...hcell, textAlign: "center" as const, width: "40%" }}>선정 배경</th>
+                <th style={{ ...hcell, textAlign: "center" as const, width: "26%" }}>기여 영역</th>
+              </tr></thead>
+              <tbody>
+                {group.map(([first, last, a, b, r]) => (
+                  <tr key={last}>
+                    <td style={{ ...cell, fontWeight: 700, fontSize: 11, padding: "4px 6px" }}>{first}<br/>{last}</td>
+                    <td style={{ ...cell, fontSize: 10.5, padding: "4px 6px" }}>{a}</td>
+                    <td style={{ ...cell, fontSize: 10.5, padding: "4px 6px" }}>{b}</td>
+                    <td style={{ ...cell, fontSize: 10.5, padding: "4px 6px" }}>{r}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          ))}
         </div>
       </div>
 

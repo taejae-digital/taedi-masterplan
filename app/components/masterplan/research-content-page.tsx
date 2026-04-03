@@ -11,7 +11,7 @@ export function ResearchContentPage() {
       <Header title="연구 내용과 현황" subtitle="p.3 연구 내용" />
 
       {/* 연구 흐름 */}
-      <div style={{ margin: "10px 32px 8px" }}>
+      <div style={{ margin: "16px 32px 12px" }}>
         <div style={{ fontSize: 14, fontWeight: 800, color: C.dark, marginBottom: 6, paddingBottom: 3, borderBottom: `2px solid ${C.dark}` }}>연구 흐름</div>
         <div style={{ display: "grid", gridTemplateColumns: "1fr 24px 1fr 24px 1fr 24px 1fr 24px 1fr", gap: 0, alignItems: "stretch" }}>
           <ResearchBox num="01" title="디지털의 본질" desc="강화와 연결이 만드는 자유의 확장. 개인의 확장된 자유와 공동체 질서의 충돌." />
@@ -27,11 +27,11 @@ export function ResearchContentPage() {
       </div>
 
       {/* 연구 내용 상세 */}
-      <div style={{ margin: "8px 32px 8px" }}>
+      <div style={{ margin: "12px 32px 12px" }}>
         <div style={{ fontSize: 14, fontWeight: 800, color: C.dark, marginBottom: 6, paddingBottom: 3, borderBottom: `2px solid ${C.dark}` }}>연구 내용 상세</div>
 
         {/* 01. 디지털 기술 변화의 본질 */}
-        <div style={{ marginBottom: 8 }}>
+        <div style={{ marginBottom: 12 }}>
           <div style={{ fontSize: 14, fontWeight: 800, color: C.dark, marginBottom: 6, paddingBottom: 3, borderBottom: `2px solid ${C.dark}` }}>01. 디지털 기술 변화의 본질</div>
           <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 20 }}>
             <div style={{ fontSize: 12, lineHeight: 1.5, color: C.gray }}>
@@ -57,10 +57,10 @@ export function ResearchContentPage() {
         </div>
 
         {/* 02. 사회 변화 */}
-        <div style={{ marginTop: 8 }}>
+        <div style={{ marginTop: 12 }}>
           <div style={{ fontSize: 14, fontWeight: 800, color: C.dark, marginBottom: 6, paddingBottom: 3, borderBottom: `2px solid ${C.dark}` }}>02. 사회 변화</div>
           <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr 1fr", gap: 16 }}>
-            <div style={{ padding: "7px 10px", border: `1px solid ${C.line}`, background: C.bg }}>
+            <div style={{ padding: "10px 14px", border: `1px solid ${C.line}`, background: C.bg }}>
               <div style={{ fontSize: 14.5, fontWeight: 800, color: C.dark, marginBottom: 6 }}>개인의 변화</div>
               <div style={{ fontSize: 12, lineHeight: 1.5, color: C.gray }}>
                 <p style={{ margin: "0 0 4px" }}><strong>리더</strong> (AI 설계자) 2% → 5%</p>
@@ -70,7 +70,7 @@ export function ResearchContentPage() {
                 <p style={{ margin: 0 }}>&quot;무슨 일 하세요?&quot;에 답할 수 없는 사람이 다수. 경제적 위기이자 존재론적 위기.</p>
               </div>
             </div>
-            <div style={{ padding: "7px 10px", border: `1px solid ${C.line}`, background: C.bg }}>
+            <div style={{ padding: "10px 14px", border: `1px solid ${C.line}`, background: C.bg }}>
               <div style={{ fontSize: 14.5, fontWeight: 800, color: C.dark, marginBottom: 6 }}>공동체 재편</div>
               <div style={{ fontSize: 12, lineHeight: 1.5, color: C.gray }}>
                 <p style={{ margin: "0 0 4px" }}><strong>가정</strong> → 정체성 허브, 창작·생산 단위</p>
@@ -80,7 +80,7 @@ export function ResearchContentPage() {
                 <p style={{ margin: 0 }}><strong>세계</strong> → 세계 정부 (화폐·규제·분쟁)</p>
               </div>
             </div>
-            <div style={{ padding: "7px 10px", border: `1px solid ${C.line}`, background: C.bg }}>
+            <div style={{ padding: "10px 14px", border: `1px solid ${C.line}`, background: C.bg }}>
               <div style={{ fontSize: 14.5, fontWeight: 800, color: C.dark, marginBottom: 6 }}>경제 질서의 변화</div>
               <div style={{ fontSize: 12, lineHeight: 1.5, color: C.gray }}>
                 <p style={{ margin: "0 0 4px" }}><strong>부동산</strong> → 데이터가 새 자산</p>
@@ -94,10 +94,10 @@ export function ResearchContentPage() {
         </div>
 
         {/* 03-04 */}
-        <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 20, marginTop: 8 }}>
+        <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 20, marginTop: 12 }}>
           <div>
             <div style={{ fontSize: 14, fontWeight: 800, color: C.dark, marginBottom: 6, paddingBottom: 3, borderBottom: `2px solid ${C.dark}` }}>03. 위협 시나리오</div>
-            <div style={{ padding: "7px 10px", border: `1px solid ${C.line}`, background: C.bg }}>
+            <div style={{ padding: "10px 14px", border: `1px solid ${C.line}`, background: C.bg }}>
               <div style={{ fontSize: 12, lineHeight: 1.5, color: C.gray }}>
                 <p style={{ margin: "0 0 5px" }}><strong>임박(1~3년):</strong> <span style={{ color: "#b91c1c", fontWeight: 700 }}>AI 군사 비대칭</span> — AI가 전력 격차 극대화, 비국가 행위자도 폭력 수단 접근(이란 사례). <span style={{ color: "#b91c1c", fontWeight: 700 }}>AI 생물무기</span> — AlphaFold류로 비전문가도 병원체 설계. <span style={{ color: "#b91c1c", fontWeight: 700 }}>사이버 WMD</span> — 인프라 취약점 자동 탐색·연쇄 붕괴. <span style={{ color: "#b91c1c", fontWeight: 700 }}>핵AI화</span> — 핵 지휘체계 AI 개입, 인간 승인 없는 발사.</p>
                 <p style={{ margin: "0 0 5px" }}><strong>진행중:</strong> <span style={{ color: "#d97706", fontWeight: 700 }}>감시·조작</span> — LLM+추천 알고리즘으로 여론 조작, 민주주의 침식. <span style={{ color: "#d97706", fontWeight: 700 }}>AI 통제 상실</span> — 에이전트가 자율 목표 설정, 기만·권력추구.</p>
@@ -107,7 +107,7 @@ export function ResearchContentPage() {
           </div>
           <div>
             <div style={{ fontSize: 14, fontWeight: 800, color: C.dark, marginBottom: 6, paddingBottom: 3, borderBottom: `2px solid ${C.dark}` }}>04. 대책: AS-IS → TO-BE</div>
-            <div style={{ padding: "7px 10px", border: `1px solid ${C.line}`, background: C.bg }}>
+            <div style={{ padding: "10px 14px", border: `1px solid ${C.line}`, background: C.bg }}>
               <div style={{ fontSize: 12, lineHeight: 1.5, color: C.gray }}>
                 <p style={{ margin: "0 0 5px" }}><strong>AS-IS(산업 시대 가치관):</strong> 효율=가치. AI가 인간 대체·권력 집중·군사화를 &quot;합리적 결론&quot;으로 만든다. 남의 꿈을 위한 노동. 거버넌스는 국경 안에 한정. 결과: 생존 위협 + 불평등 + 거버넌스 공백.</p>
                 <p style={{ margin: "0 0 5px" }}><strong>TO-BE(정체성 중심 가치관):</strong> 정체성 실현권. 자기 목적 추구. 도시는 창조 플랫폼. 세계 정부가 화폐·규제. AI 인프라 공공화 + 목적 기반 경제.</p>
@@ -119,10 +119,10 @@ export function ResearchContentPage() {
       </div>
 
       {/* 05. 실행 및 공론화 전략 */}
-      <div style={{ margin: "10px 32px 8px" }}>
+      <div style={{ margin: "16px 32px 12px" }}>
         <div style={{ fontSize: 14, fontWeight: 800, color: C.dark, marginBottom: 6, paddingBottom: 3, borderBottom: `2px solid ${C.dark}` }}>05. 실행 및 공론화 전략</div>
         <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr 1fr", gap: 16 }}>
-          <div style={{ padding: "7px 10px", border: `1px solid ${C.line}`, background: C.bg }}>
+          <div style={{ padding: "10px 14px", border: `1px solid ${C.line}`, background: C.bg }}>
             <div style={{ fontSize: 14.5, fontWeight: 800, color: C.dark, marginBottom: 6 }}>단행본 출판</div>
             <div style={{ fontSize: 12, lineHeight: 1.5, color: C.gray }}>
               <p style={{ margin: "0 0 4px" }}><strong>목표:</strong> 『디지털이 초래할 위험성과 그 대책』 2026년 Q4 출간.</p>
@@ -131,7 +131,7 @@ export function ResearchContentPage() {
               <p style={{ margin: 0 }}><strong>검증:</strong> 국제 자문단(7~8월) 피드백 → 수정 → 최종 원고.</p>
             </div>
           </div>
-          <div style={{ padding: "7px 10px", border: `1px solid ${C.line}`, background: C.bg }}>
+          <div style={{ padding: "10px 14px", border: `1px solid ${C.line}`, background: C.bg }}>
             <div style={{ fontSize: 14.5, fontWeight: 800, color: C.dark, marginBottom: 6 }}>국제 컨퍼런스</div>
             <div style={{ fontSize: 12, lineHeight: 1.5, color: C.gray }}>
               <p style={{ margin: "0 0 4px" }}><strong>시기:</strong> 2026년 11~12월, 서울.</p>
@@ -140,7 +140,7 @@ export function ResearchContentPage() {
               <p style={{ margin: 0 }}><strong>산출물:</strong> 서울 선언문 — &quot;어떤 세계를 만들 것인가&quot;에 대한 첫 국제 합의 시도.</p>
             </div>
           </div>
-          <div style={{ padding: "7px 10px", border: `1px solid ${C.line}`, background: C.bg }}>
+          <div style={{ padding: "10px 14px", border: `1px solid ${C.line}`, background: C.bg }}>
             <div style={{ fontSize: 14.5, fontWeight: 800, color: C.dark, marginBottom: 6 }}>정치적 실현</div>
             <div style={{ fontSize: 12, lineHeight: 1.5, color: C.gray }}>
               <p style={{ margin: "0 0 4px" }}><strong>한국 내:</strong> 단행본 기반 정책 보고서 → 국회 브리핑. AI 거버넌스 입법 제안.</p>
