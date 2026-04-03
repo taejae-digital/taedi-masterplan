@@ -140,11 +140,7 @@ export function ThreatControlPage() {
       {/* 통제 프레임워크 요약 */}
       <div style={{ margin: "10px 32px 0" }}>
         <div style={{ fontSize: 13, fontWeight: 700, color: C.navy, marginBottom: 6 }}>통제 프레임워크</div>
-        <div style={{ padding: "8px 12px", background: "#f8f9fa", borderLeft: `4px solid ${C.navy}`, marginBottom: 8 }}>
-          <div style={{ fontSize: 14.5, fontWeight: 800, color: C.navy, marginBottom: 4 }}>[전제] 거버넌스 인프라 구축</div>
-          <div style={{ fontSize: 11.5, lineHeight: 1.5, color: C.gray }}>
-          </div>
-        </div>
+
         <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr 1fr", gap: 10 }}>
           <div style={{ padding: "6px 8px", borderTop: "3px solid #b91c1c" }}>
             <div style={{ fontSize: 14, fontWeight: 800, color: "#b91c1c", marginBottom: 3 }}>① 금지</div>
