@@ -4,13 +4,10 @@ const current = [
   {
     id: "mp/v0.1",
     label: "Master Plan v0.1",
-    type: "4페이지 마스터플랜",
+    type: "종합 보고서",
     date: "2026.04",
     desc: "비전 · 위협과 통제 방안 · 연구 내용 · 실행 계획",
-    docs: [
-      { name: "A3 종합 보고서", href: "/v6" },
-      { name: "Companion Report", href: "/v6.3" },
-    ],
+    companion: { name: "Companion Report", href: "/v6.3" },
   },
 ];
 
@@ -36,7 +33,7 @@ export default function Home() {
       {/* Current version */}
       {current.map((v) => (
         <div key={v.id} style={{ marginBottom: 40 }}>
-          <Link href={`/${v.id}`} style={{ textDecoration: "none", display: "block", padding: "28px 32px", background: "#1a2744", borderRadius: 12, color: "#fff", transition: "opacity 0.15s" }}>
+          <div style={{ padding: "28px 32px", background: "#1a2744", borderRadius: 12, color: "#fff" }}>
             <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", marginBottom: 12 }}>
               <div>
                 <div style={{ fontSize: 11, letterSpacing: 2, opacity: 0.5, marginBottom: 4 }}>{v.type}</div>
@@ -44,16 +41,17 @@ export default function Home() {
               </div>
               <div style={{ fontSize: 12, opacity: 0.4 }}>{v.date}</div>
             </div>
-            <p style={{ fontSize: 14, opacity: 0.7, margin: 0, lineHeight: 1.5 }}>{v.desc}</p>
-          </Link>
-          {/* Related docs */}
-          <div style={{ display: "flex", gap: 12, marginTop: 12 }}>
-            {v.docs.map((d) => (
-              <Link key={d.name} href={d.href} style={{ textDecoration: "none", padding: "14px 20px", background: "#f8f9fa", border: "1px solid #e0e0e0", borderRadius: 8, flex: 1, transition: "border-color 0.15s" }}>
-                <div style={{ fontSize: 13, fontWeight: 700, color: "#333", marginBottom: 2 }}>{d.name}</div>
-                <div style={{ fontSize: 11, color: "#999" }}>{v.label} 기반</div>
+            <p style={{ fontSize: 14, opacity: 0.7, margin: "0 0 16px", lineHeight: 1.5 }}>{v.desc}</p>
+            <div style={{ display: "flex", gap: 10 }}>
+              <Link href={`/${v.id}`} style={{ textDecoration: "none", padding: "8px 18px", background: "rgba(255,255,255,0.15)", borderRadius: 6, fontSize: 13, fontWeight: 600, color: "#fff", transition: "background 0.15s" }}>
+                본문 보기 →
               </Link>
-            ))}
+              {v.companion && (
+                <Link href={v.companion.href} style={{ textDecoration: "none", padding: "8px 18px", background: "rgba(255,255,255,0.08)", borderRadius: 6, fontSize: 13, fontWeight: 500, color: "rgba(255,255,255,0.6)", transition: "background 0.15s" }}>
+                  {v.companion.name}
+                </Link>
+              )}
+            </div>
           </div>
         </div>
       ))}
