@@ -143,7 +143,7 @@ export function ResearchContentPage() {
           <div style={{ padding: "10px 14px", border: `1px solid ${C.line}`, background: C.bg }}>
             <div style={{ fontSize: 14.5, fontWeight: 800, color: C.dark, marginBottom: 6 }}>현실화</div>
             <div style={{ fontSize: 12, lineHeight: 1.5, color: C.gray }}>
-              <p style={{ margin: "0 0 4px" }}><strong>한국 내:</strong> 단행본 기반 정책 보고서 → 국회 브리핑. AI 거버넌스 입법 제안.</p>
+              <p style={{ margin: "0 0 4px" }}><strong>한국 내:</strong> 단행본 및 연구 보고서 퍼블리시. AI 거버넌스 입법 제안.</p>
               <p style={{ margin: "0 0 4px" }}><strong>국제:</strong> 오타와 조약 모델 — 한국이 중견국으로서 AI 금지 협약 의제 설정. 미중 트랙2 외교 참여.</p>
               <p style={{ margin: "0 0 4px" }}><strong>네트워크:</strong> 국제 자문단 상설화. AISI·KAIST·서울대 등 국내 협력 기관 네트워크.</p>
               <p style={{ margin: 0 }}><strong>목표:</strong> 패권의 최전선에서 합의의 최전선으로. 한국에서 먼저 모델을 만든다.</p>
