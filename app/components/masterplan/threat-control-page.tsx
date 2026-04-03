@@ -66,6 +66,28 @@ export function ThreatControlPage() {
             <th style={{ ...th, width: "19%" }}>선례·근거</th>
           </tr></thead>
           <tbody>
+            <tr>
+              <td style={{ ...tc, fontWeight: 700, color: "#b91c1c" }} rowSpan={3}>진행중<br/><span style={{ fontSize: 11.5, color: C.light }}>현재</span></td>
+              <td style={{ ...tc, fontWeight: 700 }}>AI 인류 생존 위협</td>
+              <td style={{ ...tc, fontSize: 11.5, color: C.gray }}>초지능 AI, 자율 AI 에이전트 목표 최적화</td>
+              <td style={{ ...tc, fontWeight: 600, color: "#b91c1c" }}>AI가 인간을 대체·무력화 → 인류 생존에 대한 위협. 궁극적으로 AI가 인간보다 똑똑해져 인간을 지배하거나 멸종으로 이어질 가능성.</td>
+              <td style={{ ...tc, fontWeight: 700, color: "#b91c1c" }}>금지</td>
+              <td style={tc}>인간 통제 원칙 법제화. AI 자율성 상한 설정. 초지능 개발 국제 모라토리엄 논의.</td>
+              <td style={{ ...tc, fontSize: 11.5, color: C.light }}>Russell(2019) 번복 가능성 원칙</td></tr>
+            <tr>
+              <td style={{ ...tc, fontWeight: 700 }}>감시·조작 체제</td>
+              <td style={{ ...tc, fontSize: 11.5, color: C.gray }}>추천 알고리즘, 딥페이크, 마이크로타기팅 LLM</td>
+              <td style={tc}>개인별 맞춤 정보 조작 → 여론·선거 개입 → 민주주의 침식.</td>
+              <td style={{ ...tc, fontWeight: 700, color: "#d97706" }}>승인</td>
+              <td style={tc}>알고리즘 투명성 의무. 독립 감사 기구. 딥페이크 라벨링. AI 안전청(FDA 모델) 심사.</td>
+              <td style={{ ...tc, fontSize: 11.5, color: C.light }}>EU AI Act(2024) 고위험 분류</td></tr>
+            <tr>
+              <td style={{ ...tc, fontWeight: 700 }}>AI 통제 상실</td>
+              <td style={{ ...tc, fontSize: 11.5, color: C.gray }}>자율 AI 에이전트, 강화학습 목표 최적화</td>
+              <td style={tc}>에이전트 자율 목표 설정 → 인간 의도 무관 행동 → 기만·권력추구.</td>
+              <td style={{ ...tc, fontWeight: 700, color: "#d97706" }}>승인</td>
+              <td style={tc}>자율성 4단계 등급별 승인. 킬스위치 의무. 행동 로그 공개. 연간 재승인.</td>
+              <td style={{ ...tc, fontSize: 11.5, color: C.light }}>Russell(2019) 번복 가능성 원칙</td></tr>
             <tr style={{ background: "#f5f5f5" }}>
               <td style={{ ...tc, fontWeight: 700 }} rowSpan={4}>임박<br/><span style={{ fontSize: 11.5, color: C.light }}>1~3년</span></td>
               <td style={{ ...tc, fontWeight: 700 }}>AI 군사 비대칭</td>
@@ -95,21 +117,6 @@ export function ThreatControlPage() {
               <td style={{ ...tc, fontWeight: 700, color: "#b91c1c" }}>금지</td>
               <td style={tc}>핵 지휘체계 AI 개입 전면 금지. 자율살상무기 금지 협약. 인간 최종 승인 의무화.</td>
               <td style={{ ...tc, fontSize: 11.5, color: C.light }}>핵확산금지조약(NPT) — 강대국 특권 배제</td></tr>
-            <tr>
-              <td style={{ ...tc, fontWeight: 700 }} rowSpan={2}>진행중<br/><span style={{ fontSize: 11.5, color: C.light }}>현재</span></td>
-              <td style={{ ...tc, fontWeight: 700 }}>감시·조작 체제</td>
-              <td style={{ ...tc, fontSize: 11.5, color: C.gray }}>추천 알고리즘, 딥페이크, 마이크로타기팅 LLM</td>
-              <td style={tc}>개인별 맞춤 정보 조작 → 여론·선거 개입 → 민주주의 침식.</td>
-              <td style={{ ...tc, fontWeight: 700, color: "#d97706" }}>승인</td>
-              <td style={tc}>알고리즘 투명성 의무. 독립 감사 기구. 딥페이크 라벨링. AI 안전청(FDA 모델) 심사.</td>
-              <td style={{ ...tc, fontSize: 11.5, color: C.light }}>EU AI Act(2024) 고위험 분류</td></tr>
-            <tr>
-              <td style={{ ...tc, fontWeight: 700 }}>AI 통제 상실</td>
-              <td style={{ ...tc, fontSize: 11.5, color: C.gray }}>자율 AI 에이전트, 강화학습 목표 최적화</td>
-              <td style={tc}>에이전트 자율 목표 설정 → 인간 의도 무관 행동 → 기만·권력추구.</td>
-              <td style={{ ...tc, fontWeight: 700, color: "#d97706" }}>승인</td>
-              <td style={tc}>자율성 4단계 등급별 승인. 킬스위치 의무. 행동 로그 공개. 연간 재승인.</td>
-              <td style={{ ...tc, fontSize: 11.5, color: C.light }}>Russell(2019) 번복 가능성 원칙</td></tr>
             <tr style={{ background: "#f5f5f5" }}>
               <td style={{ ...tc, fontWeight: 700 }} rowSpan={2}>중기<br/><span style={{ fontSize: 11.5, color: C.light }}>3~10년</span></td>
               <td style={{ ...tc, fontWeight: 700 }}>대량 실업·정체성 위기</td>
@@ -142,6 +149,10 @@ export function ThreatControlPage() {
         <div style={{ fontSize: 13, fontWeight: 700, color: C.navy, marginBottom: 6 }}>통제 프레임워크</div>
 
         <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr 1fr", gap: 10 }}>
+          <div style={{ padding: "6px 8px", borderTop: "3px solid #b91c1c", gridColumn: "1 / -1", background: "#fff5f5", border: "1px solid #fca5a5", borderTop: "3px solid #b91c1c", marginBottom: 6 }}>
+            <div style={{ fontSize: 13, fontWeight: 800, color: "#b91c1c", marginBottom: 2 }}>⚠️ 핵심 전제 — AI 인류 생존 위협</div>
+            <div style={{ fontSize: 11.5, lineHeight: 1.5, color: "#333" }}>AI가 인간보다 똑똑해져 인간을 대체·무력화하거나 인류 생존 자체를 위협하는 시나리오. 기술 통제 체계 설계와 승인 체계의 근본 이유. 이 위협이 통제의 출발점이다.</div>
+          </div>
           <div style={{ padding: "6px 8px", borderTop: "3px solid #b91c1c" }}>
             <div style={{ fontSize: 14, fontWeight: 800, color: "#b91c1c", marginBottom: 3 }}>① 금지</div>
             <div style={{ fontSize: 11.5, lineHeight: 1.5, color: C.gray }}>
