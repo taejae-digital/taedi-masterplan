@@ -2,8 +2,8 @@ import Link from "next/link";
 
 const current = [
   {
-    id: "mp/v0.1.6",
-    label: "Master Plan v0.1.6",
+    id: "mp/v0.1.7",
+    label: "Master Plan v0.1.7",
     type: "종합 보고서",
     date: "2026.04",
     desc: "비전 · 위협과 통제 방안 · 연구 내용 · 실행 계획",
