@@ -14,15 +14,15 @@ export function ResearchContentPage() {
       <div style={{ margin: "16px 32px 12px" }}>
         <div style={{ fontSize: 14, fontWeight: 800, color: C.dark, marginBottom: 6, paddingBottom: 3, borderBottom: `2px solid ${C.dark}` }}>연구 흐름</div>
         <div style={{ display: "grid", gridTemplateColumns: "1fr 24px 1fr 24px 1fr 24px 1fr 24px 1fr", gap: 0, alignItems: "stretch" }}>
-          <ResearchBox num="01" title="디지털의 본질" desc="강화와 연결이 만드는 자유의 확장. 개인의 확장된 자유와 공동체 질서의 충돌." />
+          <ResearchBox num="1" title="디지털의 본질" desc="강화와 연결이 만드는 자유의 확장. 개인의 확장된 자유와 공동체 질서의 충돌." />
           <Arrow />
-          <ResearchBox num="02" title="사회 변화" desc="개인 계층 재편(프로 53%→25%), 6공동체 재구성, 경제 질서 전환." />
+          <ResearchBox num="2" title="사회 변화" desc="개인 계층 재편(프로 53%→25%), 6공동체 재구성, 경제 질서 전환." />
           <Arrow />
-          <ResearchBox num="03" title="위협 특정" desc="시간순 위협 시나리오. 임박(생물무기·사이버WMD)부터 장기(거버넌스 공백)까지." />
+          <ResearchBox num="3" title="위협 특정" desc="시간순 위협 시나리오. 임박(생물무기·사이버WMD)부터 장기(거버넌스 공백)까지." />
           <Arrow />
-          <ResearchBox num="04" title="대책 설계" desc="[전제] 거버넌스 구축 → [통제] 금지·승인·전환. 각 위협별 구체적 통제 방안." />
+          <ResearchBox num="4" title="대책 설계" desc="[전제] 거버넌스 구축 → [통제] 금지·승인·전환. 각 위협별 구체적 통제 방안." />
           <Arrow />
-          <ResearchBox num="05" title="실행·공론화" desc="단행본 출판, 국제 컨퍼런스, 정책 제안, 현실화." />
+          <ResearchBox num="5" title="실행·공론화" desc="단행본 출판, 국제 컨퍼런스, 정책 제안, 현실화." />
         </div>
       </div>
 
@@ -32,7 +32,7 @@ export function ResearchContentPage() {
 
         {/* 01. 디지털 기술 변화의 본질 */}
         <div style={{ marginBottom: 12 }}>
-          <div style={{ fontSize: 14, fontWeight: 800, color: C.dark, marginBottom: 6, paddingBottom: 3, borderBottom: `2px solid ${C.dark}` }}>01. 디지털 기술 변화의 본질</div>
+          <div style={{ fontSize: 14, fontWeight: 800, color: C.dark, marginBottom: 6, paddingBottom: 3, borderBottom: `2px solid ${C.dark}` }}>1. 디지털 기술 변화의 본질</div>
           <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 20 }}>
             <div style={{ fontSize: 12, lineHeight: 1.5, color: C.gray }}>
               <p style={{ margin: "0 0 5px" }}>디지털은 <strong>강화</strong>(빠르게 더 많은 일)와 <strong>연결</strong>(다른 사람들의 능력을 공유)을 만든다. 인쇄술이 신앙의 자유를, 증기기관이 재산권의 자유를 열었듯, AI는 누구나 전문가급 역량을 갖추는 자유를 연다.</p>
@@ -58,7 +58,7 @@ export function ResearchContentPage() {
 
         {/* 02. 사회 변화 */}
         <div style={{ marginTop: 12 }}>
-          <div style={{ fontSize: 14, fontWeight: 800, color: C.dark, marginBottom: 6, paddingBottom: 3, borderBottom: `2px solid ${C.dark}` }}>02. 사회 변화</div>
+          <div style={{ fontSize: 14, fontWeight: 800, color: C.dark, marginBottom: 6, paddingBottom: 3, borderBottom: `2px solid ${C.dark}` }}>2. 사회 변화</div>
           <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr 1fr", gap: 16 }}>
             <div style={{ padding: "10px 14px", border: `1px solid ${C.line}`, background: C.bg }}>
               <div style={{ fontSize: 14.5, fontWeight: 800, color: C.dark, marginBottom: 6 }}>개인의 변화</div>
@@ -96,7 +96,7 @@ export function ResearchContentPage() {
         {/* 03-04 */}
         <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 20, marginTop: 12 }}>
           <div>
-            <div style={{ fontSize: 14, fontWeight: 800, color: C.dark, marginBottom: 6, paddingBottom: 3, borderBottom: `2px solid ${C.dark}` }}>03. 위협 시나리오</div>
+            <div style={{ fontSize: 14, fontWeight: 800, color: C.dark, marginBottom: 6, paddingBottom: 3, borderBottom: `2px solid ${C.dark}` }}>3. 위협 시나리오</div>
             <div style={{ padding: "10px 14px", border: `1px solid ${C.line}`, background: C.bg }}>
               <div style={{ fontSize: 12, lineHeight: 1.5, color: C.gray }}>
                 <p style={{ margin: "0 0 5px" }}><strong>임박(1~3년):</strong> <span style={{ color: "#b91c1c", fontWeight: 700 }}>AI 군사 비대칭</span> — AI가 전력 격차 극대화, 비국가 행위자도 폭력 수단 접근(이란 사례). <span style={{ color: "#b91c1c", fontWeight: 700 }}>AI 생물무기</span> — AlphaFold류로 비전문가도 병원체 설계. <span style={{ color: "#b91c1c", fontWeight: 700 }}>사이버 WMD</span> — 인프라 취약점 자동 탐색·연쇄 붕괴. <span style={{ color: "#b91c1c", fontWeight: 700 }}>핵AI화</span> — 핵 지휘체계 AI 개입, 인간 승인 없는 발사.</p>
@@ -106,7 +106,7 @@ export function ResearchContentPage() {
             </div>
           </div>
           <div>
-            <div style={{ fontSize: 14, fontWeight: 800, color: C.dark, marginBottom: 6, paddingBottom: 3, borderBottom: `2px solid ${C.dark}` }}>04. 대책: AS-IS → TO-BE</div>
+            <div style={{ fontSize: 14, fontWeight: 800, color: C.dark, marginBottom: 6, paddingBottom: 3, borderBottom: `2px solid ${C.dark}` }}>4. 대책: AS-IS → TO-BE</div>
             <div style={{ padding: "10px 14px", border: `1px solid ${C.line}`, background: C.bg }}>
               <div style={{ fontSize: 12, lineHeight: 1.5, color: C.gray }}>
                 <p style={{ margin: "0 0 5px" }}><strong>AS-IS(산업 시대 가치관):</strong> 효율=가치. AI가 인간 대체·권력 집중·군사화를 &quot;합리적 결론&quot;으로 만든다. 남의 꿈을 위한 노동. 거버넌스는 국경 안에 한정. 결과: 생존 위협 + 불평등 + 거버넌스 공백.</p>
@@ -120,7 +120,7 @@ export function ResearchContentPage() {
 
       {/* 05. 실행 및 공론화 전략 */}
       <div style={{ margin: "16px 32px 12px" }}>
-        <div style={{ fontSize: 14, fontWeight: 800, color: C.dark, marginBottom: 6, paddingBottom: 3, borderBottom: `2px solid ${C.dark}` }}>05. 실행 및 공론화 전략</div>
+        <div style={{ fontSize: 14, fontWeight: 800, color: C.dark, marginBottom: 6, paddingBottom: 3, borderBottom: `2px solid ${C.dark}` }}>5. 실행 및 공론화 전략</div>
         <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr 1fr", gap: 16 }}>
           <div style={{ padding: "10px 14px", border: `1px solid ${C.line}`, background: C.bg }}>
             <div style={{ fontSize: 14.5, fontWeight: 800, color: C.dark, marginBottom: 6 }}>단행본 출판</div>
