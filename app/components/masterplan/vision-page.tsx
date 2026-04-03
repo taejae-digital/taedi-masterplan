@@ -8,7 +8,7 @@ export function VisionPage() {
 
   return (
     <div style={{ pageBreakAfter: "always", minHeight: "280mm" }}>
-      <Header title="MASTER PLAN v0.1.1" subtitle="1. 비전" />
+      <Header title="MASTER PLAN v0.1.2" subtitle="1. 비전" />
 
       <div style={{ padding: "20px 32px 16px", borderBottom: `2px solid ${C.navy}`, marginBottom: 16 }}>
         <div style={{ fontSize: 20, fontWeight: 800, color: C.navy, lineHeight: 1.4 }}>
