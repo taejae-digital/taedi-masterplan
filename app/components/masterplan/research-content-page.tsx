@@ -125,16 +125,16 @@ export function ResearchContentPage() {
           <div style={{ padding: "10px 14px", border: `1px solid ${C.line}`, background: C.bg }}>
             <div style={{ fontSize: 14.5, fontWeight: 800, color: C.dark, marginBottom: 6 }}>단행본 출판</div>
             <div style={{ fontSize: 12, lineHeight: 1.5, color: C.gray }}>
-              <p style={{ margin: "0 0 4px" }}><strong>목표:</strong> 『디지털이 초래할 위험성과 그 대책』 2026년 Q4 출간.</p>
+              <p style={{ margin: "0 0 4px" }}><strong>목표:</strong> 『디지털이 초래할 위험성과 그 대책』 2027년 Q4 출간.</p>
               <p style={{ margin: "0 0 4px" }}><strong>구성:</strong> 디지털의 본질 → 사회 변화 → 위협 시나리오 → 거버넌스 구축 → 금지·승인·전환 → 정체성 실현권.</p>
               <p style={{ margin: "0 0 4px" }}><strong>독자:</strong> 정책 입안자, 국제 학계, 시민 사회. 한국어 출간 후 영문 요약본.</p>
-              <p style={{ margin: 0 }}><strong>검증:</strong> 2026년 9~10월 국제 자문단 미팅 피드백 → 2026년 11~12월 집필 착수 → 2026 Q4 출간.</p>
+              <p style={{ margin: 0 }}><strong>검증:</strong> 국제 자문단 미팅 피드백 → 집필 착수 → 2027 Q4 출간.</p>
             </div>
           </div>
           <div style={{ padding: "10px 14px", border: `1px solid ${C.line}`, background: C.bg }}>
             <div style={{ fontSize: 14.5, fontWeight: 800, color: C.dark, marginBottom: 6 }}>국제 컨퍼런스</div>
             <div style={{ fontSize: 12, lineHeight: 1.5, color: C.gray }}>
-              <p style={{ margin: "0 0 4px" }}><strong>시기:</strong> 2026년 Q4, 서울.</p>
+              <p style={{ margin: "0 0 4px" }}><strong>시기:</strong> 2027년 Q4, 서울.</p>
               <p style={{ margin: "0 0 4px" }}><strong>형식:</strong> 단행본 출간 기념 + 국제 학자 초청 토론. 블레츨리/서울 AI Summit 후속 트랙으로 포지셔닝.</p>
               <p style={{ margin: "0 0 4px" }}><strong>참석자:</strong> 국제 자문단 학자, 각국 AISI 연구자, 정책 입안자, 시민 사회 대표.</p>
               <p style={{ margin: 0 }}><strong>산출물:</strong> 서울 선언문 — &quot;어떤 세계를 만들 것인가&quot;에 대한 첫 국제 합의 시도.</p>
