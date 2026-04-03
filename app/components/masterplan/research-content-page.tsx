@@ -110,8 +110,8 @@ export function ResearchContentPage() {
             <div style={{ padding: "10px 14px", border: `1px solid ${C.line}`, background: C.bg }}>
               <div style={{ fontSize: 12, lineHeight: 1.5, color: C.gray }}>
                 <p style={{ margin: "0 0 5px" }}><strong>AS-IS(산업 시대 가치관):</strong> 효율=가치. AI가 인간 대체·권력 집중·군사화를 &quot;합리적 결론&quot;으로 만든다. 남의 꿈을 위한 노동. 거버넌스는 국경 안에 한정. 결과: 생존 위협 + 불평등 + 거버넌스 공백.</p>
-                <p style={{ margin: "0 0 5px" }}><strong>TO-BE(정체성 중심 가치관):</strong> 정체성 실현권. 자기 목적 추구. 도시는 창조 플랫폼. 세계 정부가 화폐·규제. AI 인프라 공공화 + 목적 기반 경제.</p>
-                <p style={{ margin: 0 }}><strong>TO-DO:</strong> [전제] 거버넌스 구축(세계 의회 입법·행정·사법) → [통제] ① 금지(화학무기금지협약 모델, 칩 공급망 통제) ② 승인(식품의약국 모델, AI+물리력) ③ 전환(뉴딜+살트셰바덴 모델, 공공 AI 인프라).</p>
+                <p style={{ margin: "0 0 5px" }}><strong>TO-BE(정체성 중심 가치관):</strong> 정체성 실현권. 자기 목적 추구. 도시는 창조 플랫폼. 세계 정부가 화폐·규제. 컴퓨팅 자원 공정 접근 + 목적 기반 경제.</p>
+                <p style={{ margin: 0 }}><strong>TO-DO:</strong> [전제] 거버넌스 구축(세계 의회 입법·행정·사법) → [통제] ① 금지(화학무기금지협약 모델, 칩 공급망 통제) ② 승인(식품의약국 모델, AI+물리력) ③ 전환(뉴딜+살트셰바덴 모델, 돌봄 인정소득·컴퓨팅 공정 접근).</p>
               </div>
             </div>
           </div>

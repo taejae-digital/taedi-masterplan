@@ -123,7 +123,7 @@ export function ThreatControlPage() {
               <td style={{ ...tc, fontSize: 11.5, color: C.gray }}>GPU 독점, 데이터 네트워크 효과</td>
               <td style={tc}>CEO 10명이 80억 일상 설계. 국가 규제권 무력화.</td>
               <td style={{ ...tc, fontWeight: 700, color: "#16a34a" }}>전환</td>
-              <td style={tc}>공공 AI 인프라 구축. 데이터 주권 확립. 플랫폼 상호호환성 의무.</td>
+              <td style={tc}>컴퓨팅 자원 공정 접근 의무(GPU·클라우드). 데이터 주권 확립. 플랫폼 상호호환성 의무.</td>
               <td style={{ ...tc, fontSize: 11.5, color: C.light }}>Mazzucato(2013) 기업가적 국가</td></tr>
             <tr>
               <td style={{ ...tc, fontWeight: 700 }}>장기<br/><span style={{ fontSize: 11.5, color: C.light }}>10년+</span></td>
@@ -169,7 +169,7 @@ export function ThreatControlPage() {
             <div style={{ fontSize: 14, fontWeight: 800, color: "#16a34a", marginBottom: 3 }}>③ 전환</div>
             <div style={{ fontSize: 11.5, lineHeight: 1.5, color: C.gray }}>
               <p style={{ margin: "0 0 3px" }}><strong>적용 대상</strong> — 노동 시장·AI 인프라 소유·데이터 주권</p>
-              <p style={{ margin: "0 0 3px" }}><strong>메커니즘</strong> — AI 초과이윤 누진세 → 돌봄 인정소득·공공 AI 인프라 구축</p>
+              <p style={{ margin: "0 0 3px" }}><strong>메커니즘</strong> — AI 초과이윤 누진세 → 돌봄 인정소득·컴퓨팅 자원 공정 접근·데이터 주권</p>
               <p style={{ margin: "0 0 3px" }}><strong>집행</strong> — 기존 조세권 활용·국가별 입법·테마섹형 공공 투자</p>
               <p style={{ margin: 0, fontSize: 11, color: C.light }}>전환은 자연 발생하지 않으므로 능동적 설계 필요</p>
             </div>

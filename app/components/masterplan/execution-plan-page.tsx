@@ -19,7 +19,7 @@ export function ExecutionPlanPage() {
         <div>
           <div style={{ fontSize: 14.5, fontWeight: 800, color: C.dark, marginBottom: 8 }}>장기 목표 (2028~)</div>
           <div style={{ fontSize: 14, lineHeight: 1.7, color: C.gray }}>
-            {["AI 거버넌스 국제 회의체 참여", "한국형 공공 AI 인프라 모델", "세계 의회 설립 논의", "디지털 권리 헌장 초안", "현실화 — 입법 제안"].map((t, i) => (
+            {["AI 거버넌스 국제 회의체 참여", "빅테크 컴퓨팅 자원 공정 접근 모델", "세계 의회 설립 논의", "디지털 권리 헌장 초안", "현실화 — 입법 제안"].map((t, i) => (
               <div key={i} style={{ padding: "4px 8px", background: C.bg, borderLeft: `3px solid ${C.dark}`, marginBottom: 4 }}>{t}</div>
             ))}
           </div>
@@ -60,7 +60,7 @@ export function ExecutionPlanPage() {
             { t: "[전제] 거버넌스 구축 경로", d: "세계 의회 경로 현실성 검증. 블레츨리 후속 추적. 미중 트랙2 외교. 중견국 외교(오타와 모델)." },
             { t: "① 금지 레짐 설계", d: "국제 협약 설계(CWC 모델). 칩 공급망 통제(ASML·TSMC·삼성·NVIDIA). AI 무기·생물무기 접근 차단. 수출 통제 체계." },
             { t: "② 승인 체계 설계", d: "AI 안전청 설계(FDA 모델). 승인 등급·기준 수립. 킬스위치·행동 로그 의무화. 알고리즘 감사 체계." },
-            { t: "③ 전환 모델 설계", d: "AI 초과이윤 누진세 설계. 돌봄 인정소득 재원 산출. 공공 AI 인프라 구축 모델. 데이터 주권·플랫폼 상호호환성." },
+            { t: "③ 전환 모델 설계", d: "AI 초과이윤 누진세 설계. 돌봄 인정소득 재원 산출. 컴퓨팅 자원 공정 접근 의무·데이터 주권·플랫폼 상호호환성." },
           ].map((s) => (
             <div key={s.t} style={{ padding: "8px 10px", borderTop: "3px solid #111" }}>
               <div style={{ fontSize: 15, fontWeight: 800, marginBottom: 4 }}>{s.t}</div>
