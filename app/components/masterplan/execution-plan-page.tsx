@@ -15,7 +15,7 @@ export function ExecutionPlanPage() {
       {/* 01. 실행 일정 */}
       <div style={{ margin: "16px 32px 16px" }}>
         {sec("1", "실행 일정")}
-        <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr 2fr", gap: 20 }}>
+        <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 20 }}>
         <div>
           <div style={{ fontSize: 14.5, fontWeight: 800, color: C.dark, marginBottom: 8 }}>장기 목표 (2028~)</div>
           <div style={{ fontSize: 14, lineHeight: 1.7, color: C.gray }}>
@@ -25,29 +25,14 @@ export function ExecutionPlanPage() {
           </div>
         </div>
         <div>
-          <div style={{ fontSize: 14.5, fontWeight: 800, color: C.dark, marginBottom: 8 }}>중기 목표 (2026)</div>
+          <div style={{ fontSize: 14.5, fontWeight: 800, color: C.dark, marginBottom: 8 }}>중기 목표 (2027)</div>
           <div style={{ fontSize: 14, lineHeight: 1.7, color: C.gray }}>
             {["단행본 출판 (Q4)", "국제 컨퍼런스 개최 (Q4, 서울)", "연구 보고서 퍼블리시", "국제 자문단 상설화", "해외 학술지 게재"].map((t, i) => (
               <div key={i} style={{ padding: "4px 8px", background: C.bg, borderLeft: `3px solid ${C.dark}`, marginBottom: 4 }}>{t}</div>
             ))}
           </div>
         </div>
-        <div>
-          <div style={{ fontSize: 14.5, fontWeight: 800, color: C.dark, marginBottom: 8 }}>2026년 실행 일정</div>
-          <table style={{ width: "100%", borderCollapse: "collapse" }}>
-            <thead><tr><th style={{ ...tlh, width: "18%" }}>시기</th><th style={tlh}>실행 내용</th><th style={{ ...tlh, width: "28%" }}>산출물</th></tr></thead>
-            <tbody>
-              {([
-                ["4~5월", "마스터플랜 확정 · 위협 검증 착수 · 자문단 섭외 시작", "위협 목록 확정"],
-                ["6~8월", "통제 방안 연구 4개 병행 (금지·승인·전환·구축)", "통제 방안 초안"],
-                ["9~10월", "연구 보완 · 자문단 미팅 · 피드백 반영", "종합 연구 보고서"],
-                ["11~12월", "단행본 집필 착수 · 컨퍼런스 기획 시작", "단행본 초고"],
-              ] as const).map(([t, c, o]) => (
-                <tr key={t}><td style={{ ...tls, fontWeight: 700 }}>{t}</td><td style={tls}>{c}</td><td style={tls}>{o}</td></tr>
-              ))}
-            </tbody>
-          </table>
-        </div>
+
       </div>
 
       </div>
