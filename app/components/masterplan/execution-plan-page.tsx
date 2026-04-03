@@ -85,17 +85,17 @@ export function ExecutionPlanPage() {
             [
               ["Shoshana", "Zuboff", "Harvard Business School", "감시 자본주의 해부. 플랫폼 권력의 민주주의 침식 메커니즘 분석.", "감시·조작 / 빅테크 독점"],
               ["Thomas", "Piketty", "Paris School of Economics", "r>g 명제로 불평등 동학 실증. AI 자본 초집중과 누진적 부유세 제안.", "실업·정체성 / 빅테크 독점 / 거버넌스"],
-              ["Andrew", "Hall", "Stanford GSB 정치경제학 교수 / Democracy & Polarization Lab 공동 소장 / 연결 채널 보유 (김경태 전 샌프란시스코 영사, 현 지도 제자)", "대규모 데이터·머신러닝으로 민주주의·양극화 연구. AI 거버넌스 헌법적 프레임워크 제안.", "감시·조작 / 빅테크 독점 / 거버넌스"],
-              ["Daniel", "Susskind", "King's College London / Oxford", "기술적 실업의 구조적 불가피성과 의미의 위기를 정면 직시.", "실업·정체성 / AI 통제 상실"],
+              ["Andrew", "Hall", "Stanford GSB 정치경제학 교수 / Democracy & Polarization Lab 공동 소장 / 연결 채널 보유 (김경태 전 샌프란시스코 영사)", "대규모 데이터·머신러닝으로 민주주의·양극화 연구. AI 거버넌스 헌법적 프레임워크 제안.", "감시·조작 / 빅테크 독점 / 거버넌스"],
+              ["Daniel", "Susskind", "King's College London / Oxford / 연결 채널 보유", "기술적 실업의 구조적 불가피성과 의미의 위기를 정면 직시.", "실업·정체성 / AI 통제 상실"],
               ["Alvin", "Graylin", "HTC 글로벌 부사장 (前 HTC China)", "미중 AI 경쟁 재해석. AGI 시대 AI 권리장전 제시.", "군사 비대칭 / 빅테크 독점 / 거버넌스"],
             ],
           ].map((group, gi) => (
             <table key={gi} style={{ width: "100%", borderCollapse: "collapse" }}>
               <thead><tr>
-                <th style={{ ...hcell, textAlign: "center" as const, width: "12%" }}>후보</th>
-                <th style={{ ...hcell, textAlign: "center" as const, width: "22%" }}>소속</th>
-                <th style={{ ...hcell, textAlign: "center" as const, width: "40%" }}>선정 배경</th>
-                <th style={{ ...hcell, textAlign: "center" as const, width: "26%" }}>기여 영역</th>
+                <th style={{ ...hcell, textAlign: "center" as const, width: "11%" }}>후보</th>
+                <th style={{ ...hcell, textAlign: "center" as const, width: "30%" }}>소속 및 특이사항</th>
+                <th style={{ ...hcell, textAlign: "center" as const, width: "35%" }}>선정 배경</th>
+                <th style={{ ...hcell, textAlign: "center" as const, width: "24%" }}>기여 영역</th>
               </tr></thead>
               <tbody>
                 {group.map(([first, last, a, b, r]) => (
