@@ -77,23 +77,23 @@ export function ExecutionPlanPage() {
           {[
             [
               ["Erik", "Brynjolfsson", "Stanford HAI 교수 / Digital Economy Lab 소장 (前 MIT Sloan)", "『The Second Machine Age』 공저자. AI가 노동·생산성·불평등에 미치는 영향을 실증한 디지털경제학 권위자.", "실업·정체성 / 빅테크 독점 / 거버넌스"],
-              ["Daron", "Acemoglu", "MIT (2024 노벨 경제학상)", "기술의 방향을 민주적으로 재설계하는 제도경제학 권위자.", "실업·정체성 / 빅테크 독점 / 거버넌스"],
-              ["Nick", "Bostrom", "Macrostrategy Research (前 Oxford FHI)", "초지능·실존적 위험 연구 선구자. AI 통제 문제 체계적 탐구.", "AI 통제 상실 / 핵AI화 / 거버넌스"],
-              ["Yoshua", "Bengio", "Mila / LawZero (2018 튜링상)", "딥러닝의 대부. 스스로 개척한 기술의 위험을 경고하는 행동하는 과학자.", "AI 통제 상실 / 생물무기 / 거버넌스"],
-              ["Mustafa", "Suleyman", "Microsoft AI CEO (前 DeepMind)", "『The Coming Wave』에서 기술 확산의 봉쇄 실패를 정면 직시.", "군사 비대칭 / 생물무기 / 사이버 WMD"],
+              ["Daron", "Acemoglu", "MIT 경제학 교수 (2024 노벨 경제학상 수상)", "『국가는 왜 실패하는가』 공저자. AI·자동화가 권력 구조의 선택임을 실증하고, 기술의 방향을 민주적으로 재설계하는 논거를 제시한 제도경제학 권위자.", "대량 실업·정체성 위기 / 빅테크 권력 독점 / 거버넌스 공백"],
+              ["Nick", "Bostrom", "Macrostrategy Research Initiative 수석 연구원 (前 Oxford FHI 창립 소장)", "초지능·실존적 위험 연구의 선구자. 『Superintelligence』·『Deep Utopia』로 AI 통제 문제와 노동 이후 사회의 의미 공백을 가장 체계적으로 탐구한 철학자.", "AI 통제 상실 / 핵AI화·자율살상 / 거버넌스 공백"],
+              ["Yoshua", "Bengio", "Université de Montréal 교수 / Mila 창립 과학 책임자 / LawZero 설립자", "딥러닝의 대부, 2018년 튜링상 수상. 스스로 개척한 기술의 위험을 경고하며 LawZero를 설립한 행동하는 과학자로, 프런티어 AI 안전 분야 최고 권위자.", "AI 통제 상실 / AI 생물무기 / 거버넌스 공백"],
+              ["Mustafa", "Suleyman", "Microsoft AI CEO (前 DeepMind 공동 창립자)", "DeepMind 공동 창업 후 Microsoft AI를 이끄는 산업 내부자. 『The Coming Wave』에서 기술 확산의 봉쇄 실패를 정면으로 다뤄 실천적 거버넌스 논의를 주도.", "AI 군사 비대칭 / AI 생물무기 / 사이버 WMD / 거버넌스 공백"],
             ],
             [
-              ["Shoshana", "Zuboff", "Harvard Business School", "감시 자본주의 해부. 플랫폼 권력의 민주주의 침식 메커니즘 분석.", "감시·조작 / 빅테크 독점"],
-              ["Thomas", "Piketty", "Paris School of Economics", "r>g 명제로 불평등 동학 실증. AI 자본 초집중과 누진적 부유세 제안.", "실업·정체성 / 빅테크 독점 / 거버넌스"],
+              ["Shoshana", "Zuboff", "Harvard Business School 명예교수", "『감시 자본주의의 시대』로 빅테크의 행동 수정 경제를 해부. 플랫폼 권력이 민주주의를 침식하는 메커니즘을 가장 날카롭게 분석한 디지털 권력 이론가.", "감시·조작 체제 / 빅테크 권력 독점"],
+              ["Thomas", "Piketty", "Paris School of Economics 교수 / World Inequality Lab 공동 소장", "『21세기 자본』의 r>g 명제로 자본주의 불평등 동학을 실증. AI·디지털 자본의 초집중과 세습 불평등 심화를 분석하고 누진적 부유세·참여 사회주의를 제안한 경제학자.", "대량 실업·정체성 위기 / 빅테크 권력 독점 / 거버넌스 공백"],
               ["Andrew", "Hall", "Stanford GSB 정치경제학 교수 / Democracy & Polarization Lab 공동 소장 / 연결 채널 보유 (김경태 전 샌프란시스코 영사)", "대규모 데이터·머신러닝으로 민주주의·양극화 연구. AI 거버넌스 헌법적 프레임워크 제안.", "감시·조작 / 빅테크 독점 / 거버넌스"],
-              ["Daniel", "Susskind", "King's College London / Oxford / 연결 채널 보유", "기술적 실업의 구조적 불가피성과 의미의 위기를 정면 직시.", "실업·정체성 / AI 통제 상실"],
-              ["Alvin", "Graylin", "HTC 글로벌 부사장 (前 HTC China)", "미중 AI 경쟁 재해석. AGI 시대 AI 권리장전 제시.", "군사 비대칭 / 빅테크 독점 / 거버넌스"],
+              ["Daniel", "Susskind", "King's College London 경제학 교수 / Oxford Institute for Ethics in AI 선임 연구원 / 연결 채널 보유", "『A World Without Work』에서 기술적 실업의 구조적 불가피성과 의미의 위기를 정면으로 다룬 경제학자. 장소·스킬·정체성 미스매치 분석과 조건부 기본소득 설계 분야 전문가.", "대량 실업·정체성 위기 / AI 통제 상실"],
+              ["Alvin", "Graylin", "HTC 글로벌 부사장 / ViveX Accelerator 공동 대표 (前 HTC China 대표)", "MIT AI·경영 석사, 30년간 AI·XR 산업을 이끈 기술경영 전문가. 미중 문화 전환을 직접 체험한 배경으로 미중 AI 경쟁의 본질을 재해석하고 AGI 시대 AI 권리장전을 제시.", "AI 군사 비대칭 / 빅테크 권력 독점 / 거버넌스 공백"],
             ],
           ].map((group, gi) => (
             <table key={gi} style={{ width: "100%", borderCollapse: "collapse" }}>
               <thead><tr>
                 <th style={{ ...hcell, textAlign: "center" as const, width: "11%" }}>후보</th>
-                <th style={{ ...hcell, textAlign: "center" as const, width: "30%" }}>소속 및 특이사항</th>
+                <th style={{ ...hcell, textAlign: "center" as const, width: "30%" }}>소속 및 특이 사항</th>
                 <th style={{ ...hcell, textAlign: "center" as const, width: "35%" }}>선정 배경</th>
                 <th style={{ ...hcell, textAlign: "center" as const, width: "24%" }}>기여 영역</th>
               </tr></thead>
