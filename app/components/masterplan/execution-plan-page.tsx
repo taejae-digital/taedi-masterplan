@@ -76,7 +76,7 @@ export function ExecutionPlanPage() {
         <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 16 }}>
           {[
             [
-              ["Yuval", "Harari", "Hebrew University of Jerusalem", "거시역사학자. AI가 서사·의미 체계 붕괴와 디지털 권위주의 강화를 경고.", "감시·조작 / 빅테크 독점 / 거버넌스"],
+              ["Erik", "Brynjolfsson", "Stanford HAI 교수 / Digital Economy Lab 소장 (前 MIT Sloan)", "『The Second Machine Age』 공저자. AI가 노동·생산성·불평등에 미치는 영향을 실증한 디지털경제학 권위자.", "실업·정체성 / 빅테크 독점 / 거버넌스"],
               ["Daron", "Acemoglu", "MIT (2024 노벨 경제학상)", "기술의 방향을 민주적으로 재설계하는 제도경제학 권위자.", "실업·정체성 / 빅테크 독점 / 거버넌스"],
               ["Nick", "Bostrom", "Macrostrategy Research (前 Oxford FHI)", "초지능·실존적 위험 연구 선구자. AI 통제 문제 체계적 탐구.", "AI 통제 상실 / 핵AI화 / 거버넌스"],
               ["Yoshua", "Bengio", "Mila / LawZero (2018 튜링상)", "딥러닝의 대부. 스스로 개척한 기술의 위험을 경고하는 행동하는 과학자.", "AI 통제 상실 / 생물무기 / 거버넌스"],
@@ -85,7 +85,7 @@ export function ExecutionPlanPage() {
             [
               ["Shoshana", "Zuboff", "Harvard Business School", "감시 자본주의 해부. 플랫폼 권력의 민주주의 침식 메커니즘 분석.", "감시·조작 / 빅테크 독점"],
               ["Thomas", "Piketty", "Paris School of Economics", "r>g 명제로 불평등 동학 실증. AI 자본 초집중과 누진적 부유세 제안.", "실업·정체성 / 빅테크 독점 / 거버넌스"],
-              ["Guy", "Standing", "University of London / BIEN", "프레카리아트 개념 창안. 기본소득·커먼즈 배당 세계적 권위자.", "실업·정체성 / 빅테크 독점"],
+              ["Andrew", "Hall", "Stanford GSB 정치경제학 교수 / Democracy & Polarization Lab 공동 소장 / 연결 채널 보유 (김경태 전 샌프란시스코 영사, 현 지도 제자)", "대규모 데이터·머신러닝으로 민주주의·양극화 연구. AI 거버넌스 헌법적 프레임워크 제안.", "감시·조작 / 빅테크 독점 / 거버넌스"],
               ["Daniel", "Susskind", "King's College London / Oxford", "기술적 실업의 구조적 불가피성과 의미의 위기를 정면 직시.", "실업·정체성 / AI 통제 상실"],
               ["Alvin", "Graylin", "HTC 글로벌 부사장 (前 HTC China)", "미중 AI 경쟁 재해석. AGI 시대 AI 권리장전 제시.", "군사 비대칭 / 빅테크 독점 / 거버넌스"],
             ],
