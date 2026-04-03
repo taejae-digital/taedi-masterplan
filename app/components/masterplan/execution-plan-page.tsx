@@ -27,7 +27,7 @@ export function ExecutionPlanPage() {
         <div>
           <div style={{ fontSize: 14.5, fontWeight: 800, color: C.dark, marginBottom: 8 }}>중기 목표 (2027)</div>
           <div style={{ fontSize: 14, lineHeight: 1.7, color: C.gray }}>
-            {["국제 컨퍼런스 개최", "해외 학술지 게재", "정책 보고서 정부 제출", "국제 자문단 상설화", "후속 연구 착수"].map((t, i) => (
+            {["단행본 출판 (Q3)", "국제 컨퍼런스 개최 (Q4)", "정책 보고서 정부 제출", "국제 자문단 상설화", "해외 학술지 게재"].map((t, i) => (
               <div key={i} style={{ padding: "4px 8px", background: C.bg, borderLeft: `3px solid ${C.dark}`, marginBottom: 4 }}>{t}</div>
             ))}
           </div>
@@ -38,11 +38,10 @@ export function ExecutionPlanPage() {
             <thead><tr><th style={{ ...tlh, width: "18%" }}>시기</th><th style={tlh}>실행 내용</th><th style={{ ...tlh, width: "28%" }}>산출물</th></tr></thead>
             <tbody>
               {([
-                ["4월", "위협 특정 워크샵, 마스터플랜 확정", "위협 목록 + 분류 기준"],
-                ["5~6월", "통제 방안 연구, 경제 질서 설계", "종합 보고서"],
-                ["7~8월", "국제 자문단 구성 및 검증", "자문단 피드백"],
-                ["9~10월", "단행본 집필 및 편집", "단행본 출간"],
-                ["11~12월", "출판, 컨퍼런스, 정치적 실현", "공론화"],
+                ["4~5월", "마스터플랜 확정 · 위협 검증 착수 · 자문단 섭외 시작", "위협 목록 확정"],
+                ["6~8월", "통제 방안 연구 4개 병행 (금지·승인·전환·구축)", "통제 방안 초안"],
+                ["9~10월", "연구 보완 · 자문단 미팅 · 피드백 반영", "종합 연구 보고서"],
+                ["11~12월", "단행본 집필 착수 · 컨퍼런스 기획 시작", "단행본 초고"],
               ] as const).map(([t, c, o]) => (
                 <tr key={t}><td style={{ ...tls, fontWeight: 700 }}>{t}</td><td style={tls}>{c}</td><td style={tls}>{o}</td></tr>
               ))}
@@ -58,10 +57,10 @@ export function ExecutionPlanPage() {
         {sec("2", "향후 연구 과제")}
         <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr 1fr 1fr", gap: 12 }}>
           {[
-            { t: "위협 검증", d: "각 위협 기술적 실현 가능성 전문가 검증. AISI 위험 지도 협업. 산업별 시나리오 구체화." },
-            { t: "경제 모델", d: "공공 AI 인프라 비용 산출. AI 누진세 시뮬레이션. 돌봄 인정소득 재원. 한국형 모델." },
-            { t: "거버넌스 경로", d: "세계 의회 경로 현실성 검증. 블레츨리 후속 추적. 오타와·몬트리올 심층 분석. 중견국 외교." },
-            { t: "실증 연구", d: "4계급 분화 데이터(산업별 AI 대체율). 6공동체 변화 사례. AI 과의존 실태(AISI 협업)." },
+            { t: "[전제] 거버넌스 구축 경로", d: "세계 의회 경로 현실성 검증. 블레츨리 후속 추적. 미중 트랙2 외교. 중견국 외교(오타와 모델)." },
+            { t: "① 금지 레짐 설계", d: "국제 협약 설계(CWC 모델). 칩 공급망 통제(ASML·TSMC·삼성·NVIDIA). AI 무기·생물무기 접근 차단. 수출 통제 체계." },
+            { t: "② 승인 체계 설계", d: "AI 안전청 설계(FDA 모델). 승인 등급·기준 수립. 킬스위치·행동 로그 의무화. 알고리즘 감사 체계." },
+            { t: "③ 전환 모델 설계", d: "AI 초과이윤 누진세 설계. 돌봄 인정소득 재원 산출. 공공 AI 인프라 구축 모델. 데이터 주권·플랫폼 상호호환성." },
           ].map((s) => (
             <div key={s.t} style={{ padding: "8px 10px", borderTop: "3px solid #111" }}>
               <div style={{ fontSize: 15, fontWeight: 800, marginBottom: 4 }}>{s.t}</div>
@@ -117,19 +116,19 @@ export function ExecutionPlanPage() {
         <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr 1fr 1fr", gap: 16 }}>
           <div style={{ padding: "10px 12px", borderTop: "4px solid #333", background: C.bg }}>
             <div style={{ fontSize: 14.5, fontWeight: 800, color: C.dark, marginBottom: 2 }}>유호현 (팀장)</div>
-            <div style={{ fontSize: 14, lineHeight: 1.6, color: C.gray, marginTop: 6 }}>총괄 · 경제 질서 · 거버넌스 · 정치적 실현</div>
+            <div style={{ fontSize: 14, lineHeight: 1.6, color: C.gray, marginTop: 6 }}>[전제] 거버넌스 구축 · 총괄 · 정치적 실현</div>
           </div>
           <div style={{ padding: "10px 12px", borderTop: "4px solid #333", background: C.bg }}>
             <div style={{ fontSize: 14.5, fontWeight: 800, color: C.dark, marginBottom: 2 }}>윤준영</div>
-            <div style={{ fontSize: 14, lineHeight: 1.6, color: C.gray, marginTop: 6 }}>AI 무기 · 군사 비대칭 · 국제 레짐</div>
-          </div>
-          <div style={{ padding: "10px 12px", borderTop: "4px solid #333", background: C.bg }}>
-            <div style={{ fontSize: 14.5, fontWeight: 800, color: C.dark, marginBottom: 2 }}>김수연</div>
-            <div style={{ fontSize: 14, lineHeight: 1.6, color: C.gray, marginTop: 6 }}>존엄 위기 · 노동/분배 · 공동체 재편</div>
+            <div style={{ fontSize: 14, lineHeight: 1.6, color: C.gray, marginTop: 6 }}>① 금지 레짐 · 국제 협약 · 수출 통제</div>
           </div>
           <div style={{ padding: "10px 12px", borderTop: "4px solid #333", background: C.bg }}>
             <div style={{ fontSize: 14.5, fontWeight: 800, color: C.dark, marginBottom: 2 }}>이규환</div>
-            <div style={{ fontSize: 14, lineHeight: 1.6, color: C.gray, marginTop: 6 }}>빅테크 통제 · AI 환경 · 디지털 권리</div>
+            <div style={{ fontSize: 14, lineHeight: 1.6, color: C.gray, marginTop: 6 }}>② 승인 체계 · 빅테크 통제 · 디지털 권리</div>
+          </div>
+          <div style={{ padding: "10px 12px", borderTop: "4px solid #333", background: C.bg }}>
+            <div style={{ fontSize: 14.5, fontWeight: 800, color: C.dark, marginBottom: 2 }}>김수연</div>
+            <div style={{ fontSize: 14, lineHeight: 1.6, color: C.gray, marginTop: 6 }}>③ 전환 모델 · 대량 실업 · 사회 전환</div>
           </div>
         </div>
       </div>

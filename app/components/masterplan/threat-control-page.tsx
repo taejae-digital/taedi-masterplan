@@ -42,8 +42,8 @@ export function ThreatControlPage() {
               <div style={{ marginBottom: 3 }}><strong>군사 →</strong> AI 군사 비대칭, 폭력의 민주화, 핵AI화·자율살상</div>
               <div style={{ marginBottom: 3 }}><strong>생명공학 →</strong> AI 생물무기 (비전문가도 병원체 설계)</div>
               <div style={{ marginBottom: 3 }}><strong>사이버 →</strong> 사이버 WMD (인프라 연쇄 붕괴)</div>
-              <div style={{ marginBottom: 3 }}><strong>정보 →</strong> 감시·조작 체제 (민주주의 침식)</div>
-              <div><strong>경제 →</strong> 대량 실업·정체성 위기, 빅테크 권력 독점</div>
+              <div style={{ marginBottom: 3 }}><strong>정보·미디어 →</strong> 감시·조작 체제 (민주주의 침식)</div>
+              <div><strong>경제·노동 →</strong> 대량 실업·정체성 위기, 빅테크 권력 독점</div>
             </div>
           </div>
         </div>
@@ -150,28 +150,28 @@ export function ThreatControlPage() {
           <div style={{ padding: "6px 8px", borderTop: "3px solid #b91c1c" }}>
             <div style={{ fontSize: 14, fontWeight: 800, color: "#b91c1c", marginBottom: 3 }}>① 금지</div>
             <div style={{ fontSize: 11.5, lineHeight: 1.5, color: C.gray }}>
-              <p style={{ margin: "0 0 3px" }}>화학무기금지협약(CWC) 모델: 98% 폐기 성공</p>
-              <p style={{ margin: "0 0 3px" }}>칩 공급망 3개사 = 물리적 통제점</p>
-              <p style={{ margin: "0 0 3px" }}>위반 시 칩·클라우드 접근 차단</p>
-              <p style={{ margin: 0, fontSize: 11.5, color: C.light }}>강대국 특권 배제 — 핵확산금지조약(NPT) 실패 교훈</p>
+              <p style={{ margin: "0 0 3px" }}><strong>적용 대상</strong> — AI 무기화 기술 (군사·생물무기·사이버 공격·핵 지휘통제)</p>
+              <p style={{ margin: "0 0 3px" }}><strong>통제점</strong> — 칩 공급망 4개사 (ASML·TSMC·삼성·NVIDIA)</p>
+              <p style={{ margin: "0 0 3px" }}><strong>집행</strong> — 위반 시 칩·클라우드 접근 차단, 국제 기구 사찰</p>
+              <p style={{ margin: 0, fontSize: 11, color: C.light }}>강대국 포함 예외 없이 적용</p>
             </div>
           </div>
           <div style={{ padding: "6px 8px", borderTop: "3px solid #d97706" }}>
             <div style={{ fontSize: 14, fontWeight: 800, color: "#d97706", marginBottom: 3 }}>② 승인</div>
             <div style={{ fontSize: 11.5, lineHeight: 1.5, color: C.gray }}>
-              <p style={{ margin: "0 0 3px" }}>미국 식품의약국(FDA) + 연방항공청(FAA) 모델</p>
-              <p style={{ margin: "0 0 3px" }}>대상: AI + 물리력 결합 (지능 자체가 아님)</p>
-              <p style={{ margin: "0 0 3px" }}>주요 시장 접근 조건 → 글로벌 표준화</p>
-              <p style={{ margin: 0, fontSize: 11.5, color: C.light }}>킬스위치 + 행동 로그 + 연간 재승인</p>
+              <p style={{ margin: "0 0 3px" }}><strong>적용 대상</strong> — AI + 물리력 결합 시스템 (드론·자율무기·의료기기·인프라 제어)</p>
+              <p style={{ margin: "0 0 3px" }}><strong>메커니즘</strong> — 사전 심사·등급별 승인·주요 시장 접근 조건</p>
+              <p style={{ margin: "0 0 3px" }}><strong>집행</strong> — 킬스위치 의무화·행동 로그 공개·연간 재승인</p>
+              <p style={{ margin: 0, fontSize: 11, color: C.light }}>지능 자체가 아닌 AI+물리력 결합 지점에 적용</p>
             </div>
           </div>
           <div style={{ padding: "6px 8px", borderTop: "3px solid #16a34a" }}>
             <div style={{ fontSize: 14, fontWeight: 800, color: "#16a34a", marginBottom: 3 }}>③ 전환</div>
             <div style={{ fontSize: 11.5, lineHeight: 1.5, color: C.gray }}>
-              <p style={{ margin: "0 0 3px" }}>뉴딜(1933) + 살트셰바덴(1938) 모델</p>
-              <p style={{ margin: "0 0 3px" }}>공공 AI 인프라 + AI 초과이윤 누진세</p>
-              <p style={{ margin: "0 0 3px" }}>조세권(새 법 불필요) + 테마섹 모델</p>
-              <p style={{ margin: 0, fontSize: 11.5, color: C.light }}>EU 디지털시장법(DMA, 2024) 이미 시행 중</p>
+              <p style={{ margin: "0 0 3px" }}><strong>적용 대상</strong> — 노동 시장·AI 인프라 소유·데이터 주권</p>
+              <p style={{ margin: "0 0 3px" }}><strong>메커니즘</strong> — AI 초과이윤 누진세 → 돌봄 인정소득·공공 AI 인프라 구축</p>
+              <p style={{ margin: "0 0 3px" }}><strong>집행</strong> — 기존 조세권 활용·국가별 입법·테마섹형 공공 투자</p>
+              <p style={{ margin: 0, fontSize: 11, color: C.light }}>전환은 자연 발생하지 않으므로 능동적 설계 필요</p>
             </div>
           </div>
         </div>
