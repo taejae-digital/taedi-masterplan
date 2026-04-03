@@ -8,7 +8,7 @@ export function ResearchContentPage() {
 
   return (
     <div style={{ pageBreakBefore: "always" }}>
-      <Header title="연구 내용과 현황" subtitle="3. 상세 연구 프레임워크" />
+      <Header subtitle="3. 상세 연구 프레임워크" />
 
       {/* 연구 흐름 */}
       <div style={{ margin: "16px 32px 12px" }}>

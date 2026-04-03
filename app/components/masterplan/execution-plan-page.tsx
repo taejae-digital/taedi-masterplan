@@ -10,7 +10,7 @@ export function ExecutionPlanPage() {
 
   return (
     <div style={{ pageBreakBefore: "always" }}>
-      <Header title="실행 계획 및 업무 분장" subtitle="4. 실행 계획 및 팀 업무 분장" />
+      <Header subtitle="4. 실행 계획 및 팀 업무 분장" />
 
       {/* 01. 실행 일정 */}
       <div style={{ margin: "16px 32px 16px" }}>

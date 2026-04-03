@@ -1,6 +1,6 @@
 import { C } from "./constants";
 
-export function Header({ title, subtitle, tag }: { title: string; subtitle: string; tag?: string }) {
+export function Header({ subtitle, tag }: { title?: string; subtitle: string; tag?: string }) {
   return (
     <div style={{ background: C.navy, color: "#fff", padding: "22px 32px 18px", marginBottom: 0 }}>
       <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start" }}>
@@ -9,7 +9,7 @@ export function Header({ title, subtitle, tag }: { title: string; subtitle: stri
           <div style={{ fontSize: 20, fontWeight: 800, letterSpacing: 1 }}>디지털 전환과 사회변혁</div>
         </div>
         <div style={{ textAlign: "right" }}>
-          <div style={{ fontSize: 11.5, letterSpacing: 3, opacity: 0.5, marginBottom: 4 }}>{title}</div>
+          <div style={{ fontSize: 11.5, letterSpacing: 3, opacity: 0.5, marginBottom: 4 }}>MASTER PLAN v0.1</div>
           <div style={{ fontSize: 15.5, fontWeight: 600 }}>{subtitle}</div>
           {tag && <div style={{ fontSize: 11.5, opacity: 0.5, marginTop: 2 }}>{tag}</div>}
         </div>
