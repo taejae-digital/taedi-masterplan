@@ -10,7 +10,7 @@ export function ExecutionPlanPage() {
 
   return (
     <div style={{ pageBreakBefore: "always" }}>
-      <Header title="실행 계획 및 업무 분장" subtitle="실행·업무 분장" />
+      <Header title="실행 계획 및 업무 분장" subtitle="4. 실행 계획 및 팀 업무 분장" />
 
       {/* 01. 실행 일정 */}
       <div style={{ margin: "16px 32px 16px" }}>
@@ -19,7 +19,7 @@ export function ExecutionPlanPage() {
         <div>
           <div style={{ fontSize: 14.5, fontWeight: 800, color: C.dark, marginBottom: 8 }}>장기 목표 (2028~)</div>
           <div style={{ fontSize: 14, lineHeight: 1.7, color: C.gray }}>
-            {["AI 거버넌스 국제 회의체 참여", "한국형 공공 AI 인프라 모델", "세계 의회 설립 논의", "디지털 권리 헌장 초안", "정치적 실현 — 입법 제안"].map((t, i) => (
+            {["AI 거버넌스 국제 회의체 참여", "한국형 공공 AI 인프라 모델", "세계 의회 설립 논의", "디지털 권리 헌장 초안", "현실화 — 입법 제안"].map((t, i) => (
               <div key={i} style={{ padding: "4px 8px", background: C.bg, borderLeft: `3px solid ${C.dark}`, marginBottom: 4 }}>{t}</div>
             ))}
           </div>
@@ -118,7 +118,7 @@ export function ExecutionPlanPage() {
         <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr 1fr 1fr", gap: 16 }}>
           <div style={{ padding: "10px 12px", borderTop: "4px solid #333", background: C.bg }}>
             <div style={{ fontSize: 14.5, fontWeight: 800, color: C.dark, marginBottom: 2 }}>유호현 (팀장)</div>
-            <div style={{ fontSize: 14, lineHeight: 1.6, color: C.gray, marginTop: 6 }}>[전제] 거버넌스 구축 · 총괄 · 정치적 실현</div>
+            <div style={{ fontSize: 14, lineHeight: 1.6, color: C.gray, marginTop: 6 }}>[전제] 거버넌스 구축 · 총괄 · 현실화</div>
           </div>
           <div style={{ padding: "10px 12px", borderTop: "4px solid #333", background: C.bg }}>
             <div style={{ fontSize: 14.5, fontWeight: 800, color: C.dark, marginBottom: 2 }}>윤준영</div>

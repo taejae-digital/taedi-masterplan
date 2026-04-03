@@ -8,7 +8,7 @@ export function ResearchContentPage() {
 
   return (
     <div style={{ pageBreakBefore: "always" }}>
-      <Header title="연구 내용과 현황" subtitle="p.3 연구 내용" />
+      <Header title="연구 내용과 현황" subtitle="3. 상세 연구 프레임워크" />
 
       {/* 연구 흐름 */}
       <div style={{ margin: "16px 32px 12px" }}>
@@ -22,7 +22,7 @@ export function ResearchContentPage() {
           <Arrow />
           <ResearchBox num="04" title="대책 설계" desc="[전제] 거버넌스 구축 → [통제] 금지·승인·전환. 각 위협별 구체적 통제 방안." />
           <Arrow />
-          <ResearchBox num="05" title="실행·공론화" desc="단행본 출판, 국제 컨퍼런스, 정책 제안, 정치적 실현." />
+          <ResearchBox num="05" title="실행·공론화" desc="단행본 출판, 국제 컨퍼런스, 정책 제안, 현실화." />
         </div>
       </div>
 
@@ -141,7 +141,7 @@ export function ResearchContentPage() {
             </div>
           </div>
           <div style={{ padding: "10px 14px", border: `1px solid ${C.line}`, background: C.bg }}>
-            <div style={{ fontSize: 14.5, fontWeight: 800, color: C.dark, marginBottom: 6 }}>정치적 실현</div>
+            <div style={{ fontSize: 14.5, fontWeight: 800, color: C.dark, marginBottom: 6 }}>현실화</div>
             <div style={{ fontSize: 12, lineHeight: 1.5, color: C.gray }}>
               <p style={{ margin: "0 0 4px" }}><strong>한국 내:</strong> 단행본 기반 정책 보고서 → 국회 브리핑. AI 거버넌스 입법 제안.</p>
               <p style={{ margin: "0 0 4px" }}><strong>국제:</strong> 오타와 조약 모델 — 한국이 중견국으로서 AI 금지 협약 의제 설정. 미중 트랙2 외교 참여.</p>

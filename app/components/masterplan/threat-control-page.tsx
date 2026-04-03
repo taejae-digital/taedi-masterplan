@@ -8,7 +8,7 @@ export function ThreatControlPage() {
 
   return (
     <div style={{ pageBreakBefore: "always" }}>
-      <Header title="디지털 위협과 통제 방안" subtitle="위협·통제" />
+      <Header title="디지털 위협과 통제 방안" subtitle="2. 디지털 기술의 위협 및 통제" />
 
       {/* 디지털 기술 구성 */}
       <div style={{ margin: "12px 32px 10px" }}>
