@@ -67,7 +67,7 @@ export function ThreatControlPage() {
           </tr></thead>
           <tbody>
             <tr>
-              <td style={{ ...tc, fontWeight: 700, color: "#b91c1c" }} rowSpan={3}>진행중<br/><span style={{ fontSize: 11.5, color: C.light }}>현재</span></td>
+              <td style={{ ...tc, fontWeight: 700, color: "#b91c1c" }} rowSpan={5}>진행중<br/><span style={{ fontSize: 11.5, color: C.light }}>현재</span></td>
               <td style={{ ...tc, fontWeight: 700 }}>AI 인류 생존 위협</td>
               <td style={{ ...tc, fontSize: 11.5, color: C.gray }}>초지능 AI, 자율 AI 에이전트 목표 최적화</td>
               <td style={{ ...tc, fontWeight: 600, color: "#b91c1c" }}>AI가 인간을 대체·무력화 → 인류 생존에 대한 위협. 궁극적으로 AI가 인간보다 똑똑해져 인간을 지배하거나 멸종으로 이어질 가능성.</td>
@@ -88,15 +88,22 @@ export function ThreatControlPage() {
               <td style={{ ...tc, fontWeight: 700, color: "#d97706" }}>승인</td>
               <td style={tc}>자율성 4단계 등급별 승인. 킬스위치 의무. 행동 로그 공개. 연간 재승인.</td>
               <td style={{ ...tc, fontSize: 11.5, color: C.light }}>Russell(2019) 번복 가능성 원칙</td></tr>
-            <tr style={{ background: "#f5f5f5" }}>
-              <td style={{ ...tc, fontWeight: 700 }} rowSpan={4}>임박<br/><span style={{ fontSize: 11.5, color: C.light }}>1~3년</span></td>
+            <tr>
               <td style={{ ...tc, fontWeight: 700 }}>AI 군사 비대칭</td>
               <td style={{ ...tc, fontSize: 11.5, color: C.gray }}>상용 드론+컴퓨터비전, 오픈소스 LLM 전술 자동화</td>
               <td style={tc}>AI가 전력 격차 극대화 → 저비용 전쟁 유혹(이란). 비국가 행위자도 폭력 수단 접근 → 폭력의 민주화.</td>
               <td style={{ ...tc, fontWeight: 700, color: "#b91c1c" }}>금지</td>
               <td style={tc}>AI 군사기술 수출 통제. 비국가 행위자 접근 차단. AI 안전 기구(IAEA 모델) 사찰.</td>
               <td style={{ ...tc, fontSize: 11.5, color: C.light }}>바세나르 협정 확장</td></tr>
+            <tr>
+              <td style={{ ...tc, fontWeight: 700 }}>핵AI화·자율살상</td>
+              <td style={{ ...tc, fontSize: 11.5, color: C.gray }}>자율표적선정 AI(LAWS), 핵 지휘통제 자동화</td>
+              <td style={tc}>핵 지휘체계 AI 개입 → 인간 승인 없이 발사 → 오판이 곧 핵전쟁.</td>
+              <td style={{ ...tc, fontWeight: 700, color: "#b91c1c" }}>금지</td>
+              <td style={tc}>핵 지휘체계 AI 개입 전면 금지. 자율살상무기 금지 협약. 인간 최종 승인 의무화.</td>
+              <td style={{ ...tc, fontSize: 11.5, color: C.light }}>핵확산금지조약(NPT) — 강대국 특권 배제</td></tr>
             <tr style={{ background: "#f5f5f5" }}>
+              <td style={{ ...tc, fontWeight: 700 }} rowSpan={2}>임박<br/><span style={{ fontSize: 11.5, color: C.light }}>1~3년</span></td>
               <td style={{ ...tc, fontWeight: 700 }}>AI 생물무기</td>
               <td style={{ ...tc, fontSize: 11.5, color: C.gray }}>AlphaFold2·3, ProteinMPNN, RFdiffusion</td>
               <td style={tc}>비전문가도 병원체 설계 가능. 확산 시 만든 쪽 포함 모두 피해자.</td>
@@ -110,13 +117,6 @@ export function ThreatControlPage() {
               <td style={{ ...tc, fontWeight: 700, color: "#b91c1c" }}>금지</td>
               <td style={tc}>공격용 AI 개발·배포 금지. 핵심 인프라 방어 의무화. 칩 공급망(ASML·TSMC·삼성) 추적.</td>
               <td style={{ ...tc, fontSize: 11.5, color: C.light }}>생물무기금지협약(BWC) 실패 교훈</td></tr>
-            <tr style={{ background: "#f5f5f5" }}>
-              <td style={{ ...tc, fontWeight: 700 }}>핵AI화·자율살상</td>
-              <td style={{ ...tc, fontSize: 11.5, color: C.gray }}>자율표적선정 AI(LAWS), 핵 지휘통제 자동화</td>
-              <td style={tc}>핵 지휘체계 AI 개입 → 인간 승인 없이 발사 → 오판이 곧 핵전쟁.</td>
-              <td style={{ ...tc, fontWeight: 700, color: "#b91c1c" }}>금지</td>
-              <td style={tc}>핵 지휘체계 AI 개입 전면 금지. 자율살상무기 금지 협약. 인간 최종 승인 의무화.</td>
-              <td style={{ ...tc, fontSize: 11.5, color: C.light }}>핵확산금지조약(NPT) — 강대국 특권 배제</td></tr>
             <tr style={{ background: "#f5f5f5" }}>
               <td style={{ ...tc, fontWeight: 700 }} rowSpan={2}>중기<br/><span style={{ fontSize: 11.5, color: C.light }}>3~10년</span></td>
               <td style={{ ...tc, fontWeight: 700 }}>대량 실업·정체성 위기</td>
