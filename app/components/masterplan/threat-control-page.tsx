@@ -148,7 +148,7 @@ export function ThreatControlPage() {
       <div style={{ margin: "10px 32px 0" }}>
         <div style={{ fontSize: 13, fontWeight: 700, color: C.navy, marginBottom: 6 }}>통제 프레임워크</div>
 
-        <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr 1fr", gap: 10 }}>
+        <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr 1fr", gap: 16 }}>
           <div style={{ padding: "6px 8px", borderTop: "3px solid #b91c1c", gridColumn: "1 / -1", background: "#fff5f5", border: "1px solid #fca5a5", borderTop: "3px solid #b91c1c", marginBottom: 6 }}>
             <div style={{ fontSize: 13, fontWeight: 800, color: "#b91c1c", marginBottom: 2 }}>⚠️ 핵심 전제 — AI 인류 생존 위협</div>
             <div style={{ fontSize: 11.5, lineHeight: 1.5, color: "#333" }}>AI가 인간보다 똑똑해져 인간을 대체·무력화하거나 인류 생존 자체를 위협하는 시나리오. 기술 통제 체계 설계와 승인 체계의 근본 이유. 이 위협이 통제의 출발점이다.</div>

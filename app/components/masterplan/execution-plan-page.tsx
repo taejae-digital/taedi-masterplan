@@ -55,7 +55,7 @@ export function ExecutionPlanPage() {
       {/* 02. 금년 핵심 연구 과제 */}
       <div style={{ margin: "0 32px 12px" }}>
         {sec("2", "핵심 연구 과제")}
-        <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr 1fr", gap: 12 }}>
+        <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr 1fr", gap: 20 }}>
           {[
             { t: "① 기술 통제 체계 설계", d: "기술 통제 관련 기존 체제 및 사례 분석. 핵심 기술 공급망 기반 수출통제 구조 검토. 분야별 통제 메커니즘 비교 분석. → 설계안을 만들어 정부에 제안." },
             { t: "② 승인 체계 설계", d: "AI 안전청 설계(FDA 모델). 승인 등급·기준 수립. 킬스위치·행동 로그 의무화. 알고리즘 감사 체계. → 설계안을 만들어 정부에 제안." },
@@ -75,7 +75,7 @@ export function ExecutionPlanPage() {
       {/* 03. 국제 자문단 — 윤준영 개편 버전 */}
       <div style={{ margin: "0 32px 12px" }}>
         {sec("3", "국제 자문단 구성")}
-        <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 16 }}>
+        <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 24 }}>
           {[
             [
               ["Erik", "Brynjolfsson", "Stanford HAI 교수 / Digital Economy Lab 소장 (前 MIT Sloan)", "『The Second Machine Age』 공저자. AI가 노동·생산성·불평등에 미치는 영향을 실증한 디지털경제학 권위자.", "실업·정체성 / 빅테크 독점 / 거버넌스"],
@@ -117,7 +117,7 @@ export function ExecutionPlanPage() {
       {/* 팀원 업무 분장 */}
       <div style={{ margin: "0 32px" }}>
         {sec("4", "팀원 업무 분장")}
-        <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr 1fr 1fr", gap: 16 }}>
+        <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr 1fr 1fr", gap: 24 }}>
           <div style={{ padding: "10px 12px", borderTop: "4px solid #333", background: C.bg }}>
             <div style={{ fontSize: 14.5, fontWeight: 800, color: C.dark, marginBottom: 2 }}>유호현 (팀장)</div>
             <div style={{ fontSize: 14, lineHeight: 1.6, color: C.gray, marginTop: 6 }}>[전제] 거버넌스 구축 · 총괄 · 현실화</div>
