@@ -18,7 +18,7 @@ export function ResearchContentPage() {
           <Arrow />
           <ResearchBox num="2" title="사회 변화" desc="개인 계층 재편(프로 53%→25%), 6공동체 재구성, 경제 질서 전환." />
           <Arrow />
-          <ResearchBox num="3" title="위협 특정" desc="시간순 위협 시나리오. 임박(생물무기·사이버WMD)부터 장기(거버넌스 공백)까지." />
+          <ResearchBox num="3" title="위협 특정" desc="시간순 위협 시나리오. 임박(생물무기·AI 기반 WMD)부터 장기(거버넌스 공백)까지." />
           <Arrow />
           <ResearchBox num="4" title="대책 설계" desc="[전제] 거버넌스 구축 → [통제] 금지·승인·전환. 각 위협별 구체적 통제 방안." />
           <Arrow />
@@ -111,7 +111,7 @@ export function ResearchContentPage() {
               <div style={{ fontSize: 12, lineHeight: 1.5, color: C.gray }}>
                 <p style={{ margin: "0 0 5px" }}><strong>AS-IS(산업 시대 가치관):</strong> 효율=가치. AI가 인간 대체·권력 집중·군사화를 &quot;합리적 결론&quot;으로 만든다. 남의 꿈을 위한 노동. 거버넌스는 국경 안에 한정. 결과: 생존 위협 + 불평등 + 거버넌스 공백.</p>
                 <p style={{ margin: "0 0 5px" }}><strong>TO-BE(정체성 중심 가치관):</strong> 정체성 실현권. 자기 목적 추구. 도시는 창조 플랫폼. 세계 정부가 화폐·규제. 컴퓨팅 자원 공정 접근 + 목적 기반 경제.</p>
-                <p style={{ margin: 0 }}><strong>TO-DO:</strong> [전제] 거버넌스 구축(세계 의회 입법·행정·사법) → [통제] ① 금지(화학무기금지협약 모델, 칩 공급망 통제) ② 승인(식품의약국 모델, AI+물리력) ③ 전환(뉴딜+살트셰바덴 모델, 돌봄 인정소득·컴퓨팅 공정 접근).</p>
+                <p style={{ margin: 0 }}><strong>TO-DO:</strong> [통제] ① 금지(화학무기금지협약 모델, 칩 공급망 통제) ② 승인(식품의약국 모델, AI+물리력) ③ 전환(뉴딜+살트셰바덴 모델, 돌봄 인정소득·컴퓨팅 공정 접근)을 실현하기 위해 [전제] 거버넌스 구축(세계 의회 입법·행정·사법)이 필요하다.</p>
               </div>
             </div>
           </div>
