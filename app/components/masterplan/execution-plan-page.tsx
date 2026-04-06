@@ -35,7 +35,7 @@ export function ExecutionPlanPage() {
         <div>
           <div style={{ fontSize: 14.5, fontWeight: 800, color: C.dark, marginBottom: 8 }}>중기 목표 (2027~2028)</div>
           <div style={{ fontSize: 14, lineHeight: 1.7, color: C.gray }}>
-            {["연구 보고서 퍼블리시", "국제 자문단 상설화", "해외 학술지 게재", "AI 거버넌스 국제 회의체 참여", "한국 내 입법 제안 · 정책화"].map((t, i) => (
+            {["연구 보고서 출판", "국제 자문단 상설화", "해외 학술지 게재", "AI 거버넌스 국제 회의체 참여", "한국 내 입법 제안 · 정책화"].map((t, i) => (
               <div key={i} style={{ padding: "4px 8px", background: C.bg, borderLeft: `3px solid ${C.dark}`, marginBottom: 4 }}>{t}</div>
             ))}
           </div>
