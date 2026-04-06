@@ -10,7 +10,7 @@ export function ExecutionPlanPage() {
 
   return (
     <div style={{ pageBreakBefore: "always" }}>
-      <Header subtitle="4. 실행 계획 및 팀 업무 분장" />
+      <Header title="MASTER PLAN v0.1" subtitle="4. 실행 계획 및 팀 업무 분장" />
 
       {/* 01. 실행 일정 */}
       <div style={{ margin: "16px 32px 16px" }}>
@@ -48,12 +48,11 @@ export function ExecutionPlanPage() {
             ))}
           </div>
         </div>
-
       </div>
 
       </div>
 
-      {/* 02. 향후 연구 과제 */}
+      {/* 02. 금년 핵심 연구 과제 */}
       <div style={{ margin: "0 32px 12px" }}>
         {sec("2", "금년 핵심 연구 과제 (연구소가 직접 수행)")}
         <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr 1fr", gap: 12 }}>
@@ -68,7 +67,7 @@ export function ExecutionPlanPage() {
             </div>
           ))}
         </div>
-        <div style={{ marginTop: 8, padding: "6px 10px", background: "#f8f8f8", borderLeft: "3px solid #999", fontSize: 12, color: C.gray, lineHeight: 1.6 }}>
+        <div style={{ marginTop: 8, padding: "6px 10px", background: C.bg, fontSize: 12, color: C.light, borderLeft: `3px solid ${C.line}` }}>
           ※ 국가 간 협약 체결, 세계기구 설립 등 국가 간 외교 사안은 연구소가 직접 수행할 수 없는 영역. 연구소는 설계·제안·공론화에 집중하고, 실제 국가 간 교섭은 정부가 담당하도록 연결하는 역할을 한다.
         </div>
       </div>
