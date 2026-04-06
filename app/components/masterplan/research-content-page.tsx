@@ -128,7 +128,7 @@ export function ResearchContentPage() {
               <p style={{ margin: "0 0 4px" }}><strong>목표:</strong> 『디지털이 초래할 위험성과 그 대책』 2026년 Q4 출판.</p>
               <p style={{ margin: "0 0 4px" }}><strong>구성:</strong> 디지털의 본질 → 사회 변화 → 위협 시나리오 → 기술 통제 체제 설계·승인·전환 → 정체성 실현권.</p>
               <p style={{ margin: "0 0 4px" }}><strong>독자:</strong> 정책 입안자, 국제 학계, 시민 사회. 한국어 출간 후 영문 요약본.</p>
-              <p style={{ margin: 0 }}><strong>검증:</strong> 9~10월 자문단 미팅 피드백 → 11~12월 집필 착수 → 2027 Q4 출판.</p>
+              <p style={{ margin: 0 }}><strong>검증:</strong> 9~10월 자문단 미팅 피드백 → 11~12월 집필 착수 → 2026 Q4 출판.</p>
             </div>
           </div>
           <div style={{ padding: "10px 14px", border: `1px solid ${C.line}`, background: C.bg }}>
