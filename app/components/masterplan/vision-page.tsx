@@ -3,14 +3,14 @@ import { C } from "./constants";
 import { Header } from "./shared";
 
 export function VisionPage() {
-  const ps: React.CSSProperties = { margin: "0 0 10px", fontSize: 15, lineHeight: 1.85, color: "#222", textAlign: "justify" };
-  const h3s: React.CSSProperties = { fontSize: 17, fontWeight: 800, color: C.navy, margin: "18px 0 8px", paddingBottom: 4, borderBottom: `1px solid ${C.line}` };
+  const ps: React.CSSProperties = { margin: "0 0 10px", fontSize: 13, lineHeight: 1.7, color: "#222", textAlign: "justify" };
+  const h3s: React.CSSProperties = { fontSize: 15, fontWeight: 800, color: C.navy, margin: "12px 0 6px", paddingBottom: 4, borderBottom: `1px solid ${C.line}` };
 
   return (
     <div style={{ pageBreakAfter: "always", minHeight: "280mm" }}>
       <Header subtitle="1. 비전" />
 
-      <div style={{ padding: "20px 32px 16px", borderBottom: `2px solid ${C.navy}`, marginBottom: 16 }}>
+      <div style={{ padding: "14px 32px 10px", borderBottom: `2px solid ${C.navy}`, marginBottom: 16 }}>
         <div style={{ fontSize: 20, fontWeight: 800, color: C.navy, lineHeight: 1.4 }}>
           기술의 급격한 발전이 인류에게 끼칠 수 있는 해악을 선제적으로 대응하여,<br />
           안전하고 건강한 미래 사회를 만든다.
