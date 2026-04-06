@@ -15,9 +15,9 @@ export function ExecutionPlanPage() {
       {/* 01. 실행 일정 */}
       <div style={{ margin: "16px 32px 16px" }}>
         {sec("1", "실행 일정")}
-        <div style={{ display: "grid", gridTemplateColumns: "2fr 1fr 1fr", gap: 20 }}>
+        <div style={{ display: "grid", gridTemplateColumns: "2fr 1fr 1fr", gap: 28 }}>
         <div>
-          <div style={{ fontSize: 14.5, fontWeight: 800, color: C.dark, marginBottom: 8 }}>금년 실행 일정 (2026)</div>
+          <div style={{ fontSize: 14.5, fontWeight: 800, color: C.dark, marginBottom: 8 }}>실행 일정 (2026)</div>
           <table style={{ width: "100%", borderCollapse: "collapse" }}>
             <thead><tr><th style={{ ...tlh, width: "18%" }}>시기</th><th style={tlh}>실행 내용</th><th style={{ ...tlh, width: "28%" }}>산출물</th></tr></thead>
             <tbody>
@@ -35,7 +35,7 @@ export function ExecutionPlanPage() {
         <div>
           <div style={{ fontSize: 14.5, fontWeight: 800, color: C.dark, marginBottom: 8 }}>중기 목표 (2027~2028)</div>
           <div style={{ fontSize: 14, lineHeight: 1.7, color: C.gray }}>
-            {["연구 보고서 퍼블리시", "국제 자문단 상설화", "해외 학술지 게재", "AI 거버넌스 국제 회의체 참여", "한국 내 입법 제안 · 정책화"].map((t, i) => (
+            {["연구 보고서 출판", "국제 자문단 상설화", "해외 학술지 게재", "AI 거버넌스 국제 회의체 참여", "한국 내 입법 제안 · 정책화"].map((t, i) => (
               <div key={i} style={{ padding: "4px 8px", background: C.bg, borderLeft: `3px solid ${C.dark}`, marginBottom: 4 }}>{t}</div>
             ))}
           </div>
@@ -54,7 +54,7 @@ export function ExecutionPlanPage() {
 
       {/* 02. 금년 핵심 연구 과제 */}
       <div style={{ margin: "0 32px 12px" }}>
-        {sec("2", "금년 핵심 연구 과제 (연구소가 직접 수행)")}
+        {sec("2", "핵심 연구 과제")}
         <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr 1fr", gap: 12 }}>
           {[
             { t: "① 기술 통제 체계 설계", d: "기술 통제 관련 기존 체제 및 사례 분석. 핵심 기술 공급망 기반 수출통제 구조 검토. 분야별 통제 메커니즘 비교 분석. → 설계안을 만들어 정부에 제안." },
