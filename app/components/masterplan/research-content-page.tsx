@@ -33,7 +33,7 @@ export function ResearchContentPage() {
         {/* 01. 디지털 기술 변화의 본질 */}
         <div style={{ marginBottom: 12 }}>
           <div style={{ fontSize: 14, fontWeight: 800, color: C.dark, marginBottom: 6, paddingBottom: 3, borderBottom: `2px solid ${C.dark}` }}>1. 디지털 기술 변화의 본질</div>
-          <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 20 }}>
+          <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 28 }}>
             <div style={{ fontSize: 12, lineHeight: 1.5, color: C.gray }}>
               <p style={{ margin: "0 0 5px" }}>디지털은 <strong>강화</strong>(빠르게 더 많은 일)와 <strong>연결</strong>(다른 사람들의 능력을 공유)을 만든다. 인쇄술이 신앙의 자유를, 증기기관이 재산권의 자유를 열었듯, AI는 누구나 전문가급 역량을 갖추는 자유를 연다.</p>
               <p style={{ margin: "0 0 5px" }}>강화되고 연결된 개인들은 더 큰 규모의 정체성 실현을 원한다. 그러나 공동체는 전체의 균형을 유지해야 한다. <strong>개인의 확장된 자유와 공동체의 질서 사이에 충돌이 생긴다.</strong> 이 충돌은 500년간 반복된 패턴이다.</p>
@@ -59,7 +59,7 @@ export function ResearchContentPage() {
         {/* 02. 사회 변화 */}
         <div style={{ marginTop: 12 }}>
           <div style={{ fontSize: 14, fontWeight: 800, color: C.dark, marginBottom: 6, paddingBottom: 3, borderBottom: `2px solid ${C.dark}` }}>2. 사회 변화</div>
-          <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr 1fr", gap: 16 }}>
+          <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr 1fr", gap: 24 }}>
             <div style={{ padding: "10px 14px", border: `1px solid ${C.line}`, background: C.bg }}>
               <div style={{ fontSize: 14.5, fontWeight: 800, color: C.dark, marginBottom: 6 }}>개인의 변화</div>
               <div style={{ fontSize: 12, lineHeight: 1.5, color: C.gray }}>
@@ -94,7 +94,7 @@ export function ResearchContentPage() {
         </div>
 
         {/* 03-04 */}
-        <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 20, marginTop: 12 }}>
+        <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 28, marginTop: 12 }}>
           <div>
             <div style={{ fontSize: 14, fontWeight: 800, color: C.dark, marginBottom: 6, paddingBottom: 3, borderBottom: `2px solid ${C.dark}` }}>3. 위협 시나리오</div>
             <div style={{ padding: "10px 14px", border: `1px solid ${C.line}`, background: C.bg }}>
@@ -121,7 +121,7 @@ export function ResearchContentPage() {
       {/* 05. 실행 및 공론화 전략 */}
       <div style={{ margin: "16px 32px 12px" }}>
         <div style={{ fontSize: 14, fontWeight: 800, color: C.dark, marginBottom: 6, paddingBottom: 3, borderBottom: `2px solid ${C.dark}` }}>5. 실행 및 공론화 전략</div>
-        <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr 1fr", gap: 16 }}>
+        <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr 1fr", gap: 24 }}>
           <div style={{ padding: "10px 14px", border: `1px solid ${C.line}`, background: C.bg }}>
             <div style={{ fontSize: 14.5, fontWeight: 800, color: C.dark, marginBottom: 6 }}>단행본 출판</div>
             <div style={{ fontSize: 12, lineHeight: 1.5, color: C.gray }}>
