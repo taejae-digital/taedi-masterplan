@@ -1,15 +1,25 @@
 import Link from "next/link";
+import fs from "fs";
+import path from "path";
 
-const current = [
-  {
-    id: "mp/v0.1.7",
-    label: "Master Plan v0.1.7",
-    type: "종합 보고서",
-    date: "2026.04",
-    desc: "비전 · 위협과 통제 방안 · 연구 내용 · 실행 계획",
-    companion: { name: "Companion Report", href: "/v6.3" },
-  },
-];
+function getLatestVersion() {
+  const mpDir = path.join(process.cwd(), "app", "mp");
+  if (!fs.existsSync(mpDir)) return "v0.1";
+  const versions = fs.readdirSync(mpDir)
+    .filter((d) => fs.statSync(path.join(mpDir, d)).isDirectory())
+    .sort((a, b) => {
+      const pa = a.split(".").map(Number);
+      const pb = b.split(".").map(Number);
+      for (let i = 0; i < Math.max(pa.length, pb.length); i++) {
+        const diff = (pa[i] || 0) - (pb[i] || 0);
+        if (diff !== 0) return diff;
+      }
+      return 0;
+    });
+  return versions[versions.length - 1] || "v0.1";
+}
+
+const latest = getLatestVersion();
 
 const archive = [
   { id: "archive/v5.5.1", label: "v5.5.1", date: "2026.03", desc: "변화→통제→경제질서→거버넌스→공동체 재편" },
@@ -30,31 +40,27 @@ export default function Home() {
         <p style={{ fontSize: 15, color: "#666", margin: 0 }}>디지털이 초래할 위험성과 그 대책 — 마스터플랜 및 연구 문서</p>
       </div>
 
-      {/* Current version */}
-      {current.map((v) => (
-        <div key={v.id} style={{ marginBottom: 40 }}>
-          <div style={{ padding: "28px 32px", background: "#1a2744", borderRadius: 12, color: "#fff" }}>
-            <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", marginBottom: 12 }}>
-              <div>
-                <div style={{ fontSize: 11, letterSpacing: 2, opacity: 0.5, marginBottom: 4 }}>{v.type}</div>
-                <div style={{ fontSize: 24, fontWeight: 800 }}>{v.label}</div>
-              </div>
-              <div style={{ fontSize: 12, opacity: 0.4 }}>{v.date}</div>
+      {/* Current version — auto-detected */}
+      <div style={{ marginBottom: 40 }}>
+        <div style={{ padding: "28px 32px", background: "#1a2744", borderRadius: 12, color: "#fff" }}>
+          <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", marginBottom: 12 }}>
+            <div>
+              <div style={{ fontSize: 11, letterSpacing: 2, opacity: 0.5, marginBottom: 4 }}>종합 보고서</div>
+              <div style={{ fontSize: 24, fontWeight: 800 }}>Master Plan {latest}</div>
             </div>
-            <p style={{ fontSize: 14, opacity: 0.7, margin: "0 0 16px", lineHeight: 1.5 }}>{v.desc}</p>
-            <div style={{ display: "flex", gap: 10 }}>
-              <Link href={`/${v.id}`} style={{ textDecoration: "none", padding: "8px 18px", background: "rgba(255,255,255,0.15)", borderRadius: 6, fontSize: 13, fontWeight: 600, color: "#fff", transition: "background 0.15s" }}>
-                본문 보기 →
-              </Link>
-              {v.companion && (
-                <Link href={v.companion.href} style={{ textDecoration: "none", padding: "8px 18px", background: "rgba(255,255,255,0.08)", borderRadius: 6, fontSize: 13, fontWeight: 500, color: "rgba(255,255,255,0.6)", transition: "background 0.15s" }}>
-                  {v.companion.name}
-                </Link>
-              )}
-            </div>
+            <div style={{ fontSize: 12, opacity: 0.4 }}>2026.04</div>
+          </div>
+          <p style={{ fontSize: 14, opacity: 0.7, margin: "0 0 16px", lineHeight: 1.5 }}>비전 · 위협과 통제 방안 · 연구 내용 · 실행 계획</p>
+          <div style={{ display: "flex", gap: 10 }}>
+            <Link href={`/mp/${latest}`} style={{ textDecoration: "none", padding: "8px 18px", background: "rgba(255,255,255,0.15)", borderRadius: 6, fontSize: 13, fontWeight: 600, color: "#fff", transition: "background 0.15s" }}>
+              본문 보기 →
+            </Link>
+            <Link href="/v6.3" style={{ textDecoration: "none", padding: "8px 18px", background: "rgba(255,255,255,0.08)", borderRadius: 6, fontSize: 13, fontWeight: 500, color: "rgba(255,255,255,0.6)", transition: "background 0.15s" }}>
+              Companion Report
+            </Link>
           </div>
         </div>
-      ))}
+      </div>
 
       {/* Archive */}
       <div style={{ marginTop: 32 }}>
