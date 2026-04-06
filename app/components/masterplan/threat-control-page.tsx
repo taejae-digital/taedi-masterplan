@@ -109,7 +109,7 @@ export function ThreatControlPage() {
               <td style={tc}>비전문가도 병원체 설계 가능. 확산 시 만든 쪽 포함 모두 피해자.</td>
               <td style={{ ...tc, fontWeight: 700, color: "#b91c1c" }}>금지</td>
               <td style={tc}>모델 접근권 등급제. 생물안전 연구소 외부 반출 금지. 합성생물학 AI 학습데이터 통제.</td>
-              <td style={{ ...tc, fontSize: 11.5, color: C.light }}>화학무기금지협약(CWC) 98% 폐기</td></tr>
+              <td style={{ ...tc, fontSize: 11.5, color: C.light }}>화학무기금지협약(CWC) 100% 폐기</td></tr>
             <tr style={{ background: "#f5f5f5" }}>
               <td style={{ ...tc, fontWeight: 700 }}>사이버 WMD</td>
               <td style={{ ...tc, fontSize: 11.5, color: C.gray }}>LLM 취약점 탐색(PentestGPT류), 자율 익스플로잇</td>
