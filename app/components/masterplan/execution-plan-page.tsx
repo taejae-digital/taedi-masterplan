@@ -59,7 +59,7 @@ export function ExecutionPlanPage() {
           {[
             { t: "① 기술 통제 체계 설계", d: "기술 통제 관련 기존 체제 및 사례 분석. 핵심 기술 공급망 기반 수출통제 구조 검토. 분야별 통제 메커니즘 비교 분석. → 설계안을 만들어 정부에 제안." },
             { t: "② 승인 체계 설계", d: "AI 안전청 설계(FDA 모델). 승인 등급·기준 수립. 킬스위치·행동 로그 의무화. 알고리즘 감사 체계. → 설계안을 만들어 정부에 제안." },
-            { t: "③ 전환 모델 설계", d: "AI 초과이윤 누진세 설계. 돌봄 인정소득 재원 산출. 컴퓨팅 자원 공정 접근 의무·데이터 주권·플랫폼 상호호환성. → 경제 질서 청사진 제시." },
+            { t: "③ 전환 모델 설계", d: "정체성 실현권 실현을 위한 경제 질서 전환. AI 초과이윤 누진세 설계. 돌봄 인정소득 재원 산출. 컴퓨팅 자원 공정 접근·데이터 주권. → 경제 질서 청사진 제시." },
           ].map((s) => (
             <div key={s.t} style={{ padding: "8px 10px", borderTop: "3px solid #111" }}>
               <div style={{ fontSize: 15, fontWeight: 800, marginBottom: 4 }}>{s.t}</div>
@@ -132,7 +132,7 @@ export function ExecutionPlanPage() {
           </div>
           <div style={{ padding: "10px 12px", borderTop: "4px solid #333", background: C.bg }}>
             <div style={{ fontSize: 14.5, fontWeight: 800, color: C.dark, marginBottom: 2 }}>김수연</div>
-            <div style={{ fontSize: 14, lineHeight: 1.6, color: C.gray, marginTop: 6 }}>③ 전환 모델 · 대량 실업 · 사회 전환</div>
+            <div style={{ fontSize: 14, lineHeight: 1.6, color: C.gray, marginTop: 6 }}>③ 전환 모델 · 정체성 실현권 · 사회 전환</div>
           </div>
         </div>
       </div>
