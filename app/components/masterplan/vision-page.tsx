@@ -3,14 +3,14 @@ import { C } from "./constants";
 import { Header } from "./shared";
 
 export function VisionPage() {
-  const ps: React.CSSProperties = { margin: "0 0 10px", fontSize: 13, lineHeight: 1.7, color: "#222", textAlign: "justify" };
-  const h3s: React.CSSProperties = { fontSize: 15, fontWeight: 800, color: C.navy, margin: "12px 0 6px", paddingBottom: 4, borderBottom: `1px solid ${C.line}` };
+  const ps: React.CSSProperties = { margin: "0 0 10px", fontSize: 15, lineHeight: 1.85, color: "#222", textAlign: "justify" };
+  const h3s: React.CSSProperties = { fontSize: 17, fontWeight: 800, color: C.navy, margin: "18px 0 8px", paddingBottom: 4, borderBottom: `1px solid ${C.line}` };
 
   return (
     <div style={{ pageBreakAfter: "always", minHeight: "280mm" }}>
       <Header subtitle="1. 비전" />
 
-      <div style={{ padding: "14px 32px 10px", borderBottom: `2px solid ${C.navy}`, marginBottom: 16 }}>
+      <div style={{ padding: "20px 32px 16px", borderBottom: `2px solid ${C.navy}`, marginBottom: 16 }}>
         <div style={{ fontSize: 20, fontWeight: 800, color: C.navy, lineHeight: 1.4 }}>
           기술의 급격한 발전이 인류에게 끼칠 수 있는 해악을 선제적으로 대응하여,<br />
           안전하고 건강한 미래 사회를 만든다.
@@ -43,13 +43,14 @@ export function VisionPage() {
           <p style={ps}>
             역사는 두 가지 경로를 보여준다. 화학무기금지협약(CWC)은 193개국이 비준하고 신고된 화학무기 재고를 100% 폐기했다. 몬트리올 의정서는 197개국이 비준하고 오존층 파괴 물질을 98% 감축했다. 반면 핵확산금지조약(NPT)은 강대국 특권을 허용해 북한, 이란 같은 이탈자를 만들었고, 생물무기금지협약(BWC)은 검증 메커니즘 없이 소련의 20년 비밀 개발을 허용했다.
           </p>
-          <p style={ps}>
-            성공한 통제의 공통점은 세 가지다. 물리적 통제 지점이 있었고(화학무기의 전구물질, 오존의 CFC 대체재), 검증 메커니즘이 작동했으며, <strong>경제적 대안</strong>이 존재했다. CFC 대체재 산업이 성장하면서 오존층 파괴 물질을 포기하는 것이 경제적으로도 합리적이 됐다. AI에도 이 조건이 있다. 반도체 공급망(ASML, TSMC, 삼성, NVIDIA)은 물리적 통제 지점이 되고, 컴퓨팅 사용량은 추적 가능하며, AI 초과이윤의 사회 환류 모델은 경제적 대안이 된다.
-          </p>
         </div>
 
         {/* Right column */}
         <div>
+          <p style={ps}>
+            성공한 통제의 공통점은 세 가지다. 물리적 통제 지점이 있었고(화학무기의 전구물질, 오존의 CFC 대체재), 검증 메커니즘이 작동했으며, <strong>경제적 대안</strong>이 존재했다. CFC 대체재 산업이 성장하면서 오존층 파괴 물질을 포기하는 것이 경제적으로도 합리적이 됐다. AI에도 이 조건이 있다. 반도체 공급망(ASML, TSMC, 삼성, NVIDIA)은 물리적 통제 지점이 되고, 컴퓨팅 사용량은 추적 가능하며, AI 초과이윤의 사회 환류 모델은 경제적 대안이 된다.
+          </p>
+
           <div style={h3s}>4. 정체성 실현권 — 더 큰 자유</div>
           <p style={ps}>
             자유는 확장되어 왔다. 인쇄술이 신앙의 자유를, 증기기관이 재산권의 자유를, 대량생산이 사회적 권리를 열었다. 매번 이전 시대에는 상상할 수 없던 자유였다 — 평민이 투표한다는 것은 왕정 시대에 상상할 수 없는 일이었고, 사회보장은 자유방임 시대에 불가능했다. AI 시대의 다음 자유는 정체성 실현권이다. &quot;나는 무엇을 위해 사는 사람인가&quot;를 스스로 정의하고 추구할 수 있는 권리 — 이것이 참정권 이후의 더 큰 자유다.
