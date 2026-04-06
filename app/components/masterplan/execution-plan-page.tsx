@@ -13,7 +13,7 @@ export function ExecutionPlanPage() {
       <Header title="MASTER PLAN v0.1" subtitle="4. 실행 계획 및 팀 업무 분장" />
 
       {/* 01. 실행 일정 */}
-      <div style={{ margin: "20px 32px 24px" }}>
+      <div style={{ margin: "16px 32px 16px" }}>
         {sec("1", "실행 일정")}
         <div style={{ display: "grid", gridTemplateColumns: "2fr 1fr 1fr", gap: 28 }}>
         <div>
@@ -53,7 +53,7 @@ export function ExecutionPlanPage() {
       </div>
 
       {/* 02. 금년 핵심 연구 과제 */}
-      <div style={{ margin: "0 32px 24px" }}>
+      <div style={{ margin: "0 32px 14px" }}>
         {sec("2", "핵심 연구 과제")}
         <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr 1fr", gap: 20 }}>
           {[
@@ -73,7 +73,7 @@ export function ExecutionPlanPage() {
       </div>
 
       {/* 03. 국제 자문단 — 윤준영 개편 버전 */}
-      <div style={{ margin: "0 32px 24px" }}>
+      <div style={{ margin: "0 32px 14px" }}>
         {sec("3", "국제 자문단 구성")}
         <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 24 }}>
           {[
