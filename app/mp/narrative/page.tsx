@@ -43,13 +43,12 @@ export default function NarrativePage() {
   // 선택된 버전 + 이전 버전 content 로드
   useEffect(() => {
     if (!selected || index.length === 0) return;
-    const base = `${window.location.origin}/taedi-masterplan`;
     const idx = index.findIndex(f => f.version === selected);
     const toLoad = [index[idx], idx + 1 < index.length ? index[idx + 1] : null].filter(Boolean) as NarrativeIndex[];
     setLoadingContent(true);
     Promise.all(
       toLoad.map(item =>
-        fetch(`${base}/data/narratives/${item.slug}.json`).then(r => {
+        fetch(`${basePath}/data/narratives/${item.slug}.json`).then(r => {
           if (!r.ok) throw new Error(`HTTP ${r.status} for ${item.slug}`);
           return r.json();
         })
