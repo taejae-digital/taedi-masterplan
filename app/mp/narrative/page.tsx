@@ -2,44 +2,62 @@
 
 import { useEffect, useState } from 'react';
 
+interface NarrativeIndex {
+  filename: string;
+  version: string;
+  slug: string;
+}
+
 interface NarrativeFile {
   filename: string;
   version: string;
+  slug: string;
   content: string;
 }
 
 export default function NarrativePage() {
+  const [index, setIndex] = useState<NarrativeIndex[]>([]);
   const [files, setFiles] = useState<NarrativeFile[]>([]);
   const [selected, setSelected] = useState('');
   const [showDiff, setShowDiff] = useState(false);
   const [loading, setLoading] = useState(true);
+  const [loadingContent, setLoadingContent] = useState(false);
+
+  const BASE = 'https://taejae-digital.github.io/taedi-masterplan';
 
   useEffect(() => {
-    fetch('https://taejae-digital.github.io/taedi-masterplan/data/narratives.json')
+    fetch(`${BASE}/data/narratives-index.json`)
       .then(r => r.json())
-      .then(data => {
-        setFiles(data);
+      .then((data: NarrativeIndex[]) => {
+        setIndex(data);
         if (data.length > 0) setSelected(data[0].version);
-      })
-      .catch(err => {
-        // fallback for local dev
-        fetch('/data/narratives.json')
-          .then(r => r.json())
-          .then(data => {
-            setFiles(data);
-            if (data.length > 0) setSelected(data[0].version);
-          })
-          .finally(() => setLoading(false));
       })
       .finally(() => setLoading(false));
   }, []);
 
-  const idx = files.findIndex(f => f.version === selected);
-  const current = files[idx];
-  const previous = idx >= 0 && idx + 1 < files.length ? files[idx + 1] : null;
+  // 선택된 버전 + 이전 버전 content 로드
+  useEffect(() => {
+    if (!selected || index.length === 0) return;
+    const idx = index.findIndex(f => f.version === selected);
+    const toLoad = [index[idx], idx + 1 < index.length ? index[idx + 1] : null].filter(Boolean) as NarrativeIndex[];
+    setLoadingContent(true);
+    Promise.all(
+      toLoad.map(item =>
+        fetch(`${BASE}/data/narratives/${item.slug}.json`).then(r => r.json())
+      )
+    ).then(results => {
+      setFiles(results);
+    }).finally(() => setLoadingContent(false));
+  }, [selected, index]);
+
+  const current = files.find(f => f.version === selected);
+  const idxInIndex = index.findIndex(f => f.version === selected);
+  const prevVersion = idxInIndex >= 0 && idxInIndex + 1 < index.length ? index[idxInIndex + 1].version : null;
+  const previous = prevVersion ? files.find(f => f.version === prevVersion) : null;
 
   if (loading) return <div style={{ padding: 40, fontFamily: 'sans-serif' }}>로딩 중...</div>;
-  if (!current) return <div style={{ padding: 40 }}>파일 없음</div>;
+  if (index.length === 0) return <div style={{ padding: 40 }}>파일 없음</div>;
+  if (loadingContent || !current) return <div style={{ padding: 40 }}>콘텐츠 로딩 중...</div>;
 
   return (
     <div style={{ minHeight: '100vh', background: '#f8fafc', fontFamily: 'Asta Sans, Pretendard, sans-serif' }}>
@@ -59,7 +77,7 @@ export default function NarrativePage() {
               onChange={e => { setSelected(e.target.value); setShowDiff(false); }}
               style={{ fontSize: 14, padding: '8px 12px', borderRadius: 8, border: '1px solid #cbd5e1', background: '#fff', cursor: 'pointer', minWidth: 260 }}
             >
-              {files.map(f => (
+              {index.map(f => (
                 <option key={f.version + f.filename} value={f.version}>{f.version} — {f.filename}</option>
               ))}
             </select>
