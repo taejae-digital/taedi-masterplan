@@ -81,13 +81,12 @@ export function ResearchContentPage() {
               </div>
             </div>
             <div style={{ padding: "10px 14px", border: `1px solid ${C.line}`, background: C.bg }}>
-              <div style={{ fontSize: 14.5, fontWeight: 800, color: C.dark, marginBottom: 6 }}>경제 질서의 변화</div>
+              <div style={{ fontSize: 14.5, fontWeight: 800, color: C.dark, marginBottom: 6 }}>경제 질서의 변화 — 니치마켓 자본주의</div>
               <div style={{ fontSize: 12, lineHeight: 1.5, color: C.gray }}>
-                <p style={{ margin: "0 0 4px" }}><strong>부동산</strong> → 데이터가 새 자산</p>
-                <p style={{ margin: "0 0 4px" }}><strong>직업</strong> → 목적으로 정체성 정의</p>
-                <p style={{ margin: "0 0 4px" }}><strong>AI 인프라</strong> → 새 생산수단 (빅테크 독점 vs 공공화)</p>
-                <p style={{ margin: "0 0 6px" }}><strong>지적재산</strong> → AI 생성물 저작권 불명</p>
-                <p style={{ margin: 0 }}>핵심 질문: &quot;나는 무엇을 위해 사는 사람인가&quot;</p>
+                <p style={{ margin: "0 0 4px" }}><strong>산업 시대:</strong> KBS·MBC 같은 대기업 메가마켓 중심. 자본·규모가 권력.</p>
+                <p style={{ margin: "0 0 4px" }}><strong>AI 시대:</strong> 슈카·MK크리에이티브처럼 소수 인원이 개인화된 가치를 실현하는 무수한 니치마켓. 롱테일 경제(Chris Anderson, 2004)가 가속화.</p>
+                <p style={{ margin: "0 0 4px" }}><strong>핵심 전환:</strong> 노동 가치 실현(기업) → 개인화된 가치 실현(개인). &quot;무슨 일 하세요?&quot;가 아닌 &quot;나는 무엇을 위해 사는 사람인가&quot;.</p>
+                <p style={{ margin: 0 }}><strong>새 경제 질서:</strong> 자본주의도 공산주의도 아닌 — 개인이 AI로 소규모 가치를 실현하는 니치마켓 생태계. 더 많은 사람이 더 다양한 방식으로 경제에 참여.</p>
               </div>
             </div>
           </div>

@@ -22,32 +22,43 @@ export default function NarrativePage() {
   const [showDiff, setShowDiff] = useState(false);
   const [loading, setLoading] = useState(true);
   const [loadingContent, setLoadingContent] = useState(false);
+  const [error, setError] = useState('');
 
-  const BASE = 'https://taejae-digital.github.io/taedi-masterplan';
+  const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? '';
 
   useEffect(() => {
-    fetch(`${BASE}/data/narratives-index.json`)
-      .then(r => r.json())
+    fetch(`${basePath}/data/narratives-index.json`)
+      .then(r => {
+        if (!r.ok) throw new Error(`HTTP ${r.status} ${r.statusText}`);
+        return r.json();
+      })
       .then((data: NarrativeIndex[]) => {
         setIndex(data);
         if (data.length > 0) setSelected(data[0].version);
       })
+      .catch(err => setError(`인덱스 로드 실패: ${err.message}`))
       .finally(() => setLoading(false));
   }, []);
 
   // 선택된 버전 + 이전 버전 content 로드
   useEffect(() => {
     if (!selected || index.length === 0) return;
+    const base = `${window.location.origin}/taedi-masterplan`;
     const idx = index.findIndex(f => f.version === selected);
     const toLoad = [index[idx], idx + 1 < index.length ? index[idx + 1] : null].filter(Boolean) as NarrativeIndex[];
     setLoadingContent(true);
     Promise.all(
       toLoad.map(item =>
-        fetch(`${BASE}/data/narratives/${item.slug}.json`).then(r => r.json())
+        fetch(`${base}/data/narratives/${item.slug}.json`).then(r => {
+          if (!r.ok) throw new Error(`HTTP ${r.status} for ${item.slug}`);
+          return r.json();
+        })
       )
     ).then(results => {
       setFiles(results);
-    }).finally(() => setLoadingContent(false));
+    })
+    .catch(err => setError(`콘텐츠 로드 실패: ${err.message}`))
+    .finally(() => setLoadingContent(false));
   }, [selected, index]);
 
   const current = files.find(f => f.version === selected);
@@ -56,6 +67,7 @@ export default function NarrativePage() {
   const previous = prevVersion ? files.find(f => f.version === prevVersion) : null;
 
   if (loading) return <div style={{ padding: 40, fontFamily: 'sans-serif' }}>로딩 중...</div>;
+  if (error) return <div style={{ padding: 40, fontFamily: 'sans-serif', color: '#dc2626' }}>{error}</div>;
   if (index.length === 0) return <div style={{ padding: 40 }}>파일 없음</div>;
   if (loadingContent || !current) return <div style={{ padding: 40 }}>콘텐츠 로딩 중...</div>;
 
