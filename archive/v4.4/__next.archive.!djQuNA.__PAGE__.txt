@@ -1,5 +1,0 @@
-1:"$Sreact.fragment"
-2:I[97367,["/taedi-masterplan/_next/static/chunks/01xlw8hd842-c.js","/taedi-masterplan/_next/static/chunks/0d3shmwh5_nmn.js"],"OutletBoundary"]
-3:"$Sreact.suspense"
-0:{"rsc":["$","$1","c",{"children":[["$","iframe",null,{"src":"/legacy/v4.4.html","style":{"width":"420mm","height":"297mm","border":"none","background":"#fff"}}],null,["$","$L2",null,{"children":["$","$3",null,{"name":"Next.MetadataOutlet","children":"$@4"}]}]]}],"isPartial":false,"staleTime":300,"varyParams":null,"buildId":"Ox2gkWtZk76nIf0PB6KcS"}
-4:null
