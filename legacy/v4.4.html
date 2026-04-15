@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>기술의 독점에서 자유의 확장으로 V4.4</title>
+<link href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" rel="stylesheet">
+<style>
+  *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+  :root {
+    --black: #111; --dark: #333; --gray: #777; --light: #bbb; --line: #ddd;
+    --bg: #f5f5f5; --white: #fff; --red: #8b2500; --green: #1a6b4a; --blue: #1a5276; --gold: #8c6d1f;
+  }
+  body { font-family: 'Pretendard', -apple-system, sans-serif; font-size: 15px; line-height: 1.5; color: var(--dark); background: var(--white); margin: 0; }
+  @media print { @page { size: A3 landscape; margin: 0; } }
+  .page { width: 420mm; height: 297mm; margin: 0 auto; padding: 12mm 16mm 10mm; display: flex; flex-direction: column; overflow: hidden; }
+
+  header { display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 8px; border-bottom: 2.5px solid var(--black); padding-bottom: 5px; flex-shrink: 0; }
+  .h-title { font-size: 1.6rem; font-weight: 800; line-height: 1.1; letter-spacing: -0.03em; }
+  .h-sub { font-size: 0.85rem; color: var(--gray); margin-top: 2px; }
+  .h-meta { text-align: right; font-size: 0.8rem; color: var(--gray); line-height: 1.4; }
+  .h-meta strong { display: block; color: var(--dark); font-weight: 700; font-size: 0.88rem; }
+
+  .layout { display: grid; grid-template-columns: 3fr 2fr; gap: 36px; flex: 1; min-height: 0; padding-top: 10px; }
+  .col { display: flex; flex-direction: column; justify-content: space-between; }
+
+  .st { font-size: 1.05rem; font-weight: 700; margin-bottom: 4px; padding-bottom: 3px; color: var(--black); }
+  .st--r { border-bottom-color: var(--red); color: var(--red); }
+  .st--b { border-bottom-color: var(--blue); color: var(--blue); }
+  .sd { font-size: 0.88rem; line-height: 1.5; margin-bottom: 4px; }
+
+  .flow-svg { display: block; margin: 16px auto 10px; padding-top: 20px; max-width: 680px; width: 100%; }
+  .co { border-left: 3px solid var(--blue); padding: 8px 12px; background: var(--bg); font-size: 0.82rem; line-height: 1.5; }
+  .co em { font-style: normal; font-weight: 700; }
+  .co--r { border-left-color: var(--red); }
+  .co--g { border-left-color: var(--gold); }
+
+  .t { width: 100%; border-collapse: collapse; font-size: 0.82rem; line-height: 1.4; }
+  .t th { font-size: 0.72rem; font-weight: 400; padding: 2px 6px 4px; text-align: left; border-bottom: 1.5px solid var(--black); }
+  .t td { padding: 5px 6px; border-bottom: 1px solid var(--line); vertical-align: top; }
+  .t .era { font-weight: 700; white-space: nowrap; }
+  .t .yr { font-size: 0.6rem; color: var(--gray); }
+  .t .cost { color: var(--red); } .t .ok { color: var(--blue); }
+  .t .now td { background: var(--bg); border-bottom: 1.5px solid var(--black); }
+  .tt th { background: var(--black); color: var(--white); padding: 3px 6px; border: none; }
+  .tt .tag { font-weight: 700; color: var(--red); white-space: nowrap; }
+
+  .pq { background: #555; color: var(--white); padding: 10px 16px; text-align: center; font-size: 0.9rem; line-height: 1.45; }
+  .fh { margin-bottom: 4px; padding-bottom: 3px; margin-top: 6px; }
+  .ft { font-size: 1.05rem; font-weight: 700; }
+  .fr { font-size: 0.82rem; line-height: 1.45; }
+  .frow { display: flex; gap: 6px; margin-bottom: 6px; }
+  .ftag { min-width: 62px; flex-shrink: 0; }
+  .ref { display: block; font-size: 0.62rem; color: var(--light); margin-top: 1px; }
+
+  footer { padding: 8px 16px; background: var(--bg); display: flex; gap: 28px; align-items: start; flex-shrink: 0; border-top: 1.5px solid var(--line); }
+  .fl { font-size: 0.68rem; font-weight: 700; color: var(--gray); margin-bottom: 2px; }
+  .fq { font-size: 0.82rem; line-height: 1.45; border-left: 3px solid var(--red); padding-left: 10px; font-weight: 500; }
+  .road { display: flex; gap: 3px; }
+  .road > div { padding: 2px 0; font-size: 0.72rem; flex: 1 1 0; }
+  .road > div strong { display: block; font-size: 0.6rem; font-weight: 700; color: var(--gray); }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <header>
+    <div>
+      <div class="h-title">기술의 독점에서 자유의 확장으로</div>
+      <div class="h-sub">디지털 시대, 설계가 먼저여야 한다</div>
+    </div>
+    <div class="h-meta"><strong>태재미래전략연구원</strong>디지털 전환과 사회변혁팀 · 2026. 3.</div>
+  </header>
+
+  <div class="layout">
+
+    <!-- ═══ LEFT (7fr) ═══ -->
+    <div class="col">
+
+      <div>
+        <div class="st">1. 기술의 독점과 자유의 확장</div>
+        <p class="sd">신기술이 필수가 되면, 인프라를 쥔 소수가 권력을 독점한다. 독점을 깨는 설계가 늦을수록 대가는 커졌다.</p>
+        <svg class="flow-svg" viewBox="0 0 540 110" xmlns="http://www.w3.org/2000/svg">
+          <defs><marker id="ar" markerWidth="5" markerHeight="4" refX="4.5" refY="2" orient="auto-start-reverse"><polygon points="0 0,5 2,0 4" fill="#999"/></marker></defs>
+          <rect x="0" y="28" width="105" height="34" rx="3" fill="none" stroke="#333" stroke-width="1.5"/>
+          <text x="52" y="42" text-anchor="middle" font-size="8.5" font-weight="700" fill="#333">기술 발전에 따른</text>
+          <text x="52" y="54" text-anchor="middle" font-size="10" font-weight="700" fill="#333">자유의 확장</text>
+          <line x1="107" y1="45" x2="133" y2="45" stroke="#999" stroke-width="1.2" marker-end="url(#ar)"/>
+          <text x="179" y="24" text-anchor="middle" font-size="8.5" font-weight="800" fill="#111" letter-spacing="0.06em">AS-IS</text>
+          <rect x="135" y="28" width="88" height="34" rx="3" fill="#111"/>
+          <text x="179" y="50" text-anchor="middle" font-size="11" font-weight="700" fill="#fff">가치 갈등</text>
+          <path d="M223 38 C241 38 245 16 263 16" stroke="#999" stroke-width="1.2" fill="none" marker-end="url(#ar)"/>
+          <path d="M223 52 C241 52 245 74 263 74" stroke="#999" stroke-width="1.2" fill="none" marker-end="url(#ar)"/>
+          <rect x="265" y="0" width="88" height="30" rx="3" fill="#8b2500"/>
+          <text x="309" y="20" text-anchor="middle" font-size="10" font-weight="600" fill="#fff">파괴적 전환</text>
+          <rect x="265" y="60" width="88" height="30" rx="3" fill="#1a5276"/>
+          <text x="309" y="80" text-anchor="middle" font-size="10" font-weight="600" fill="#fff">안전한 전환</text>
+          <text x="309" y="100" text-anchor="middle" font-size="8" font-weight="800" fill="#1a5276" letter-spacing="0.06em">TO-DO</text>
+          <path d="M353 15 C371 15 375 38 403 38" stroke="#999" stroke-width="1.2" fill="none" marker-end="url(#ar)"/>
+          <path d="M353 75 C371 75 375 52 403 52" stroke="#999" stroke-width="1.2" fill="none" marker-end="url(#ar)"/>
+          <text x="470" y="24" text-anchor="middle" font-size="8" font-weight="800" fill="#1a6b4a" letter-spacing="0.06em">TO-BE</text>
+          <rect x="405" y="28" width="130" height="34" rx="3" fill="#1a6b4a"/>
+          <text x="470" y="50" text-anchor="middle" font-size="10" font-weight="700" fill="#fff">새로운 가치와 체제</text>
+        </svg>
+      </div>
+
+      <div>
+        <div class="st">2. 역사적 사례 — 확장된 자유와 기존 가치의 갈등</div>
+        <table class="t">
+          <thead><tr><th>기술 발전에 따른 자유의 확장</th><th>가치 갈등</th><th>전환</th><th>새로운 가치</th><th>새 체제</th></tr></thead>
+          <tbody>
+            <tr><td class="era">인쇄술 → 읽고 생각하는 자유 <span class="yr">1517</span></td><td>교회 "지식은 사제의 전유물"</td><td class="cost">30년 전쟁</td><td>신앙의 자유</td><td>국민국가</td></tr>
+            <tr><td class="era" rowspan="2">증기기관 → 이동과 계약의 자유 <span class="yr">1760</span></td><td rowspan="2">구체제 "혈통이 권력의 근거"</td><td class="cost">프랑스 혁명</td><td rowspan="2">시민의 권리</td><td rowspan="2">민주주의</td></tr>
+            <tr><td class="ok">영국 점진적 개혁</td></tr>
+            <tr><td class="era" rowspan="2">대량생산 → 풍요의 자유 <span class="yr">1933</span></td><td rowspan="2">자본 "시장이 알아서 조절"</td><td class="cost">대공황 → 파시즘</td><td rowspan="2">사회적 권리</td><td rowspan="2">복지국가</td></tr>
+            <tr><td class="ok">뉴딜 · 살트셰바덴</td></tr>
+            <tr><td class="era">군사기술 → 파괴의 확장 <span class="yr">1914/39</span></td><td>제국 "힘이 정의"</td><td class="cost">세계대전 7천만 이상 희생</td><td>인권 · 자결</td><td>UN 체제</td></tr>
+            <tr class="now"><td class="era">AI → 누구나 전문가급 <span class="yr">2020–</span></td><td>산업체제 "정체성 실현은 사치"</td><td class="ok">안전한 가치 전환</td><td>정체성 실현권</td><td>더 큰 자유</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+
+    </div>
+
+    <!-- ═══ RIGHT (5fr) ═══ -->
+    <div class="col">
+
+      <div>
+        <div class="fh" style="border-bottom-color:var(--black);"><span class="ft" style="color:var(--black);">3. AS-IS — 옛 가치 체계와 확장된 자유의 갈등</span></div>
+        <div class="fr">
+          <div class="frow"><span class="ftag">핵심 5%</span><span><strong>효율=가치 체계가 AI를 파멸로 전환</strong> — 인간 대체·권력 집중·군사화가 "합리적 결론"이 되는 구조<span class="ref">Piketty(2019): 모든 사회는 불평등을 정당화하는 서사를 만든다</span></span></div>
+          <div class="frow"><span class="ftag">주요 15%</span><span><strong>개인: 남의 꿈을 위한 노동</strong> — 효율로 평가받고, 생존을 위해 일한다. "정체성 실현은 사치"<br><strong>공동체: 일자리와 성장 제공</strong> — 국가는 효율로 경쟁하고, 국민에게 노동 기회를 제공한다</span></div>
+          <div class="frow"><span class="ftag">파생 80%</span><span style="color:var(--gray);">생존 위협·권력 집중·노동의 위기·불평등·민주주의 침식·거버넌스 공백</span></div>
+        </div>
+      </div>
+
+      <div>
+        <div class="fh" style="border-bottom-color:var(--green);"><span class="ft" style="color:var(--green);">4. TO-BE — 새로운 가치, 새로운 체제</span></div>
+        <div class="fr">
+          <div class="frow"><span class="ftag">핵심 5%</span><span><strong>정체성 실현권</strong> — 남의 꿈을 위한 노동이 아닌, 자기 삶의 목적을 추구할 권리. 참정권이 민주주의를 정의했듯, 정체성 실현권이 디지털 시대를 정의한다</span></div>
+          <div class="frow"><span class="ftag">주요 15%</span><span><strong>개인: 자기 삶의 목적을 추구</strong> — 생존이 아닌 정체성 실현이 노동의 이유가 된다<br><strong>공동체: 국민의 정체성 실현 보장</strong> — 목적 추구가 가능한 인프라를 제공한다. 폭력의 극대화가 아니라 절제가 합리적 전략이 된다</span></div>
+          <div class="frow"><span class="ftag">파생 80%</span><span style="color:var(--gray);">금지선·권력 균형·분배 재설계·거버넌스→세계 정부</span></div>
+        </div>
+      </div>
+
+      <div>
+        <div class="fh" style="border-bottom-color:var(--blue);"><span class="ft" style="color:var(--blue);">5. TO-DO — 안전한 전환을 위한 설계</span></div>
+        <div class="fr">
+          <div class="frow"><span class="ftag">핵심 5%</span><span><strong>❶ 안전한 가치 전환</strong> — 효율이 아닌 정체성 실현이 새로운 가치. 이 가치가 서야 규제·분배·거버넌스의 목표가 정의된다</span></div>
+          <div class="frow"><span class="ftag">주요 15%</span><span><strong>❷ 분배</strong> 하한선+차등 (누진세·배당·공적 지분)<br><strong>❸ 위협 통제</strong> 금지선+검증 (NPT/CWC 교훈: 검증이 신뢰를 만든다)<br><strong>❹ 거버넌스</strong> 미중→세계 합의→세계 정부<span class="ref">Jervis 안보 딜레마 / Ostrom 공유지 / Schelling 초점 해결책</span></span></div>
+          <div class="frow"><span class="ftag">파생 80%</span><span><strong>❺ 한반도의 소명 + 정치적 실현</strong><br>패권 충돌의 최전선에서 합의의 최전선으로<br>촉진자 + 규범 인프라 + 규범 확산자<br>"더 큰 자유" — 위험은 함께 막고, 자유는 최대한 누린다<span class="ref">아일랜드→NPT / 캐나다→오타와 / 한국→광화문 회의(가칭)</span></span></div>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- ═══ BOTTOM SECTION ═══ -->
+  <div style="display:grid; grid-template-columns:2fr 3fr 2fr; gap:20px; margin-top:20px; padding-top:30px; padding-bottom:20px;">
+    <div>
+      <div class="st">6. 미중 합의안 — 갈등에서 협력으로</div>
+      <p class="sd" style="font-size:0.78rem; color:var(--gray);">공멸 회피는 최소선일 뿐이다. 진짜 목표는 함께 새로운 세계 질서를 만드는 것.</p>
+      <table class="t" style="font-size:0.78rem;">
+        <thead><tr><th style="width:18%;">단계</th><th>내용</th><th>논리</th></tr></thead>
+        <tbody>
+          <tr style="border-left:3px solid var(--red);"><td class="era">최소선</td><td>금지 — AI 생물무기, 사이버WMD, 핵AI, AGI</td><td>만든 쪽도 죽는다. 거부 불가</td></tr>
+          <tr style="border-left:3px solid var(--blue);"><td class="era">구조</td><td>균형 — 독점 견제, 감시 제한, 군사화 제재</td><td>상대의 독점은 자국의 위협</td></tr>
+          <tr style="border-left:3px solid var(--green);"><td class="era">목표</td><td>새 질서 — 효율 경쟁에서 정체성 실현의 시대로</td><td>경쟁은 공멸, 협력은 공존</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div>
+      <div class="st">7. 진행되고 있는 노력들</div>
+      <p class="sd" style="font-size:0.78rem; color:var(--gray); margin-bottom:4px;">모두 위협 억제(금지선)에 집중 — 새로운 가치를 세우는 노력은 아직 없다</p>
+      <table class="t" style="font-size:0.78rem;">
+        <tbody>
+          <tr><td class="era" style="white-space:nowrap;">블레츨리 선언 <span class="yr">2023</span></td><td>프론티어 AI 안전성 테스트·투명성 강화. 미·중 포함 28개국. 법적 구속력 없음</td><td style="color:var(--green); white-space:nowrap;">▲ 유지</td></tr>
+          <tr><td class="era" style="white-space:nowrap;">IDAIS 베이징 <span class="yr">2024</span></td><td>자율복제·권력추구·무기화·사이버공격·기만 5대 레드라인. Bengio·Hinton 등 트랙2</td><td style="color:var(--green); white-space:nowrap;">▲ 확대</td></tr>
+          <tr><td class="era" style="white-space:nowrap;">APEC 페루 <span class="yr">2024</span></td><td>미·중 정상, 핵 판단에 AI 위임 않는다는 원칙적 공감대. 비구속적 확인 수준</td><td style="color:var(--gold); white-space:nowrap;">▼ 트럼프 변수</td></tr>
+          <tr><td class="era" style="white-space:nowrap;">AI안전보고서 <span class="yr">2025</span></td><td>범용 AI 위험 평가·정책 권고. Bengio 등 30+국 연구자 참여. 미국 불참</td><td style="color:var(--red); white-space:nowrap;">▼ 미국 불참</td></tr>
+          <tr><td class="era" style="white-space:nowrap;">AI Red Lines <span class="yr">2025</span></td><td>AI 금지선 국제협약 촉구. 저명인사 200+명, 노벨상 수상자 10명, 기관 70+개</td><td style="color:var(--green); white-space:nowrap;">▲ 확대</td></tr>
+          <tr><td class="era" style="white-space:nowrap;">초지능 금지 <span class="yr">2025</span></td><td>안전 입증 전까지 초지능 개발 금지. Hinton·Bengio 등 850명→12만명↑ 확산</td><td style="color:var(--green); white-space:nowrap;">▲ 확산</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div>
+      <div>
+        <div class="st">8. 핵심 제안: 광화문 회의(가칭)</div>
+        <p class="sd" style="font-size:0.78rem;">현재 노력들은 "무엇을 막을 것인가"만 다룬다. 광화문 회의는 "어떤 세계를 만들 것인가"를 함께 다루는 최초의 장이다. AI 과학자 + 철학자·경제학자·시민사회가 함께 모여 새 시대의 가치 선언을 채택한다.</p>
+        <table class="t" style="font-size:0.72rem; margin-top:8px;">
+          <tbody>
+            <tr><td style="color:var(--gray); white-space:nowrap;">4월</td><td>위협 특정 + 광화문 회의(가칭) 설계</td></tr>
+            <tr><td style="color:var(--gray); white-space:nowrap;">6월</td><td>통합 보고서</td></tr>
+            <tr><td style="color:var(--gray); white-space:nowrap;">7–8월</td><td>국제 자문단</td></tr>
+            <tr><td style="color:var(--gray); white-space:nowrap;">9–10월</td><td>단행본</td></tr>
+            <tr><td style="color:var(--gray); white-space:nowrap;">11–12월</td><td>서울 컨퍼런스</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <footer style="margin-top:12px;">
+    <div class="fq" style="text-align:center; border-left:none; width:100%;">새로운 사회 계약 — 효율이 가치이던 시대는 끝난다. 새 시대의 가치는 정체성 실현이다. 공동체는 국민의 정체성 실현을 보장하고, 개인은 자기 삶의 목적을 스스로 추구한다.</div>
+  </footer>
+
+</div>
+</body>
+</html>

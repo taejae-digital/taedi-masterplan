@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>기술의 독점에서 자유의 확장으로 V4.3.1</title>
+<link href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" rel="stylesheet">
+<style>
+  *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+  :root {
+    --black: #111; --dark: #333; --gray: #777; --light: #bbb; --line: #ddd;
+    --bg: #f5f5f5; --white: #fff; --red: #8b2500; --green: #1a6b4a; --blue: #1a5276; --gold: #8c6d1f;
+  }
+  body { font-family: 'Pretendard', -apple-system, sans-serif; font-size: 15px; line-height: 1.5; color: var(--dark); background: var(--white); margin: 0; }
+  @media print { @page { size: A3 landscape; margin: 0; } }
+  .page { width: 420mm; height: 297mm; margin: 0 auto; padding: 12mm 16mm 10mm; display: flex; flex-direction: column; overflow: hidden; }
+
+  header { display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 14px; border-bottom: 2.5px solid var(--black); padding-bottom: 8px; flex-shrink: 0; }
+  .h-title { font-size: 2.2rem; font-weight: 800; line-height: 1.1; letter-spacing: -0.03em; }
+  .h-sub { font-size: 0.85rem; color: var(--gray); margin-top: 2px; }
+  .h-meta { text-align: right; font-size: 0.8rem; color: var(--gray); line-height: 1.4; }
+  .h-meta strong { display: block; color: var(--dark); font-weight: 700; font-size: 0.88rem; }
+
+  .layout { display: grid; grid-template-columns: 3fr 2fr; gap: 36px; flex: 1; min-height: 0; }
+  .col { display: flex; flex-direction: column; justify-content: space-between; }
+
+  .st { font-size: 1.15rem; font-weight: 800; margin-bottom: 4px; padding-bottom: 3px; border-bottom: 2px solid var(--black); }
+  .st--r { border-bottom-color: var(--red); color: var(--red); }
+  .st--b { border-bottom-color: var(--blue); color: var(--blue); }
+  .sd { font-size: 0.88rem; line-height: 1.5; margin-bottom: 4px; }
+
+  .flow-svg { display: block; margin: 10px auto 10px; max-width: 680px; width: 100%; }
+  .co { border-left: 3px solid var(--blue); padding: 8px 12px; background: var(--bg); font-size: 0.82rem; line-height: 1.5; }
+  .co em { font-style: normal; font-weight: 700; }
+  .co--r { border-left-color: var(--red); }
+  .co--g { border-left-color: var(--gold); }
+
+  .t { width: 100%; border-collapse: collapse; font-size: 0.82rem; line-height: 1.4; }
+  .t th { font-size: 0.72rem; font-weight: 800; padding: 2px 6px 4px; text-align: left; border-bottom: 1.5px solid var(--black); }
+  .t td { padding: 5px 6px; border-bottom: 1px solid var(--line); vertical-align: top; }
+  .t .era { font-weight: 700; white-space: nowrap; }
+  .t .yr { font-size: 0.6rem; color: var(--gray); }
+  .t .cost { color: var(--red); } .t .ok { color: var(--blue); }
+  .t .now td { background: var(--bg); border-bottom: 1.5px solid var(--black); }
+  .tt th { background: var(--black); color: var(--white); padding: 3px 6px; border: none; }
+  .tt .tag { font-weight: 700; color: var(--red); white-space: nowrap; }
+
+  .pq { background: var(--black); color: var(--white); padding: 10px 16px; text-align: center; font-size: 0.9rem; line-height: 1.45; }
+  .fh { margin-bottom: 4px; padding-bottom: 3px; border-bottom: 1.5px solid var(--line); margin-top: 2px; }
+  .ft { font-size: 1.05rem; font-weight: 800; }
+  .fr { font-size: 0.82rem; line-height: 1.45; }
+  .frow { display: flex; gap: 6px; margin-bottom: 6px; }
+  .ftag { min-width: 62px; flex-shrink: 0; }
+  .ref { display: block; font-size: 0.62rem; color: var(--light); margin-top: 1px; }
+
+  footer { margin-top: auto; padding: 12px 16px; background: var(--bg); display: flex; gap: 28px; align-items: start; flex-shrink: 0; border-top: 1.5px solid var(--line); }
+  .fl { font-size: 0.68rem; font-weight: 700; color: var(--gray); margin-bottom: 2px; }
+  .fq { font-size: 0.82rem; line-height: 1.45; border-left: 3px solid var(--red); padding-left: 10px; font-weight: 500; }
+  .road { display: flex; gap: 3px; }
+  .road > div { border: 1px solid var(--line); padding: 3px 8px; font-size: 0.72rem; flex: 1 1 0; }
+  .road > div strong { display: block; font-size: 0.6rem; font-weight: 700; color: var(--gray); }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <header>
+    <div>
+      <div class="h-title">기술의 독점에서 자유의 확장으로</div>
+      <div class="h-sub">디지털 시대, 설계가 먼저여야 한다 — V4.3.1</div>
+    </div>
+    <div class="h-meta"><strong>태재미래전략연구원</strong>디지털 전환과 사회변혁팀 · 2026. 3.</div>
+  </header>
+
+  <div class="layout">
+
+    <!-- ═══ LEFT (7fr) ═══ -->
+    <div class="col">
+
+      <div>
+        <div class="st">기술의 독점과 자유의 확장</div>
+        <p class="sd">신기술이 필수가 되면, 인프라를 쥔 소수가 권력을 독점한다. 독점을 깨는 설계가 늦을수록 대가는 커졌다.</p>
+        <svg class="flow-svg" viewBox="0 0 560 100" xmlns="http://www.w3.org/2000/svg">
+          <defs><marker id="ar" markerWidth="5" markerHeight="4" refX="4.5" refY="2" orient="auto-start-reverse"><polygon points="0 0,5 2,0 4" fill="#999"/></marker></defs>
+          <rect x="0" y="28" width="80" height="34" rx="3" fill="none" stroke="#333" stroke-width="1.5"/>
+          <text x="40" y="50" text-anchor="middle" font-size="12" font-weight="700" fill="#333">신기술</text>
+          <line x1="82" y1="45" x2="118" y2="45" stroke="#999" stroke-width="1.2" marker-end="url(#ar)"/>
+          <text x="176" y="18" text-anchor="middle" font-size="9" font-weight="800" fill="#111" letter-spacing="0.06em">AS-IS</text>
+          <rect x="120" y="26" width="112" height="38" rx="3" fill="#111"/>
+          <text x="176" y="50" text-anchor="middle" font-size="12" font-weight="700" fill="#fff">권력의 독점</text>
+          <path d="M232 38 C250 38 254 16 288 16" stroke="#999" stroke-width="1.2" fill="none" marker-end="url(#ar)"/>
+          <path d="M232 52 C250 52 254 74 288 74" stroke="#999" stroke-width="1.2" fill="none" marker-end="url(#ar)"/>
+          <rect x="290" y="0" width="108" height="30" rx="3" fill="#8b2500"/>
+          <text x="344" y="20" text-anchor="middle" font-size="11" font-weight="600" fill="#fff">폭력적 전환</text>
+          <rect x="290" y="60" width="108" height="30" rx="3" fill="#1a5276"/>
+          <text x="344" y="80" text-anchor="middle" font-size="11" font-weight="600" fill="#fff">설계된 전환</text>
+          <text x="344" y="98" text-anchor="middle" font-size="8.5" font-weight="800" fill="#1a5276" letter-spacing="0.06em">TO-DO</text>
+          <path d="M398 15 C420 15 424 38 450 38" stroke="#999" stroke-width="1.2" fill="none" marker-end="url(#ar)"/>
+          <path d="M398 75 C420 75 424 52 450 52" stroke="#999" stroke-width="1.2" fill="none" marker-end="url(#ar)"/>
+          <text x="504" y="18" text-anchor="middle" font-size="8.5" font-weight="800" fill="#1a6b4a" letter-spacing="0.06em">TO-BE</text>
+          <rect x="452" y="26" width="100" height="38" rx="3" fill="#1a6b4a"/>
+          <text x="502" y="50" text-anchor="middle" font-size="11.5" font-weight="700" fill="#fff">자유의 확장</text>
+        </svg>
+      </div>
+
+      <div>
+        <div class="st">역사적 사례 — 같은 패턴의 반복</div>
+        <table class="t">
+          <thead><tr><th>신기술</th><th>권력의 독점</th><th>전환</th><th>자유의 확장</th></tr></thead>
+          <tbody>
+            <tr><td class="era">인쇄술 <span class="yr">1517</span></td><td>교회 지식 독점</td><td class="cost">30년 전쟁</td><td>신앙의 자유</td></tr>
+            <tr><td class="era">증기기관·공장 <span class="yr">1760</span></td><td>자본가 노동 지배</td><td class="cost">노동자 수명 19세</td><td>참정권·노동권</td></tr>
+            <tr><td class="era">대량생산·금융 <span class="yr">1933</span></td><td>금융·산업 독점</td><td class="ok">루스벨트 뉴딜</td><td>사회보장·중산층</td></tr>
+            <tr><td class="era">산업화 <span class="yr">1938</span></td><td>노사 갈등 극대화</td><td class="ok">살트셰바덴 대타협</td><td>북유럽 복지국가</td></tr>
+            <tr><td class="era">군사기술 <span class="yr">1914/39</span></td><td>제국주의·파시즘</td><td class="cost">세계대전 7천만↑</td><td>UN 인권선언</td></tr>
+            <tr><td class="era">인터넷·모바일 <span class="yr">1990</span></td><td>플랫폼·데이터 착취</td><td class="cost">감시 자본주의</td><td>정보접근의 자유</td></tr>
+            <tr class="now"><td class="era">AI·자율에이전트 <span class="yr">2020–</span></td><td>기술독점·군사화</td><td class="ok">설계된 전환 필요</td><td>정체성의 추구</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div style="display:grid; grid-template-columns:1fr 1fr; gap:20px;">
+        <div>
+          <div class="st st--r">디지털 위협</div>
+          <table class="t tt" style="font-size:0.75rem;">
+            <thead><tr><th></th><th>위협</th><th style="text-align:center;">비차별</th><th style="text-align:center;">불가역</th><th style="text-align:center;">탈국가</th></tr></thead>
+            <tbody>
+              <tr><td style="padding:5px 6px; border-right:2px solid var(--black); width:50px;">핵심 5%</td><td colspan="4"><strong>AI가 효율 패러다임을 극한으로 가속</strong> — 효율이 유일한 가치일 때, 인간 대체·권력 집중·군사화는 "합리적 결론"이 된다. 모든 위협의 뿌리</td></tr>
+              <tr><td style="padding:5px 6px; border-right:2px solid var(--dark);" rowspan="5">주요 15%</td><td class="tag">AI 생물무기</td><td style="text-align:center;">✓</td><td style="text-align:center;">✓</td><td style="text-align:center;">✓</td></tr>
+              <tr><td class="tag">AGI 통제 상실</td><td style="text-align:center;">✓</td><td style="text-align:center;">✓</td><td style="text-align:center;">✓</td></tr>
+              <tr><td class="tag">AI 사이버 WMD</td><td style="text-align:center;">✓</td><td style="text-align:center;">✓</td><td style="text-align:center;">△</td></tr>
+              <tr><td class="tag">자율살상무기</td><td style="text-align:center;">△</td><td style="text-align:center;">✓</td><td style="text-align:center;">△</td></tr>
+              <tr><td class="tag">핵 AI화</td><td style="text-align:center;">✓</td><td style="text-align:center;">✓</td><td style="text-align:center;">—</td></tr>
+              <tr><td style="padding:5px 6px; border-right:2px solid var(--line); color:var(--gray);" rowspan="3">파생 80%</td><td style="color:var(--gray);">독점·감시·딥페이크</td><td colspan="3" rowspan="3" style="color:var(--gray);">핵심+주요가 방치되면 자동 확대</td></tr>
+              <tr><td style="color:var(--gray);">노동 대체·디지털 배제</td></tr>
+              <tr><td style="color:var(--gray);">거버넌스 공백·속도 비대칭</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div>
+          <div class="st st--b">진행되고 있는 노력들</div>
+          <table class="t" style="font-size:0.75rem;">
+            <tbody>
+              <tr><td class="era">블레츨리 선언<br><span class="yr">2023.11</span></td><td>영국 주최. 미·중 포함 28개국 공동선언. 중국 과학기술부 부부장 직접 서명</td><td style="color:var(--green); white-space:nowrap;">▲ 유지</td></tr>
+              <tr><td class="era">IDAIS 베이징<br><span class="yr">2024.3</span></td><td><strong>IDAIS</strong>(국제AI안전대화). Yao(튜링상)·Hinton·Bengio 레드라인 합의. 중국 과학자 4명</td><td style="color:var(--green); white-space:nowrap;">▲ 확대</td></tr>
+              <tr><td class="era">AI안전보고서<br><span class="yr">2025.1</span></td><td>Bengio 주도, 30+국. 중국 Ya-Qin Zhang 선임자문. <strong>NTI</strong>(핵위협이니셔티브) 참여</td><td style="color:var(--red); white-space:nowrap;">▼ 미국 불참</td></tr>
+              <tr><td class="era">리마 정상합의<br><span class="yr">2024.11</span></td><td>바이든-시진핑: 핵 판단에 AI 위임 안 한다. 미중 최초 공식 합의</td><td style="color:var(--red); white-space:nowrap;">▼ 트럼프?</td></tr>
+              <tr><td class="era">red-lines.ai<br><span class="yr">2025</span></td><td><strong>FLI</strong>(미래생명연구소)·CeSIA 주도. 국가원수 11명, 노벨/튜링 15명. Yi Zeng(중국) 서명</td><td style="color:var(--green); white-space:nowrap;">▲ 서명↑</td></tr>
+              <tr><td class="era">초지능 금지<br><span class="yr">2025</span></td><td><strong>FLI</strong> 주도. Hinton·Bengio 등 850+명. 전직 합참의장. <strong>SIPRI</strong>(스톡홀름평화연구소) 지지</td><td style="color:var(--green); white-space:nowrap;">▲ 확산</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+
+    </div>
+
+    <!-- ═══ RIGHT (5fr) ═══ -->
+    <div class="col">
+
+      <div class="pq">
+        <strong>무제한 확장 패러다임 → 자유의 새로운 균형</strong><br>
+        개인의 자유는 극대화하되, 타인의 자유를 침해하는 집중에는 구조적 제동. 문명적 위험에는 절대 금지
+      </div>
+
+      <div>
+        <div class="fh" style="border-bottom-color:var(--black);"><span class="ft" style="color:var(--black);">AS-IS — AI 역량의 비대칭적 집중</span></div>
+        <div class="fr">
+          <div class="frow"><span class="ftag">핵심 5%</span><span><strong>효율이 유일한 가치</strong> — AI가 효율만 추구하면 인간 대체·독점·군사화가 "합리적 결론"<span class="ref">Piketty(2019): 모든 사회는 불평등을 정당화하는 서사를 만든다</span></span></div>
+          <div class="frow"><span class="ftag">주요 15%</span><span><strong>폭력의 민주화 + 생존 위협</strong> — AI가 전략적 폭력의 진입 장벽을 낮춤. 국가의 폭력 독점 약화 → 사회계약·균형·검증 동시 흔들림<span class="ref">Weber(1919) 폭력 독점 / Hobbes(1651) 사회계약 / Acemoglu(2019) 부재하는 리바이어던</span></span></div>
+          <div class="frow"><span class="ftag">파생 80%</span><span style="color:var(--gray);">노동 대체·격차·조작·거버넌스 공백 — 핵심+주요가 방치되면 자동 확대</span></div>
+        </div>
+      </div>
+
+      <div>
+        <div class="fh" style="border-bottom-color:var(--green);"><span class="ft" style="color:var(--green);">TO-BE — 자유의 새로운 균형</span></div>
+        <div class="fr">
+          <div class="frow"><span class="ftag">핵심 5%</span><span><strong>인간 가치의 재평가</strong> — 효율이 아닌 존엄·자유가 기준. 개인의 자유 극대화가 새로운 가치. 이 가치가 서야 "무엇을 금지하고 무엇을 허용할지"의 기준이 생긴다</span></div>
+          <div class="frow"><span class="ftag">주요 15%</span><span><strong>금지</strong>: 생물무기·AGI·사이버WMD 국제적 금지선<br><strong>균형</strong>: 독점에 비용, 감시에 제동, 군사화에 제재</span></div>
+          <div class="frow"><span class="ftag">파생 80%</span><span><strong>새로운 균형의 작동</strong> — 분배 재설계, 거버넌스→세계 정부</span></div>
+        </div>
+      </div>
+
+      <div>
+        <div class="fh" style="border-bottom-color:var(--blue);"><span class="ft" style="color:var(--blue);">TO-DO — 설계 (5축)</span></div>
+        <div class="fr">
+          <div class="frow"><span class="ftag">핵심 5%</span><span><strong>❶ 가치 재평가</strong> — 효율이 아닌 개인의 자유 극대화가 새로운 가치. 이 가치가 서야 규제·분배·거버넌스의 목표가 정의된다</span></div>
+          <div class="frow"><span class="ftag">주요 15%</span><span><strong>❷ 분배</strong> 하한선+차등 (누진세·배당·공적 지분)<br><strong>❸ 위협 통제</strong> 금지선+검증 (NPT/CWC 교훈: 검증이 신뢰를 만든다)<br><strong>❹ 거버넌스</strong> 미중→세계 합의→세계 정부<span class="ref">Jervis 안보 딜레마 / Ostrom 공유지 / Schelling 초점 해결책</span></span></div>
+          <div class="frow"><span class="ftag">파생 80%</span><span><strong>❺ 한반도의 소명 + 정치적 실현</strong><br>패권 충돌의 최전선에서 합의의 최전선으로<br>촉진자 + 규범 인프라 + 규범 확산자<br>"더 큰 자유" — 위험은 함께 막고, 자유는 최대한 누린다<span class="ref">아일랜드→NPT / 캐나다→오타와 / 한국→광화문 회의(가칭)</span></span></div>
+        </div>
+      </div>
+
+      <div class="co co--g" style="padding:10px 14px;">
+        <strong style="color:var(--gold);">핵심 제안: 광화문 회의(가칭)</strong><br>
+        위협의 최전선에 있는 자가 해법을 제시한다. NTI·Stimson·SIPRI·IDAIS와 공동 설계. 전문가가 먼저 위협을 규정하고, 선언을 제도적 합의로 전환하는 다리.<br>
+        <em>한반도: 패권 충돌의 최전선에서, 동서양을 잇는 위치에서, 기술을 아는 나라로서.</em>
+      </div>
+
+    </div>
+
+  </div>
+
+  <footer style="margin-top:28px;">
+    <div style="flex:3;">
+      <div class="fl">새로운 사회 계약</div>
+      <div class="fq">AI가 효율만을 추구하는 시대는 끝나야 한다. 문명적 위험에는 절대 금지선을 세운다. 권력의 집중에는 구조적 균형을 만든다. 그 위에서 모든 개인은 자기 삶의 방향을 스스로 결정하며 자유롭게 산다.</div>
+    </div>
+    <div style="flex:2;">
+      <div class="fl">로드맵</div>
+      <div class="road">
+        <div><strong>4월</strong>위협 특정+광화문 회의(가칭) 설계</div>
+        <div><strong>6월</strong>통합 보고서</div>
+        <div><strong>7–8월</strong>국제 자문단</div>
+        <div><strong>9–10월</strong>단행본</div>
+        <div><strong>11–12월</strong>서울 컨퍼런스</div>
+      </div>
+    </div>
+  </footer>
+
+</div>
+</body>
+</html>
