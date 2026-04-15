@@ -15,13 +15,17 @@ export default function NarrativePage() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    const base = process.env.NODE_ENV === 'production' ? '/a3-viewer' : '';
+    // basePath-safe: window.location.origin + pathname prefix
+    const base = typeof window !== 'undefined'
+      ? window.location.pathname.split('/mp/')[0]
+      : '';
     fetch(`${base}/data/narratives.json`)
       .then(r => r.json())
       .then(data => {
         setFiles(data);
         if (data.length > 0) setSelected(data[0].version);
       })
+      .catch(err => console.error('fetch failed', err))
       .finally(() => setLoading(false));
   }, []);
 
