@@ -15,17 +15,22 @@ export default function NarrativePage() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    // basePath-safe: window.location.origin + pathname prefix
-    const base = typeof window !== 'undefined'
-      ? window.location.pathname.split('/mp/')[0]
-      : '';
-    fetch(`${base}/data/narratives.json`)
+    fetch('https://taejae-digital.github.io/taedi-masterplan/data/narratives.json')
       .then(r => r.json())
       .then(data => {
         setFiles(data);
         if (data.length > 0) setSelected(data[0].version);
       })
-      .catch(err => console.error('fetch failed', err))
+      .catch(err => {
+        // fallback for local dev
+        fetch('/data/narratives.json')
+          .then(r => r.json())
+          .then(data => {
+            setFiles(data);
+            if (data.length > 0) setSelected(data[0].version);
+          })
+          .finally(() => setLoading(false));
+      })
       .finally(() => setLoading(false));
   }, []);
 
