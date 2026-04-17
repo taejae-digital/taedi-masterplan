@@ -1,80 +1,65 @@
-/* 담당: 유호현 — p.1 비전 */
+/* p.1 비전: 기술 혁신과 질서 전환의 역사 (v0.5.2 시각화) */
 import { C } from "./constants";
 import { Header } from "./shared";
 
 export function VisionPage() {
-  const ps: React.CSSProperties = { margin: "0 0 10px", fontSize: 15, lineHeight: 1.85, color: "#222", textAlign: "justify" };
+  const ps: React.CSSProperties = { margin: "0 0 10px", fontSize: 14.5, lineHeight: 1.8, color: "#111", textAlign: "justify" };
   const h3s: React.CSSProperties = { fontSize: 17, fontWeight: 800, color: C.navy, margin: "18px 0 8px", paddingBottom: 4, borderBottom: `1px solid ${C.line}` };
 
   return (
     <div style={{ pageBreakAfter: "always", minHeight: "280mm" }}>
-      <Header subtitle="1. 비전" />
+      <Header subtitle="1. 서론: 기술 혁신과 질서 전환의 유비" />
 
       <div style={{ padding: "20px 32px 16px", borderBottom: `2px solid ${C.navy}`, marginBottom: 16 }}>
         <div style={{ fontSize: 20, fontWeight: 800, color: C.navy, lineHeight: 1.4 }}>
-          기술의 급격한 발전이 인류에게 끼칠 수 있는 해악을 선제적으로 대응하여,<br />
-          안전하고 건강한 미래 사회를 만든다.
+          인쇄술이 산업사회 질서를 만들었듯, 디지털 기술은 정보화 사회의 새로운 질서를 요청한다.<br />
+          개인이 바뀌면 공동체가 바뀌고, 공동체가 바뀌면 질서가 바뀐다.
         </div>
       </div>
 
-      <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 28, padding: "0 32px" }}>
-        {/* Left column */}
+      <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 32, padding: "0 32px" }}>
         <div>
-          <div style={h3s}>1. 디지털 위협의 최전선에 선 한반도</div>
-          <p style={ps}>
-            AI 시대, 기술은 개인의 자유를 전례 없이 확장한다. 의대나 법대를 나오지 않아도 의료와 법률 지식을 활용할 수 있는 세상이 열리고 있다. 그러나 같은 기술이 자율살상무기, 생물무기 설계, 대규모 감시 체제의 도구가 된다. 확장된 자유와 확장된 위험은 같은 기술에서 나온다.
-          </p>
-          <p style={ps}>
-            한반도는 이 충돌의 최전선에 있다. 미중 AI 군비 경쟁의 지정학적 접점이자, 세계에서 가장 빠르게 디지털화된 사회 중 하나다. 위협이 가장 먼저, 가장 강하게 도달하는 곳이 바로 이곳이다.
-          </p>
-          <p style={ps}>
-            지금은 초기다. AI의 자율성은 아직 제한적이고, 이해관계가 완전히 고착되지 않았다. 핵 기술은 냉전이 시작된 뒤에야 통제를 시도했고, 그 대가는 수십 년의 공포였다. AI는 그보다 확산 속도가 빠르고, 진입 장벽이 낮다. 지금이 설계할 수 있는 마지막 시간이다.
-          </p>
+          <div style={h3s}>1.1 기술 혁신의 두 흐름: 물리적 확장 vs 인지적 확장</div>
+          <div style={{ display: "flex", flexDirection: "column", gap: 15 }}>
+            <div style={{ padding: "12px", background: "#f8f9fa", borderRadius: "8px", border: "1px solid #eee" }}>
+              <strong style={{ color: C.navy }}>유형 1: 물리적 능력 확장 (Industrial)</strong>
+              <p style={{ fontSize: 13.5, marginTop: 5 }}>바퀴 → 증기기관 → 내연기관. 인간 신체의 한계 돌파. 생산방식을 바꾸고 계급 구조를 형성하기까지 수십 년의 시차 발생.</p>
+            </div>
+            <div style={{ padding: "12px", background: "#eef2ff", borderRadius: "8px", border: "1px solid #c7d2fe" }}>
+              <strong style={{ color: C.navy }}>유형 2: 인지·판단 능력 확장 (Digital/AI)</strong>
+              <p style={{ fontSize: 13.5, marginTop: 5 }}>문자 → 인쇄술 → 컴퓨터 → AI. 인간의 기억·추론·판단 한계 돌파. 권력 구조의 핵심인 '정보 해석과 판단'을 직접 건드림으로써 즉각적 체제 전환 촉발.</p>
+            </div>
+          </div>
 
-          <div style={h3s}>2. 위협을 정확히 아는 것이 모든 통제의 출발점</div>
-          <p style={ps}>
-            디지털이 초래하는 위협은 시간축에 따라 네 층위로 다가온다. <strong>진행 중</strong>인 AI 군사 비대칭과 자율살상무기는 가자·우크라이나에서 이미 실전에 투입됐고, 감시·조작 체제는 선거 개입과 딥페이크 일상화로 민주주의를 잠식하며, AI 통제 상실 위험은 현실이 되고 있다. <strong>임박한(1~3년)</strong> AI 생물무기·사이버 WMD·핵AI화는 더 많은 사람이 더 많은 수단으로 죽일 수 있게 만든다. <strong>중기적으로</strong> 대량 실업·정체성 위기와 빅테크 권력 독점은 사회 전체의 구조를 바꾸고, <strong>장기적으로</strong> 거버넌스 공백이 통제 자체를 불가능하게 만든다.
-          </p>
-          <p style={ps}>
-            막아야 할 것과 막지 말아야 할 것을 구분해야 한다. 모든 AI를 규제하면 자유의 확장을 저해한다. 통제는 3단계로 나뉜다. <strong>금지</strong>는 AI 생물무기, 핵AI화처럼 존재 자체가 위험한 기술을 차단하는 것이다. <strong>승인</strong>은 감시 AI, 자율 에이전트처럼 조건부로 허용하되 사전 검증을 요구하는 것이다. <strong>전환</strong>은 AI 초과이윤 누진세, 돌봄 인정소득처럼 경제 구조를 재편하는 것이다.
-          </p>
-
-          <div style={h3s}>3. 설계가 앞서면 비용이 낮다</div>
-          <p style={ps}>
-            역사는 두 가지 경로를 보여준다. 화학무기금지협약(CWC)은 193개국이 비준하고 신고된 화학무기 재고를 100% 폐기했다. 몬트리올 의정서는 197개국이 비준하고 오존층 파괴 물질을 98% 감축했다. 반면 핵확산금지조약(NPT)은 강대국 특권을 허용해 북한, 이란 같은 이탈자를 만들었고, 생물무기금지협약(BWC)은 검증 메커니즘 없이 소련의 20년 비밀 개발을 허용했다.
-          </p>
+          <div style={h3s}>1.2 인쇄술의 경로: 산업사회 질서의 탄생</div>
+          <div style={{ fontSize: 14, color: "#333", lineHeight: 1.6 }}>
+             <div style={{ display: "flex", alignItems: "center", gap: 10, marginBottom: 5 }}>
+               <span style={{ padding: "4px 8px", background: C.navy, color: "#fff", borderRadius: 4, fontSize: 11 }}>역사</span>
+               <span>지식 독점 해체 (수도원/왕실) → 시민의식 발생 → 대의민주주의/국민국가 성립</span>
+             </div>
+             <p style={ps}>인쇄술은 지식의 '수신' 능력을 대중화했으나 '생산'은 여전히 기관의 몫이었다. 디지털 기술은 이 한계를 넘어 생산·유통·적용 능력까지 개인에게 이전한다.</p>
+          </div>
         </div>
 
-        {/* Right column */}
         <div>
+          <div style={h3s}>1.3 핵심 질문: 새로운 질서의 설계</div>
           <p style={ps}>
-            성공한 통제의 공통점은 세 가지다. 물리적 통제 지점이 있었고(화학무기의 전구물질, 오존의 CFC 대체재), 검증 메커니즘이 작동했으며, 경제적 대안이 존재했다. CFC 대체재 산업이 성장하면서 오존층 파괴 물질을 포기하는 것이 경제적으로도 합리적이 됐다. AI에도 이 조건이 있다. 반도체 공급망(ASML, TSMC, 삼성, NVIDIA)은 물리적 통제 지점이 되고, 컴퓨팅 사용량은 추적 가능하며, AI 초과이윤의 사회 환류 모델은 경제적 대안이 된다.
+            "정보화 사회에서 자본주의도 공산주의도 아닌, 새로운 경제·정치 질서는 무엇인가?"
           </p>
+          <div style={{ padding: "15px", borderLeft: "4px solid #e67e22", background: "#fff9f0", borderRadius: "0 8px 8px 0" }}>
+            <div style={{ fontWeight: 800, marginBottom: 5 }}>핵의 교훈 vs AI의 시급성</div>
+            <p style={{ fontSize: 13.5 }}>핵 기술은 냉전 이후에야 통제를 시도했으나 그 대가는 공포였다. 디지털 기술은 그보다 빠르고 광범위하다. 역사를 되풀이하지 않으려면 <strong>'지금'</strong> 설계해야 한다.</p>
+          </div>
 
-          <div style={h3s}>4. 정체성 실현권 — 더 큰 자유</div>
-          <p style={ps}>
-            자유는 확장되어 왔다. 인쇄술이 신앙의 자유를, 증기기관이 재산권의 자유를, 대량생산이 사회적 권리를 열었다. <strong>변화의 출발점은 항상 개인이었다.</strong> 개인이 변하기 때문에 공동체가 변한다. AI 시대에 개인은 어떻게 변하는가 — 능력이 강화되고, 연결되고, 자아실현이 가능해진다. 그리고 더 큰 자유와 정체성을 추구한다. AI 시대의 다음 자유는 정체성 실현권이다. &quot;나는 무엇을 위해 사는 사람인가&quot;를 스스로 정의하고 추구할 수 있는 권리 — 이것이 참정권 이후의 더 큰 자유다.
-          </p>
-          <p style={ps}>
-            산업 시대는 노동 가치 실현의 시대였다. 노동자가 사회의 중심이 되고, 기업이 노동을 통해 가치를 실현했다. 이제 노동의 자동화 시대가 되면서, 가치의 중심은 <strong>기업에서 개인으로</strong> 이동한다. &quot;무슨 일 하세요?&quot;에 답할 수 없는 사람이 다수가 되는 위기이자, 개인화된 가치 실현이 가능해지는 기회다. 새로운 경제 질서는 자본주의도 공산주의도 아닌 — <strong>니치마켓 생태계</strong>. KBS·MBC의 메가마켓이 아닌 수많은 슈카·MK크리에이티브 같은 소규모 팀이 개인화된 가치를 실현하는 롱테일 경제(Chris Anderson, 2004). 더 많은 사람이 더 다양한 방식으로 경제에 참여한다.
-          </p>
-          <p style={ps}>
-            이를 위해서는 세 가지가 필요하다. AI 초과이윤이 누진세를 통해 사회로 환류되어야 하고, 돌봄과 교육과 공동체 활동이 경제적으로 인정받아야 하며, 데이터 주권이 개인에게 귀속되어야 한다. 그리고 권력은 목적을 완성하면 사라져야 한다 — WHO가 질병을 퇴치하면 해당 권한이 소멸하듯, 과업 완성 시 소멸하는 권력 설계가 필요하다. 개인의 자유와 공동체의 질서 사이 균형은 정체성 실현권이라는 새로운 가치 위에서만 가능하다.
-          </p>
-
-          <div style={h3s}>5. 태재가 해야 하는 일</div>
-          <p style={ps}>
-            위험을 알면서도 이윤 앞에서 멈춘 자들이 있다. 안전보다 속도를 택한 빅테크, 규제보다 혁신을 택한 정부, 경고보다 낙관을 택한 학계가 그들이다. 태재는 그들이 멈춘 자리에서 시작한다.
-          </p>
-          <p style={ps}>
-            패권의 최전선에서 합의의 최전선으로. 미중 대결의 접점에 있는 한반도에서, 대결을 협력으로 전환시킬 모델을 먼저 만든다. 한국은 세계에서 가장 빠르게 디지털화된 사회이자, 미중 어느 쪽에도 종속되지 않은 중견국이다. 화학무기금지협약에서 미·소 양국은 핵심 당사자로서 협상 전반을 주도했지만, 20년간의 교착을 최종적으로 돌파한 것은 호주였다 — 1992년 에반스 외무장관이 제출한 타협 초안이 협약 타결의 결정적 계기가 됐다.
-          </p>
-          <p style={ps}>
-            디지털 위협을 정확히 정의하고, 통제 방안을 설계하며, 경제 질서의 전환 모델을 제시한다. 국제 자문단과 함께 세계 수준의 이론적 토대를 만든다. 디지털 위협 통제는 세계적으로도 초기 단계 — 지금 시작하면 늦지 않는다.
-          </p>
+          <div style={h3s}>1.4 역량 이전의 네 가지 축</div>
+          <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 10 }}>
+             <div style={{ padding: 10, background: "#f1f5f9", borderRadius: 6, textAlign: "center", fontSize: 13 }}><strong>전문성</strong><br/>진입장벽 축소</div>
+             <div style={{ padding: 10, background: "#f1f5f9", borderRadius: 6, textAlign: "center", fontSize: 13 }}><strong>정보</strong><br/>비대칭 해소</div>
+             <div style={{ padding: 10, background: "#f1f5f9", borderRadius: 6, textAlign: "center", fontSize: 13 }}><strong>네트워크</strong><br/>즉각적 연결</div>
+             <div style={{ padding: 10, background: "#f1f5f9", borderRadius: 6, textAlign: "center", fontSize: 13 }}><strong>생산수단</strong><br/>인프라 민주화</div>
+          </div>
         </div>
       </div>
-
     </div>
   );
 }
