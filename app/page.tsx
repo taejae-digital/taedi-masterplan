@@ -55,9 +55,6 @@ export default function Home() {
             <Link href={`/mp/${latest}`} style={{ textDecoration: "none", padding: "8px 18px", background: "rgba(255,255,255,0.15)", borderRadius: 6, fontSize: 13, fontWeight: 600, color: "#fff", transition: "background 0.15s" }}>
               본문 보기 →
             </Link>
-            <Link href="/v6.3" style={{ textDecoration: "none", padding: "8px 18px", background: "rgba(255,255,255,0.08)", borderRadius: 6, fontSize: 13, fontWeight: 500, color: "rgba(255,255,255,0.6)", transition: "background 0.15s" }}>
-              Companion Report
-            </Link>
           </div>
         </div>
       </div>
