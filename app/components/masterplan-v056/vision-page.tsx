@@ -11,6 +11,7 @@ export function VisionPage() {
           디지털 기술은 개인이 기관을 대체하는 역량 이전을 촉발하며,<br />
           우리는 이제 강화된 개인이 공공선으로 흐를 수 있는 새로운 질서의 조건을 설계한다.
         </div>
+      </div>
 
       <div style={{ padding: "20px 32px" }}>
         <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 32, marginBottom: 24 }}>
@@ -32,7 +33,8 @@ export function VisionPage() {
             <div style={h3s}>4. 권력 재분배의 양면성과 설계의 창</div>
             <p style={ps}>그러나 이 재분배는 자동으로 긍정적 결과를 낳지 않는다. 가치 창출의 규모가 커진 만큼 파괴의 규모도 커진다. 한 명의 해커가 시스템을 마비시키고, AI가 대량살상 수단의 진입장벽을 허무는 '폭력의 민주화'가 발생한다. 디지털 기술이 만드는 권력 재분배는 방향이 정해지지 않은 재분배이다. 해방의 방향으로 흐를 수도 있고, 디지털 봉건제의 방향으로 굳을 수도 있다. 그 방향을 결정하는 것이 지금 우리가 수행하는 새로운 질서 설계의 본질이며, 이것이 '정보화 사회의 새로운 경제·정치 질서'를 묻는 이유다.</p>
           </div>
-        </div>      </div>
+        </div>
+      </div>
 
       <Footer />
     </div>
