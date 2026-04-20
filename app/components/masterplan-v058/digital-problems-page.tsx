@@ -23,9 +23,9 @@ export function DigitalProblemsPage() {
           <div>
             <div style={h3s}>위험 지도 — 시간 × 비가역성</div>
             <div style={{ position: "relative", width: "100%", height: 360, border: `1px solid ${C.line}`, background: "#fff", marginBottom: 8 }}>
-              {/* 사분면 배경 (좌상단=즉시 최우선, 우상단=장기 최우선) */}
-              <div style={{ position: "absolute", left: 0, top: 0, width: "50%", height: "50%", background: "rgba(185,28,28,0.04)" }} />
-              <div style={{ position: "absolute", right: 0, top: 0, width: "50%", height: "50%", background: "rgba(26,39,68,0.04)" }} />
+              {/* 사분면 배경 (우상단=지금 진행중+비가역 → 최대 위협) */}
+              <div style={{ position: "absolute", right: 0, top: 0, width: "50%", height: "50%", background: "rgba(185,28,28,0.06)" }} />
+              <div style={{ position: "absolute", left: 0, top: 0, width: "50%", height: "50%", background: "rgba(26,39,68,0.03)" }} />
 
               {/* 격자선 */}
               {[25, 50, 75].map((pct) => (
@@ -40,31 +40,35 @@ export function DigitalProblemsPage() {
               <div style={{ position: "absolute", left: 4, bottom: 4, fontSize: 10, fontWeight: 700, color: C.light }}>낮음</div>
 
               {/* X축 라벨 */}
-              <div style={{ position: "absolute", right: 6, bottom: 4, fontSize: 10, fontWeight: 800, color: C.navy }}>시간 →</div>
+              <div style={{ position: "absolute", right: 6, bottom: 4, fontSize: 10, fontWeight: 800, color: C.red }}>임박성 →</div>
+              <div style={{ position: "absolute", left: 4, bottom: -16, fontSize: 10, fontWeight: 700, color: C.light }}>장기</div>
 
-              {/* 컬럼 가이드 */}
+              {/* 우상단 강조 라벨 */}
+              <div style={{ position: "absolute", right: 8, top: 22, fontSize: 10, fontWeight: 800, color: C.red, background: "rgba(255,255,255,0.9)", padding: "1px 4px" }}>지금 최대 위협</div>
+
+              {/* 컬럼 가이드 (왼쪽: 장기 → 오른쪽: 진행중) */}
               {[
-                { pct: 12.5, label: "진행중" },
-                { pct: 37.5, label: "임박" },
-                { pct: 62.5, label: "중기" },
-                { pct: 87.5, label: "장기" },
+                { pct: 12.5, label: "장기" },
+                { pct: 37.5, label: "중기" },
+                { pct: 62.5, label: "임박" },
+                { pct: 87.5, label: "진행중" },
               ].map(({ pct, label }) => (
                 <div key={label} style={{ position: "absolute", top: 6, left: `${pct}%`, transform: "translateX(-50%)", fontSize: 10, fontWeight: 700, color: "#888", background: "rgba(255,255,255,0.95)", padding: "0 4px" }}>{label}</div>
               ))}
 
               {/* 위험 노드 */}
               {[
-                { x: 12, y: 92, label: "폭력의 민주화", color: C.red, offset: "br" },
-                { x: 14, y: 48, label: "허위정보·플랫폼·권위주의", color: C.red, offset: "br" },
-                { x: 10, y: 28, label: "감시 자본주의", color: C.amber, offset: "br" },
-                { x: 38, y: 42, label: "자동화 실업", color: C.amber, offset: "br" },
-                { x: 42, y: 62, label: "선거 AI 개입", color: C.amber, offset: "tr" },
-                { x: 60, y: 88, label: "AI 정렬 문제", color: C.accent, offset: "br" },
-                { x: 56, y: 50, label: "프로 계층 정체성", color: C.accent, offset: "br" },
-                { x: 66, y: 68, label: "미중 블록화", color: C.accent, offset: "tr" },
-                { x: 88, y: 94, label: "AGI 통제 불능", color: C.navy, offset: "bl" },
-                { x: 82, y: 70, label: "디지털 계급 고착", color: C.navy, offset: "bl" },
-                { x: 92, y: 50, label: "지속불가능성", color: C.green, offset: "bl" },
+                { x: 88, y: 92, label: "폭력의 민주화", color: C.red, offset: "bl" },
+                { x: 86, y: 48, label: "허위정보·플랫폼·권위주의", color: C.red, offset: "bl" },
+                { x: 90, y: 28, label: "감시 자본주의", color: C.amber, offset: "bl" },
+                { x: 62, y: 42, label: "자동화 실업", color: C.amber, offset: "br" },
+                { x: 58, y: 62, label: "선거 AI 개입", color: C.amber, offset: "tr" },
+                { x: 40, y: 88, label: "AI 정렬 문제", color: C.accent, offset: "br" },
+                { x: 44, y: 50, label: "프로 계층 정체성", color: C.accent, offset: "br" },
+                { x: 34, y: 68, label: "미중 블록화", color: C.accent, offset: "tr" },
+                { x: 12, y: 94, label: "AGI 통제 불능", color: C.navy, offset: "br" },
+                { x: 18, y: 70, label: "디지털 계급 고착", color: C.navy, offset: "br" },
+                { x: 8, y: 50, label: "지속불가능성", color: C.green, offset: "br" },
               ].map(({ x, y, label, color, offset }) => {
                 const labelStyle: React.CSSProperties = { position: "absolute", fontSize: 10.5, fontWeight: 700, color: "#222", background: "rgba(255,255,255,0.9)", padding: "0 3px", whiteSpace: "nowrap" };
                 if (offset === "br") { labelStyle.left = 12; labelStyle.top = 6; }
@@ -80,7 +84,7 @@ export function DigitalProblemsPage() {
               })}
             </div>
             <div style={{ fontSize: 10.5, color: C.light, lineHeight: 1.5 }}>
-              좌상단일수록 <strong style={{ color: C.red }}>지금 즉시</strong> 대응이 필요한 위협. 우상단은 시간 여유는 있으나 실현 시 돌이킬 수 없는 위협. 색상은 팀 연구 분야(기술·국제/사회·공동체/제도·환경)에 대응한다.
+              우상단일수록 <strong style={{ color: C.red }}>지금 최대 위협</strong> — 임박성과 비가역성이 모두 높은 영역. 좌상단은 시간 여유는 있으나 실현 시 돌이킬 수 없는 위협. 우하단은 이미 진행중이나 사회적 조정으로 복구 가능한 위협.
             </div>
           </div>
 
