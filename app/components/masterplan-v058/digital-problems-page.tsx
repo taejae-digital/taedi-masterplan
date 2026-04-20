@@ -19,45 +19,68 @@ export function DigitalProblemsPage() {
 
       <div style={{ padding: "0 32px" }}>
         <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 16, marginBottom: 14 }}>
-          {/* 왼쪽: 긴급도별 위험 지도 */}
+          {/* 왼쪽: 위험 지도 (2D 매트릭스) */}
           <div>
-            <div style={h3s}>긴급도별 위험 지도</div>
-            <div style={{ display: "grid", gridTemplateColumns: "1fr", gap: 6 }}>
-              {[
-                {
-                  tag: "진행중", color: C.red,
-                  title: "폭력의 민주화 · 대량살상 수단의 개인화",
-                  desc: "AI가 생물·사이버·자율무기의 진입장벽을 소집단·개인 수준으로 낮춘다. AI 기반 생화학무기는 핵보다 개발 비용이 낮으면서 피해 규모는 유사하거나 크다. 비가역적 공멸 가능성을 실질적으로 연다.",
-                },
-                {
-                  tag: "진행중", color: C.red,
-                  title: "허위정보 생태계 · 플랫폼 과두 · 디지털 권위주의",
-                  desc: "생성형 AI가 식별 불가능한 조작을 보편화하며 사실 합의 기반을 침식. 에코챔버와 알고리즘 극단화가 민주주의의 전제인 시민 판단을 구조적으로 약화시키고, 감시·통제 기술이 권위주의 모델로 수출된다.",
-                },
-                {
-                  tag: "임박", color: C.amber,
-                  title: "자동화 실업 가속 · 선거 과정 AI 개입",
-                  desc: "AI가 인지 노동까지 대체하는 속도는 수십 년이 아닌 수년 단위. 새 직종 창출이 따라잡지 못한다. 개인 맞춤형 설득·딥페이크·마이크로타게팅이 선거의 인식 기반을 조작한다.",
-                },
-                {
-                  tag: "중기", color: C.accent,
-                  title: "AI 정렬 문제 · 프로 계층 정체성 붕괴",
-                  desc: "능력이 우월한 시스템이 인간의 가치와 다른 목표를 추구할 때 우리는 통제 수단이 없다. 동시에 직업으로 정체성을 규정해온 53% 프로 계층이 25%로 축소되며 '무슨 일 하세요'에 답할 수 없는 존재론적 공백이 확산된다.",
-                },
-                {
-                  tag: "장기", color: C.navy,
-                  title: "범용 AI 통제 불능 · 디지털 계급 구조 고착",
-                  desc: "초지능이 도래하면 인류는 그 시스템을 되돌릴 수 없다. 동시에 AI 설계자 5% / AI 활용 프로 25% / AI 의존 아마추어 65% / 소외 5%의 계층 구조가 생물학적 수명 격차까지 수반하며 굳어진다.",
-                },
-              ].map(({ tag, color, title, desc }) => (
-                <div key={title} style={{ display: "grid", gridTemplateColumns: "64px 1fr", border: `1px solid ${C.line}`, borderLeft: `4px solid ${color}` }}>
-                  <div style={{ background: color, color: "#fff", padding: "6px 4px", fontSize: 11, fontWeight: 800, textAlign: "center", letterSpacing: 1, whiteSpace: "pre-line", display: "flex", alignItems: "center", justifyContent: "center", lineHeight: 1.25 }}>{tag}</div>
-                  <div style={{ padding: "8px 12px" }}>
-                    <div style={{ fontSize: 12.5, fontWeight: 800, color, marginBottom: 3 }}>{title}</div>
-                    <div style={{ fontSize: 11.5, lineHeight: 1.6, color: "#222" }}>{desc}</div>
-                  </div>
-                </div>
+            <div style={h3s}>위험 지도 — 시간 × 비가역성</div>
+            <div style={{ position: "relative", width: "100%", height: 360, border: `1px solid ${C.line}`, background: "#fff", marginBottom: 8 }}>
+              {/* 사분면 배경 (좌상단=즉시 최우선, 우상단=장기 최우선) */}
+              <div style={{ position: "absolute", left: 0, top: 0, width: "50%", height: "50%", background: "rgba(185,28,28,0.04)" }} />
+              <div style={{ position: "absolute", right: 0, top: 0, width: "50%", height: "50%", background: "rgba(26,39,68,0.04)" }} />
+
+              {/* 격자선 */}
+              {[25, 50, 75].map((pct) => (
+                <div key={`v${pct}`} style={{ position: "absolute", top: 0, bottom: 0, left: `${pct}%`, borderLeft: `1px dashed ${C.line}` }} />
               ))}
+              {[25, 50, 75].map((pct) => (
+                <div key={`h${pct}`} style={{ position: "absolute", left: 0, right: 0, bottom: `${pct}%`, borderTop: `1px dashed ${C.line}` }} />
+              ))}
+
+              {/* Y축 라벨 */}
+              <div style={{ position: "absolute", left: 4, top: 4, fontSize: 10, fontWeight: 800, color: C.red }}>↑ 비가역·공멸성</div>
+              <div style={{ position: "absolute", left: 4, bottom: 4, fontSize: 10, fontWeight: 700, color: C.light }}>낮음</div>
+
+              {/* X축 라벨 */}
+              <div style={{ position: "absolute", right: 6, bottom: 4, fontSize: 10, fontWeight: 800, color: C.navy }}>시간 →</div>
+
+              {/* 컬럼 가이드 */}
+              {[
+                { pct: 12.5, label: "진행중" },
+                { pct: 37.5, label: "임박" },
+                { pct: 62.5, label: "중기" },
+                { pct: 87.5, label: "장기" },
+              ].map(({ pct, label }) => (
+                <div key={label} style={{ position: "absolute", top: 6, left: `${pct}%`, transform: "translateX(-50%)", fontSize: 10, fontWeight: 700, color: "#888", background: "rgba(255,255,255,0.95)", padding: "0 4px" }}>{label}</div>
+              ))}
+
+              {/* 위험 노드 */}
+              {[
+                { x: 12, y: 92, label: "폭력의 민주화", color: C.red, offset: "br" },
+                { x: 14, y: 48, label: "허위정보·플랫폼·권위주의", color: C.red, offset: "br" },
+                { x: 10, y: 28, label: "감시 자본주의", color: C.amber, offset: "br" },
+                { x: 38, y: 42, label: "자동화 실업", color: C.amber, offset: "br" },
+                { x: 42, y: 62, label: "선거 AI 개입", color: C.amber, offset: "tr" },
+                { x: 60, y: 88, label: "AI 정렬 문제", color: C.accent, offset: "br" },
+                { x: 56, y: 50, label: "프로 계층 정체성", color: C.accent, offset: "br" },
+                { x: 66, y: 68, label: "미중 블록화", color: C.accent, offset: "tr" },
+                { x: 88, y: 94, label: "AGI 통제 불능", color: C.navy, offset: "bl" },
+                { x: 82, y: 70, label: "디지털 계급 고착", color: C.navy, offset: "bl" },
+                { x: 92, y: 50, label: "지속불가능성", color: C.green, offset: "bl" },
+              ].map(({ x, y, label, color, offset }) => {
+                const labelStyle: React.CSSProperties = { position: "absolute", fontSize: 10.5, fontWeight: 700, color: "#222", background: "rgba(255,255,255,0.9)", padding: "0 3px", whiteSpace: "nowrap" };
+                if (offset === "br") { labelStyle.left = 12; labelStyle.top = 6; }
+                else if (offset === "tr") { labelStyle.left = 12; labelStyle.bottom = 6; }
+                else if (offset === "bl") { labelStyle.right = 12; labelStyle.top = 6; }
+                else { labelStyle.right = 12; labelStyle.bottom = 6; }
+                return (
+                  <div key={label} style={{ position: "absolute", left: `${x}%`, bottom: `${y}%` }}>
+                    <div style={{ width: 11, height: 11, borderRadius: "50%", background: color, border: `2px solid #fff`, boxShadow: `0 0 0 1px ${color}`, transform: "translate(-50%, 50%)" }} />
+                    <div style={labelStyle}>{label}</div>
+                  </div>
+                );
+              })}
+            </div>
+            <div style={{ fontSize: 10.5, color: C.light, lineHeight: 1.5 }}>
+              좌상단일수록 <strong style={{ color: C.red }}>지금 즉시</strong> 대응이 필요한 위협. 우상단은 시간 여유는 있으나 실현 시 돌이킬 수 없는 위협. 색상은 팀 연구 분야(기술·국제/사회·공동체/제도·환경)에 대응한다.
             </div>
           </div>
 
