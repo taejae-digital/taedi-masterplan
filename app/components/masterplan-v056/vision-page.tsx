@@ -4,7 +4,7 @@ import { Header, Footer, ps, h3s } from "./shared";
 export function VisionPage() {
   return (
     <div style={{ pageBreakAfter: "always", minHeight: "280mm" }}>
-      <Header subtitle="1. 비전 — 개인의 시대와 새로운 질서의 설계" />
+      <Header subtitle="1. 비전 v0.5.6 — 개인의 시대와 새로운 질서의 설계" />
 
       <div style={{ padding: "18px 32px 14px", borderBottom: `2px solid ${C.navy}`, marginBottom: 16 }}>
         <div style={{ fontSize: 20, fontWeight: 800, color: C.navy, lineHeight: 1.4 }}>
