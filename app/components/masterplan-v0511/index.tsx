@@ -4,7 +4,7 @@ import { DigitalProblemsPage } from "./digital-problems-page";
 import { ResearchPlanPage } from "./research-plan-page";
 import { NotesPage } from "./notes-page";
 
-export function MasterPlanV0510() {
+export function MasterPlanV0511() {
   return (
     <div style={{ width: 1500, margin: "0 auto", padding: "24px 40px", background: "#fff", fontFamily: "Pretendard, -apple-system, sans-serif", wordBreak: "keep-all" as const, fontSize: "106%" }}>
       <style>{`@media print { @page { size: A3 landscape; margin: 8mm; } * { -webkit-print-color-adjust: exact; print-color-adjust: exact; } }`}</style>

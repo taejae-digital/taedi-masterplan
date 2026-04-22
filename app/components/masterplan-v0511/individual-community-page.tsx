@@ -66,7 +66,7 @@ export function IndividualCommunityPage() {
             이렇듯 능력의 양뿐 아니라 한 사람이 운용할 수 있는 역할의 종류 자체가 늘어난다. 이 가능성이 '확장'으로 현실화되려면, ① AI 접근이 공공재로 보장되고, ② 분배 구조가 AI가 만든 부를 노동과 돌봄의 보상으로 환류시키며, ③ 규제가 독점을 견제하는 조건이 충족되어야 한다. 그 조건 아래에서 개인과 기관 사이의 역량 격차는 좁혀지고, 그만큼 더 큰 자유의 여지가 만들어진다.
           </p>
 
-          <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 8, marginBottom: 6 }}>
+          <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 8, marginBottom: 14 }}>
             {[
               { n: "①", t: "전문성", d: "의료·법률·재무·번역·코딩의 진입 장벽이 낮아진다. 전문가도 AI와 결합하여 과거 다수가 하던 일을 처리한다.", color: C.navy },
               { n: "②", t: "정보", d: "기관이 독점하던 지식이 AI 기반 지식 시스템을 통해 개인에게 개방된다. 정보 비대칭이 구조적으로 축소된다.", color: C.accent },
@@ -75,6 +75,24 @@ export function IndividualCommunityPage() {
             ].map(({ n, t, d, color }) => (
               <div key={t} style={{ padding: "8px 10px", borderLeft: `4px solid ${color}`, background: C.bg }}>
                 <div style={{ fontSize: 12, fontWeight: 800, color, marginBottom: 3 }}>{n} {t}의 이전</div>
+                <div style={{ fontSize: 11.5, lineHeight: 1.6, color: "#333" }}>{d}</div>
+              </div>
+            ))}
+          </div>
+
+          <div style={h3s}>그래서 개인은 무엇을 갈망하는가</div>
+          <p style={ps}>
+            할 수 있는 것이 달라지면 원하는 것도 달라진다. 확장된 개인은 더 많이 갖고 싶어하는 것이 아니라, 다르게 살고 싶어한다. 이 갈망이 기존 질서를 취약하게 만드는 에너지이며, 새로운 질서가 수용해야 할 수요다.
+          </p>
+          <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 8 }}>
+            {[
+              { t: "자율", d: "타인이 정한 틀이 아닌 스스로 설계하는 삶. 거주·시간·관계의 자기결정.", color: C.navy },
+              { t: "의미", d: "생존 이상의 삶. 시장 가치가 아닌 자기가 납득하는 활동.", color: C.accent },
+              { t: "기여", d: "조직 종속 없이 공동의 목표에 참여. 중앙 지휘 없이 조율되는 협력.", color: C.green },
+              { t: "인정", d: "소속이 아닌 기여로 증명되는 정체성. 실제 역량이 직접 평가되는 구조.", color: C.amber },
+            ].map(({ t, d, color }) => (
+              <div key={t} style={{ padding: "8px 10px", borderTop: `3px solid ${color}`, background: C.bg }}>
+                <div style={{ fontSize: 13, fontWeight: 800, color, marginBottom: 3 }}>{t}</div>
                 <div style={{ fontSize: 11.5, lineHeight: 1.6, color: "#333" }}>{d}</div>
               </div>
             ))}
@@ -114,29 +132,17 @@ export function IndividualCommunityPage() {
             </tbody>
           </table>
 
-          <div style={h3s}>더 큰 자유 추구</div>
-          <p style={ps}>
-            할 수 있는 것이 달라지면 원하는 것도 달라진다. 확장된 개인은 더 많이 갖고 싶어하는 것이 아니라, 다르게 살고 싶어한다. 이 갈망이 기존 질서를 취약하게 만드는 에너지이며, 새로운 질서가 수용해야 할 수요다.
-          </p>
-
-          <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 8 }}>
-            {[
-              { t: "자율", d: "타인이 정한 틀이 아닌 스스로 설계하는 삶. 거주·시간·관계의 자기결정.", color: C.navy },
-              { t: "의미", d: "생존 이상의 삶. 시장 가치가 아닌 자기가 납득하는 활동.", color: C.accent },
-              { t: "기여", d: "조직 종속 없이 공동의 목표에 참여. 중앙 지휘 없이 조율되는 협력.", color: C.green },
-              { t: "인정", d: "소속이 아닌 기여로 증명되는 정체성. 실제 역량이 직접 평가되는 구조.", color: C.amber },
-            ].map(({ t, d, color }) => (
-              <div key={t} style={{ padding: "8px 10px", borderTop: `3px solid ${color}`, background: C.bg }}>
-                <div style={{ fontSize: 13, fontWeight: 800, color, marginBottom: 3 }}>{t}</div>
-                <div style={{ fontSize: 11.5, lineHeight: 1.6, color: "#333" }}>{d}</div>
-              </div>
-            ))}
-          </div>
-
           <div style={{ marginTop: 12, padding: "10px 14px", background: "#f0f4ff", borderLeft: `4px solid ${C.navy}` }}>
             <div style={{ fontSize: 12, fontWeight: 800, color: C.navy, marginBottom: 3 }}>재균형의 원칙</div>
             <div style={{ fontSize: 11.5, lineHeight: 1.65, color: "#222" }}>
               개인이 혼자 못 하는 일에만 위임 · 위임된 권력은 투명하게 감시 · 목적을 달성하면 자동 환수 · 개인·공동체의 이익이 충돌할 때는 공공선이 기준.
+            </div>
+          </div>
+
+          <div style={{ marginTop: 14, padding: "12px 14px", background: "#fff5f5", borderLeft: `4px solid ${C.red}` }}>
+            <div style={{ fontSize: 12, fontWeight: 800, color: C.red, marginBottom: 4 }}>그런데 지금의 공동체는 이 갈망을 담아낼 수 있는가?</div>
+            <div style={{ fontSize: 11.5, lineHeight: 1.65, color: "#222" }}>
+              자율·의미·기여·인정을 원하는 개인이 늘어나는 속도만큼, 기존 공동체 구조는 그 수요를 흡수하지 못하고 있다. 국가는 여전히 분배보다 통제에, 플랫폼은 기여보다 참여 시간에 최적화되어 있다. 이 간극이 3페이지에서 다룰 위험들의 근원이다.
             </div>
           </div>
         </div>
