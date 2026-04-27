@@ -22,34 +22,36 @@ export function IndividualCommunityPage() {
       <div style={{ padding: "0 32px", display: "grid", gridTemplateColumns: "1fr 1fr", gap: 28 }}>
         {/* 왼쪽: 시대별 자유 + 4축 확장 */}
         <div>
-          <div style={h3s}>시대별로 새로 주어진 자유</div>
+          <div style={h3s}>시대별 자유 요구와 제도화된 권리</div>
           <p style={ps}>
-            자유는 주어진 것이 아니라 획득된 것이다. 새 기술이 개인의 역량을 확장할 때마다, 사회는 그 역량에 맞는 새로운 자유를 제도로 흡수했다. 그 자유가 흡수되지 못한 시대는 혁명과 전쟁으로 기울었다. AI 시대의 자유도 같은 경로를 밟고 있다.
+            자유는 주어진 것이 아니라 획득된 것이다. 새 기술이 개인의 역량을 확장할 때마다, 강화된 개인은 새로운 자유를 요구했고, 공동체는 그 자유를 법과 제도로 보장하며 권리로 만들어왔다. 그 조율이 제때 이루어지지 못한 시대는 혁명과 전쟁으로 기울었다. AI 시대의 자유도 같은 경로를 밟고 있다.
           </p>
 
           <table style={{ width: "100%", borderCollapse: "collapse", marginBottom: 14, fontSize: 11.5 }}>
             <thead>
               <tr style={{ background: C.navy, color: "#fff" }}>
-                <th style={{ padding: "5px 7px", textAlign: "left", fontSize: 11, width: "18%" }}>시대</th>
-                <th style={{ padding: "5px 7px", textAlign: "left", fontSize: 11 }}>개인의 강화</th>
-                <th style={{ padding: "5px 7px", textAlign: "left", fontSize: 11 }}>공동체와의 갈등</th>
-                <th style={{ padding: "5px 7px", textAlign: "left", fontSize: 11 }}>새로 주어진 자유</th>
+                <th style={{ padding: "5px 7px", textAlign: "left", fontSize: 11, width: "16%" }}>시대</th>
+                <th style={{ padding: "5px 7px", textAlign: "left", fontSize: 11, width: "20%" }}>개인의 강화</th>
+                <th style={{ padding: "5px 7px", textAlign: "left", fontSize: 11, width: "20%" }}>공동체와의 갈등</th>
+                <th style={{ padding: "5px 7px", textAlign: "left", fontSize: 11 }}>원한 자유</th>
+                <th style={{ padding: "5px 7px", textAlign: "left", fontSize: 11 }}>제도화된 권리</th>
               </tr>
             </thead>
             <tbody>
               {[
-                ["농업사회", "정주·축적·가족 단위 자립", "유목 부족과 충돌, 토지 분쟁", "토지 소유·상속권"],
-                ["인쇄술 이후", "성서·지식의 직접 해석·복제", "교회 교리 독점 도전, 종교전쟁", "신앙·학문의 자유"],
-                ["산업혁명", "노동자 조직력·공장 생산력", "자본-노동 계급 갈등, 러다이트", "직업 선택·계약·참정권"],
-                ["대중 민주주의", "대중 소통·여론 형성", "국가 검열과 충돌, 선전 투쟁", "표현·결사·노동·소수자 권리"],
-                ["인터넷", "생산자·네트워크 주체", "플랫폼 독점 vs 사용자, 저작권 분쟁", "정보 접근·플랫폼 참여"],
-                ["디지털·AI", "판단·창작·생산의 개인화", "빅테크 독점·전문가 권위 해체·국가 주권 약화", "자율·의미·기여·인정 (미정립)"],
-              ].map(([age, power, conflict, freedom], i) => (
+                ["농업 기술", "정주·축적·가족 단위 자립", "유목 부족과 충돌, 토지 분쟁", "토지를 소유하고 상속할 자유", "토지 소유권·상속권"],
+                ["인쇄술", "성서·지식의 직접 해석·복제", "교회 교리 독점 도전, 종교전쟁", "성서·지식을 직접 해석할 자유", "신앙의 자유·학문의 자유"],
+                ["산업 기계", "노동자 조직력·공장 생산력", "자본-노동 계급 갈등, 러다이트", "원하는 일을 선택하고 정치에 참여할 자유", "직업선택권·계약권·참정권"],
+                ["대중 미디어", "대중 소통·여론 형성", "국가 검열과 충돌, 선전 투쟁", "말하고 모이고 조직할 자유", "표현·결사·노동·소수자 권리"],
+                ["인터넷", "생산자·네트워크 주체", "플랫폼 독점 vs 사용자, 저작권 분쟁", "정보에 접근하고 플랫폼에 참여할 자유", "정보접근권·플랫폼 이용권 (정착 중)"],
+                ["디지털·AI", "판단·창작·생산의 개인화", "빅테크 독점·전문가 권위 해체·국가 주권 약화", "자율·의미·기여·인정", "(미정립)"],
+              ].map(([age, power, conflict, freedom, right], i) => (
                 <tr key={i} style={{ background: i === 5 ? "#f0f4ff" : i % 2 ? C.bg : "#fff" }}>
                   <td style={{ padding: "5px 7px", borderBottom: "1px solid #eee", fontWeight: i === 5 ? 800 : 700, color: i === 5 ? C.navy : "#333" }}>{age}</td>
                   <td style={{ padding: "5px 7px", borderBottom: "1px solid #eee", color: "#333" }}>{power}</td>
                   <td style={{ padding: "5px 7px", borderBottom: "1px solid #eee", color: i === 5 ? C.red : "#555", fontWeight: i === 5 ? 700 : 400 }}>{conflict}</td>
-                  <td style={{ padding: "5px 7px", borderBottom: "1px solid #eee", color: i === 5 ? C.navy : "#333", fontWeight: i === 5 ? 800 : 500 }}>{freedom}</td>
+                  <td style={{ padding: "5px 7px", borderBottom: "1px solid #eee", color: "#333" }}>{freedom}</td>
+                  <td style={{ padding: "5px 7px", borderBottom: "1px solid #eee", color: i === 5 ? C.navy : "#333", fontWeight: i === 5 ? 800 : 500 }}>{right}</td>
                 </tr>
               ))}
             </tbody>
