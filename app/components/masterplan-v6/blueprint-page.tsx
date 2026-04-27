@@ -7,7 +7,7 @@ export function BlueprintPage() {
       <Header subtitle="5. 디지털 사회 청사진" />
 
       <div style={{ padding: "14px 32px 10px", borderBottom: `2px solid ${C.navy}`, marginBottom: 14 }}>
-        <div style={{ fontSize: 18, fontWeight: 800, color: C.navy, lineHeight: 1.4 }}>
+        <div style={{ fontSize: 19, fontWeight: 800, color: C.navy, lineHeight: 1.4 }}>
           우리의 과제는 질서를 위에서 설계하는 것이 아니라, 질서가 건강하게 작동할 조건을 지금 설계하는 것이다.
         </div>
       </div>
@@ -16,7 +16,7 @@ export function BlueprintPage() {
         {/* 5.1 디지털 시대의 공동체 재설계 */}
         <div>
           <div style={h3s}>5.1 디지털 시대의 공동체 재설계</div>
-          <p style={{ ...ps, fontSize: 12.5 }}>
+          <p style={{ ...ps, fontSize: 13.5 }}>
             디지털 사회의 공동체 재설계는 정치·경제·사회 세 축을 동시에 끌어올려야 한다. 각 축은 독립적이지 않고 상호 강화적이다.
           </p>
 
@@ -49,13 +49,13 @@ export function BlueprintPage() {
             },
           ].map(({ title, items }) => (
             <div key={title} style={{ marginBottom: 12 }}>
-              <div style={{ fontSize: 12.5, fontWeight: 800, color: C.navy, borderBottom: `2px solid ${C.navy}`, paddingBottom: 3, marginBottom: 8 }}>
+              <div style={{ fontSize: 13.5, fontWeight: 800, color: C.navy, borderBottom: `2px solid ${C.navy}`, paddingBottom: 3, marginBottom: 8 }}>
                 {title}
               </div>
               {items.map(({ t, d }) => (
                 <div key={t} style={{ display: "flex", gap: 8, marginBottom: 6, padding: "6px 8px", background: C.bg, borderLeft: `3px solid ${C.line}` }}>
-                  <div style={{ minWidth: 90, fontSize: 11, fontWeight: 700, color: "#222" }}>{t}</div>
-                  <div style={{ fontSize: 11, lineHeight: 1.55, color: "#333" }}>{d}</div>
+                  <div style={{ minWidth: 90, fontSize: 12, fontWeight: 700, color: "#222" }}>{t}</div>
+                  <div style={{ fontSize: 12, lineHeight: 1.55, color: "#333" }}>{d}</div>
                 </div>
               ))}
             </div>
@@ -65,19 +65,19 @@ export function BlueprintPage() {
         {/* 5.2 세계정부 */}
         <div>
           <div style={h3s}>5.2 세계정부 — 글로벌 AI 거버넌스 아키텍처</div>
-          <p style={{ ...ps, fontSize: 12.5 }}>
+          <p style={{ ...ps, fontSize: 13.5 }}>
             AI·기후·팬데믹은 어느 국가도 단독으로 통제할 수 없다. 그러나 UN의 1국1표 구조는 속도와 전문성 모두 한계를 보인다. 새로운 글로벌 거버넌스 아키텍처가 필요하다.
           </p>
 
           <div style={{ marginBottom: 12, padding: "10px 12px", background: "#f0f4ff", borderLeft: `4px solid ${C.navy}` }}>
-            <div style={{ fontSize: 12, fontWeight: 800, color: C.navy, marginBottom: 6 }}>설계 원칙</div>
+            <div style={{ fontSize: 13, fontWeight: 800, color: C.navy, marginBottom: 6 }}>설계 원칙</div>
             {[
               "목적 한정 — 범용 세계정부가 아닌 AI·기후·팬데믹 등 문제별 전담 기구",
               "한시성 — 위기 해소 후 자동 해체, 권한의 영구화 방지",
               "투명성 — 의사결정 과정의 공개, 시민 감시 가능",
               "비례성 — 위기의 규모에 비례한 권한만 부여",
             ].map((p, i) => (
-              <div key={i} style={{ display: "flex", gap: 6, marginBottom: 4, fontSize: 11, lineHeight: 1.55, color: "#222" }}>
+              <div key={i} style={{ display: "flex", gap: 6, marginBottom: 4, fontSize: 12, lineHeight: 1.55, color: "#222" }}>
                 <span style={{ color: C.navy, fontWeight: 700, flexShrink: 0 }}>▪</span>
                 <span>{p}</span>
               </div>
@@ -85,7 +85,7 @@ export function BlueprintPage() {
           </div>
 
           <div style={{ marginBottom: 10 }}>
-            <div style={{ fontSize: 12, fontWeight: 700, color: C.dark, marginBottom: 6 }}>글로벌 거버넌스 기구 제안</div>
+            <div style={{ fontSize: 13, fontWeight: 700, color: C.dark, marginBottom: 6 }}>글로벌 거버넌스 기구 제안</div>
             {[
               { t: "국제 AI 안전 기구 (IASA)", d: "IAEA의 AI 버전. AI 시스템의 사전 안전 승인, 개발자 입증 책임 레짐 운영. 미중 공동 참여가 필수 조건." },
               { t: "디지털 권리 협약", d: "오비에도 협약의 AI 버전. 알고리즘 투명성·데이터 주권·AI 사용 시 인간 존엄 보호를 국제 조약으로." },
@@ -93,22 +93,22 @@ export function BlueprintPage() {
               { t: "미중 AI 대타협 플랫폼", d: "핵 군축 협상의 AI 버전. 자율살상무기·AI 사이버전·생성형 AI 규제에서 최소한의 공동 규범 도출." },
             ].map(({ t, d }) => (
               <div key={t} style={{ marginBottom: 8, padding: "8px 10px", borderLeft: `3px solid ${C.navy}`, background: C.bg }}>
-                <div style={{ fontSize: 12, fontWeight: 800, color: C.navy, marginBottom: 3 }}>{t}</div>
-                <div style={{ fontSize: 11, lineHeight: 1.55, color: "#333" }}>{d}</div>
+                <div style={{ fontSize: 13, fontWeight: 800, color: C.navy, marginBottom: 3 }}>{t}</div>
+                <div style={{ fontSize: 12, lineHeight: 1.55, color: "#333" }}>{d}</div>
               </div>
             ))}
           </div>
 
           <div style={{ padding: "10px 12px", background: C.bg, borderLeft: `3px solid ${C.navy}` }}>
-            <div style={{ fontSize: 12, fontWeight: 800, color: C.navy, marginBottom: 5 }}>핵이 가르친 것</div>
-            <p style={{ margin: 0, fontSize: 11.5, lineHeight: 1.65, color: "#222" }}>
+            <div style={{ fontSize: 13, fontWeight: 800, color: C.navy, marginBottom: 5 }}>핵이 가르친 것</div>
+            <p style={{ margin: 0, fontSize: 12.5, lineHeight: 1.65, color: "#222" }}>
               NPT·IAEA 체계는 불완전하지만, 핵 확산을 늦추는 데 기여했다. AI는 핵보다 확산 속도가 빠르고 비가역성이 더 높다. 핵 레짐이 형성되기까지 20년이 걸렸다. AI에게는 그만한 시간이 없다. 지금 당장 설계를 시작해야 한다.
             </p>
           </div>
 
           <div style={{ marginTop: 12, padding: "10px 12px", background: "#f0f4ff", borderLeft: `4px solid ${C.navy}` }}>
-            <div style={{ fontSize: 12, fontWeight: 800, color: C.navy, marginBottom: 5 }}>개인의 자유와 세계 평화는 같은 구조의 양면</div>
-            <p style={{ margin: 0, fontSize: 11.5, lineHeight: 1.65, color: "#222" }}>
+            <div style={{ fontSize: 13, fontWeight: 800, color: C.navy, marginBottom: 5 }}>개인의 자유와 세계 평화는 같은 구조의 양면</div>
+            <p style={{ margin: 0, fontSize: 12.5, lineHeight: 1.65, color: "#222" }}>
               개인이 안전할 때 국가가 전쟁 기계로 전환될 유인이 줄어든다. 정체성과 생계를 위협받지 않는 개인은 극단적 민족주의·권위주의의 동원 대상이 되지 않는다. 개인의 자유를 보장하는 제도와 세계 평화를 만드는 거버넌스는 분리된 과제가 아니다.
             </p>
           </div>

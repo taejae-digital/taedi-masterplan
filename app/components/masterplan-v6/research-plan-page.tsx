@@ -7,7 +7,7 @@ export function ResearchPlanPage() {
       <Header subtitle="6. 연구 계획" />
 
       <div style={{ padding: "14px 32px 10px", borderBottom: `2px solid ${C.navy}`, marginBottom: 14 }}>
-        <div style={{ fontSize: 18, fontWeight: 800, color: C.navy, lineHeight: 1.4 }}>
+        <div style={{ fontSize: 19, fontWeight: 800, color: C.navy, lineHeight: 1.4 }}>
           사후 교정이 불가능한 AI 시대, 태재는 이론·공론·솔루션의 세 축을 동시에 끌어올려 실행 가능한 모델로 제시한다.
         </div>
       </div>
@@ -17,8 +17,8 @@ export function ResearchPlanPage() {
           {/* 6.1 연구 목표 & 전략 */}
           <div style={h3s}>6.1 연구 목표 & 전략</div>
           <div style={{ padding: "10px 14px", background: "#f0f4ff", borderLeft: `5px solid ${C.navy}`, marginBottom: 12 }}>
-            <div style={{ fontSize: 12.5, fontWeight: 800, color: C.navy, marginBottom: 4 }}>최종 목표</div>
-            <p style={{ margin: 0, fontSize: 12.5, lineHeight: 1.7, color: "#222" }}>
+            <div style={{ fontSize: 13.5, fontWeight: 800, color: C.navy, marginBottom: 4 }}>최종 목표</div>
+            <p style={{ margin: 0, fontSize: 13.5, lineHeight: 1.7, color: "#222" }}>
               디지털 기술이 가져오는 사회적 충격에 대응하는 구체적 해결책을 제시하고 실행 가능한 모델로 고도화한다.
               최종 산출물은 <strong>『디지털 위협 통제』 단행본 출판 + 국내외 공론화 (Q4 2026)</strong>.
             </p>
@@ -30,8 +30,8 @@ export function ResearchPlanPage() {
               { t: "솔루션 설계", d: "AI 승인 레짐·폭력 통제·공공 AI 인프라·정체성 실현권 등 구체안" },
             ].map(({ t, d }) => (
               <div key={t} style={{ padding: "8px 10px", borderTop: `2px solid ${C.navy}`, background: C.bg }}>
-                <div style={{ fontSize: 12, fontWeight: 800, color: C.navy, marginBottom: 4 }}>{t}</div>
-                <div style={{ fontSize: 11, lineHeight: 1.55, color: "#333" }}>{d}</div>
+                <div style={{ fontSize: 13, fontWeight: 800, color: C.navy, marginBottom: 4 }}>{t}</div>
+                <div style={{ fontSize: 12, lineHeight: 1.55, color: "#333" }}>{d}</div>
               </div>
             ))}
           </div>
@@ -45,10 +45,10 @@ export function ResearchPlanPage() {
             { letter: "D", t: "빅테크 통제와 디지털 권리", d: "플랫폼 과두제 해체. 데이터 주권·알고리즘 투명성·디지털 권리 헌장. AI 인프라의 공공재화와 환경 영향 규제." },
           ].map(({ letter, t, d }) => (
             <div key={letter} style={{ display: "flex", gap: 10, marginBottom: 7, padding: "7px 9px", background: C.bg, borderLeft: `3px solid ${C.navy}` }}>
-              <div style={{ fontSize: 14, fontWeight: 900, color: C.navy, minWidth: 18 }}>{letter}</div>
+              <div style={{ fontSize: 15, fontWeight: 900, color: C.navy, minWidth: 18 }}>{letter}</div>
               <div>
-                <div style={{ fontSize: 12, fontWeight: 700, color: C.navy, marginBottom: 3 }}>{t}</div>
-                <div style={{ fontSize: 11, lineHeight: 1.55, color: "#333" }}>{d}</div>
+                <div style={{ fontSize: 13, fontWeight: 700, color: C.navy, marginBottom: 3 }}>{t}</div>
+                <div style={{ fontSize: 12, lineHeight: 1.55, color: "#333" }}>{d}</div>
               </div>
             </div>
           ))}
@@ -80,20 +80,20 @@ export function ResearchPlanPage() {
             },
           ].map(({ name, role, detail }) => (
             <div key={name} style={{ marginBottom: 9, padding: "9px 11px", borderLeft: `3px solid ${C.navy}`, background: C.bg }}>
-              <div style={{ fontSize: 13, fontWeight: 800, color: C.navy, marginBottom: 2 }}>{name}</div>
-              <div style={{ fontSize: 11.5, fontWeight: 600, color: "#444", marginBottom: 4 }}>{role}</div>
-              <div style={{ fontSize: 11, lineHeight: 1.6, color: "#333" }}>{detail}</div>
+              <div style={{ fontSize: 14, fontWeight: 800, color: C.navy, marginBottom: 2 }}>{name}</div>
+              <div style={{ fontSize: 12.5, fontWeight: 600, color: "#444", marginBottom: 4 }}>{role}</div>
+              <div style={{ fontSize: 12, lineHeight: 1.6, color: "#333" }}>{detail}</div>
             </div>
           ))}
 
           {/* 6.4 실행 일정 */}
           <div style={h3s}>6.4 실행 일정</div>
-          <table style={{ width: "100%", borderCollapse: "collapse", marginBottom: 12, fontSize: 11.5 }}>
+          <table style={{ width: "100%", borderCollapse: "collapse", marginBottom: 12, fontSize: 12.5 }}>
             <thead>
               <tr style={{ background: C.navy, color: "#fff" }}>
-                <th style={{ padding: "5px 7px", textAlign: "left", fontSize: 11, width: "18%" }}>시기</th>
-                <th style={{ padding: "5px 7px", textAlign: "left", fontSize: 11 }}>실행 내용</th>
-                <th style={{ padding: "5px 7px", textAlign: "left", fontSize: 11, width: "28%" }}>산출물</th>
+                <th style={{ padding: "5px 7px", textAlign: "left", fontSize: 12, width: "18%" }}>시기</th>
+                <th style={{ padding: "5px 7px", textAlign: "left", fontSize: 12 }}>실행 내용</th>
+                <th style={{ padding: "5px 7px", textAlign: "left", fontSize: 12, width: "28%" }}>산출물</th>
               </tr>
             </thead>
             <tbody>
@@ -118,9 +118,9 @@ export function ResearchPlanPage() {
               { t: "장기 (2029~)", items: ["디지털 권리 헌장 초안 제시", "AI 통제 국제 협약 참여", "미중 합의 경로 제시 및 중재", "글로벌 AI 거버넌스 리더십"] },
             ].map(({ t, items }) => (
               <div key={t} style={{ padding: "9px 11px", borderTop: `2px solid ${C.navy}`, background: C.bg }}>
-                <div style={{ fontSize: 12, fontWeight: 800, color: C.navy, marginBottom: 6 }}>{t}</div>
+                <div style={{ fontSize: 13, fontWeight: 800, color: C.navy, marginBottom: 6 }}>{t}</div>
                 {items.map((item, i) => (
-                  <div key={i} style={{ display: "flex", gap: 5, marginBottom: 4, fontSize: 11, lineHeight: 1.5, color: "#333" }}>
+                  <div key={i} style={{ display: "flex", gap: 5, marginBottom: 4, fontSize: 12, lineHeight: 1.5, color: "#333" }}>
                     <span style={{ color: C.navy, fontWeight: 700, flexShrink: 0 }}>—</span>
                     <span>{item}</span>
                   </div>

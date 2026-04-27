@@ -7,7 +7,7 @@ export function ThreatsPage() {
       <Header subtitle="4. 디지털 기술이 초래할 위협" />
 
       <div style={{ padding: "14px 32px 10px", borderBottom: `2px solid ${C.navy}`, marginBottom: 14 }}>
-        <div style={{ fontSize: 18, fontWeight: 800, color: C.navy, lineHeight: 1.4 }}>
+        <div style={{ fontSize: 19, fontWeight: 800, color: C.navy, lineHeight: 1.4 }}>
           AI는 인간의 지렛대를 길게 만든다. 같은 힘으로 훨씬 큰 것을 움직일 수 있다.
           문제는 그 지렛대가 선한 방향으로만 쓰이지 않는다는 점이다.
         </div>
@@ -17,7 +17,7 @@ export function ThreatsPage() {
         <div>
           {/* 4.1 위협의 기준 */}
           <div style={h3s}>4.1 위협의 기준</div>
-          <p style={{ ...ps, fontSize: 12.5 }}>
+          <p style={{ ...ps, fontSize: 13.5 }}>
             모든 기술적 위험이 위협은 아니다. 본 연구에서 '위협'으로 분류하는 기준은 세 가지다.
           </p>
           <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr 1fr", gap: 7, marginBottom: 14 }}>
@@ -27,20 +27,20 @@ export function ThreatsPage() {
               { t: "제도 무력화", d: "기존 법·규범·민주주의 절차를 우회하거나 무력화하는가" },
             ].map(({ t, d }) => (
               <div key={t} style={{ padding: "8px 10px", borderTop: `2px solid ${C.navy}`, background: C.bg }}>
-                <div style={{ fontSize: 12, fontWeight: 800, color: C.navy, marginBottom: 4 }}>{t}</div>
-                <div style={{ fontSize: 11, lineHeight: 1.55, color: "#333" }}>{d}</div>
+                <div style={{ fontSize: 13, fontWeight: 800, color: C.navy, marginBottom: 4 }}>{t}</div>
+                <div style={{ fontSize: 12, lineHeight: 1.55, color: "#333" }}>{d}</div>
               </div>
             ))}
           </div>
 
           {/* 4.2 위협 기술 우선순위 */}
           <div style={h3s}>4.2 위협 기술 우선순위</div>
-          <table style={{ width: "100%", borderCollapse: "collapse", marginBottom: 14, fontSize: 11.5 }}>
+          <table style={{ width: "100%", borderCollapse: "collapse", marginBottom: 14, fontSize: 12.5 }}>
             <thead>
               <tr style={{ background: C.navy, color: "#fff" }}>
-                <th style={{ padding: "5px 7px", textAlign: "left", fontSize: 11, width: "12%" }}>긴급도</th>
-                <th style={{ padding: "5px 7px", textAlign: "left", fontSize: 11, width: "28%" }}>위협</th>
-                <th style={{ padding: "5px 7px", textAlign: "left", fontSize: 11 }}>핵심 메커니즘</th>
+                <th style={{ padding: "5px 7px", textAlign: "left", fontSize: 12, width: "12%" }}>긴급도</th>
+                <th style={{ padding: "5px 7px", textAlign: "left", fontSize: 12, width: "28%" }}>위협</th>
+                <th style={{ padding: "5px 7px", textAlign: "left", fontSize: 12 }}>핵심 메커니즘</th>
               </tr>
             </thead>
             <tbody>
@@ -55,9 +55,9 @@ export function ThreatsPage() {
                 { level: "장기", isUrgent: false, threat: "디지털 계급 고착·지속불가능성", mech: "AI 격차가 생물학적 수명 격차까지 수반. 데이터센터 전력·탄소 부담이 기후 목표와 충돌." },
               ].map((r, i) => (
                 <tr key={i} style={{ background: i % 2 ? C.bg : "#fff" }}>
-                  <td style={{ padding: "5px 7px", borderBottom: "1px solid #eee", fontWeight: 700, color: r.isUrgent ? C.red : C.light, fontSize: 11 }}>{r.level}</td>
+                  <td style={{ padding: "5px 7px", borderBottom: "1px solid #eee", fontWeight: 700, color: r.isUrgent ? C.red : C.light, fontSize: 12 }}>{r.level}</td>
                   <td style={{ padding: "5px 7px", borderBottom: "1px solid #eee", fontWeight: 600, color: "#222" }}>{r.threat}</td>
-                  <td style={{ padding: "5px 7px", borderBottom: "1px solid #eee", color: "#444", fontSize: 11 }}>{r.mech}</td>
+                  <td style={{ padding: "5px 7px", borderBottom: "1px solid #eee", color: "#444", fontSize: 12 }}>{r.mech}</td>
                 </tr>
               ))}
             </tbody>
@@ -91,10 +91,10 @@ export function ThreatsPage() {
           ].map((s) => (
             <div key={s.name} style={{ marginBottom: 10, padding: "9px 11px", borderLeft: `3px solid ${C.navy}`, background: C.bg }}>
               <div style={{ display: "flex", justifyContent: "space-between", alignItems: "baseline", marginBottom: 4 }}>
-                <div style={{ fontSize: 12.5, fontWeight: 800, color: C.navy }}>{s.name}</div>
-                <div style={{ fontSize: 10.5, color: C.light }}>{s.work}</div>
+                <div style={{ fontSize: 13.5, fontWeight: 800, color: C.navy }}>{s.name}</div>
+                <div style={{ fontSize: 11.5, color: C.light }}>{s.work}</div>
               </div>
-              <div style={{ fontSize: 11.5, lineHeight: 1.65, color: "#222" }}>{s.scenario}</div>
+              <div style={{ fontSize: 12.5, lineHeight: 1.65, color: "#222" }}>{s.scenario}</div>
             </div>
           ))}
 
@@ -115,8 +115,8 @@ export function ThreatsPage() {
             },
           ].map(({ n, t, d }) => (
             <div key={t} style={{ marginBottom: 8, padding: "8px 10px", borderLeft: `3px solid ${C.navy}`, background: C.bg }}>
-              <div style={{ fontSize: 12, fontWeight: 800, color: C.navy, marginBottom: 4 }}>{n} {t}</div>
-              <div style={{ fontSize: 11.5, lineHeight: 1.6, color: "#333" }}>{d}</div>
+              <div style={{ fontSize: 13, fontWeight: 800, color: C.navy, marginBottom: 4 }}>{n} {t}</div>
+              <div style={{ fontSize: 12.5, lineHeight: 1.6, color: "#333" }}>{d}</div>
             </div>
           ))}
         </div>
