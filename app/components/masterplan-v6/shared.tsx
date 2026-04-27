@@ -1,6 +1,6 @@
 import { C } from "./constants";
 
-export function Header({ subtitle, version = "v0.6.5" }: { subtitle: string; version?: string }) {
+export function Header({ subtitle, version = "v0.6.6" }: { subtitle: string; version?: string }) {
   return (
     <div style={{ background: C.navy, color: "#fff", padding: "20px 32px 16px", marginBottom: 0 }}>
       <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start" }}>
@@ -22,7 +22,7 @@ export function Footer() {
   return (
     <div style={{ margin: "14px 32px 0", padding: "7px 0", borderTop: `1px solid ${C.line}`, display: "flex", justifyContent: "space-between", fontSize: 12, color: C.light }}>
       <span>태재미래전략연구원 디지털 전환과 사회변혁팀 | 내부 문서</span>
-      <span>2026.04 · v0.6.5</span>
+      <span>2026.04 · v0.6.6</span>
     </div>
   );
 }

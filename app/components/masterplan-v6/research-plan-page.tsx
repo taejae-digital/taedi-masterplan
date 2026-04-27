@@ -20,7 +20,7 @@ export function ResearchPlanPage() {
             <div style={{ fontSize: 13.5, fontWeight: 800, color: C.navy, marginBottom: 4 }}>최종 목표</div>
             <p style={{ margin: 0, fontSize: 13.5, lineHeight: 1.7, color: "#222" }}>
               디지털 기술이 가져오는 사회적 충격에 대응하는 구체적 해결책을 제시하고 실행 가능한 모델로 고도화한다.
-              최종 산출물은 <strong>『디지털 위협 통제』 단행본 출판 + 국내외 공론화 (Q4 2026)</strong>.
+              최종 산출물은 <strong>단행본 출판 + 국내외 공론화 (Q4 2026)</strong>.
             </p>
           </div>
           <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr 1fr", gap: 7, marginBottom: 14 }}>
@@ -98,10 +98,10 @@ export function ResearchPlanPage() {
             </thead>
             <tbody>
               {[
-                ["4~5월", "마스터플랜 v0.6.0 확정 · 연구 분야별 착수 · 국내외 자문단 섭외", "마스터플랜 확정본"],
+                ["4~5월", "마스터플랜 확정 · 연구 분야별 착수 · 국내외 자문단 섭외", "마스터플랜 확정본"],
                 ["6~8월", "경제 질서 이론 · 폭력 민주화 통제 · 존엄·공동체 · 빅테크 규율 병렬 연구", "분야별 연구 초안 4종"],
                 ["9~10월", "교차 검토 · 외부 전문가 피드백 · 단행본 편집", "종합 보고서"],
-                ["11~12월", "『디지털 위협 통제』 출판 · 국내 공론화 · 국제 컨퍼런스", "단행본 + 정책 제안"],
+                ["11~12월", "단행본 출판 · 국내 공론화 · 국제 컨퍼런스", "단행본 + 정책 제안"],
               ].map(([period, content, output], i) => (
                 <tr key={i} style={{ background: i % 2 ? C.bg : "#fff" }}>
                   <td style={{ padding: "5px 7px", borderBottom: "1px solid #eee", fontWeight: 700, color: C.navy }}>{period}</td>
