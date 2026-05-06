@@ -6,12 +6,29 @@ export function CombinedPage() {
     <div style={{ pageBreakBefore: "always", pageBreakAfter: "always", height: "281mm", display: "flex", flexDirection: "column" }}>
       <Header subtitle="3. 질서의 붕괴와 새 사회계약" />
 
-      <div style={{ padding: "10px 32px 8px", borderBottom: `2px solid ${C.navy}` }}>
-        <div style={{ fontSize: 18, fontWeight: 800, color: C.navy, lineHeight: 1.4, marginBottom: 4 }}>
-          분업이 인간을 역할로 쪼갰다면, 디지털은 판단력·실행력·파급력으로 개인을 증폭시킨다.
+      <div style={{ display: "flex", gap: 0, marginBottom: 10, padding: "10px 32px 8px", borderBottom: `2px solid ${C.navy}` }}>
+        <div style={{ flex: 1, padding: "10px 14px", background: C.bg, borderRight: `1px solid ${C.line}` }}>
+          <div style={{ fontSize: 11, fontWeight: 800, color: C.accent, marginBottom: 4 }}>분업 → 증폭</div>
+          <div style={{ fontSize: 14, fontWeight: 800, color: C.navy }}>디지털은 개인을 증폭시킨다</div>
+          <div style={{ fontSize: 11.5, color: "#444", lineHeight: 1.5, marginTop: 4 }}>
+            판단력·실행력·파급력이 한 사람에게 집중된다. 분업이 역할로 쪼갰던 인간이, 이제 혼자 부서급 산출·매스미디어급 영향력을 갖는다.
+          </div>
         </div>
-        <div style={{ fontSize: 13, color: "#444", lineHeight: 1.55 }}>
-          증폭된 개인은 산업 질서의 전제를 무너뜨리고, 새로운 사회계약을 요구한다 — 강화된 개인의 새 권리와 그것을 작동시키는 공동체 구조.
+        <div style={{ fontSize: 20, color: C.navy, display: "flex", alignItems: "center", padding: "0 8px" }}>→</div>
+        <div style={{ flex: 1, padding: "10px 14px", background: "#fff5f5", borderRight: `1px solid ${C.line}` }}>
+          <div style={{ fontSize: 11, fontWeight: 800, color: C.red, marginBottom: 4 }}>전제의 붕괴</div>
+          <div style={{ fontSize: 14, fontWeight: 800, color: C.red }}>산업 질서의 토대가 무너진다</div>
+          <div style={{ fontSize: 11.5, color: "#444", lineHeight: 1.5, marginTop: 4 }}>
+            산업시대 정치·경제 질서는 "다수의 역할 인간"을 전제로 설계됐다. 증폭된 개인은 그 전제를 무너뜨린다 — 1인 1표의 무력화, 노동시간=소득 공식 붕괴, 선출되지 않은 권력의 등장.
+          </div>
+        </div>
+        <div style={{ fontSize: 20, color: C.navy, display: "flex", alignItems: "center", padding: "0 8px" }}>→</div>
+        <div style={{ flex: 1, padding: "10px 14px", background: "#f0f5ff" }}>
+          <div style={{ fontSize: 11, fontWeight: 800, color: "#3b82f6", marginBottom: 4 }}>새 사회계약</div>
+          <div style={{ fontSize: 14, fontWeight: 800, color: C.navy }}>사회계약을 다시 써야 한다</div>
+          <div style={{ fontSize: 11.5, color: "#444", lineHeight: 1.5, marginTop: 4 }}>
+            강화된 개인에게 맞는 새 권리(정체성 실현권·AI 인프라 접근권·알고리즘 자기결정권)와 그것을 작동시키는 거버넌스 구조가 필요하다.
+          </div>
         </div>
       </div>
 
@@ -19,12 +36,12 @@ export function CombinedPage() {
 
         {/* 표 1 — 강화 영역별 이익·위협·새 사회계약 */}
         <div>
-          <div style={h3s}>강화 영역별 분석 — 이익·위협·새 사회계약의 처방</div>
+          <div style={h3s}>① 무엇이 무너지는가 — 강화 영역별 산업 질서 타격·이익·위협·처방</div>
           <table style={{ width: "100%", borderCollapse: "collapse", fontSize: 12 }}>
             <thead>
               <tr style={{ background: C.navy, color: "#fff" }}>
                 <th style={{ padding: "6px 8px", textAlign: "left", fontSize: 11.5, width: "12%" }}>강화 영역</th>
-                <th style={{ padding: "6px 8px", textAlign: "left", fontSize: 11.5, width: "22%", color: "#aac8ff" }}>산업 질서 타격</th>
+                <th style={{ padding: "6px 8px", textAlign: "left", fontSize: 11.5, width: "22%", color: "#aac8ff" }}>산업 질서 타격 (왜 무너지는가)</th>
                 <th style={{ padding: "6px 8px", textAlign: "left", fontSize: 11.5, width: "18%", color: "#86efac" }}>＋ 이익</th>
                 <th style={{ padding: "6px 8px", textAlign: "left", fontSize: 11.5, width: "18%", color: "#fca5a5" }}>− 위협</th>
                 <th style={{ padding: "6px 8px", textAlign: "left", fontSize: 11.5, background: "#1a3a6e", borderLeft: "3px solid #60a5fa", color: "#60a5fa" }}>★ 새 사회계약</th>
@@ -81,8 +98,8 @@ export function CombinedPage() {
         {/* 연결 화살표 */}
         <div style={{ textAlign: "center", color: C.navy, margin: "6px 0 4px" }}>
           <div style={{ fontSize: 18, lineHeight: 1 }}>▼</div>
-          <div style={{ fontSize: 13, fontWeight: 700, marginTop: 3 }}>
-            긴급도에 따라 대응 우선순위가 달라진다 — 지금 필요한 처방
+          <div style={{ fontSize: 13.5, fontWeight: 700, color: C.navy, marginTop: 3 }}>
+            ② 어떤 위협이 발생하는가, 그리고 어떻게 처방하는가 — 긴급도별 우선순위
           </div>
         </div>
 
