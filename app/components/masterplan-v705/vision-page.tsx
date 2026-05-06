@@ -31,7 +31,7 @@ export function VisionPage() {
         <div style={{ flex: 1, padding: "8px 12px", background: "#fff5f5", borderRight: `1px solid ${C.line}` }}>
           <div style={{ fontSize: 9.5, fontWeight: 800, color: C.red, marginBottom: 2, letterSpacing: 0.5 }}>② 기존 질서의 균열</div>
           <div style={{ fontSize: 12.5, fontWeight: 800, color: C.red, lineHeight: 1.3, marginBottom: 3 }}>민주주의·자본주의가 응답하지 못한다</div>
-          <div style={{ fontSize: 10.5, color: "#444", lineHeight: 1.45 }}>산업시대 질서는 "역할 인간의 집합"을, 디지털시대 질서는 "정체성을 실현하는 강화된 개인의 연결"을 전제로 한다. 기존 질서는 후자에 응답하지 못해 6위협이 현실이 된다.</div>
+          <div style={{ fontSize: 10.5, color: "#444", lineHeight: 1.45 }}>산업시대 질서는 "역할 인간의 집합"을, 디지털시대 질서는 "정체성을 실현하는 강화된 개인의 연결"을 전제로 한다. 기존 질서는 후자에 응답하지 못해 위협이 현실이 된다.</div>
         </div>
         <div style={{ display: "flex", alignItems: "center", padding: "0 7px", fontSize: 18, color: C.navy, fontWeight: 300 }}>→</div>
         <div style={{ flex: 1, padding: "8px 12px", background: "#f0f5ff", borderRight: `1px solid ${C.line}` }}>

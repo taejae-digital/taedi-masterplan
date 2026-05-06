@@ -27,12 +27,12 @@ export function ResearchPlanPage() {
             { num: "⑤", t: "통합·산출", who: "팀원들", color: C.accent, bg: "#fff7ed", d: "검증을 거친 안을 종합·정교화해 보고서·솔루션 도출" },
           ].map(({ num, t, who, color, bg, d }, i, arr) => (
             <div key={i} style={{ display: "flex", alignItems: "stretch", flex: 1 }}>
-              <div style={{ flex: 1, padding: "8px 10px" }}>
+              <div style={{ flex: 1, padding: "8px 10px", border: "1px solid #222", borderRadius: 4 }}>
                 <div style={{ display: "flex", alignItems: "center", gap: 5, marginBottom: 3 }}>
-                  <span style={{ fontSize: 15, fontWeight: 900, color }}>{num}</span>
-                  <span style={{ fontSize: 12, fontWeight: 800, color: C.navy }}>{t}</span>
+                  <span style={{ fontSize: 15, fontWeight: 900, color: "#111" }}>{num}</span>
+                  <span style={{ fontSize: 12, fontWeight: 800, color: "#111" }}>{t}</span>
                 </div>
-                <div style={{ fontSize: 9.5, fontWeight: 700, color, marginBottom: 3, letterSpacing: 0.3 }}>{who}</div>
+                <div style={{ fontSize: 9.5, fontWeight: 700, color: "#666", marginBottom: 3, letterSpacing: 0.3 }}>{who}</div>
                 <div style={{ fontSize: 10, color: "#444", lineHeight: 1.4 }}>{d}</div>
               </div>
               {i < arr.length - 1 && (
