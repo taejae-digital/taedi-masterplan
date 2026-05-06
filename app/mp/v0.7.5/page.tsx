@@ -1,5 +1,5 @@
-import { MasterPlanV750 } from "../../components/masterplan-v750/index";
+import { MasterPlanV705 } from "../../components/masterplan-v705/index";
 
 export default function MasterPlanPage() {
-  return <MasterPlanV750 />;
+  return <MasterPlanV705 />;
 }
