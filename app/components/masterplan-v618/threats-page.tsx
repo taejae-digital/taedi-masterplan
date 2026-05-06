@@ -55,17 +55,26 @@ export function ThreatsPage() {
             </div>
           </div>
 
-          {/* 통제 5 모델 공통 원칙 */}
-          <div style={h3s}>통제 5 모델의 공통 원칙</div>
-          <div style={{ display: "flex", flexDirection: "column", gap: 6 }}>
+          {/* 통제의 설계 원리 */}
+          <div style={h3s}>통제의 3가지 설계 원리</div>
+          <div style={{ padding: "7px 10px", background: "#e8f0fe", borderLeft: `4px solid ${C.navy}`, marginBottom: 8 }}>
+            <div style={{ fontSize: 11.5, fontWeight: 800, color: C.navy, marginBottom: 2 }}>공통 원리</div>
+            <div style={{ fontSize: 12, lineHeight: 1.55, color: "#222" }}>
+              안전하고 건강한 미래를 위해, 위협이 현실화되기 전에 <strong>사전적 구조 설계</strong>로 대응한다.
+            </div>
+          </div>
+          <div style={{ display: "flex", flexDirection: "column", gap: 5 }}>
             {[
-              { n: "①", title: "입증 책임의 전환", desc: "위험을 가장 잘 아는 쪽(개발자·플랫폼)이 안전성을 먼저 증명한다." },
-              { n: "②", title: "권한의 한시성", desc: "모든 통제 권한은 명시된 범위와 기간 안에서만 작동하고 자동 해제된다." },
-              { n: "③", title: "이익의 환류", desc: "AI가 만든 부와 데이터의 이익은 공동체·개인에게 되돌아가야 한다." },
-            ].map(({ n, title, desc }) => (
-              <div key={n} style={{ padding: "7px 10px", background: C.bg, borderLeft: `3px solid ${C.navy}` }}>
-                <div style={{ fontSize: 12.5, fontWeight: 800, color: C.navy, marginBottom: 2 }}>{n} {title}</div>
-                <div style={{ fontSize: 12, lineHeight: 1.5, color: "#444" }}>{desc}</div>
+              { n: "①", title: "입증 책임의 전환", tag: "[①⑤]", desc: "위험을 가장 잘 아는 쪽(개발자·플랫폼)이 안전성을 먼저 증명한다." },
+              { n: "②", title: "권한의 한시성", tag: "[③]", desc: "모든 통제 권한은 명시된 범위와 기간 안에서만 작동하고 자동 해제된다." },
+              { n: "③", title: "이익의 환류", tag: "[②④]", desc: "AI가 만든 부와 데이터의 이익은 공동체·개인에게 되돌아가야 한다." },
+            ].map(({ n, title, tag, desc }) => (
+              <div key={n} style={{ padding: "6px 10px", background: C.bg, borderLeft: `3px solid ${C.navy}` }}>
+                <div style={{ display: "flex", alignItems: "baseline", gap: 5, marginBottom: 2 }}>
+                  <div style={{ fontSize: 12.5, fontWeight: 800, color: C.navy }}>{n} {title}</div>
+                  <div style={{ fontSize: 10.5, color: C.light, fontWeight: 600 }}>{tag}</div>
+                </div>
+                <div style={{ fontSize: 11.5, lineHeight: 1.5, color: "#444" }}>{desc}</div>
               </div>
             ))}
           </div>

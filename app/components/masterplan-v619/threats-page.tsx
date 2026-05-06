@@ -8,22 +8,22 @@ export function ThreatsPage() {
 
       <div style={{ padding: "12px 32px 10px", borderBottom: `2px solid ${C.navy}`, marginBottom: 14 }}>
         <div style={{ fontSize: 18, fontWeight: 800, color: C.navy, lineHeight: 1.4 }}>
-          강화된 개인이 공동체에 가져오는 위협은 차원마다 다르다. 진단·우선순위·통제의 순으로 살핀다.
+          강화된 개인이 공동체에 가져오는 위협은 영역마다 다르다. 진단·우선순위·통제의 순으로 살핀다.
         </div>
       </div>
 
       <div style={{ padding: "0 32px", display: "grid", gridTemplateColumns: "1fr 1fr", gap: 24, flex: 1 }}>
         <div>
           {/* 4.1 동전의 양면 */}
-          <div style={h3s}>4.1 동전의 양면 — 5차원 강화의 두 결과</div>
+          <div style={h3s}>4.1 동전의 양면 — 5가지 강화의 두 결과</div>
           <p style={{ ...ps, fontSize: 12.5, marginBottom: 8 }}>
             같은 강화가 이익과 위협을 동시에 만든다. AI는 지렛대를 길게 만들 뿐, 그 지렛대가 어느 방향으로 움직일지는 정해주지 않는다.
-            강화의 차원마다 위협이 다르고, 통제 전략도 달라야 한다.
+            강화의 영역마다 위협이 다르고, 통제 전략도 달라야 한다.
           </p>
           <table style={{ width: "100%", borderCollapse: "collapse", fontSize: 13, marginBottom: 8 }}>
             <thead>
               <tr style={{ background: C.navy, color: "#fff" }}>
-                <th style={{ padding: "5px 7px", textAlign: "left", fontSize: 12, width: "30%" }}>강화 차원</th>
+                <th style={{ padding: "5px 7px", textAlign: "left", fontSize: 12, width: "30%" }}>강화 영역</th>
                 <th style={{ padding: "5px 7px", textAlign: "left", fontSize: 12, color: "#86efac" }}>＋ 이익</th>
                 <th style={{ padding: "5px 7px", textAlign: "left", fontSize: 12, color: "#fca5a5" }}>− 위협</th>
               </tr>
@@ -51,21 +51,30 @@ export function ThreatsPage() {
           <div style={{ padding: "9px 12px", background: "#fff8e1", borderLeft: `4px solid #f59e0b`, marginBottom: 10 }}>
             <div style={{ fontSize: 13.5, fontWeight: 800, color: "#92400e", marginBottom: 4 }}>강화의 전제 조건 — AI 인프라의 환경 부담</div>
             <div style={{ fontSize: 12.5, lineHeight: 1.55, color: "#333" }}>
-              개인 강화를 구동하는 AI 인프라(데이터센터)의 전력·용수·탄소 부담은 5차원 강화의 역효과가 아니라, 강화 자체가 전제하는 구조적 비용이다. 기후 목표와의 충돌이 심화되고 있다.
+              개인 강화를 구동하는 AI 인프라(데이터센터)의 전력·용수·탄소 부담은 5가지 강화의 역효과가 아니라, 강화 자체가 전제하는 구조적 비용이다. 기후 목표와의 충돌이 심화되고 있다.
             </div>
           </div>
 
-          {/* 통제 5 모델 공통 원칙 */}
-          <div style={h3s}>통제 5 모델의 공통 원칙</div>
-          <div style={{ display: "flex", flexDirection: "column", gap: 6 }}>
+          {/* 통제의 설계 원리 */}
+          <div style={h3s}>통제의 3가지 설계 원리</div>
+          <div style={{ padding: "7px 10px", background: "#e8f0fe", borderLeft: `4px solid ${C.navy}`, marginBottom: 8 }}>
+            <div style={{ fontSize: 11.5, fontWeight: 800, color: C.navy, marginBottom: 2 }}>공통 원리</div>
+            <div style={{ fontSize: 12, lineHeight: 1.55, color: "#222" }}>
+              안전하고 건강한 미래를 위해, 위협이 현실화되기 전에 <strong>사전적 구조 설계</strong>로 대응한다.
+            </div>
+          </div>
+          <div style={{ display: "flex", flexDirection: "column", gap: 5 }}>
             {[
-              { n: "①", title: "입증 책임의 전환", desc: "위험을 가장 잘 아는 쪽(개발자·플랫폼)이 안전성을 먼저 증명한다." },
-              { n: "②", title: "권한의 한시성", desc: "모든 통제 권한은 명시된 범위와 기간 안에서만 작동하고 자동 해제된다." },
-              { n: "③", title: "이익의 환류", desc: "AI가 만든 부와 데이터의 이익은 공동체·개인에게 되돌아가야 한다." },
-            ].map(({ n, title, desc }) => (
-              <div key={n} style={{ padding: "7px 10px", background: C.bg, borderLeft: `3px solid ${C.navy}` }}>
-                <div style={{ fontSize: 12.5, fontWeight: 800, color: C.navy, marginBottom: 2 }}>{n} {title}</div>
-                <div style={{ fontSize: 12, lineHeight: 1.5, color: "#444" }}>{desc}</div>
+              { n: "①", title: "입증 책임의 전환", tag: "[①⑤]", desc: "위험을 가장 잘 아는 쪽(개발자·플랫폼)이 안전성을 먼저 증명한다." },
+              { n: "②", title: "권한의 한시성", tag: "[③]", desc: "모든 통제 권한은 명시된 범위와 기간 안에서만 작동하고 자동 해제된다." },
+              { n: "③", title: "이익의 환류", tag: "[②④]", desc: "AI가 만든 부와 데이터의 이익은 공동체·개인에게 되돌아가야 한다." },
+            ].map(({ n, title, tag, desc }) => (
+              <div key={n} style={{ padding: "6px 10px", background: C.bg, borderLeft: `3px solid ${C.navy}` }}>
+                <div style={{ display: "flex", alignItems: "baseline", gap: 5, marginBottom: 2 }}>
+                  <div style={{ fontSize: 12.5, fontWeight: 800, color: C.navy }}>{n} {title}</div>
+                  <div style={{ fontSize: 10.5, color: C.light, fontWeight: 600 }}>{tag}</div>
+                </div>
+                <div style={{ fontSize: 11.5, lineHeight: 1.5, color: "#444" }}>{desc}</div>
               </div>
             ))}
           </div>
@@ -107,40 +116,32 @@ export function ThreatsPage() {
           {[
             {
               n: "①", t: "개발자 입증 책임 (FDA 레짐)",
-              tag: "판단력",
               d: "고위험 AI 기능은 개발자가 안전성을 입증하고 사전 승인을 받아야 한다. 위험을 가장 잘 아는 쪽이 개발자이므로 입증 책임도 그쪽에 귀속.",
               app: "폭력 독점의 균열 · AI 정렬 문제 · 범용 AI 통제 불능",
             },
             {
               n: "②", t: "역량·기여 기반 분배",
-              tag: "생산성",
               d: "AI가 만든 부의 일부를 공공 AI 인프라·디지털 배당으로 환류. 자본·노동시간이 아닌 문제해결·돌봄·창의·판단을 분배 기준으로.",
               app: "자동화 실업 가속 · 디지털 계급·지속불가능성",
             },
             {
               n: "③", t: "과업 한정 한시 위임 (WHO 모델)",
-              tag: "범위",
               d: "글로벌 위협 대응 권한은 명시 범위·기간에서만 작동하고 위기 해소 시 자동 해체. 권한이 영구화되는 것을 구조적으로 차단.",
               app: "미중 기술 패권 블록화 · 선거·공론장 AI 개입",
             },
             {
               n: "④", t: "플랫폼 공공성·데이터 권리",
-              tag: "접근성",
               d: "플랫폼 독점 규제와 데이터 소유권 개인 귀속. 개인이 생산한 데이터의 이익이 개인에게 환류되는 구조 설계.",
               app: "허위정보·플랫폼 과두",
             },
             {
               n: "⑤", t: "공론장 보호",
-              tag: "영향력",
               d: "알고리즘 투명성 의무화, 선거 AI 활용 규제, 왜곡 없는 숙의 공론장 설계. 강화된 영향력이 민주주의를 잠식하지 않도록.",
               app: "선거·공론장 AI 개입",
             },
-          ].map(({ n, t, tag, d, app }) => (
+          ].map(({ n, t, d, app }) => (
             <div key={t} style={{ marginBottom: 5, padding: "5px 9px", borderLeft: `3px solid ${C.navy}`, background: C.bg }}>
-              <div style={{ display: "flex", alignItems: "baseline", gap: 6, marginBottom: 2 }}>
-                <div style={{ fontSize: 12, fontWeight: 800, color: C.navy }}>{n} {t}</div>
-                <div style={{ fontSize: 10, color: C.light, fontWeight: 600 }}>[{tag}]</div>
-              </div>
+              <div style={{ fontSize: 12, fontWeight: 800, color: C.navy, marginBottom: 2 }}>{n} {t}</div>
               <div style={{ fontSize: 11, lineHeight: 1.55, color: "#222", marginBottom: 2 }}>{d}</div>
               <div style={{ fontSize: 10.5, color: C.light }}>적용 위협: <strong style={{ color: "#444" }}>{app}</strong></div>
             </div>

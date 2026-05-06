@@ -10,8 +10,8 @@ export function CombinedPage() {
       <div style={{ display: "flex", alignItems: "stretch", padding: "7px 32px", borderBottom: `2px solid ${C.navy}`, gap: 0 }}>
         <div style={{ flex: 1, padding: "7px 12px", background: C.bg, borderRight: `1px solid ${C.line}` }}>
           <div style={{ fontSize: 11, fontWeight: 800, color: C.accent, marginBottom: 2, letterSpacing: 0.5 }}>산업 질서의 전제</div>
-          <div style={{ fontSize: 13, fontWeight: 800, color: C.navy, lineHeight: 1.3, marginBottom: 3 }}>민주주의·자본주의는 특정 인간상을 전제로 설계됐다</div>
-          <div style={{ fontSize: 11.5, color: "#444", lineHeight: 1.5 }}>정치 질서는 1인 1표·공론장을, 경제 질서는 노동시간=소득·희소성 원리를 전제로 했다. 인간은 단일한 직업을 갖고 평생 역할을 수행한다는 가정 위에 세워진 체계다.</div>
+          <div style={{ fontSize: 13, fontWeight: 800, color: C.navy, lineHeight: 1.3, marginBottom: 3 }}>민주주의·자본주의는 "직업=정체성인 인간"을 전제로 설계됐다</div>
+          <div style={{ fontSize: 11.5, color: "#444", lineHeight: 1.5 }}>정치 질서는 1인 1표·공론장을, 경제 질서는 노동시간=소득·희소성 원리를 전제로 했다. 직업 하나에 평생 귀속되는 인간을 기본 단위로 세워진 체계다.</div>
         </div>
         <div style={{ display: "flex", alignItems: "center", padding: "0 8px", fontSize: 20, color: C.navy, fontWeight: 300 }}>→</div>
         <div style={{ flex: 1, padding: "7px 12px", background: "#fff5f5", borderRight: `1px solid ${C.line}` }}>
@@ -86,6 +86,15 @@ export function CombinedPage() {
               ))}
             </tbody>
           </table>
+        </div>
+
+        {/* 표 ①→② 논리 연결 */}
+        <div style={{ display: "flex", alignItems: "center", margin: "2px 0 4px", gap: 10 }}>
+          <div style={{ flex: 1, height: 1, background: C.line }} />
+          <div style={{ fontSize: 11.5, fontWeight: 700, color: C.navy, background: "#fff", padding: "2px 12px", border: `1px solid ${C.navy}`, borderRadius: 20, whiteSpace: "nowrap" }}>
+            ∴ 기존 질서는 이 변화를 담지 못한다 — 새 권리와 새 구조가 필요하다 ▼
+          </div>
+          <div style={{ flex: 1, height: 1, background: C.line }} />
         </div>
 
         {/* 새 사회계약 — 개요 */}
