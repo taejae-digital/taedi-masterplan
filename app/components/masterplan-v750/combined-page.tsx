@@ -187,7 +187,7 @@ export function CombinedPage() {
                       <td rowSpan={threats.length} style={{ padding: "5px 8px", borderBottom: "1px solid #eee", borderRight: `1px solid ${C.line}`, verticalAlign: "top", lineHeight: 1.5, fontWeight: 800, color: C.navy, fontSize: 13 }}>{dim}</td>
                     )}
                     <td style={{ padding: "4px 8px", borderBottom: j === threats.length - 1 ? "1px solid #eee" : "1px solid #f5f5f5", fontWeight: 700, color: t.urg ? C.red : C.light, fontSize: 11.5, verticalAlign: "top", lineHeight: 1.5 }}>{t.lv}</td>
-                    <td style={{ padding: "4px 8px", borderBottom: j === threats.length - 1 ? "1px solid #eee" : "1px solid #f5f5f5", color: C.red, fontSize: 11.5, verticalAlign: "top", lineHeight: 1.5, fontWeight: 600 }}>{t.name}</td>
+                    <td style={{ padding: "4px 8px", borderBottom: j === threats.length - 1 ? "1px solid #eee" : "1px solid #f5f5f5", color: "#333", fontSize: 11.5, verticalAlign: "top", lineHeight: 1.5, fontWeight: 600 }}>{t.name}</td>
                     <td style={{ padding: "4px 8px", borderBottom: j === threats.length - 1 ? "1px solid #eee" : "1px solid #f5f5f5", color: "#222", fontSize: 11.5, verticalAlign: "top", lineHeight: 1.5 }}>
                       <div style={{ fontWeight: 700, color: C.navy, marginBottom: 2 }}>{t.rxMain}</div>
                       <div style={{ fontSize: 10.5, color: "#666", lineHeight: 1.4 }}>{t.rxDesc}</div>
