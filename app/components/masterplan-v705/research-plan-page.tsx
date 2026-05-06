@@ -4,7 +4,7 @@ import { Header, Footer, ps, h3s } from "./shared";
 export function ResearchPlanPage() {
   return (
     <div style={{ pageBreakBefore: "always", height: "281mm", display: "flex", flexDirection: "column" }}>
-      <Header subtitle="6. 연구 계획" />
+      <Header subtitle="4. 연구 계획" />
 
       <div style={{ padding: "14px 32px 10px", borderBottom: `2px solid ${C.navy}`, marginBottom: 12 }}>
         <div style={{ fontSize: 19, fontWeight: 800, color: C.navy, lineHeight: 1.4 }}>
@@ -84,8 +84,8 @@ export function ResearchPlanPage() {
 
       <div style={{ padding: "0 32px", display: "grid", gridTemplateColumns: "1fr 1fr", gap: 24, flex: 1 }}>
         <div>
-          {/* 6.1 연구 목표 & 전략 */}
-          <div style={h3s}>6.1 연구 목표 & 전략</div>
+          {/* 4.1 연구 목표 & 전략 */}
+          <div style={h3s}>4.1 연구 목표 & 전략</div>
           <div style={{ padding: "10px 14px", background: "#f0f4ff", borderLeft: `5px solid ${C.navy}`, marginBottom: 12 }}>
             <div style={{ fontSize: 13.5, fontWeight: 800, color: C.navy, marginBottom: 4 }}>최종 목표</div>
             <p style={{ margin: 0, fontSize: 13.5, lineHeight: 1.7, color: "#222" }}>
@@ -106,8 +106,8 @@ export function ResearchPlanPage() {
             ))}
           </div>
 
-          {/* 6.2 연구 분야 */}
-          <div style={h3s}>6.2 연구 분야</div>
+          {/* 4.2 연구 분야 */}
+          <div style={h3s}>4.2 연구 분야</div>
           {[
             { letter: "A", t: "이론적 토대 — 왜 새 사회계약인가", d: "민주주의·자본주의가 '직업=정체성인 인간'을 전제로 한 한계를 진단. 스미스·롤스·하버마스·폴라니·케인스를 AI 시대에 재해석하여 '정체성을 실현하는 강화된 개인의 연결'이라는 새 인간상의 정당성을 확립한다." },
             { letter: "B", t: "새 권리 — 무엇을 보장하나", d: "강화된 개인이 요구하는 세 권리의 법적·제도적 정립. ① 정체성 실현권 (직업·소속에 묶이지 않을 권리, 돌봄·창작·학습 기여의 인정), ② AI 인프라 평등 접근권 (AI·연산·데이터의 공공재화, 데이터 주권·이동권), ③ 알고리즘 자기결정권 (설명 요구권·자동 판단 거부권)." },
@@ -125,8 +125,8 @@ export function ResearchPlanPage() {
         </div>
 
         <div>
-          {/* 6.3 업무 분장 */}
-          <div style={h3s}>6.3 업무 분장</div>
+          {/* 4.3 업무 분장 */}
+          <div style={h3s}>4.3 업무 분장</div>
           {[
             {
               name: "유호현 (팀장)",
@@ -156,8 +156,8 @@ export function ResearchPlanPage() {
             </div>
           ))}
 
-          {/* 6.4 실행 일정 */}
-          <div style={h3s}>6.4 실행 일정</div>
+          {/* 4.4 실행 일정 */}
+          <div style={h3s}>4.4 실행 일정</div>
           <table style={{ width: "100%", borderCollapse: "collapse", marginBottom: 12, fontSize: 12.5 }}>
             <thead>
               <tr style={{ background: C.navy, color: "#fff" }}>
