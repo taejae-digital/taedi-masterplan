@@ -40,9 +40,9 @@ export function CombinedPage() {
           <div style={h3s}>① 진단 — 디지털 강화가 기존 정치·경제 질서의 전제를 무너뜨린다</div>
           <table style={{ width: "100%", borderCollapse: "collapse", tableLayout: "fixed" }}>
             <colgroup>
-              <col style={{ width: "18%" }} />
-              <col style={{ width: "41%" }} />
-              <col style={{ width: "41%" }} />
+              <col style={{ width: "26%" }} />
+              <col style={{ width: "37%" }} />
+              <col style={{ width: "37%" }} />
             </colgroup>
             <thead>
               <tr style={{ background: C.navy, color: "#fff" }}>
@@ -71,8 +71,8 @@ export function CombinedPage() {
               ].map(({ dim, desc, pol, eco }, i) => (
                 <tr key={i} style={{ background: i % 2 ? C.bg : "#fff" }}>
                   <td style={{ padding: "5px 8px", borderBottom: "1px solid #eee", verticalAlign: "top", lineHeight: 1.5 }}>
-                    <div style={{ fontWeight: 800, color: C.navy, fontSize: 13.5 }}>{dim}</div>
-                    <div style={{ fontSize: 11.5, color: "#666", lineHeight: 1.4 }}>{desc}</div>
+                    <span style={{ fontWeight: 800, color: C.navy, fontSize: 13.5, marginRight: 6 }}>{dim}</span>
+                    <span style={{ fontSize: 11, color: "#666" }}>{desc}</span>
                   </td>
                   <td style={{ padding: "5px 8px", borderBottom: "1px solid #eee", color: "#333", fontSize: 12, verticalAlign: "top", lineHeight: 1.5 }}>{pol}</td>
                   <td style={{ padding: "5px 8px", borderBottom: "1px solid #eee", color: "#333", fontSize: 12, verticalAlign: "top", lineHeight: 1.5 }}>{eco}</td>
@@ -104,22 +104,22 @@ export function CombinedPage() {
                   dim: "판단력",
                   right: "AI 인프라 평등 접근권",
                   rightDesc: "AI·연산·데이터는 공공재여야 한다. 소수 기업의 독점은 새로운 계급 고착을 낳는다. 데이터 주권과 이동권 보장 필수.",
-                  gov: "FDA 모델 + 플랫폼 공공성",
-                  govDesc: "의약품처럼 AI도 개발자가 안전성을 입증해야 출시. 위기 대응 권한은 한시적이며 해소 시 자동 소멸.",
+                  gov: "사전승인 거버넌스",
+                  govDesc: "의약품처럼 AI도 개발자가 안전성을 입증한 후 출시. 플랫폼 공공성을 보장하고, 위기 대응 권한은 한시적이며 해소 시 자동 소멸.",
                 },
                 {
                   dim: "실행력",
                   right: "정체성 실현권",
                   rightDesc: "직업 하나에 묶이지 않을 권리. 돌봄·창작·학습 등 시장 바깥의 기여에도 소득과 존엄이 인정되어야 한다.",
-                  gov: "재편 충격 완충 + 한시 거버넌스",
-                  govDesc: "전환 인프라로 재편기 소외 계층 지원, AI 이익 환수해 디지털 배당·공공 인프라로 환류. 다층 거버넌스로 가정·도시·국가·세계 분담.",
+                  gov: "재편 완충 거버넌스",
+                  govDesc: "전환 인프라로 재편기 소외 계층을 지원하고, AI 이익을 환수해 디지털 배당·공공 인프라로 환류. 가정·도시·국가·세계가 한시적으로 분담하는 다층 구조.",
                 },
                 {
                   dim: "파급력",
                   right: "알고리즘 자기결정권",
                   rightDesc: "AI의 판단에 설명을 요구하고 거부할 수 있는 권리. 정치 광고·채용 심사·신용 평가 등 자동화된 결정에서 탈출할 수 있어야 한다.",
-                  gov: "공론장 보호 + 글로벌 한시 협력",
-                  govDesc: "AI 콘텐츠 출처 표시·마이크로타게팅 규제로 공론장 중립성 보호. 패권 경쟁 등 국경 넘는 위기는 한시 협력으로 대응.",
+                  gov: "공론장 보호 거버넌스",
+                  govDesc: "AI 콘텐츠 출처 표시·마이크로타게팅 규제로 공론장 중립성을 보호. 국경을 넘는 패권 경쟁은 글로벌 한시 협력으로 대응.",
                 },
               ].map(({ dim, right, rightDesc, gov, govDesc }, i) => (
                 <tr key={i} style={{ background: i % 2 ? C.bg : "#fff" }}>
@@ -161,22 +161,23 @@ export function CombinedPage() {
                 {
                   dim: "판단력",
                   threats: [
-                    { lv: "진행 중", urg: true, name: "국가 폭력 독점의 균열", rx: "FDA 모델 (AI 무기·자율 살상 시스템 사전 승인) + 국제 한시 협력 (핵 군축처럼 AI 군비 통제 체제 구축)" },
-                    { lv: "중기→장기", urg: false, name: "AI 정렬·통제 실패", rx: "FDA 모델 (개발자 안전 입증·외부 검증 의무화) + 글로벌 한시 협력으로 확산 이전 국제 통제 체제 확보" },
+                    { lv: "진행 중", urg: true, name: "국가 폭력 독점의 균열", rxMain: "사전승인 거버넌스 + 글로벌 한시 협력", rxDesc: "AI 무기·자율 살상 시스템 사전 승인, 핵 군축처럼 AI 군비 통제 체제 구축" },
+                    { lv: "진행 중", urg: true, name: "AI 인프라 독점·분단화", rxMain: "AI 인프라 평등 접근권 + 글로벌 한시 협력", rxDesc: "미·중 기술 패권 경쟁으로 AI 인프라가 블록화되는 흐름을 막고, 미·중·EU·개발도상국 공동 의제로 디지털 거버넌스 국제화" },
+                    { lv: "중기→장기", urg: false, name: "AI 정렬·통제 실패", rxMain: "사전승인 거버넌스 + 글로벌 한시 협력", rxDesc: "개발자 안전 입증·외부 검증 의무화, 확산 이전 국제 통제 체제 확보" },
                   ],
                 },
                 {
                   dim: "실행력",
                   threats: [
-                    { lv: "임박", urg: false, name: "직업 대규모 재편의 충격", rx: "정체성 실현권 + 전환 지원 인프라 구축, AI 이익 환수·배당, 돌봄·창작·학습에 분배·존엄 보장" },
-                    { lv: "장기", urg: false, name: "디지털 계급 고착", rx: "AI 인프라 평등 접근권 + 정체성 실현권 + 공공 인프라로 자원·기회 불평등 해소" },
+                    { lv: "임박", urg: false, name: "직업 대규모 재편의 충격", rxMain: "정체성 실현권 + 재편 완충 거버넌스", rxDesc: "전환 지원 인프라 구축, AI 이익 환수·배당, 돌봄·창작·학습에 분배·존엄 보장" },
+                    { lv: "장기", urg: false, name: "디지털 계급 고착", rxMain: "AI 인프라 평등 접근권 + 재편 완충 거버넌스", rxDesc: "공공 인프라로 자원·기회 불평등 해소, 정체성 실현권으로 분배 보장" },
                   ],
                 },
                 {
                   dim: "파급력",
                   threats: [
-                    { lv: "진행 중", urg: true, name: "AI 공론장 개입·플랫폼 독점", rx: "알고리즘 자기결정권 (출처 표시·타게팅 규제·설명 요구권) + FDA 모델로 선거 관련 고위험 시스템 사전 승인 + AI 인프라 공공재화로 빅테크 독점 해체" },
-                    { lv: "진행 중", urg: true, name: "미·중 기술 패권 블록화", rx: "글로벌 한시 협력 — 미·중·EU·개발도상국 공동 의제로 디지털 거버넌스 국제화" },
+                    { lv: "진행 중", urg: true, name: "AI 공론장 개입·허위정보 확산", rxMain: "알고리즘 자기결정권 + 공론장 보호 거버넌스", rxDesc: "출처 표시·타게팅 규제·설명 요구권, 선거 관련 고위험 시스템 사전 승인" },
+                    { lv: "진행 중", urg: true, name: "빅테크 플랫폼 독점·미디어 과두", rxMain: "AI 인프라 평등 접근권 + 공론장 보호 거버넌스", rxDesc: "AI 인프라 공공재화로 빅테크 독점 해체, 데이터 주권·이동권 보장" },
                   ],
                 },
               ] as const).map(({ dim, threats }, i) => (
@@ -187,7 +188,10 @@ export function CombinedPage() {
                     )}
                     <td style={{ padding: "4px 8px", borderBottom: j === threats.length - 1 ? "1px solid #eee" : "1px solid #f5f5f5", fontWeight: 700, color: t.urg ? C.red : C.light, fontSize: 11.5, verticalAlign: "top", lineHeight: 1.5 }}>{t.lv}</td>
                     <td style={{ padding: "4px 8px", borderBottom: j === threats.length - 1 ? "1px solid #eee" : "1px solid #f5f5f5", color: C.red, fontSize: 11.5, verticalAlign: "top", lineHeight: 1.5, fontWeight: 600 }}>{t.name}</td>
-                    <td style={{ padding: "4px 8px", borderBottom: j === threats.length - 1 ? "1px solid #eee" : "1px solid #f5f5f5", color: "#222", fontSize: 11.5, verticalAlign: "top", lineHeight: 1.5 }}>{t.rx}</td>
+                    <td style={{ padding: "4px 8px", borderBottom: j === threats.length - 1 ? "1px solid #eee" : "1px solid #f5f5f5", color: "#222", fontSize: 11.5, verticalAlign: "top", lineHeight: 1.5 }}>
+                      <div style={{ fontWeight: 700, color: C.navy, marginBottom: 2 }}>{t.rxMain}</div>
+                      <div style={{ fontSize: 10.5, color: "#666", lineHeight: 1.4 }}>{t.rxDesc}</div>
+                    </td>
                   </tr>
                 ))
               ))}
