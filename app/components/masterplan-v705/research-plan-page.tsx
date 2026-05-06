@@ -82,7 +82,8 @@ export function ResearchPlanPage() {
         </div>
       </div>
 
-      <div style={{ padding: "0 32px", display: "grid", gridTemplateColumns: "1fr 1fr", gap: 24, flex: 1 }}>
+      <div style={{ padding: "0 32px", display: "flex", flexDirection: "column", gap: 14, flex: 1 }}>
+        <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 24 }}>
         <div>
           {/* 4.1 연구 목표 & 전략 */}
           <div style={h3s}>4.1 연구 목표 & 전략</div>
@@ -93,19 +94,6 @@ export function ResearchPlanPage() {
               최종 산출물은 <strong>단행본 출판 + 국내외 공론화 (Q4 2026)</strong>.
             </p>
           </div>
-          <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr 1fr", gap: 7, marginBottom: 14 }}>
-            {[
-              { t: "이론 정립", d: "자본주의도 공산주의도 아닌 정보화 질서의 이론적 뼈대 구축" },
-              { t: "공론화", d: "결론이 아닌 사고의 경로를 시민·전문가와 함께 걷는 과정" },
-              { t: "솔루션 설계", d: "AI 승인 레짐·폭력 통제·공공 AI 인프라·정체성 실현권 등 구체안" },
-            ].map(({ t, d }) => (
-              <div key={t} style={{ padding: "8px 10px", borderTop: `2px solid ${C.navy}`, background: C.bg }}>
-                <div style={{ fontSize: 13, fontWeight: 800, color: C.navy, marginBottom: 4 }}>{t}</div>
-                <div style={{ fontSize: 12, lineHeight: 1.55, color: "#333" }}>{d}</div>
-              </div>
-            ))}
-          </div>
-
           {/* 4.2 연구 분야 */}
           <div style={h3s}>4.2 연구 분야</div>
           {[
@@ -155,7 +143,11 @@ export function ResearchPlanPage() {
               <div style={{ fontSize: 12, lineHeight: 1.6, color: "#333" }}>{detail}</div>
             </div>
           ))}
+        </div>
+        </div>
 
+        <div style={{ display: "grid", gridTemplateColumns: "1.5fr 1fr", gap: 24 }}>
+        <div>
           {/* 4.4 실행 일정 */}
           <div style={h3s}>4.4 실행 일정</div>
           <table style={{ width: "100%", borderCollapse: "collapse", marginBottom: 12, fontSize: 12.5 }}>
@@ -182,7 +174,9 @@ export function ResearchPlanPage() {
             </tbody>
           </table>
 
-          <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 8 }}>
+        </div>
+        <div>
+          <div style={{ display: "grid", gridTemplateColumns: "1fr", gap: 8 }}>
             {[
               { t: "중기 (2027~2028)", items: ["AI 평가 프레임워크 외부 협력 구현 (MLCommons·UK AISI)", "연구 보고서 국제판·해외 학술지 게재"] },
               { t: "장기 (2029~)", items: ["디지털 권리 헌장 초안·국제 협약 참여", "미중 합의 경로 제시 및 중재"] },
@@ -198,6 +192,7 @@ export function ResearchPlanPage() {
               </div>
             ))}
           </div>
+        </div>
         </div>
       </div>
 
