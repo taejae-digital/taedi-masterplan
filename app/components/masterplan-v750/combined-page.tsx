@@ -82,49 +82,55 @@ export function CombinedPage() {
           </table>
         </div>
 
-        {/* 표 ② — 영역별 통제 모델 */}
+        {/* 표 ② — 새로운 권리와 새로운 거버넌스 설계 */}
         <div style={{ marginBottom: 6 }}>
-          <div style={h3s}>② 영역별 통제 모델 — 강화가 파괴로 흐르지 않게 하는 구조</div>
+          <div style={h3s}>② 새로운 권리와 새로운 거버넌스 설계 — 강화된 개인을 위한 사회계약</div>
           <table style={{ width: "100%", borderCollapse: "collapse", tableLayout: "fixed" }}>
             <colgroup>
               <col style={{ width: "12%" }} />
-              <col style={{ width: "30%" }} />
-              <col style={{ width: "58%" }} />
+              <col style={{ width: "44%" }} />
+              <col style={{ width: "44%" }} />
             </colgroup>
             <thead>
               <tr style={{ background: C.navy, color: "#fff" }}>
                 <th style={{ padding: "5px 8px", textAlign: "left", fontSize: 12 }}>강화 영역</th>
-                <th style={{ padding: "5px 8px", textAlign: "left", fontSize: 12 }}>− 위협</th>
-                <th style={{ padding: "5px 8px", textAlign: "left", fontSize: 12 }}>★ 통제 모델</th>
+                <th style={{ padding: "5px 8px", textAlign: "left", fontSize: 12 }}>새 권리 — 강화된 개인이 요구하는 것</th>
+                <th style={{ padding: "5px 8px", textAlign: "left", fontSize: 12 }}>새 거버넌스 — 권리를 작동시키는 것</th>
               </tr>
             </thead>
             <tbody>
               {[
                 {
                   dim: "판단력",
-                  neg: "폭력 독점 균열 · AI 정렬 실패 · 범용 AI 통제 불능 · 빅테크 플랫폼 과두",
-                  ctrl: "FDA 모델 + 플랫폼 공공성",
-                  ctrlDesc: "배포 전 개발자가 안전성을 입증하고 사전 승인을 받게 한다. AI 인프라 독점이 새 봉건제로 굳지 않도록 데이터 이동권·알고리즘 감사를 의무화한다.",
+                  right: "AI 인프라 평등 접근권",
+                  rightDesc: "AI·연산·데이터는 공공재여야 한다. 소수 기업의 독점은 새로운 계급 고착을 낳는다. 데이터 주권과 이동권 보장 필수.",
+                  gov: "FDA 모델 + 플랫폼 공공성",
+                  govDesc: "의약품처럼 AI도 개발자가 안전성을 입증해야 출시. 위기 대응 권한은 한시적이며 해소 시 자동 소멸.",
                 },
                 {
                   dim: "실행력",
-                  neg: "직업 재편 충격 · 자동화 이익 집중 · 미·중 기술 패권 블록화",
-                  ctrl: "재편 충격 완충 + 한시 위임 거버넌스",
-                  ctrlDesc: "전환 인프라로 재편기 소외 계층을 지원하고, AI 이익을 환수해 디지털 배당·공공 인프라로 환류한다. 글로벌 거버넌스 권한은 위기 기간에만 발동되고 해소 시 자동 종료한다.",
+                  right: "정체성 실현권",
+                  rightDesc: "직업 하나에 묶이지 않을 권리. 돌봄·창작·학습 등 시장 바깥의 기여에도 소득과 존엄이 인정되어야 한다.",
+                  gov: "재편 충격 완충 + 한시 거버넌스",
+                  govDesc: "전환 인프라로 재편기 소외 계층 지원, AI 이익 환수해 디지털 배당·공공 인프라로 환류. 다층 거버넌스로 가정·도시·국가·세계 분담.",
                 },
                 {
                   dim: "파급력",
-                  neg: "선거·공론장 AI 개입 · 허위정보 확산 · 마이크로타게팅",
-                  ctrl: "공론장 보호 + 알고리즘 자기결정권",
-                  ctrlDesc: "AI 생성 콘텐츠 출처 표시·마이크로타게팅을 규제해 공론장 중립성을 보호한다. 자동화된 결정에 대해 설명 요구권과 거부권을 보장한다.",
+                  right: "알고리즘 자기결정권",
+                  rightDesc: "AI의 판단에 설명을 요구하고 거부할 수 있는 권리. 정치 광고·채용 심사·신용 평가 등 자동화된 결정에서 탈출할 수 있어야 한다.",
+                  gov: "공론장 보호 + 글로벌 한시 협력",
+                  govDesc: "AI 콘텐츠 출처 표시·마이크로타게팅 규제로 공론장 중립성 보호. 패권 경쟁 등 국경 넘는 위기는 한시 협력으로 대응.",
                 },
-              ].map(({ dim, neg, ctrl, ctrlDesc }, i) => (
+              ].map(({ dim, right, rightDesc, gov, govDesc }, i) => (
                 <tr key={i} style={{ background: i % 2 ? C.bg : "#fff" }}>
-                  <td style={{ padding: "5px 8px", borderBottom: "1px solid #eee", verticalAlign: "top", lineHeight: 1.5, fontWeight: 800, color: C.navy, fontSize: 13 }}>{dim}</td>
-                  <td style={{ padding: "5px 8px", borderBottom: "1px solid #eee", color: C.red, fontSize: 11.5, verticalAlign: "top", lineHeight: 1.5 }}>{neg}</td>
-                  <td style={{ padding: "5px 8px", borderBottom: "1px solid #eee", color: "#222", fontSize: 11.5, verticalAlign: "top", lineHeight: 1.5 }}>
-                    <div style={{ fontWeight: 800, color: C.navy, marginBottom: 2 }}>{ctrl}</div>
-                    <div>{ctrlDesc}</div>
+                  <td style={{ padding: "6px 8px", borderBottom: "1px solid #eee", verticalAlign: "top", fontWeight: 800, color: C.navy, fontSize: 13 }}>{dim}</td>
+                  <td style={{ padding: "6px 8px", borderBottom: "1px solid #eee", verticalAlign: "top", lineHeight: 1.5 }}>
+                    <div style={{ fontSize: 12, fontWeight: 800, color: C.navy, marginBottom: 2 }}>{right}</div>
+                    <div style={{ fontSize: 11, color: "#444", lineHeight: 1.4 }}>{rightDesc}</div>
+                  </td>
+                  <td style={{ padding: "6px 8px", borderBottom: "1px solid #eee", verticalAlign: "top", lineHeight: 1.5, borderLeft: `2px solid ${C.navy}` }}>
+                    <div style={{ fontSize: 12, fontWeight: 800, color: C.navy, marginBottom: 2 }}>{gov}</div>
+                    <div style={{ fontSize: 11, color: "#444", lineHeight: 1.4 }}>{govDesc}</div>
                   </td>
                 </tr>
               ))}
@@ -132,75 +138,61 @@ export function CombinedPage() {
           </table>
         </div>
 
-        {/* 표 ③ — 긴급도별 위협과 처방 */}
-        <div style={{ marginBottom: 6 }}>
-          <div style={h3s}>③ 긴급도별 위협과 처방</div>
+        {/* 표 ③ — 영역별 통제 모델 적용 (위협·처방) */}
+        <div style={{ flex: 1 }}>
+          <div style={h3s}>③ 영역별 통제 모델 적용 — 강화 영역의 위협별 처방</div>
           <table style={{ width: "100%", borderCollapse: "collapse", tableLayout: "fixed" }}>
             <colgroup>
-              <col style={{ width: "9%" }} />
-              <col style={{ width: "13%" }} />
-              <col style={{ width: "20%" }} />
-              <col style={{ width: "58%" }} />
+              <col style={{ width: "10%" }} />
+              <col style={{ width: "10%" }} />
+              <col style={{ width: "24%" }} />
+              <col style={{ width: "56%" }} />
             </colgroup>
             <thead>
               <tr style={{ background: C.navy, color: "#fff" }}>
-                <th style={{ padding: "5px 8px", textAlign: "left", fontSize: 12 }}>긴급도</th>
                 <th style={{ padding: "5px 8px", textAlign: "left", fontSize: 12 }}>강화 영역</th>
-                <th style={{ padding: "5px 8px", textAlign: "left", fontSize: 12 }}>위협</th>
-                <th style={{ padding: "5px 8px", textAlign: "left", fontSize: 12 }}>새 사회계약의 처방 — 권리·질서</th>
+                <th style={{ padding: "5px 8px", textAlign: "left", fontSize: 12 }}>긴급도</th>
+                <th style={{ padding: "5px 8px", textAlign: "left", fontSize: 12 }}>− 위협</th>
+                <th style={{ padding: "5px 8px", textAlign: "left", fontSize: 12 }}>★ 처방</th>
               </tr>
             </thead>
             <tbody>
               {([
-                { lv: "진행 중", urg: true, area: "실행력", threat: "국가 폭력 독점의 균열", rx: "FDA 모델 (AI 무기·자율 살상 시스템 사전 승인) + 국제 한시 협력 (핵 군축처럼 AI 군비 통제 체제 구축)" },
-                { lv: "진행 중", urg: true, area: "파급력", threat: "AI 공론장 개입·플랫폼 독점", rx: "알고리즘 자기결정권 (출처 표시·타게팅 규제·설명 요구권) + FDA 모델로 선거 관련 고위험 시스템 사전 승인 + AI 인프라 공공재화로 빅테크 독점 해체" },
-                { lv: "진행 중", urg: true, area: "판단력·파급력", threat: "미·중 기술 패권 블록화", rx: "글로벌 한시 협력 — 미·중·EU·개발도상국 공동 의제로 디지털 거버넌스 국제화" },
-                { lv: "임박", urg: false, area: "실행력", threat: "직업 대규모 재편의 충격", rx: "정체성 실현권 + 전환 지원 인프라 구축, AI 이익 환수·배당, 돌봄·창작·학습에 분배·존엄 보장" },
-                { lv: "중기→장기", urg: false, area: "판단력", threat: "AI 정렬·통제 실패", rx: "FDA 모델 (개발자 안전 입증·외부 검증 의무화) + 글로벌 한시 협력으로 확산 이전 국제 통제 체제 확보" },
-                { lv: "장기", urg: false, area: "판단력·실행력", threat: "디지털 계급 고착", rx: "AI 인프라 평등 접근권 + 정체성 실현권 + 공공 인프라로 자원·기회 불평등 해소" },
-              ] as const).map((r, i) => (
-                <tr key={i} style={{ background: i % 2 ? C.bg : "#fff" }}>
-                  <td style={{ padding: "4px 8px", borderBottom: "1px solid #eee", fontWeight: 700, color: r.urg ? C.red : C.light, fontSize: 12, lineHeight: 1.5 }}>{r.lv}</td>
-                  <td style={{ padding: "4px 8px", borderBottom: "1px solid #eee", color: C.accent, fontWeight: 700, fontSize: 11.5, lineHeight: 1.5 }}>{r.area}</td>
-                  <td style={{ padding: "4px 8px", borderBottom: "1px solid #eee", fontWeight: 700, color: "#222", fontSize: 12, lineHeight: 1.5 }}>{r.threat}</td>
-                  <td style={{ padding: "4px 8px", borderBottom: "1px solid #eee", color: "#222", fontSize: 12, lineHeight: 1.5 }}>{r.rx}</td>
-                </tr>
+                {
+                  dim: "판단력",
+                  threats: [
+                    { lv: "진행 중", urg: true, name: "국가 폭력 독점의 균열", rx: "FDA 모델 (AI 무기·자율 살상 시스템 사전 승인) + 국제 한시 협력 (핵 군축처럼 AI 군비 통제 체제 구축)" },
+                    { lv: "중기→장기", urg: false, name: "AI 정렬·통제 실패", rx: "FDA 모델 (개발자 안전 입증·외부 검증 의무화) + 글로벌 한시 협력으로 확산 이전 국제 통제 체제 확보" },
+                  ],
+                },
+                {
+                  dim: "실행력",
+                  threats: [
+                    { lv: "임박", urg: false, name: "직업 대규모 재편의 충격", rx: "정체성 실현권 + 전환 지원 인프라 구축, AI 이익 환수·배당, 돌봄·창작·학습에 분배·존엄 보장" },
+                    { lv: "장기", urg: false, name: "디지털 계급 고착", rx: "AI 인프라 평등 접근권 + 정체성 실현권 + 공공 인프라로 자원·기회 불평등 해소" },
+                  ],
+                },
+                {
+                  dim: "파급력",
+                  threats: [
+                    { lv: "진행 중", urg: true, name: "AI 공론장 개입·플랫폼 독점", rx: "알고리즘 자기결정권 (출처 표시·타게팅 규제·설명 요구권) + FDA 모델로 선거 관련 고위험 시스템 사전 승인 + AI 인프라 공공재화로 빅테크 독점 해체" },
+                    { lv: "진행 중", urg: true, name: "미·중 기술 패권 블록화", rx: "글로벌 한시 협력 — 미·중·EU·개발도상국 공동 의제로 디지털 거버넌스 국제화" },
+                  ],
+                },
+              ] as const).map(({ dim, threats }, i) => (
+                threats.map((t, j) => (
+                  <tr key={`${i}-${j}`} style={{ background: i % 2 ? C.bg : "#fff" }}>
+                    {j === 0 && (
+                      <td rowSpan={threats.length} style={{ padding: "5px 8px", borderBottom: "1px solid #eee", borderRight: `1px solid ${C.line}`, verticalAlign: "top", lineHeight: 1.5, fontWeight: 800, color: C.navy, fontSize: 13 }}>{dim}</td>
+                    )}
+                    <td style={{ padding: "4px 8px", borderBottom: j === threats.length - 1 ? "1px solid #eee" : "1px solid #f5f5f5", fontWeight: 700, color: t.urg ? C.red : C.light, fontSize: 11.5, verticalAlign: "top", lineHeight: 1.5 }}>{t.lv}</td>
+                    <td style={{ padding: "4px 8px", borderBottom: j === threats.length - 1 ? "1px solid #eee" : "1px solid #f5f5f5", color: C.red, fontSize: 11.5, verticalAlign: "top", lineHeight: 1.5, fontWeight: 600 }}>{t.name}</td>
+                    <td style={{ padding: "4px 8px", borderBottom: j === threats.length - 1 ? "1px solid #eee" : "1px solid #f5f5f5", color: "#222", fontSize: 11.5, verticalAlign: "top", lineHeight: 1.5 }}>{t.rx}</td>
+                  </tr>
+                ))
               ))}
             </tbody>
           </table>
-        </div>
-
-        {/* 표 ④ — 강화된 개인의 새 권리와 공동체 구조 */}
-        <div style={{ flex: 1 }}>
-          <div style={h3s}>④ 강화된 개인의 새 권리와 권리를 작동시키는 공동체 구조</div>
-          <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 10 }}>
-            <div style={{ background: C.bg, border: `1px solid ${C.line}`, borderRadius: 4, padding: "8px 14px" }}>
-              <div style={{ fontSize: 12.5, fontWeight: 800, color: C.navy, marginBottom: 6 }}>새 권리 — 강화된 개인이 요구하는 것</div>
-              {[
-                ["① 정체성 실현권", "직업 하나에 묶이지 않을 권리. 돌봄·창작·학습 등 시장 바깥의 기여에도 소득과 존엄이 인정되어야 한다. AI 이익 환수·디지털 배당으로 실현."],
-                ["② AI 인프라 평등 접근권", "AI·연산·데이터는 공공재여야 한다. 소수 기업의 독점은 새로운 계급 고착을 낳는다. 데이터 주권과 이동권 보장 필수."],
-                ["③ 알고리즘 자기결정권", "AI의 판단에 설명을 요구하고 거부할 수 있는 권리. 정치 광고·채용 심사·신용 평가 등 자동화된 결정에서 탈출할 수 있어야 한다."],
-              ].map(([t, d]) => (
-                <div key={t} style={{ display: "grid", gridTemplateColumns: "128px 1fr", gap: 6, marginBottom: 5 }}>
-                  <div style={{ fontSize: 12, fontWeight: 800, color: C.navy }}>{t}</div>
-                  <div style={{ fontSize: 11.5, color: "#333", lineHeight: 1.45 }}>{d}</div>
-                </div>
-              ))}
-            </div>
-            <div style={{ background: C.bg, border: `1px solid ${C.line}`, borderLeft: `3px solid ${C.navy}`, borderRadius: 4, padding: "8px 14px" }}>
-              <div style={{ fontSize: 12.5, fontWeight: 800, color: C.navy, marginBottom: 6 }}>새 질서 — 권리를 작동시키는 것</div>
-              {[
-                ["① 다층 거버넌스", "가정·이웃·도시·국가·세계가 각 층위에서 역할을 분담한다. 국가 혼자서는 디지털 전환의 속도와 다양성을 감당할 수 없다."],
-                ["② FDA 모델 + 한시 권력", "의약품처럼 AI도 개발자가 안전을 입증해야 출시할 수 있어야 한다. 위기 대응을 위해 부여된 권한은 위기 해소 시 자동으로 소멸된다."],
-                ["③ 공공 인프라 + 글로벌 한시 협력", "AI·연산·데이터를 공공재로 운영한다. AI 정렬·패권 경쟁처럼 국경을 넘는 위기는 한시적 글로벌 거버넌스로 대응한다."],
-              ].map(([t, d]) => (
-                <div key={t} style={{ display: "grid", gridTemplateColumns: "128px 1fr", gap: 6, marginBottom: 5 }}>
-                  <div style={{ fontSize: 12, fontWeight: 800, color: C.navy }}>{t}</div>
-                  <div style={{ fontSize: 11.5, color: "#333", lineHeight: 1.45 }}>{d}</div>
-                </div>
-              ))}
-            </div>
-          </div>
         </div>
 
       </div>
