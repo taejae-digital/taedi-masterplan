@@ -6,30 +6,24 @@ export function CombinedPage() {
     <div style={{ pageBreakBefore: "always", pageBreakAfter: "always", height: "281mm", display: "flex", flexDirection: "column" }}>
       <Header subtitle="3. 질서의 붕괴와 새 사회계약" version="v0.7.9" />
 
-      {/* 상단 논리 흐름 박스 */}
-      <div style={{ display: "flex", alignItems: "stretch", padding: "7px 32px", borderBottom: `2px solid ${C.navy}`, gap: 0 }}>
-        <div style={{ flex: 1, padding: "7px 12px", background: C.bg, borderRight: `1px solid ${C.line}` }}>
-          <div style={{ fontSize: 11, fontWeight: 800, color: C.accent, marginBottom: 2, letterSpacing: 0.5 }}>기존 경제·정치 질서</div>
-          <div style={{ fontSize: 13, fontWeight: 800, color: C.navy, lineHeight: 1.3, marginBottom: 3 }}>산업사회의 경제 질서는 노동=소득 원리로, 정치 질서는 대의제와 전문가 위임으로 작동해왔다</div>
-          <div style={{ fontSize: 11.5, color: "#444", lineHeight: 1.5 }}>임금노동이 소득과 사회적 지위를 결정했고, 시민은 선거로 대표를 선출해 공적 판단을 위임했다.</div>
+      {/* 상단 페이지 흐름 — 3단 구조 */}
+      <div style={{ display: "flex", alignItems: "stretch", padding: "7px 32px", gap: 0 }}>
+        <div style={{ flex: 1, padding: "7px 14px", background: "#fff5f5", borderRight: `1px solid ${C.line}` }}>
+          <div style={{ fontSize: 11, fontWeight: 800, color: C.red, marginBottom: 2, letterSpacing: 0.5 }}>① 진단</div>
+          <div style={{ fontSize: 13, fontWeight: 800, color: C.red, lineHeight: 1.3, marginBottom: 3 }}>산업사회의 질서가 흔들린다</div>
+          <div style={{ fontSize: 11.5, color: "#444", lineHeight: 1.5 }}>디지털이 강화한 개인은 산업사회 정치·경제 질서의 전제를 무너뜨린다.</div>
         </div>
         <div style={{ display: "flex", alignItems: "center", padding: "0 8px", fontSize: 20, color: C.navy, fontWeight: 300 }}>→</div>
-        <div style={{ flex: 1, padding: "7px 12px", background: "#fff5f5", borderRight: `1px solid ${C.line}` }}>
-          <div style={{ fontSize: 11, fontWeight: 800, color: C.red, marginBottom: 2, letterSpacing: 0.5 }}>전제의 붕괴</div>
-          <div style={{ fontSize: 13, fontWeight: 800, color: C.red, lineHeight: 1.3, marginBottom: 3 }}>디지털 강화가 그 전제를 무너뜨린다</div>
-          <div style={{ fontSize: 11.5, color: "#444", lineHeight: 1.5 }}>AI는 개인의 판단력·실행력·파급력을 급격히 강화한다. 누구나 전문가 수준의 판단이 가능해지고, 혼자서 조직급 산출을 내며, 개인이 대중에게 직접 영향을 미친다. 노동=소득 원리와 전문가 위임 구조가 동시에 흔들린다.</div>
+        <div style={{ flex: 1, padding: "7px 14px", background: C.bg, borderRight: `1px solid ${C.line}` }}>
+          <div style={{ fontSize: 11, fontWeight: 800, color: C.navy, marginBottom: 2, letterSpacing: 0.5 }}>② 새 사회계약</div>
+          <div style={{ fontSize: 13, fontWeight: 800, color: C.navy, lineHeight: 1.3, marginBottom: 3 }}>새 권리와 새 거버넌스로 다시 짠다</div>
+          <div style={{ fontSize: 11.5, color: "#444", lineHeight: 1.5 }}>강화된 개인의 새 권리와 권리를 작동시키는 새 거버넌스를 설계한다.</div>
         </div>
         <div style={{ display: "flex", alignItems: "center", padding: "0 8px", fontSize: 20, color: C.navy, fontWeight: 300 }}>→</div>
-        <div style={{ flex: 1, padding: "7px 12px", background: C.bg, borderRight: `1px solid ${C.line}` }}>
-          <div style={{ fontSize: 11, fontWeight: 800, color: C.navy, marginBottom: 2, letterSpacing: 0.5 }}>새 사회계약</div>
-          <div style={{ fontSize: 13, fontWeight: 800, color: C.navy, lineHeight: 1.3, marginBottom: 3 }}>강화된 개인을 위한 새 권리와 새 질서가 필요하다</div>
-          <div style={{ fontSize: 11.5, color: "#444", lineHeight: 1.5 }}>기존 질서는 이 변화를 담지 못한다. AI 인프라 평등 접근권·정체성 실현권·알고리즘 자기결정권이라는 새 권리와, 이를 작동시킬 새 질서가 요구된다.</div>
-        </div>
-        <div style={{ display: "flex", alignItems: "center", padding: "0 8px", fontSize: 20, color: C.navy, fontWeight: 300 }}>→</div>
-        <div style={{ flex: 1, padding: "7px 12px", background: C.bg }}>
-          <div style={{ fontSize: 11, fontWeight: 800, color: C.navy, marginBottom: 2, letterSpacing: 0.5 }}>우리의 연구</div>
-          <div style={{ fontSize: 13, fontWeight: 800, color: C.navy, lineHeight: 1.3, marginBottom: 3 }}>이것을 현실화한다</div>
-          <div style={{ fontSize: 11.5, color: "#444", lineHeight: 1.5 }}>위협 진단, 통제 모델, 전환 경로를 연구하고 정책·공론장·국제 협력으로 끌어낸다.</div>
+        <div style={{ flex: 1, padding: "7px 14px", background: C.bg }}>
+          <div style={{ fontSize: 11, fontWeight: 800, color: C.accent, marginBottom: 2, letterSpacing: 0.5 }}>③ 영역별 통제 모델 적용</div>
+          <div style={{ fontSize: 13, fontWeight: 800, color: C.navy, lineHeight: 1.3, marginBottom: 3 }}>강화 영역별 통제로 작동시킨다</div>
+          <div style={{ fontSize: 11.5, color: "#444", lineHeight: 1.5 }}>판단력·실행력·파급력 각 영역에서 위협을 통제하고 권리를 보장한다.</div>
         </div>
       </div>
 
