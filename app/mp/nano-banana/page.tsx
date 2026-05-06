@@ -1,4 +1,4 @@
-import { C } from "../components/masterplan/constants";
+import { C } from "../../components/masterplan/constants";
 
 export default function NanoBananaPage() {
   const pageStyle: React.CSSProperties = { 
