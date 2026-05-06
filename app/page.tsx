@@ -80,6 +80,8 @@ const DESCRIPTIONS: Record<string, string> = {
   "v0.7.5": "P1 4단계 네러티브 정합, P4 AI 연구 방법론 다이어그램",
   "v0.7.7": "P3 질서 붕괴와 새 사회계약 디자인 정리",
   "v0.7.9": "P2 분업→연결 프레임 재구성, P3 '구조→질서'·빨간색 한정",
+  "v0.7.11": "v0.7.9 기반 최신본 버전 상향",
+  "v0.7.12": "연구 계획 4페이지 구조 및 타이포 정리",
 };
 
 const MAJOR_LABELS: Record<string, { title: string; sub: string }> = {

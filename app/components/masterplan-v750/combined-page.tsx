@@ -4,7 +4,7 @@ import { Header, Footer, h3s } from "../masterplan-v700/shared";
 export function CombinedPage() {
   return (
     <div style={{ pageBreakBefore: "always", pageBreakAfter: "always", height: "281mm", display: "flex", flexDirection: "column" }}>
-      <Header subtitle="3. 질서의 붕괴와 새 사회계약" version="v0.7.9" />
+      <Header subtitle="3. 질서의 붕괴와 새 사회계약" version="v0.7.12" />
 
       {/* 상단 페이지 흐름 — 3단 구조 */}
       <div style={{ display: "flex", alignItems: "stretch", padding: "7px 32px", gap: 0 }}>

@@ -156,10 +156,6 @@ export function IndividualCommunityPage() {
                   </div>
                 ))}
               </div>
-              <div style={{ fontSize: 11, lineHeight: 1.6, color: "#333", marginBottom: 7 }}>
-                디지털 전환은 공동체 구조를 세 방향에서 동시에 바꾼다. 데이터·AI·인재 산업이 강소도시에 집적되면서 경쟁 단위가 국가에서 도시로 이동하고, 사이버·플랫폼·암호화폐가 국가의 안보·사법·화폐 독점을 우회한다. 위임의 논리도 '임기 내 포괄 위임'에서 '필요한 만큼만, 투명하게, 목적 달성 시 자동 환수'로 재설계되어야 한다.
-              </div>
-
               <div style={{ fontSize: 10.5, fontWeight: 700, color: "#666", margin: "0 0 4px", lineHeight: 1.4 }}>공동체별 재균형 — 가정부터 글로벌까지, 6개 공동체 모두 산업시대 역할에서 디지털시대 역할로 재배치된다</div>
               <table style={{ width: "100%", borderCollapse: "collapse", fontSize: 11 }}>
                 <thead>
