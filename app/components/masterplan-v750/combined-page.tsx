@@ -16,7 +16,7 @@ export function CombinedPage() {
         <div style={{ display: "flex", alignItems: "center", padding: "0 8px", fontSize: 20, color: C.navy, fontWeight: 300 }}>→</div>
         <div style={{ flex: 1, padding: "7px 14px", background: C.bg, borderRight: `1px solid ${C.line}` }}>
           <div style={{ fontSize: 11, fontWeight: 800, color: C.navy, marginBottom: 2, letterSpacing: 0.5 }}>② 새 사회계약</div>
-          <div style={{ fontSize: 13, fontWeight: 800, color: C.navy, lineHeight: 1.3, marginBottom: 3 }}>새 권리와 새 거버넌스로 다시 짠다</div>
+          <div style={{ fontSize: 13, fontWeight: 800, color: C.navy, lineHeight: 1.3, marginBottom: 3 }}>새 권리와 새 거버넌스로 다시 설계한다</div>
           <div style={{ fontSize: 11.5, color: "#444", lineHeight: 1.5 }}>강화된 개인의 새 권리와 권리를 작동시키는 새 거버넌스를 설계한다.</div>
         </div>
         <div style={{ display: "flex", alignItems: "center", padding: "0 8px", fontSize: 20, color: C.navy, fontWeight: 300 }}>→</div>
@@ -54,7 +54,7 @@ export function CombinedPage() {
                 },
                 {
                   dim: "실행력", desc: "개인이 혼자서 조직급 산출 가능",
-                  pol: <>고용 기반 복지 체계 위기. <span style={{ color: C.red, fontWeight: 700 }}>노동=소득 연결이 끊기면 기존 사회보험·복지 구조가 흔들린다</span>.</>,
+                  pol: <>직업 단체(노조·협회) 기반 정치 참여 구조 약화. <span style={{ color: C.red, fontWeight: 700 }}>조직 단위 이익 대표제가 흔들리고 강화된 개인이 직접 정치 행위자로 등장</span>.</>,
                   eco: <><span style={{ color: C.red, fontWeight: 700 }}>노동시간과 소득의 연결 붕괴</span>, 자동화 이익이 데이터 독점자에 집중. 1인 다중직업 시대로.</>,
                 },
                 {
