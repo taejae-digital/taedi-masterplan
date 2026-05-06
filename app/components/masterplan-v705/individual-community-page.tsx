@@ -60,7 +60,7 @@ export function IndividualCommunityPage() {
                   tech: "인터넷 · AI",
                   personal: ["생산단위: 개인+AI", "정체성: 역량·관심·기여", "삶: 정체성을 실현할 수 있는 삶"],
                   community: ["중심: 도시·네트워크", "조율: 데이터·알고리즘·참여", "위임: 미션 한정 한시 위임"],
-                  freedom: "기관에 속하지 않고 스스로 삶·정체성을 설계할 자유",
+                  freedom: "스스로 삶·정체성을 설계할 자유",
                   right: "(미정립)",
                   highlight: true,
                 },
