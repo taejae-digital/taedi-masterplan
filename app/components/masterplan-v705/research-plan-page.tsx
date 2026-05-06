@@ -113,7 +113,7 @@ export function ResearchPlanPage() {
             { letter: "B", t: "기술 통제 체계 구상", d: "AI 자율살상무기(LAWS)·AI·사이버 WMD의 국제 레짐. 개발자 입증 책임 레짐과 사전 승인 체계 설계. 미중 대타협의 가능 경로." },
             { letter: "C", t: "인간 존엄과 공동체 재설계", d: "묶음 직업·니치마켓 시대 직업 재편 충격 대응. 정체성 실현권 설계. 가정·마을·도시 단위 재연결과 돌봄·창작 기여 인정 체계." },
             { letter: "D", t: "빅테크 통제와 디지털 권리", d: "플랫폼 과두제 해체. 데이터 주권·알고리즘 투명성·디지털 권리 헌장. AI 인프라의 공공재화와 환경 영향 규제." },
-            { letter: "E", t: "AI 안전 평가 프레임워크 — 사회 가치 기반 벤치마크", d: "기존 벤치마크(HELM·AILuminate·UK AISI)가 비워둔 권력 집중·인간 존엄·글로벌 질서 위협 측정. 6위협 × 판단력·실행력·파급력 매트릭스로 FDA식 사전 승인 기준 정식화. UK AISI·MLCommons·GovAI·Stanford HAI 협력." },
+            { letter: "★", t: "AI 안전 평가 프레임워크 — A~D 통합 산출물", d: "A~D 분야 연구 결과를 측정 가능한 평가 기준으로 환원. 6위협 × 판단력·실행력·파급력 매트릭스로 FDA식 사전 승인 기준 정식화. 기존 벤치마크(HELM·AILuminate·UK AISI)가 비워둔 권력 집중·인간 존엄·글로벌 질서 영역을 채운다. UK AISI·MLCommons·GovAI·Stanford HAI 협력." },
           ].map(({ letter, t, d }) => (
             <div key={letter} style={{ display: "flex", gap: 10, marginBottom: 7, padding: "7px 9px", background: C.bg, borderLeft: `3px solid ${C.navy}` }}>
               <div style={{ fontSize: 15, fontWeight: 900, color: C.navy, minWidth: 18 }}>{letter}</div>
