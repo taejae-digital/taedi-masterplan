@@ -55,7 +55,7 @@ export function CombinedPage() {
                 {
                   dim: "실행력", desc: "개인이 혼자서 조직급 산출 가능",
                   pol: <>직업 단체(노조·협회) 기반 정치 참여 구조 약화. <span style={{ color: C.red, fontWeight: 700 }}>조직 단위 이익 대표제가 흔들리고 강화된 개인이 직접 정치 행위자로 등장</span>.</>,
-                  eco: <><span style={{ color: C.red, fontWeight: 700 }}>노동시간과 소득의 연결 붕괴</span>, 자동화 이익이 데이터 독점자에 집중. 1인 다중직업 시대로.</>,
+                  eco: <><span style={{ color: C.red, fontWeight: 700 }}>노동시간과 소득의 연결 붕괴</span>, 자동화 이익이 데이터 독점자에 집중. 1인 묶음직업 시대로.</>,
                 },
                 {
                   dim: "파급력", desc: "개인이 대중 매체급 영향력 확보",
