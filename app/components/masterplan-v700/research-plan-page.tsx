@@ -6,9 +6,79 @@ export function ResearchPlanPage() {
     <div style={{ pageBreakBefore: "always", height: "281mm", display: "flex", flexDirection: "column" }}>
       <Header subtitle="6. 연구 계획" />
 
-      <div style={{ padding: "14px 32px 10px", borderBottom: `2px solid ${C.navy}`, marginBottom: 14 }}>
+      <div style={{ padding: "14px 32px 10px", borderBottom: `2px solid ${C.navy}`, marginBottom: 12 }}>
         <div style={{ fontSize: 19, fontWeight: 800, color: C.navy, lineHeight: 1.4 }}>
           사후 교정이 불가능한 AI 시대, 태재는 이론·공론·솔루션의 세 축을 동시에 끌어올려 실행 가능한 모델로 제시한다.
+        </div>
+      </div>
+
+      {/* AI 시대의 연구 방법론 — 전체 너비 다이어그램 */}
+      <div style={{ padding: "0 32px 10px" }}>
+        <div style={{ display: "flex", alignItems: "baseline", gap: 10, marginBottom: 6 }}>
+          <div style={{ fontSize: 13, fontWeight: 800, color: C.navy, borderBottom: `2px solid ${C.navy}`, paddingBottom: 2 }}>AI 시대의 연구 방법론</div>
+          <div style={{ fontSize: 11, color: "#666" }}>정보→지식 변환은 AI에 위임하고, 지식→지혜(방향 판단)에 인간 역량을 집중한다.</div>
+        </div>
+        <div style={{ display: "flex", alignItems: "stretch", gap: 0 }}>
+          {[
+            { num: "①", t: "문제 정식화", who: "팀원들", color: C.navy, bg: "#f0f4ff", d: "질문을 정확히 끊어내고 가설·가치 기준을 명시" },
+            { num: "②", t: "다중 가안 생성", who: "AI", color: "#3b82f6", bg: "#eff6ff", d: "1안·2안·3안을 병렬로 빠르게 작성" },
+            { num: "③", t: "비교·방향 판단", who: "팀원들", color: C.navy, bg: "#f0f4ff", d: "기준에 비추어 안을 평가·선택·통합" },
+            { num: "④", t: "외부 검증", who: "자문단·공론장", color: "#16a34a", bg: "#f0fdf4", d: "전문가 피드백, 시민 토론으로 검증" },
+            { num: "⑤", t: "통합·산출", who: "팀원들", color: C.accent, bg: "#fff7ed", d: "검증을 거친 안을 종합·정교화해 보고서·솔루션 도출" },
+          ].map(({ num, t, who, color, bg, d }, i, arr) => (
+            <div key={i} style={{ display: "flex", alignItems: "stretch", flex: 1 }}>
+              <div style={{ flex: 1, padding: "8px 10px", background: bg, border: `1.5px solid ${color}`, borderRadius: 4 }}>
+                <div style={{ display: "flex", alignItems: "center", gap: 5, marginBottom: 3 }}>
+                  <span style={{ fontSize: 15, fontWeight: 900, color }}>{num}</span>
+                  <span style={{ fontSize: 12, fontWeight: 800, color: C.navy }}>{t}</span>
+                </div>
+                <div style={{ fontSize: 9.5, fontWeight: 700, color, marginBottom: 3, letterSpacing: 0.3 }}>{who}</div>
+                <div style={{ fontSize: 10, color: "#444", lineHeight: 1.4 }}>{d}</div>
+              </div>
+              {i < arr.length - 1 && (
+                <div style={{ display: "flex", alignItems: "center", padding: "0 4px", color: C.navy, fontSize: 16, fontWeight: 300 }}>→</div>
+              )}
+            </div>
+          ))}
+        </div>
+        <div style={{ position: "relative", marginTop: 2 }}>
+          <svg width="100%" height="40" viewBox="0 0 1000 40" preserveAspectRatio="none" style={{ display: "block" }}>
+            {/* ③ → ②  (45° 기울기로 ②에 진입) */}
+            <path
+              d="M 500 0 C 500 16, 312 16, 300 4"
+              stroke={C.accent}
+              strokeWidth="1.3"
+              fill="none"
+              strokeDasharray="4 3"
+              vectorEffect="non-scaling-stroke"
+            />
+            {/* ④ → ②  (45° 기울기로 ②에 진입) */}
+            <path
+              d="M 700 0 C 700 32, 328 32, 300 4"
+              stroke={C.accent}
+              strokeWidth="1.3"
+              fill="none"
+              strokeDasharray="4 3"
+              vectorEffect="non-scaling-stroke"
+            />
+            {/* 공유 화살촉 — 45° 좌상향 회전 */}
+            <polygon points="296,5 300,0 304,5" fill={C.accent} transform="rotate(-45 300 4)" />
+          </svg>
+          <div style={{
+            position: "absolute",
+            bottom: 2,
+            left: "50%",
+            transform: "translateX(-50%)",
+            fontSize: 9.5,
+            color: C.accent,
+            background: "#fff",
+            padding: "0 8px",
+            fontStyle: "italic",
+            fontWeight: 600,
+            letterSpacing: 0.2,
+          }}>
+            피드백 반영
+          </div>
         </div>
       </div>
 

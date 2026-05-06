@@ -2,33 +2,32 @@ import Link from "next/link";
 import fs from "fs";
 import path from "path";
 
-function getLatestVersion() {
-  const mpDir = path.join(process.cwd(), "app", "mp");
-  if (!fs.existsSync(mpDir)) return "v0.1";
-  const versions = fs.readdirSync(mpDir)
-    .filter((d) => fs.statSync(path.join(mpDir, d)).isDirectory())
-    .sort((a, b) => {
-      const pa = a.split(".").map(Number);
-      const pb = b.split(".").map(Number);
-      for (let i = 0; i < Math.max(pa.length, pb.length); i++) {
-        const diff = (pa[i] || 0) - (pb[i] || 0);
-        if (diff !== 0) return diff;
-      }
-      return 0;
-    });
-  return versions[versions.length - 1] || "v0.1";
+function parseVersion(name: string): number[] {
+  return name.replace(/^v/, "").split(".").map((n) => parseInt(n, 10) || 0);
 }
 
-const latest = getLatestVersion();
+function compareVersions(a: string, b: string): number {
+  const pa = parseVersion(a);
+  const pb = parseVersion(b);
+  for (let i = 0; i < Math.max(pa.length, pb.length); i++) {
+    const diff = (pa[i] || 0) - (pb[i] || 0);
+    if (diff !== 0) return diff;
+  }
+  return 0;
+}
 
-const archive = [
-  { id: "archive/v5.5.1", label: "v5.5.1", date: "2026.03", desc: "변화→통제→경제질서→거버넌스→공동체 재편" },
-  { id: "archive/v5.0", label: "v5.0", date: "2026.03", desc: "디지털 위협의 통제 — 4단계 흐름" },
-  { id: "archive/v4.4.2", label: "v4.4.2", date: "2026.03", desc: "정체성 실현권 + 돌봄 윤리" },
-  { id: "archive/v4.4", label: "v4.4", date: "2026.03", desc: "기술의 독점에서 자유의 확장으로" },
-  { id: "archive/v4.3.1", label: "v4.3.1", date: "2026.03", desc: "자유의 확장 — 컴팩트" },
-  { id: "archive/v4.3", label: "v4.3", date: "2026.03", desc: "자유의 확장 — 정당 비전 포함" },
-];
+function getMpVersions() {
+  const mpDir = path.join(process.cwd(), "app", "mp");
+  if (!fs.existsSync(mpDir)) return [];
+  return fs.readdirSync(mpDir)
+    .filter((d) => fs.statSync(path.join(mpDir, d)).isDirectory())
+    .filter((d) => /^v0\./.test(d))
+    .sort(compareVersions);
+}
+
+const allVersions = getMpVersions();
+const latest = allVersions[allVersions.length - 1] || "v0.1";
+const archive = [...allVersions].reverse().slice(1);
 
 export default function Home() {
   return (
@@ -59,21 +58,18 @@ export default function Home() {
         </div>
       </div>
 
-      {/* Archive */}
+      {/* Archive — 0.x 버전 자동 감지 */}
       <div style={{ marginTop: 32 }}>
         <div style={{ fontSize: 12, letterSpacing: 2, color: "#999", marginBottom: 12, textTransform: "uppercase" }}>Archive — 이전 버전</div>
-        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(220px, 1fr))", gap: 10 }}>
+        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(140px, 1fr))", gap: 8 }}>
           {archive.map((v) => (
-            <Link key={v.id} href={`/${v.id}`} style={{ textDecoration: "none", padding: "12px 16px", background: "#fafafa", border: "1px solid #eee", borderRadius: 6, display: "block", transition: "border-color 0.15s" }}>
-              <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: 4 }}>
-                <span style={{ fontSize: 14, fontWeight: 700, color: "#555" }}>{v.label}</span>
-                <span style={{ fontSize: 10, color: "#bbb" }}>{v.date}</span>
-              </div>
-              <p style={{ fontSize: 11, color: "#999", lineHeight: 1.4, margin: 0 }}>{v.desc}</p>
+            <Link key={v} href={`/mp/${v}`} style={{ textDecoration: "none", padding: "10px 14px", background: "#fafafa", border: "1px solid #eee", borderRadius: 6, display: "block", transition: "border-color 0.15s" }}>
+              <span style={{ fontSize: 13, fontWeight: 700, color: "#555" }}>Master Plan {v}</span>
             </Link>
           ))}
         </div>
       </div>
+
     </div>
   );
 }
