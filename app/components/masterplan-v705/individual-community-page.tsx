@@ -31,7 +31,7 @@ export function IndividualCommunityPage() {
                 <th style={{ padding: "5px 8px", textAlign: "left", width: "13%" }}>핵심 기술</th>
                 <th style={{ padding: "5px 8px", textAlign: "left", width: "20%" }}>개인</th>
                 <th style={{ padding: "5px 8px", textAlign: "left", width: "20%" }}>공동체</th>
-                <th style={{ padding: "5px 8px", textAlign: "left", width: "20%" }}>원한 자유</th>
+                <th style={{ padding: "5px 8px", textAlign: "left", width: "20%" }}>원하는 자유</th>
                 <th style={{ padding: "5px 8px", textAlign: "left" }}>제도화된 권리</th>
               </tr>
             </thead>
@@ -124,16 +124,16 @@ export function IndividualCommunityPage() {
               <div style={{ fontSize: 10.5, fontWeight: 700, color: "#666", margin: "0 0 4px", lineHeight: 1.4 }}>4 계층 재편</div>
               <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr 1fr 1fr", gap: 5 }}>
                 {[
-                  { t: "리더", s: "2%→5%", d: "AI 설계자. 기준·플랫폼 재정의.", a: "판단력·실행력" },
-                  { t: "프로", s: "53%→25%", d: "AI 활용자. 직업 기반 정체성 변화.", a: "실행력" },
-                  { t: "아마추어", s: "35%→65%", d: "AI 의존자. 인정 경로 불안정.", a: "파급력" },
-                  { t: "소외", s: "10%→5%", d: "AI 접근 불가. 격차 질적 심화.", a: "판단력 결핍" },
+                  { t: "리더", s: "2%→5%", d: "AI 설계자. 기준·플랫폼 재정의.", a: "판단력·실행력 강화로 AI 인프라 설계가 새 권력의 핵심." },
+                  { t: "프로", s: "53%→25%", d: "AI 활용자. 직업 기반 정체성 변화.", a: "실행력 강화로 AI가 전문직 일을 개인에게 이전, 진입장벽 해체." },
+                  { t: "아마추어", s: "35%→65%", d: "AI 의존자. 인정 경로 불안정.", a: "파급력 강화로 학위·자격 없이도 1인 미디어·전문가급 활동 가능." },
+                  { t: "소외", s: "10%→5%", d: "AI 접근 불가. 격차 질적 심화.", a: "판단력 결핍으로 비율은 줄지만 격차가 질적으로 깊어짐." },
                 ].map(({ t, s, d, a }) => (
                   <div key={t} style={{ padding: "5px 7px", borderTop: `2px solid ${C.navy}`, background: C.bg }}>
                     <div style={{ fontSize: 11.5, fontWeight: 800, color: C.navy, marginBottom: 1 }}>{t}</div>
                     <div style={{ fontSize: 11, fontWeight: 700, color: "#555", marginBottom: 1 }}>{s}</div>
                     <div style={{ fontSize: 11, lineHeight: 1.4, color: "#333" }}>{d}</div>
-                    <div style={{ fontSize: 9.5, color: C.accent, fontWeight: 700, marginTop: 2 }}>← {a}</div>
+                    <div style={{ fontSize: 9.5, color: C.accent, fontWeight: 700, marginTop: 2, lineHeight: 1.4 }}>← {a}</div>
                   </div>
                 ))}
               </div>
