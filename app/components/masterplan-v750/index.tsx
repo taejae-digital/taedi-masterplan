@@ -1,7 +1,7 @@
-import { VisionPage } from "../masterplan-v700/vision-page";
-import { IndividualCommunityPage } from "../masterplan-v700/individual-community-page";
+import { VisionPage } from "../masterplan-v705/vision-page";
+import { IndividualCommunityPage } from "../masterplan-v705/individual-community-page";
 import { CombinedPage } from "./combined-page";
-import { ResearchPlanPage } from "../masterplan-v700/research-plan-page";
+import { ResearchPlanPage } from "../masterplan-v705/research-plan-page";
 
 export function MasterPlanV750() {
   return (
