@@ -184,8 +184,8 @@ export function ResearchPlanPage() {
 
           <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 8 }}>
             {[
-              { t: "중기 (2027~2028)", items: ["연구 보고서 국제판·영문 번역", "국제 자문단 상설화·해외 학술지 게재", "AI 평가 프레임워크 외부 협력 구현 (MLCommons·UK AISI)", "AI 거버넌스 국제 회의체 참여"] },
-              { t: "장기 (2029~)", items: ["디지털 권리 헌장 초안 제시", "AI 통제 국제 협약 참여", "미중 합의 경로 제시 및 중재", "글로벌 AI 거버넌스 리더십"] },
+              { t: "중기 (2027~2028)", items: ["AI 평가 프레임워크 외부 협력 구현 (MLCommons·UK AISI)", "연구 보고서 국제판·해외 학술지 게재"] },
+              { t: "장기 (2029~)", items: ["디지털 권리 헌장 초안·국제 협약 참여", "미중 합의 경로 제시 및 중재"] },
             ].map(({ t, items }) => (
               <div key={t} style={{ padding: "9px 11px", borderTop: `2px solid ${C.navy}`, background: C.bg }}>
                 <div style={{ fontSize: 13, fontWeight: 800, color: C.navy, marginBottom: 6 }}>{t}</div>
