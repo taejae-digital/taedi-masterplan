@@ -13,7 +13,7 @@ export function Header({ subtitle, version = "v0.7" }: { subtitle: string; versi
           <div style={{ fontSize: 16, fontWeight: 600 }}>{subtitle}</div>
         </div>
       </div>
-      <div style={{ textAlign: "right", fontSize: 12, opacity: 0.35, marginTop: 3 }}>2026.04</div>
+      <div style={{ textAlign: "right", fontSize: 12, opacity: 0.35, marginTop: 3 }}>2026.05</div>
     </div>
   );
 }
@@ -22,7 +22,7 @@ export function Footer() {
   return (
     <div style={{ margin: "14px 32px 0", padding: "7px 0", borderTop: `1px solid ${C.line}`, display: "flex", justifyContent: "space-between", fontSize: 12, color: C.light }}>
       <span>태재미래전략연구원 디지털 전환과 사회변혁팀 | 내부 문서</span>
-      <span>2026.04 · v0.7</span>
+      <span>2026.05 · v0.7</span>
     </div>
   );
 }
