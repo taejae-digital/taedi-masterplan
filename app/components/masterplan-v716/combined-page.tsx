@@ -7,7 +7,7 @@ const urgColor = (urg: string) =>
 export function CombinedPage() {
   return (
     <div style={{ pageBreakBefore: "always", height: "281mm", display: "flex", flexDirection: "column" }}>
-      <Header subtitle="3. 질서의 붕괴와 새 사회계약" version="v0.7.15" />
+      <Header subtitle="3. 질서의 붕괴와 새 사회계약" version="v0.7.16" />
 
       <div style={{ padding: "4px 32px 0", display: "flex", flexDirection: "column", flex: 1 }}>
 
@@ -54,6 +54,14 @@ export function CombinedPage() {
                   threats: [
                     { urg: "진행 중", text: "언론사·미디어 기업 수익 급감" },
                     { urg: "진행 중", text: "AI 인프라 수익의 소수 집중" },
+                  ],
+                },
+                {
+                  prev: "제도적 완충 메커니즘",
+                  impact: "AI 변화 속도 > 제도 적응 속도. 완충 장치가 작동하기 전에 충격이 먼저 도착.",
+                  threats: [
+                    { urg: "임박", text: "직업 소멸 속도가 재훈련 속도를 초과" },
+                    { urg: "진행 중", text: "노동법·복지가 플랫폼·긱 노동에 뒤처짐" },
                   ],
                 },
               ].map(({ prev, impact, threats }, i) => (
@@ -117,6 +125,14 @@ export function CombinedPage() {
                   threats: [
                     { urg: "진행 중", text: "AI 딥페이크·선거 개입" },
                     { urg: "진행 중", text: "에코챔버 심화·공론장 분열" },
+                  ],
+                },
+                {
+                  prev: "다자주의 국제 질서",
+                  impact: "AI 패권경쟁이 기술블록화를 가속. 글로벌 규범 형성 공간을 국가 간 세력 경쟁이 잠식.",
+                  threats: [
+                    { urg: "진행 중", text: "미·중 AI 패권경쟁·수출 통제·기술블록화" },
+                    { urg: "임박", text: "국가 AI 무기화·디지털 주권 분열" },
                   ],
                 },
               ].map(({ prev, impact, threats }, i) => (
@@ -196,6 +212,14 @@ export function CombinedPage() {
               ))}
             </tbody>
           </table>
+
+          {/* 주체 딜레마 강조 박스 */}
+          <div style={{ marginTop: 8, padding: "8px 12px", background: C.bg, borderLeft: `3px solid ${C.red}`, borderRadius: 2 }}>
+            <div style={{ fontSize: 11.5, color: "#222", lineHeight: 1.55 }}>
+              <span style={{ fontWeight: 800, color: C.red, marginRight: 6 }}>새 사회계약의 딜레마</span>
+              규제해야 할 국가보다 빅테크가 더 강한 현실. 새 사회계약 구축의 주체는 단일 국가가 아닌 <span style={{ fontWeight: 700, color: C.navy }}>민주국가 연합의 집단 행동</span>이어야 한다.
+            </div>
+          </div>
         </div>
 
       </div>

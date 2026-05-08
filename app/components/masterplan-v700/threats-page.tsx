@@ -1,6 +1,9 @@
 import { C } from "./constants";
 import { Header, Footer, h3s } from "./shared";
 
+const urgColor = (lv: string) =>
+  lv === "진행 중" ? "#991b1b" : lv === "임박" ? "#b91c1c" : lv === "중기" ? "#ef4444" : lv === "장기" ? "#f87171" : C.light;
+
 export function ThreatsPage() {
   return (
     <div style={{ pageBreakBefore: "always", pageBreakAfter: "always", height: "281mm", display: "flex", flexDirection: "column" }}>
@@ -103,7 +106,7 @@ export function ThreatsPage() {
                 { lv: "장기", urg: false, t: "디지털 계급·지속불가능성", area: "판단력·실행력", reason: "현재 격차는 교정 가능. 방치 시 생물학적 고착 위험", m: "AI 격차의 생물학적 고착, 데이터센터의 환경 부담" },
               ] as const).map((r, i) => (
                 <tr key={i} style={{ background: i % 2 ? C.bg : "#fff" }}>
-                  <td style={{ padding: "6px 8px", borderBottom: "1px solid #eee", fontWeight: 700, color: r.urg ? C.red : C.light, fontSize: 11.5, lineHeight: 1.5 }}>{r.lv}</td>
+                  <td style={{ padding: "6px 8px", borderBottom: "1px solid #eee", fontWeight: 700, color: urgColor(r.lv), fontSize: 11.5, lineHeight: 1.5 }}>{r.lv}</td>
                   <td style={{ padding: "6px 8px", borderBottom: "1px solid #eee", fontWeight: 700, color: "#222", fontSize: 12, lineHeight: 1.5 }}>{r.t}</td>
                   <td style={{ padding: "6px 8px", borderBottom: "1px solid #eee", color: C.accent, fontWeight: 700, fontSize: 10.5, lineHeight: 1.5 }}>{r.area}</td>
                   <td style={{ padding: "6px 8px", borderBottom: "1px solid #eee", color: "#444", fontSize: 11.5, lineHeight: 1.5 }}>{r.reason}</td>
