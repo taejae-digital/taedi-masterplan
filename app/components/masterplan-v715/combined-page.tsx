@@ -55,13 +55,13 @@ export function CombinedPage() {
                 },
               ].map(({ prev, impact, threats }, i) => (
                 <tr key={i} style={{ background: i % 2 ? C.bg : "#fff" }}>
-                  <td style={{ padding: "5px 8px", borderBottom: "1px solid #eee", fontSize: 11.5, verticalAlign: "top", lineHeight: 1.5, fontWeight: 700, color: C.navy }}>{prev}</td>
-                  <td style={{ padding: "5px 8px", borderBottom: "1px solid #eee", fontSize: 11, verticalAlign: "top", lineHeight: 1.5, color: "#333" }}>{impact}</td>
+                  <td style={{ padding: "5px 8px", borderBottom: "1px solid #eee", fontSize: 12, verticalAlign: "top", lineHeight: 1.5, fontWeight: 700, color: C.navy }}>{prev}</td>
+                  <td style={{ padding: "5px 8px", borderBottom: "1px solid #eee", fontSize: 11.5, verticalAlign: "top", lineHeight: 1.5, color: "#333" }}>{impact}</td>
                   <td style={{ padding: "5px 8px", borderBottom: "1px solid #eee", verticalAlign: "top" }}>
                     {threats.map((t, j) => (
                       <div key={j} style={{ display: "flex", alignItems: "baseline", gap: 4, marginBottom: j < threats.length - 1 ? 4 : 0 }}>
-                        <span style={{ fontSize: 9.5, fontWeight: 700, color: "#fff", background: C.red, borderRadius: 2, padding: "1px 4px", flexShrink: 0, lineHeight: 1.4 }}>{t.urg}</span>
-                        <span style={{ fontSize: 11, color: "#333", lineHeight: 1.4 }}>{t.text}</span>
+                        <span style={{ fontSize: 10, fontWeight: 700, color: "#fff", background: C.red, borderRadius: 2, padding: "1px 4px", flexShrink: 0, lineHeight: 1.4 }}>{t.urg}</span>
+                        <span style={{ fontSize: 11.5, color: "#333", lineHeight: 1.4 }}>{t.text}</span>
                       </div>
                     ))}
                   </td>
@@ -118,13 +118,13 @@ export function CombinedPage() {
                 },
               ].map(({ prev, impact, threats }, i) => (
                 <tr key={i} style={{ background: i % 2 ? C.bg : "#fff" }}>
-                  <td style={{ padding: "5px 8px", borderBottom: "1px solid #eee", fontSize: 11.5, verticalAlign: "top", lineHeight: 1.5, fontWeight: 700, color: C.navy }}>{prev}</td>
-                  <td style={{ padding: "5px 8px", borderBottom: "1px solid #eee", fontSize: 11, verticalAlign: "top", lineHeight: 1.5, color: "#333" }}>{impact}</td>
+                  <td style={{ padding: "5px 8px", borderBottom: "1px solid #eee", fontSize: 12, verticalAlign: "top", lineHeight: 1.5, fontWeight: 700, color: C.navy }}>{prev}</td>
+                  <td style={{ padding: "5px 8px", borderBottom: "1px solid #eee", fontSize: 11.5, verticalAlign: "top", lineHeight: 1.5, color: "#333" }}>{impact}</td>
                   <td style={{ padding: "5px 8px", borderBottom: "1px solid #eee", verticalAlign: "top" }}>
                     {threats.map((t, j) => (
                       <div key={j} style={{ display: "flex", alignItems: "baseline", gap: 4, marginBottom: j < threats.length - 1 ? 4 : 0 }}>
-                        <span style={{ fontSize: 9.5, fontWeight: 700, color: "#fff", background: C.red, borderRadius: 2, padding: "1px 4px", flexShrink: 0, lineHeight: 1.4 }}>{t.urg}</span>
-                        <span style={{ fontSize: 11, color: "#333", lineHeight: 1.4 }}>{t.text}</span>
+                        <span style={{ fontSize: 10, fontWeight: 700, color: "#fff", background: C.red, borderRadius: 2, padding: "1px 4px", flexShrink: 0, lineHeight: 1.4 }}>{t.urg}</span>
+                        <span style={{ fontSize: 11.5, color: "#333", lineHeight: 1.4 }}>{t.text}</span>
                       </div>
                     ))}
                   </td>
@@ -183,11 +183,11 @@ export function CombinedPage() {
                   <td style={{ padding: "6px 8px", borderBottom: "1px solid #eee", verticalAlign: "top", lineHeight: 1.5, fontWeight: 800, color: C.navy, fontSize: 13 }}>{dim}</td>
                   <td style={{ padding: "6px 8px", borderBottom: "1px solid #eee", verticalAlign: "top", lineHeight: 1.5 }}>
                     <div style={{ fontSize: 12, fontWeight: 800, color: C.navy, marginBottom: 2 }}>{right}</div>
-                    <div style={{ fontSize: 11, color: "#444", lineHeight: 1.4 }}>{rightDesc}</div>
+                    <div style={{ fontSize: 11.5, color: "#444", lineHeight: 1.5 }}>{rightDesc}</div>
                   </td>
                   <td style={{ padding: "6px 8px", borderBottom: "1px solid #eee", verticalAlign: "top", lineHeight: 1.5, borderLeft: `2px solid ${C.navy}` }}>
                     <div style={{ fontSize: 12, fontWeight: 800, color: C.navy, marginBottom: 2 }}>{gov}</div>
-                    <div style={{ fontSize: 11, color: "#444", lineHeight: 1.4 }}>{govDesc}</div>
+                    <div style={{ fontSize: 11.5, color: "#444", lineHeight: 1.5 }}>{govDesc}</div>
                   </td>
                 </tr>
               ))}
