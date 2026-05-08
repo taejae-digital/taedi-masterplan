@@ -8,18 +8,21 @@ export function CombinedPage() {
 
       <div style={{ padding: "4px 32px 0", display: "flex", flexDirection: "column", flex: 1 }}>
 
+        {/* 3.1 + 3.2 좌우 2컬럼 */}
+        <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 16, marginBottom: 10 }}>
+
         {/* 표 ① — 3.1 경제 질서의 타격 */}
-        <div style={{ marginBottom: 10 }}>
+        <div>
           <div style={h3s}>3.1 경제 질서의 타격</div>
           <table style={{ width: "100%", borderCollapse: "collapse", tableLayout: "fixed" }}>
             <colgroup>
-              <col style={{ width: "22%" }} />
-              <col style={{ width: "58%" }} />
-              <col style={{ width: "20%" }} />
+              <col style={{ width: "34%" }} />
+              <col style={{ width: "50%" }} />
+              <col style={{ width: "16%" }} />
             </colgroup>
             <thead>
               <tr style={{ background: C.navy, color: "#fff" }}>
-                <th style={{ padding: "5px 8px", textAlign: "left", fontSize: 12 }}>산업화 시대 경제 질서</th>
+                <th style={{ padding: "5px 8px", textAlign: "left", fontSize: 12 }}>산업화 시대</th>
                 <th style={{ padding: "5px 8px", textAlign: "left", fontSize: 12 }}>AI 시대의 타격</th>
                 <th style={{ padding: "5px 8px", textAlign: "left", fontSize: 12 }}>긴급도</th>
               </tr>
@@ -56,17 +59,17 @@ export function CombinedPage() {
         </div>
 
         {/* 표 ② — 3.2 정치 질서의 타격 */}
-        <div style={{ marginBottom: 10 }}>
+        <div>
           <div style={h3s}>3.2 정치 질서의 타격</div>
           <table style={{ width: "100%", borderCollapse: "collapse", tableLayout: "fixed" }}>
             <colgroup>
-              <col style={{ width: "22%" }} />
-              <col style={{ width: "58%" }} />
-              <col style={{ width: "20%" }} />
+              <col style={{ width: "34%" }} />
+              <col style={{ width: "50%" }} />
+              <col style={{ width: "16%" }} />
             </colgroup>
             <thead>
               <tr style={{ background: C.navy, color: "#fff" }}>
-                <th style={{ padding: "5px 8px", textAlign: "left", fontSize: 12 }}>산업화 시대 정치 질서</th>
+                <th style={{ padding: "5px 8px", textAlign: "left", fontSize: 12 }}>산업화 시대</th>
                 <th style={{ padding: "5px 8px", textAlign: "left", fontSize: 12 }}>AI 시대의 타격</th>
                 <th style={{ padding: "5px 8px", textAlign: "left", fontSize: 12 }}>긴급도</th>
               </tr>
@@ -101,6 +104,8 @@ export function CombinedPage() {
             — 루소, 『사회계약론』(1762) · 홉스, 『리바이어던』(1651) · 하버마스, 『공론장의 구조변동』(1962)
           </div>
         </div>
+
+        </div>{/* end grid */}
 
         {/* 표 ③ — 3.3 새로운 사회계약 */}
         <div style={{ flex: 1 }}>
