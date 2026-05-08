@@ -7,7 +7,7 @@ export function IndividualCommunityPage() {
       <Header subtitle="2. 디지털 전환에 따른 개인과 공동체 변화" version="v0.8.2" />
 
       <div style={{ padding: "12px 32px 10px", borderBottom: `2px solid ${C.navy}`, marginBottom: 10 }}>
-        <div style={{ fontSize: 11, letterSpacing: 4, color: C.accent, fontWeight: 800, marginBottom: 5 }}>분업 시대 → 연결 시대</div>
+        <div style={{ fontSize: 12, letterSpacing: 4, color: C.accent, fontWeight: 800, marginBottom: 5 }}>분업 시대 → 연결 시대</div>
         <div style={{ fontSize: 18, fontWeight: 800, color: C.navy, lineHeight: 1.4 }}>
           분업이 인간을 역할로 쪼갰다면, 디지털은 연결로 개인을 강화한다.
           판단력·실행력·파급력이 네트워크를 통해 집중되고, 강화된 개인은 더 많은 자유를 요구한다.
@@ -19,12 +19,12 @@ export function IndividualCommunityPage() {
         {/* 2.1 개인과 공동체의 변화 */}
         <div>
           <div style={h3s}>2.1 개인과 공동체 변화의 역사적 관찰 — 농업시대 · 산업시대 · 디지털시대</div>
-          <div style={{ fontSize: 14, lineHeight: 1.6, color: "#222", marginBottom: 7 }}>
+          <div style={{ fontSize: 12, lineHeight: 1.6, color: "#222", marginBottom: 7 }}>
             새 기술이 개인을 강화할 때마다 — 농업의 토지 소유, 인쇄술의 신앙·지식 해석, 산업의 직업 선택, 인터넷의 정보 접근 — 공동체는 그 자유 요구를 새 권리로 제도화하며 응답해 왔다.
             <strong style={{ color: C.navy }}>디지털·AI 시대도 같은 패턴 위에 있다.</strong>
           </div>
-          <div style={{ fontSize: 11, fontWeight: 700, color: "#666", margin: "0 0 4px", lineHeight: 1.4 }}>시대별 개인·공동체의 동시 변화와 자유 요구의 제도화 — 새 기술이 개인을 강화하면 공동체는 새 권리로 응답해 왔다</div>
-          <table style={{ width: "100%", borderCollapse: "collapse", fontSize: 11.5, marginBottom: 7 }}>
+          <div style={{ fontSize: 12, fontWeight: 700, color: "#666", margin: "0 0 4px", lineHeight: 1.4 }}>시대별 개인·공동체의 동시 변화와 자유 요구의 제도화 — 새 기술이 개인을 강화하면 공동체는 새 권리로 응답해 왔다</div>
+          <table style={{ width: "100%", borderCollapse: "collapse", fontSize: 12, marginBottom: 7 }}>
             <thead>
               <tr style={{ background: C.navy, color: "#fff" }}>
                 <th style={{ padding: "5px 8px", textAlign: "left", width: "8%" }}>시대</th>
@@ -69,10 +69,10 @@ export function IndividualCommunityPage() {
                   <td style={{ padding: "5px 8px", borderBottom: "1px solid #eee", fontWeight: 800, color: highlight ? C.navy : "#333", lineHeight: 1.5, verticalAlign: "top" }}>{age}</td>
                   <td style={{ padding: "5px 8px", borderBottom: "1px solid #eee", color: "#444", lineHeight: 1.5, verticalAlign: "top", fontWeight: 600 }}>{tech}</td>
                   <td style={{ padding: "5px 8px", borderBottom: "1px solid #eee", lineHeight: 1.5, verticalAlign: "top" }}>
-                    {personal.map((line, j) => <div key={j} style={{ fontSize: 11.5, color: "#333", fontWeight: j === 2 ? 600 : 400 }}>{line}</div>)}
+                    {personal.map((line, j) => <div key={j} style={{ fontSize: 12, color: "#333", fontWeight: j === 2 ? 600 : 400 }}>{line}</div>)}
                   </td>
                   <td style={{ padding: "5px 8px", borderBottom: "1px solid #eee", lineHeight: 1.5, verticalAlign: "top" }}>
-                    {community.map((line, j) => <div key={j} style={{ fontSize: 11.5, color: "#333", fontWeight: j === 2 ? 600 : 400 }}>{line}</div>)}
+                    {community.map((line, j) => <div key={j} style={{ fontSize: 12, color: "#333", fontWeight: j === 2 ? 600 : 400 }}>{line}</div>)}
                   </td>
                   <td style={{ padding: "5px 8px", borderBottom: "1px solid #eee", color: "#333", lineHeight: 1.5, verticalAlign: "top" }}>{freedom}</td>
                   <td style={{ padding: "5px 8px", borderBottom: "1px solid #eee", color: highlight ? C.red : "#333", fontWeight: highlight ? 700 : 500, lineHeight: 1.5, verticalAlign: "top" }}>{right}</td>
@@ -80,7 +80,7 @@ export function IndividualCommunityPage() {
               ))}
             </tbody>
           </table>
-          <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 18, fontSize: 14, lineHeight: 1.6, color: "#333" }}>
+          <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 18, fontSize: 12, lineHeight: 1.6, color: "#333" }}>
             <div>
               <strong style={{ color: C.navy }}>개인의 변화 —</strong> 농업시대의 개인은 가족과 마을 안에서 태어난 대로 살았다. 산업시대의 개인은 기업이라는 분업 기계의 한 조각으로 자신을 규정했고 '회사 사람'이 근대적 인간의 표준형이 되었다. 디지털시대의 개인은 AI와 결합하여 과거 조직 하나가 하던 일을 해내며, 조직 밖에서도 살아갈 이유가 생긴다.
             </div>
@@ -99,7 +99,7 @@ export function IndividualCommunityPage() {
               {/* h3s 통일 */}
               <div style={h3s}>2.2 디지털 시대 강화된 개인</div>
 
-              <div style={{ fontSize: 11, fontWeight: 700, color: "#666", margin: "0 0 4px", lineHeight: 1.4 }}>강화의 세 영역</div>
+              <div style={{ fontSize: 12, fontWeight: 700, color: "#666", margin: "0 0 4px", lineHeight: 1.4 }}>강화의 세 영역</div>
               <div style={{ display: "grid", gridTemplateColumns: "1fr", gap: 4, marginBottom: 8 }}>
                 {[
                   { t: "판단력", d: "AI가 판단·추론·전문성을 이전하고 진입장벽을 해체 — 학위 없이도 전문가 수준 도구에 접근.", ex: "법률·의료·재무 자문, 비전공 개발자, 자기학습 분석가." },
@@ -108,17 +108,17 @@ export function IndividualCommunityPage() {
                 ].map(({ t, d, ex }) => (
                   <div key={t} style={{ padding: "4px 8px", borderLeft: `3px solid ${C.navy}`, background: C.bg, display: "grid", gridTemplateColumns: "92px 1fr", gap: 6, alignItems: "baseline" }}>
                     <div style={{ fontSize: 12, fontWeight: 800, color: C.navy }}>{t}</div>
-                    <div style={{ fontSize: 14, lineHeight: 1.5, color: "#222" }}>
+                    <div style={{ fontSize: 12, lineHeight: 1.5, color: "#222" }}>
                       {d} <span style={{ color: C.light, fontStyle: "italic" }}>예: {ex}</span>
                     </div>
                   </div>
                 ))}
               </div>
 
-              <div style={{ fontSize: 14, lineHeight: 1.6, color: "#333", marginBottom: 7 }}>
+              <div style={{ fontSize: 12, lineHeight: 1.6, color: "#333", marginBottom: 7 }}>
                 3영역의 강화는 사회 계층을 재편한다. <strong style={{ color: C.navy }}>판단력</strong>은 AI 인프라를 설계하는 소수(리더 ↑)와 AI를 활용해 부서급 산출에 도달하는 다수(프로)로 갈라놓고, <strong style={{ color: C.navy }}>실행력</strong>은 프로 계층의 일을 자동화해 그 규모를 축소시킨다(프로 ↓). <strong style={{ color: C.navy }}>파급력</strong>은 누구나 매스미디어급 영향력을 가질 수 있게 해 아마추어를 폭증시킨다(아마추어 ↑). AI 접근 자체가 어려운 층은 판단력 결핍으로 격차가 질적으로 심화된다(소외).
               </div>
-              <div style={{ fontSize: 11, fontWeight: 700, color: "#666", margin: "0 0 4px", lineHeight: 1.4 }}>계층 재편</div>
+              <div style={{ fontSize: 12, fontWeight: 700, color: "#666", margin: "0 0 4px", lineHeight: 1.4 }}>계층 재편</div>
               <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr 1fr 1fr", gap: 5 }}>
                 {[
                   { t: "리더", s: "2%→5%", d: "AI 설계자. 기준·플랫폼 재정의.", a: "판단력·실행력 강화로 AI 인프라 설계가 새 권력의 핵심." },
@@ -127,9 +127,9 @@ export function IndividualCommunityPage() {
                   { t: "소외", s: "10%→5%", d: "AI 접근 불가. 격차 질적 심화.", a: "판단력 결핍으로 비율은 줄지만 격차가 질적으로 깊어짐." },
                 ].map(({ t, s, d, a }) => (
                   <div key={t} style={{ padding: "5px 7px", borderTop: `2px solid ${C.navy}`, background: C.bg }}>
-                    <div style={{ fontSize: 11.5, fontWeight: 800, color: C.navy, marginBottom: 1 }}>{t}</div>
-                    <div style={{ fontSize: 11.5, fontWeight: 700, color: "#555", marginBottom: 1 }}>{s}</div>
-                    <div style={{ fontSize: 14, lineHeight: 1.4, color: "#333" }}>{d}</div>
+                    <div style={{ fontSize: 12, fontWeight: 800, color: C.navy, marginBottom: 1 }}>{t}</div>
+                    <div style={{ fontSize: 12, fontWeight: 700, color: "#555", marginBottom: 1 }}>{s}</div>
+                    <div style={{ fontSize: 12, lineHeight: 1.4, color: "#333" }}>{d}</div>
                     <div style={{ fontSize: 10.5, color: C.accent, fontWeight: 700, marginTop: 2, lineHeight: 1.4 }}>← {a}</div>
                   </div>
                 ))}
@@ -141,7 +141,7 @@ export function IndividualCommunityPage() {
               {/* h3s 통일 */}
               <div style={h3s}>2.3 디지털 시대 재구성되는 공동체</div>
 
-              <div style={{ fontSize: 11, fontWeight: 700, color: "#666", margin: "0 0 4px", lineHeight: 1.4 }}>공동체 변화의 3축 — 강화된 개인이 한 국가에 묶이지 않으면서, 공동체의 단위·중심·권한이 동시에 이동한다</div>
+              <div style={{ fontSize: 12, fontWeight: 700, color: "#666", margin: "0 0 4px", lineHeight: 1.4 }}>공동체 변화의 3축 — 강화된 개인이 한 국가에 묶이지 않으면서, 공동체의 단위·중심·권한이 동시에 이동한다</div>
               <div style={{ display: "grid", gridTemplateColumns: "1fr", gap: 4, marginBottom: 7 }}>
                 {[
                   { t: "도시 중심", d: "데이터·AI·인재·창조 산업이 강소도시에 집적. 실험·정책·삶의 질 경쟁 단위가 국가 → 도시로 이동." },
@@ -150,12 +150,12 @@ export function IndividualCommunityPage() {
                 ].map(({ t, d }) => (
                   <div key={t} style={{ padding: "4px 8px", borderLeft: `3px solid ${C.navy}`, background: C.bg, display: "grid", gridTemplateColumns: "92px 1fr", gap: 6, alignItems: "baseline" }}>
                     <div style={{ fontSize: 12, fontWeight: 800, color: C.navy }}>{t}</div>
-                    <div style={{ fontSize: 14, lineHeight: 1.5, color: "#222" }}>{d}</div>
+                    <div style={{ fontSize: 12, lineHeight: 1.5, color: "#222" }}>{d}</div>
                   </div>
                 ))}
               </div>
-              <div style={{ fontSize: 11, fontWeight: 700, color: "#666", margin: "0 0 4px", lineHeight: 1.4 }}>공동체별 재균형 — 가정부터 글로벌까지, 6개 공동체 모두 산업시대 역할에서 디지털시대 역할로 재배치된다</div>
-              <table style={{ width: "100%", borderCollapse: "collapse", fontSize: 11.5 }}>
+              <div style={{ fontSize: 12, fontWeight: 700, color: "#666", margin: "0 0 4px", lineHeight: 1.4 }}>공동체별 재균형 — 가정부터 글로벌까지, 6개 공동체 모두 산업시대 역할에서 디지털시대 역할로 재배치된다</div>
+              <table style={{ width: "100%", borderCollapse: "collapse", fontSize: 12 }}>
                 <thead>
                   <tr style={{ background: C.accent, color: "#fff" }}>
                     <th style={{ padding: "4px 7px", textAlign: "left", width: "12%" }}>공동체</th>
@@ -184,8 +184,8 @@ export function IndividualCommunityPage() {
               </table>
 
               <div style={{ padding: "6px 11px", background: "#f0f4ff", borderLeft: `4px solid ${C.navy}`, marginTop: 7 }}>
-                <div style={{ fontSize: 11, fontWeight: 800, color: C.navy, marginBottom: 2 }}>재균형의 원칙</div>
-                <div style={{ fontSize: 14, lineHeight: 1.6, color: "#222" }}>
+                <div style={{ fontSize: 12, fontWeight: 800, color: C.navy, marginBottom: 2 }}>재균형의 원칙</div>
+                <div style={{ fontSize: 12, lineHeight: 1.6, color: "#222" }}>
                   개인이 혼자 못 하는 일에만 위임 · 위임된 권력은 투명하게 감시 · 목적을 달성하면 자동 환수 · 개인·공동체의 이익이 충돌할 때는 공공선이 기준.
                 </div>
               </div>

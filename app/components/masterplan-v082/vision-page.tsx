@@ -19,25 +19,25 @@ export function VisionPage() {
         <div style={{ flex: 1, padding: "8px 12px", background: C.bg, borderRight: `1px solid ${C.line}` }}>
           <div style={{ fontSize: 9.5, fontWeight: 800, color: C.accent, marginBottom: 2, letterSpacing: 0.5 }}>1.1 분업 시대 → 연결 시대</div>
           <div style={{ fontSize: 12.5, fontWeight: 800, color: C.navy, lineHeight: 1.3, marginBottom: 3 }}>디지털 연결이 개인을 강화한다</div>
-          <div style={{ fontSize: 14, color: "#444", lineHeight: 1.45 }}>분업이 인간을 역할로 쪼갰다면, 디지털은 연결로 강화한다. 강화된 개인은 판단력·실행력·파급력이 증대되어 더 많은 자유를 필요로 한다.</div>
+          <div style={{ fontSize: 12, color: "#444", lineHeight: 1.45 }}>분업이 인간을 역할로 쪼갰다면, 디지털은 연결로 강화한다. 강화된 개인은 판단력·실행력·파급력이 증대되어 더 많은 자유를 필요로 한다.</div>
         </div>
         <div style={{ display: "flex", alignItems: "center", padding: "0 7px", fontSize: 18, color: C.navy, fontWeight: 300 }}>→</div>
         <div style={{ flex: 1, padding: "8px 12px", background: "#fff5f5", borderRight: `1px solid ${C.line}` }}>
           <div style={{ fontSize: 9.5, fontWeight: 800, color: C.red, marginBottom: 2, letterSpacing: 0.5 }}>1.2 기존 질서의 균열</div>
           <div style={{ fontSize: 12.5, fontWeight: 800, color: C.red, lineHeight: 1.3, marginBottom: 3 }}>민주주의·자본주의가 응답하지 못한다</div>
-          <div style={{ fontSize: 14, color: "#444", lineHeight: 1.45 }}>산업시대 질서는 "역할 인간의 집합"을, 디지털시대 질서는 "정체성을 실현하는 강화된 개인의 연결"을 전제로 한다. 기존 질서는 후자에 응답하지 못해 위협이 현실이 된다.</div>
+          <div style={{ fontSize: 12, color: "#444", lineHeight: 1.45 }}>산업시대 질서는 "역할 인간의 집합"을, 디지털시대 질서는 "정체성을 실현하는 강화된 개인의 연결"을 전제로 한다. 기존 질서는 후자에 응답하지 못해 위협이 현실이 된다.</div>
         </div>
         <div style={{ display: "flex", alignItems: "center", padding: "0 7px", fontSize: 18, color: C.navy, fontWeight: 300 }}>→</div>
         <div style={{ flex: 1, padding: "8px 12px", background: "#f0f5ff", borderRight: `1px solid ${C.line}` }}>
           <div style={{ fontSize: 9.5, fontWeight: 800, color: "#3b82f6", marginBottom: 2, letterSpacing: 0.5 }}>1.3 공동체의 재구성</div>
           <div style={{ fontSize: 12.5, fontWeight: 800, color: C.navy, lineHeight: 1.3, marginBottom: 3 }}>새로운 사회계약이 필요하다</div>
-          <div style={{ fontSize: 14, color: "#444", lineHeight: 1.45 }}>강화된 개인의 자유를 담아낼 새로운 경제 질서와 정치 질서 — 새로운 사회계약이 필요하다.</div>
+          <div style={{ fontSize: 12, color: "#444", lineHeight: 1.45 }}>강화된 개인의 자유를 담아낼 새로운 경제 질서와 정치 질서 — 새로운 사회계약이 필요하다.</div>
         </div>
         <div style={{ display: "flex", alignItems: "center", padding: "0 7px", fontSize: 18, color: C.navy, fontWeight: 300 }}>→</div>
         <div style={{ flex: 1, padding: "8px 12px", background: "#f0fff4" }}>
           <div style={{ fontSize: 9.5, fontWeight: 800, color: "#16a34a", marginBottom: 2, letterSpacing: 0.5 }}>1.4 우리의 연구</div>
           <div style={{ fontSize: 12.5, fontWeight: 800, color: C.navy, lineHeight: 1.3, marginBottom: 3 }}>이것을 현실화한다</div>
-          <div style={{ fontSize: 14, color: "#444", lineHeight: 1.45 }}>위협 진단, 통제 모델, 전환 경로를 연구하고 정책·공론장·국제 협력으로 끌어낸다.</div>
+          <div style={{ fontSize: 12, color: "#444", lineHeight: 1.45 }}>위협 진단, 통제 모델, 전환 경로를 연구하고 정책·공론장·국제 협력으로 끌어낸다.</div>
         </div>
       </div>
 
