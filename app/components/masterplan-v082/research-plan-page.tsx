@@ -58,7 +58,7 @@ export function ResearchPlanPage() {
           <div>
             <div style={h3s}>4.1 연구 목표</div>
             <div style={{ padding: "10px 14px" }}>
-              <p style={{ margin: 0, fontSize: 19, lineHeight: 1.7, color: "#222" }}>
+              <p style={{ margin: 0, fontSize: 14, lineHeight: 1.7, color: "#222" }}>
                 디지털 기술이 가져오는 사회적 충격에 대응하는 구체적 해결책을 제시하고 실행 가능한 모델로 고도화한다.
               </p>
             </div>
@@ -74,7 +74,7 @@ export function ResearchPlanPage() {
               ].map(({ t, d }) => (
                 <div key={t} style={{ padding: "8px 10px", borderTop: `2px solid ${C.navy}`, background: C.bg }}>
                   <div style={{ fontSize: 13, fontWeight: 800, color: C.navy, marginBottom: 4 }}>{t}</div>
-                  <div style={{ fontSize: 19, lineHeight: 1.55, color: "#333" }}>{d}</div>
+                  <div style={{ fontSize: 14, lineHeight: 1.55, color: "#333" }}>{d}</div>
                 </div>
               ))}
             </div>
@@ -94,7 +94,7 @@ export function ResearchPlanPage() {
                 <div style={{ fontSize: 15, fontWeight: 900, color: C.navy, minWidth: 18 }}>{letter}</div>
                 <div>
                   <div style={{ fontSize: 13, fontWeight: 700, color: C.navy, marginBottom: 3 }}>{t}</div>
-                  <div style={{ fontSize: 19, lineHeight: 1.55, color: "#333" }}>{d}</div>
+                  <div style={{ fontSize: 14, lineHeight: 1.55, color: "#333" }}>{d}</div>
                 </div>
               </div>
             ))}
@@ -105,7 +105,7 @@ export function ResearchPlanPage() {
             <div style={{ padding: "9px 10px", marginBottom: 8, background: C.bg, borderLeft: `3px solid ${C.navy}` }}>
               <div style={{ fontSize: 13.5, fontWeight: 800, color: C.navy, marginBottom: 2 }}>유호현 (팀장)</div>
               <div style={{ fontSize: 12, fontWeight: 600, color: "#444", marginBottom: 4, lineHeight: 1.45 }}>총괄 · 이론적 토대 (A) · AI 안전 평가 프레임워크 (D)</div>
-              <div style={{ fontSize: 19, lineHeight: 1.55, color: "#333" }}>
+              <div style={{ fontSize: 14, lineHeight: 1.55, color: "#333" }}>
                 연구 전체 방향 설정, 회장님·원장님과 소통. 새 사회계약의 이론적 토대 (A) 정립, 6위협 × 판단력·실행력·파급력 평가 매트릭스 설계 (D), UK AISI·MLCommons·GovAI·Stanford HAI 협력, 단행본 편집 총괄.
               </div>
             </div>
@@ -118,7 +118,7 @@ export function ResearchPlanPage() {
                 <div key={name} style={{ padding: "9px 10px", background: C.bg, borderLeft: `3px solid ${C.navy}` }}>
                   <div style={{ fontSize: 13.5, fontWeight: 800, color: C.navy, marginBottom: 2 }}>{name}</div>
                   <div style={{ fontSize: 12, fontWeight: 600, color: "#444", marginBottom: 4, lineHeight: 1.45 }}>{role}</div>
-                  <div style={{ fontSize: 19, lineHeight: 1.55, color: "#333" }}>{detail}</div>
+                  <div style={{ fontSize: 14, lineHeight: 1.55, color: "#333" }}>{detail}</div>
                 </div>
               ))}
             </div>
@@ -163,7 +163,7 @@ export function ResearchPlanPage() {
               <div key={t} style={{ padding: "9px 11px", borderTop: `2px solid ${C.navy}`, background: C.bg }}>
                 <div style={{ fontSize: 13, fontWeight: 800, color: C.navy, marginBottom: 6 }}>{t}</div>
                 {items.map((item, i) => (
-                  <div key={i} style={{ display: "flex", gap: 5, marginBottom: 4, fontSize: 19, lineHeight: 1.5, color: "#333" }}>
+                  <div key={i} style={{ display: "flex", gap: 5, marginBottom: 4, fontSize: 14, lineHeight: 1.5, color: "#333" }}>
                     <span style={{ color: C.navy, fontWeight: 700, flexShrink: 0 }}>—</span>
                     <span>{item}</span>
                   </div>
