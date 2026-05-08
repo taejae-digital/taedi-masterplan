@@ -18,11 +18,11 @@ export function Header({ subtitle, version = "v0.7" }: { subtitle: string; versi
   );
 }
 
-export function Footer() {
+export function Footer({ version = "v0.7" }: { version?: string } = {}) {
   return (
     <div style={{ margin: "14px 32px 0", padding: "7px 0", borderTop: `1px solid ${C.line}`, display: "flex", justifyContent: "space-between", fontSize: 12, color: C.light }}>
       <span>태재미래전략연구원 디지털 전환과 사회변혁팀 | 내부 문서</span>
-      <span>2026.05 · v0.7</span>
+      <span>2026.05 · {version}</span>
     </div>
   );
 }
@@ -43,7 +43,7 @@ export function Banner({ children }: { children: React.ReactNode }) {
   );
 }
 
-export const ps: React.CSSProperties = { margin: "0 0 10px", fontSize: 14, lineHeight: 1.85, color: "#222", textAlign: "justify" };
+export const ps: React.CSSProperties = { margin: "0 0 10px", fontSize: 19, lineHeight: 1.85, color: "#222", textAlign: "justify" };
 export const h3s: React.CSSProperties = { fontSize: 14.5, fontWeight: 800, color: "#1a2744", margin: "14px 0 7px", paddingBottom: 3, borderBottom: "1px solid #ddd" };
 export const body: React.CSSProperties = { fontSize: 13.5, lineHeight: 1.65, color: "#222" };
 export const cell: React.CSSProperties = { padding: "5px 7px", borderBottom: "1px solid #eee", verticalAlign: "top", fontSize: 13, lineHeight: 1.45 };
