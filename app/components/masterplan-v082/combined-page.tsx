@@ -1,0 +1,270 @@
+import { C } from "../masterplan-v705/constants";
+import { Header, Footer, h3s } from "../masterplan-v705/shared";
+
+const urgColor = (u: string) =>
+  u === "진행 중" ? "#991b1b" : u === "임박" ? "#b91c1c" : C.red;
+
+const threatMeta: Record<string, { label: string; bg: string }> = {
+  "①": { label: "①폭력독점", bg: "#6d28d9" },
+  "②": { label: "②권력집중", bg: "#1d4ed8" },
+  "③": { label: "③공론장",   bg: "#b45309" },
+  "④": { label: "④인간존엄", bg: "#b91c1c" },
+  "⑤": { label: "⑤글로벌",  bg: "#0f766e" },
+  "⑥": { label: "⑥지속성",  bg: "#15803d" },
+};
+
+function TBadge({ code }: { code: string }) {
+  const m = threatMeta[code];
+  if (!m) return null;
+  return (
+    <span style={{
+      display: "inline-block", fontSize: 9, fontWeight: 800, color: "#fff",
+      background: m.bg, borderRadius: 2, padding: "1px 4px",
+      lineHeight: 1.4, marginRight: 3, flexShrink: 0, whiteSpace: "nowrap",
+    }}>{m.label}</span>
+  );
+}
+
+export function CombinedPage() {
+  return (
+    <div style={{ pageBreakBefore: "always", height: "281mm", overflow: "hidden", display: "flex", flexDirection: "column" }}>
+      <Header subtitle="3. 질서의 붕괴와 새 사회계약" version="v0.8.2" />
+
+      <div style={{ padding: "4px 32px 0", display: "flex", flexDirection: "column", flex: 1 }}>
+
+        {/* 3.1 + 3.2 좌우 2컬럼 */}
+        <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 14, marginBottom: 8 }}>
+
+          {/* 3.1 디지털 시대 정치질서 */}
+          <div>
+            <div style={h3s}>3.1 디지털 시대 정치질서</div>
+            <table style={{ width: "100%", borderCollapse: "collapse", tableLayout: "fixed" }}>
+              <colgroup>
+                <col style={{ width: "20%" }} />
+                <col style={{ width: "40%" }} />
+                <col style={{ width: "40%" }} />
+              </colgroup>
+              <thead>
+                <tr style={{ background: C.navy, color: "#fff" }}>
+                  <th style={{ padding: "4px 7px", textAlign: "left", fontSize: 11 }}>산업화 시대</th>
+                  <th style={{ padding: "4px 7px", textAlign: "left", fontSize: 11 }}>AI 시대의 타격</th>
+                  <th style={{ padding: "4px 7px", textAlign: "left", fontSize: 11 }}>구체적 위협 예시</th>
+                </tr>
+              </thead>
+              <tbody>
+                {[
+                  {
+                    prev: "국가의 폭력 독점",
+                    impact: "무기 설계·해킹·자율무기 능력의 개인 이전. 국가가 갖던 폭력 독점이 깨진다.",
+                    threats: [
+                      { urg: "임박",   text: "AI 무기 개인화·국가 통제 우회", codes: ["①"] },
+                      { urg: "진행 중", text: "AI 사이버 공격 능력 보편화",   codes: ["①"] },
+                    ],
+                  },
+                  {
+                    prev: "전문가·관료 위임제",
+                    impact: "엘리트에 의한 정치 와해. 전문가 권위 붕괴, 위임 정당성 약화.",
+                    threats: [
+                      { urg: "진행 중", text: "AI 허위정보로 전문가 신뢰 붕괴", codes: ["③"] },
+                      { urg: "진행 중", text: "포퓰리즘·반엘리트 정서 심화",   codes: ["③"] },
+                    ],
+                  },
+                  {
+                    prev: "공론장과 여론 형성",
+                    impact: "가짜뉴스·알고리즘에 의한 공론장 왜곡. 선동과 포퓰리즘 가속.",
+                    threats: [
+                      { urg: "진행 중", text: "AI 딥페이크·선거 개입",        codes: ["③"] },
+                      { urg: "진행 중", text: "에코챔버 심화·공론장 분열",     codes: ["③"] },
+                    ],
+                  },
+                  {
+                    prev: "선출된 대표제",
+                    impact: "빅테크 등 선출되지 않은 권력의 대표성 문제. 시민 위임 없이 사회적 결정을 좌우.",
+                    threats: [
+                      { urg: "진행 중", text: "빅테크 정책 독점·사실상 입법",  codes: ["②"] },
+                      { urg: "임박",    text: "민주적 통제 밖 AI 거버넌스",    codes: ["②"] },
+                    ],
+                  },
+                  {
+                    prev: "법인격 체계의 한계",
+                    impact: "자연인·법인 외에 AI 에이전트·자율 시스템을 담을 새 법적 주체(전자인) 부재. 책임 귀속 공백 발생.",
+                    threats: [
+                      { urg: "임박",    text: "AI 에이전트 행위의 법적 책임 귀속 불가", codes: ["②", "⑤"] },
+                      { urg: "진행 중", text: "자율 시스템 피해에 대한 사법 공백",       codes: ["⑤"] },
+                    ],
+                  },
+                ].map(({ prev, impact, threats }, i) => (
+                  <tr key={i} style={{ background: i % 2 ? C.bg : "#fff" }}>
+                    <td style={{ padding: "4px 7px", borderBottom: "1px solid #eee", fontSize: 11, verticalAlign: "top", lineHeight: 1.5, fontWeight: 700, color: C.navy }}>{prev}</td>
+                    <td style={{ padding: "4px 7px", borderBottom: "1px solid #eee", fontSize: 11, verticalAlign: "top", lineHeight: 1.5, color: "#333" }}>{impact}</td>
+                    <td style={{ padding: "4px 7px", borderBottom: "1px solid #eee", verticalAlign: "top" }}>
+                      {threats.map((t, j) => (
+                        <div key={j} style={{ marginBottom: j < threats.length - 1 ? 4 : 0 }}>
+                          <span style={{ fontSize: 11, color: "#333", lineHeight: 1.4 }}>{t.text}</span>
+                        </div>
+                      ))}
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+            <div style={{ marginTop: 3, fontSize: 10, color: "#888", fontStyle: "italic" }}>
+              — 루소, 『사회계약론』(1762) · 롤스, 『정의론』(1971) · 하버마스, 『공론장의 구조변동』(1962)
+            </div>
+          </div>
+
+          {/* 3.2 디지털 시대 경제질서 */}
+          <div>
+            <div style={h3s}>3.2 디지털 시대 경제질서</div>
+            <table style={{ width: "100%", borderCollapse: "collapse", tableLayout: "fixed" }}>
+              <colgroup>
+                <col style={{ width: "20%" }} />
+                <col style={{ width: "40%" }} />
+                <col style={{ width: "40%" }} />
+              </colgroup>
+              <thead>
+                <tr style={{ background: C.navy, color: "#fff" }}>
+                  <th style={{ padding: "4px 7px", textAlign: "left", fontSize: 11 }}>산업화 시대</th>
+                  <th style={{ padding: "4px 7px", textAlign: "left", fontSize: 11 }}>AI 시대의 타격</th>
+                  <th style={{ padding: "4px 7px", textAlign: "left", fontSize: 11 }}>구체적 위협 예시</th>
+                </tr>
+              </thead>
+              <tbody>
+                {[
+                  {
+                    prev: "노동=소득 원리",
+                    impact: "노동의 희소가치 감소. 자동화 이익이 데이터 독점자에 집중.",
+                    threats: [
+                      { urg: "임박",    text: "대규모 직업 재편·실업 충격",          codes: ["④"] },
+                      { urg: "진행 중", text: "플랫폼 노동·1인 묶음직업 확산",        codes: ["④"] },
+                    ],
+                  },
+                  {
+                    prev: "소득 기반 조세 구조",
+                    impact: "노동소득 축소로 소득세·사회보험 기반 와해. 자동화 자본이 조세 망 밖에 위치.",
+                    threats: [
+                      { urg: "임박",    text: "조세 징수 어려움·재정 기반 약화",      codes: ["②"] },
+                      { urg: "진행 중", text: "빅테크의 조세 우회·역외 이전",          codes: ["②"] },
+                    ],
+                  },
+                  {
+                    prev: "중간계층 임금 구조",
+                    impact: "AI 인프라 보유자와 노동자 간 극단적 양극화 가속.",
+                    threats: [
+                      { urg: "진행 중", text: "AI 플랫폼 독점 → 새 디지털 봉건제",   codes: ["②"] },
+                      { urg: "진행 중", text: "전문직 소득 급감·중간계층 축소",        codes: ["④"] },
+                    ],
+                  },
+                  {
+                    prev: "복지국가 모델",
+                    impact: "임금노동 전제 복지 체계의 한계. 복지 재편 필요.",
+                    threats: [
+                      { urg: "임박",    text: "노동법·복지가 플랫폼·긱 노동에 뒤처짐", codes: ["④"] },
+                      { urg: "진행 중", text: "직업 소멸 속도가 재훈련 속도를 초과",   codes: ["④"] },
+                    ],
+                  },
+                  {
+                    prev: "소유권·시장 원리",
+                    impact: "데이터·알고리즘·AI 모델의 소유권 모호성. 네트워크 효과·데이터 독점으로 시장 경쟁 자체가 작동 불가.",
+                    threats: [
+                      { urg: "진행 중", text: "AI 모델 학습 데이터 소유권 분쟁",      codes: ["②"] },
+                      { urg: "임박",    text: "데이터센터 독점·에너지 외부효과 무규제", codes: ["②", "⑥"] },
+                    ],
+                  },
+                ].map(({ prev, impact, threats }, i) => (
+                  <tr key={i} style={{ background: i % 2 ? C.bg : "#fff" }}>
+                    <td style={{ padding: "4px 7px", borderBottom: "1px solid #eee", fontSize: 11, verticalAlign: "top", lineHeight: 1.5, fontWeight: 700, color: C.navy }}>{prev}</td>
+                    <td style={{ padding: "4px 7px", borderBottom: "1px solid #eee", fontSize: 11, verticalAlign: "top", lineHeight: 1.5, color: "#333" }}>{impact}</td>
+                    <td style={{ padding: "4px 7px", borderBottom: "1px solid #eee", verticalAlign: "top" }}>
+                      {threats.map((t, j) => (
+                        <div key={j} style={{ marginBottom: j < threats.length - 1 ? 4 : 0 }}>
+                          <span style={{ fontSize: 11, color: "#333", lineHeight: 1.4 }}>{t.text}</span>
+                        </div>
+                      ))}
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+            <div style={{ marginTop: 3, fontSize: 10, color: "#888", fontStyle: "italic" }}>
+              — 아담 스미스, 『국부론』(1776) · 카를 마르크스, 『자본론』(1867)
+            </div>
+          </div>
+        </div>{/* end 3.1/3.2 grid */}
+
+        {/* 3.3 새로운 사회계약 */}
+        <div style={{ flex: 1 }}>
+          <div style={h3s}>3.3 새로운 사회계약</div>
+
+          {/* 상단: 기존 4카드 (2×2) */}
+          <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 8, marginBottom: 8 }}>
+
+            <div style={{ padding: "5px 10px", background: "#fafafa", borderLeft: "3px solid #ccc", borderRadius: 2 }}>
+              <div style={{ fontSize: 12, fontWeight: 800, color: C.red, marginBottom: 3 }}>자본주의 & 민주주의의 위기</div>
+              <div style={{ fontSize: 11, color: "#222", lineHeight: 1.55 }}>
+                정치질서에서 예견되는 위협(폭력 독점 와해, 공론장 왜곡, 대표성 붕괴, 법인격 공백)과 경제질서에서 예견되는 위협(양극화, 조세 와해, 소유권 모호성)이 결합되어 산업시대 양대 질서 자체가 한계에 도달한다. 자유민주주의는 한 사람 한 표의 원칙 위에 서 있지만, 알고리즘이 여론을 설계하고 빅테크가 입법을 좌우하는 구조에서 그 원칙은 공허해진다. 시장 자본주의는 경쟁을 통한 효율을 전제하지만, 데이터·알고리즘 독점이 경쟁 자체를 원천 봉쇄한다. 국가는 폭력·화폐·과세 독점으로 작동해 왔지만, 세 독점 모두 디지털 기술 앞에서 우회 가능해진다. 기존 제도의 실패가 아니라, 산업시대를 위해 설계된 제도가 디지털시대에 작동하지 않는 구조적 한계다.
+              </div>
+            </div>
+
+            <div style={{ padding: "5px 10px", background: "#fafafa", borderLeft: "3px solid #ccc", borderRadius: 2 }}>
+              <div style={{ fontSize: 12, fontWeight: 800, color: C.navy, marginBottom: 3 }}>새로운 사회계약의 마련</div>
+              <div style={{ fontSize: 11, color: "#222", lineHeight: 1.55 }}>
+                산업시대 사회계약을 보완하는 것이 아니라, 강화된 개인을 품을 새 질서를 처음부터 다시 설계하는 작업이다. 루소의 사회계약론이 왕권신수설을 대체했듯, 이번에는 국민국가 중심의 계약이 더 작은 단위와 더 큰 단위를 아우르는 다층 계약으로 대체되어야 한다. <strong style={{ color: C.navy }}>정체성 실현권</strong>, <strong style={{ color: C.navy }}>알고리즘 자기결정권</strong>, <strong style={{ color: C.navy }}>AI 인프라 평등 접근권</strong> 등 새 권리와 거버넌스가 필요하다. 이 권리들은 헌법 개정이나 국제 조약 없이는 실현될 수 없으며, 기술 기업의 자발적 윤리 선언만으로는 충분하지 않다. 새 사회계약의 핵심 질문은 '누가 AI를 통제하는가'가 아니라 '누구의 이익을 위해 AI가 작동하는가'이다.
+              </div>
+            </div>
+
+            <div style={{ padding: "5px 10px", background: "#fafafa", borderLeft: "3px solid #ccc", borderRadius: 2 }}>
+              <div style={{ fontSize: 12, fontWeight: 800, color: "#16a34a", marginBottom: 3 }}>진행 중인 노력의 사례</div>
+              <div style={{ fontSize: 11, color: "#222", lineHeight: 1.55 }}>
+                <strong>Law Zero</strong> — Yoshua Bengio가 주도한 AI 안전성을 위한 국제 규범 설계 시도로, AI 개발의 최소 안전 기준을 법적 구속력 있는 조약으로 만들려는 운동이다. <strong>ARIA(영국)</strong> — 사회 위협을 사전에 차단하는 첨단 연구 거버넌스 기관으로, 정부가 선제적으로 AI 위험 연구를 주도하는 모델이다. EU AI Act는 고위험 AI 시스템에 사전 등록·감사 의무를 부과하며 전 세계 규제의 기준점이 되고 있다. 세 사례 모두 단일 국가를 넘는 집단 행동을 모색하거나, 국가가 기업보다 앞서 규범을 설계하려는 시도다. 공통 교훈은 하나다 — 기술이 배치된 뒤 규제하는 것은 너무 늦다.
+              </div>
+            </div>
+
+            <div style={{ padding: "5px 10px", background: "#fafafa", borderLeft: "3px solid #ccc", borderRadius: 2 }}>
+              <div style={{ fontSize: 12, fontWeight: 800, color: "#3b82f6", marginBottom: 3 }}>세계정부 수준의 규율</div>
+              <div style={{ fontSize: 11, color: "#222", lineHeight: 1.55 }}>
+                기업이 세계정부 역할을 대체하면 <strong>동인도회사형 제국</strong>이 가능해진다. 17세기 동인도회사는 군대·화폐·조세 권한을 보유한 사실상의 국가였다 — 빅테크의 현재 궤도가 이와 다르지 않다. 빅테크가 규제해야 할 국가보다 강한 현실에서, 단일 국가의 규제는 플랫폼 이전 한 번으로 무력화된다. 새 사회계약의 <span style={{ color: C.red, fontWeight: 800 }}>주체는 단일 국가가 아닌 민주국가 연합의 집단 행동</span>이어야 하며, 이는 선택이 아니라 구조적 필요다. 핵·생화학무기 통제가 국제 조약으로만 가능했듯, AI 거버넌스 역시 국가 연합 수준의 강제력 있는 규율 없이는 작동하지 않는다.
+              </div>
+            </div>
+
+          </div>
+
+          {/* 하단: 새 권리 3카드 (1×3) */}
+          <div style={{ marginBottom: 4 }}>
+            <div style={{ fontSize: 10.5, fontWeight: 800, color: C.navy, letterSpacing: 1, marginBottom: 5, borderBottom: `1px solid ${C.navy}`, paddingBottom: 2, display: "inline-block" }}>새로운 권리의 정립</div>
+          </div>
+          <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr 1fr", gap: 8 }}>
+
+            <div style={{ padding: "5px 10px", background: "#fafafa", borderLeft: "3px solid #ccc", borderRadius: 2 }}>
+              <div style={{ fontSize: 12, fontWeight: 800, color: "#7c3aed", marginBottom: 3 }}>정체성 실현권</div>
+              <div style={{ fontSize: 11, color: "#222", lineHeight: 1.55 }}>
+                직업·소속에 묶이지 않을 권리. 돌봄·창작·학습 기여를 소득·사회보험과 연결하는 인정 구조.
+              </div>
+              <div style={{ fontSize: 10, color: "#7c3aed", fontWeight: 600, marginTop: 4 }}>거버넌스 단위: 도시·협동조합·디지털 공동체</div>
+            </div>
+
+            <div style={{ padding: "5px 10px", background: "#fafafa", borderLeft: "3px solid #ccc", borderRadius: 2 }}>
+              <div style={{ fontSize: 12, fontWeight: 800, color: "#2563eb", marginBottom: 3 }}>AI 인프라 평등 접근권</div>
+              <div style={{ fontSize: 11, color: "#222", lineHeight: 1.55 }}>
+                AI·연산·데이터의 공공재화. 데이터 주권·이동권. 플랫폼 독점의 구조적 해체.
+              </div>
+              <div style={{ fontSize: 10, color: "#2563eb", fontWeight: 600, marginTop: 4 }}>거버넌스 단위: 국가·공공 AI 인프라·국제 표준</div>
+            </div>
+
+            <div style={{ padding: "5px 10px", background: "#fafafa", borderLeft: "3px solid #ccc", borderRadius: 2 }}>
+              <div style={{ fontSize: 12, fontWeight: 800, color: C.accent, marginBottom: 3 }}>알고리즘 자기결정권</div>
+              <div style={{ fontSize: 11, color: "#222", lineHeight: 1.55 }}>
+                알고리즘 결정에 대한 설명 요구권·거부권. 자동 판단 결과에 대한 인간 검토 보장.
+              </div>
+              <div style={{ fontSize: 10, color: C.accent, fontWeight: 600, marginTop: 4 }}>거버넌스 단위: 민주국가 연합·세계시민 거버넌스</div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+
+      <Footer version="v0.8.2" />
+    </div>
+  );
+}
