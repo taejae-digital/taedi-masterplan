@@ -209,7 +209,7 @@ export function CombinedPage() {
             <div style={{ padding: "5px 10px", background: "#fafafa", borderLeft: "3px solid #ccc", borderRadius: 2 }}>
               <div style={{ fontSize: 12, fontWeight: 800, color: "#111", marginBottom: 3 }}>새로운 사회계약의 마련</div>
               <div style={{ fontSize: 12, color: "#222", lineHeight: 1.55 }}>
-                산업시대 사회계약을 보완하는 것이 아니라, 강화된 개인을 품을 새 질서를 처음부터 다시 설계하는 작업이다. 루소의 사회계약론이 왕권신수설을 대체했듯, 이번에는 국민국가 중심의 계약이 더 작은 단위와 더 큰 단위를 아우르는 다층 계약으로 대체되어야 한다. <strong style={{ color: C.navy }}>정체성 실현권</strong>, <strong style={{ color: C.navy }}>알고리즘 자기결정권</strong>, <strong style={{ color: C.navy }}>AI 인프라 평등 접근권</strong> 등 새 권리와 거버넌스가 필요하다. 이 권리들은 헌법 개정이나 국제 조약 없이는 실현될 수 없으며, 기술 기업의 자발적 윤리 선언만으로는 충분하지 않다. 새 사회계약의 핵심 질문은 '누가 AI를 통제하는가'가 아니라 '누구의 이익을 위해 AI가 작동하는가'이다.
+                산업시대 사회계약을 보완하는 것이 아니라, 강화된 개인을 품을 새 질서를 처음부터 다시 설계하는 작업이다. 루소의 사회계약론이 왕권신수설을 대체했듯, 이번에는 국민국가 중심의 계약이 더 작은 단위와 더 큰 단위를 아우르는 다층 계약으로 대체되어야 한다. <strong>정체성 실현권</strong>, <strong>알고리즘 자기결정권</strong>, <strong>AI 인프라 평등 접근권</strong> 등 새 권리와 거버넌스가 필요하다. 이 권리들은 헌법 개정이나 국제 조약 없이는 실현될 수 없으며, 기술 기업의 자발적 윤리 선언만으로는 충분하지 않다. 새 사회계약의 핵심 질문은 '누가 AI를 통제하는가'가 아니라 '누구의 이익을 위해 AI가 작동하는가'이다.
               </div>
             </div>
 
@@ -223,7 +223,7 @@ export function CombinedPage() {
             <div style={{ padding: "5px 10px", background: "#fafafa", borderLeft: "3px solid #ccc", borderRadius: 2 }}>
               <div style={{ fontSize: 12, fontWeight: 800, color: "#111", marginBottom: 3 }}>세계정부 수준의 규율</div>
               <div style={{ fontSize: 12, color: "#222", lineHeight: 1.55 }}>
-                기업이 세계정부 역할을 대체하면 <strong>동인도회사형 제국</strong>이 가능해진다. 17세기 동인도회사는 군대·화폐·조세 권한을 보유한 사실상의 국가였다 — 빅테크의 현재 궤도가 이와 다르지 않다. 빅테크가 규제해야 할 국가보다 강한 현실에서, 단일 국가의 규제는 플랫폼 이전 한 번으로 무력화된다. 새 사회계약의 <span style={{ color: C.red, fontWeight: 800 }}>주체는 단일 국가가 아닌 민주국가 연합의 집단 행동</span>이어야 하며, 이는 선택이 아니라 구조적 필요다. 핵·생화학무기 통제가 국제 조약으로만 가능했듯, AI 거버넌스 역시 국가 연합 수준의 강제력 있는 규율 없이는 작동하지 않는다.
+                기업이 세계정부 역할을 대체하면 <strong>동인도회사형 제국</strong>이 가능해진다. 17세기 동인도회사는 군대·화폐·조세 권한을 보유한 사실상의 국가였다 — 빅테크의 현재 궤도가 이와 다르지 않다. 빅테크가 규제해야 할 국가보다 강한 현실에서, 단일 국가의 규제는 플랫폼 이전 한 번으로 무력화된다. 새 사회계약의 <span style={{ fontWeight: 800 }}>주체는 단일 국가가 아닌 민주국가 연합의 집단 행동</span>이어야 하며, 이는 선택이 아니라 구조적 필요다. 핵·생화학무기 통제가 국제 조약으로만 가능했듯, AI 거버넌스 역시 국가 연합 수준의 강제력 있는 규율 없이는 작동하지 않는다.
               </div>
             </div>
 
@@ -231,7 +231,7 @@ export function CombinedPage() {
 
           {/* 하단: 새 권리 3카드 (1×3) */}
           <div style={{ marginBottom: 4 }}>
-            <div style={{ fontSize: 10.5, fontWeight: 800, color: C.navy, letterSpacing: 1, marginBottom: 5, borderBottom: `1px solid ${C.navy}`, paddingBottom: 2, display: "inline-block" }}>새로운 권리의 정립</div>
+            <div style={{ fontSize: 10.5, fontWeight: 800, color: "#111", letterSpacing: 1, marginBottom: 5, borderBottom: "1px solid #111", paddingBottom: 2, display: "inline-block" }}>새로운 권리의 정립</div>
           </div>
           <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr 1fr", gap: 8 }}>
 
@@ -240,7 +240,7 @@ export function CombinedPage() {
               <div style={{ fontSize: 12, color: "#222", lineHeight: 1.55 }}>
                 직업·소속에 묶이지 않을 권리. 농업시대의 토지 소유권, 산업시대의 직업선택권처럼 디지털시대는 정체성을 스스로 설계하고 실현할 권리를 요구한다. 돌봄·창작·학습 기여를 소득·사회보험과 연결하는 인정 구조가 필요하다. 기존 임금노동 중심의 복지 체계로는 이 기여를 측정할 수 없기 때문이다. 정체성 실현권은 단순한 자유의 확장이 아니라, 강화된 개인이 직업 밖에서도 삶을 지속할 수 있는 물적 토대의 설계를 요구한다.
               </div>
-              <div style={{ fontSize: 12, color: "#7c3aed", fontWeight: 600, marginTop: 4 }}>거버넌스 단위: 도시·협동조합·디지털 공동체</div>
+              <div style={{ fontSize: 12, color: "#111", fontWeight: 600, marginTop: 4 }}>거버넌스 단위: 도시·협동조합·디지털 공동체</div>
             </div>
 
             <div style={{ padding: "5px 10px", background: "#fafafa", borderLeft: "3px solid #ccc", borderRadius: 2 }}>
@@ -248,7 +248,7 @@ export function CombinedPage() {
               <div style={{ fontSize: 12, color: "#222", lineHeight: 1.55 }}>
                 AI·연산·데이터의 공공재화. 데이터 주권·이동권. 플랫폼 독점의 구조적 해체. AI 인프라가 소수 빅테크에 독점된 현실에서 접근 격차는 곧 역량 격차, 역량 격차는 곧 계층 격차로 이어진다. 전기·도로·통신망이 공공재가 되었듯, AI 연산 자원과 데이터 접근 역시 공공재로 다뤄야 새 사회계약이 작동한다. 개인은 자신의 데이터에 대한 주권과 이동권을 가져야 하며, 플랫폼은 독점적 네트워크 효과를 구조적으로 해체해야 한다.
               </div>
-              <div style={{ fontSize: 12, color: "#2563eb", fontWeight: 600, marginTop: 4 }}>거버넌스 단위: 국가·공공 AI 인프라·국제 표준</div>
+              <div style={{ fontSize: 12, color: "#111", fontWeight: 600, marginTop: 4 }}>거버넌스 단위: 국가·공공 AI 인프라·국제 표준</div>
             </div>
 
             <div style={{ padding: "5px 10px", background: "#fafafa", borderLeft: "3px solid #ccc", borderRadius: 2 }}>
@@ -256,7 +256,7 @@ export function CombinedPage() {
               <div style={{ fontSize: 12, color: "#222", lineHeight: 1.55 }}>
                 알고리즘 결정에 대한 설명 요구권·거부권. 자동 판단 결과에 대한 인간 검토 보장. AI가 채용·대출·보험·형사 처벌을 결정하는 시대에, 그 결정의 근거를 알 수 없다면 이의를 제기하는 것조차 불가능하다. 알고리즘이 개인에게 불이익을 주는 결정을 내릴 때 인간 검토자의 개입을 보장받을 권리는 새 사회계약의 핵심 조항이다. 이 권리 없이 강화된 개인의 자유는 알고리즘에 의해 언제든 무력화될 수 있다.
               </div>
-              <div style={{ fontSize: 12, color: C.accent, fontWeight: 600, marginTop: 4 }}>거버넌스 단위: 민주국가 연합·세계시민 거버넌스</div>
+              <div style={{ fontSize: 12, color: "#111", fontWeight: 600, marginTop: 4 }}>거버넌스 단위: 민주국가 연합·세계시민 거버넌스</div>
             </div>
 
           </div>

@@ -29,11 +29,11 @@ export function ResearchPlanPage() {
             <div key={i} style={{ display: "flex", alignItems: "stretch", flex: 1 }}>
               <div style={{ flex: 1, padding: "8px 10px", border: "1px solid #222", borderRadius: 4 }}>
                 <div style={{ display: "flex", alignItems: "center", gap: 5, marginBottom: 3 }}>
-                  <span style={{ fontSize: 15, fontWeight: 900, color: "#111" }}>{num}</span>
+                  <span style={{ fontSize: 12, fontWeight: 900, color: "#111" }}>{num}</span>
                   <span style={{ fontSize: 12, fontWeight: 800, color: "#111" }}>{t}</span>
                 </div>
-                <div style={{ fontSize: 9.5, fontWeight: 700, color: "#666", marginBottom: 3, letterSpacing: 0.3 }}>{who}</div>
-                <div style={{ fontSize: 10, color: "#444", lineHeight: 1.4 }}>{d}</div>
+                <div style={{ fontSize: 12, fontWeight: 700, color: "#666", marginBottom: 3, letterSpacing: 0.3 }}>{who}</div>
+                <div style={{ fontSize: 12, color: "#444", lineHeight: 1.4 }}>{d}</div>
               </div>
               {i < arr.length - 1 && (
                 <div style={{ display: "flex", alignItems: "center", padding: "0 4px", color: C.navy, fontSize: 16, fontWeight: 300 }}>→</div>
@@ -57,10 +57,10 @@ export function ResearchPlanPage() {
         <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 24 }}>
           <div>
             <div style={h3s}>4.1 연구 목표</div>
-            <div style={{ padding: "10px 14px" }}>
-              <p style={{ margin: 0, fontSize: 12, lineHeight: 1.7, color: "#222" }}>
+            <div style={{ padding: "8px 10px", borderTop: `2px solid ${C.navy}`, background: C.bg }}>
+              <div style={{ fontSize: 12, lineHeight: 1.55, color: "#333" }}>
                 디지털 기술이 가져오는 사회적 충격에 대응하는 구체적 해결책을 제시하고 실행 가능한 모델로 고도화한다.
-              </p>
+              </div>
             </div>
           </div>
 
