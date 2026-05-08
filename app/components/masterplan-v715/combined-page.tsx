@@ -16,39 +16,55 @@ export function CombinedPage() {
           <div style={h3s}>3.1 경제 질서의 타격</div>
           <table style={{ width: "100%", borderCollapse: "collapse", tableLayout: "fixed" }}>
             <colgroup>
+              <col style={{ width: "28%" }} />
+              <col style={{ width: "38%" }} />
               <col style={{ width: "34%" }} />
-              <col style={{ width: "50%" }} />
-              <col style={{ width: "16%" }} />
             </colgroup>
             <thead>
               <tr style={{ background: C.navy, color: "#fff" }}>
                 <th style={{ padding: "5px 8px", textAlign: "left", fontSize: 12 }}>산업화 시대</th>
                 <th style={{ padding: "5px 8px", textAlign: "left", fontSize: 12 }}>AI 시대의 타격</th>
-                <th style={{ padding: "5px 8px", textAlign: "left", fontSize: 12 }}>긴급도</th>
+                <th style={{ padding: "5px 8px", textAlign: "left", fontSize: 12 }}>구체적 위협 예시</th>
               </tr>
             </thead>
             <tbody>
               {[
                 {
                   prev: "노동=소득 원리",
-                  impact: "AI가 개인의 실행력을 조직급으로 끌어올리며 노동시간·소득 연결 붕괴. 자동화 이익은 데이터 독점자에 집중, 1인 묶음직업 시대로.",
-                  urg: "임박",
+                  impact: "노동시간·소득 연결 붕괴. 자동화 이익은 데이터 독점자에 집중.",
+                  threats: [
+                    { urg: "임박", text: "대규모 직업 재편·실업 충격" },
+                    { urg: "진행 중", text: "플랫폼 노동·1인 묶음직업 확산" },
+                  ],
                 },
                 {
                   prev: "전문직 지식 독점",
-                  impact: "AI가 전문 지식을 누구에게나 이전하며 전문직 소득 공식 붕괴. AI 플랫폼 독점이 새 봉건제로.",
-                  urg: "진행 중",
+                  impact: "전문 지식이 누구에게나 이전되며 전문직 소득 공식 붕괴.",
+                  threats: [
+                    { urg: "진행 중", text: "법률·회계·의료 전문직 소득 급감" },
+                    { urg: "진행 중", text: "AI 플랫폼 독점 → 새 디지털 봉건제" },
+                  ],
                 },
                 {
                   prev: "광고·미디어 경제",
-                  impact: "개인이 대중 매체급 영향력 확보로 기존 광고·미디어 경제 붕괴. AI 인프라 수익이 소수에 집중.",
-                  urg: "진행 중",
+                  impact: "개인이 대중 매체급 영향력을 확보하며 기존 미디어 경제 붕괴.",
+                  threats: [
+                    { urg: "진행 중", text: "언론사·미디어 기업 수익 급감" },
+                    { urg: "진행 중", text: "AI 인프라 수익의 소수 집중" },
+                  ],
                 },
-              ].map(({ prev, impact, urg }, i) => (
+              ].map(({ prev, impact, threats }, i) => (
                 <tr key={i} style={{ background: i % 2 ? C.bg : "#fff" }}>
-                  <td style={{ padding: "5px 8px", borderBottom: "1px solid #eee", fontSize: 12, verticalAlign: "top", lineHeight: 1.5, fontWeight: 700, color: C.navy }}>{prev}</td>
-                  <td style={{ padding: "5px 8px", borderBottom: "1px solid #eee", fontSize: 12, verticalAlign: "top", lineHeight: 1.5, color: "#333" }}>{impact}</td>
-                  <td style={{ padding: "5px 8px", borderBottom: "1px solid #eee", fontSize: 12, verticalAlign: "top", lineHeight: 1.5, fontWeight: 700, color: C.red }}>{urg}</td>
+                  <td style={{ padding: "5px 8px", borderBottom: "1px solid #eee", fontSize: 11.5, verticalAlign: "top", lineHeight: 1.5, fontWeight: 700, color: C.navy }}>{prev}</td>
+                  <td style={{ padding: "5px 8px", borderBottom: "1px solid #eee", fontSize: 11, verticalAlign: "top", lineHeight: 1.5, color: "#333" }}>{impact}</td>
+                  <td style={{ padding: "5px 8px", borderBottom: "1px solid #eee", verticalAlign: "top" }}>
+                    {threats.map((t, j) => (
+                      <div key={j} style={{ display: "flex", alignItems: "baseline", gap: 4, marginBottom: j < threats.length - 1 ? 4 : 0 }}>
+                        <span style={{ fontSize: 9.5, fontWeight: 700, color: "#fff", background: C.red, borderRadius: 2, padding: "1px 4px", flexShrink: 0, lineHeight: 1.4 }}>{t.urg}</span>
+                        <span style={{ fontSize: 11, color: "#333", lineHeight: 1.4 }}>{t.text}</span>
+                      </div>
+                    ))}
+                  </td>
                 </tr>
               ))}
             </tbody>
@@ -63,39 +79,55 @@ export function CombinedPage() {
           <div style={h3s}>3.2 정치 질서의 타격</div>
           <table style={{ width: "100%", borderCollapse: "collapse", tableLayout: "fixed" }}>
             <colgroup>
+              <col style={{ width: "28%" }} />
+              <col style={{ width: "38%" }} />
               <col style={{ width: "34%" }} />
-              <col style={{ width: "50%" }} />
-              <col style={{ width: "16%" }} />
             </colgroup>
             <thead>
               <tr style={{ background: C.navy, color: "#fff" }}>
                 <th style={{ padding: "5px 8px", textAlign: "left", fontSize: 12 }}>산업화 시대</th>
                 <th style={{ padding: "5px 8px", textAlign: "left", fontSize: 12 }}>AI 시대의 타격</th>
-                <th style={{ padding: "5px 8px", textAlign: "left", fontSize: 12 }}>긴급도</th>
+                <th style={{ padding: "5px 8px", textAlign: "left", fontSize: 12 }}>구체적 위협 예시</th>
               </tr>
             </thead>
             <tbody>
               {[
                 {
                   prev: "전문가·관료 위임제",
-                  impact: "AI로 누구나 전문가급 판단이 가능해지며 학위·자격증 기반 엘리트 합의 붕괴. 위임 정당성 약화.",
-                  urg: "진행 중",
+                  impact: "전문가 권위 붕괴, 위임 정당성 약화.",
+                  threats: [
+                    { urg: "진행 중", text: "AI 허위정보로 전문가 신뢰 붕괴" },
+                    { urg: "진행 중", text: "포퓰리즘·반엘리트 정서 심화" },
+                  ],
                 },
                 {
                   prev: "조직·직업 단체 기반 대의제",
-                  impact: "개인이 혼자 조직급 산출을 내며 노조·협회 기반 정치 참여 구조 약화. 조직 단위 이익 대표제가 흔들리고 강화된 개인이 직접 정치 행위자로 등장.",
-                  urg: "진행 중",
+                  impact: "노조·협회 기반 대의제 약화. 강화된 개인이 직접 정치 행위자로 등장.",
+                  threats: [
+                    { urg: "진행 중", text: "노조·협회 대표성 급격히 약화" },
+                    { urg: "임박", text: "개인 직접 정치 행동 폭발" },
+                  ],
                 },
                 {
                   prev: "공론장과 여론 형성",
-                  impact: "AI 마이크로타게팅이 공론장을 분열시키고 여론 조작·공론장 왜곡 심화. 빅테크가 민주적 의사결정을 잠식.",
-                  urg: "진행 중",
+                  impact: "AI 마이크로타게팅이 공론장을 분열시키고 빅테크가 민주적 의사결정을 잠식.",
+                  threats: [
+                    { urg: "진행 중", text: "AI 딥페이크·선거 개입" },
+                    { urg: "진행 중", text: "에코챔버 심화·공론장 분열" },
+                  ],
                 },
-              ].map(({ prev, impact, urg }, i) => (
+              ].map(({ prev, impact, threats }, i) => (
                 <tr key={i} style={{ background: i % 2 ? C.bg : "#fff" }}>
-                  <td style={{ padding: "5px 8px", borderBottom: "1px solid #eee", fontSize: 12, verticalAlign: "top", lineHeight: 1.5, fontWeight: 700, color: C.navy }}>{prev}</td>
-                  <td style={{ padding: "5px 8px", borderBottom: "1px solid #eee", fontSize: 12, verticalAlign: "top", lineHeight: 1.5, color: "#333" }}>{impact}</td>
-                  <td style={{ padding: "5px 8px", borderBottom: "1px solid #eee", fontSize: 12, verticalAlign: "top", lineHeight: 1.5, fontWeight: 700, color: C.red }}>{urg}</td>
+                  <td style={{ padding: "5px 8px", borderBottom: "1px solid #eee", fontSize: 11.5, verticalAlign: "top", lineHeight: 1.5, fontWeight: 700, color: C.navy }}>{prev}</td>
+                  <td style={{ padding: "5px 8px", borderBottom: "1px solid #eee", fontSize: 11, verticalAlign: "top", lineHeight: 1.5, color: "#333" }}>{impact}</td>
+                  <td style={{ padding: "5px 8px", borderBottom: "1px solid #eee", verticalAlign: "top" }}>
+                    {threats.map((t, j) => (
+                      <div key={j} style={{ display: "flex", alignItems: "baseline", gap: 4, marginBottom: j < threats.length - 1 ? 4 : 0 }}>
+                        <span style={{ fontSize: 9.5, fontWeight: 700, color: "#fff", background: C.red, borderRadius: 2, padding: "1px 4px", flexShrink: 0, lineHeight: 1.4 }}>{t.urg}</span>
+                        <span style={{ fontSize: 11, color: "#333", lineHeight: 1.4 }}>{t.text}</span>
+                      </div>
+                    ))}
+                  </td>
                 </tr>
               ))}
             </tbody>
