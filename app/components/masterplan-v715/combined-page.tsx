@@ -3,7 +3,7 @@ import { Header, Footer, h3s } from "../masterplan-v700/shared";
 
 export function CombinedPage() {
   return (
-    <div style={{ pageBreakBefore: "always", pageBreakAfter: "always", height: "281mm", display: "flex", flexDirection: "column" }}>
+    <div style={{ pageBreakBefore: "always", height: "281mm", display: "flex", flexDirection: "column" }}>
       <Header subtitle="3. 질서의 붕괴와 새 사회계약" version="v0.7.15" />
 
       <div style={{ padding: "4px 32px 0", display: "flex", flexDirection: "column", flex: 1 }}>
@@ -143,7 +143,7 @@ export function CombinedPage() {
                 },
               ].map(({ dim, right, rightDesc, gov, govDesc }, i) => (
                 <tr key={i} style={{ background: i % 2 ? C.bg : "#fff" }}>
-                  <td style={{ padding: "6px 8px", borderBottom: "1px solid #eee", verticalAlign: "top", fontWeight: 800, color: C.navy, fontSize: 13 }}>{dim}</td>
+                  <td style={{ padding: "6px 8px", borderBottom: "1px solid #eee", verticalAlign: "top", lineHeight: 1.5, fontWeight: 800, color: C.navy, fontSize: 13 }}>{dim}</td>
                   <td style={{ padding: "6px 8px", borderBottom: "1px solid #eee", verticalAlign: "top", lineHeight: 1.5 }}>
                     <div style={{ fontSize: 12, fontWeight: 800, color: C.navy, marginBottom: 2 }}>{right}</div>
                     <div style={{ fontSize: 11, color: "#444", lineHeight: 1.4 }}>{rightDesc}</div>
