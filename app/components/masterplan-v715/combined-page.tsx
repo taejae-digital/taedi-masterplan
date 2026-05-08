@@ -16,9 +16,9 @@ export function CombinedPage() {
           <div style={h3s}>3.1 경제 질서의 타격</div>
           <table style={{ width: "100%", borderCollapse: "collapse", tableLayout: "fixed" }}>
             <colgroup>
-              <col style={{ width: "28%" }} />
+              <col style={{ width: "20%" }} />
+              <col style={{ width: "42%" }} />
               <col style={{ width: "38%" }} />
-              <col style={{ width: "34%" }} />
             </colgroup>
             <thead>
               <tr style={{ background: C.navy, color: "#fff" }}>
@@ -79,9 +79,9 @@ export function CombinedPage() {
           <div style={h3s}>3.2 정치 질서의 타격</div>
           <table style={{ width: "100%", borderCollapse: "collapse", tableLayout: "fixed" }}>
             <colgroup>
-              <col style={{ width: "28%" }} />
+              <col style={{ width: "20%" }} />
+              <col style={{ width: "42%" }} />
               <col style={{ width: "38%" }} />
-              <col style={{ width: "34%" }} />
             </colgroup>
             <thead>
               <tr style={{ background: C.navy, color: "#fff" }}>
