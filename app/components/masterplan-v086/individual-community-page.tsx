@@ -118,6 +118,9 @@ export function IndividualCommunityPage() {
               </div>
 
               <div style={{ fontSize: 13, fontWeight: 700, color: "#666", margin: "10px 0 4px", lineHeight: 1.4 }}>계층 재편 — 3영역의 강화가 4계층의 비율과 성격을 동시에 바꾼다</div>
+              <div style={{ fontSize: 11.5, lineHeight: 1.55, color: "#222", marginBottom: 6 }}>
+                이 재편은 단순한 일자리 총량 감소가 아니다. LLM 가격이 2년 만에 1/100로 떨어진 효율화는 새 영역·새 카테고리를 폭증시켜 리더와 아마추어를 동시에 확장하고(<strong>Jevons Paradox</strong>), 자동화는 일자리가 아니라 <strong>작업 단위(task)를 재배치</strong>해 프로가 하던 작업을 아마추어 도구로 분산시킨다(<strong>task displacement</strong> — Acemoglu·Restrepo 2018, 2022). 일자리 총량은 유지되지만 카테고리 분포가 이동한다.
+              </div>
               <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr 1fr 1fr", gap: 5 }}>
                 {[
                   { t: "리더", am: "AI를 지휘", s: "2% → 7%", d: "AI 인프라·플랫폼 설계. <strong>새 영역 폭증</strong>으로 설계자 수요 확대.", prod: "AI 인프라·플랫폼", dist: "플랫폼 지대(rent) 수취" },
@@ -139,14 +142,6 @@ export function IndividualCommunityPage() {
               </div>
               <div style={{ marginTop: 5, fontSize: 10.5, color: "#888", lineHeight: 1.45 }}>
                 — 2025→2050 추정. Acemoglu·Restrepo(2022) 자동화-노동분배율, McKinsey(2023) 작업의 50% 자동화 가능, Goldman Sachs(2023) 3억 일자리 노출, Frey·Osborne(2013), Susskind(2020) 전문직 자동화에 기반한 프로젝트 추정치. 정확한 수치보다 방향성(프로 축소·아마추어 폭증)이 핵심.
-              </div>
-              <div style={{ marginTop: 8, padding: "7px 10px", background: "#f6f5ef", borderLeft: `3px solid ${C.accent}`, borderRadius: 2 }}>
-                <div style={{ fontSize: 12, fontWeight: 800, color: C.navy, marginBottom: 4 }}>이론적 토대 — 세 원리가 4계층 변화론을 뒷받침한다</div>
-                <div style={{ fontSize: 11.5, lineHeight: 1.55, color: "#222" }}>
-                  <strong>노동 총량의 오류</strong> — &quot;일자리는 고정된 파이&quot; 가정의 오류. → 총량 유지·증가.<br/>
-                  <strong>Jevons Paradox (1865)</strong> — 효율↑·가격↓·수요 폭증 (LLM 2년 1/100). → 리더 확대·아마추어 진입 가속, 전력·용수 폭증(위협 ⑥).<br/>
-                  <strong>task displacement (Acemoglu·Restrepo 2018, 2022)</strong> — AI는 작업 단위를 자동화·이전. 프로 작업이 아마추어 도구로 분산. → 프로 축소·아마추어 흡수.
-                </div>
               </div>
             </div>
 
