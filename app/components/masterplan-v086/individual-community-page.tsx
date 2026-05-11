@@ -120,10 +120,10 @@ export function IndividualCommunityPage() {
               <div style={{ fontSize: 13, fontWeight: 700, color: "#666", margin: "10px 0 4px", lineHeight: 1.4 }}>계층 재편 — 3영역의 강화가 4계층의 비율과 성격을 동시에 바꾼다</div>
               <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr 1fr 1fr", gap: 5 }}>
                 {[
-                  { t: "리더", am: "AI를 지휘", s: "2% → 5%", d: "AI 인프라·기준·플랫폼을 설계. <strong>새 영역·새 카테고리가 폭증</strong>하며 설계자 수요 확대.", prod: "AI 인프라·플랫폼", dist: "플랫폼 지대(rent) 수취" },
-                  { t: "프로", am: "AI로 증강", s: "53% → 25%", d: "AI를 도구로 전문성 발휘. <strong>자동화가 전문직 일을 개인에게 이전</strong>하며 일자리 규모 축소.", prod: "AI 활용 전문 서비스", dist: "임금 + 부분 자본수익 (축소)" },
-                  { t: "아마추어", am: "AI에 의존", s: "35% → 65%", d: "AI가 진입장벽을 해체해 학위·자격 없이도 활동 가능. <strong>프로 이탈자 + 신규 진입자</strong>를 동시에 흡수.", prod: "플랫폼 노동·1인 미디어", dist: "광고·구독 + 배당 의존" },
-                  { t: "소외", am: "AI에서 배제", s: "10% → 5%", d: "<strong>AI 도달 범위 확장</strong>으로 일부 흡수. 잔존층은 격차 질적 심화.", prod: "AI 외 전통 노동", dist: "복지·이전소득" },
+                  { t: "리더", am: "AI를 지휘", s: "2% → 7%", d: "AI 인프라·기준·플랫폼을 설계. Jevons 효과로 <strong>새 영역·새 카테고리가 폭증</strong>하며 설계자 수요 확대.", prod: "AI 인프라·플랫폼", dist: "플랫폼 지대(rent) 수취" },
+                  { t: "프로", am: "AI로 증강", s: "53% → 28%", d: "AI를 도구로 전문성 발휘. <strong>task displacement로 프로 작업이 아마추어 도구로 이전</strong>되며 비중 축소.", prod: "AI 활용 전문 서비스", dist: "임금 + 부분 자본수익 (축소)" },
+                  { t: "아마추어", am: "AI에 의존", s: "35% → 60%", d: "AI가 진입장벽을 해체해 학위·자격 없이도 활동 가능. <strong>프로 이탈자 + 신규 진입자 + 새 영역</strong>을 동시에 흡수.", prod: "플랫폼 노동·1인 미디어", dist: "광고·구독 + 배당 의존" },
+                  { t: "소외", am: "AI에서 배제", s: "10% → 5%", d: "Jevons로 가격이 떨어져 <strong>AI 도달 범위 확장</strong>으로 일부 흡수. 잔존층은 격차 질적 심화.", prod: "AI 외 전통 노동", dist: "복지·이전소득" },
                 ].map(({ t, am, s, d, prod, dist }) => (
                   <div key={t} style={{ padding: "6px 8px", borderTop: `2px solid ${C.navy}`, background: C.bg }}>
                     <div style={{ display: "flex", alignItems: "baseline", gap: 5, marginBottom: 3 }}>
@@ -141,10 +141,11 @@ export function IndividualCommunityPage() {
                 — 2025→2050 추정. Acemoglu·Restrepo(2022) 자동화-노동분배율, McKinsey(2023) 작업의 50% 자동화 가능, Goldman Sachs(2023) 3억 일자리 노출, Frey·Osborne(2013), Susskind(2020) 전문직 자동화에 기반한 프로젝트 추정치. 정확한 수치보다 방향성(프로 축소·아마추어 폭증)이 핵심.
               </div>
               <div style={{ marginTop: 8, padding: "7px 10px", background: "#f6f5ef", borderLeft: `3px solid ${C.accent}`, borderRadius: 2 }}>
-                <div style={{ fontSize: 12, fontWeight: 800, color: C.navy, marginBottom: 4 }}>이론적 토대 — 두 경제학 원리가 4계층 변화론을 뒷받침한다</div>
+                <div style={{ fontSize: 12, fontWeight: 800, color: C.navy, marginBottom: 4 }}>이론적 토대 — 세 경제학 원리가 4계층 변화론을 뒷받침한다</div>
                 <div style={{ fontSize: 11.5, lineHeight: 1.55, color: "#222" }}>
-                  <strong>노동 총량의 오류 (Lump of labour fallacy)</strong> — &quot;일자리는 고정된 파이&quot;라는 가정은 100년 이상 반증되어 온 경제학 오류다. AI가 일자리를 빼앗는다는 단순 비관론의 전제 자체가 틀렸으며, 우리 모델은 총량의 증감이 아니라 <strong>계층 간 이동의 방향성</strong>을 본다.<br/>
-                  <strong>Jevons Paradox (1865)</strong> — 효율이 오르면 가격이 떨어지고 수요가 폭증해 총소비가 오히려 늘어난다. LLM 가격 2년 1/100 하락은 AI 사용량을 폭증시키며, <strong>리더층 확대·아마추어 진입 가속</strong>으로 4계층 분포를 재편한다. 동시에 AI 인프라의 전력·용수 소비도 함께 폭증해 위협 ⑥ 지속불가능성의 동학을 만든다.
+                  <strong>노동 총량의 오류 (Lump of labour fallacy)</strong> — &quot;일자리는 고정된 파이&quot;라는 가정은 100년 이상 반증되어 온 경제학 오류다. AI가 일자리를 빼앗는다는 단순 비관론의 전제 자체가 틀렸으며, 우리 모델은 총량의 증감이 아니라 <strong>계층 간 이동의 방향성</strong>을 본다. → 총량 유지·증가.<br/>
+                  <strong>Jevons Paradox (1865)</strong> — 효율이 오르면 가격이 떨어지고 수요가 폭증해 총소비가 오히려 늘어난다. LLM 가격 2년 1/100 하락은 AI 사용량을 폭증시키며 새 영역·새 카테고리를 만든다. → <strong>리더층 확대·아마추어 진입 가속</strong>. 동시에 AI 인프라의 전력·용수 소비도 함께 폭증해 위협 ⑥ 지속불가능성의 동학을 만든다.<br/>
+                  <strong>자동화의 task displacement (Acemoglu·Restrepo 2018, 2022)</strong> — AI는 일자리가 아니라 작업 단위(task)를 자동화·이전한다. 프로가 하던 작업이 아마추어 도구로 분산되며 일자리 총량은 유지되지만 카테고리는 이동한다. → <strong>프로 축소·아마추어 흡수</strong>.
                 </div>
               </div>
             </div>
