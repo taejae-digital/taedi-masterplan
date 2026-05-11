@@ -117,23 +117,24 @@ export function IndividualCommunityPage() {
                 ))}
               </div>
 
-              <div style={{ fontSize: 13, fontWeight: 700, color: "#666", margin: "10px 0 4px", lineHeight: 1.4 }}>계층 재편 — 3영역의 강화가 4계층의 비율과 성격을 동시에 바꾼다</div>
+              <div style={{ fontSize: 13, fontWeight: 700, color: "#666", margin: "10px 0 4px", lineHeight: 1.4 }}>계층 재편 — 4계층은 판단력·실행력·파급력 중 무엇을 가졌느냐로 갈린다</div>
               <div style={{ fontSize: 11.5, lineHeight: 1.55, color: "#222", marginBottom: 6 }}>
-                이 재편은 단순한 일자리 총량 감소가 아니다. LLM 가격이 2년 만에 1/100로 떨어진 효율화는 새 영역·새 카테고리를 폭증시켜 리더와 아마추어를 동시에 확장하고(<strong>Jevons Paradox</strong>), 자동화는 일자리가 아니라 <strong>작업 단위(task)를 재배치</strong>해 프로가 하던 작업을 아마추어 도구로 분산시킨다(<strong>task displacement</strong> — Acemoglu·Restrepo 2018, 2022). 일자리 총량은 유지되지만 카테고리 분포가 이동한다.
+                프로 53→28% 축소는 강화 부재가 아니라 <strong>강화가 너무 광범위해 독점적 지위가 해체</strong>되기 때문이며, Jevons 효과로 새 카테고리가 폭증해 리더와 아마추어를 동시에 확장한다. 일자리 총량은 유지되지만 카테고리 분포가 이동한다.
               </div>
               <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr 1fr 1fr", gap: 5 }}>
                 {[
-                  { t: "리더", am: "AI를 지휘", s: "2% → 7%", d: "AI 인프라·플랫폼 설계. <strong>새 영역 폭증</strong>으로 설계자 수요 확대.", prod: "AI 인프라·플랫폼", dist: "플랫폼 지대(rent) 수취" },
-                  { t: "프로", am: "AI로 증강", s: "53% → 28%", d: "<strong>task displacement</strong>로 작업이 아마추어 도구로 이전, 비중 축소.", prod: "AI 활용 전문 서비스", dist: "임금 + 부분 자본수익 (축소)" },
-                  { t: "아마추어", am: "AI에 의존", s: "35% → 60%", d: "진입장벽 해체. <strong>프로 이탈자·신규 진입자·새 영역</strong>을 동시 흡수.", prod: "플랫폼 노동·1인 미디어", dist: "광고·구독 + 배당 의존" },
-                  { t: "소외", am: "AI에서 배제", s: "10% → 5%", d: "가격 하락으로 일부 흡수. 잔존층 <strong>격차 질적 심화</strong>.", prod: "AI 외 전통 노동", dist: "복지·이전소득" },
-                ].map(({ t, am, s, d, prod, dist }) => (
+                  { t: "리더", am: "AI를 지휘", s: "2% → 7%", own: "판단·실행·파급", d: "AI 인프라·플랫폼·기준을 설계. <strong>새 영역 폭증</strong>으로 설계자 수요 확대 — 강화의 최대 수혜자.", prod: "AI 인프라·플랫폼", dist: "플랫폼 지대(rent) 수취" },
+                  { t: "프로", am: "AI로 증강", s: "53% → 28%", own: "판단·실행", d: "판단·실행이 광범위하게 개인 수준으로 내려가며 <strong>희소성·독점 지위 해체</strong>. 강화가 곧 위협.", prod: "AI 활용 전문 서비스", dist: "임금 + 부분 자본수익 (축소)" },
+                  { t: "아마추어", am: "AI에 의존", s: "35% → 60%", own: "파급", d: "매스미디어급 도달 범위 획득. 그러나 판단·실행 부재로 <strong>수익화는 상위 1%</strong>, 인정 경로 불안정.", prod: "플랫폼 노동·1인 미디어", dist: "광고·구독 + 배당 의존" },
+                  { t: "소외", am: "AI에서 배제", s: "10% → 5%", own: "—", d: "3영역 모두 배제. 비율은 ↓지만 <strong>역량 격차가 절대적으로 벌어진다</strong>.", prod: "AI 외 전통 노동", dist: "복지·이전소득" },
+                ].map(({ t, am, s, own, d, prod, dist }) => (
                   <div key={t} style={{ padding: "6px 8px", borderTop: `2px solid ${C.navy}`, background: C.bg }}>
                     <div style={{ display: "flex", alignItems: "baseline", gap: 5, marginBottom: 3 }}>
                       <div style={{ fontSize: 14, fontWeight: 800, color: C.navy }}>{t}</div>
                       <div style={{ fontSize: 10.5, fontWeight: 700, color: "#fff", background: C.accent, padding: "1px 4px", borderRadius: 2 }}>{am}</div>
                     </div>
-                    <div style={{ fontSize: 13, fontWeight: 700, color: C.navy, marginBottom: 3 }}>{s}</div>
+                    <div style={{ fontSize: 13, fontWeight: 700, color: C.navy, marginBottom: 1 }}>{s}</div>
+                    <div style={{ fontSize: 11, fontWeight: 700, color: C.accent, marginBottom: 4 }}>강화 {own}</div>
                     <div style={{ fontSize: 11, lineHeight: 1.45, color: "#222", marginBottom: 1 }}><strong style={{ color: C.navy }}>생산</strong> {prod}</div>
                     <div style={{ fontSize: 11, lineHeight: 1.45, color: "#222", marginBottom: 4 }}><strong style={{ color: C.navy }}>분배</strong> {dist}</div>
                     <div style={{ fontSize: 12.5, lineHeight: 1.45, color: "#333" }} dangerouslySetInnerHTML={{ __html: d }} />
