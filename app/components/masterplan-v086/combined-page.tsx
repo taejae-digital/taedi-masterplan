@@ -1,5 +1,6 @@
 import { C } from "../masterplan-v705/constants";
 import { Header, Footer, h3s } from "../masterplan-v705/shared";
+import { VERSION } from "./version";
 
 const urgColor = (u: string) =>
   u === "진행 중" ? "#991b1b" : u === "임박" ? "#b91c1c" : C.red;
@@ -28,7 +29,7 @@ function TBadge({ code }: { code: string }) {
 export function CombinedPage() {
   return (
     <div style={{ pageBreakBefore: "always", height: "281mm", overflow: "hidden", display: "flex", flexDirection: "column" }}>
-      <Header subtitle="3. 질서의 붕괴와 새 사회계약" version="v0.8.4" />
+      <Header subtitle="3. 질서의 붕괴와 새 사회계약" version={VERSION} />
 
       <div style={{ padding: "4px 32px 0", display: "flex", flexDirection: "column", flex: 1 }}>
 
@@ -111,7 +112,7 @@ export function CombinedPage() {
                 ))}
               </tbody>
             </table>
-            <div style={{ marginTop: 3, fontSize: 10, color: "#888", fontStyle: "italic" }}>
+            <div style={{ marginTop: 3, fontSize: 10, color: "#888" }}>
               — 루소, 『사회계약론』(1762) · 롤스, 『정의론』(1971) · 하버마스, 『공론장의 구조변동』(1962)
             </div>
           </div>
@@ -192,7 +193,7 @@ export function CombinedPage() {
                 ))}
               </tbody>
             </table>
-            <div style={{ marginTop: 3, fontSize: 10, color: "#888", fontStyle: "italic" }}>
+            <div style={{ marginTop: 3, fontSize: 10, color: "#888" }}>
               — 아담 스미스, 『국부론』(1776) · 카를 마르크스, 『자본론』(1867)
             </div>
           </div>
@@ -295,7 +296,7 @@ export function CombinedPage() {
 
       </div>
 
-      <Footer version="v0.8.4" />
+      <Footer version={VERSION} />
     </div>
   );
 }

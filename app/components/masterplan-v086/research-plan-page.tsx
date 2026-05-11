@@ -1,10 +1,11 @@
 import { C } from "../masterplan-v705/constants";
 import { Header, Footer, h3s } from "../masterplan-v705/shared";
+import { VERSION } from "./version";
 
 export function ResearchPlanPage() {
   return (
     <div style={{ pageBreakBefore: "always", height: "281mm", overflow: "hidden", display: "flex", flexDirection: "column" }}>
-      <Header subtitle="4. 연구 계획" version="v0.8.4" />
+      <Header subtitle="4. 연구 계획" version={VERSION} />
 
       <div style={{ padding: "14px 32px 10px", borderBottom: `2px solid ${C.navy}`, marginBottom: 12 }}>
         <div style={{ fontSize: 19, fontWeight: 800, color: C.navy, lineHeight: 1.4 }}>
@@ -47,7 +48,7 @@ export function ResearchPlanPage() {
             <path d="M 700 0 L 700 30 L 304 30 L 304 4" stroke={C.accent} strokeWidth="1.3" fill="none" strokeDasharray="4 3" vectorEffect="non-scaling-stroke" />
             <polygon points="300,8 304,2 308,8" fill={C.accent} />
           </svg>
-          <div style={{ position: "absolute", bottom: 2, left: "50%", transform: "translateX(-50%)", fontSize: 9.5, color: C.accent, background: "#fff", padding: "0 8px", fontStyle: "italic", fontWeight: 600, letterSpacing: 0.2 }}>
+          <div style={{ position: "absolute", bottom: 2, left: "50%", transform: "translateX(-50%)", fontSize: 9.5, color: C.accent, background: "#fff", padding: "0 8px", fontWeight: 600, letterSpacing: 0.2 }}>
             피드백 반영
           </div>
         </div>
@@ -142,9 +143,9 @@ export function ResearchPlanPage() {
               </thead>
               <tbody>
                 {[
-                  ["4~5월", "마스터플랜 확정 · 영문 WP 윤곽 · Bengio·Acemoglu·Mazzucato 1차 접촉", "마스터플랜 · WP 윤곽"],
-                  ["6~8월", "분야별 연구 · 영문 WP 초고 · 동시대 학자 1대1 자문 · 정부 정책 협의", "분야별 초안 · WP 초고 2편"],
-                  ["9~10월", "영문 WP 2편 SSRN/arXiv 게재 · UK AISI·GovAI·Stanford HAI 협력 채널", "영문 WP 2편 · 협력 MoU"],
+                  ["4~5월", "마스터플랜 확정 · 영문 Working Paper 윤곽 · Bengio·Acemoglu·Mazzucato 1차 접촉", "마스터플랜 · Working Paper 윤곽"],
+                  ["6~8월", "분야별 연구 · 영문 Working Paper 초고 · 동시대 학자 1대1 자문 · 정부 정책 협의", "분야별 초안 · Working Paper 초고 2편"],
+                  ["9~10월", "영문 Working Paper 2편 SSRN/arXiv 게재 · UK AISI·GovAI·Stanford HAI 협력 채널", "영문 Working Paper 2편 · 협력 MoU"],
                   ["11~12월", "단행본 출판 · 정책 제안 · 2027 서울 심포지엄 어젠다 확정", "단행본 · 정책 제안 · 어젠다"],
                 ].map(([period, content, output], i) => (
                   <tr key={i} style={{ background: i % 2 ? C.bg : "#fff" }}>
@@ -181,7 +182,7 @@ export function ResearchPlanPage() {
 
       </div>
 
-      <Footer version="v0.8.4" />
+      <Footer version={VERSION} />
     </div>
   );
 }
