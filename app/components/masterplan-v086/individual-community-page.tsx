@@ -140,6 +140,13 @@ export function IndividualCommunityPage() {
               <div style={{ marginTop: 5, fontSize: 10.5, color: "#888", lineHeight: 1.45 }}>
                 — 2025→2050 추정. Acemoglu·Restrepo(2022) 자동화-노동분배율, McKinsey(2023) 작업의 50% 자동화 가능, Goldman Sachs(2023) 3억 일자리 노출, Frey·Osborne(2013), Susskind(2020) 전문직 자동화에 기반한 프로젝트 추정치. 정확한 수치보다 방향성(프로 축소·아마추어 폭증)이 핵심.
               </div>
+              <div style={{ marginTop: 8, padding: "7px 10px", background: "#f6f5ef", borderLeft: `3px solid ${C.accent}`, borderRadius: 2 }}>
+                <div style={{ fontSize: 12, fontWeight: 800, color: C.navy, marginBottom: 4 }}>이론적 토대 — 두 경제학 원리가 4계층 변화론을 뒷받침한다</div>
+                <div style={{ fontSize: 11.5, lineHeight: 1.55, color: "#222" }}>
+                  <strong>노동 총량의 오류 (Lump of labour fallacy)</strong> — &quot;일자리는 고정된 파이&quot;라는 가정은 100년 이상 반증되어 온 경제학 오류다. AI가 일자리를 빼앗는다는 단순 비관론의 전제 자체가 틀렸으며, 우리 모델은 총량의 증감이 아니라 <strong>계층 간 이동의 방향성</strong>을 본다.<br/>
+                  <strong>Jevons Paradox (1865)</strong> — 효율이 오르면 가격이 떨어지고 수요가 폭증해 총소비가 오히려 늘어난다. LLM 가격 2년 1/100 하락은 AI 사용량을 폭증시키며, <strong>리더층 확대·아마추어 진입 가속</strong>으로 4계층 분포를 재편한다. 동시에 AI 인프라의 전력·용수 소비도 함께 폭증해 위협 ⑥ 지속불가능성의 동학을 만든다.
+                </div>
+              </div>
             </div>
 
             {/* 오른쪽: 재구성되는 공동체 */}
