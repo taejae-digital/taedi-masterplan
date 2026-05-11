@@ -120,7 +120,7 @@ export function ResearchPlanPage() {
               {[
                 { name: "김수연", role: "이론적 토대 (A) · 새 권리 (B)", detail: "정체성 실현권 설계 (A→B), 직업 재편 충격 대응, 돌봄·학습·창작 기여 인정." },
                 { name: "이규환", role: "새 권리 (B) · 새 질서 (C)", detail: "AI 인프라 평등 접근권·AI 개인화권 (B), 다층 거버넌스·전력·용수 규제 (C)." },
-                { name: "윤준영", role: "새 질서 (C) · 평가 협력 (D)", detail: "글로벌 한시 협력·미중 경로 (C), FDA 사전 승인 체계 (D), LawZero·ARIA 네트워킹." },
+                { name: "윤준영", role: "새 질서 (C) · 평가 협력 (D)", detail: "글로벌 한시 협력·미중 경로 (C), FDA 사전 승인 체계 (D), LawZero·국제 AI 안전 연구소 네트워크 네트워킹." },
               ].map(({ name, role, detail }) => (
                 <div key={name} style={{ padding: "7px 10px", background: C.bg, borderLeft: `3px solid ${C.navy}` }}>
                   <div style={{ fontSize: 13.5, fontWeight: 800, color: C.navy, marginBottom: 2 }}>{name}</div>
