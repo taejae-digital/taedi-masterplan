@@ -280,14 +280,14 @@ export function CombinedPage() {
             <div style={{ padding: "5px 10px", background: "#fafafa", borderLeft: "3px solid #ccc", borderRadius: 2 }}>
               <div style={{ fontSize: 12, fontWeight: 800, color: "#111", marginBottom: 3 }}>진행 중인 노력의 사례</div>
               <div style={{ fontSize: 12, color: "#222", lineHeight: 1.55 }}>
-                <strong>Law Zero</strong>(Bengio) — AI 안전 국제 규범을 법적 구속력 있는 조약으로. <strong>ARIA</strong>(영국) — 정부가 선제적으로 AI 위험 연구를 주도. <strong>EU AI Act</strong> — 고위험 AI 사전 등록·감사 의무. 공통 교훈은 하나 — 기술이 배치된 뒤 규제하는 것은 너무 늦다.
+                <strong>LawZero</strong>(Bengio) — AI 안전 연구를 상업 논리로부터 독립시키기 위한 비영리 연구기관. Bengio는 국제 AI 안전 조약 체결을 촉구하고 있음. <strong>ARIA</strong>(영국) — 정부가 선제적으로 AI 위험 연구를 주도. <strong>EU AI Act</strong> — 고위험 AI 사전 등록·감사 의무. 공통 교훈은 하나 — 기술이 배치된 뒤 규제하는 것은 너무 늦다.
               </div>
             </div>
 
             <div style={{ padding: "5px 10px", background: "#fff8e1", borderLeft: `3px solid ${C.accent}`, borderRadius: 2 }}>
               <div style={{ fontSize: 12, fontWeight: 800, color: C.navy, marginBottom: 3 }}>태재의 역할과 공조</div>
               <div style={{ fontSize: 12, color: "#222", lineHeight: 1.55 }}>
-                <strong>이론 토대</strong> — 단행본 『디지털 위협 통제』(Q4 2026)로 Law Zero·ARIA·EU AI Act 논의에 한국발 이론을 더한다. <strong>국제 학자 네트워크</strong> — Bengio·Hinton·Acemoglu 등과 자문·공동 연구로 규범 설계 참여자로 자리매김. <strong>중견국 가교</strong> — 미·중 양극화 속 협력적 거버넌스 의제 설정자. 핵 레짐의 비핵 중견국처럼 균형추 역할.
+                <strong>이론 토대</strong> — 단행본 『디지털 위협 통제』(Q4 2026)로 LawZero·ARIA·EU AI Act 논의에 한국발 이론을 더한다. <strong>국제 학자 네트워크</strong> — Bengio·Hinton·Acemoglu 등과 자문·공동 연구로 규범 설계 참여자로 자리매김. <strong>중견국 가교</strong> — 미·중 양극화 속 협력적 거버넌스 의제 설정자. 핵 레짐의 비핵 중견국처럼 균형추 역할.
               </div>
             </div>
 
