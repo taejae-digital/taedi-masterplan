@@ -3,3 +3,5 @@ node_modules
 out
 *.tsbuildinfo
 .omc/
+.claude/mind.mv2
+.claude/mind.mv2.lock
