@@ -103,7 +103,7 @@ export function IndividualCommunityPage() {
               <div style={{ display: "grid", gridTemplateColumns: "1fr", gap: 4, marginBottom: 8 }}>
                 {[
                   { t: "판단력", d: "AI가 판단·추론·전문성을 이전하고 진입장벽을 해체 — 학위 없이도 전문가 수준 도구에 접근.", ex: "법률·의료·재무 자문, 비전공 개발자, 자기학습 분석가." },
-                  { t: "실행력", d: "한 사람이 부서급 산출에 도달하고 다영역을 동시에 운용.", ex: "1인 기업·묶음 직업, 의사+유튜브+창업, 변호사+리걸테크." },
+                  { t: "실행력", d: "한 사람이 부서급 산출에 도달하고 다영역을 동시에 운용.", ex: "1인 기업, 여러 일 병행(의사+유튜브+창업, 변호사+리걸테크)." },
                   { t: "파급력", d: "도달 범위 확장 — 개인이 매스미디어급 영향력으로 공론장의 주체가 된다.", ex: "1인 미디어 수십만 구독, 인플루언서 캠페인." },
                 ].map(({ t, d, ex }) => (
                   <div key={t} style={{ padding: "4px 8px", borderLeft: `3px solid ${C.navy}`, background: C.bg, display: "grid", gridTemplateColumns: "92px 1fr", gap: 6, alignItems: "baseline" }}>
@@ -121,13 +121,16 @@ export function IndividualCommunityPage() {
               <div style={{ fontSize: 12, fontWeight: 700, color: "#666", margin: "0 0 4px", lineHeight: 1.4 }}>계층 재편</div>
               <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr 1fr 1fr", gap: 5 }}>
                 {[
-                  { t: "리더", s: "2%→5%", d: "AI 설계자. 기준·플랫폼 재정의.", a: "판단력·실행력 강화로 AI 인프라 설계가 새 권력의 핵심." },
-                  { t: "프로", s: "53%→25%", d: "AI 활용자. 직업 기반 정체성 변화.", a: "실행력 강화로 AI가 전문직 일을 개인에게 이전, 진입장벽 해체." },
-                  { t: "아마추어", s: "35%→65%", d: "AI 의존자. 인정 경로 불안정.", a: "파급력 강화로 학위·자격 없이도 1인 미디어·전문가급 활동 가능." },
-                  { t: "소외", s: "10%→5%", d: "AI 접근 불가. 격차 질적 심화.", a: "판단력 결핍으로 비율은 줄지만 격차가 질적으로 깊어짐." },
-                ].map(({ t, s, d, a }) => (
+                  { t: "리더", am: "AI를 지휘", s: "2%→5%", d: "AI 설계자. 기준·플랫폼 재정의.", a: "판단력·실행력 강화로 AI 인프라 설계가 새 권력의 핵심." },
+                  { t: "프로", am: "AI로 증강", s: "53%→25%", d: "AI 활용자. 직업 기반 정체성 변화.", a: "실행력 강화로 AI가 전문직 일을 개인에게 이전, 진입장벽 해체." },
+                  { t: "아마추어", am: "AI에 의존·대체", s: "35%→65%", d: "AI 의존자. 인정 경로 불안정.", a: "파급력 강화로 학위·자격 없이도 1인 미디어·전문가급 활동 가능." },
+                  { t: "소외", am: "AI에서 배제", s: "10%→5%", d: "AI 접근 불가. 격차 질적 심화.", a: "판단력 결핍으로 비율은 줄지만 격차가 질적으로 깊어짐." },
+                ].map(({ t, am, s, d, a }) => (
                   <div key={t} style={{ padding: "5px 7px", borderTop: `2px solid ${C.navy}`, background: C.bg }}>
-                    <div style={{ fontSize: 12, fontWeight: 800, color: C.navy, marginBottom: 1 }}>{t}</div>
+                    <div style={{ display: "flex", alignItems: "baseline", gap: 5, marginBottom: 1 }}>
+                      <div style={{ fontSize: 12, fontWeight: 800, color: C.navy }}>{t}</div>
+                      <div style={{ fontSize: 9.5, fontWeight: 700, color: "#fff", background: C.accent, padding: "1px 4px", borderRadius: 2 }}>{am}</div>
+                    </div>
                     <div style={{ fontSize: 12, fontWeight: 700, color: "#555", marginBottom: 1 }}>{s}</div>
                     <div style={{ fontSize: 12, lineHeight: 1.4, color: "#333" }}>{d}</div>
                     <div style={{ fontSize: 10.5, color: C.accent, fontWeight: 700, marginTop: 2, lineHeight: 1.4 }}>← {a}</div>
