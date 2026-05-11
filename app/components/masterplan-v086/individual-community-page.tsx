@@ -120,10 +120,10 @@ export function IndividualCommunityPage() {
               <div style={{ fontSize: 13, fontWeight: 700, color: "#666", margin: "10px 0 4px", lineHeight: 1.4 }}>계층 재편 — 3영역의 강화가 4계층의 비율과 성격을 동시에 바꾼다</div>
               <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr 1fr 1fr", gap: 5 }}>
                 {[
-                  { t: "리더", am: "AI를 지휘", s: "2% → 7%", d: "AI 인프라·플랫폼 설계. <strong>새 영역·카테고리 폭증</strong>으로 설계자 수요 확대.", prod: "AI 인프라·플랫폼", dist: "플랫폼 지대(rent) 수취" },
-                  { t: "프로", am: "AI로 증강", s: "53% → 28%", d: "AI를 도구로 전문성 발휘. <strong>task displacement</strong>로 작업이 아마추어 도구로 이전, 비중 축소.", prod: "AI 활용 전문 서비스", dist: "임금 + 부분 자본수익 (축소)" },
-                  { t: "아마추어", am: "AI에 의존", s: "35% → 60%", d: "AI가 진입장벽 해체. <strong>프로 이탈자 + 신규 진입자 + 새 영역</strong>을 동시 흡수.", prod: "플랫폼 노동·1인 미디어", dist: "광고·구독 + 배당 의존" },
-                  { t: "소외", am: "AI에서 배제", s: "10% → 5%", d: "Jevons로 가격 하락 → <strong>접근 범위 확장</strong>, 일부 흡수. 잔존층 격차 질적 심화.", prod: "AI 외 전통 노동", dist: "복지·이전소득" },
+                  { t: "리더", am: "AI를 지휘", s: "2% → 7%", d: "AI 인프라·플랫폼 설계. <strong>새 영역 폭증</strong>으로 설계자 수요 확대.", prod: "AI 인프라·플랫폼", dist: "플랫폼 지대(rent) 수취" },
+                  { t: "프로", am: "AI로 증강", s: "53% → 28%", d: "<strong>task displacement</strong>로 작업이 아마추어 도구로 이전, 비중 축소.", prod: "AI 활용 전문 서비스", dist: "임금 + 부분 자본수익 (축소)" },
+                  { t: "아마추어", am: "AI에 의존", s: "35% → 60%", d: "진입장벽 해체. <strong>프로 이탈자·신규 진입자·새 영역</strong>을 동시 흡수.", prod: "플랫폼 노동·1인 미디어", dist: "광고·구독 + 배당 의존" },
+                  { t: "소외", am: "AI에서 배제", s: "10% → 5%", d: "가격 하락으로 일부 흡수. 잔존층 <strong>격차 질적 심화</strong>.", prod: "AI 외 전통 노동", dist: "복지·이전소득" },
                 ].map(({ t, am, s, d, prod, dist }) => (
                   <div key={t} style={{ padding: "6px 8px", borderTop: `2px solid ${C.navy}`, background: C.bg }}>
                     <div style={{ display: "flex", alignItems: "baseline", gap: 5, marginBottom: 3 }}>
@@ -140,12 +140,12 @@ export function IndividualCommunityPage() {
               <div style={{ marginTop: 5, fontSize: 10.5, color: "#888", lineHeight: 1.45 }}>
                 — 2025→2050 추정. Acemoglu·Restrepo(2022) 자동화-노동분배율, McKinsey(2023) 작업의 50% 자동화 가능, Goldman Sachs(2023) 3억 일자리 노출, Frey·Osborne(2013), Susskind(2020) 전문직 자동화에 기반한 프로젝트 추정치. 정확한 수치보다 방향성(프로 축소·아마추어 폭증)이 핵심.
               </div>
-              <div style={{ marginTop: 6, padding: "6px 9px", background: "#f6f5ef", borderLeft: `3px solid ${C.accent}`, borderRadius: 2 }}>
-                <div style={{ fontSize: 11.5, fontWeight: 800, color: C.navy, marginBottom: 3 }}>이론적 토대 — 세 원리가 4계층 변화론을 뒷받침한다</div>
-                <div style={{ fontSize: 11, lineHeight: 1.5, color: "#222" }}>
-                  <strong>노동 총량의 오류</strong> — &quot;일자리는 고정된 파이&quot;라는 가정의 오류. → 총량 유지·증가.<br/>
-                  <strong>Jevons Paradox (1865)</strong> — 효율↑·가격↓·수요 폭증. LLM 가격 2년 1/100 → 새 영역·카테고리 폭증. → 리더 확대·아마추어 진입 가속 (+ 전력·용수 폭증 → 위협 ⑥).<br/>
-                  <strong>task displacement (Acemoglu·Restrepo 2018, 2022)</strong> — AI는 일자리가 아닌 작업 단위를 자동화·이전. 프로 작업이 아마추어 도구로 분산. → 프로 축소·아마추어 흡수.
+              <div style={{ marginTop: 8, padding: "7px 10px", background: "#f6f5ef", borderLeft: `3px solid ${C.accent}`, borderRadius: 2 }}>
+                <div style={{ fontSize: 12, fontWeight: 800, color: C.navy, marginBottom: 4 }}>이론적 토대 — 세 원리가 4계층 변화론을 뒷받침한다</div>
+                <div style={{ fontSize: 11.5, lineHeight: 1.55, color: "#222" }}>
+                  <strong>노동 총량의 오류</strong> — &quot;일자리는 고정된 파이&quot; 가정의 오류. → 총량 유지·증가.<br/>
+                  <strong>Jevons Paradox (1865)</strong> — 효율↑·가격↓·수요 폭증 (LLM 2년 1/100). → 리더 확대·아마추어 진입 가속, 전력·용수 폭증(위협 ⑥).<br/>
+                  <strong>task displacement (Acemoglu·Restrepo 2018, 2022)</strong> — AI는 작업 단위를 자동화·이전. 프로 작업이 아마추어 도구로 분산. → 프로 축소·아마추어 흡수.
                 </div>
               </div>
             </div>
