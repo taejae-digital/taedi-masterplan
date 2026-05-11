@@ -4,7 +4,7 @@ import { Header, Footer, h3s } from "../masterplan-v705/shared";
 export function IndividualCommunityPage() {
   return (
     <div style={{ pageBreakBefore: "always", height: "281mm", display: "flex", flexDirection: "column" }}>
-      <Header subtitle="2. 디지털 전환에 따른 개인과 공동체 변화" version="v0.8.2" />
+      <Header subtitle="2. 디지털 전환에 따른 개인과 공동체 변화" version="v0.8.3" />
 
       <div style={{ padding: "12px 32px 10px", borderBottom: `2px solid ${C.navy}`, marginBottom: 10 }}>
         <div style={{ fontSize: 13, letterSpacing: 4, color: C.accent, fontWeight: 800, marginBottom: 5 }}>분업 시대 → 연결 시대</div>
@@ -196,7 +196,7 @@ export function IndividualCommunityPage() {
 
       </div>
 
-      <Footer version="v0.8.2" />
+      <Footer version="v0.8.3" />
     </div>
   );
 }

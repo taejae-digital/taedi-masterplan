@@ -18,7 +18,7 @@ function TBadge({ code }: { code: string }) {
   if (!m) return null;
   return (
     <span style={{
-      display: "inline-block", fontSize: 10, fontWeight: 800, color: "#fff",
+      display: "inline-block", fontSize: 9, fontWeight: 800, color: "#fff",
       background: m.bg, borderRadius: 2, padding: "1px 4px",
       lineHeight: 1.4, marginRight: 3, flexShrink: 0, whiteSpace: "nowrap",
     }}>{m.label}</span>
@@ -28,7 +28,7 @@ function TBadge({ code }: { code: string }) {
 export function CombinedPage() {
   return (
     <div style={{ pageBreakBefore: "always", height: "281mm", overflow: "hidden", display: "flex", flexDirection: "column" }}>
-      <Header subtitle="3. 질서의 붕괴와 새 사회계약" version="v0.8.2" />
+      <Header subtitle="3. 질서의 붕괴와 새 사회계약" version="v0.8.4" />
 
       <div style={{ padding: "4px 32px 0", display: "flex", flexDirection: "column", flex: 1 }}>
 
@@ -46,9 +46,9 @@ export function CombinedPage() {
               </colgroup>
               <thead>
                 <tr style={{ background: C.navy, color: "#fff" }}>
-                  <th style={{ padding: "4px 7px", textAlign: "left", fontSize: 13 }}>산업화 시대</th>
-                  <th style={{ padding: "4px 7px", textAlign: "left", fontSize: 13 }}>AI 시대의 타격</th>
-                  <th style={{ padding: "4px 7px", textAlign: "left", fontSize: 13 }}>구체적 위협 예시</th>
+                  <th style={{ padding: "4px 7px", textAlign: "left", fontSize: 12 }}>산업화 시대</th>
+                  <th style={{ padding: "4px 7px", textAlign: "left", fontSize: 12 }}>AI 시대의 타격</th>
+                  <th style={{ padding: "4px 7px", textAlign: "left", fontSize: 12 }}>구체적 위협 예시</th>
                 </tr>
               </thead>
               <tbody>
@@ -95,12 +95,12 @@ export function CombinedPage() {
                   },
                 ].map(({ prev, impact, threats }, i) => (
                   <tr key={i} style={{ background: i % 2 ? C.bg : "#fff" }}>
-                    <td style={{ padding: "4px 7px", borderBottom: "1px solid #eee", fontSize: 13, verticalAlign: "top", lineHeight: 1.5, fontWeight: 700, color: C.navy }}>{prev}</td>
-                    <td style={{ padding: "4px 7px", borderBottom: "1px solid #eee", fontSize: 13, verticalAlign: "top", lineHeight: 1.5, color: "#333" }}>{impact}</td>
+                    <td style={{ padding: "4px 7px", borderBottom: "1px solid #eee", fontSize: 12, verticalAlign: "top", lineHeight: 1.5, fontWeight: 700, color: C.navy }}>{prev}</td>
+                    <td style={{ padding: "4px 7px", borderBottom: "1px solid #eee", fontSize: 12, verticalAlign: "top", lineHeight: 1.5, color: "#333" }}>{impact}</td>
                     <td style={{ padding: "4px 7px", borderBottom: "1px solid #eee", verticalAlign: "top" }}>
                       {threats.map((t, j) => (
                         <div key={j} style={{ marginBottom: j < threats.length - 1 ? 4 : 0 }}>
-                          <span style={{ fontSize: 13, color: "#333", lineHeight: 1.4 }}>{t.text}</span>
+                          <span style={{ fontSize: 12, color: "#333", lineHeight: 1.4 }}>{t.text}</span>
                         </div>
                       ))}
                     </td>
@@ -108,7 +108,7 @@ export function CombinedPage() {
                 ))}
               </tbody>
             </table>
-            <div style={{ marginTop: 3, fontSize: 11, color: "#888", fontStyle: "italic" }}>
+            <div style={{ marginTop: 3, fontSize: 10, color: "#888", fontStyle: "italic" }}>
               — 루소, 『사회계약론』(1762) · 롤스, 『정의론』(1971) · 하버마스, 『공론장의 구조변동』(1962)
             </div>
           </div>
@@ -124,9 +124,9 @@ export function CombinedPage() {
               </colgroup>
               <thead>
                 <tr style={{ background: C.navy, color: "#fff" }}>
-                  <th style={{ padding: "4px 7px", textAlign: "left", fontSize: 13 }}>산업화 시대</th>
-                  <th style={{ padding: "4px 7px", textAlign: "left", fontSize: 13 }}>AI 시대의 타격</th>
-                  <th style={{ padding: "4px 7px", textAlign: "left", fontSize: 13 }}>구체적 위협 예시</th>
+                  <th style={{ padding: "4px 7px", textAlign: "left", fontSize: 12 }}>산업화 시대</th>
+                  <th style={{ padding: "4px 7px", textAlign: "left", fontSize: 12 }}>AI 시대의 타격</th>
+                  <th style={{ padding: "4px 7px", textAlign: "left", fontSize: 12 }}>구체적 위협 예시</th>
                 </tr>
               </thead>
               <tbody>
@@ -173,12 +173,12 @@ export function CombinedPage() {
                   },
                 ].map(({ prev, impact, threats }, i) => (
                   <tr key={i} style={{ background: i % 2 ? C.bg : "#fff" }}>
-                    <td style={{ padding: "4px 7px", borderBottom: "1px solid #eee", fontSize: 13, verticalAlign: "top", lineHeight: 1.5, fontWeight: 700, color: C.navy }}>{prev}</td>
-                    <td style={{ padding: "4px 7px", borderBottom: "1px solid #eee", fontSize: 13, verticalAlign: "top", lineHeight: 1.5, color: "#333" }}>{impact}</td>
+                    <td style={{ padding: "4px 7px", borderBottom: "1px solid #eee", fontSize: 12, verticalAlign: "top", lineHeight: 1.5, fontWeight: 700, color: C.navy }}>{prev}</td>
+                    <td style={{ padding: "4px 7px", borderBottom: "1px solid #eee", fontSize: 12, verticalAlign: "top", lineHeight: 1.5, color: "#333" }}>{impact}</td>
                     <td style={{ padding: "4px 7px", borderBottom: "1px solid #eee", verticalAlign: "top" }}>
                       {threats.map((t, j) => (
                         <div key={j} style={{ marginBottom: j < threats.length - 1 ? 4 : 0 }}>
-                          <span style={{ fontSize: 13, color: "#333", lineHeight: 1.4 }}>{t.text}</span>
+                          <span style={{ fontSize: 12, color: "#333", lineHeight: 1.4 }}>{t.text}</span>
                         </div>
                       ))}
                     </td>
@@ -186,7 +186,7 @@ export function CombinedPage() {
                 ))}
               </tbody>
             </table>
-            <div style={{ marginTop: 3, fontSize: 11, color: "#888", fontStyle: "italic" }}>
+            <div style={{ marginTop: 3, fontSize: 10, color: "#888", fontStyle: "italic" }}>
               — 아담 스미스, 『국부론』(1776) · 카를 마르크스, 『자본론』(1867)
             </div>
           </div>
@@ -196,67 +196,82 @@ export function CombinedPage() {
         <div style={{ flex: 1 }}>
           <div style={h3s}>3.3 새로운 사회계약</div>
 
-          {/* 상단: 기존 4카드 (2×2) */}
+          {/* 1) 새로운 권리의 정립 — 3카드 (1×3) */}
+          <div style={{ marginBottom: 4 }}>
+            <div style={{ fontSize: 14, fontWeight: 800, color: "#111", letterSpacing: 1, marginBottom: 5, borderBottom: "1px solid #111", paddingBottom: 2, display: "inline-block" }}>새로운 권리의 정립</div>
+          </div>
+          <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr 1fr", gap: 8, marginBottom: 8 }}>
+
+            <div style={{ padding: "5px 10px", background: "#fafafa", borderLeft: "3px solid #ccc", borderRadius: 2 }}>
+              <div style={{ fontSize: 12, fontWeight: 800, color: "#111", marginBottom: 3 }}>정체성 실현권</div>
+              <div style={{ fontSize: 12, color: "#222", lineHeight: 1.55 }}>
+                직업·소속에 묶이지 않을 권리. 농업시대의 토지 소유권, 산업시대의 직업선택권처럼 디지털시대는 정체성을 스스로 설계하고 실현할 권리를 요구한다. 돌봄·창작·학습 기여를 소득·사회보험과 연결하는 인정 구조가 필요하다. 기존 임금노동 중심의 복지 체계로는 이 기여를 측정할 수 없기 때문이다. 정체성 실현권은 단순한 자유의 확장이 아니라, 강화된 개인이 직업 밖에서도 삶을 지속할 수 있는 물적 토대의 설계를 요구한다.
+              </div>
+              <div style={{ fontSize: 12, color: "#111", fontWeight: 600, marginTop: 4 }}>거버넌스 단위: 도시·협동조합·디지털 공동체</div>
+            </div>
+
+            <div style={{ padding: "5px 10px", background: "#fafafa", borderLeft: "3px solid #ccc", borderRadius: 2 }}>
+              <div style={{ fontSize: 12, fontWeight: 800, color: "#111", marginBottom: 3 }}>AI 인프라 평등 접근권</div>
+              <div style={{ fontSize: 12, color: "#222", lineHeight: 1.55 }}>
+                AI·연산·데이터의 공공재화. 데이터 주권·이동권. 플랫폼 독점의 구조적 해체. AI 인프라가 소수 빅테크에 독점된 현실에서 접근 격차는 곧 역량 격차, 역량 격차는 곧 계층 격차로 이어진다. 전기·도로·통신망이 공공재가 되었듯, AI 연산 자원과 데이터 접근 역시 공공재로 다뤄야 새 사회계약이 작동한다. 개인은 자신의 데이터에 대한 주권과 이동권을 가져야 하며, 플랫폼은 독점적 네트워크 효과를 구조적으로 해체해야 한다.
+              </div>
+              <div style={{ fontSize: 12, color: "#111", fontWeight: 600, marginTop: 4 }}>거버넌스 단위: 국가·공공 AI 인프라·국제 표준</div>
+            </div>
+
+            <div style={{ padding: "5px 10px", background: "#fafafa", borderLeft: "3px solid #ccc", borderRadius: 2 }}>
+              <div style={{ fontSize: 12, fontWeight: 800, color: "#111", marginBottom: 3 }}>알고리즘 자기결정권</div>
+              <div style={{ fontSize: 12, color: "#222", lineHeight: 1.55 }}>
+                알고리즘 결정에 대한 설명 요구권·거부권. 자동 판단 결과에 대한 인간 검토 보장. AI가 채용·대출·보험·형사 처벌을 결정하는 시대에, 그 결정의 근거를 알 수 없다면 이의를 제기하는 것조차 불가능하다. 알고리즘이 개인에게 불이익을 주는 결정을 내릴 때 인간 검토자의 개입을 보장받을 권리는 새 사회계약의 핵심 조항이다. 이 권리 없이 강화된 개인의 자유는 알고리즘에 의해 언제든 무력화될 수 있다.
+              </div>
+              <div style={{ fontSize: 12, color: "#111", fontWeight: 600, marginTop: 4 }}>거버넌스 단위: 민주국가 연합·세계시민 거버넌스</div>
+            </div>
+
+          </div>
+
+          {/* 2) 세계정부 수준의 규율(왼쪽) + 진행 중인 노력의 사례(오른쪽) */}
           <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 8, marginBottom: 8 }}>
 
             <div style={{ padding: "5px 10px", background: "#fafafa", borderLeft: "3px solid #ccc", borderRadius: 2 }}>
-              <div style={{ fontSize: 13, fontWeight: 800, color: "#111", marginBottom: 3 }}>자본주의 & 민주주의의 위기</div>
-              <div style={{ fontSize: 13, color: "#222", lineHeight: 1.55 }}>
-                정치질서에서 예견되는 위협(폭력 독점 와해, 공론장 왜곡, 대표성 붕괴, 법인격 공백)과 경제질서에서 예견되는 위협(양극화, 조세 와해, 소유권 모호성)이 결합되어 산업시대 양대 질서 자체가 한계에 도달한다. 자유민주주의는 한 사람 한 표의 원칙 위에 서 있지만, 알고리즘이 여론을 설계하고 빅테크가 입법을 좌우하는 구조에서 그 원칙은 공허해진다. 시장 자본주의는 경쟁을 통한 효율을 전제하지만, 데이터·알고리즘 독점이 경쟁 자체를 원천 봉쇄한다. 국가는 폭력·화폐·과세 독점으로 작동해 왔지만, 세 독점 모두 디지털 기술 앞에서 우회 가능해진다. 기존 제도의 실패가 아니라, 산업시대를 위해 설계된 제도가 디지털시대에 작동하지 않는 구조적 한계다.
-              </div>
-            </div>
-
-            <div style={{ padding: "5px 10px", background: "#fafafa", borderLeft: "3px solid #ccc", borderRadius: 2 }}>
-              <div style={{ fontSize: 13, fontWeight: 800, color: "#111", marginBottom: 3 }}>새로운 사회계약의 마련</div>
-              <div style={{ fontSize: 13, color: "#222", lineHeight: 1.55 }}>
-                산업시대 사회계약을 보완하는 것이 아니라, 강화된 개인을 품을 새 질서를 처음부터 다시 설계하는 작업이다. 루소의 사회계약론이 왕권신수설을 대체했듯, 이번에는 국민국가 중심의 계약이 더 작은 단위와 더 큰 단위를 아우르는 다층 계약으로 대체되어야 한다. <strong>정체성 실현권</strong>, <strong>알고리즘 자기결정권</strong>, <strong>AI 인프라 평등 접근권</strong> 등 새 권리와 거버넌스가 필요하다. 이 권리들은 헌법 개정이나 국제 조약 없이는 실현될 수 없으며, 기술 기업의 자발적 윤리 선언만으로는 충분하지 않다. 새 사회계약의 핵심 질문은 '누가 AI를 통제하는가'가 아니라 '누구의 이익을 위해 AI가 작동하는가'이다.
-              </div>
-            </div>
-
-            <div style={{ padding: "5px 10px", background: "#fafafa", borderLeft: "3px solid #ccc", borderRadius: 2 }}>
-              <div style={{ fontSize: 13, fontWeight: 800, color: "#111", marginBottom: 3 }}>진행 중인 노력의 사례</div>
-              <div style={{ fontSize: 13, color: "#222", lineHeight: 1.55 }}>
-                <strong>Law Zero</strong> — Yoshua Bengio가 주도한 AI 안전성을 위한 국제 규범 설계 시도로, AI 개발의 최소 안전 기준을 법적 구속력 있는 조약으로 만들려는 운동이다. <strong>ARIA(영국)</strong> — 사회 위협을 사전에 차단하는 첨단 연구 거버넌스 기관으로, 정부가 선제적으로 AI 위험 연구를 주도하는 모델이다. EU AI Act는 고위험 AI 시스템에 사전 등록·감사 의무를 부과하며 전 세계 규제의 기준점이 되고 있다. 세 사례 모두 단일 국가를 넘는 집단 행동을 모색하거나, 국가가 기업보다 앞서 규범을 설계하려는 시도다. 공통 교훈은 하나다 — 기술이 배치된 뒤 규제하는 것은 너무 늦다.
-              </div>
-            </div>
-
-            <div style={{ padding: "5px 10px", background: "#fafafa", borderLeft: "3px solid #ccc", borderRadius: 2 }}>
-              <div style={{ fontSize: 13, fontWeight: 800, color: "#111", marginBottom: 3 }}>세계정부 수준의 규율</div>
-              <div style={{ fontSize: 13, color: "#222", lineHeight: 1.55 }}>
+              <div style={{ fontSize: 12, fontWeight: 800, color: "#111", marginBottom: 3 }}>세계정부 수준의 규율</div>
+              <div style={{ fontSize: 12, color: "#222", lineHeight: 1.55 }}>
                 기업이 세계정부 역할을 대체하면 <strong>동인도회사형 제국</strong>이 가능해진다. 17세기 동인도회사는 군대·화폐·조세 권한을 보유한 사실상의 국가였다 — 빅테크의 현재 궤도가 이와 다르지 않다. 빅테크가 규제해야 할 국가보다 강한 현실에서, 단일 국가의 규제는 플랫폼 이전 한 번으로 무력화된다. 새 사회계약의 <span style={{ fontWeight: 800 }}>주체는 단일 국가가 아닌 민주국가 연합의 집단 행동</span>이어야 하며, 이는 선택이 아니라 구조적 필요다. 핵·생화학무기 통제가 국제 조약으로만 가능했듯, AI 거버넌스 역시 국가 연합 수준의 강제력 있는 규율 없이는 작동하지 않는다.
               </div>
             </div>
 
+            <div style={{ padding: "5px 10px", background: "#fafafa", borderLeft: "3px solid #ccc", borderRadius: 2 }}>
+              <div style={{ fontSize: 12, fontWeight: 800, color: "#111", marginBottom: 3 }}>진행 중인 노력의 사례</div>
+              <div style={{ fontSize: 12, color: "#222", lineHeight: 1.55 }}>
+                <strong>Law Zero</strong> — Yoshua Bengio가 주도한 AI 안전성을 위한 국제 규범 설계 시도로, AI 개발의 최소 안전 기준을 법적 구속력 있는 조약으로 만들려는 운동이다. <strong>ARIA(영국)</strong> — 사회 위협을 사전에 차단하는 첨단 연구 거버넌스 기관으로, 정부가 선제적으로 AI 위험 연구를 주도하는 모델이다. EU AI Act는 고위험 AI 시스템에 사전 등록·감사 의무를 부과하며 전 세계 규제의 기준점이 되고 있다. 세 사례 모두 단일 국가를 넘는 집단 행동을 모색하거나, 국가가 기업보다 앞서 규범을 설계하려는 시도다. 공통 교훈은 하나다 — 기술이 배치된 뒤 규제하는 것은 너무 늦다.
+              </div>
+            </div>
+
           </div>
 
-          {/* 하단: 새 권리 3카드 (1×3) */}
+          {/* 3) 새 거버넌스 (권리의 작동) — 3카드 (1×3) */}
           <div style={{ marginBottom: 4 }}>
-            <div style={{ fontSize: 11.5, fontWeight: 800, color: "#111", letterSpacing: 1, marginBottom: 5, borderBottom: "1px solid #111", paddingBottom: 2, display: "inline-block" }}>새로운 권리의 정립</div>
+            <div style={{ fontSize: 13.5, fontWeight: 800, color: "#111", letterSpacing: 1, marginBottom: 5, borderBottom: "1px solid #111", paddingBottom: 2, display: "inline-block" }}>새 거버넌스 (권리의 작동)</div>
           </div>
           <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr 1fr", gap: 8 }}>
 
             <div style={{ padding: "5px 10px", background: "#fafafa", borderLeft: "3px solid #ccc", borderRadius: 2 }}>
-              <div style={{ fontSize: 13, fontWeight: 800, color: "#111", marginBottom: 3 }}>정체성 실현권</div>
-              <div style={{ fontSize: 13, color: "#222", lineHeight: 1.55 }}>
-                직업·소속에 묶이지 않을 권리. 농업시대의 토지 소유권, 산업시대의 직업선택권처럼 디지털시대는 정체성을 스스로 설계하고 실현할 권리를 요구한다. 돌봄·창작·학습 기여를 소득·사회보험과 연결하는 인정 구조가 필요하다. 기존 임금노동 중심의 복지 체계로는 이 기여를 측정할 수 없기 때문이다. 정체성 실현권은 단순한 자유의 확장이 아니라, 강화된 개인이 직업 밖에서도 삶을 지속할 수 있는 물적 토대의 설계를 요구한다.
+              <div style={{ fontSize: 12, fontWeight: 800, color: "#111", marginBottom: 3 }}>사전승인 거버넌스</div>
+              <div style={{ fontSize: 12, color: "#222", lineHeight: 1.55 }}>
+                의약품처럼 AI도 개발자가 안정성을 입증한 후 출시. 플랫폼 공공성을 보장하고, 위기 대응 권한은 한시적이며 해소 시 자동 소멸.
               </div>
-              <div style={{ fontSize: 13, color: "#111", fontWeight: 600, marginTop: 4 }}>거버넌스 단위: 도시·협동조합·디지털 공동체</div>
             </div>
 
             <div style={{ padding: "5px 10px", background: "#fafafa", borderLeft: "3px solid #ccc", borderRadius: 2 }}>
-              <div style={{ fontSize: 13, fontWeight: 800, color: "#111", marginBottom: 3 }}>AI 인프라 평등 접근권</div>
-              <div style={{ fontSize: 13, color: "#222", lineHeight: 1.55 }}>
-                AI·연산·데이터의 공공재화. 데이터 주권·이동권. 플랫폼 독점의 구조적 해체. AI 인프라가 소수 빅테크에 독점된 현실에서 접근 격차는 곧 역량 격차, 역량 격차는 곧 계층 격차로 이어진다. 전기·도로·통신망이 공공재가 되었듯, AI 연산 자원과 데이터 접근 역시 공공재로 다뤄야 새 사회계약이 작동한다. 개인은 자신의 데이터에 대한 주권과 이동권을 가져야 하며, 플랫폼은 독점적 네트워크 효과를 구조적으로 해체해야 한다.
+              <div style={{ fontSize: 12, fontWeight: 800, color: "#111", marginBottom: 3 }}>재정 거버넌스</div>
+              <div style={{ fontSize: 12, color: "#222", lineHeight: 1.55 }}>
+                전환 인프라로 재편기 소외 계층을 지원하고, AI 이익을 환수해 디지털 배당, 공공인프라로 환류. 가정/도시/국가/글로벌이 한시적으로 분담하는 다층 구조.
               </div>
-              <div style={{ fontSize: 13, color: "#111", fontWeight: 600, marginTop: 4 }}>거버넌스 단위: 국가·공공 AI 인프라·국제 표준</div>
             </div>
 
             <div style={{ padding: "5px 10px", background: "#fafafa", borderLeft: "3px solid #ccc", borderRadius: 2 }}>
-              <div style={{ fontSize: 13, fontWeight: 800, color: "#111", marginBottom: 3 }}>알고리즘 자기결정권</div>
-              <div style={{ fontSize: 13, color: "#222", lineHeight: 1.55 }}>
-                알고리즘 결정에 대한 설명 요구권·거부권. 자동 판단 결과에 대한 인간 검토 보장. AI가 채용·대출·보험·형사 처벌을 결정하는 시대에, 그 결정의 근거를 알 수 없다면 이의를 제기하는 것조차 불가능하다. 알고리즘이 개인에게 불이익을 주는 결정을 내릴 때 인간 검토자의 개입을 보장받을 권리는 새 사회계약의 핵심 조항이다. 이 권리 없이 강화된 개인의 자유는 알고리즘에 의해 언제든 무력화될 수 있다.
+              <div style={{ fontSize: 12, fontWeight: 800, color: "#111", marginBottom: 3 }}>공론장 보호 거버넌스</div>
+              <div style={{ fontSize: 12, color: "#222", lineHeight: 1.55 }}>
+                AI 콘텐츠 출처 표시, 마이크로 타게팅 규제로 공론장의 중립성을 보호. 국경을 넘는 패권 경쟁은 한시적 협력으로 대응.
               </div>
-              <div style={{ fontSize: 13, color: "#111", fontWeight: 600, marginTop: 4 }}>거버넌스 단위: 민주국가 연합·세계시민 거버넌스</div>
             </div>
 
           </div>
@@ -264,7 +279,7 @@ export function CombinedPage() {
 
       </div>
 
-      <Footer version="v0.8.2" />
+      <Footer version="v0.8.4" />
     </div>
   );
 }

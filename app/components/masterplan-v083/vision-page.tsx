@@ -4,7 +4,7 @@ import { Header, Footer, ps, h3s } from "../masterplan-v705/shared";
 export function VisionPage() {
   return (
     <div style={{ height: "281mm", display: "flex", flexDirection: "column" }}>
-      <Header subtitle="1. 비전" version="v0.8.2" />
+      <Header subtitle="1. 비전" version="v0.8.3" />
 
       <div style={{ padding: "14px 32px 10px", borderBottom: `2px solid ${C.navy}`, marginBottom: 12 }}>
         <div style={{ fontSize: 12, letterSpacing: 4, color: C.light, fontWeight: 700, marginBottom: 6 }}>MISSION</div>
@@ -82,7 +82,7 @@ export function VisionPage() {
         </div>
       </div>
 
-      <Footer version="v0.8.2" />
+      <Footer version="v0.8.3" />
     </div>
   );
 }

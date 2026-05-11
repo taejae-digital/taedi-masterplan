@@ -28,7 +28,7 @@ function TBadge({ code }: { code: string }) {
 export function CombinedPage() {
   return (
     <div style={{ pageBreakBefore: "always", height: "281mm", overflow: "hidden", display: "flex", flexDirection: "column" }}>
-      <Header subtitle="3. 질서의 붕괴와 새 사회계약" version="v0.8.2" />
+      <Header subtitle="3. 질서의 붕괴와 새 사회계약" version="v0.8.3" />
 
       <div style={{ padding: "4px 32px 0", display: "flex", flexDirection: "column", flex: 1 }}>
 
@@ -264,7 +264,7 @@ export function CombinedPage() {
 
       </div>
 
-      <Footer version="v0.8.2" />
+      <Footer version="v0.8.3" />
     </div>
   );
 }

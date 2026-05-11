@@ -4,10 +4,10 @@ import { Header, Footer, h3s } from "../masterplan-v705/shared";
 export function ResearchPlanPage() {
   return (
     <div style={{ pageBreakBefore: "always", height: "281mm", overflow: "hidden", display: "flex", flexDirection: "column" }}>
-      <Header subtitle="4. 연구 계획" version="v0.8.2" />
+      <Header subtitle="4. 연구 계획" version="v0.8.4" />
 
       <div style={{ padding: "14px 32px 10px", borderBottom: `2px solid ${C.navy}`, marginBottom: 12 }}>
-        <div style={{ fontSize: 20, fontWeight: 800, color: C.navy, lineHeight: 1.4 }}>
+        <div style={{ fontSize: 19, fontWeight: 800, color: C.navy, lineHeight: 1.4 }}>
           사후 교정이 불가능한 AI 시대, 태재는 이론·공론·솔루션의 세 축을 동시에 끌어올려 실행 가능한 모델로 제시한다.
         </div>
       </div>
@@ -15,8 +15,8 @@ export function ResearchPlanPage() {
       {/* AI 시대의 연구 방법론 — 전체 너비 다이어그램 */}
       <div style={{ padding: "0 32px 10px" }}>
         <div style={{ display: "flex", alignItems: "baseline", gap: 10, marginBottom: 6 }}>
-          <div style={{ fontSize: 14, fontWeight: 800, color: C.navy, borderBottom: `2px solid ${C.navy}`, paddingBottom: 2 }}>AI 시대의 연구 방법론</div>
-          <div style={{ fontSize: 13, color: "#666" }}>정보→지식 변환은 AI에 위임하고, 지식→지혜(방향 판단)에 인간 역량을 집중한다.</div>
+          <div style={{ fontSize: 13, fontWeight: 800, color: C.navy, borderBottom: `2px solid ${C.navy}`, paddingBottom: 2 }}>AI 시대의 연구 방법론</div>
+          <div style={{ fontSize: 12, color: "#666" }}>정보→지식 변환은 AI에 위임하고, 지식→지혜(방향 판단)에 인간 역량을 집중한다.</div>
         </div>
         <div style={{ display: "flex", alignItems: "stretch", gap: 0 }}>
           {[
@@ -29,14 +29,14 @@ export function ResearchPlanPage() {
             <div key={i} style={{ display: "flex", alignItems: "stretch", flex: 1 }}>
               <div style={{ flex: 1, padding: "8px 10px", border: "1px solid #222", borderRadius: 4 }}>
                 <div style={{ display: "flex", alignItems: "center", gap: 5, marginBottom: 3 }}>
-                  <span style={{ fontSize: 13, fontWeight: 900, color: "#111" }}>{num}</span>
-                  <span style={{ fontSize: 13, fontWeight: 800, color: "#111" }}>{t}</span>
+                  <span style={{ fontSize: 12, fontWeight: 900, color: "#111" }}>{num}</span>
+                  <span style={{ fontSize: 12, fontWeight: 800, color: "#111" }}>{t}</span>
                 </div>
-                <div style={{ fontSize: 13, fontWeight: 700, color: "#666", marginBottom: 3, letterSpacing: 0.3 }}>{who}</div>
-                <div style={{ fontSize: 13, color: "#444", lineHeight: 1.4 }}>{d}</div>
+                <div style={{ fontSize: 12, fontWeight: 700, color: "#666", marginBottom: 3, letterSpacing: 0.3 }}>{who}</div>
+                <div style={{ fontSize: 12, color: "#444", lineHeight: 1.4 }}>{d}</div>
               </div>
               {i < arr.length - 1 && (
-                <div style={{ display: "flex", alignItems: "center", padding: "0 4px", color: C.navy, fontSize: 17, fontWeight: 300 }}>→</div>
+                <div style={{ display: "flex", alignItems: "center", padding: "0 4px", color: C.navy, fontSize: 16, fontWeight: 300 }}>→</div>
               )}
             </div>
           ))}
@@ -47,18 +47,20 @@ export function ResearchPlanPage() {
             <path d="M 700 0 L 700 30 L 304 30 L 304 4" stroke={C.accent} strokeWidth="1.3" fill="none" strokeDasharray="4 3" vectorEffect="non-scaling-stroke" />
             <polygon points="300,8 304,2 308,8" fill={C.accent} />
           </svg>
-          <div style={{ position: "absolute", bottom: 2, left: "50%", transform: "translateX(-50%)", fontSize: 10.5, color: C.accent, background: "#fff", padding: "0 8px", fontStyle: "italic", fontWeight: 600, letterSpacing: 0.2 }}>
+          <div style={{ position: "absolute", bottom: 2, left: "50%", transform: "translateX(-50%)", fontSize: 9.5, color: C.accent, background: "#fff", padding: "0 8px", fontStyle: "italic", fontWeight: 600, letterSpacing: 0.2 }}>
             피드백 반영
           </div>
         </div>
       </div>
 
-      <div style={{ padding: "0 32px", display: "flex", flexDirection: "column", gap: 14, flex: 1 }}>
-        <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 24 }}>
+      <div style={{ padding: "0 32px", flex: 1, display: "grid", gridTemplateColumns: "1fr 1fr", gap: 20 }}>
+
+        {/* 왼쪽 열: 4.1 → 4.2 → 4.3 */}
+        <div style={{ display: "flex", flexDirection: "column", gap: 10 }}>
           <div>
             <div style={h3s}>4.1 연구 목표</div>
             <div style={{ padding: "8px 10px", background: C.bg }}>
-              <div style={{ fontSize: 13, lineHeight: 1.55, color: "#333" }}>
+              <div style={{ fontSize: 12, lineHeight: 1.55, color: "#333" }}>
                 디지털 기술이 가져오는 사회적 충격에 대응하는 구체적 해결책을 제시하고 실행 가능한 모델로 고도화한다.
               </div>
             </div>
@@ -73,15 +75,13 @@ export function ResearchPlanPage() {
                 { t: "솔루션 설계", d: "권리·거버넌스·AI 안전 평가 프레임워크를 실행 가능한 정책·제도 모델로 정리한다." },
               ].map(({ t, d }) => (
                 <div key={t} style={{ padding: "8px 10px", background: C.bg }}>
-                  <div style={{ fontSize: 14, fontWeight: 800, color: C.navy, marginBottom: 4 }}>{t}</div>
-                  <div style={{ fontSize: 13, lineHeight: 1.55, color: "#333" }}>{d}</div>
+                  <div style={{ fontSize: 13, fontWeight: 800, color: C.navy, marginBottom: 4 }}>{t}</div>
+                  <div style={{ fontSize: 12, lineHeight: 1.55, color: "#333" }}>{d}</div>
                 </div>
               ))}
             </div>
           </div>
-        </div>
 
-        <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 24 }}>
           <div>
             <div style={h3s}>4.3 연구 분야</div>
             {[
@@ -91,21 +91,24 @@ export function ResearchPlanPage() {
               { letter: "D", t: "AI 안전 평가 프레임워크 — 어떻게 측정하나", d: "새 사회계약의 측정 도구. 6위협 × 판단력·실행력·파급력 매트릭스로 FDA식 사전 승인 평가 기준 정식화. 기존 벤치마크(HELM·AILuminate·UK AISI)가 비워둔 권력 집중·인간 존엄·글로벌 질서 영역을 채운다. UK AISI·MLCommons·GovAI·Stanford HAI 협력." },
             ].map(({ letter, t, d }) => (
               <div key={letter} style={{ display: "flex", gap: 10, marginBottom: 7, padding: "7px 9px", background: C.bg, borderLeft: `3px solid ${C.navy}` }}>
-                <div style={{ fontSize: 16, fontWeight: 900, color: C.navy, minWidth: 18 }}>{letter}</div>
+                <div style={{ fontSize: 15, fontWeight: 900, color: C.navy, minWidth: 18 }}>{letter}</div>
                 <div>
-                  <div style={{ fontSize: 14, fontWeight: 700, color: C.navy, marginBottom: 3 }}>{t}</div>
-                  <div style={{ fontSize: 13, lineHeight: 1.55, color: "#333" }}>{d}</div>
+                  <div style={{ fontSize: 13, fontWeight: 700, color: C.navy, marginBottom: 3 }}>{t}</div>
+                  <div style={{ fontSize: 12, lineHeight: 1.55, color: "#333" }}>{d}</div>
                 </div>
               </div>
             ))}
           </div>
+        </div>
 
+        {/* 오른쪽 열: 4.4 → 4.5 → 4.6 */}
+        <div style={{ display: "flex", flexDirection: "column", gap: 10 }}>
           <div>
             <div style={h3s}>4.4 업무 분장</div>
             <div style={{ padding: "9px 10px", marginBottom: 8, background: C.bg, borderLeft: `3px solid ${C.navy}` }}>
-              <div style={{ fontSize: 14.5, fontWeight: 800, color: C.navy, marginBottom: 2 }}>유호현 (팀장)</div>
-              <div style={{ fontSize: 13, fontWeight: 600, color: "#444", marginBottom: 4, lineHeight: 1.45 }}>총괄 · 이론적 토대 (A) · AI 안전 평가 프레임워크 (D)</div>
-              <div style={{ fontSize: 13, lineHeight: 1.55, color: "#333" }}>
+              <div style={{ fontSize: 13.5, fontWeight: 800, color: C.navy, marginBottom: 2 }}>유호현 (팀장)</div>
+              <div style={{ fontSize: 12, fontWeight: 600, color: "#444", marginBottom: 4, lineHeight: 1.45 }}>총괄 · 이론적 토대 (A) · AI 안전 평가 프레임워크 (D)</div>
+              <div style={{ fontSize: 12, lineHeight: 1.55, color: "#333" }}>
                 연구 전체 방향 설정, 회장님·원장님과 소통. 새 사회계약의 이론적 토대 (A) 정립, 6위협 × 판단력·실행력·파급력 평가 매트릭스 설계 (D), UK AISI·MLCommons·GovAI·Stanford HAI 협력, 단행본 편집 총괄.
               </div>
             </div>
@@ -116,66 +119,65 @@ export function ResearchPlanPage() {
                 { name: "윤준영", role: "새 질서 (C) · AI 안전 평가 협력 (D)", detail: "글로벌 한시 협력·미중 대타협 경로 (C), LAWS·AI WMD 국제 레짐, FDA 사전 승인 체계 설계 (D 협력), Law Zero·ARIA·UK AISI 기관 네트워킹." },
               ].map(({ name, role, detail }) => (
                 <div key={name} style={{ padding: "9px 10px", background: C.bg, borderLeft: `3px solid ${C.navy}` }}>
-                  <div style={{ fontSize: 14.5, fontWeight: 800, color: C.navy, marginBottom: 2 }}>{name}</div>
-                  <div style={{ fontSize: 13, fontWeight: 600, color: "#444", marginBottom: 4, lineHeight: 1.45 }}>{role}</div>
-                  <div style={{ fontSize: 13, lineHeight: 1.55, color: "#333" }}>{detail}</div>
+                  <div style={{ fontSize: 13.5, fontWeight: 800, color: C.navy, marginBottom: 2 }}>{name}</div>
+                  <div style={{ fontSize: 12, fontWeight: 600, color: "#444", marginBottom: 4, lineHeight: 1.45 }}>{role}</div>
+                  <div style={{ fontSize: 12, lineHeight: 1.55, color: "#333" }}>{detail}</div>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          <div>
+            <div style={h3s}>4.5 실행 일정</div>
+            <table style={{ width: "100%", borderCollapse: "collapse", marginBottom: 4, fontSize: 12 }}>
+              <thead>
+                <tr style={{ background: C.navy, color: "#fff" }}>
+                  <th style={{ padding: "6px 8px", textAlign: "left", fontSize: 12, width: "18%" }}>시기</th>
+                  <th style={{ padding: "6px 8px", textAlign: "left", fontSize: 12 }}>실행 내용</th>
+                  <th style={{ padding: "6px 8px", textAlign: "left", fontSize: 12, width: "28%" }}>산출물</th>
+                </tr>
+              </thead>
+              <tbody>
+                {[
+                  ["4~5월", "마스터플랜 확정 · 연구 분야별 착수 · 국내외 자문단 섭외", "마스터플랜 확정본"],
+                  ["6~8월", "이론적 토대 · 새 권리 · 새 질서 · AI 안전 평가 프레임워크 병렬 연구", "분야별 연구 초안 4종"],
+                  ["9~10월", "교차 검토 · 외부 전문가 피드백 · 단행본 편집 · AI 평가 프레임워크 영문 브리프 발표", "종합 보고서 · 영문 브리프"],
+                  ["11~12월", "단행본 출판 · 국내 공론화 · 국제 컨퍼런스 (UK AISI·MLCommons·GovAI 협력)", "단행본 + 정책 제안 + 평가 프레임워크"],
+                ].map(([period, content, output], i) => (
+                  <tr key={i} style={{ background: i % 2 ? C.bg : "#fff" }}>
+                    <td style={{ padding: "6px 8px", borderBottom: "1px solid #eee", fontWeight: 700, color: C.navy, lineHeight: 1.5 }}>{period}</td>
+                    <td style={{ padding: "6px 8px", borderBottom: "1px solid #eee", color: "#333", lineHeight: 1.5 }}>{content}</td>
+                    <td style={{ padding: "6px 8px", borderBottom: "1px solid #eee", fontWeight: 600, color: "#222", lineHeight: 1.5 }}>{output}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+
+          <div>
+            <div style={h3s}>4.6 향후 계획</div>
+            <div style={{ display: "grid", gridTemplateColumns: "1fr", gap: 8 }}>
+              {[
+                { t: "2028", items: ["AI 평가 프레임워크 외부 협력 구현 (MLCommons·UK AISI)", "연구 보고서 국제판·해외 학술지 게재"] },
+                { t: "2030", items: ["디지털 권리 헌장 초안·국제 협약 참여", "미중 합의 경로 제시 및 중재"] },
+              ].map(({ t, items }) => (
+                <div key={t} style={{ padding: "9px 11px", borderTop: `2px solid ${C.navy}`, background: C.bg }}>
+                  <div style={{ fontSize: 13, fontWeight: 800, color: C.navy, marginBottom: 6 }}>{t}</div>
+                  {items.map((item, i) => (
+                    <div key={i} style={{ display: "flex", gap: 5, marginBottom: 4, fontSize: 12, lineHeight: 1.5, color: "#333" }}>
+                      <span style={{ color: C.navy, fontWeight: 700, flexShrink: 0 }}>—</span>
+                      <span>{item}</span>
+                    </div>
+                  ))}
                 </div>
               ))}
             </div>
           </div>
         </div>
 
-        <div style={{ display: "grid", gridTemplateColumns: "1.5fr 1fr", gap: 24 }}>
-        <div>
-          <div style={h3s}>4.5 실행 일정</div>
-          <table style={{ width: "100%", borderCollapse: "collapse", marginBottom: 12, fontSize: 13 }}>
-            <thead>
-              <tr style={{ background: C.navy, color: "#fff" }}>
-                <th style={{ padding: "6px 8px", textAlign: "left", fontSize: 13, width: "18%" }}>시기</th>
-                <th style={{ padding: "6px 8px", textAlign: "left", fontSize: 13 }}>실행 내용</th>
-                <th style={{ padding: "6px 8px", textAlign: "left", fontSize: 13, width: "28%" }}>산출물</th>
-              </tr>
-            </thead>
-            <tbody>
-              {[
-                ["4~5월", "마스터플랜 확정 · 연구 분야별 착수 · 국내외 자문단 섭외", "마스터플랜 확정본"],
-                ["6~8월", "이론적 토대 · 새 권리 · 새 질서 · AI 안전 평가 프레임워크 병렬 연구", "분야별 연구 초안 4종"],
-                ["9~10월", "교차 검토 · 외부 전문가 피드백 · 단행본 편집 · AI 평가 프레임워크 영문 브리프 발표", "종합 보고서 · 영문 브리프"],
-                ["11~12월", "단행본 출판 · 국내 공론화 · 국제 컨퍼런스 (UK AISI·MLCommons·GovAI 협력)", "단행본 + 정책 제안 + 평가 프레임워크"],
-              ].map(([period, content, output], i) => (
-                <tr key={i} style={{ background: i % 2 ? C.bg : "#fff" }}>
-                  <td style={{ padding: "6px 8px", borderBottom: "1px solid #eee", fontWeight: 700, color: C.navy, lineHeight: 1.5 }}>{period}</td>
-                  <td style={{ padding: "6px 8px", borderBottom: "1px solid #eee", color: "#333", lineHeight: 1.5 }}>{content}</td>
-                  <td style={{ padding: "6px 8px", borderBottom: "1px solid #eee", fontWeight: 600, color: "#222", lineHeight: 1.5 }}>{output}</td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
-
-        </div>
-        <div>
-          <div style={h3s}>4.6 향후 계획</div>
-          <div style={{ display: "grid", gridTemplateColumns: "1fr", gap: 8 }}>
-            {[
-              { t: "2028", items: ["AI 평가 프레임워크 외부 협력 구현 (MLCommons·UK AISI)", "연구 보고서 국제판·해외 학술지 게재"] },
-              { t: "2030", items: ["디지털 권리 헌장 초안·국제 협약 참여", "미중 합의 경로 제시 및 중재"] },
-            ].map(({ t, items }) => (
-              <div key={t} style={{ padding: "9px 11px", borderTop: `2px solid ${C.navy}`, background: C.bg }}>
-                <div style={{ fontSize: 14, fontWeight: 800, color: C.navy, marginBottom: 6 }}>{t}</div>
-                {items.map((item, i) => (
-                  <div key={i} style={{ display: "flex", gap: 5, marginBottom: 4, fontSize: 13, lineHeight: 1.5, color: "#333" }}>
-                    <span style={{ color: C.navy, fontWeight: 700, flexShrink: 0 }}>—</span>
-                    <span>{item}</span>
-                  </div>
-                ))}
-              </div>
-            ))}
-          </div>
-        </div>
-        </div>
       </div>
 
-      <Footer version="v0.8.2" />
+      <Footer version="v0.8.4" />
     </div>
   );
 }

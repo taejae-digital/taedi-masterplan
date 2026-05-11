@@ -4,7 +4,7 @@ import { Header, Footer, h3s } from "../masterplan-v705/shared";
 export function ResearchPlanPage() {
   return (
     <div style={{ pageBreakBefore: "always", height: "281mm", overflow: "hidden", display: "flex", flexDirection: "column" }}>
-      <Header subtitle="4. 연구 계획" version="v0.8.2" />
+      <Header subtitle="4. 연구 계획" version="v0.8.3" />
 
       <div style={{ padding: "14px 32px 10px", borderBottom: `2px solid ${C.navy}`, marginBottom: 12 }}>
         <div style={{ fontSize: 20, fontWeight: 800, color: C.navy, lineHeight: 1.4 }}>
@@ -175,7 +175,7 @@ export function ResearchPlanPage() {
         </div>
       </div>
 
-      <Footer version="v0.8.2" />
+      <Footer version="v0.8.3" />
     </div>
   );
 }
