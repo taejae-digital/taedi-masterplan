@@ -226,9 +226,9 @@ export function CombinedPage() {
             </div>
 
             <div style={{ padding: "5px 10px", background: "#fafafa", borderLeft: "3px solid #ccc", borderRadius: 2 }}>
-              <div style={{ fontSize: 12, fontWeight: 800, color: "#111", marginBottom: 3 }}>알고리즘 자기결정권</div>
+              <div style={{ fontSize: 12, fontWeight: 800, color: "#111", marginBottom: 3 }}>AI 개인화권</div>
               <div style={{ fontSize: 12, color: "#222", lineHeight: 1.55 }}>
-                알고리즘 결정에 대한 설명 요구권·거부권. 자동 판단 결과에 대한 인간 검토 보장. AI가 채용·대출·보험·형사 처벌을 결정하는 시대에, 근거를 알 수 없으면 이의 제기조차 불가능하다. 이 권리 없이는 강화된 개인의 자유가 알고리즘에 의해 무력화된다.
+                AI의 행동 양식을 개인의 정체성·스타일·목적에 맞춰 스스로 설계할 권리. 빅테크가 일률적으로 부과한 기본 설정에 종속되지 않고, AI를 자기 정체성 실현의 도구로 만들 수 있어야 한다. 부가적으로 알고리즘 결정에 대한 설명 요구권·거부권 — 자동 판단 결과에 대한 인간 검토 보장.
               </div>
               <div style={{ fontSize: 12, color: "#111", fontWeight: 600, marginTop: 4 }}>거버넌스 단위: 민주국가 연합·세계시민 거버넌스</div>
             </div>
