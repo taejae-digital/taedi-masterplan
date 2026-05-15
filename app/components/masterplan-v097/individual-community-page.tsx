@@ -59,9 +59,8 @@ export function IndividualCommunityPage() {
       <Header subtitle="2. 디지털 전환에 따른 개인과 공동체 변화" version={VERSION} />
 
       <div style={{ padding: "10px 32px 8px", borderBottom: `2px solid ${C.navy}`, marginBottom: 8 }}>
-        <div style={{ fontSize: 13, letterSpacing: 4, color: C.accent, fontWeight: 800, marginBottom: 4 }}>새 기술이 등장할 때마다 개인이 변화했고, 전문성이 바뀌었다</div>
         <div style={{ fontSize: 18, fontWeight: 800, color: C.navy, lineHeight: 1.35 }}>
-          전문성은 새 기술로 시대의 숙제를 푸는 방식이다. 숙제가 바뀌면 전문성도 바뀐다. 개인이 변화하면 공동체도 변화한다.
+          새 기술이 개인의 가능성을 바꿀 때마다, 시대의 숙제를 푸는 전문성이 바뀌었고, 개인이 변화하면 공동체도 변화했다.
         </div>
       </div>
 
@@ -83,7 +82,7 @@ export function IndividualCommunityPage() {
                 <th style={{ padding: "4px 6px", textAlign: "left", width: "16%" }}>인류의 숙제</th>
                 <th style={{ padding: "4px 6px", textAlign: "left", width: "14%" }}>핵심 기술</th>
                 <th style={{ padding: "4px 6px", textAlign: "left", width: "20%" }}>핵심 전문성</th>
-                <th style={{ padding: "4px 6px", textAlign: "left", width: "18%" }}>주요 직업</th>
+                <th style={{ padding: "4px 6px", textAlign: "left", width: "18%" }}>역할 유형</th>
                 <th style={{ padding: "4px 6px", textAlign: "left" }}>원하는 자유</th>
               </tr>
             </thead>
@@ -123,11 +122,9 @@ export function IndividualCommunityPage() {
                   problem: ["정보 과잉과 판단력 위기", "국경 초월 위기 (기후·팬데믹·AI)", "중앙 없는 협력 구조", "개인화와 집단 결속의 공존"],
                   tech: ["인터넷·플랫폼 (연결 인프라)", "AI·알고리즘 (정보 처리·판단 보조)", "오픈소스·프로토콜 (중앙 없는 협력)", "데이터·피드백 루프 (실시간 자율 조정)"],
                   jobs: [
-                    ["정동·관계 노동 (affective·relational · Hardt-Negri)", "상담 · 코칭 · 심리 지원"],
-                    ["돌봄 노동 (care work · Folbre)", "돌봄 · 요양 · 사회 서비스"],
-                    ["암묵지·맥락 판단 (tacit knowledge · Polanyi)", "정책 기획 · 거버넌스 설계"],
-                    ["비정형 인지 (non-routine cognitive · Autor)", "AI 활용 · 분석 · 연구"],
-                    ["의미 생성 (meaning-making · 자체 구성)", "창작 · 편집 · 진실성 검증"],
+                    ["정동·관계 노동 (Hardt-Negri) · 돌봄 노동 (Folbre)", "목적을 설정하고 사람을 연결하는"],
+                    ["암묵지·맥락 판단 (Polanyi)", "가치 판단과 윤리적 결정을 내리는"],
+                    ["비정형 인지 (Autor) · 의미 생성", "맥락을 읽고 의미를 만드는"],
                   ],
                   fr: "연결 속에서 자기 자신일 자유 — 감시·알고리즘·플랫폼 종속으로부터의 해방",
                   highlight: true,
@@ -200,7 +197,7 @@ export function IndividualCommunityPage() {
                     <div style={{ fontSize: 10.5, color: "#444", lineHeight: 1.45, marginBottom: 5, fontStyle: "italic" }}>{why}</div>
 
                     <div style={{ fontSize: 9.5, color: C.navy, fontWeight: 700, marginBottom: 1, textTransform: "uppercase", letterSpacing: 0.5 }}>새 역할</div>
-                    <div style={{ fontSize: 11, color: "#111", lineHeight: 1.5, marginBottom: 6, fontWeight: 600 }}>{def}</div>
+                    <div style={{ fontSize: 11, color: "#111", lineHeight: 1.5, fontWeight: 600, flex: 1 }}>{def}</div>
 
                   </div>
                   {i < stages.length - 1 && (
