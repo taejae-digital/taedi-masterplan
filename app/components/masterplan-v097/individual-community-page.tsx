@@ -60,7 +60,7 @@ export function IndividualCommunityPage() {
 
       <div style={{ padding: "10px 32px 8px", borderBottom: `2px solid ${C.navy}`, marginBottom: 8 }}>
         <div style={{ fontSize: 18, fontWeight: 800, color: C.navy, lineHeight: 1.35 }}>
-          새 기술이 개인의 가능성을 바꿀 때마다, 시대의 숙제를 푸는 전문성이 바뀌었고, 개인이 변화하면 공동체도 변화했다.
+          기술은 새로운 숙제를 만들고, 그 숙제를 푸는 사람이 그 시대의 전문가가 됐다. 전문가가 달라지면 개인이 달라지고, 개인이 달라지면 공동체도 달라져야 한다.
         </div>
       </div>
 
@@ -122,9 +122,9 @@ export function IndividualCommunityPage() {
                   problem: ["정보 과잉과 판단력 위기", "국경 초월 위기 (기후·팬데믹·AI)", "중앙 없는 협력 구조", "개인화와 집단 결속의 공존"],
                   tech: ["인터넷·플랫폼 (연결 인프라)", "AI·알고리즘 (정보 처리·판단 보조)", "오픈소스·프로토콜 (중앙 없는 협력)", "데이터·피드백 루프 (실시간 자율 조정)"],
                   jobs: [
-                    ["정동·관계 노동 (Hardt-Negri) · 돌봄 노동 (Folbre)", "목적을 설정하고 사람을 연결하는"],
-                    ["암묵지·맥락 판단 (Polanyi)", "가치 판단과 윤리적 결정을 내리는"],
-                    ["비정형 인지 (Autor) · 의미 생성", "맥락을 읽고 의미를 만드는"],
+                    ["정동·관계 노동 (Hardt-Negri) · 돌봄 노동 (Folbre)", "목적을 설정하는 사람 (중앙 없이 사람을 연결)"],
+                    ["암묵지·맥락 판단 (Polanyi)", "가치 판단을 내리는 사람 (AI가 대신할 수 없는 '왜'를 묻는)"],
+                    ["비정형 인지 (Autor) · 의미 생성", "맥락을 읽는 사람 (정보를 의미로 전환)"],
                   ],
                   fr: "연결 속에서 자기 자신일 자유 — 감시·알고리즘·플랫폼 종속으로부터의 해방",
                   highlight: true,
