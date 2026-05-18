@@ -70,16 +70,16 @@ export function IndividualCommunityPage() {
 
         {/* 2.1 개인과 전문성의 변화 — 시대별 관찰 (3계층: 핵심·주요·파생) */}
         <div>
-          <div style={h3s}>2.1 개인과 전문성의 변화 — 시대마다 핵심·주요·파생으로 갈라진다</div>
+          <div style={h3s}>2.1 개인과 전문성의 변화 — 시대마다 리더·프로·아마추어로 갈라진다</div>
           <div style={{ fontSize: 12.5, lineHeight: 1.5, color: "#222", marginBottom: 5 }}>
-            시대의 과제는 셋으로 갈라진다 — <strong style={{ color: C.navy }}>핵심</strong>(시대를 정의하는 자), <strong>주요</strong>(시대의 일을 수행하는 자), <strong>파생</strong>(시대의 토대를 만드는 자).
+            시대의 과제는 셋으로 갈라진다 — <strong style={{ color: C.navy }}>리더</strong>(시대를 정의하는 자), <strong>프로</strong>(시대의 일을 수행하는 자), <strong>아마추어</strong>(시대의 토대를 만드는 자).
             산업화는 사람을 부품으로 만들었지만, 디지털·AI는 <strong style={{ color: C.red }}>자기 미션을 가진 사업 파트너</strong> 같은 인재를 요구한다.
           </div>
           <table style={{ width: "100%", borderCollapse: "collapse", fontSize: 11.5, marginBottom: 6 }}>
             <thead>
               <tr style={{ background: C.navy, color: "#fff" }}>
                 <th style={{ padding: "4px 6px", textAlign: "left", width: "6%" }}>시대</th>
-                <th style={{ padding: "4px 6px", textAlign: "left", width: "7%" }}>층위</th>
+                <th style={{ padding: "4px 6px", textAlign: "left", width: "7%" }}>계층</th>
                 <th style={{ padding: "4px 6px", textAlign: "left", width: "17%" }}>핵심 과제</th>
                 <th style={{ padding: "4px 6px", textAlign: "left", width: "20%" }}>핵심 기술</th>
                 <th style={{ padding: "4px 6px", textAlign: "left", width: "20%" }}>핵심 전문성</th>
@@ -92,43 +92,43 @@ export function IndividualCommunityPage() {
                   age: "농업",
                   ageColor: false,
                   rows: [
-                    { level: "핵심", task: "위계 질서의 정당화", tech: "위계를 신성화한 종교", expert: "의례·통치의 권위", ideal: "덕망 있는 권위자" },
-                    { level: "주요", task: "세대 간 지식의 전승", tech: "기록을 가능케 한 문자", expert: "경험의 축적과 전승", ideal: "지혜로운 원로" },
-                    { level: "파생", task: "식량 생산의 안정화", tech: "물을 다스리는 관개술", expert: "체화된 생산의 기예", ideal: "건강하고 부지런한 일꾼" },
+                    { level: "리더", task: "위계 질서의 정당화", tech: "위계를 신성화한 종교", expert: "의례·통치의 권위", ideal: "덕망 있는 권위자" },
+                    { level: "프로", task: "세대 간 지식의 전승", tech: "기록을 가능케 한 문자", expert: "경험의 축적과 전승", ideal: "지혜로운 원로" },
+                    { level: "아마추어", task: "식량 생산의 안정화", tech: "물을 다스리는 관개술", expert: "체화된 생산의 기예", ideal: "건강하고 부지런한 일꾼" },
                   ],
                 },
                 {
                   age: "산업",
                   ageColor: false,
                   rows: [
-                    { level: "핵심", task: "대규모 조직의 운영", tech: "분업을 제도화한 관료제·조립라인", expert: "조직 운영의 관리 전문성", ideal: "유능한 조직 관리자" },
-                    { level: "주요", task: "공간·시간의 압축", tech: "거리를 좁힌 철도·전신", expert: "분과별 심화 전문성", ideal: "노련한 분과 전문가" },
-                    { level: "파생", task: "인간 근력의 한계 극복", tech: "에너지를 생산하는 동력기관", expert: "정형화된 반복 노동", ideal: "성실한 숙련 노동자" },
+                    { level: "리더", task: "대규모 조직의 운영", tech: "분업을 제도화한 관료제·조립라인", expert: "조직 운영의 관리 전문성", ideal: "유능한 조직 관리자" },
+                    { level: "프로", task: "공간·시간의 압축", tech: "거리를 좁힌 철도·전신", expert: "분과별 심화 전문성", ideal: "노련한 분과 전문가" },
+                    { level: "아마추어", task: "인간 근력의 한계 극복", tech: "에너지를 생산하는 동력기관", expert: "정형화된 반복 노동", ideal: "성실한 숙련 노동자" },
                   ],
                 },
                 {
                   age: "디지털",
                   ageColor: true,
                   rows: [
-                    { level: "핵심", task: "새 미션·카테고리·플랫폼 표준의 정의", tech: "AI·플랫폼 인프라의 설계", expert: "미션 주도의 협업 역량", ideal: "자기 미션을 가진 사업 파트너" },
-                    { level: "주요", task: "정보 과잉 속 가치 창출", tech: "판단을 증폭하는 AI·알고리즘", expert: "맥락·의미를 생성하는 비정형 인지", ideal: "통찰력 있는 맥락 해석자" },
-                    { level: "파생", task: "정체성 표현과 공동체 결속", tech: "생성 AI·플랫폼·SNS", expert: "자기 정체성의 진정성 있는 표현", ideal: "정체성 기반의 1인 창작자" },
+                    { level: "리더", task: "새 미션·카테고리·플랫폼 표준의 정의", tech: "AI·플랫폼 인프라의 설계", expert: "미션 주도의 협업 역량", ideal: "자기 미션을 가진 사업 파트너" },
+                    { level: "프로", task: "정보 과잉 속 가치 창출", tech: "판단을 증폭하는 AI·알고리즘", expert: "맥락·의미를 생성하는 비정형 인지", ideal: "통찰력 있는 맥락 해석자" },
+                    { level: "아마추어", task: "정체성 표현과 공동체 결속", tech: "생성 AI·플랫폼·SNS", expert: "자기 정체성의 진정성 있는 표현", ideal: "정체성 기반의 1인 창작자" },
                   ],
                 },
               ].flatMap(({ age, ageColor, rows }) => rows.map((r, j) => ({ ...r, age, ageColor, isFirst: j === 0, rowCount: rows.length }))).map(({ age, ageColor, isFirst, rowCount, level, task, tech, expert, ideal }, i) => (
                 <tr key={i} style={{ background: ageColor ? "#f0f4ff" : i % 6 < 3 ? "#fff" : C.bg }}>
-                  {isFirst && <td rowSpan={rowCount} style={{ padding: "4px 6px", borderBottom: `2px solid ${C.navy}`, borderTop: i === 0 ? "none" : `2px solid ${C.navy}`, fontWeight: 800, color: ageColor ? C.red : C.navy, lineHeight: 1.45, verticalAlign: "top", fontSize: 13 }}>{age}</td>}
-                  <td style={{ padding: "4px 6px", borderBottom: "1px solid #eee", color: level === "핵심" ? (ageColor ? C.red : C.navy) : C.accent, fontWeight: level === "핵심" ? 800 : 700, lineHeight: 1.45, verticalAlign: "top" }}>{level}</td>
-                  <td style={{ padding: "4px 6px", borderBottom: "1px solid #eee", color: "#222", lineHeight: 1.5, verticalAlign: "top", fontWeight: 500 }}>{task}</td>
-                  <td style={{ padding: "4px 6px", borderBottom: "1px solid #eee", color: "#333", lineHeight: 1.5, verticalAlign: "top", fontWeight: 500 }}>{tech}</td>
-                  <td style={{ padding: "4px 6px", borderBottom: "1px solid #eee", color: "#222", lineHeight: 1.5, verticalAlign: "top", fontWeight: 500 }}>{expert}</td>
-                  <td style={{ padding: "4px 6px", borderBottom: "1px solid #eee", color: ageColor && level === "핵심" ? C.red : "#222", fontWeight: ageColor && level === "핵심" ? 700 : 500, lineHeight: 1.45, verticalAlign: "top" }}>{ideal}</td>
+                  {isFirst && <td rowSpan={rowCount} style={{ padding: "4px 6px", borderBottom: `1px solid ${C.navy}`, borderTop: i === 0 ? "none" : `1px solid ${C.navy}`, fontWeight: 800, color: ageColor ? C.red : C.navy, lineHeight: 1.45, verticalAlign: "top", fontSize: 13 }}>{age}</td>}
+                  <td style={{ padding: "4px 6px", borderBottom: "1px solid #f0f0f0", color: level === "리더" ? (ageColor ? C.red : C.navy) : C.accent, fontWeight: level === "리더" ? 800 : 700, lineHeight: 1.45, verticalAlign: "top" }}>{level}</td>
+                  <td style={{ padding: "4px 6px", borderBottom: "1px solid #f0f0f0", color: "#222", lineHeight: 1.5, verticalAlign: "top", fontWeight: 500 }}>{task}</td>
+                  <td style={{ padding: "4px 6px", borderBottom: "1px solid #f0f0f0", color: "#333", lineHeight: 1.5, verticalAlign: "top", fontWeight: 500 }}>{tech}</td>
+                  <td style={{ padding: "4px 6px", borderBottom: "1px solid #f0f0f0", color: "#222", lineHeight: 1.5, verticalAlign: "top", fontWeight: 500 }}>{expert}</td>
+                  <td style={{ padding: "4px 6px", borderBottom: "1px solid #f0f0f0", color: ageColor && level === "리더" ? C.red : "#222", fontWeight: ageColor && level === "리더" ? 700 : 500, lineHeight: 1.45, verticalAlign: "top" }}>{ideal}</td>
                 </tr>
               ))}
             </tbody>
           </table>
           <div style={{ fontSize: 12, lineHeight: 1.5, color: "#333" }}>
-            <strong style={{ color: C.navy }}>층위가 시대를 만든다 —</strong> 농업시대는 <strong>위계의 권위자</strong>가, 산업시대는 <strong>조직의 관리자</strong>가 시대를 정의했다. 디지털 시대는 <strong style={{ color: C.red }}>자기 미션을 가진 사업 파트너</strong>가 새 카테고리를 만드는 자가 된다. <strong>먼저 풀어야 할 문제를 보면, 그 문제를 푸는 자가 보이고, 거기에 맞는 정체성이 발견된다.</strong>
+            <strong style={{ color: C.navy }}>계층이 시대를 만든다 —</strong> 농업시대는 <strong>위계의 권위자</strong>가, 산업시대는 <strong>조직의 관리자</strong>가 시대를 정의했다. 디지털 시대는 <strong style={{ color: C.red }}>자기 미션을 가진 사업 파트너</strong>가 새 카테고리를 만드는 자가 된다. <strong>먼저 풀어야 할 문제를 보면, 그 문제를 푸는 자가 보이고, 거기에 맞는 정체성이 발견된다.</strong>
           </div>
         </div>
 
