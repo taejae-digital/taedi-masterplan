@@ -62,7 +62,7 @@ export function IndividualCommunityPage() {
         <div style={{ fontSize: 13, letterSpacing: 4, color: C.accent, fontWeight: 800, marginBottom: 4 }}>산업화는 사람을 부품으로 만들었다. 디지털·AI는 사업 파트너 같은 인재를 요구한다</div>
         <div style={{ fontSize: 18, fontWeight: 800, color: C.navy, lineHeight: 1.35 }}>
           새 시대의 문제가 먼저 보여야, 그 문제를 풀 직업이 나오고, 그 직업에 맞는 정체성을 발견할 수 있다.
-          산업화는 스킬을 직업으로 만들었지만, 디지털·AI는 <strong style={{ color: C.red }}>자기 미션을 가진 인재</strong>를 직업으로 만든다.
+          산업화는 스킬을 직업으로 만들었지만, 디지털·AI는 <strong>디지털 혁신가</strong>를 직업으로 만든다.
         </div>
       </div>
 
@@ -73,7 +73,7 @@ export function IndividualCommunityPage() {
           <div style={h3s}>2.1 개인과 전문성의 변화 — 시대마다 리더·프로·아마추어로 갈라진다</div>
           <div style={{ fontSize: 12.5, lineHeight: 1.5, color: "#222", marginBottom: 5 }}>
             시대의 과제는 셋으로 갈라진다 — <strong style={{ color: C.navy }}>리더</strong>(시대를 정의하는 자), <strong>프로</strong>(시대의 일을 수행하는 자), <strong>아마추어</strong>(시대의 토대를 만드는 자).
-            산업화는 사람을 부품으로 만들었지만, 디지털·AI는 <strong style={{ color: C.red }}>자기 미션을 가진 사업 파트너</strong> 같은 인재를 요구한다.
+            산업화는 사람을 부품으로 만들었지만, 디지털·AI는 <strong>디지털 혁신가</strong> 같은 인재를 요구한다.
           </div>
           <table style={{ width: "100%", borderCollapse: "collapse", fontSize: 11.5, marginBottom: 6 }}>
             <thead>
@@ -110,7 +110,7 @@ export function IndividualCommunityPage() {
                   age: "디지털",
                   ageColor: true,
                   rows: [
-                    { level: "리더", task: "새 미션·카테고리·플랫폼 표준의 정의", tech: "AI·플랫폼 인프라의 설계", expert: "미션 주도의 협업 역량", ideal: "자기 미션을 가진 사업 파트너" },
+                    { level: "리더", task: "새 미션·카테고리·플랫폼 표준의 정의", tech: "AI·플랫폼 인프라의 설계", expert: "미션 주도의 협업 역량", ideal: "디지털 혁신가" },
                     { level: "프로", task: "정보 과잉 속 가치 창출", tech: "판단을 증폭하는 AI·알고리즘", expert: "맥락·의미를 생성하는 비정형 인지", ideal: "통찰력 있는 맥락 해석자" },
                     { level: "아마추어", task: "정체성 표현과 공동체 결속", tech: "생성 AI·플랫폼·SNS", expert: "자기 정체성의 진정성 있는 표현", ideal: "정체성 기반의 1인 창작자" },
                   ],
@@ -122,13 +122,13 @@ export function IndividualCommunityPage() {
                   <td style={{ padding: "4px 6px", borderBottom: "1px solid #f0f0f0", color: "#222", lineHeight: 1.5, verticalAlign: "top", fontWeight: 500 }}>{task}</td>
                   <td style={{ padding: "4px 6px", borderBottom: "1px solid #f0f0f0", color: "#333", lineHeight: 1.5, verticalAlign: "top", fontWeight: 500 }}>{tech}</td>
                   <td style={{ padding: "4px 6px", borderBottom: "1px solid #f0f0f0", color: "#222", lineHeight: 1.5, verticalAlign: "top", fontWeight: 500 }}>{expert}</td>
-                  <td style={{ padding: "4px 6px", borderBottom: "1px solid #f0f0f0", color: ageColor && level === "리더" ? C.red : "#222", fontWeight: ageColor && level === "리더" ? 700 : 500, lineHeight: 1.45, verticalAlign: "top" }}>{ideal}</td>
+                  <td style={{ padding: "4px 6px", borderBottom: "1px solid #f0f0f0", color: "#222", fontWeight: ageColor && level === "리더" ? 700 : 500, lineHeight: 1.45, verticalAlign: "top" }}>{ideal}</td>
                 </tr>
               ))}
             </tbody>
           </table>
           <div style={{ fontSize: 12, lineHeight: 1.5, color: "#333" }}>
-            <strong style={{ color: C.navy }}>계층이 시대를 만든다 —</strong> 농업시대는 <strong>위계의 권위자</strong>가, 산업시대는 <strong>조직의 관리자</strong>가 시대를 정의했다. 디지털 시대는 <strong style={{ color: C.red }}>자기 미션을 가진 사업 파트너</strong>가 새 카테고리를 만드는 자가 된다. <strong>먼저 풀어야 할 문제를 보면, 그 문제를 푸는 자가 보이고, 거기에 맞는 정체성이 발견된다.</strong>
+            <strong style={{ color: C.navy }}>계층이 시대를 만든다 —</strong> 농업시대는 <strong>위계의 권위자</strong>가, 산업시대는 <strong>조직의 관리자</strong>가 시대를 정의했다. 디지털 시대는 <strong>디지털 혁신가</strong>가 새 카테고리를 만드는 자가 된다. <strong>먼저 풀어야 할 문제를 보면, 그 문제를 푸는 자가 보이고, 거기에 맞는 정체성이 발견된다.</strong>
           </div>
         </div>
 
