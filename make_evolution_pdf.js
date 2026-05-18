@@ -24,7 +24,7 @@ const path = require('path');
 
   await new Promise(r => setTimeout(r, 4000));
 
-  const outputPath = path.join('/Users/taejaefci/.openclaw/workspace-taedi', 'collaboration-evolution-5stages.pdf');
+  const outputPath = path.join('/Users/taejae-agent/.openclaw/workspace-taedi', 'collaboration-evolution-5stages.pdf');
   
   console.log('Generating Evolution PDF...');
   await page.pdf({

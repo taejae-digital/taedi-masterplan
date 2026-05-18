@@ -25,7 +25,7 @@ const path = require('path');
   // Wait a bit more for any final renders/animations
   await new Promise(r => setTimeout(r, 3000));
 
-  const outputPath = path.join('/Users/taejaefci/.openclaw/workspace-taedi', 'masterplan-v1.0-draft.pdf');
+  const outputPath = path.join('/Users/taejae-agent/.openclaw/workspace-taedi', 'masterplan-v1.0-draft.pdf');
   
   console.log('Generating PDF...');
   await page.pdf({

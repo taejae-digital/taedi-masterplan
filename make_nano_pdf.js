@@ -23,7 +23,7 @@ const path = require('path');
 
   await new Promise(r => setTimeout(r, 4000));
 
-  const outputPath = path.join('/Users/taejaefci/.openclaw/workspace-taedi', 'masterplan-v0.5.2-nano-banana.pdf');
+  const outputPath = path.join('/Users/taejae-agent/.openclaw/workspace-taedi', 'masterplan-v0.5.2-nano-banana.pdf');
   
   console.log('Generating Nano Banana PDF...');
   await page.pdf({

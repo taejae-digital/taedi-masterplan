@@ -6,7 +6,7 @@ const puppeteer = require('puppeteer');
   await page.goto('http://localhost:3099/mp/v0.8.4', { waitUntil: 'networkidle0', timeout: 90000 });
   await page.addStyleTag({ content: '@page { margin: 0 !important; }' });
   await new Promise(r => setTimeout(r, 3000));
-  await page.pdf({ path: '/Users/taejaefci/.openclaw/workspace-taedi/taedi-masterplan/narrative/masterplan-v0.8.4.pdf', format: 'A3', landscape: true, printBackground: true, margin: { top: '0', right: '0', bottom: '0', left: '0' } });
+  await page.pdf({ path: '/Users/taejae-agent/.openclaw/workspace-taedi/taedi-masterplan/narrative/masterplan-v0.8.4.pdf', format: 'A3', landscape: true, printBackground: true, margin: { top: '0', right: '0', bottom: '0', left: '0' } });
   await browser.close();
   console.log('PDF generated');
 })();
