@@ -48,19 +48,17 @@ export function IndividualCommunityPage() {
     },
   ];
 
-  // 시대별 데이터: 핵심과제/기술/전문성을 1열에 합쳐서 표현
+  // 시대별: 3행→1행, 컬럼은 핵심과제 | 핵심기술 | 핵심전문성 | 이상적인재상 유지
+  // 각 셀에 리더/프로/아마추어 내용을 줄바꿈으로 쌓음
   const ageGroups = [
     {
       age: "농업",
       principle: "정착 + 위계",
       freedom: "이동의 자유 — 태어난 신분과 공간에 묶이지 않을 자유",
       ageColor: false,
-      // 과제 / 기술 / 전문성을 하나의 셀에 나열 (줄구분)
-      rows: [
-        { combined: "위계 질서의 정당화 / 위계를 신성화한 종교 / 의례·통치의 권위" },
-        { combined: "세대 간 지식의 전승 / 기록을 가능케 한 문자 / 경험의 축적과 전승" },
-        { combined: "식량 생산의 안정화 / 물을 다스리는 관개술 / 체화된 생산의 기예" },
-      ],
+      tasks: ["위계 질서의 정당화", "세대 간 지식의 전승", "식량 생산의 안정화"],
+      techs: ["위계를 신성화한 종교", "기록을 가능케 한 문자", "물을 다스리는 관개술"],
+      experts: ["의례·통치의 권위", "경험의 축적과 전승", "체화된 생산의 기예"],
       ideal: "지혜로운 자 / 원로(elder)",
     },
     {
@@ -68,11 +66,9 @@ export function IndividualCommunityPage() {
       principle: "분업 + 관리",
       freedom: "정체성의 자유 — 주어진 역할과 생계 강박을 넘어 내가 누구인지 스스로 정의할 자유",
       ageColor: false,
-      rows: [
-        { combined: "대규모 조직의 운영·자본 조달 / 분업을 제도화한 관료제·조립라인 / 생산 시스템을 소유하고 설계" },
-        { combined: "공간·시간의 압축·분과 전문화 / 거리를 좁힌 철도·전신 / 분과별 심화 전문성" },
-        { combined: "인간 근력의 한계 극복 / 에너지를 생산하는 동력기관 / 정형화된 반복 노동" },
-      ],
+      tasks: ["대규모 조직의 운영·자본 조달", "공간·시간의 압축·분과 전문화", "인간 근력의 한계 극복"],
+      techs: ["분업을 제도화한 관료제·조립라인", "거리를 좁힌 철도·전신", "에너지를 생산하는 동력기관"],
+      experts: ["생산 시스템을 소유하고 설계", "분과별 심화 전문성", "정형화된 반복 노동"],
       ideal: "부품형 인간 / 숙련 노동자 / 전문가",
     },
     {
@@ -80,16 +76,13 @@ export function IndividualCommunityPage() {
       principle: "연결 + 자율",
       freedom: "정체성 실현의 자유 — 잘하고, 좋아하고, 사회가 필요로 하는 일을 하는 자유",
       ageColor: true,
-      rows: [
-        { combined: "플랫폼·AI 거버넌스·가치 정렬 설계 / AI·플랫폼 인프라·정렬 기술 / 기술이 추구할 목적과 생태계 규칙 설계" },
-        { combined: "디지털 시스템 구축·AI 감독·제도 설계 / 소프트웨어·AI 감독·데이터 분석 / 기술과 창의를 결합한 가치 생산·비판적 평가" },
-        { combined: "디지털 도구·AI 활용·데이터 생산 / 생성 AI·플랫폼·SNS / AI와 협업하며 삶의 목적을 설계" },
-      ],
+      tasks: ["플랫폼·AI 거버넌스·가치 정렬 설계", "디지털 시스템 구축·AI 감독·제도 설계", "디지털 도구·AI 활용·데이터 생산"],
+      techs: ["AI·플랫폼 인프라·정렬 기술", "소프트웨어·AI 감독·데이터 분석", "생성 AI·플랫폼·SNS"],
+      experts: ["기술이 추구할 목적과 생태계 규칙 설계", "기술과 창의를 결합한 가치 생산·비판적 평가", "AI와 협업하며 삶의 목적을 설계"],
       ideal: "T자형 인간 / 조율자(orchestrator)",
     },
   ];
 
-  // 구분선: 추구하는 자유 열 오른쪽 — 가로 테두리와 동일한 두께
   const dividerBorder = `1px solid ${C.navy}`;
 
   return (
@@ -115,50 +108,52 @@ export function IndividualCommunityPage() {
           <table style={{ width: "100%", borderCollapse: "collapse", fontSize: 11.5, marginBottom: 6 }}>
             <thead>
               <tr style={{ background: C.navy, color: "#fff" }}>
-                {/* 왼쪽 블록: 시대 설명 */}
                 <th style={{ padding: "4px 6px", textAlign: "left", width: "6%" }}>시대</th>
                 <th style={{ padding: "4px 6px", textAlign: "left", width: "10%" }}>핵심 원리</th>
-                <th style={{ padding: "4px 6px", textAlign: "left", width: "22%", borderRight: dividerBorder }}>추구하는 자유</th>
-                {/* 오른쪽 블록: 개인과 전문성 (1열 통합) */}
-                <th style={{ padding: "4px 6px", textAlign: "left", width: "38%" }}>핵심 과제 / 핵심 기술 / 핵심 전문성</th>
+                <th style={{ padding: "4px 6px", textAlign: "left", width: "20%", borderRight: dividerBorder }}>추구하는 자유</th>
+                <th style={{ padding: "4px 6px", textAlign: "left", width: "18%" }}>핵심 과제</th>
+                <th style={{ padding: "4px 6px", textAlign: "left", width: "17%" }}>핵심 기술</th>
+                <th style={{ padding: "4px 6px", textAlign: "left", width: "17%" }}>핵심 전문성</th>
                 <th style={{ padding: "4px 6px", textAlign: "left" }}>이상적 인재상</th>
               </tr>
             </thead>
             <tbody>
-              {ageGroups.flatMap(({ age, principle, freedom, ageColor, rows, ideal }) =>
-                rows.map((r, j) => ({
-                  ...r, age, principle, freedom, ageColor, ideal,
-                  isFirst: j === 0, rowCount: rows.length,
-                }))
-              ).map(({ age, principle, freedom, ageColor, isFirst, rowCount, combined, ideal }, i) => {
-                const rowBg = ageColor ? "#f0f4ff" : i % 6 < 3 ? "#fff" : C.bg;
-                const ageBorderTop = i === 0 ? "none" : `1px solid ${C.navy}`;
+              {ageGroups.map(({ age, principle, freedom, ageColor, tasks, techs, experts, ideal }, i) => {
+                const rowBg = ageColor ? "#f0f4ff" : i % 2 === 0 ? "#fff" : C.bg;
+                const borderTop = i === 0 ? "none" : `1px solid ${C.navy}`;
+                // 각 셀에 3개 항목을 줄바꿈으로 표시
+                const cellStyle = (extra?: React.CSSProperties): React.CSSProperties => ({
+                  padding: "6px 8px",
+                  borderBottom: `1px solid ${C.navy}`,
+                  borderTop,
+                  verticalAlign: "top",
+                  lineHeight: 1.6,
+                  fontSize: 11,
+                  color: "#222",
+                  fontWeight: 500,
+                  ...extra,
+                });
                 return (
                   <tr key={i} style={{ background: rowBg }}>
-                    {isFirst && (
-                      <td rowSpan={rowCount} style={{ padding: "4px 6px", borderBottom: `1px solid ${C.navy}`, borderTop: ageBorderTop, fontWeight: 800, color: C.navy, lineHeight: 1.45, verticalAlign: "top", fontSize: 13 }}>
-                        {age}
-                      </td>
-                    )}
-                    {isFirst && (
-                      <td rowSpan={rowCount} style={{ padding: "4px 6px", borderBottom: `1px solid ${C.navy}`, borderTop: ageBorderTop, color: C.accent, fontWeight: 700, lineHeight: 1.5, verticalAlign: "top", fontSize: 11 }}>
-                        {principle}
-                      </td>
-                    )}
-                    {isFirst && (
-                      <td rowSpan={rowCount} style={{ padding: "4px 6px", borderBottom: `1px solid ${C.navy}`, borderTop: ageBorderTop, borderRight: dividerBorder, color: "#222", fontWeight: 500, lineHeight: 1.5, verticalAlign: "top", fontSize: 11 }}>
-                        {freedom}
-                      </td>
-                    )}
-                    {/* 핵심 과제/기술/전문성 1열 통합 */}
-                    <td style={{ padding: "4px 8px", borderBottom: "1px solid #f0f0f0", color: "#222", lineHeight: 1.6, verticalAlign: "top", fontWeight: 500, fontSize: 11 }}>
-                      {combined}
+                    <td style={cellStyle({ fontWeight: 800, color: C.navy, fontSize: 13 })}>{age}</td>
+                    <td style={cellStyle({ color: C.accent, fontWeight: 700 })}>{principle}</td>
+                    <td style={cellStyle({ borderRight: dividerBorder })}>{freedom}</td>
+                    <td style={cellStyle()}>
+                      {tasks.map((t, j) => (
+                        <div key={j} style={{ marginBottom: j < tasks.length - 1 ? 4 : 0 }}>{t}</div>
+                      ))}
                     </td>
-                    {isFirst && (
-                      <td rowSpan={rowCount} style={{ padding: "4px 6px", borderBottom: `1px solid ${C.navy}`, borderTop: ageBorderTop, color: "#222", fontWeight: 500, lineHeight: 1.45, verticalAlign: "top", fontSize: 11 }}>
-                        {ideal}
-                      </td>
-                    )}
+                    <td style={cellStyle()}>
+                      {techs.map((t, j) => (
+                        <div key={j} style={{ marginBottom: j < techs.length - 1 ? 4 : 0 }}>{t}</div>
+                      ))}
+                    </td>
+                    <td style={cellStyle()}>
+                      {experts.map((e, j) => (
+                        <div key={j} style={{ marginBottom: j < experts.length - 1 ? 4 : 0 }}>{e}</div>
+                      ))}
+                    </td>
+                    <td style={cellStyle()}>{ideal}</td>
                   </tr>
                 );
               })}
@@ -175,7 +170,6 @@ export function IndividualCommunityPage() {
           </div>
 
           <div style={{ display: "flex", alignItems: "stretch", gap: 0, flex: 1 }}>
-            {/* 출발점 */}
             <div style={{ width: 110, display: "flex", flexDirection: "column" }}>
               <div style={{ flex: 1, display: "flex", flexDirection: "column", justifyContent: "center", alignItems: "center", padding: "8px 6px", background: "#f0f4ff", borderLeft: `4px solid ${C.navy}`, borderTop: `2px solid ${C.navy}`, borderBottom: `2px solid ${C.navy}` }}>
                 <div style={{ fontSize: 10, color: "#888", fontWeight: 700, marginBottom: 4 }}>출발점</div>
@@ -186,7 +180,6 @@ export function IndividualCommunityPage() {
 
             <div style={{ width: 18, display: "flex", alignItems: "center", justifyContent: "center", color: C.accent, fontSize: 22, fontWeight: 900, flexShrink: 0 }}>›</div>
 
-            {/* 6단계 카드 */}
             <div style={{ flex: 1, display: "grid", gridTemplateColumns: "repeat(6, 1fr)", gap: 0 }}>
               {stages.map(({ label, to, old, why, def }, i) => (
                 <div key={i} style={{ display: "flex" }}>
