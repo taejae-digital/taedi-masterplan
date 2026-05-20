@@ -28,7 +28,7 @@ cp make_v099_pdf.js make_v100_pdf.js
 
 ```js
 await page.goto('http://localhost:3000/mp/v0.10.0', { ... });   // 라우트
-await page.pdf({ path: '/Users/will_ryu/workspace/consulting/taejae/taedi-masterplan/narrative/masterplan-v0.10.0.pdf', ... });   // 출력 경로 (절대경로)
+await page.pdf({ path: '/Users/will_ryu/workspace/consulting/taejae/taedi-masterplan/pdf/masterplan-v0.10.0.pdf', ... });   // 출력 경로 (절대경로)
 ```
 
 라우트 형식은 `/mp/v{semver}` — 예: `/mp/v0.9.9`, `/mp/v0.10.0`.
@@ -39,7 +39,7 @@ await page.pdf({ path: '/Users/will_ryu/workspace/consulting/taejae/taedi-master
 node make_v100_pdf.js
 ```
 
-성공하면 `narrative/masterplan-v{version}.pdf` 생성됨.
+성공하면 `pdf/masterplan-v{version}.pdf` 생성됨.
 
 ## 표준 옵션 (수정 금지)
 

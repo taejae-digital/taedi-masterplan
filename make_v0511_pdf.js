@@ -21,7 +21,7 @@ const puppeteer = require('puppeteer');
 
   await new Promise(r => setTimeout(r, 3000));
 
-  const outputPath = '/Users/taejae-agent/.openclaw/workspace-taedi/taedi-masterplan/narrative/masterplan-v0.5.11.pdf';
+  const outputPath = '/Users/taejae-agent/.openclaw/workspace-taedi/taedi-masterplan/pdf/masterplan-v0.5.11.pdf';
 
   console.log('Generating PDF...');
   await page.pdf({

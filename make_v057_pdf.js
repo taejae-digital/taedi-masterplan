@@ -22,7 +22,7 @@ const path = require('path');
 
   await new Promise(r => setTimeout(r, 3000));
 
-  const outputPath = '/Users/will_ryu/workspace/consulting/taejae/taedi-masterplan/narrative/masterplan-v0.5.7.pdf';
+  const outputPath = '/Users/will_ryu/workspace/consulting/taejae/taedi-masterplan/pdf/masterplan-v0.5.7.pdf';
 
   console.log('Generating PDF...');
   await page.pdf({
