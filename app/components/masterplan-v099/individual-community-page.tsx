@@ -11,7 +11,6 @@ export function IndividualCommunityPage() {
       why: "강화된 개인은 직업에 자신을 맞추지 않고 자신의 정체성에 직업을 맞춘다. 정체성은 어릴 때부터 발견되어야 하므로, 가정이 첫 발견의 현장이 되어야 한다.",
       def: "아이를 시장이 정한 직업에 끼워 맞추는 곳이 아니라, 누구인지 발견하고 미래의 자리에 연결해주는 곳.",
       need: "정체성 탐험가",
-      vision: "/generated/v099-community-visions/family-pencil.png",
     },
     {
       label: "이웃",
@@ -20,7 +19,6 @@ export function IndividualCommunityPage() {
       why: "가정에서 정체성을 발견하려면 비교의 거울이 필요하다. 같은 스펙끼리만 모이면 거울이 사라지므로, 이웃은 다양한 정체성을 일상에서 마주칠 수 있는 공간이어야 한다.",
       def: "다양한 직업·세대·배경이 일상 안에 섞여 자신과 다른 자기를 마주칠 수 있는 공간.",
       need: "돌봄 통합가·세계관 창작자",
-      vision: "/generated/v099-community-visions/neighborhood-pencil.png",
     },
     {
       label: "마을",
@@ -29,7 +27,6 @@ export function IndividualCommunityPage() {
       why: "이웃에서 발견된 정체성이 실제 능력이 되려면 훈련이 필요하다. 정체성마다 필요한 훈련이 다르므로, 마을은 정체성별 훈련 경로가 공존하는 생활권이어야 한다.",
       def: "예술·연구·돌봄·창업 등 정체성별로 다른 훈련 경로가 같은 생활권 안에 공존하는 규모.",
       need: "질서 설계자·세계관 창작자",
-      vision: "/generated/v099-community-visions/village-pencil.png",
     },
     {
       label: "도시",
@@ -38,7 +35,6 @@ export function IndividualCommunityPage() {
       why: "마을에서 훈련된 정체성이 일과 만나려면 산업·연구가 가까워야 한다. 일자리가 멀리 있으면 사슬이 끊기므로, 도시는 마을·산업·연구·교육이 한 권역에 묶인 강소도시여야 한다.",
       def: "시산학으로 엮여 정체성과 묶음직업을 직접 잇는 강소도시. 도시마다 다른 특색.",
       need: "생태계 직조가",
-      vision: "/generated/v099-community-visions/city-pencil.png",
     },
     {
       label: "국가",
@@ -47,7 +43,6 @@ export function IndividualCommunityPage() {
       why: "도시에서 정체성과 일이 연결되려면 국가가 다양성을 표준화로 억누르지 말아야 한다. 그러나 도시 간 격차가 정체성을 배제해선 안 되므로, 국가는 표준 경로가 아니라 다양성과 안전망의 큰 틀만 짠다.",
       def: "표준 경로 설계가 아니라 다양성과 안전망의 큰 틀만 짜고, 실행은 도시로 위임.",
       need: "질서 설계자",
-      vision: "/generated/v099-community-visions/nation-pencil.png",
     },
     {
       label: "세계",
@@ -56,7 +51,6 @@ export function IndividualCommunityPage() {
       why: "국가가 다양성과 안전망의 큰 틀을 짜더라도, 강화된 개인의 정체성 실현은 국경을 넘는다. 그 무대 자체를 위협하는 글로벌 도전(기후·AI·팬데믹)은 한 국가가 막을 수 없고, 영구적 세계권력은 정체성을 다시 위협하므로, 세계 거버넌스는 미션 한정·자동 환수 구조여야 한다.",
       def: "위협이 닥칠 때만 권한을 받고 해소되면 자동으로 해체되는 미션 한정 구조.",
       need: "질서 설계자·세계관 창작자",
-      vision: "/generated/v099-community-visions/world-pencil.png",
     },
   ];
 
@@ -166,48 +160,21 @@ export function IndividualCommunityPage() {
 
             {/* 6단계 카드 가로 펼침 */}
             <div style={{ flex: 1, display: "grid", gridTemplateColumns: "repeat(6, 1fr)", gap: 0 }}>
-              {stages.map(({ label, to, old, why, def, need, vision }, i) => (
+              {stages.map(({ label, to, old, why, def, need }, i) => (
                 <div key={i} style={{ display: "flex" }}>
                   <div style={{ flex: 1, padding: "8px 8px", background: i % 2 ? C.bg : "#fff", borderTop: `2px solid ${C.accent}`, borderBottom: `2px solid ${C.accent}`, display: "flex", flexDirection: "column" }}>
                     <div style={{ fontSize: 10.5, color: "#888", fontWeight: 700, marginBottom: 2 }}>{i + 1}단계</div>
                     <div style={{ fontSize: 14, fontWeight: 800, color: C.navy, lineHeight: 1.25, marginBottom: 4 }}>{label}</div>
-                    <div style={{ fontSize: 10.5, fontWeight: 700, color: C.accent, lineHeight: 1.3, marginBottom: 4, paddingBottom: 4, borderBottom: `1px dashed ${C.accent}` }}>{to}</div>
+                    <div style={{ fontSize: 11, fontWeight: 700, color: C.accent, lineHeight: 1.35, marginBottom: 5, paddingBottom: 4, borderBottom: `1px dashed ${C.accent}` }}>{to}</div>
 
                     <div style={{ fontSize: 9.5, color: "#888", fontWeight: 600, marginBottom: 1, textTransform: "uppercase", letterSpacing: 0.5 }}>이전 역할</div>
-                    <div style={{ fontSize: 10, color: "#666", lineHeight: 1.35, marginBottom: 4 }}>{old}</div>
+                    <div style={{ fontSize: 10.5, color: "#666", lineHeight: 1.4, marginBottom: 5 }}>{old}</div>
 
                     <div style={{ fontSize: 9.5, color: C.accent, fontWeight: 700, marginBottom: 1, textTransform: "uppercase", letterSpacing: 0.5 }}>왜</div>
-                    <div style={{ fontSize: 9.75, color: "#444", lineHeight: 1.35, marginBottom: 4, fontStyle: "italic" }}>{why}</div>
+                    <div style={{ fontSize: 10.5, color: "#444", lineHeight: 1.45, marginBottom: 5, fontStyle: "italic" }}>{why}</div>
 
                     <div style={{ fontSize: 9.5, color: C.navy, fontWeight: 700, marginBottom: 1, textTransform: "uppercase", letterSpacing: 0.5 }}>새 역할</div>
-                    <div style={{ fontSize: 10.25, color: "#111", lineHeight: 1.35, fontWeight: 600, flex: 1 }}>{def}</div>
-                    <div
-                      style={{
-                        marginTop: 4,
-                        marginLeft: -8,
-                        marginRight: -8,
-                        marginBottom: -8,
-                        height: 84,
-                        display: "flex",
-                        alignItems: "flex-end",
-                        justifyContent: "center",
-                        overflow: "hidden",
-                        borderTop: "1px solid #d7dce8",
-                        background: "#fff",
-                      }}
-                    >
-                      <img
-                        src={vision}
-                        alt={`${label} 공동체 비전`}
-                        style={{
-                          width: "100%",
-                          height: "100%",
-                          objectFit: "contain",
-                          objectPosition: "center bottom",
-                          display: "block",
-                        }}
-                      />
-                    </div>
+                    <div style={{ fontSize: 11, color: "#111", lineHeight: 1.5, fontWeight: 600, flex: 1 }}>{def}</div>
 
                   </div>
                   {i < stages.length - 1 && (
