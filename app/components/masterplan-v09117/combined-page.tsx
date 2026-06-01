@@ -226,11 +226,11 @@ export function CombinedPage() {
           <CausalTable rows={polRows} />
         </div>
 
-        {/* 3.3 새로운 사회계약 — 디지털 인프라에서 정체성 실현까지 */}
+        {/* 3.3 새로운 사회계약 — 정체성 실현을 최상위로 두는 권리 위계 */}
         <div style={{ flex: 1 }}>
-          <div style={h3s}>3.3 새로운 사회계약 — 디지털 인프라로 정체성을 실현하는 권리 체계</div>
+          <div style={h3s}>3.3 새로운 사회계약 — 정체성 실현을 최상위로 두는 권리 위계</div>
           <div style={{ fontSize: 11.2, color: "#222", lineHeight: 1.35, padding: "4px 8px", background: "#f0f4ff", borderLeft: `3px solid ${C.navy}`, marginBottom: 6 }}>
-            <strong style={{ color: C.navy }}>개인 능력의 확장</strong>은 사람을 분업의 부품이 아니라 각자의 미션을 이루는 <strong>전문적 주체</strong>로 만든다. 강화된 개인은 서로 협력하면서도 다방면으로 경쟁하므로, 이를 지원하고 규율할 새 질서가 필요하다. <strong style={{ color: C.navy }}>새로운 사회계약</strong>은 개인이 AI·데이터·네트워크에 접근해 전문가 수준의 생산성을 갖추고, 공동체 의사결정에 직접 참여하며, 그 과정에서 정체성을 사회적 역할과 기여로 실현하도록 보장하는 <strong>최상위 권리 체계</strong>다.
+            <strong style={{ color: C.navy }}>정체성 실현권</strong>은 디지털시대 인간이 자기 삶의 미션을 발견·훈련·실현할 <strong>최상위 권리</strong>다. 일종의 천부인권처럼 상위에 놓이고, 디지털 인프라 접근권은 그 능력 조건을 만들며, 직접 거버넌스 참여권은 정체성을 공동체 규칙으로 연결한다. <strong style={{ color: C.navy }}>새로운 사회계약</strong>은 두 하위 권리를 통해 정체성 실현을 뒷받침하는 권리 위계다.
           </div>
 
           <table style={{ width: "100%", borderCollapse: "collapse", tableLayout: "fixed" }}>
@@ -243,7 +243,7 @@ export function CombinedPage() {
             </colgroup>
             <thead>
               <tr style={{ background: C.navy, color: "#fff" }}>
-                <th style={{ padding: "4px 7px", textAlign: "left", fontSize: 11.2 }}>권리 구조</th>
+                <th style={{ padding: "4px 7px", textAlign: "left", fontSize: 11.2 }}>권리 위계</th>
                 <th style={{ padding: "4px 7px", textAlign: "left", fontSize: 11.2 }}>핵심 정의</th>
                 <th style={{ padding: "4px 7px", textAlign: "left", fontSize: 11.2 }}>생산성의 변화</th>
                 <th style={{ padding: "4px 7px", textAlign: "left", fontSize: 11.2 }}>거버넌스의 변화</th>
@@ -253,28 +253,28 @@ export function CombinedPage() {
             <tbody>
               {[
                 {
-                  label: "A. 디지털 인프라 접근권",
+                  label: "A. 정체성 실현권 — 상위 권리",
+                  def: "직업·소속에 묶이지 않고 자신의 정체성을 발견·훈련·실현하며, 그 기여를 경제·정치 질서 안에서 인정받을 권리. 디지털시대 인간에게 새로 요청되는 최상위 권리",
+                  productivity: "생산의 기준이 노동시간에서 작고 구체적인 필요 해결로 이동. 개인은 자기 정체성을 기준으로 특정한 필요를 발견하고 해결함",
+                  governance: "정책과 제도는 평균적 국민이 아니라 다양한 정체성이 실현되는 경로를 설계",
+                  contract: "최종 목적 — 디지털 인프라 접근과 직접 거버넌스 참여가 향하는 상위 권리",
+                },
+                {
+                  label: "B. 디지털 인프라 접근권 — 하위 기반",
                   def: "AI·연산·데이터·네트워크·학습 자원에 접근할 권리. 접근 격차가 계층 격차가 되지 않도록 공공재화와 데이터 주권을 보장",
                   productivity: "비전문가도 분석·창작·기획·실행을 전문가 수준으로 수행. AI가 개인의 생산 역량을 확장",
                   governance: "정책 이해·의견 형성·검증에 필요한 정보와 도구를 모두에게 제공",
-                  contract: "능력의 기반 — 강화된 개인이 등장할 최소 조건",
+                  contract: "능력의 기반 — 정체성 발견·훈련·실현에 필요한 최소 조건",
                 },
                 {
-                  label: "B. 직접 거버넌스 참여권",
+                  label: "C. 직접 거버넌스 참여권 — 하위 실행",
                   def: "대표에게 전부 위임하지 않고, AI와 데이터 인프라를 활용해 의제 설정·정책 설계·감시·집행 검증에 직접 참여할 권리",
                   productivity: "개인의 전문성이 공공 문제 해결 능력으로 전환. 직업 밖 지식과 경험도 사회적 기여가 됨",
                   governance: "가정·마을·도시·국가·세계가 사안별로 권한을 나누고, 한시 위임 뒤 자동 환수",
-                  contract: "운영의 방식 — 공동체를 직접 고치는 시민의 권리",
-                },
-                {
-                  label: "C. 정체성 실현권",
-                  def: "직업·소속에 묶이지 않고 자신의 정체성을 발견·훈련·실현하며, 그 기여를 경제·정치 질서 안에서 인정받을 권리",
-                  productivity: "생산의 기준이 노동시간에서 작고 구체적인 필요 해결로 이동. 개인은 자기 정체성을 기준으로 특정한 필요를 발견하고 해결함",
-                  governance: "정책과 제도는 평균적 국민이 아니라 다양한 정체성이 실현되는 경로를 설계",
-                  contract: "최종 목적 — 디지털 인프라와 직접 참여가 정체성 실현으로 귀결",
+                  contract: "운영의 방식 — 정체성 실현을 공동체 규칙과 제도 변화로 연결",
                 },
               ].map((r, i) => (
-                <tr key={i} style={{ background: i % 2 ? C.bg : "#fff" }}>
+                <tr key={i} style={{ background: i === 0 ? "#e9efff" : i % 2 ? C.bg : "#fff", borderTop: i === 0 ? `2px solid ${C.navy}` : undefined }}>
                   <td style={{ padding: "5px 7px", borderBottom: "1px solid #eee", fontSize: 11.6, verticalAlign: "top", lineHeight: 1.3, fontWeight: 800, color: C.navy }}>{r.label}</td>
                   <td style={{ padding: "5px 7px", borderBottom: "1px solid #eee", fontSize: 11, verticalAlign: "top", lineHeight: 1.3, color: "#222" }}>{r.def}</td>
                   <td style={{ padding: "5px 7px", borderBottom: "1px solid #eee", fontSize: 11, verticalAlign: "top", lineHeight: 1.3, color: "#333", fontWeight: 600 }}>{r.productivity}</td>
