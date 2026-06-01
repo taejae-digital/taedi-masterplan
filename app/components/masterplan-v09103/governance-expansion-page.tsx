@@ -109,7 +109,7 @@ export function GovernanceExpansionPage() {
 
       <div style={{ padding: "0 36px 14px", display: "flex", flexDirection: "column", flex: 1, gap: 11 }}>
         <section>
-          <div style={h3s}>4.1 세 권리가 막히는 현실과 사회계약 전략</div>
+          <div style={h3s}>4.1 새로운 사회계약의 작동 조건</div>
           <div style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: 10 }}>
             {limitRows.map((row, i) => (
               <div key={row.title} style={{ minHeight: 245, display: "flex", flexDirection: "column", border: `1px solid #d8d2ca`, background: i % 2 ? C.bg : "#fff" }}>
