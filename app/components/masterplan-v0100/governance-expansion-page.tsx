@@ -144,7 +144,7 @@ export function GovernanceExpansionPage() {
 
       <div style={{ padding: "0 36px 9px", display: "flex", flexDirection: "column", flex: 1, gap: 7 }}>
         <section>
-          <div style={h3s}>4.1 새로운 사회계약에 이르기 위한 전략</div>
+          <div style={h3s}>4.1 새로운 사회계약의 작동 조건</div>
           <div style={{ display: "grid", gridTemplateColumns: "repeat(2, 1fr)", gap: 10 }}>
             {limitRows.map((row, i) => (
               <div key={row.title} style={{ minHeight: 184, display: "grid", gridTemplateColumns: "98px 1fr", border: `1px solid #d7d0c7`, background: i % 2 ? C.bg : "#fff", boxShadow: "0 1px 0 rgba(0,0,0,0.03)" }}>
