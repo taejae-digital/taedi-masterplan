@@ -254,26 +254,20 @@ export function CombinedPage() {
               {[
                 {
                   label: "정체성 실현권",
-                  prefix: "A.",
-                  indent: false,
                   def: "직업·소속에 묶이지 않고 자신의 정체성을 발견·훈련·실현하며, 그 기여를 경제·정치 질서 안에서 인정받을 권리. 디지털시대 인간에게 새로 요청되는 중심 권리",
                   productivity: "생산의 기준이 노동시간에서 작고 구체적인 필요 해결로 이동. 개인은 자기 정체성을 기준으로 특정한 필요를 발견하고 해결함",
                   governance: "정책과 제도는 평균적 국민이 아니라 다양한 정체성이 실현되는 경로를 설계",
                   contract: "목적 — 디지털 인프라 접근과 직접 거버넌스 참여가 정체성 실현을 뒷받침",
                 },
                 {
-                  label: "디지털 인프라 접근권",
-                  prefix: "↳ B.",
-                  indent: true,
+                  label: "↳ 디지털 인프라 접근권",
                   def: "AI·연산·데이터·네트워크·학습 자원에 접근할 권리. 접근 격차가 계층 격차가 되지 않도록 공공재화와 데이터 주권을 보장",
                   productivity: "비전문가도 분석·창작·기획·실행을 전문가 수준으로 수행. AI가 개인의 생산 역량을 확장",
                   governance: "정책 이해·의견 형성·검증에 필요한 정보와 도구를 모두에게 제공",
                   contract: "능력 조건 — 정체성 발견·훈련·실현에 필요한 기반",
                 },
                 {
-                  label: "직접 거버넌스 참여권",
-                  prefix: "↳ C.",
-                  indent: true,
+                  label: "↳ 직접 거버넌스 참여권",
                   def: "대표에게 전부 위임하지 않고, AI와 데이터 인프라를 활용해 의제 설정·정책 설계·감시·집행 검증에 직접 참여할 권리",
                   productivity: "개인의 전문성이 공공 문제 해결 능력으로 전환. 직업 밖 지식과 경험도 사회적 기여가 됨",
                   governance: "가정·마을·도시·국가·세계가 사안별로 권한을 나누고, 한시 위임 뒤 자동 환수",
@@ -281,12 +275,7 @@ export function CombinedPage() {
                 },
               ].map((r, i) => (
                 <tr key={i} style={{ background: i === 0 ? "#e9efff" : i % 2 ? C.bg : "#fff", borderTop: i === 0 ? `2px solid ${C.navy}` : undefined }}>
-                  <td style={{ padding: "5px 7px", borderBottom: "1px solid #eee", fontSize: 11.6, verticalAlign: "top", lineHeight: 1.3, fontWeight: 800, color: C.navy }}>
-                    <div style={{ marginLeft: r.indent ? 16 : 0, display: "flex", gap: 5, alignItems: "flex-start" }}>
-                      <span style={{ color: r.indent ? C.accent : C.navy }}>{r.prefix}</span>
-                      <span>{r.label}</span>
-                    </div>
-                  </td>
+                  <td style={{ padding: "5px 7px", borderBottom: "1px solid #eee", fontSize: 11.6, verticalAlign: "top", lineHeight: 1.3, fontWeight: 800, color: C.navy }}>{r.label}</td>
                   <td style={{ padding: "5px 7px", borderBottom: "1px solid #eee", fontSize: 11, verticalAlign: "top", lineHeight: 1.3, color: "#222" }}>{r.def}</td>
                   <td style={{ padding: "5px 7px", borderBottom: "1px solid #eee", fontSize: 11, verticalAlign: "top", lineHeight: 1.3, color: "#333", fontWeight: 600 }}>{r.productivity}</td>
                   <td style={{ padding: "5px 7px", borderBottom: "1px solid #eee", fontSize: 11, verticalAlign: "top", lineHeight: 1.3, color: "#333" }}>{r.governance}</td>
