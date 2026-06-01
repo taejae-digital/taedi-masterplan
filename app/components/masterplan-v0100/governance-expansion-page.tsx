@@ -5,63 +5,27 @@ import { VERSION } from "./version";
 const limitRows = [
   {
     title: "국제 질서",
-    problem: "새 사회계약은 AI 경쟁이 시민 권리를 파괴하지 않는 국제 규칙 위에서 작동한다.",
-    problemBullets: [
-      "디지털 인프라 접근권은 클라우드·칩·플랫폼 접근이 진영별 허가로 갈라지지 않아야 한다.",
-      "직접 거버넌스 참여권은 안보·기업 통제 논리보다 공공 검증과 시민 감시 절차 안에 들어가야 한다.",
-      "정체성 실현권은 플랫폼 사용자 경험이 아니라 인간 성장과 사회적 기여의 권리로 인정되어야 한다.",
-    ],
-    strategy: "한국은 경쟁 중단 요구가 아니라 공동 검증·감사·인증 질서를 제안한다.",
-    strategyBullets: [
-      "군사·생물·사이버 악용 금지선을 국제 공멸선으로 제시한다.",
-      "공공 AI 감사 로그와 국제 사고 조사 절차를 공동 운영 규칙으로 만든다.",
-      "디지털 인프라 접근권과 직접 거버넌스 참여권을 국제 검증·인증의 기준에 올린다.",
-    ],
+    condition: "AI 경쟁이 시민 권리를 파괴하지 않도록 국제 공동 검증 규칙이 필요하다.",
+    rights: "디지털 인프라 접근권과 직접 거버넌스 참여권을 국제 검증·인증 기준에 올린다.",
+    strategy: "한국은 경쟁 중단 요구가 아니라 공공 AI 감사, 사고 조사, 악용 금지선을 제안한다.",
   },
   {
     title: "국가 전략",
-    problem: "새 사회계약은 세 권리를 법·예산·외교가 함께 움직이는 국가 운영체계로 묶을 때 작동한다.",
-    problemBullets: [
-      "디지털 인프라 접근권은 장비 보급이 아니라 공공 AI 인프라, 데이터 주권, 디지털 배당의 문제다.",
-      "직접 거버넌스 참여권은 의견 수렴 행사가 아니라 정책 설계·감사·집행 검증 권한이어야 한다.",
-      "정체성 실현권은 교육 구호가 아니라 산업·복지·노동·외교 전략의 최종 기준이 되어야 한다.",
-    ],
-    strategy: "15대 산업·7대 분야·선출직 인재를 하나의 사회계약 실행 체계로 결합한다.",
-    strategyBullets: [
-      "15대 산업은 권리를 생활과 시장에서 증명하는 물적 기반이 된다.",
-      "7대 분야 초일류는 산업 실증을 규칙·신뢰·서사·권한으로 바꾸는 제도 역량이 된다.",
-      "선출직 인재는 세 권리를 법·예산·외교로 실행하는 정치 권한이 된다.",
-    ],
+    condition: "세 권리는 복지·교육·참여 사업이 아니라 국가 운영체계로 묶여야 한다.",
+    rights: "디지털 인프라 접근권, 직접 거버넌스 참여권, 정체성 실현권을 법·예산·외교의 기준으로 세운다.",
+    strategy: "15대 산업, 7대 분야 초일류, 선출직 인재를 하나의 사회계약 실행 체계로 결합한다.",
   },
   {
     title: "산업 기반",
-    problem: "새 사회계약은 권리가 생활·산업·공공서비스에서 실제 성과로 증명될 때 작동한다.",
-    problemBullets: [
-      "AI 인프라, 도시·주거, 공공재, 로봇·드론, 미디어·금융, 교육·건강·국토가 따로 움직이면 권리는 선언에 머문다.",
-      "디지털 인프라 접근권은 일·학습·돌봄·행정·시장 참여와 연결되어야 생산성으로 바뀐다.",
-      "정체성 실현권은 시민이 더 배우고, 더 건강해지고, 더 좋은 일을 하게 됐다는 증거를 필요로 한다.",
-    ],
+    condition: "권리는 생활·산업·공공서비스에서 실제 성과로 증명될 때 작동한다.",
+    rights: "디지털 인프라 접근권이 일·학습·돌봄·행정과 연결되어 정체성 실현권으로 이어져야 한다.",
     strategy: "15대 산업을 시민강화 AI 운영 모델의 실증 기반으로 배치한다.",
-    strategyBullets: [
-      "미래창조형 산업은 도시·주택·디지털공공재에서 생활권 실험장을 만든다.",
-      "세계정상필수 산업은 연산·전력·제조·안보의 병목을 줄이는 협상 카드가 된다.",
-      "동북아·한반도 정체성기반 산업은 정체성 실현권이 문화·교육·건강·국토에서 작동하는 증거를 만든다.",
-    ],
   },
   {
     title: "제도 운영",
-    problem: "새 사회계약은 실증 모델이 법·예산·감사·행정 권한으로 들어올 때 작동한다.",
-    problemBullets: [
-      "AI 안전, 데이터 주권, 디지털 배당, 시민 직접 참여가 제도 권한을 얻지 못하면 세 권리는 선언에 머문다.",
-      "직접 거버넌스 참여권은 정책 설계·예산 배분·감사 절차 안에서 작동해야 한다.",
-      "정체성 실현권은 교육·복지·산업 정책의 평가 기준이 되어야 제도 밖 자기계발 구호로 남지 않는다.",
-    ],
-    strategy: "싱크탱크·대학·기업·미디어·정부·정당·군대가 사회계약의 운영 기관이 되어야 한다.",
-    strategyBullets: [
-      "싱크탱크와 대학은 권리 기준과 검증 지표를 만든다.",
-      "기업과 미디어는 산업 실증을 신뢰와 서사로 확산한다.",
-      "정부·정당·군대는 법·예산·안보 권한으로 세 권리를 집행한다.",
-    ],
+    condition: "실증 모델은 법·예산·감사·행정 권한으로 들어와야 사회계약이 된다.",
+    rights: "직접 거버넌스 참여권은 정책 설계·예산 배분·감사 절차 안에서 작동해야 한다.",
+    strategy: "싱크탱크·대학·기업·미디어·정부·정당·군대가 사회계약의 운영 기관이 된다.",
   },
 ];
 
@@ -151,11 +115,19 @@ export function GovernanceExpansionPage() {
                 <div style={{ background: "#f2eee6", borderBottom: `1px solid #d7d0c7`, padding: "7px 9px" }}>
                   <div style={{ color: C.navy, fontSize: 13.2, fontWeight: 760, letterSpacing: -0.3 }}>{row.title}</div>
                 </div>
-                <div style={{ padding: "7px 9px 6px", display: "flex", flexDirection: "column", gap: 4.5, flex: 1 }}>
-                  <div style={{ fontSize: 10.55, lineHeight: 1.18, color: C.navy, fontWeight: 720, letterSpacing: -0.28 }}>{row.problem}</div>
-                  <BulletList items={row.problemBullets} fontSize={8.95} />
-                  <div style={{ marginTop: 3, paddingTop: 5, borderTop: "2px solid #d9b46f", fontSize: 10.2, lineHeight: 1.18, color: "#2f2f2f", fontWeight: 700, letterSpacing: -0.22 }}>{row.strategy}</div>
-                  <BulletList items={row.strategyBullets} fontSize={8.85} />
+                <div style={{ padding: "8px 10px 8px", display: "flex", flexDirection: "column", gap: 7, flex: 1 }}>
+                  <div>
+                    <div style={{ fontSize: 8.7, color: C.accent, fontWeight: 850, letterSpacing: 1.2, marginBottom: 2 }}>작동 조건</div>
+                    <div style={{ fontSize: 11.6, lineHeight: 1.26, color: C.navy, fontWeight: 720, letterSpacing: -0.28 }}>{row.condition}</div>
+                  </div>
+                  <div>
+                    <div style={{ fontSize: 8.7, color: C.accent, fontWeight: 850, letterSpacing: 1.2, marginBottom: 2 }}>권리 연결</div>
+                    <div style={{ fontSize: 10.85, lineHeight: 1.28, color: "#333", fontWeight: 560, letterSpacing: -0.24 }}>{row.rights}</div>
+                  </div>
+                  <div style={{ marginTop: "auto", paddingTop: 6, borderTop: "2px solid #d9b46f" }}>
+                    <div style={{ fontSize: 8.7, color: "#8a5f12", fontWeight: 850, letterSpacing: 1.2, marginBottom: 2 }}>사회계약 전략</div>
+                    <div style={{ fontSize: 10.8, lineHeight: 1.28, color: "#2f2f2f", fontWeight: 650, letterSpacing: -0.24 }}>{row.strategy}</div>
+                  </div>
                 </div>
               </div>
             ))}
