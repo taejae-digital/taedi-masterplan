@@ -5,22 +5,26 @@ import { VERSION } from "./version";
 const limitRows = [
   {
     title: "미·중 패권 경쟁",
-    limit: "미국과 중국은 AI를 군사·금융·제조·플랫폼·데이터·표준·동맹질서의 권력으로 본다. 이 경쟁은 AI 인프라 접근권을 진영별 플랫폼 의존으로, 데이터 주권을 안보 통제로, 시민 권리를 패권 비용 뒤로 밀어낸다.",
+    limit: "미국과 중국은 AI를 군사·금융·제조·플랫폼·데이터·표준·동맹질서의 권력으로 본다. 이 경쟁은 AI·데이터·네트워크 접근을 진영별 플랫폼 의존으로, 데이터 주권을 안보 통제로, 시민 권리를 패권 비용 뒤로 밀어낸다.",
+    rights: "디지털 인프라 접근권과 직접 거버넌스 참여권이 패권 논리에 갇힌다.",
     strategy: "경쟁 중단을 요구하지 않는다. 안전 사고, 시장 분열, 정당성 위기, 동맹 피로, 국내 불안이라는 패권 비용이 커지는 지점에 공멸선을 긋고, 시민강화 표준을 공동 시장의 기준으로 제안한다.",
   },
   {
     title: "한국의 위치",
     limit: "한국은 세계 규칙을 단독으로 강제할 규모가 부족하다. 산업·제도·인재가 따로 움직이면 디지털 인프라 접근권은 복지정책, 직접 거버넌스 참여권은 참여 행사, 정체성 실현권은 교육 구호로 흩어진다.",
+    rights: "세 권리가 하나의 사회계약이 아니라 부처별 사업으로 쪼개진다.",
     strategy: "한국은 AI 시민강화 표준을 선점하는 중심 국가가 되어야 한다. 패권경쟁의 비용을 줄이는 안전장치와, 시민의 능력·권리·정체성 실현을 강화하는 사회계약을 함께 제안한다.",
   },
   {
     title: "디지털 시대의 산업 구조",
     limit: "AI 인프라, 도시·주거, 공공재, 로봇·드론, 미디어·금융, 교육·건강·국토가 분리되어 있으면 세 권리가 생활에서 작동하지 않는다. 접근권은 장비 보급에, 참여권은 앱 기능에, 정체성 실현권은 진로 상담에 갇힌다.",
+    rights: "능력의 기반이 생활·산업·공공서비스와 연결되지 않으면 정체성 실현권으로 이어지지 않는다.",
     strategy: "15대 산업을 미래창조형, 세계정상필수, 동북아·한반도 정체성기반 산업으로 묶는다. 산업은 먹거리 목록이 아니라 시민강화 AI 표준을 도시·가정·공공서비스·시장에 실증하는 물적 기반이다.",
   },
   {
     title: "디지털 시대의 거버넌스",
     limit: "기존 거버넌스는 부처·전문가·선거 주기·기업 이해관계로 쪼개져 있다. AI 안전, 데이터 주권, 디지털 배당, 시민 직접 참여를 한 제도 안에서 다루지 못하면 세 권리는 선언에 그치고 예산·법·감사 권한을 갖지 못한다.",
+    rights: "직접 거버넌스 참여권이 법·예산·감사 권한을 갖지 못하면 정체성 실현은 제도 밖에 머문다.",
     strategy: "싱크탱크·대학·기업·미디어·정부·정당·군대의 7대 분야를 초일류화한다. 이 제도들이 산업 실증을 규칙·신뢰·서사·권한으로 바꿀 때 한국의 표준 권력이 만들어진다.",
   },
 ];
@@ -29,6 +33,7 @@ const strategyRows = [
   {
     area: "세계 경영",
     goal: "AI 패권경쟁의 공멸선을 한국 표준으로 설정한다.",
+    contract: "디지털 인프라 접근권과 직접 거버넌스 참여권을 국제 검증 규칙으로 만든다.",
     bullets: [
       "협정명: AI 상호절제·시민강화 협정",
       "전제: 미국과 중국은 AI 패권경쟁을 멈추지 않음. 목표는 경쟁 중단이 아니라 통제 불가능한 비용의 관리",
@@ -42,6 +47,7 @@ const strategyRows = [
   {
     area: "국가 경영",
     goal: "15대 산업·7대 분야·선출직 인재를 하나의 패권 전략으로 묶는다.",
+    contract: "세 권리를 법·예산·산업·외교가 함께 움직이는 국가 운영체계로 묶는다.",
     bullets: [
       "15대 산업: 미래창조형 ①미래도시 개발+경영 ②미래주택 ③디지털공공재 / 세계정상필수 ④로봇 ⑤드론 ⑥바이오 ⑦디지털미디어 ⑧디지털금융 ⑨인공위성이용 ⑩핵에너지 / 동북아·한반도 정체성기반 ⑪융합디자인 ⑫신가치 엔터테인먼트 ⑬건강·관광 ⑭미래교육 ⑮국토활용",
       "7대 분야: 싱크탱크·대학·기업·미디어·정부·정당·군대가 산업 실증을 규칙·신뢰·서사·권한으로 전환",
@@ -54,6 +60,7 @@ const strategyRows = [
   {
     area: "도시 경영",
     goal: "시민강화 AI 표준을 생활권에서 증명한다.",
+    contract: "디지털 인프라 접근권이 일·학습·돌봄·참여를 통해 정체성 실현권으로 이어지는 생활 단위다.",
     bullets: [
       "강소도시를 시민강화 AI 실험장으로 설계",
       "대학·기업·연구기관·공공조달·시민참여를 시산학 생태계로 연결",
@@ -65,6 +72,7 @@ const strategyRows = [
   {
     area: "가정 경영",
     goal: "강화된 시민이 태어나는 최소 생활권을 설계한다.",
+    contract: "정체성 발견·전문성 훈련·판단 주도성이 매일 축적되는 권리 구현 단위다.",
     bullets: [
       "가정은 기기 자동화가 아니라 정체성 발견·전문성 훈련·판단 주도성의 기반",
       "가족 AI 코치와 개인 성장 기록으로 학습·건강·돌봄·관계 피드백 지원",
@@ -95,7 +103,7 @@ export function GovernanceExpansionPage() {
           한국은 AI 시민강화 표준을 선점하는 중심 국가가 되어야 한다.
         </div>
         <div style={{ marginTop: 7, fontSize: 13.5, color: "#333", lineHeight: 1.34, fontWeight: 560 }}>
-          미국식 빅테크 패권도, 중국식 국가감시 패권도 아니다. 15대 산업을 물적 기반으로, 7대 분야 초일류를 제도 권력으로, 선출직 인재를 실행 권한으로 묶어 AI 시대 시민강화 사회계약을 세계 표준으로 만든다.
+          새로운 사회계약은 디지털 인프라 접근권, 직접 거버넌스 참여권, 정체성 실현권이 이어지는 권리 체계다. 15대 산업을 물적 기반으로, 7대 분야 초일류를 제도 권력으로, 선출직 인재를 실행 권한으로 묶어 이 권리 체계를 세계·국가·도시·가정의 운영 원리로 구현한다.
         </div>
       </div>
 
@@ -108,6 +116,9 @@ export function GovernanceExpansionPage() {
                 <div style={{ background: "#f5f1ea", color: C.navy, borderBottom: `1px solid #d8d2ca`, padding: "8px 10px", fontSize: 14, fontWeight: 730 }}>{row.title}</div>
                 <div style={{ padding: "8px 10px 6px", fontSize: 11.15, lineHeight: 1.26, color: "#333", fontWeight: 520 }}>
                   <span style={{ color: C.navy, fontWeight: 750 }}>한계</span> — {row.limit}
+                </div>
+                <div style={{ padding: "0 10px 7px", fontSize: 10.65, lineHeight: 1.23, color: C.navy, fontWeight: 700 }}>
+                  <span style={{ color: C.accent, fontWeight: 850 }}>막히는 권리</span> — {row.rights}
                 </div>
                 <div style={{ padding: "8px 10px 10px", borderTop: "1px solid #e5ddd2", fontSize: 10.9, lineHeight: 1.25, color: "#333", fontWeight: 520, flex: 1 }}>
                   <div style={{ color: "#555", fontWeight: 620, marginBottom: 3 }}>사회계약 전략</div>
@@ -123,14 +134,16 @@ export function GovernanceExpansionPage() {
           <table style={{ width: "100%", borderCollapse: "collapse", tableLayout: "fixed" }}>
             <colgroup>
               <col style={{ width: "10%" }} />
-              <col style={{ width: "19%" }} />
-              <col style={{ width: "53%" }} />
+              <col style={{ width: "16%" }} />
+              <col style={{ width: "20%" }} />
+              <col style={{ width: "39%" }} />
               <col style={{ width: "18%" }} />
             </colgroup>
             <thead>
               <tr style={{ background: C.navy, color: "#fff" }}>
                 <th style={th}>영역</th>
                 <th style={th}>목표</th>
+                <th style={th}>사회계약 연결</th>
                 <th style={th}>경영전략</th>
                 <th style={th}>핵심 효과</th>
               </tr>
@@ -140,6 +153,7 @@ export function GovernanceExpansionPage() {
                 <tr key={row.area} style={{ background: i % 2 ? C.bg : "#fff" }}>
                   <td style={{ ...td, color: C.navy, fontWeight: 900, fontSize: 11.8 }}>{row.area}</td>
                   <td style={{ ...td, color: C.navy, fontWeight: 750 }}>{row.goal}</td>
+                  <td style={{ ...td, color: C.navy, fontWeight: 690 }}>{row.contract}</td>
                   <td style={td}><BulletList items={row.bullets} /></td>
                   <td style={{ ...td, color: C.accent, fontWeight: 830 }}>{row.effect}</td>
                 </tr>
