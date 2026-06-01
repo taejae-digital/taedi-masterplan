@@ -230,7 +230,7 @@ export function CombinedPage() {
         <div style={{ flex: 1 }}>
           <div style={h3s}>3.3 새로운 사회계약 — 정체성 실현이 가능한 다층 사회</div>
           <div style={{ fontSize: 11.2, color: "#222", lineHeight: 1.35, padding: "4px 8px", background: "#f0f4ff", borderLeft: `3px solid ${C.navy}`, marginBottom: 6 }}>
-            <strong style={{ color: C.navy }}>산업시대 사회계약</strong>(인권·참정권·사유재산권)이 <strong>사람답게 존중받을 자유</strong>를 보장했다면, <strong style={{ color: C.navy }}>디지털시대 사회계약</strong>은 <strong>정체성 실현의 자유</strong>를 보장한다.
+            <strong style={{ color: C.navy }}>다음 단계 시대가치</strong>는 자유와 욕망의 극대화에서 <strong>절제와 균형</strong>으로 이동한다. 디지털시대 사회계약은 강화된 개인과 AI 권력이 공동체를 무너뜨리지 않도록, <strong style={{ color: C.navy }}>정체성 실현의 자유</strong>를 절제와 균형의 질서 위에서 보장한다.
           </div>
 
           <table style={{ width: "100%", borderCollapse: "collapse", tableLayout: "fixed" }}>
