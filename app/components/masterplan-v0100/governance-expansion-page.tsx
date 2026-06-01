@@ -145,21 +145,17 @@ export function GovernanceExpansionPage() {
       <div style={{ padding: "0 36px 9px", display: "flex", flexDirection: "column", flex: 1, gap: 7 }}>
         <section>
           <div style={h3s}>4.1 새로운 사회계약의 작동 조건</div>
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(2, 1fr)", gap: 10 }}>
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: 8 }}>
             {limitRows.map((row, i) => (
-              <div key={row.title} style={{ minHeight: 184, display: "grid", gridTemplateColumns: "98px 1fr", border: `1px solid #d7d0c7`, background: i % 2 ? C.bg : "#fff", boxShadow: "0 1px 0 rgba(0,0,0,0.03)" }}>
-                <div style={{ background: "#f2eee6", borderRight: `1px solid #d7d0c7`, padding: "10px 11px", display: "flex", flexDirection: "column", justifyContent: "center" }}>
-                  <div style={{ color: C.navy, fontSize: 14.1, fontWeight: 730, letterSpacing: -0.3 }}>{row.title}</div>
+              <div key={row.title} style={{ minHeight: 236, display: "flex", flexDirection: "column", border: `1px solid #d7d0c7`, background: i % 2 ? C.bg : "#fff", boxShadow: "0 1px 0 rgba(0,0,0,0.03)" }}>
+                <div style={{ background: "#f2eee6", borderBottom: `1px solid #d7d0c7`, padding: "7px 9px" }}>
+                  <div style={{ color: C.navy, fontSize: 13.2, fontWeight: 760, letterSpacing: -0.3 }}>{row.title}</div>
                 </div>
-                <div style={{ padding: "8px 11px 8px", display: "grid", gridTemplateColumns: "1fr 1fr", gap: 13 }}>
-                  <div style={{ display: "flex", flexDirection: "column", gap: 5 }}>
-                    <div style={{ fontSize: 12.35, lineHeight: 1.22, color: C.navy, fontWeight: 700, letterSpacing: -0.28 }}>{row.problem}</div>
-                    <BulletList items={row.problemBullets} fontSize={10.55} />
-                  </div>
-                  <div style={{ borderLeft: "3px solid #d9b46f", paddingLeft: 12, display: "flex", flexDirection: "column", gap: 5 }}>
-                    <div style={{ fontSize: 12.35, lineHeight: 1.22, color: "#2f2f2f", fontWeight: 700, letterSpacing: -0.22 }}>{row.strategy}</div>
-                    <BulletList items={row.strategyBullets} fontSize={10.55} />
-                  </div>
+                <div style={{ padding: "7px 9px 6px", display: "flex", flexDirection: "column", gap: 4.5, flex: 1 }}>
+                  <div style={{ fontSize: 10.55, lineHeight: 1.18, color: C.navy, fontWeight: 720, letterSpacing: -0.28 }}>{row.problem}</div>
+                  <BulletList items={row.problemBullets} fontSize={8.95} />
+                  <div style={{ marginTop: 3, paddingTop: 5, borderTop: "2px solid #d9b46f", fontSize: 10.2, lineHeight: 1.18, color: "#2f2f2f", fontWeight: 700, letterSpacing: -0.22 }}>{row.strategy}</div>
+                  <BulletList items={row.strategyBullets} fontSize={8.85} />
                 </div>
               </div>
             ))}
