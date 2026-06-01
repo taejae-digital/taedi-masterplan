@@ -51,7 +51,7 @@ const econRows: Row[] = [
     prev: "분업·관리 위에 노동가치설",
     why: "노동가치설 붕괴. 정형화된 분업 기술이 더는 가치를 만들지 못함",
     shift: "정보·지능의 대중화 — 인지노동 영역까지 대중화 도달. 노동시간이 가치 원천 지위를 상실",
-    next: "정체성 기여가 가치를 만든다 — 정체성 실현인이 새 생산 주체",
+    next: "세분화된 니즈 충족이 가치를 만든다 — 정체성 실현인이 새 생산 주체",
   },
   {
     dim: "분배",
@@ -102,7 +102,7 @@ const classRows: ClassRow[] = [
     },
     digital: {
       production: "AI로 전문성 확장",
-      distribution: "정체성 기여로 차별화",
+      distribution: "세분화된 니즈 충족으로 차별화",
       consumption: "도구·서비스 구독",
     },
   },
@@ -171,7 +171,7 @@ export function CombinedPage() {
         <div>
           <div style={h3s}>3.1 경제 질서 — 노동이 만들던 가치를 정체성이 만든다</div>
           <div style={{ fontSize: 11.2, color: "#222", lineHeight: 1.35, padding: "4px 8px", background: "#f0f4ff", borderLeft: `3px solid ${C.navy}`, marginBottom: 6 }}>
-            <strong style={{ color: C.navy }}>산업시대 경제는 노동가치설 위에 섰다.</strong> 디지털시대는 <strong>AI가 능력을 확장</strong>한다 — 디자인·코딩·회계·번역을 비전문가가 직접 한다. 가치는 오래 일한 시간이 아니라 <strong>어떤 문제를 선택하고 어떤 고유한 방식으로 해결했는가</strong>에서 나온다. 그래서 같은 4계층(리더·프로·아마추어·소외)도 산업시대와 디지털시대에 <strong>역할과 비중이 달라진다</strong>.
+            <strong style={{ color: C.navy }}>산업시대 경제는 노동가치설 위에 섰다.</strong> 디지털시대는 <strong>AI가 능력을 확장</strong>한다 — 디자인·코딩·회계·번역을 비전문가가 직접 한다. 가치는 오래 일한 시간이 아니라 <strong>세분화된 니즈를 발견하고 여러 기능을 조합해 특정한 필요를 충족시키는 능력</strong>에서 나온다. 그래서 같은 4계층(리더·프로·아마추어·소외)도 산업시대와 디지털시대에 <strong>역할과 비중이 달라진다</strong>.
           </div>
           <table style={{ width: "100%", borderCollapse: "collapse", tableLayout: "fixed" }}>
             <colgroup>
@@ -269,7 +269,7 @@ export function CombinedPage() {
                 {
                   label: "C. 정체성 실현권",
                   def: "직업·소속에 묶이지 않고 자신의 정체성을 발견·훈련·실현하며, 그 기여를 경제·정치 질서 안에서 인정받을 권리",
-                  productivity: "생산의 기준이 노동시간에서 정체성 기여로 이동. 개인은 자기 고유성으로 가치를 만듦",
+                  productivity: "생산의 기준이 노동시간에서 세분화된 니즈 충족으로 이동. 개인은 자기 정체성을 기준으로 특정한 필요를 발견하고 해결함",
                   governance: "정책과 제도는 평균적 국민이 아니라 다양한 정체성이 실현되는 경로를 설계",
                   contract: "최종 목적 — 디지털 인프라와 직접 참여가 정체성 실현으로 귀결",
                 },
