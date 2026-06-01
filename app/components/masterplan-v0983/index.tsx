@@ -1,4 +1,4 @@
-import { VisionPage } from "../masterplan-v0910/vision-page";
+import { VisionPage } from "./vision-page";
 import { IndividualCommunityPage } from "../masterplan-v0954/individual-community-page";
 import { CombinedPage } from "./combined-page";
 import { ResearchPlanPage } from "./research-plan-page";
