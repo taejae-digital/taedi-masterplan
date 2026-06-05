@@ -74,38 +74,38 @@ const polRows: PolRow[] = [
 const contractRows = [
   {
     label: "형성 구조",
-    problem: "가정이 정체성 형성의 출발선이지만 가정 자원·지역 환경에 따라 기회가 조기 분화될 위험",
+    problem: "정체성이 가정 자원·지역 환경·초기 노출 격차에 따라 조기 분화될 위험",
     econ: "고유 생산영역으로 진입하기 전 문제의식·도메인 감각·AI 주도력을 형성",
-    pol: "교육·도시·공공 프로젝트가 부족한 노출과 해석을 보완",
-    setting: "정체성 실현권은 선언이 아니라 발견·재탐색·연결 기회를 제공하는 형성 구조에서 시작된다",
+    pol: "교육·도시·공공 프로젝트가 발견·훈련·전환 기회를 보완",
+    setting: "정체성을 발견·훈련·전환하는 구조",
   },
   {
     label: "생산 구조",
-    problem: "정체성 기반 생산에 필요한 데이터·AI 모델·컴퓨팅이 플랫폼과 자본에 집중",
+    problem: "정체성 기반 생산에 필요한 AI·데이터·컴퓨팅이 플랫폼과 자본에 집중",
     econ: "AI·데이터·컴퓨팅을 토지·공장 이후의 생산수단으로 보고 접근·이동·가치배분을 설계",
     pol: "국가는 데이터 소유·활용 동의, 모델 보유자와 비보유자 간 책임·접근 기준을 설정",
-    setting: "디지털 인프라 접근권은 공공 연산·데이터 이동·AI 도구 접근이 보장될 때 생산권이 된다",
+    setting: "AI·데이터·컴퓨팅을 생산수단으로 쓰는 구조",
   },
   {
     label: "시장 구조",
     problem: "고유 생산영역이 플랫폼 노출·추천·가격·수익배분 규칙에 종속",
     econ: "작은 수요와 고유 생산영역이 지속되도록 수요자와 공정하게 연결",
     pol: "플랫폼의 검색·추천·평판·AI 접근 권력을 공적 규율 대상으로 편입",
-    setting: "정체성 실현권은 시장 연결권과 결합해야 플랫폼 독점에 흡수되지 않고 지속된다",
+    setting: "개인 생산물이 거래·유통·수익화되는 구조",
   },
   {
     label: "인정 구조",
-    problem: "정체성 실현이 시장 성과로만 측정되면 돌봄·학습·관계·지역 기여가 배제",
+    problem: "정체성 실현이 직함·학력·시장 성과로만 측정되면 돌봄·학습·지역 기여가 배제",
     econ: "시장 판매물뿐 아니라 돌봄, 양육, 학습 동반, 창작 공유, 공공문제 해결을 기여로 인정",
     pol: "돌봄·학습·지역 기여를 시민의 공동체 운영 참여로 인정하고 제도 안에 편입",
-    setting: "정체성 실현권은 판매 성과만이 아니라 공동체 기여를 인정하는 평가 구조를 필요로 한다",
+    setting: "직함이 아니라 기여·신뢰·문제해결력으로 인정받는 구조",
   },
   {
     label: "조정 구조",
-    problem: "데이터·플랫폼·AI 권력이 선택지를 배열하고, 실패·지연·취약성이 배제로 이어질 위험",
+    problem: "알고리즘·플랫폼·공공규칙이 선택지를 배열하고, 실패·지연·취약성이 배제로 이어질 위험",
     econ: "생산 실패가 생존 실패로 이어지지 않도록 재탐색과 전환 비용을 사회가 분담",
     pol: "강화된 개인이 설명·이의제기·감사에 참여하고, 국가는 재진입 경로를 조정",
-    setting: "직접 거버넌스 참여권은 AI 권력의 결정을 검증하고 실패한 개인의 재진입을 보장하는 조정 구조다",
+    setting: "알고리즘·플랫폼·공공규칙을 설명·이의제기·수정하는 구조",
   },
 ];function CausalSpine({ rows }: { rows: Array<{ k: string; t: string; d: string }> }) {
   return (
@@ -156,7 +156,7 @@ export function CombinedPage() {
 
       <div style={{ padding: "11px 38px 13px", display: "flex", flexDirection: "column", flex: 1, gap: 12 }}>
         <div style={{ padding: "8px 12px", background: "#f0f4ff", borderLeft: `4px solid ${C.navy}`, fontSize: 13.2, lineHeight: 1.28, color: "#222", fontWeight: 610 }}>
-          AI·데이터·컴퓨팅·플랫폼은 새 생산수단이 되고, 정체성은 생산과 기여의 기준이 된다. 문제는 이 자원이 플랫폼과 자본에 집중될 때 정체성 실현이 새 계급질서로 굳어진다는 점이다. 권리는 이름만으로 작동하지 않는다. 새 사회계약은 형성·생산·시장·인정·조정의 운영 구조 안에서 권리를 구현해야 한다.
+          AI·데이터·컴퓨팅·플랫폼은 새 생산수단이 되고, 정체성은 생산과 기여의 기준이 된다. 문제는 이 자원이 플랫폼과 자본에 집중될 때 정체성 실현이 새 계급질서로 굳어진다는 점이다. 새 사회계약은 권리 이름을 선언하는 것이 아니라, 형성·생산·시장·인정·조정의 운영 구조를 설계하는 일이다.
         </div>
 
         <div>
@@ -200,7 +200,7 @@ export function CombinedPage() {
           <div style={h3s}>3.3 새로운 사회계약 — 정체성 실현 사회의 운영 구조</div>
           <table style={{ width: "100%", borderCollapse: "collapse", tableLayout: "fixed" }}>
             <colgroup><col style={{ width: "10%" }} /><col style={{ width: "23%" }} /><col style={{ width: "22%" }} /><col style={{ width: "22%" }} /><col style={{ width: "23%" }} /></colgroup>
-            <thead><tr style={{ background: C.navy, color: "#fff" }}><th style={th33}>구조</th><th style={th33}>핵심 문제</th><th style={th33}>경제 질서</th><th style={th33}>정치 질서</th><th style={th33}>권리의 구현 방식</th></tr></thead>
+            <thead><tr style={{ background: C.navy, color: "#fff" }}><th style={th33}>구조</th><th style={th33}>핵심 문제</th><th style={th33}>경제 질서</th><th style={th33}>정치 질서</th><th style={th33}>운영 구조의 핵심</th></tr></thead>
             <tbody>{contractRows.map((r, i) => <tr key={r.label} style={{ background: i % 2 ? C.bg : "#fff", borderTop: i === 0 ? `2px solid ${C.navy}` : undefined }}><td style={td33Label}>{r.label}</td><td style={td33}>{r.problem}</td><td style={{ ...td33, fontWeight: 650 }}>{r.econ}</td><td style={td33}>{r.pol}</td><td style={td33Blue}>{r.setting}</td></tr>)}</tbody>
           </table>
         </div>
