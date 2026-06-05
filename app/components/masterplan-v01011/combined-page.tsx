@@ -197,7 +197,7 @@ export function CombinedPage() {
         </div>
 
         <div style={{ flex: 1 }}>
-          <div style={h3s}>3.3 새로운 사회계약 — 정체성 실현 사회의 생산·분배·인정 구조</div>
+          <div style={h3s}>3.3 새로운 사회계약 — 정체성 실현 사회의 운영 구조</div>
           <table style={{ width: "100%", borderCollapse: "collapse", tableLayout: "fixed" }}>
             <colgroup><col style={{ width: "16%" }} /><col style={{ width: "24%" }} /><col style={{ width: "20%" }} /><col style={{ width: "20%" }} /><col style={{ width: "20%" }} /></colgroup>
             <thead><tr style={{ background: C.navy, color: "#fff" }}><th style={th}>구조</th><th style={th}>핵심 문제</th><th style={th}>경제 질서</th><th style={th}>정치 질서</th><th style={th}>사회계약의 핵심 합의</th></tr></thead>
