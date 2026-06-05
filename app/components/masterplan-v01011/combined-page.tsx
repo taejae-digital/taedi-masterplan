@@ -77,35 +77,35 @@ const contractRows = [
     problem: "정체성이 가정 자원·지역 환경·초기 노출 격차에 따라 조기 분화될 위험",
     econ: "고유 생산영역으로 진입하기 전 문제의식·도메인 감각·AI 주도력을 형성",
     pol: "교육·도시·공공 프로젝트가 발견·훈련·전환 기회를 보완",
-    setting: "정체성을 발견·훈련·전환하는 구조",
+    setting: "가정·교육·도시가 정체성의 발견과 전환 기회를 보완한다",
   },
   {
     label: "생산 구조",
     problem: "정체성 기반 생산에 필요한 AI·데이터·컴퓨팅이 플랫폼과 자본에 집중",
     econ: "AI·데이터·컴퓨팅을 토지·공장 이후의 생산수단으로 보고 접근·이동·가치배분을 설계",
     pol: "국가는 데이터 소유·활용 동의, 모델 보유자와 비보유자 간 책임·접근 기준을 설정",
-    setting: "AI·데이터·컴퓨팅을 생산수단으로 쓰는 구조",
+    setting: "AI·데이터·컴퓨팅 접근을 개인의 생산 조건으로 보장한다",
   },
   {
     label: "시장 구조",
     problem: "고유 생산영역이 플랫폼 노출·추천·가격·수익배분 규칙에 종속",
     econ: "작은 수요와 고유 생산영역이 지속되도록 수요자와 공정하게 연결",
     pol: "플랫폼의 검색·추천·평판·AI 접근 권력을 공적 규율 대상으로 편입",
-    setting: "개인 생산물이 거래·유통·수익화되는 구조",
+    setting: "플랫폼 규칙을 조정해 개인 생산물이 수요와 연결되게 한다",
   },
   {
     label: "인정 구조",
     problem: "정체성 실현이 직함·학력·시장 성과로만 측정되면 돌봄·학습·지역 기여가 배제",
     econ: "시장 판매물뿐 아니라 돌봄, 양육, 학습 동반, 창작 공유, 공공문제 해결을 기여로 인정",
     pol: "돌봄·학습·지역 기여를 시민의 공동체 운영 참여로 인정하고 제도 안에 편입",
-    setting: "직함이 아니라 기여·신뢰·문제해결력으로 인정받는 구조",
+    setting: "시장 성과 밖의 돌봄·학습·문제해결 기여까지 사회적으로 인정한다",
   },
   {
     label: "조정 구조",
     problem: "알고리즘·플랫폼·공공규칙이 선택지를 배열하고, 실패·지연·취약성이 배제로 이어질 위험",
     econ: "생산 실패가 생존 실패로 이어지지 않도록 재탐색과 전환 비용을 사회가 분담",
     pol: "강화된 개인이 설명·이의제기·감사에 참여하고, 국가는 재진입 경로를 조정",
-    setting: "알고리즘·플랫폼·공공규칙을 설명·이의제기·수정하는 구조",
+    setting: "알고리즘·플랫폼·공공규칙에 대한 설명·이의제기·수정 절차를 둔다",
   },
 ];function CausalSpine({ rows }: { rows: Array<{ k: string; t: string; d: string }> }) {
   return (
@@ -200,7 +200,7 @@ export function CombinedPage() {
           <div style={h3s}>3.3 새로운 사회계약 — 정체성 실현 사회의 운영 구조</div>
           <table style={{ width: "100%", borderCollapse: "collapse", tableLayout: "fixed" }}>
             <colgroup><col style={{ width: "10%" }} /><col style={{ width: "23%" }} /><col style={{ width: "22%" }} /><col style={{ width: "22%" }} /><col style={{ width: "23%" }} /></colgroup>
-            <thead><tr style={{ background: C.navy, color: "#fff" }}><th style={th33}>구조</th><th style={th33}>핵심 문제</th><th style={th33}>경제 질서</th><th style={th33}>정치 질서</th><th style={th33}>운영 구조의 핵심</th></tr></thead>
+            <thead><tr style={{ background: C.navy, color: "#fff" }}><th style={th33}>구조</th><th style={th33}>핵심 문제</th><th style={th33}>경제 질서</th><th style={th33}>정치 질서</th><th style={th33}>사회계약의 작동 방식</th></tr></thead>
             <tbody>{contractRows.map((r, i) => <tr key={r.label} style={{ height: 48, background: i % 2 ? C.bg : "#fff", borderTop: i === 0 ? `2px solid ${C.navy}` : undefined }}><td style={td33Label}><div style={td33Inner}>{r.label}</div></td><td style={td33}><div style={td33Inner}>{r.problem}</div></td><td style={{ ...td33, fontWeight: 650 }}><div style={td33Inner}>{r.econ}</div></td><td style={td33}><div style={td33Inner}>{r.pol}</div></td><td style={td33Blue}><div style={td33Inner}>{r.setting}</div></td></tr>)}</tbody>
           </table>
         </div>
