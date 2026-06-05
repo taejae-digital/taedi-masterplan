@@ -77,35 +77,35 @@ const contractRows = [
     problem: "정체성 형성이 가정·소득·지역 자원에 따라 조기 분화될 위험",
     econ: "고유 생산영역으로 진입하기 전 문제의식·도메인 감각·AI 주도력을 형성",
     pol: "교육·도시·공공 프로젝트가 세계 노출과 해석 격차를 완화",
-    setting: "노출·탐색·훈련·멘토링·재탐색 경로를 공적 인프라로 제공",
+    setting: "출발선은 가정 자원이 아니라 사회가 넓힌다. 누구나 여러 세계를 접하고 다시 탐색할 시간을 갖는다",
   },
   {
     label: "생산 구조",
     problem: "정체성 기반 생산에 필요한 데이터·AI 모델·컴퓨팅이 플랫폼과 자본에 집중",
     econ: "AI·데이터·컴퓨팅을 토지·공장 이후의 생산수단으로 보고 접근·이동·가치배분을 설계",
     pol: "국가는 데이터 소유·활용 동의, 모델 보유자와 비보유자 간 책임·접근 기준을 설정",
-    setting: "데이터 주권, 공공 AI 인프라, 컴퓨팅 크레딧, 공공 데이터, 연산 독점 규율",
+    setting: "개인이 만든 데이터와 공공 연산을 새 생산수단으로 보고, 소유·접근·가치배분을 플랫폼 독점에서 분리한다",
   },
   {
     label: "시장 구조",
     problem: "고유 생산영역이 플랫폼 노출·추천·가격·수익배분 규칙에 종속",
     econ: "작은 수요와 고유 생산영역이 지속되도록 수요자와 공정하게 연결",
     pol: "플랫폼의 검색·추천·평판·AI 접근 권력을 공적 규율 대상으로 편입",
-    setting: "추천·노출 투명성, 공정 유통, 수익배분 기준, 생산물 권리 보호",
+    setting: "플랫폼을 사적 장터가 아니라 사회적 연결 인프라로 규율해 작은 생산자도 수요와 만날 수 있게 한다",
   },
   {
     label: "인정 구조",
     problem: "정체성 실현이 시장 성과로만 측정되면 돌봄·학습·관계·지역 기여가 배제",
     econ: "시장 판매물뿐 아니라 돌봄, 양육, 학습 동반, 창작 공유, 공공문제 해결을 기여로 인정",
     pol: "도시·마을 단위 프로젝트와 시민 참여를 통해 공동체를 유지하는 활동을 제도 안에 편입",
-    setting: "비시장 기여 기록, 돌봄·관계 가치 인정, 프로젝트 매칭, 협업 이력, 지역 기여 보상",
+    setting: "가치는 판매 가능한 산출물에 한정하지 않는다. 공동체를 유지하는 돌봄·학습·관계 기여까지 인정한다",
   },
   {
     label: "조정 구조",
     problem: "데이터·플랫폼·AI 권력이 선택지를 배열하고, 실패·지연·취약성이 배제로 이어질 위험",
     econ: "생산 실패가 생존 실패로 이어지지 않도록 재탐색과 전환 비용을 사회가 분담",
     pol: "강화된 개인이 권력을 검증하고, 국가는 필수 생활 기반과 재진입 경로를 조정",
-    setting: "알고리즘 감사, 설명·거부·수정 요구, 참여·위임·회수, 전환기 소득, 필수 기술 접근",
+    setting: "AI 권력의 결정은 설명·이의제기·참여로 교정하고, 실패한 개인은 재진입 가능한 생활 기반을 갖는다",
   },
 ];function CausalSpine({ rows }: { rows: Array<{ k: string; t: string; d: string }> }) {
   return (
@@ -200,7 +200,7 @@ export function CombinedPage() {
           <div style={h3s}>3.3 새로운 사회계약 — 정체성 실현 사회의 생산·분배·인정 구조</div>
           <table style={{ width: "100%", borderCollapse: "collapse", tableLayout: "fixed" }}>
             <colgroup><col style={{ width: "16%" }} /><col style={{ width: "24%" }} /><col style={{ width: "20%" }} /><col style={{ width: "20%" }} /><col style={{ width: "20%" }} /></colgroup>
-            <thead><tr style={{ background: C.navy, color: "#fff" }}><th style={th}>구조</th><th style={th}>핵심 문제</th><th style={th}>경제 질서</th><th style={th}>정치 질서</th><th style={th}>사회계약 세팅</th></tr></thead>
+            <thead><tr style={{ background: C.navy, color: "#fff" }}><th style={th}>구조</th><th style={th}>핵심 문제</th><th style={th}>경제 질서</th><th style={th}>정치 질서</th><th style={th}>사회계약의 핵심 합의</th></tr></thead>
             <tbody>{contractRows.map((r, i) => <tr key={r.label} style={{ background: i % 2 ? C.bg : "#fff", borderTop: i === 0 ? `2px solid ${C.navy}` : undefined }}><td style={{ ...tdClass, fontSize: 11.2 }}>{r.label}</td><td style={td}>{r.problem}</td><td style={{ ...td, fontWeight: 650 }}>{r.econ}</td><td style={td}>{r.pol}</td><td style={tdBlue}>{r.setting}</td></tr>)}</tbody>
           </table>
         </div>
