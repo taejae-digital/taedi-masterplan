@@ -199,9 +199,9 @@ export function CombinedPage() {
         <div style={{ flex: 1 }}>
           <div style={h3s}>3.3 새로운 사회계약 — 정체성 실현 사회의 운영 구조</div>
           <table style={{ width: "100%", borderCollapse: "collapse", tableLayout: "fixed" }}>
-            <colgroup><col style={{ width: "16%" }} /><col style={{ width: "24%" }} /><col style={{ width: "20%" }} /><col style={{ width: "20%" }} /><col style={{ width: "20%" }} /></colgroup>
-            <thead><tr style={{ background: C.navy, color: "#fff" }}><th style={th}>구조</th><th style={th}>핵심 문제</th><th style={th}>경제 질서</th><th style={th}>정치 질서</th><th style={th}>사회계약의 핵심 합의</th></tr></thead>
-            <tbody>{contractRows.map((r, i) => <tr key={r.label} style={{ background: i % 2 ? C.bg : "#fff", borderTop: i === 0 ? `2px solid ${C.navy}` : undefined }}><td style={{ ...tdClass, fontSize: 11.2 }}>{r.label}</td><td style={td}>{r.problem}</td><td style={{ ...td, fontWeight: 650 }}>{r.econ}</td><td style={td}>{r.pol}</td><td style={tdBlue}>{r.setting}</td></tr>)}</tbody>
+            <colgroup><col style={{ width: "14%" }} /><col style={{ width: "22%" }} /><col style={{ width: "21%" }} /><col style={{ width: "21%" }} /><col style={{ width: "22%" }} /></colgroup>
+            <thead><tr style={{ background: C.navy, color: "#fff" }}><th style={th33}>구조</th><th style={th33}>핵심 문제</th><th style={th33}>경제 질서</th><th style={th33}>정치 질서</th><th style={th33}>사회계약의 핵심 합의</th></tr></thead>
+            <tbody>{contractRows.map((r, i) => <tr key={r.label} style={{ background: i % 2 ? C.bg : "#fff", borderTop: i === 0 ? `2px solid ${C.navy}` : undefined }}><td style={td33Label}>{r.label}</td><td style={td33}>{r.problem}</td><td style={{ ...td33, fontWeight: 650 }}>{r.econ}</td><td style={td33}>{r.pol}</td><td style={td33Blue}>{r.setting}</td></tr>)}</tbody>
           </table>
         </div>
       </div>
@@ -216,3 +216,8 @@ const thMid: React.CSSProperties = { ...th, background: "#24395f" };
 const td: React.CSSProperties = { padding: "5.8px 7px", borderBottom: "1px solid #eee", fontSize: 10.8, verticalAlign: "top", lineHeight: 1.24, color: "#333" };
 const tdBlue: React.CSSProperties = { ...td, color: C.navy, fontWeight: 620 };
 const tdClass: React.CSSProperties = { ...td, fontWeight: 850, color: C.navy };
+
+const th33: React.CSSProperties = { padding: "4px 6px", textAlign: "left", fontSize: 10.8, borderRight: "1px solid rgba(255,255,255,0.18)", verticalAlign: "middle", lineHeight: 1.12 };
+const td33: React.CSSProperties = { padding: "4px 6px", borderBottom: "1px solid #eee", fontSize: 10.35, verticalAlign: "middle", lineHeight: 1.18, color: "#333" };
+const td33Blue: React.CSSProperties = { ...td33, color: C.navy, fontWeight: 620 };
+const td33Label: React.CSSProperties = { ...td33, fontWeight: 850, color: C.navy, fontSize: 10.75, textAlign: "center" };
