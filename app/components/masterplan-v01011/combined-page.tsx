@@ -201,7 +201,7 @@ export function CombinedPage() {
           <table style={{ width: "100%", borderCollapse: "collapse", tableLayout: "fixed" }}>
             <colgroup><col style={{ width: "10%" }} /><col style={{ width: "23%" }} /><col style={{ width: "22%" }} /><col style={{ width: "22%" }} /><col style={{ width: "23%" }} /></colgroup>
             <thead><tr style={{ background: C.navy, color: "#fff" }}><th style={th33}>구조</th><th style={th33}>핵심 문제</th><th style={th33}>경제 질서</th><th style={th33}>정치 질서</th><th style={th33}>운영 구조의 핵심</th></tr></thead>
-            <tbody>{contractRows.map((r, i) => <tr key={r.label} style={{ background: i % 2 ? C.bg : "#fff", borderTop: i === 0 ? `2px solid ${C.navy}` : undefined }}><td style={td33Label}>{r.label}</td><td style={td33}>{r.problem}</td><td style={{ ...td33, fontWeight: 650 }}>{r.econ}</td><td style={td33}>{r.pol}</td><td style={td33Blue}>{r.setting}</td></tr>)}</tbody>
+            <tbody>{contractRows.map((r, i) => <tr key={r.label} style={{ height: 44, background: i % 2 ? C.bg : "#fff", borderTop: i === 0 ? `2px solid ${C.navy}` : undefined }}><td style={td33Label}><div style={td33Inner}>{r.label}</div></td><td style={td33}><div style={td33Inner}>{r.problem}</div></td><td style={{ ...td33, fontWeight: 650 }}><div style={td33Inner}>{r.econ}</div></td><td style={td33}><div style={td33Inner}>{r.pol}</div></td><td style={td33Blue}><div style={td33Inner}>{r.setting}</div></td></tr>)}</tbody>
           </table>
         </div>
       </div>
@@ -218,6 +218,7 @@ const tdBlue: React.CSSProperties = { ...td, color: C.navy, fontWeight: 620 };
 const tdClass: React.CSSProperties = { ...td, fontWeight: 850, color: C.navy };
 
 const th33: React.CSSProperties = { padding: "4px 6px", textAlign: "left", fontSize: 10.8, borderRight: "1px solid rgba(255,255,255,0.18)", verticalAlign: "middle", lineHeight: 1.12 };
-const td33: React.CSSProperties = { padding: "4px 6px", borderBottom: "1px solid #eee", fontSize: 10.35, verticalAlign: "middle", lineHeight: 1.18, color: "#333" };
+const td33: React.CSSProperties = { padding: "3px 6px", borderBottom: "1px solid #eee", fontSize: 9.7, verticalAlign: "middle", lineHeight: 1.15, color: "#333", height: 44 };
+const td33Inner: React.CSSProperties = { height: "3.45em", lineHeight: 1.15, overflow: "hidden", display: "flex", alignItems: "center" };
 const td33Blue: React.CSSProperties = { ...td33, color: C.navy, fontWeight: 620 };
-const td33Label: React.CSSProperties = { ...td33, fontWeight: 850, color: C.navy, fontSize: 10.75, textAlign: "left", paddingLeft: 5, paddingRight: 5 };
+const td33Label: React.CSSProperties = { ...td33, fontWeight: 850, color: C.navy, fontSize: 10.1, textAlign: "left", paddingLeft: 5, paddingRight: 5 };
