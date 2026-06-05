@@ -156,7 +156,7 @@ export function CombinedPage() {
 
       <div style={{ padding: "11px 38px 13px", display: "flex", flexDirection: "column", flex: 1, gap: 12 }}>
         <div style={{ padding: "8px 12px", background: "#f0f4ff", borderLeft: `4px solid ${C.navy}`, fontSize: 13.2, lineHeight: 1.28, color: "#222", fontWeight: 610 }}>
-          AI·데이터·컴퓨팅·플랫폼은 새 생산수단이 되고, 정체성은 무엇을 생산할지뿐 아니라 공동체에 어떻게 기여할지를 정하는 기준이 된다. 새 사회계약은 시장에서 팔리는 생산물만이 아니라 돌봄·학습·관계·지역 문제 해결 같은 비시장 기여를 인정해야 한다. 그래야 리더·프로·아마·소외계층의 분화가 새로운 계급으로 굳어지지 않는다.
+          AI·데이터·컴퓨팅·플랫폼은 새 생산수단이 되고, 정체성은 생산과 기여의 기준이 된다. 문제는 이 자원이 플랫폼과 자본에 집중될 때 정체성 실현이 새 계급질서로 굳어진다는 점이다. 새 사회계약은 형성·생산·시장·인정·조정의 운영 구조로 그 격차를 막아야 한다.
         </div>
 
         <div>
