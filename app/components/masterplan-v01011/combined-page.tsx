@@ -73,56 +73,41 @@ const polRows: PolRow[] = [
 
 const contractRows = [
   {
-    label: "발견·훈련 구조",
+    label: "발견·훈련",
     problem: "정체성 발견과 훈련 기회가 가정·소득·지역 자원에 따라 갈림",
-    econ: "고유 생산영역으로 진입하기 전 필요한 문제의식·도메인 감각을 형성",
+    econ: "고유 생산영역으로 진입하기 전 문제의식·도메인 감각·AI 주도력을 형성",
     pol: "교육·도시·공공 프로젝트가 세계 노출과 해석 격차를 완화",
-    setting: "정답 교육보다 노출·탐색·훈련·멘토링·재탐색 경로를 보장",
+    setting: "노출·탐색·훈련·멘토링·재탐색 경로를 공적 인프라로 제공",
   },
   {
-    label: "데이터 주권 구조",
-    problem: "개인이 정체성 기반 데이터를 만들지만 소유·수익·활용 권한은 플랫폼에 집중",
-    econ: "개인 데이터가 AI 학습과 생산의 원재료가 되므로 이동·활용·가치배분이 필요",
-    pol: "데이터 권력이 선택지·기회·평판을 배열하지 못하게 소유·동의·검증 기준을 설정",
-    setting: "개인 데이터 통제권, 이동권, 삭제·회수권, 활용 동의, 가치배분 규칙",
+    label: "생산수단 분배",
+    problem: "개인이 정체성 기반 데이터를 만들지만 데이터·AI 모델·컴퓨팅은 플랫폼과 자본에 집중",
+    econ: "AI·데이터·컴퓨팅을 토지·공장 이후의 생산수단으로 보고 접근·이동·가치배분을 설계",
+    pol: "국가는 데이터 소유·활용 동의, 모델 보유자와 비보유자 간 책임·접근 기준을 설정",
+    setting: "데이터 주권, 공공 AI 인프라, 컴퓨팅 크레딧, 공공 데이터, 연산 독점 규율",
   },
   {
-    label: "AI 생산수단 분배 구조",
-    problem: "AI 모델·컴퓨팅·공공 데이터가 자본과 거대 조직에 집중되면 생산능력 격차가 계급화",
-    econ: "AI·데이터·컴퓨팅을 토지·공장 이후의 생산수단으로 보고 기본 접근을 분배",
-    pol: "국가는 모델 보유자와 비보유자 사이의 권한·책임·접근 기준을 설계",
-    setting: "공공 AI 인프라, 컴퓨팅 크레딧, 학습 자원, 공공 데이터, 연산 독점 규율",
-  },
-  {
-    label: "시장·플랫폼 구조",
+    label: "시장 연결",
     problem: "고유 생산물이 플랫폼 노출·추천·가격·수익배분 규칙에 종속",
     econ: "작은 수요와 고유 생산영역이 지속되도록 수요자와 공정하게 연결",
     pol: "플랫폼의 검색·추천·평판·AI 접근 권력을 공적 규율 대상으로 편입",
     setting: "추천·노출 투명성, 공정 유통, 수익배분 기준, 생산물 권리 보호",
   },
   {
-    label: "협업·기여 인정 구조",
-    problem: "AI가 실행을 맡을수록 개인은 고립되기 쉽고 공동 생산·돌봄·학습 기여가 저평가",
-    econ: "문제 발견·설득·연결·공동 목표 형성을 생산의 핵심 기여로 인정",
-    pol: "도시·마을 단위 프로젝트와 시민 직접 참여를 결합해 공동체 기반 생산망을 형성",
-    setting: "프로젝트 매칭, 협업 이력, 돌봄·창작·학습·공공문제 해결의 기여 인정",
+    label: "공동체 기여 인정",
+    problem: "정체성 실현이 시장 성과로만 측정되면 돌봄·학습·관계·지역 기여가 다시 저평가",
+    econ: "시장 판매물뿐 아니라 돌봄, 양육, 학습 동반, 창작 공유, 공공문제 해결을 기여로 인정",
+    pol: "도시·마을 단위 프로젝트와 시민 참여를 통해 공동체를 유지하는 활동을 제도 안에 편입",
+    setting: "비시장 기여 기록, 돌봄·관계 가치 인정, 프로젝트 매칭, 협업 이력, 지역 기여 보상",
   },
   {
-    label: "거버넌스 조정 구조",
-    problem: "데이터·플랫폼·AI 권력이 개인의 선택지와 공동체 규칙을 배열",
-    econ: "생산 주체가 인프라 소유자에게 종속되지 않도록 책임과 검증 절차를 부여",
-    pol: "강화된 개인이 의제 설정·정책 설계·감시·검증에 직접 참여",
-    setting: "알고리즘 감사, 설명·거부·수정 요구, 사안별 참여·위임·회수, 이의제기 절차",
+    label: "조정·안전망",
+    problem: "데이터·플랫폼·AI 권력이 선택지를 배열하고, 정체성 실현에 늦거나 실패한 개인은 배제될 위험",
+    econ: "생산 실패가 생존 실패로 이어지지 않도록 재탐색과 전환 비용을 사회가 분담",
+    pol: "강화된 개인이 권력을 검증하고, 국가는 필수 생활 기반과 재진입 경로를 조정",
+    setting: "알고리즘 감사, 설명·거부·수정 요구, 참여·위임·회수, 전환기 소득, 필수 기술 접근",
   },
-  {
-    label: "안전망 구조",
-    problem: "정체성 실현이 가치 기준이 되면 늦게 발견하거나 실패한 개인이 배제될 위험",
-    econ: "생산 실패가 생존 실패로 이어지지 않도록 재탐색과 전환 비용을 분담",
-    pol: "국가가 필수 의료·교육·돌봄·주거와 디지털 취약계층 지원을 조정",
-    setting: "전환기 소득, 재교육, 필수 기술 접근, 실패 후 재진입 경로",
-  },
-];
-function CausalSpine({ rows }: { rows: Array<{ k: string; t: string; d: string }> }) {
+];function CausalSpine({ rows }: { rows: Array<{ k: string; t: string; d: string }> }) {
   return (
     <div style={{ display: "flex", flexDirection: "column", gap: 7 }}>
       {rows.map((r, i) => (
@@ -171,7 +156,7 @@ export function CombinedPage() {
 
       <div style={{ padding: "11px 38px 13px", display: "flex", flexDirection: "column", flex: 1, gap: 12 }}>
         <div style={{ padding: "8px 12px", background: "#f0f4ff", borderLeft: `4px solid ${C.navy}`, fontSize: 13.2, lineHeight: 1.28, color: "#222", fontWeight: 610 }}>
-          AI·데이터·컴퓨팅·플랫폼은 새 생산수단이 되고, 정체성은 무엇을 생산할지 정하는 기준이 된다. 그러나 데이터는 개인이 만들고 플랫폼이 소유하며, 모델과 연산 자원은 자본에 집중된다. 새 사회계약은 정체성 실현을 보장하는 선언이 아니라, 그 격차가 계급으로 굳어지지 않게 생산·분배 구조를 재설계하는 일이다.
+          AI·데이터·컴퓨팅·플랫폼은 새 생산수단이 되고, 정체성은 무엇을 생산할지뿐 아니라 공동체에 어떻게 기여할지를 정하는 기준이 된다. 새 사회계약은 시장에서 팔리는 생산물만이 아니라 돌봄·학습·관계·지역 문제 해결 같은 비시장 기여를 인정해야 한다. 그래야 정체성 실현이 또 다른 성과주의나 플랫폼 경쟁으로 굳어지지 않는다.
         </div>
 
         <div>
@@ -212,7 +197,7 @@ export function CombinedPage() {
         </div>
 
         <div style={{ flex: 1 }}>
-          <div style={h3s}>3.3 새로운 사회계약 — 정체성 실현 사회의 생산·분배 구조</div>
+          <div style={h3s}>3.3 새로운 사회계약 — 정체성 실현 사회의 생산·분배·인정 구조</div>
           <table style={{ width: "100%", borderCollapse: "collapse", tableLayout: "fixed" }}>
             <colgroup><col style={{ width: "16%" }} /><col style={{ width: "24%" }} /><col style={{ width: "20%" }} /><col style={{ width: "20%" }} /><col style={{ width: "20%" }} /></colgroup>
             <thead><tr style={{ background: C.navy, color: "#fff" }}><th style={th}>구조</th><th style={th}>핵심 문제</th><th style={th}>경제 질서</th><th style={th}>정치 질서</th><th style={th}>사회계약 세팅</th></tr></thead>
@@ -228,6 +213,6 @@ export function CombinedPage() {
 
 const th: React.CSSProperties = { padding: "5px 7px", textAlign: "left", fontSize: 11.3, borderRight: "1px solid rgba(255,255,255,0.18)", verticalAlign: "middle", lineHeight: 1.18 };
 const thMid: React.CSSProperties = { ...th, background: "#24395f" };
-const td: React.CSSProperties = { padding: "4.8px 7px", borderBottom: "1px solid #eee", fontSize: 10.45, verticalAlign: "top", lineHeight: 1.24, color: "#333" };
+const td: React.CSSProperties = { padding: "5.8px 7px", borderBottom: "1px solid #eee", fontSize: 10.8, verticalAlign: "top", lineHeight: 1.24, color: "#333" };
 const tdBlue: React.CSSProperties = { ...td, color: C.navy, fontWeight: 620 };
 const tdClass: React.CSSProperties = { ...td, fontWeight: 850, color: C.navy };
