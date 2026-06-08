@@ -123,8 +123,8 @@ export function CombinedPage() {
   ];
   const polSpine = [
     { k: "기존 질서", t: "국가 중심 대표정치", d: "국민은 선거로 권한을 장기 위임하고, 국가는 법·예산·행정으로 표준 규칙을 설계" },
-    { k: "디지털 변화", t: "위임·집행·규칙 설정의 분리", d: "개인은 AI로 정책을 판단·감시하고, 실행은 도시로 내려가며, AI·데이터 규칙은 세계 단위로 올라감" },
-    { k: "새 질서", t: "직접 위임형 다층 정치질서", d: "개인은 사안별로 위임·회수하고, 도시는 실행하며, 세계정부는 초국가 규칙을 세우고, 국가는 조정" },
+    { k: "디지털 변화", t: "위임·집행·규칙 설정의 분리", d: "개인은 AI로 정책을 판단·감시하고, 도시는 생활정치의 중심이 되며, AI·데이터 규칙은 세계 단위로 확장" },
+    { k: "새 질서", t: "직접 위임형 다층 정치질서", d: "개인은 사안별로 위임·회수하고, 도시는 실행 중심이 되며, 세계정부는 초국가 규칙을 세우고, 국가는 조정" },
   ];
 
   return (
@@ -157,7 +157,7 @@ export function CombinedPage() {
           <SectionGrid spine={polSpine}>
             <div style={{ display: "flex", flexDirection: "column", gap: 6 }}>
               <div style={{ padding: "4px 8px", background: "#f3f6fb", borderLeft: `3px solid ${C.navy}`, fontSize: 10.7, lineHeight: 1.18, color: "#2b3342", fontWeight: 650 }}>
-                디지털 시대 정치질서는 대표·관료제에 장기 위임하던 국가 중심 정치에서 벗어난다. 개인은 AI로 정책을 판단·감시하고, 도시는 생활정치를 실행하며, 세계정부는 AI·데이터·플랫폼의 초국가 규칙을 세운다.
+                디지털 시대 정치질서는 대표·관료제에 장기 위임하던 국가 중심 정치에서 벗어난다. 개인은 AI로 정책을 판단·감시하고, 도시는 생활정치의 중심이 되며, 세계정부는 AI·데이터·플랫폼의 초국가 규칙을 세운다.
               </div>
               <table style={{ width: "100%", borderCollapse: "collapse", tableLayout: "fixed" }}>
                 <colgroup><col style={{ width: "13%" }} /><col style={{ width: "26%" }} /><col style={{ width: "28%" }} /><col style={{ width: "33%" }} /></colgroup>
