@@ -24,48 +24,42 @@ const econClassRows: EconClassRow[] = [
   },
   {
     label: "소외계층",
-    industrial: { headline: "일자리 배제 집단", detail: "교육·숙련·일자리 접근에서 밀리거나, 기계화가 생계와 숙련의 존엄을 훼손한다고 보고 저항" },
-    digital: { headline: "자기 생산영역 미형성 집단", detail: "정체성 발견·AI 생산수단·시장 연결에서 배제되거나, AI가 판단·창작·자율성·인정을 대체한다고 보고 거부" },
+    industrial: { headline: "일자리에서 밀려난 사람들", detail: "교육·숙련·일자리 접근에서 밀리거나, 기계화가 생계와 숙련의 존엄을 훼손한다고 보고 저항" },
+    digital: { headline: "자기 일을 만들지 못한 사람들", detail: "정체성 발견·AI 생산수단·시장 연결에서 배제되거나, AI가 판단·창작·자율성·인정을 대체한다고 보고 거부" },
   },
 ];
 
 const polTransitionRows: PolTransitionRow[] = [
- {
-   label: "개인",
-   industrial: "표준 국민·조직 구성원으로 노동·납세·투표를 수행",
-   change: "AI·데이터·컴퓨팅으로 판단·생산·참여 능력이 개인에게 이전",
-   newOrder: "정책 수혜자가 아니라 정체성 기반 필요를 제기하는 의제 형성자",
- },
- {
-   label: "도시",
-   industrial: "국가 정책을 집행하는 행정 단위, 서울 중심의 표준 경로",
-   change: "정체성·산업·규제·교육·문화가 도시별로 달라질 필요 확대",
-   newOrder: "다양한 생산·생활 방식을 실험하는 정치의 실행 단위",
- },
- {
-   label: "플랫폼/데이터",
-   industrial: "시장 보조 인프라 또는 민간 서비스로 취급",
-   change: "알고리즘이 노출·평판·가격·기회와 인정 가능성을 배열",
-   newOrder: "설명·감사·수정 대상이 되는 새로운 정치 권력",
- },
- {
-   label: "국가",
-   industrial: "법·세금·교육·산업정책을 중앙에서 설계하고 배분",
-   change: "개인·도시·플랫폼 권력이 커지며 국가 독점 통치가 한계에 도달",
-   newOrder: "도시 간 격차, 플랫폼 권력, 기본 안전망을 조정하는 오케스트레이터",
- },
- {
-   label: "세계",
-   industrial: "국가 간 조약과 외교로 국경 밖 문제를 사후 조정",
-   change: "AI·데이터·플랫폼·안보·환경 권력이 국경을 넘어 작동",
-   newOrder: "초국가 권력의 공통 규칙을 설정하는 상위 조정 질서",
- },
- {
-   label: "정치 방식",
-   industrial: "대표·정당·관료제에 장기 위임하고 사후 평가",
-   change: "개인이 AI로 정책 이해·제안·검증·이의제기 능력 확보",
-   newOrder: "개인-도시-국가-세계가 함께 작동하는 다층 거버넌스",
- },
+  {
+    label: "개인",
+    industrial: "표준 국민·투표자·노동자로 평균 규칙을 수용",
+    change: "AI로 정책 이해·제안·검증 능력이 커지고 필요가 세분화",
+    newOrder: "자기 필요를 의제화하고 권한을 위임·회수하는 정치 주체",
+  },
+  {
+    label: "도시",
+    industrial: "국가 정책 집행 단위, 서울 중심 표준 경로",
+    change: "산업·교육·문화·규제 조건이 도시마다 달라짐",
+    newOrder: "정체성 기반 생산과 생활방식을 실험·매칭하는 생활정치 단위",
+  },
+  {
+    label: "국가",
+    industrial: "법·세금·교육·산업정책을 중앙에서 설계",
+    change: "개인·도시·플랫폼 권력이 커지고 격차가 확대",
+    newOrder: "다양성의 큰 틀, 안전망, 도시 간 조정, 플랫폼 감사를 맡는 오케스트레이터",
+  },
+  {
+    label: "세계정부",
+    industrial: "국가 간 외교·조약으로 국경 밖 문제를 사후 조정",
+    change: "AI·데이터·안보·환경 권력이 국경을 넘어 작동",
+    newOrder: "시민 직접 위임으로 초국가 권력의 공통 규칙을 세우는 상위 조정 층위",
+  },
+  {
+    label: "플랫폼·데이터",
+    industrial: "민간 서비스나 시장 보조 인프라로 취급",
+    change: "알고리즘이 노출·평판·가격·기회·인정을 배열",
+    newOrder: "설명·감사·수정·이의제기 절차를 갖춘 공적 조정 대상",
+  },
 ];
 
 const contractExchangeRows = [
@@ -129,8 +123,8 @@ export function CombinedPage() {
   ];
   const polSpine = [
     { k: "기존 질서", t: "국가 독점 정치", d: "산업시대 국가는 평균 국민을 전제로 법·교육·세금·산업정책을 중앙에서 설계" },
-    { k: "디지털 변화", t: "정체성 다양화와 플랫폼 권력", d: "개인의 필요는 세분화되고, 도시는 다른 규칙을 요구하며, 플랫폼은 생산·노출·인정을 좌우" },
-    { k: "새 질서", t: "개인-도시-국가-세계 다층 거버넌스", d: "도시는 실행 단위, 국가는 오케스트레이터, 세계는 초국가 권력의 규칙 설정자가 됨" },
+    { k: "디지털 변화", t: "다양한 필요가 국가 평균 규칙을 초과", d: "정체성 기반 필요가 세분화되고, 플랫폼은 생산·노출·인정을 좌우하며, 도시마다 다른 규칙을 요구" },
+    { k: "새 질서", t: "개인·도시·국가·세계의 다층 거버넌스", d: "생활정치는 도시로 내려가고, 초국가 권력은 세계로 올라가며, 국가는 조정자가 됨" },
   ];
 
   return (
@@ -163,11 +157,11 @@ export function CombinedPage() {
           <SectionGrid spine={polSpine}>
             <div style={{ display: "flex", flexDirection: "column", gap: 6 }}>
               <div style={{ padding: "4px 8px", background: "#f3f6fb", borderLeft: `3px solid ${C.navy}`, fontSize: 10.7, lineHeight: 1.18, color: "#2b3342", fontWeight: 650 }}>
-                디지털 시대의 정치질서는 표준 국민 관리에서 벗어나, 정체성 기반 필요를 개인이 제기하고 도시가 실험하며 국가가 조정하고 세계가 공통 규칙을 세우는 다층 거버넌스로 전환된다.
+                정체성 기반 필요가 세분화되면 하나의 국가 평균 규칙으로 개인의 생산과 삶을 담을 수 없다. 개인은 의제를 만들고, 도시는 생활정치를 실행하며, 국가는 격차를 조정하고, 세계정부는 초국가 규칙을 세우며, 플랫폼·데이터는 공적 감시 대상이 된다.
               </div>
               <table style={{ width: "100%", borderCollapse: "collapse", tableLayout: "fixed" }}>
                 <colgroup><col style={{ width: "13%" }} /><col style={{ width: "26%" }} /><col style={{ width: "28%" }} /><col style={{ width: "33%" }} /></colgroup>
-                <thead><tr style={{ background: C.navy, color: "#fff" }}><th style={th32}>구분</th><th style={th32}>산업시대 정치질서</th><th style={th32Mid}>디지털시대 변화</th><th style={th32Mid}>정체성 기반 정치질서</th></tr></thead>
+                <thead><tr style={{ background: C.navy, color: "#fff" }}><th style={th32}>구분</th><th style={th32}>산업시대 정치질서</th><th style={th32Mid}>디지털시대 변화</th><th style={th32Mid}>새 정치질서의 역할</th></tr></thead>
                 <tbody>{polTransitionRows.map((r, i) => <tr key={r.label} style={{ background: i % 2 ? C.bg : "#fff" }}><td style={td32Label}>{r.label}</td><td style={td32}>{r.industrial}</td><td style={td32Blue}>{r.change}</td><td style={td32Strong}>{r.newOrder}</td></tr>)}</tbody>
               </table>
             </div>
@@ -215,7 +209,7 @@ const thMid: React.CSSProperties = { ...th, background: "#24395f" };
 const td: React.CSSProperties = { padding: "5.8px 7px", borderBottom: "1px solid #eee", fontSize: 10.8, verticalAlign: "top", lineHeight: 1.24, color: "#333" };
 const tdEcon: React.CSSProperties = { ...td, padding: "5px 7px", fontSize: 10.6, lineHeight: 1.2 };
 const tdEconBlue: React.CSSProperties = { ...tdEcon, color: C.navy, fontWeight: 620 };
-const tdEconTransfer: React.CSSProperties = { ...tdEcon, background: "#e6edff", borderTop: `1.5px solid ${C.accent}`, borderBottom: `1.5px solid ${C.accent}` };
+const tdEconTransfer: React.CSSProperties = { ...tdEcon, background: "#e6edff" };
 const econHeadline: React.CSSProperties = { fontSize: 11.4, lineHeight: 1.12, fontWeight: 900, color: C.navy, marginBottom: 3 };
 const econDetail: React.CSSProperties = { fontSize: 9.85, lineHeight: 1.18, fontWeight: 560, color: "#333" };
 const tdBlue: React.CSSProperties = { ...td, color: C.navy, fontWeight: 620 };
@@ -223,7 +217,7 @@ const tdClass: React.CSSProperties = { ...td, fontWeight: 850, color: C.navy };
 
 const th32: React.CSSProperties = { padding: "5px 6px", textAlign: "left", fontSize: 11.2, borderRight: "1px solid rgba(255,255,255,0.18)", verticalAlign: "middle", lineHeight: 1.12 };
 const th32Mid: React.CSSProperties = { ...th32, background: "#24395f" };
-const td32: React.CSSProperties = { padding: "6px 6px", borderBottom: "1px solid #eee", fontSize: 10.55, verticalAlign: "middle", lineHeight: 1.2, color: "#333" };
+const td32: React.CSSProperties = { padding: "4.8px 6px", borderBottom: "1px solid #eee", fontSize: 10.25, verticalAlign: "middle", lineHeight: 1.16, color: "#333" };
 const td32Blue: React.CSSProperties = { ...td32, color: C.navy, fontWeight: 620 };
 const td32Strong: React.CSSProperties = { ...td32, color: C.navy, fontWeight: 720 };
 const td32Label: React.CSSProperties = { ...td32, fontWeight: 850, color: C.navy, fontSize: 10.8 };
