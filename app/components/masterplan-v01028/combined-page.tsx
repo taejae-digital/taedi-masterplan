@@ -123,8 +123,8 @@ export function CombinedPage() {
   ];
   const polSpine = [
     { k: "기존 질서", t: "국가 독점 정치", d: "산업시대 국가는 평균 국민을 전제로 법·교육·세금·산업정책을 중앙에서 설계" },
-    { k: "디지털 변화", t: "다양한 필요가 국가 평균 규칙을 초과", d: "정체성 기반 필요가 세분화되고, 플랫폼은 생산·노출·인정을 좌우하며, 도시마다 다른 규칙을 요구" },
-    { k: "새 질서", t: "개인·도시·국가·세계의 다층 거버넌스", d: "생활정치는 도시로 내려가고, 초국가 권력은 세계로 올라가며, 국가는 조정자가 됨" },
+    { k: "디지털 변화", t: "정치 권력이 개인·도시·플랫폼·세계로 분산", d: "AI는 개인의 판단·참여 능력을 키우고, 플랫폼은 기회와 인정을 배열하며, 도시는 생활정치의 실행 단위가 됨" },
+    { k: "새 질서", t: "국가 조정형 다층 거버넌스", d: "생활정치는 도시로 내려가고, 초국가 권력은 세계로 올라가며, 국가는 분산된 권력을 조정" },
   ];
 
   return (
@@ -157,7 +157,7 @@ export function CombinedPage() {
           <SectionGrid spine={polSpine}>
             <div style={{ display: "flex", flexDirection: "column", gap: 6 }}>
               <div style={{ padding: "4px 8px", background: "#f3f6fb", borderLeft: `3px solid ${C.navy}`, fontSize: 10.7, lineHeight: 1.18, color: "#2b3342", fontWeight: 650 }}>
-                정체성 기반 필요가 세분화되면 하나의 국가 평균 규칙으로 개인의 생산과 삶을 담을 수 없다. 개인은 의제를 만들고, 도시는 생활정치를 실행하며, 국가는 격차를 조정하고, 세계정부는 초국가 규칙을 세우며, 플랫폼·데이터는 공적 감시 대상이 된다.
+                디지털 시대의 정치질서는 국가가 평균 국민을 관리하는 구조에서 벗어나, 권력이 개인·도시·플랫폼·세계로 분산되는 구조로 전환된다. 개인은 의제를 만들고, 도시는 생활정치를 실행하며, 국가는 분산된 권력을 조정하고, 세계정부는 초국가 규칙을 세우며, 플랫폼·데이터는 공적 감시 대상이 된다.
               </div>
               <table style={{ width: "100%", borderCollapse: "collapse", tableLayout: "fixed" }}>
                 <colgroup><col style={{ width: "13%" }} /><col style={{ width: "26%" }} /><col style={{ width: "28%" }} /><col style={{ width: "33%" }} /></colgroup>
