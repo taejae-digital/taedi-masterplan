@@ -120,9 +120,9 @@ export function CombinedPage() {
     { k: "새 질서", t: "정체성 기반 생산자 경제", d: "일자리 중심 질서는 약해지고, 각자는 정체성에 근접한 고유 생산영역으로 경쟁" },
   ];
   const polSpine = [
-    { k: "기존 질서", t: "평균 국민을 전제한 국가 독점", d: "국가는 표준 규칙을 만들고, 개인은 국민·투표자·노동자로 장기 위임" },
-    { k: "디지털 변화", t: "정체성 기반 필요의 세분화", d: "AI로 판단력이 커지고, 생활·생산 조건은 도시별로 달라지며, 플랫폼 권력은 국경을 넘음" },
-    { k: "새 질서", t: "도시 실행과 세계정부 규칙", d: "도시는 삶의 조건을 실행하고, 세계정부는 초국가 규칙을 세우며, 국가는 연결" },
+    { k: "기존 질서", t: "국가가 평균 국민을 관리", d: "개인은 국민·투표자·노동자로 묶이고, 국가는 하나의 표준 규칙으로 교육·산업·복지를 설계" },
+    { k: "디지털 변화", t: "개인의 정체성·필요가 분화", d: "AI로 판단력이 커지고, 생활·생산 조건은 도시별로 달라지며, 플랫폼 권력은 국경을 넘음" },
+    { k: "새 질서", t: "도시는 실행, 세계정부는 규칙", d: "도시는 삶과 생산 조건을 조정하고, 세계정부는 AI·데이터·플랫폼의 공통 규칙을 세움" },
   ];
   const contractSpine = [
     { k: "기존 질서", t: "생산수단이 정체성을 규정", d: "토지·자본·기계처럼 희소한 생산수단을 가진 질서가 개인의 자리와 역할을 정함" },
@@ -156,11 +156,11 @@ export function CombinedPage() {
         </div>
 
         <div>
-          <div style={h3s}>3.2 정치 질서 — 국가 독점에서 도시와 세계정부로</div>
+          <div style={h3s}>3.2 정치 질서 — 국가 독점에서 도시 실행·세계 규칙으로</div>
           <SectionGrid spine={polSpine}>
             <div style={{ display: "flex", flexDirection: "column", gap: 4 }}>
               <div style={{ padding: "4px 8px", background: "#f3f6fb", borderLeft: `3px solid ${C.navy}`, fontSize: 10.7, lineHeight: 1.18, color: "#2b3342", fontWeight: 650 }}>
-                디지털 시대 정치 기능은 국가 독점에서 도시와 세계정부로 재배치된다. 생활정치와 실행은 도시가 맡고, AI·데이터·플랫폼의 초국가 규칙은 세계정부가 맡는다.
+                국가는 평균 국민을 전제로 하나의 표준 규칙을 만들었지만, 디지털 시대에는 개인의 정체성·필요가 생활권마다 달라진다. 그래서 생활정치와 실행은 도시가 맡고, AI·데이터·플랫폼의 초국가 규칙은 세계정부가 맡는다.
               </div>
               <table style={{ width: "100%", borderCollapse: "collapse", tableLayout: "fixed" }}>
                 <colgroup><col style={{ width: "13%" }} /><col style={{ width: "26%" }} /><col style={{ width: "28%" }} /><col style={{ width: "33%" }} /></colgroup>
