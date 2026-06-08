@@ -162,7 +162,7 @@ export function CombinedPage() {
               <table style={{ width: "100%", borderCollapse: "collapse", tableLayout: "fixed" }}>
                 <colgroup><col style={{ width: "13%" }} /><col style={{ width: "26%" }} /><col style={{ width: "28%" }} /><col style={{ width: "33%" }} /></colgroup>
                 <thead><tr style={{ background: C.navy, color: "#fff" }}><th style={th32}>구분</th><th style={th32}>산업시대 정치질서</th><th style={th32Mid}>디지털시대 변화</th><th style={th32Mid}>새 정치질서의 역할</th></tr></thead>
-                <tbody>{polTransitionRows.map((r, i) => <tr key={r.label} style={{ background: i % 2 ? C.bg : "#fff" }}><td style={td32Label}>{r.label}</td><td style={td32}>{r.industrial}</td><td style={td32Blue}>{r.change}</td><td style={td32Strong}>{r.newOrder}</td></tr>)}</tbody>
+                <tbody>{polTransitionRows.map((r, i) => <tr key={r.label} style={{ height: 36, background: i % 2 ? C.bg : "#fff" }}><td style={td32Label}>{r.label}</td><td style={td32}>{r.industrial}</td><td style={td32Blue}>{r.change}</td><td style={td32Strong}>{r.newOrder}</td></tr>)}</tbody>
               </table>
             </div>
           </SectionGrid>
@@ -215,12 +215,12 @@ const econDetail: React.CSSProperties = { fontSize: 9.85, lineHeight: 1.18, font
 const tdBlue: React.CSSProperties = { ...td, color: C.navy, fontWeight: 620 };
 const tdClass: React.CSSProperties = { ...td, fontWeight: 850, color: C.navy };
 
-const th32: React.CSSProperties = { padding: "5px 6px", textAlign: "left", fontSize: 11.2, borderRight: "1px solid rgba(255,255,255,0.18)", verticalAlign: "middle", lineHeight: 1.12 };
+const th32: React.CSSProperties = { padding: "5.6px 7px", textAlign: "left", fontSize: 11.7, borderRight: "1px solid rgba(255,255,255,0.18)", verticalAlign: "middle", lineHeight: 1.12 };
 const th32Mid: React.CSSProperties = { ...th32, background: "#24395f" };
-const td32: React.CSSProperties = { padding: "4.8px 6px", borderBottom: "1px solid #eee", fontSize: 10.25, verticalAlign: "middle", lineHeight: 1.16, color: "#333" };
+const td32: React.CSSProperties = { padding: "6px 7px", borderBottom: "1px solid #eee", fontSize: 10.85, verticalAlign: "middle", lineHeight: 1.18, color: "#333" };
 const td32Blue: React.CSSProperties = { ...td32, color: C.navy, fontWeight: 620 };
 const td32Strong: React.CSSProperties = { ...td32, color: C.navy, fontWeight: 720 };
-const td32Label: React.CSSProperties = { ...td32, fontWeight: 850, color: C.navy, fontSize: 10.8 };
+const td32Label: React.CSSProperties = { ...td32, fontWeight: 850, color: C.navy, fontSize: 11.2 };
 
 const th33: React.CSSProperties = { padding: "4px 6px", textAlign: "left", fontSize: 10.8, borderRight: "1px solid rgba(255,255,255,0.18)", verticalAlign: "middle", lineHeight: 1.12 };
 const td33: React.CSSProperties = { padding: "2px 6px", borderBottom: "1px solid #eee", fontSize: 9.9, verticalAlign: "middle", lineHeight: 1.18, color: "#333", height: 40 };
