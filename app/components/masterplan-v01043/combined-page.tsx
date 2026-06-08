@@ -124,7 +124,7 @@ export function CombinedPage() {
   ];
   const polSpine = [
     { k: "기존 질서", t: "국가가 하나의 기준으로 관리", d: "개인은 국민·투표자·노동자로 묶이고, 교육·산업·복지는 중앙 기준에 맞춰 설계" },
-    { k: "디지털 변화", t: "개인의 필요와 생활권이 다양해짐", d: "AI로 정책을 이해·검증하는 개인이 늘고, 도시마다 산업·교육·돌봄 조건이 달라짐" },
+    { k: "디지털 변화", t: "개인의 필요와 도시 조건이 다양해짐", d: "AI로 정책을 이해·검증하는 개인이 늘고, 도시마다 교육·돌봄·산업·규제 조건이 달라짐" },
     { k: "새 질서", t: "도시는 실행, 세계정부는 공통 규칙", d: "도시는 생활정치를 실험하고, 세계정부는 AI·데이터·플랫폼 규칙을 세우며, 국가는 연결·조정" },
   ];
 
@@ -159,7 +159,7 @@ export function CombinedPage() {
           <SectionGrid spine={polSpine}>
             <div style={{ display: "flex", flexDirection: "column", gap: 6 }}>
               <div style={{ padding: "4px 8px", background: "#f3f6fb", borderLeft: `3px solid ${C.navy}`, fontSize: 10.7, lineHeight: 1.18, color: "#2b3342", fontWeight: 650 }}>
-                산업시대 정치는 국가가 하나의 기준으로 국민을 대표·관리하는 구조였다. 디지털 시대에는 개인의 필요가 다양해지고 문제의 현장은 도시로, AI·데이터·플랫폼 규칙은 국경 밖으로 확장된다. 그래서 도시는 생활정치를 실행하고 세계정부는 공통 규칙을 세우며 국가는 둘 사이를 조정한다.
+                산업시대 정치는 국가가 하나의 기준으로 국민을 대표·관리하는 구조였다. 디지털 시대에는 개인의 필요가 다양해지고, 교육·돌봄·산업·규제의 조건도 도시마다 달라진다. 그래서 생활정치와 실행은 도시가 맡고, AI·데이터·플랫폼처럼 국경을 넘는 권력에는 세계정부가 공통 규칙을 세운다.
               </div>
               <table style={{ width: "100%", borderCollapse: "collapse", tableLayout: "fixed" }}>
                 <colgroup><col style={{ width: "13%" }} /><col style={{ width: "26%" }} /><col style={{ width: "28%" }} /><col style={{ width: "33%" }} /></colgroup>
