@@ -34,31 +34,31 @@ const polTransitionRows: PolTransitionRow[] = [
     label: "개인",
     industrial: "표준 국민·투표자·노동자로 평균 규칙을 수용",
     change: "AI로 정책 이해·제안·검증 능력이 커지고 필요가 세분화",
-    newOrder: "자기 필요를 의제화하고 권한을 위임·회수하는 정치 주체",
+    newOrder: "사안별 권한을 위임·회수",
   },
   {
     label: "도시",
     industrial: "국가 정책 집행 단위, 서울 중심 표준 경로",
-    change: "산업·교육·문화·규제 조건이 도시마다 달라짐",
-    newOrder: "정체성 기반 생산과 생활방식을 실험·매칭하는 생활정치 단위",
+    change: "생활·생산·규제 실험의 중심",
+    newOrder: "삶과 생산 조건을 조정",
   },
   {
     label: "국가",
     industrial: "법·세금·교육·산업정책을 중앙에서 설계",
-    change: "개인·도시·플랫폼 권력이 커지고 격차가 확대",
-    newOrder: "다양성의 큰 틀, 안전망, 도시 간 조정, 플랫폼 감사를 맡는 오케스트레이터",
+    change: "생활정치와 초국가 규칙을 동시 독점 불가",
+    newOrder: "도시 격차와 세계 규칙을 조정",
   },
   {
     label: "세계정부",
     industrial: "국가 간 외교·조약으로 국경 밖 문제를 사후 조정",
-    change: "AI·데이터·안보·환경 권력이 국경을 넘어 작동",
-    newOrder: "시민 직접 위임으로 초국가 권력의 공통 규칙을 세우는 상위 조정 층위",
+    change: "AI·데이터·플랫폼·안보 권력이 국경을 넘음",
+    newOrder: "초국가 권력의 공통 규칙 설정",
   },
   {
     label: "플랫폼·데이터",
     industrial: "민간 서비스나 시장 보조 인프라로 취급",
     change: "알고리즘이 노출·평판·가격·기회·인정을 배열",
-    newOrder: "설명·감사·수정·이의제기 절차를 갖춘 공적 조정 대상",
+    newOrder: "도시·세계정부가 감시할 권력 인프라",
   },
 ];
 
@@ -120,9 +120,9 @@ export function CombinedPage() {
     { k: "새 질서", t: "정체성 기반 생산자 경제", d: "일자리 중심 질서는 약해지고, 각자는 정체성에 근접한 고유 생산영역으로 경쟁" },
   ];
   const polSpine = [
-    { k: "기존 질서", t: "국가 독점 정치", d: "산업시대 국가는 평균 국민을 전제로 법·교육·세금·산업정책을 중앙에서 설계" },
-    { k: "디지털 변화", t: "다양한 필요가 국가 평균 규칙을 초과", d: "정체성 기반 필요가 세분화되고, 플랫폼은 생산·노출·인정을 좌우하며, 도시마다 다른 규칙을 요구" },
-    { k: "새 질서", t: "개인·도시·국가·세계의 다층 거버넌스", d: "생활정치는 도시로 내려가고, 초국가 권력은 세계로 올라가며, 국가는 조정자가 됨" },
+    { k: "기존 질서", t: "평균 국민을 전제한 국가 독점", d: "국가는 표준 규칙을 만들고, 개인은 국민·투표자·노동자로 장기 위임" },
+    { k: "디지털 변화", t: "정체성 기반 필요의 세분화", d: "AI로 판단력이 커지고, 생활·생산 조건은 도시별로 달라지며, 플랫폼 권력은 국경을 넘음" },
+    { k: "새 질서", t: "도시 실행과 세계정부 규칙", d: "도시는 삶의 조건을 실행하고, 세계정부는 초국가 규칙을 세우며, 국가는 연결" },
   ];
   const contractSpine = [
     { k: "기존 질서", t: "생산수단이 정체성을 규정", d: "토지·자본·기계처럼 희소한 생산수단을 가진 질서가 개인의 자리와 역할을 정함" },
@@ -134,7 +134,7 @@ export function CombinedPage() {
     <div style={{ pageBreakBefore: "always", minHeight: "270mm", display: "flex", flexDirection: "column" }}>
       <Header subtitle="3. 질서의 붕괴와 새 사회계약" version={VERSION} />
 
-      <div style={{ padding: "9px 38px 9px", display: "flex", flexDirection: "column", flex: 1, gap: 9 }}>
+      <div style={{ padding: "6px 38px 0", display: "flex", flexDirection: "column", flex: 1, gap: 6 }}>
         <div style={{ padding: "8px 12px", background: "#f0f4ff", borderLeft: `4px solid ${C.navy}`, fontSize: 13.2, lineHeight: 1.28, color: "#222", fontWeight: 610 }}>
           AI·데이터·컴퓨팅은 개인을 표준 조직의 부품에서 목적을 가진 생산자로 바꾼다. 새 사회계약은 국가 권력을 더 정당화하는 계약이 아니라, 강화된 개인에게 더 넓은 자유를 돌려주고 도시·세계·플랫폼 권력을 새로 배치하는 합의다.
         </div>
@@ -156,16 +156,16 @@ export function CombinedPage() {
         </div>
 
         <div>
-          <div style={h3s}>3.2 정치 질서 — 국가 독점에서 다층 거버넌스로</div>
+          <div style={h3s}>3.2 정치 질서 — 국가 독점에서 도시와 세계정부로</div>
           <SectionGrid spine={polSpine}>
-            <div style={{ display: "flex", flexDirection: "column", gap: 6 }}>
+            <div style={{ display: "flex", flexDirection: "column", gap: 4 }}>
               <div style={{ padding: "4px 8px", background: "#f3f6fb", borderLeft: `3px solid ${C.navy}`, fontSize: 10.7, lineHeight: 1.18, color: "#2b3342", fontWeight: 650 }}>
-                정체성 기반 필요가 세분화되면 하나의 국가 평균 규칙으로 개인의 생산과 삶을 담을 수 없다. 개인은 의제를 만들고, 도시는 생활정치를 실행하며, 국가는 격차를 조정하고, 세계정부는 초국가 규칙을 세우며, 플랫폼·데이터는 공적 감시 대상이 된다.
+                디지털 시대 정치 기능은 국가 독점에서 도시와 세계정부로 재배치된다. 생활정치와 실행은 도시가 맡고, AI·데이터·플랫폼의 초국가 규칙은 세계정부가 맡는다.
               </div>
               <table style={{ width: "100%", borderCollapse: "collapse", tableLayout: "fixed" }}>
                 <colgroup><col style={{ width: "13%" }} /><col style={{ width: "26%" }} /><col style={{ width: "28%" }} /><col style={{ width: "33%" }} /></colgroup>
                 <thead><tr style={{ background: C.navy, color: "#fff" }}><th style={th32}>구분</th><th style={th32}>산업시대 정치질서</th><th style={th32Mid}>디지털시대 변화</th><th style={th32Mid}>새 정치질서의 역할</th></tr></thead>
-                <tbody>{polTransitionRows.map((r, i) => <tr key={r.label} style={{ height: 36, background: i % 2 ? C.bg : "#fff" }}><td style={td32Label}>{r.label}</td><td style={td32}>{r.industrial}</td><td style={td32Blue}>{r.change}</td><td style={td32Strong}>{r.newOrder}</td></tr>)}</tbody>
+                <tbody>{polTransitionRows.map((r, i) => <tr key={r.label} style={{ height: 32, background: i % 2 ? C.bg : "#fff" }}><td style={td32Label}>{r.label}</td><td style={td32}>{r.industrial}</td><td style={td32Blue}>{r.change}</td><td style={td32Strong}>{r.newOrder}</td></tr>)}</tbody>
               </table>
             </div>
           </SectionGrid>
@@ -211,7 +211,7 @@ const tdClass: React.CSSProperties = { ...td, fontWeight: 850, color: C.navy };
 
 const th32: React.CSSProperties = { padding: "5.6px 7px", textAlign: "left", fontSize: 11.7, borderRight: "1px solid rgba(255,255,255,0.18)", verticalAlign: "middle", lineHeight: 1.12 };
 const th32Mid: React.CSSProperties = { ...th32, background: "#24395f" };
-const td32: React.CSSProperties = { padding: "6px 7px", borderBottom: "1px solid #eee", fontSize: 10.85, verticalAlign: "middle", lineHeight: 1.18, color: "#333" };
+const td32: React.CSSProperties = { padding: "3.5px 7px", borderBottom: "1px solid #eee", fontSize: 10.75, verticalAlign: "middle", lineHeight: 1.14, color: "#333" };
 const td32Blue: React.CSSProperties = { ...td32, color: C.navy, fontWeight: 620 };
 const td32Strong: React.CSSProperties = { ...td32, color: C.navy, fontWeight: 720 };
 const td32Label: React.CSSProperties = { ...td32, fontWeight: 850, color: C.navy, fontSize: 11.2 };
