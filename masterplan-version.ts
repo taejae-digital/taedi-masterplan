@@ -1,4 +1,4 @@
-export const MASTERPLAN_VERSION = "v0.10.60";
+export const MASTERPLAN_VERSION = "v0.11.0";
 export const MASTERPLAN_ROUTE = "/mp";
 export const MASTERPLAN_PDF_DIR = "archive/pdf";
 
