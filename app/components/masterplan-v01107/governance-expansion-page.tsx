@@ -41,13 +41,10 @@ const dealItems = [
 const exchange = "한국의 역할 — 미국엔 신뢰 기준을, 중국엔 검증된 시장 접근권을 잇는 중개자. 미·중 모두가 필요로 하는 AI 사회계약 실험장이자 글로벌 거버넌스 규칙 설계자 지위를 얻는다.";
 
 const governanceAxes = [
-  { label: "싱크탱크", title: "방향과 규칙", actors: "미래 의제 설계", body: "미래 의제·AI 거버넌스·산업/도시 전략의 방향과 규칙을 만든다.", shift: "자문 기구 → 국가의 방향과 규칙을 설계하는 두뇌" },
-  { label: "대학", title: "실행할 인재", actors: "정체성·창업 역량", body: "그 방향을 실행할 인재를 기르고 정체성·창업 역량을 키운다.", shift: "표준 인력 공급 → 정체성 기반 생산자를 기르는 지식 실험장" },
-  { label: "기업", title: "제품·서비스 전환", actors: "산업 벨트 운영", body: "기술과 아이디어를 제품·서비스로 전환하고 개인 생산자를 시장에 연결한다.", shift: "대량생산 조직 → 개인 생산자의 시장 진입을 여는 산업 벨트 운영자" },
-  { label: "미디어", title: "사회적 서사 확산", actors: "신뢰와 합의의 공론장", body: "정체성 생산·AI 위험·데이터 권리·산업 전환을 사회적 서사로 확산한다.", shift: "정보 매체 → 방향·인재·생산을 사회적 합의로 바꾸는 공론장" },
-  { label: "정부", title: "예산·제도·거버넌스", actors: "공공 데이터·조달·규제", body: "예산·제도·거버넌스를 설계하고 공공 데이터·조달·규제 샌드박스를 실행한다.", shift: "국가 관리 → 생산 자유와 공동체 안전을 함께 보장하는 운영체계" },
-  { label: "정당", title: "정치적 선택지", actors: "사회적 합의의 입법화", body: "사회적 합의를 정치적 선택지로 만들고 입법으로 제도화한다.", shift: "권력 경쟁 조직 → 사회적 합의를 정치적 선택지로 만드는 통로" },
-  { label: "군대", title: "질서의 보호", actors: "외부 위협 대응·안보", body: "외부 위협으로부터 정체성 전환의 질서와 공동체 안전을 보호한다.", shift: "국방 조직 → 전환 질서를 외부 위협에서 지키는 안전 보장자" },
+  { label: "전략", title: "방향과 인재", actors: "싱크탱크 · 대학", body: "미래 의제·AI 거버넌스·산업/도시 전략의 방향과 규칙을 만들고, 그 방향을 실행할 인재와 정체성·창업 역량을 기른다.", shift: "표준 인력 공급 → 방향을 설계하고 정체성 기반 생산자를 기르는 지식 실험장" },
+  { label: "산업", title: "생산과 시장", actors: "기업 · 핵심 산업", body: "기술과 아이디어를 제품·서비스로 전환하고, AI·데이터·자본·신뢰 인프라로 개인 생산자를 큰 시장에 연결한다.", shift: "대량생산 조직 → 개인 생산자의 시장 진입을 여는 산업 벨트 운영자" },
+  { label: "정치", title: "제도·합의·안보", actors: "정부 · 정당 · 군대", body: "예산·제도·거버넌스를 설계하고, 사회적 합의를 입법으로 제도화하며, 외부 위협으로부터 전환 질서와 공동체 안전을 보호한다.", shift: "국가 관리 → 생산 자유와 공동체 안전을 함께 보장하는 운영체계" },
+  { label: "미디어", title: "신뢰와 합의의 공론장", actors: "미디어", body: "정체성 생산·AI 위험·데이터 권리·산업 전환을 사회적 서사로 확산하고 검증·토론할 의제로 만든다.", shift: "정보 매체 → 전략·산업·정치를 사회적 합의로 바꾸는 공론장" },
 ];
 
 const nationalBelts = [
@@ -160,19 +157,19 @@ function WorldSection() {
 function NationSection() {
   return (
     <section>
-      <SecHead no="4.2" area="디지털 시대의 국가 경영" desc="국가를 움직이는 핵심 기관을 하나의 운영체계로 잇고 산업 벨트 생태계를 조직한다." />
+      <SecHead no="4.2" area="디지털 시대의 국가 경영" desc="전략·산업·정치·미디어 운영체계로 핵심 기관을 잇고 산업 벨트 생태계를 조직한다." />
       <div style={{ color: C.body, fontWeight: 600, fontSize: 12.5, lineHeight: 1.42, marginBottom: 8 }}>
-        국가는 위에서 표준화하는 대신 싱크탱크·대학·기업·미디어·정부·정당·군대가 방향에서 보호까지 이어지는 하나의 운영체계를 설계하고, 시산학 생태계는 도시가 맡는다. <span style={{ color: C.muted, fontWeight: 600 }}>마리아나 마추카토(UCL)는 국가가 위험을 감수하고 방향을 제시하는 미션 지향 주체가 되어야 한다고 본다.</span>
+        국가는 위에서 표준화하는 대신 전략(싱크탱크·대학)·산업(기업)·정치(정부·정당·군대)·미디어가 방향에서 보호까지 이어지는 하나의 운영체계를 설계하고, 시산학 생태계는 도시가 맡는다. <span style={{ color: C.muted, fontWeight: 600 }}>마리아나 마추카토(UCL)는 국가가 위험을 감수하고 방향을 제시하는 미션 지향 주체가 되어야 한다고 본다.</span>
       </div>
-      <div style={{ display: "grid", gridTemplateColumns: "repeat(7, 1fr)", gap: 6, marginBottom: 8 }}>
+      <div style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: 9, marginBottom: 8 }}>
         {governanceAxes.map((axis) => (
-          <div key={axis.label} style={{ border: `1px solid ${C.cardBorder}`, borderRadius: 3, overflow: "hidden", display: "flex", flexDirection: "column" }}>
-            <div style={{ background: C.ink, color: "#fff", display: "flex", alignItems: "center", justifyContent: "center", fontSize: 12.5, fontWeight: 900, padding: "4px 2px", letterSpacing: -0.3 }}>{axis.label}</div>
-            <div style={{ padding: "6px 7px", color: C.body, lineHeight: 1.26, flex: 1 }}>
-              <div style={{ color: C.ink, fontWeight: 800, fontSize: 10.6 }}>{axis.title}</div>
-              <div style={{ color: C.navySoft, fontWeight: 700, fontSize: 8.8, margin: "1px 0 3px" }}>{axis.actors}</div>
-              <div style={{ fontSize: 9.4, fontWeight: 500 }}>{axis.body}</div>
-              <div style={{ marginTop: 3, fontSize: 8.8, fontWeight: 700, color: C.muted }}>{axis.shift}</div>
+          <div key={axis.label} style={{ border: `1px solid ${C.cardBorder}`, borderRadius: 3, overflow: "hidden", display: "grid", gridTemplateColumns: "52px 1fr" }}>
+            <div style={{ background: C.ink, color: "#fff", display: "flex", alignItems: "center", justifyContent: "center", fontSize: 14, fontWeight: 900, letterSpacing: -0.3, textAlign: "center", lineHeight: 1.15, padding: "0 2px" }}>{axis.label}</div>
+            <div style={{ padding: "6px 9px", color: C.body, lineHeight: 1.3 }}>
+              <div style={{ color: C.ink, fontWeight: 800, fontSize: 11.8 }}>{axis.title}</div>
+              <div style={{ color: C.navySoft, fontWeight: 700, fontSize: 9.8, margin: "1px 0 3px" }}>{axis.actors}</div>
+              <div style={{ fontSize: 10.2, fontWeight: 500 }}>{axis.body}</div>
+              <div style={{ marginTop: 3, fontSize: 9.8, fontWeight: 700, color: C.muted }}>{axis.shift}</div>
             </div>
           </div>
         ))}
@@ -223,7 +220,7 @@ export function GovernanceExpansionPage() {
       <Header subtitle="4. 새 사회계약의 경영 전략" chapterNo="04" version={VERSION} />
       <PageLead
         thesis="디지털 시대에는 강화된 개인의 정체성이 공동체의 생산성으로 이어지도록 세계·국가·도시·가정의 운영 조건을 다시 설계해야 한다."
-        summary="새 사회계약은 선언만으로 실현되지 않는다. 세계는 안전한 경합의 규칙을 만들고, 국가는 싱크탱크·대학·기업·미디어·정부·정당·군대와 산업 벨트를 조직하며, 도시는 시산학 강소도시-서버시티 벨트에서 생활권 실증을 수행하고, 가정은 개인 성장의 기반을 만든다."
+        summary="새 사회계약은 선언만으로 실현되지 않는다. 세계는 안전한 경합의 규칙을 만들고, 국가는 전략·산업·정치·미디어와 산업 벨트를 조직하며, 도시는 시산학 강소도시-서버시티 벨트에서 생활권 실증을 수행하고, 가정은 개인 성장의 기반을 만든다."
       />
       <div style={{ padding: "6px 44px 4px", display: "flex", flexDirection: "column", gap: 8, flex: 1, minHeight: 0 }}>
         <WorldSection />
