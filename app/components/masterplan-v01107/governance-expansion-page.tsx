@@ -41,10 +41,10 @@ const dealItems = [
 const exchange = "한국의 역할 — 미국엔 신뢰 기준을, 중국엔 검증된 시장 접근권을 잇는 중개자. 미·중 모두가 필요로 하는 AI 사회계약 실험장이자 글로벌 거버넌스 규칙 설계자 지위를 얻는다.";
 
 const governanceAxes = [
-  { label: "전략", title: "방향과 인재", actors: "싱크탱크 · 대학", body: "미래 의제·AI 거버넌스·산업/도시 전략의 방향과 규칙을 만들고, 그 방향을 실행할 인재와 정체성·창업 역량을 기른다.", shift: "표준 인력 공급 → 방향을 설계하고 정체성 기반 생산자를 기르는 지식 실험장" },
-  { label: "산업", title: "생산과 시장", actors: "기업 · 핵심 산업", body: "기술과 아이디어를 제품·서비스로 전환하고, AI·데이터·자본·신뢰 인프라로 개인 생산자를 큰 시장에 연결한다.", shift: "대량생산 조직 → 개인 생산자의 시장 진입을 여는 산업 벨트 운영자" },
-  { label: "정치", title: "제도·합의·안보", actors: "정부 · 정당 · 군대", body: "예산·제도·거버넌스를 설계하고, 사회적 합의를 입법으로 제도화하며, 외부 위협으로부터 전환 질서와 공동체 안전을 보호한다.", shift: "국가 관리 → 생산 자유와 공동체 안전을 함께 보장하는 운영체계" },
-  { label: "미디어", title: "신뢰와 합의의 공론장", actors: "미디어", body: "정체성 생산·AI 위험·데이터 권리·산업 전환을 사회적 서사로 확산하고 검증·토론할 의제로 만든다.", shift: "정보 매체 → 전략·산업·정치를 사회적 합의로 바꾸는 공론장" },
+  { label: "전략", title: "방향과 인재", actors: "싱크탱크 · 대학", body: "미래 의제·AI 거버넌스·산업/도시 전략의 방향을 만들고, 실행할 인재와 정체성·창업 역량을 기른다.", shift: "표준 인력 공급 → 방향 설계·정체성 기반 생산자 양성" },
+  { label: "산업", title: "생산과 시장", actors: "기업 · 핵심 산업", body: "기술·아이디어를 제품·서비스로 전환하고, AI·데이터·자본·신뢰 인프라로 개인 생산자를 시장에 연결한다.", shift: "대량생산 조직 → 개인 생산자의 시장 진입을 여는 운영자" },
+  { label: "정치", title: "제도·합의·안보", actors: "정부 · 정당 · 군대", body: "예산·제도·거버넌스를 설계하고, 합의를 입법화하며, 외부 위협에서 전환 질서와 공동체 안전을 지킨다.", shift: "국가 관리 → 생산 자유와 공동체 안전을 함께 보장" },
+  { label: "미디어", title: "신뢰와 합의의 공론장", actors: "미디어", body: "정체성 생산·AI 위험·데이터 권리·산업 전환을 사회적 서사이자 검증·토론 의제로 만든다.", shift: "정보 매체 → 전략·산업·정치를 사회적 합의로 전환" },
 ];
 
 const nationalBelts = [
@@ -57,7 +57,7 @@ const nationalBelts = [
 const small = [
   {
     no: "4.3", area: "디지털 시대의 도시 경영",
-    title: "강소도시-서버시티 벨트가 필요하다.",
+    title: "시산학 생태계를 통해 정체성 기반 생산이 일어나는 곳.",
     lead: "도시는 시장·산업·학문(市·産·學)을 한 권역에 묶는 시산학 생태계의 실현장이다. 강소도시를 실행 단위로 두고, 중심 서버시티가 데이터·AI·행정·산업 API로 연결한다.",
     bullets: [
       "강소도시: 보이는 인간 규모에서 정체성 기반 생산자를 길러냄",
@@ -161,15 +161,15 @@ function NationSection() {
       <div style={{ color: C.body, fontWeight: 600, fontSize: 12.5, lineHeight: 1.42, marginBottom: 8 }}>
         국가는 위에서 표준화하는 대신 전략(싱크탱크·대학)·산업(기업)·정치(정부·정당·군대)·미디어가 방향에서 보호까지 이어지는 하나의 운영체계를 설계하고, 시산학 생태계는 도시가 맡는다. <span style={{ color: C.muted, fontWeight: 600 }}>마리아나 마추카토(UCL)는 국가가 위험을 감수하고 방향을 제시하는 미션 지향 주체가 되어야 한다고 본다.</span>
       </div>
-      <div style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: 9, marginBottom: 8 }}>
+      <div style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: 9, marginBottom: 6 }}>
         {governanceAxes.map((axis) => (
           <div key={axis.label} style={{ border: `1px solid ${C.cardBorder}`, borderRadius: 3, overflow: "hidden", display: "grid", gridTemplateColumns: "52px 1fr" }}>
             <div style={{ background: C.ink, color: "#fff", display: "flex", alignItems: "center", justifyContent: "center", fontSize: 14, fontWeight: 900, letterSpacing: -0.3, textAlign: "center", lineHeight: 1.15, padding: "0 2px" }}>{axis.label}</div>
-            <div style={{ padding: "6px 9px", color: C.body, lineHeight: 1.3 }}>
-              <div style={{ color: C.ink, fontWeight: 800, fontSize: 11.8 }}>{axis.title}</div>
-              <div style={{ color: C.navySoft, fontWeight: 700, fontSize: 9.8, margin: "1px 0 3px" }}>{axis.actors}</div>
-              <div style={{ fontSize: 10.2, fontWeight: 500 }}>{axis.body}</div>
-              <div style={{ marginTop: 3, fontSize: 9.8, fontWeight: 700, color: C.muted }}>{axis.shift}</div>
+            <div style={{ padding: "5px 9px", color: C.body, lineHeight: 1.28 }}>
+              <div style={{ color: C.ink, fontWeight: 800, fontSize: 11.6 }}>{axis.title}</div>
+              <div style={{ color: C.navySoft, fontWeight: 700, fontSize: 9.6, margin: "1px 0 2px" }}>{axis.actors}</div>
+              <div style={{ fontSize: 10, fontWeight: 500 }}>{axis.body}</div>
+              <div style={{ marginTop: 2, fontSize: 9.6, fontWeight: 700, color: C.muted }}>{axis.shift}</div>
             </div>
           </div>
         ))}
