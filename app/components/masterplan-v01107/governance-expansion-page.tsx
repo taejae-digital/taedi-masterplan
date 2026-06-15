@@ -1,5 +1,5 @@
 import { C } from "./constants";
-import { Header, PageLead, Footer } from "./shared";
+import { Header, PageLead } from "./shared";
 import { VERSION } from "./version";
 
 const fearRows = [
@@ -230,7 +230,7 @@ export function GovernanceExpansionPage() {
           <SmallSection s={small[1]} />
         </div>
       </div>
-      <Footer version={VERSION} />
+      {/* Footer omitted on P4 per request. */}
     </div>
   );
 }
