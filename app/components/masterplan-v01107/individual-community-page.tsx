@@ -66,7 +66,8 @@ export function IndividualCommunityPage() {
       communityDetail: "(세계화 · 지역화)",
       task: "자기 기여 영역 창출",
       taskDetail: "표준 직업 → 고유 기여영역",
-      expertise: "도메인 감각 + AI 지휘",
+      expertise: "문제 설정 + AI·데이터 지휘 + 고유 가치화",
+      expertiseDetail: "풀 문제를 정의하고, AI·데이터·도구를 부려 결과를 만들고, 시장·공동체의 고유 가치로 연결",
       ideal: "정체성 기반 생산자",
       freedom: "고유한 기여를 실험할 자유",
       freedomDetail: "자기 기준으로 AI·데이터·시장을 지휘",
@@ -212,6 +213,7 @@ export function IndividualCommunityPage() {
                   <div style={{ marginBottom: 5 }}>
                     <span style={label}>전문성</span>
                     <span style={{ fontSize: 11.3, color: C.ink }}>{e.expertise}</span>
+                    {e.expertiseDetail && <div style={{ fontSize: 9.8, color: C.muted, fontStyle: "italic", marginLeft: 24, marginTop: 1, lineHeight: 1.32 }}>{e.expertiseDetail}</div>}
                   </div>
                   <div>
                     <span style={label}>인재상</span>

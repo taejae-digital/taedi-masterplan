@@ -2,44 +2,6 @@ import { C } from "./constants";
 import { Header, PageLead } from "./shared";
 import { VERSION } from "./version";
 
-const fearRows = [
-  {
-    actor: "미국",
-    strength: "달러·동맹망·빅테크·군사력·글로벌 표준·AI 법제",
-    shortFear: "중국 제조망·글로벌 사우스가 커져 공급망·동맹이 흔들리는 것",
-    longFear: "달러·동맹 패권이 약화돼 세계 규칙 설정권을 잃는 것",
-    hope: "미국식 AI·법제가 동맹 표준이 되고 달러·기술 주도권을 지키는 세계",
-    deal: "미국식 AI 법제를 동맹 표준으로, 무규칙 AI 확산 차단",
-  },
-  {
-    actor: "중국",
-    strength: "국가 총력전·제조망·전력·로봇·EV·배터리·사우스 네트워크",
-    shortFear: "미국 주도 기술·금융망이 시장 접근을 차단하는 것",
-    longFear: "성장 둔화·청년 실업·격차가 체제 안정성을 흔드는 것",
-    hope: "배제 없이 산업·시장에 참여하며 다극 질서에서 영향력을 키우는 세계",
-    deal: "전면 배제가 아닌 검증된 산업·시장 접근 보장",
-  },
-  {
-    actor: "한국",
-    strength: "반도체·제조·콘텐츠·도시 실험장·한미동맹·중국 인접성",
-    shortFear: "미·중 양쪽 종속이 커져 전략 선택지가 좁아지는 것",
-    longFear: "저출산·수도권 집중·전환 실패로 미래 주도권을 잃는 것",
-    hope: "미·중 모두가 신뢰하는 AI 사회계약 실험장·규칙 설계자가 되는 세계",
-    deal: "미·중이 모두 필요로 하는 AI 사회계약 실험장 지위 확보",
-  },
-];
-
-const dealItems = [
-  { k: "목적", t: "AI 패권경쟁을 전쟁·봉쇄로 방치하지 않고, 다양성을 수용하는 글로벌 거버넌스로 전환한다." },
-  { k: "레드라인", t: "핵·생화학·대규모 사이버에 AI 직접 연결과 인간 승인 없는 자율살상무기를 금지하고, 고위험 AI는 FDA식 사전 승인으로 개발자가 안전성을 입증한 뒤 출시한다." },
-  { k: "경제 딜", t: "미국은 무규칙 AI를 막을 신뢰 기준을, 중국은 전면 배제 대신 검증된 시장 접근권을 얻는다." },
-  { k: "다자 레버리지", t: "유럽은 권리·감사 기준, 일본은 제조·안보 표준, 동남아·아프리카는 수요시장으로 활용한다." },
-  { k: "실행", t: "공동위·기술 감사단·군사 AI 핫라인·산업 테스트베드로 안보·경제 규칙을 함께 검증한다." },
-  { k: "법제 경쟁", t: "미국(연방 집중)·EU(권리 기반 AI Act)·중국(국가 주도) 사이에서, 한국은 정체성 전환 여건을 보장하는 독자 모델로 포지셔닝한다." },
-];
-
-const exchange = "한국의 역할 — 미국엔 신뢰 기준을, 중국엔 검증된 시장 접근권을 잇는 중개자. 미·중 모두가 필요로 하는 AI 사회계약 실험장이자 글로벌 거버넌스 규칙 설계자 지위를 얻는다.";
-
 const governanceAxes = [
   { label: "전략", title: "방향과 인재", actors: "싱크탱크 · 대학", body: "미래 의제·AI 거버넌스·산업/도시 전략의 방향을 만들고, 실행할 인재와 정체성·창업 역량을 기른다.", shift: "표준 인력 공급 → 방향 설계·정체성 기반 생산자 양성" },
   { label: "산업", title: "생산과 시장", actors: "기업 · 핵심 산업", body: "기술·아이디어를 제품·서비스로 전환하고, AI·데이터·자본·신뢰 인프라로 개인 생산자를 시장에 연결한다.", shift: "대량생산 조직 → 개인 생산자의 시장 진입을 여는 운영자" },
@@ -92,62 +54,54 @@ function SecHead({ no, area, desc }: { no: string; area: string; desc: string })
   );
 }
 
-/* 4.1 세계 경영 — 미국 vs 중국 좌우 대치 → 협력적 딜 → 한국 */
-function NationNode({ row, role, flag, center = false }: { row: typeof fearRows[number]; role: string; flag?: string; center?: boolean }) {
-  return (
-    <div style={{ border: `1.5px solid ${C.ink}`, borderRadius: 3, overflow: "hidden", background: center ? C.accentSoft : "#fff", height: "100%", display: "flex", flexDirection: "column" }}>
-      <div style={{ background: C.ink, color: "#fff", padding: "5px 12px", display: "flex", alignItems: "baseline", justifyContent: "space-between" }}>
-        <span style={{ fontSize: 14.5, fontWeight: 900 }}>{row.actor}{flag ? ` ${flag}` : ""}</span>
-        <span style={{ fontSize: 9.5, fontWeight: 700, opacity: 0.85, letterSpacing: 0.3 }}>{role}</span>
-      </div>
-      <div style={{ padding: "8px 12px", fontSize: 10.3, lineHeight: 1.38, color: C.body, display: "flex", flexDirection: "column", gap: 6, flex: 1 }}>
-        <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "5px 12px" }}>
-          <div><b style={{ color: C.ink }}>보유 카드</b> {row.strength}</div>
-          <div><b style={{ color: C.navySoft }}>잃기 싫은 것</b> {row.shortFear}</div>
-          <div><b style={{ color: C.navySoft }}>원하는 미래</b> {row.hope}</div>
-          <div><b style={{ color: C.navySoft }}>피하고 싶은 미래</b> {row.longFear}</div>
-        </div>
-        <div style={{ borderTop: `1px dashed ${C.cardBorder}`, paddingTop: 4 }}><b style={{ color: C.ink }}>협상 카드</b> {row.deal}</div>
-      </div>
-    </div>
-  );
-}
-
+/* 4.1 세계 경영 — 미·중 협력 전환 + 세계 각국 역할 */
 function WorldSection() {
-  const [us, cn] = fearRows;
   return (
     <section>
-      <SecHead no="4.1" area="디지털 시대의 세계 경영" desc="미·중 패권경쟁을 협력으로 변화시킨다." />
-      <div style={{ color: C.body, fontSize: 12.5, lineHeight: 1.4, fontWeight: 600, marginBottom: 7 }}>
-        협상과 협력 구조를 설계하고, 한국은 두 나라가 모두 필요로 하는 AI 사회계약 실험장이 된다. <span style={{ color: C.muted, fontWeight: 600 }}>요슈아 벤지오(몬트리올대·Mila)는 고도 AI가 권력 집중과 안전 위험을 키우므로 국제 거버넌스와 독립적 안전 검증이 필요하다고 본다.</span>
+      <SecHead no="4.1" area="디지털 시대의 세계 경영" desc="미·중 패권경쟁을 협력으로 전환하고, 세계 각국이 정체성으로 기여하는 다양성의 질서를 만든다." />
+      <div style={{ color: C.body, fontSize: 12.5, lineHeight: 1.4, fontWeight: 600, marginBottom: 8 }}>
+        산업화 시대가 생산량으로 승부하는 패권 경쟁이었다면, 디지털 시대는 각국이 고유한 정체성으로 기여하는 다양성의 질서다. 미·중 패권경쟁을 협력 구조로 전환하고, 한국은 두 나라가 모두 필요로 하는 안전한 경합의 규칙 설계자가 된다. <span style={{ color: C.muted, fontWeight: 600 }}>요슈아 벤지오(몬트리올대·Mila)는 고도 AI가 권력 집중과 안전 위험을 키우므로 국제 거버넌스와 독립적 안전 검증이 필요하다고 본다.</span>
+        <span style={{ color: C.muted, fontWeight: 600 }}> 미·중 카드와 협력적 딜 설계는 「세계 경영 마스터플랜」에서 별도로 다룬다.</span>
       </div>
 
-      {/* 미국 vs 중국 좌우 대치 */}
-      <div style={{ display: "grid", gridTemplateColumns: "1fr 64px 1fr", alignItems: "stretch", columnGap: 0, marginBottom: 7 }}>
-        <NationNode row={us} role="규칙 설정권 수호자" flag="🇺🇸" />
-        <div style={{ height: "100%", display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", gap: 2 }}>
-          <span style={{ fontSize: 18, fontWeight: 900, color: C.ink }}>VS</span>
-          <span style={{ fontSize: 8.5, fontWeight: 700, color: C.muted, letterSpacing: 0.5 }}>패권 경합</span>
-        </div>
-        <NationNode row={cn} role="시장 접근 도전자" flag="🇨🇳" />
-      </div>
-
-      {/* 협력적 딜 테이블 */}
-      <div style={{ border: `1px solid ${C.cardBorder}`, borderRadius: 3, overflow: "hidden", marginBottom: 0 }}>
-        <div style={{ background: C.ink, color: "#fff", padding: "5px 14px", display: "flex", alignItems: "center", gap: 10 }}>
-          <span style={{ fontSize: 12.5, fontWeight: 900 }}>협력적 딜</span>
-          <span style={{ fontSize: 10, fontWeight: 500, opacity: 0.85 }}>안전한 경합·상호이익 협정 테이블</span>
-        </div>
-        <div style={{ padding: "9px 12px", display: "grid", gridTemplateColumns: "1fr 1fr", gap: "5px 18px" }}>
-          {dealItems.map((d) => (
-            <div key={d.k} style={{ fontSize: 11.5, lineHeight: 1.4, color: C.body }}>
-              <b style={{ color: C.navy }}>{d.k}</b> — {d.t}
+      {/* 미·중 협력 전환 3단계 */}
+      <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 9, marginBottom: 8 }}>
+        {[
+          { no: "①", t: "공멸 방지", d: "비핵화·자율살상무기 금지·AI 군사 핫라인 — 누구도 반대 못 하는 레드라인부터 합의한다." },
+          { no: "②", t: "공존", d: "검증된 시장 접근과 고위험 AI 사전 승인으로, 봉쇄도 종속도 아닌 규칙 기반 공존으로 간다." },
+          { no: "③", t: "협력", d: "패권이 아니라 다양성의 질서로 — 각국이 정체성으로 기여하고 공동 위험에 함께 대응한다." },
+        ].map((s, i) => (
+          <div key={s.no} style={{ border: `1px solid ${C.cardBorder}`, borderRadius: 3, overflow: "hidden", borderTop: `3px solid ${i === 2 ? C.teal : C.ink}` }}>
+            <div style={{ padding: "7px 11px" }}>
+              <div style={{ display: "flex", alignItems: "baseline", gap: 6, marginBottom: 3 }}>
+                <span style={{ fontSize: 14, fontWeight: 900, color: i === 2 ? C.teal : C.ink }}>{s.no}</span>
+                <span style={{ fontSize: 12.5, fontWeight: 900, color: C.ink }}>{s.t}</span>
+              </div>
+              <div style={{ fontSize: 10.4, fontWeight: 500, color: C.body, lineHeight: 1.4 }}>{s.d}</div>
             </div>
-          ))}
-        </div>
-        <div style={{ background: C.surface, borderTop: `1px solid ${C.cardBorder}`, padding: "8px 14px", fontSize: 12, fontWeight: 600, color: C.body, lineHeight: 1.45 }}>
-          {exchange}
-        </div>
+          </div>
+        ))}
+      </div>
+
+      {/* 세계 각국의 역할 */}
+      <div style={{ color: C.ink, fontWeight: 800, fontSize: 12.5, marginBottom: 6 }}>세계 각국의 역할 — 다양성의 질서</div>
+      <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 9 }}>
+        {[
+          { actor: "한국", role: "규칙 설계자", body: "미·중 모두가 신뢰하는 AI 사회계약 실험장. 정체성 전환 여건을 보장하는 독자 모델로 두 질서를 잇는다." },
+          { actor: "미국·중국", role: "패권 → 공동 책임", body: "미국은 무규칙 AI를 막을 신뢰 기준을, 중국은 검증된 시장 접근권을 얻으며 공동 위험의 책임을 나눈다." },
+          { actor: "EU·일본", role: "기준·표준", body: "유럽은 권리·감사 기준(AI Act), 일본은 제조·안보 표준으로 다자 레버리지를 형성한다." },
+          { actor: "동남아·아프리카", role: "수요시장 → 참여 주체", body: "디지털 인프라 협력으로 다양성의 질서에 참여시킨다. 착취가 아니라 끌어올림으로 종속 구조를 반복하지 않는다." },
+          { actor: "신흥·중견국", role: "다극 균형", body: "특정 패권에 종속되지 않고 각자의 정체성·산업으로 다극 질서의 균형추가 된다." },
+          { actor: "국제기구", role: "감사·검증", body: "독립적 안전 검증과 공동위·기술 감사단으로 안보·경제 규칙을 함께 검증한다." },
+        ].map((r) => (
+          <div key={r.actor} style={{ border: `1px solid ${C.cardBorder}`, borderRadius: 3, overflow: "hidden", display: "grid", gridTemplateColumns: "92px 1fr" }}>
+            <div style={{ background: C.ink, color: "#fff", padding: "6px 8px", display: "flex", flexDirection: "column", justifyContent: "center" }}>
+              <span style={{ fontSize: 11.5, fontWeight: 900, lineHeight: 1.15 }}>{r.actor}</span>
+              <span style={{ fontSize: 8.6, fontWeight: 600, opacity: 0.85, marginTop: 2 }}>{r.role}</span>
+            </div>
+            <div style={{ padding: "6px 9px", fontSize: 9.8, fontWeight: 500, color: C.body, lineHeight: 1.36 }}>{r.body}</div>
+          </div>
+        ))}
       </div>
     </section>
   );
