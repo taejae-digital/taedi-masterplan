@@ -176,10 +176,10 @@ export function IndividualCommunityPage() {
   // 개인 데이터: trait(생애주기 특징) + 4계층 기준
   type PersonValue = string | { trait: string; lead: string; pro: string; ama: string; margin: string };
   const CLASS_ROWS: { key: "lead" | "pro" | "ama" | "margin"; label: string; color: string }[] = [
-    { key: "lead", label: "리더", color: "#1f3a5f" },
-    { key: "pro", label: "프로", color: "#2f6f8f" },
-    { key: "ama", label: "아마", color: "#7a8a52" },
-    { key: "margin", label: "소외", color: "#9a6a4a" },
+    { key: "lead", label: "리더", color: "#6b7280" },
+    { key: "pro", label: "프로", color: "#6b7280" },
+    { key: "ama", label: "아마", color: "#6b7280" },
+    { key: "margin", label: "소외", color: "#6b7280" },
   ];
 
   // 개인 영역 — 테이블(A안): 특징 1행 + 4계층 4행. 셀마다 라벨 반복 없이 좌측 컬럼에 한 번만.
@@ -231,7 +231,7 @@ export function IndividualCommunityPage() {
 
         {/* 중간 — 생애 단계 타임라인 */}
         <div style={{ display: "flex", alignItems: "center", gap: 8, flexWrap: "wrap" }}>
-          <span style={{ fontSize: 11, fontWeight: 900, color: C.ink }}>개인의 네 위치 — <span style={{ color: "#1f3a5f" }}>리더</span> · <span style={{ color: "#2f6f8f" }}>프로</span> · <span style={{ color: "#7a8a52" }}>아마추어</span> · <span style={{ color: "#9a6a4a" }}>소외</span></span>
+          <span style={{ fontSize: 11, fontWeight: 900, color: C.ink }}>개인의 네 위치 — 리더 · 프로 · 아마추어 · 소외</span>
           <span style={{ fontSize: 10, fontWeight: 600, color: C.muted }}>개인 행은 시대별 <b style={{ color: C.ink }}>4계층 구분 기준</b>을 제시한다.</span>
         </div>
         <div style={{ display: "grid", gridTemplateColumns: "86px repeat(6, 1fr)", gap: 0, border: `1px solid ${C.cardBorder}`, borderRadius: 4, overflow: "hidden" }}>
