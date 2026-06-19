@@ -16,6 +16,7 @@ export function IndividualCommunityPage() {
     proc,
     commRole,
     commDetail,
+    commAnswers,
   }: {
     label: string;
     sub: string;
@@ -24,6 +25,7 @@ export function IndividualCommunityPage() {
     proc: (s: typeof lifeStages[number]) => string;
     commRole: (c: typeof communityShift[number]) => string;
     commDetail: (c: typeof communityShift[number]) => string;
+    commAnswers?: (c: typeof communityShift[number]) => string;
   }) => (
     <div style={{ display: "flex", flexDirection: "column" }}>
       <div style={{ fontSize: 13.5, fontWeight: 900, color: accent, marginBottom: 6, letterSpacing: -0.2, paddingBottom: 4, borderBottom: `2px solid ${accent}` }}>
@@ -57,6 +59,11 @@ export function IndividualCommunityPage() {
             <div style={{ fontSize: 12.5, fontWeight: 900, color: C.ink, marginBottom: 3 }}>{c.unit}</div>
             <div style={{ fontSize: 10.8, fontWeight: 800, color: accent, lineHeight: 1.3, marginBottom: 2 }}>{commRole(c)}</div>
             <div style={{ fontSize: 9.8, fontWeight: 500, color: C.muted, lineHeight: 1.35 }}>{commDetail(c)}</div>
+            {commAnswers && (
+              <div style={{ marginTop: 5, paddingTop: 5, borderTop: `1px dashed ${C.cardBorder}`, fontSize: 9.6, fontWeight: 700, color: accent, lineHeight: 1.32 }}>
+                <span style={{ color: C.faint, fontWeight: 800 }}>답하는 단계 </span>{commAnswers(c)}
+              </div>
+            )}
           </div>
         ))}
       </div>
@@ -90,6 +97,7 @@ export function IndividualCommunityPage() {
           proc={(s) => s.process}
           commRole={(c) => c.digRole}
           commDetail={(c) => c.digOrg}
+          commAnswers={(c) => c.answers}
         />
       </div>
 
