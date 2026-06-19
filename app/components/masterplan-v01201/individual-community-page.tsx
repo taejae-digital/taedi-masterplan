@@ -202,30 +202,34 @@ export function IndividualCommunityPage() {
           <div style={{ marginTop: 2, fontSize: 7.8, fontWeight: 700, opacity: 0.8 }}>생애주기 특징</div>
         </div>
         {lifeStages.map((s) => personTcell_(`${eraTitle}-trait-${s.stage}`, pick(s).trait, bg, true))}
-        {/* 4계층 행 — 라벨에 니즈 + 연결 공동체 pill */}
+        {/* 4계층 행 */}
         {CLASS_ROWS.map((r) => (
           <React.Fragment key={`${eraTitle}-${r.key}`}>
-            <div style={{ background: "#6b7280", color: "#fff", padding: "5px 8px", borderTop: `1px solid ${C.cardBorder}`, display: "flex", flexDirection: "column", justifyContent: "center" }}>
-              <div style={{ display: "flex", alignItems: "baseline", gap: 5 }}>
-                <span style={{ fontSize: 10, fontWeight: 900, letterSpacing: 0.5 }}>{r.label}</span>
-                <span style={{ fontSize: 7.6, fontWeight: 600, opacity: 0.82 }}>{r.need}</span>
-              </div>
-              <div style={{ display: "flex", flexWrap: "wrap", gap: 2.5, marginTop: 3 }}>
-                {r.comm.map((t) => (
-                  <span key={t} style={{ fontSize: 7.8, fontWeight: 900, color: "#fff", background: COMM[t] || "#9ca3af", padding: "0.5px 5px", borderRadius: 7 }}>{t}</span>
-                ))}
-              </div>
+            <div style={{ background: "#6b7280", color: "#fff", padding: "4px 8px", borderTop: `1px solid ${C.cardBorder}`, display: "flex", alignItems: "center", justifyContent: "center" }}>
+              <span style={{ fontSize: 9.6, fontWeight: 900, letterSpacing: 0.5 }}>{r.label}</span>
             </div>
-            {lifeStages.map((s) => personTcell_(`${eraTitle}-${r.key}-${s.stage}`, pick(s)[r.key], bg, false))}
+            {lifeStages.map((s) => {
+              const v = pick(s);
+              const commKey = `${r.key}C` as "leadC" | "proC" | "amaC" | "marginC";
+              const comm = (v as Record<string, unknown>)[commKey] as string[] | undefined;
+              return personTcell_(`${eraTitle}-${r.key}-${s.stage}`, v[r.key], bg, false, comm);
+            })}
           </React.Fragment>
         ))}
       </>
     );
   };
   // 개인 테이블 셀
-  const personTcell_ = (key: string, text: string, bg: string, bold: boolean) => (
-    <div key={key} style={{ padding: "2px 7px", borderLeft: `1px solid ${C.cardBorder}`, borderTop: `1px solid ${C.cardBorder}`, background: bg, minHeight: 19, display: "flex", alignItems: "center" }}>
+  const personTcell_ = (key: string, text: string, bg: string, bold: boolean, comm?: string[]) => (
+    <div key={key} style={{ padding: "3px 7px", borderLeft: `1px solid ${C.cardBorder}`, borderTop: `1px solid ${C.cardBorder}`, background: bg, minHeight: 19, display: "flex", flexDirection: "column", justifyContent: "center", gap: 2.5 }}>
       <span style={{ fontSize: bold ? 10 : 9.2, fontWeight: bold ? 900 : 650, color: bold ? C.ink : C.muted, lineHeight: 1.2 }}>{text}</span>
+      {comm && comm.length > 0 && (
+        <div style={{ display: "flex", flexWrap: "wrap", gap: 2.5 }}>
+          {comm.map((t) => (
+            <span key={t} style={{ fontSize: 7.6, fontWeight: 900, color: "#fff", background: COMM[t] || "#9ca3af", padding: "0.5px 5px", borderRadius: 7, letterSpacing: 0.1 }}>{t}</span>
+          ))}
+        </div>
+      )}
     </div>
   );
 
@@ -248,7 +252,7 @@ export function IndividualCommunityPage() {
           <span style={{ fontSize: 11, fontWeight: 900, color: C.ink }}>개인의 네 위치 — 리더 · 프로 · 아마추어 · 소외</span>
           <span style={{ fontSize: 10, fontWeight: 600, color: C.muted }}>개인 행은 시대별 <b style={{ color: C.ink }}>4계층 구분 기준</b>을 제시한다.</span>
         </div>
-        <div style={{ display: "grid", gridTemplateColumns: "106px repeat(6, 1fr)", gap: 0, border: `1px solid ${C.cardBorder}`, borderRadius: 4, overflow: "hidden" }}>
+        <div style={{ display: "grid", gridTemplateColumns: "86px repeat(6, 1fr)", gap: 0, border: `1px solid ${C.cardBorder}`, borderRadius: 4, overflow: "hidden" }}>
           {personRows("산업화 개인", (s) => s.industrialPerson as Exclude<PersonValue, string>, "#fafbfc")}
 
           {rowLabel("삶의 단계", "정체성 과정", "#1f2430")}
