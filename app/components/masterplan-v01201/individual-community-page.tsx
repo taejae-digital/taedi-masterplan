@@ -33,7 +33,8 @@ export function IndividualCommunityPage() {
       indTags: ["가정", "국가"],
       digTags: ["가정", "국가"],
       industrialPerson: { trait: "가정 환경이 정하는 출발선", lead: "양육·의료 자원이 풍부한 가정", pro: "기본 돌봄이 안정된 가정", ama: "돌봄 공백이 잦은 가정", margin: "의료·보호에서 소외된 가정" },
-      digitalPerson: { trait: "모든 가능성을 지닌 출생", lead: "일찍 풍부하게 읽히는 단서", pro: "비교적 선명하게 읽히는 단서", ama: "단편적으로만 읽히는 단서", margin: "데이터·관찰의 사각지대" },
+      digitalPerson: { trait: "모든 가능성을 지닌 출생", lead: "일찍 풍부하게 읽히는 단서", pro: "비교적 선명하게 읽히는 단서", ama: "단편적으로만 읽히는 단서", margin: "데이터·관찰의 사각지대",
+        leadC: ["가정", "의료"], proC: ["가정", "의료"], amaC: ["가정", "이웃"], marginC: ["가정", "국가"] },
       digitalCommunity: "가정 · 의료 · 돌봄",
       digitalFeature: "가정이 돌봄을, 의료가 정체성 단서 분석을 지원한다",
     },
@@ -45,7 +46,8 @@ export function IndividualCommunityPage() {
       indTags: ["가정", "도시"],
       digTags: ["가정", "이웃"],
       industrialPerson: { trait: "조기교육·사교육이 만드는 격차", lead: "사교육·선행학습이 풍부", pro: "표준 교육에 충실", ama: "교육 자원이 부족", margin: "기초 보육·교육에서 이탈" },
-      digitalPerson: { trait: "다양한 체험을 통한 단서 확인", lead: "폭넓은 체험으로 또렷해진 강점", pro: "꾸준한 관심 분야 탐색", ama: "제한적인 체험 기회", margin: "발견을 도울 환경의 부재" },
+      digitalPerson: { trait: "다양한 체험을 통한 단서 확인", lead: "폭넓은 체험으로 또렷해진 강점", pro: "꾸준한 관심 분야 탐색", ama: "제한적인 체험 기회", margin: "발견을 도울 환경의 부재",
+        leadC: ["이웃", "마을"], proC: ["가정", "이웃"], amaC: ["가정", "이웃"], marginC: ["가정", "국가"] },
       digitalCommunity: "가정 · 이웃 · 마을",
       digitalFeature: "가정·이웃·마을이 다양한 체험과 발견을 돕는다",
     },
@@ -57,7 +59,8 @@ export function IndividualCommunityPage() {
       indTags: ["도시"],
       digTags: ["마을", "도시"],
       industrialPerson: { trait: "입시 성적이 가르는 진로", lead: "상위권 성적의 명문대 진학", pro: "중상위권의 대학 진학", ama: "성적 경쟁에서 밀려남", margin: "진학 경로에서 탈락" },
-      digitalPerson: { trait: "기여 큰 정체성의 선정·훈련", lead: "강점 집중 훈련을 통한 두각", pro: "방향을 정한 꾸준한 단련", ama: "제한적인 훈련 기회", margin: "훈련 경로의 단절" },
+      digitalPerson: { trait: "기여 큰 정체성의 선정·훈련", lead: "강점 집중 훈련을 통한 두각", pro: "방향을 정한 꾸준한 단련", ama: "제한적인 훈련 기회", margin: "훈련 경로의 단절",
+        leadC: ["마을", "도시"], proC: ["마을", "학교"], amaC: ["마을", "이웃"], marginC: ["마을", "국가"] },
       digitalCommunity: "마을 · 학교 · 멘토",
       digitalFeature: "마을·학교·멘토가 정체성 훈련을 함께한다",
     },
@@ -69,7 +72,8 @@ export function IndividualCommunityPage() {
       indTags: ["도시"],
       digTags: ["도시"],
       industrialPerson: { trait: "학벌·취업이 정하는 위치", lead: "명문대·대기업 진입", pro: "정규직 노동시장 진입", ama: "불안정 고용에 머묾", margin: "취업시장에서 배제" },
-      digitalPerson: { trait: "정체성의 실제 기여 발휘", lead: "창업·전문직의 영향력 발휘", pro: "전문 영역의 기여 정착", ama: "산발적인 기여 기회", margin: "발휘 무대의 부재" },
+      digitalPerson: { trait: "정체성의 실제 기여 발휘", lead: "창업·전문직의 영향력 발휘", pro: "전문 영역의 기여 정착", ama: "산발적인 기여 기회", margin: "발휘 무대의 부재",
+        leadC: ["도시", "세계"], proC: ["도시"], amaC: ["마을", "도시"], marginC: ["도시", "국가"] },
       digitalCommunity: "도시 · 일 경험 · 멘토",
       digitalFeature: "도시가 일 경험과 시장 진입을 연결한다",
     },
@@ -81,7 +85,8 @@ export function IndividualCommunityPage() {
       indTags: ["도시", "국가"],
       digTags: ["가정", "도시", "국가"],
       industrialPerson: { trait: "직위·고용 안정성의 분화", lead: "관리직·고소득의 안정", pro: "고용 유지와 경력 축적", ama: "고용 불안에 노출", margin: "실직·경력 단절" },
-      digitalPerson: { trait: "정체성의 재설계·확장", lead: "경험·데이터를 통한 영향력 확장", pro: "기여 방식의 갱신·심화", ama: "부족한 재학습 기회", margin: "전환 지원에서 소외" },
+      digitalPerson: { trait: "정체성의 재설계·확장", lead: "경험·데이터를 통한 영향력 확장", pro: "기여 방식의 갱신·심화", ama: "부족한 재학습 기회", margin: "전환 지원에서 소외",
+        leadC: ["도시", "세계"], proC: ["도시", "마을"], amaC: ["마을", "도시"], marginC: ["가정", "국가"] },
       digitalCommunity: "가정 · 마을 · 도시 · 의료",
       digitalFeature: "가정·도시·의료가 재학습과 건강을 받친다",
     },
@@ -93,7 +98,8 @@ export function IndividualCommunityPage() {
       indTags: ["국가"],
       digTags: ["가정", "이웃", "마을"],
       industrialPerson: { trait: "은퇴 후 자산·건강의 좌우", lead: "자산·건강으로 여유로운 노년", pro: "연금을 통한 생활 유지", ama: "부족한 노후 준비", margin: "빈곤·고립에 방치" },
-      digitalPerson: { trait: "정체성의 전수·연결", lead: "멘토·자문을 통한 세대 연결", pro: "후속 세대로의 경험 전수", ama: "제한적인 전수 기회", margin: "역할 없는 단절" },
+      digitalPerson: { trait: "정체성의 전수·연결", lead: "멘토·자문을 통한 세대 연결", pro: "후속 세대로의 경험 전수", ama: "제한적인 전수 기회", margin: "역할 없는 단절",
+        leadC: ["마을", "도시"], proC: ["가정", "마을"], amaC: ["가정", "이웃"], marginC: ["가정", "국가"] },
       digitalCommunity: "가정 · 이웃 · 돌봄",
       digitalFeature: "가정·이웃이 멘토링과 세대 연결을 돕는다",
     },
@@ -175,11 +181,11 @@ export function IndividualCommunityPage() {
 
   // 개인 데이터: trait(생애주기 특징) + 4계층 기준
   type PersonValue = string | { trait: string; lead: string; pro: string; ama: string; margin: string };
-  const CLASS_ROWS: { key: "lead" | "pro" | "ama" | "margin"; label: string; color: string }[] = [
-    { key: "lead", label: "리더", color: "#6b7280" },
-    { key: "pro", label: "프로", color: "#6b7280" },
-    { key: "ama", label: "아마", color: "#6b7280" },
-    { key: "margin", label: "소외", color: "#6b7280" },
+  const CLASS_ROWS: { key: "lead" | "pro" | "ama" | "margin"; label: string; color: string; need: string; comm: string[] }[] = [
+    { key: "lead", label: "리더", color: "#6b7280", need: "더 큰 발휘 무대", comm: ["도시", "세계"] },
+    { key: "pro", label: "프로", color: "#6b7280", need: "성장·심화 경로", comm: ["마을", "도시"] },
+    { key: "ama", label: "아마", color: "#6b7280", need: "발견·실험 기회", comm: ["이웃", "마을"] },
+    { key: "margin", label: "소외", color: "#6b7280", need: "보호·재연결", comm: ["가정", "국가"] },
   ];
 
   // 개인 영역 — 테이블(A안): 특징 1행 + 4계층 4행. 셀마다 라벨 반복 없이 좌측 컬럼에 한 번만.
@@ -196,11 +202,19 @@ export function IndividualCommunityPage() {
           <div style={{ marginTop: 2, fontSize: 7.8, fontWeight: 700, opacity: 0.8 }}>생애주기 특징</div>
         </div>
         {lifeStages.map((s) => personTcell_(`${eraTitle}-trait-${s.stage}`, pick(s).trait, bg, true))}
-        {/* 4계층 행 */}
+        {/* 4계층 행 — 라벨에 니즈 + 연결 공동체 pill */}
         {CLASS_ROWS.map((r) => (
           <React.Fragment key={`${eraTitle}-${r.key}`}>
-            <div style={{ background: r.color, color: "#fff", padding: "4px 8px", borderTop: `1px solid ${C.cardBorder}`, display: "flex", alignItems: "center", justifyContent: "center" }}>
-              <span style={{ fontSize: 9.6, fontWeight: 900, letterSpacing: 0.5 }}>{r.label}</span>
+            <div style={{ background: "#6b7280", color: "#fff", padding: "5px 8px", borderTop: `1px solid ${C.cardBorder}`, display: "flex", flexDirection: "column", justifyContent: "center" }}>
+              <div style={{ display: "flex", alignItems: "baseline", gap: 5 }}>
+                <span style={{ fontSize: 10, fontWeight: 900, letterSpacing: 0.5 }}>{r.label}</span>
+                <span style={{ fontSize: 7.6, fontWeight: 600, opacity: 0.82 }}>{r.need}</span>
+              </div>
+              <div style={{ display: "flex", flexWrap: "wrap", gap: 2.5, marginTop: 3 }}>
+                {r.comm.map((t) => (
+                  <span key={t} style={{ fontSize: 7.8, fontWeight: 900, color: "#fff", background: COMM[t] || "#9ca3af", padding: "0.5px 5px", borderRadius: 7 }}>{t}</span>
+                ))}
+              </div>
             </div>
             {lifeStages.map((s) => personTcell_(`${eraTitle}-${r.key}-${s.stage}`, pick(s)[r.key], bg, false))}
           </React.Fragment>
@@ -234,14 +248,7 @@ export function IndividualCommunityPage() {
           <span style={{ fontSize: 11, fontWeight: 900, color: C.ink }}>개인의 네 위치 — 리더 · 프로 · 아마추어 · 소외</span>
           <span style={{ fontSize: 10, fontWeight: 600, color: C.muted }}>개인 행은 시대별 <b style={{ color: C.ink }}>4계층 구분 기준</b>을 제시한다.</span>
         </div>
-        <div style={{ display: "grid", gridTemplateColumns: "86px repeat(6, 1fr)", gap: 0, border: `1px solid ${C.cardBorder}`, borderRadius: 4, overflow: "hidden" }}>
-          {rowLabel("산업화 공동체", "표준 경로에 배치", "#4b5563")}
-          {lifeStages.map((s, i) => cell(`ic-${s.stage}`, <>
-            <div style={{ fontSize: 11, fontWeight: 700, color: C.muted, lineHeight: 1.3 }}>{s.industrialFeature}</div>
-            <div style={{ marginTop: 4, marginBottom: 1 }} />
-            {commTagRow(s.indTags)}
-          </>, { bg: "#f4f5f7" }))}
-
+        <div style={{ display: "grid", gridTemplateColumns: "106px repeat(6, 1fr)", gap: 0, border: `1px solid ${C.cardBorder}`, borderRadius: 4, overflow: "hidden" }}>
           {personRows("산업화 개인", (s) => s.industrialPerson as Exclude<PersonValue, string>, "#fafbfc")}
 
           {rowLabel("삶의 단계", "정체성 과정", "#1f2430")}
@@ -253,13 +260,6 @@ export function IndividualCommunityPage() {
           </div>, { borderTop: true }))}
 
           {personRows("디지털 개인", (s) => s.digitalPerson as Exclude<PersonValue, string>, "#fafbfc")}
-
-          {rowLabel("디지털 공동체", "과정 지원·연결", "#4b5563")}
-          {lifeStages.map((s, i) => cell(`dc-${s.stage}`, <>
-            <div style={{ fontSize: 11, fontWeight: 700, color: C.muted, lineHeight: 1.3 }}>{s.digitalFeature}</div>
-            <div style={{ marginTop: 4, marginBottom: 1 }} />
-            {commTagRow(s.digTags)}
-          </>, { borderTop: true, bg: "#f4f5f7" }))}
         </div>
 
         {/* 최하단 — 디지털 시대: 개인의 생애주기별 필요를 지원·연결하는 공동체 */}
