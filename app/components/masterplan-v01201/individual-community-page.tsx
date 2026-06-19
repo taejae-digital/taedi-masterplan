@@ -68,7 +68,7 @@ export function IndividualCommunityPage() {
       <Header subtitle="2. 개인의 생애주기와 공동체" chapterNo="02" version={VERSION} />
 
       <div style={{ padding: "12px 48px 10px", borderBottom: `1px solid ${C.line}` }}>
-        <div style={{ fontSize: 17, fontWeight: 900, color: C.ink, lineHeight: 1.25, letterSpacing: -0.4 }}>표준 경로에 줄 세우던 개인과 공동체가, 생애주기마다 강점을 키우고 잇는 관계로 바뀐다.</div>
+        <div style={{ fontSize: 17, fontWeight: 900, color: C.ink, lineHeight: 1.25, letterSpacing: -0.4 }}>하나의 잣대로 개인을 줄 세우던 질서가, 생애주기마다 다른 강점을 공동체가 함께 키우고 발휘하게 하는 질서로 바뀐다.</div>
         <div style={{ marginTop: 6, fontSize: 13, lineHeight: 1.55, color: C.body, fontWeight: 500 }}>산업화 시대에는 성적{"\u00b7"}학벌{"\u00b7"}고용이라는 하나의 잣대가 계층을 가르고, 가정{"\u00b7"}도시{"\u00b7"}국가에만 기능이 몰렸다. 디지털 시대에는 단계마다 정체성을 <b style={{ color: C.ink }}>드러내고{"\u00b7"}발견하고{"\u00b7"}훈련하고{"\u00b7"}발휘하고{"\u00b7"}전수하며</b>, 여섯 공동체가 모두 살아나 저마다 다른 필요를 채운다.</div>
       </div>
 
