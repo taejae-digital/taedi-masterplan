@@ -77,32 +77,32 @@ export function IndividualCommunityPage() {
       <Header subtitle="2. 개인의 생애주기와 공동체" chapterNo="02" version={VERSION} />
 
       <div style={{ padding: "12px 48px 10px", borderBottom: `1px solid ${C.line}` }}>
-        <div style={{ fontSize: 17, fontWeight: 900, color: C.ink, lineHeight: 1.25, letterSpacing: -0.4 }}>하나의 잣대로 개인을 줄 세우던 질서가, 생애주기마다 다른 강점을 공동체가 함께 키우고 발휘하게 하는 질서로 바뀐다.</div>
-        <div style={{ marginTop: 6, fontSize: 13, lineHeight: 1.55, color: C.body, fontWeight: 500 }}>산업화 시대에는 성적{"\u00b7"}학벌{"\u00b7"}고용이라는 하나의 잣대가 계층을 가르고, 가정{"\u00b7"}도시{"\u00b7"}국가에만 기능이 몰렸다. 디지털 시대에는 단계마다 정체성을 <b style={{ color: C.ink }}>드러내고{"\u00b7"}발견하고{"\u00b7"}훈련하고{"\u00b7"}발휘하고{"\u00b7"}전수하며</b>, 여섯 공동체가 모두 살아나 저마다 다른 필요를 채운다.</div>
+        <div style={{ fontSize: 17, fontWeight: 900, color: C.ink, lineHeight: 1.25, letterSpacing: -0.4 }}>개인을 표준 경로에 맞추던 공동체가, 생애 단계마다 필요한 기능을 맡고 끝나면 권한을 돌려주는 가변 질서로 바뀐다.</div>
+        <div style={{ marginTop: 6, fontSize: 13, lineHeight: 1.55, color: C.body, fontWeight: 500 }}>산업화 시대에는 표준 제도가 가정{"\u00b7"}도시{"\u00b7"}국가에 기능을 몰아넣고 개인을 하나의 경로에 맞췄다. 디지털 시대에는 정체성을 <b style={{ color: C.ink }}>드러내고{"\u00b7"}발견하고{"\u00b7"}훈련하고{"\u00b7"}발휘하고{"\u00b7"}전수하는</b> 각 단계마다, 필요한 공동체가 고유 기능을 맡고 끝나면 권한을 돌려준다.</div>
       </div>
 
       <div style={{ padding: "12px 48px 0", flex: 1, display: "flex", flexDirection: "column", gap: 14 }}>
         <EraBlock
           label="산업화 시대"
-          sub="하나의 잣대로 줄 세우고, 가정·도시·국가에 기능이 몰린다"
+          sub="표준 제도가 가정·도시·국가에 기능을 몰아넣고 개인을 한 경로에 맞춘다"
           accent={C.navySoft}
           pick={(s, k) => s.ind[k]}
           proc={(s) => s.indProcess}
           commRole={(c) => c.indRole}
           commDetail={(c) => c.indOrg}
           commAnswers={(c) => c.indAnswers}
-          ansLabel="몰린 단계"
+          ansLabel="생애 기능"
         />
         <EraBlock
           label="디지털 시대"
-          sub="단계·계층마다 다른 필요를, 여섯 공동체가 함께 채운다"
+          sub="단계마다 필요한 공동체가 고유 기능을 맡고, 끝나면 권한을 돌려준다"
           accent={C.accent}
           pick={(s, k) => s.digitalPerson[k]}
           proc={(s) => s.process}
           commRole={(c) => c.digRole}
           commDetail={(c) => c.digOrg}
           commAnswers={(c) => c.answers}
-          ansLabel="맡는 단계"
+          ansLabel="생애 기능"
         />
       </div>
 
