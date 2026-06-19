@@ -4,7 +4,8 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "mp:version-check": "node scripts/verify-masterplan-version.mjs"
   },
   "license": "MIT",
   "dependencies": {

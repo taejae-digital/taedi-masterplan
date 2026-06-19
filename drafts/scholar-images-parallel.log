@@ -1,0 +1,26 @@
+[10:27:27] parallel image search start: 24 scholars
+[10:27:28] OK Daron Acemoglu -> daron-acemoglu.png 407359 bytes via wikipedia-summary
+[10:27:29] OK Erik Brynjolfsson -> erik-brynjolfsson.jpg 2568859 bytes via wikipedia-summary
+[10:27:31] FAIL Mariana Mazzucato -> ['wikipedia_summary:HTTP Error 429: Too many requests - please contact noc@wikimedia.org to discuss a less disruptive approach or instead use thumbnail images in sizes listed on https://w.wiki/GHai. (0c640b1)', 'wikidata_p18:HTTP Error 429: Too many requests - please contact noc@wikimedia.org to discuss a less disruptive approach or instead use thumbnail images in sizes listed on https://w.wiki/GHai. (0c640b1)']
+[10:27:31] OK Yoshua Bengio -> yoshua-bengio.jpg 277443 bytes via wikidata:Q3572699:P18:Yoshua Bengio 2019 cropped.jpg
+[10:27:32] FAIL Daniel Susskind -> ['wikidata_p18:HTTP Error 429: Too many requests - please contact noc@wikimedia.org to discuss a less disruptive approach or instead use thumbnail images in sizes listed on https://w.wiki/GHai. (0c640b1)']
+[10:27:33] FAIL Richard Florida -> ['wikipedia_summary:HTTP Error 429: Too many requests - please contact noc@wikimedia.org to discuss a less disruptive approach or instead use thumbnail images in sizes listed on https://w.wiki/GHai. (0c640b1)', 'wikidata_p18:HTTP Error 429: Too many requests - please contact noc@wikimedia.org to discuss a less disruptive approach or instead use thumbnail images in sizes listed on https://w.wiki/GHai. (0c640b1)']
+[10:27:33] FAIL Shoshana Zuboff -> ['wikidata_p18:HTTP Error 429: Too Many Requests']
+[10:27:34] FAIL Luciano Floridi -> ['wikidata_p18:HTTP Error 429: Too Many Requests']
+[10:27:34] FAIL David Autor -> ['wikidata_p18:HTTP Error 429: Too Many Requests']
+[10:27:35] FAIL Yochai Benkler -> ['wikidata_p18:HTTP Error 429: Too Many Requests']
+[10:27:35] FAIL Cathy O’Neil -> ['wikidata_p18:HTTP Error 429: Too Many Requests']
+[10:27:36] FAIL Kate Crawford -> ['wikidata_p18:HTTP Error 429: Too Many Requests']
+[10:27:36] FAIL Virginia Eubanks -> ['wikidata_p18:HTTP Error 429: Too Many Requests']
+[10:27:37] FAIL Meredith Whittaker -> ['wikidata_p18:HTTP Error 429: Too Many Requests']
+[10:27:37] FAIL Safiya Umoja Noble -> ['wikidata_p18:HTTP Error 429: Too Many Requests']
+[10:27:38] FAIL Ruha Benjamin -> ['wikidata_p18:HTTP Error 429: Too Many Requests']
+[10:27:38] FAIL Geoffrey Hinton -> ['wikidata_p18:HTTP Error 429: Too Many Requests']
+[10:27:39] FAIL Stuart Russell -> ['wikidata_p18:HTTP Error 429: Too Many Requests']
+[10:27:40] FAIL Ajay Agrawal -> ['wikidata_p18:HTTP Error 429: Too Many Requests']
+[10:27:40] FAIL Carlota Perez -> ['wikidata_p18:HTTP Error 429: Too Many Requests']
+[10:27:40] FAIL Saskia Sassen -> ['wikidata_p18:HTTP Error 429: Too Many Requests']
+[10:27:41] FAIL Edward Glaeser -> ['wikidata_p18:HTTP Error 429: Too many requests (f061ab2)']
+[10:27:41] FAIL Alison Gopnik -> ['wikidata_p18:HTTP Error 429: Too Many Requests']
+[10:27:41] FAIL Amartya Sen -> ['wikidata_p18:HTTP Error 429: Too many requests (f061ab2)']
+[10:27:41] done: 3/24 images

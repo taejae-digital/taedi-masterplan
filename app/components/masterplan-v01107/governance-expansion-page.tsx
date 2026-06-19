@@ -1,5 +1,5 @@
 import { C } from "./constants";
-import { Header, PageLead } from "./shared";
+import { Footer, Header, PageLead } from "./shared";
 import { VERSION } from "./version";
 
 const governanceAxes = [
@@ -46,7 +46,7 @@ const small = [
 /* 공통 섹션 헤드 */
 function SecHead({ no, area, desc }: { no: string; area: string; desc: string }) {
   return (
-    <div style={{ display: "flex", alignItems: "baseline", gap: 11, marginBottom: 7, paddingBottom: 5, borderBottom: `2px solid ${C.ink}`, color: C.ink }}>
+    <div style={{ display: "flex", alignItems: "baseline", gap: 11, marginBottom: 8, paddingBottom: 6, borderBottom: `2px solid ${C.ink}`, color: C.ink }}>
       <span style={{ fontSize: 16, fontWeight: 900 }}>{no}</span>
       <span style={{ fontSize: 16, fontWeight: 800 }}>{area}</span>
       <span style={{ fontSize: 11.8, fontWeight: 500, color: C.muted }}>{desc}</span>
@@ -54,52 +54,45 @@ function SecHead({ no, area, desc }: { no: string; area: string; desc: string })
   );
 }
 
-/* 4.1 세계 경영 — 미·중 협력 전환 + 세계 각국 역할 */
+/* 4.1 세계 경영 — 지속불가능의 지구 · 미중 갈등과 한반도 · 협력공존 대전환 */
 function WorldSection() {
+  const worldThemes = [
+    {
+      tag: "지속불가능의 지구",
+      title: "현 체제로는 풀리지 않는 전 지구적 위기",
+      body: "지구온난화·기후위기, 핵·테러 위협과 통제력을 잃은 기술, 빈곤·양극화가 동시에 심화된다. 인류는 공영은 고사하고 지속불가능의 위기 아래 당장의 생존조차 불투명하다. 해결은 국가 간 협력을 통한 전 지구적 대응뿐인데, 현재의 국가들은 자국 이기주의 속에서 패권·이권 경쟁만 하고 미·중 두 초강대국조차 책임을 다하지 못한 채 갈등만 키운다.",
+      accent: C.ink,
+    },
+    {
+      tag: "미·중 갈등과 한반도",
+      title: "갈등의 한가운데, 동시에 반전의 열쇠",
+      body: "급부상하는 중국과 이를 견제하는 미국의 갈등 한가운데에 한반도가 있다. 지정학적·역사적 특수성으로 과거 미·중 대리전의 무대였고, 지금도 핵전쟁 위험이 가장 높은 곳이다. 바로 그 특수성이 한반도를 미·중 협력을 이끌어낼 반전의 지렛대로 만든다.",
+      accent: C.ink,
+    },
+    {
+      tag: "협력공존으로의 대전환",
+      title: "한반도가 수행해야 할 세계경영 미션",
+      body: "지속불가능의 극복과 한반도의 생존을 위해, 경쟁보다 협력이 우선하는 세계 질서를 창출한다. 기존의 양극·다극 체제를 넘어 협력공존하는 글로벌 거버넌스를 수립하는 것 — 이것이 한반도가 생존을 위해 반드시 성공시켜야 할 미션이다.",
+      accent: C.teal,
+    },
+  ];
+
   return (
     <section>
-      <SecHead no="4.1" area="디지털 시대의 세계 경영" desc="미·중 패권경쟁을 협력으로 전환하고, 세계 각국이 정체성으로 기여하는 다양성의 질서를 만든다." />
-      <div style={{ color: C.body, fontSize: 12.5, lineHeight: 1.4, fontWeight: 600, marginBottom: 8 }}>
-        산업화 시대가 생산량으로 승부하는 패권 경쟁이었다면, 디지털 시대는 각국이 고유한 정체성으로 기여하는 다양성의 질서다. 미·중 패권경쟁을 협력 구조로 전환하고, 한국은 두 나라가 모두 필요로 하는 안전한 경합의 규칙 설계자가 된다. <span style={{ color: C.muted, fontWeight: 600 }}>요슈아 벤지오(몬트리올대·Mila)는 고도 AI가 권력 집중과 안전 위험을 키우므로 국제 거버넌스와 독립적 안전 검증이 필요하다고 본다.</span>
-        <span style={{ color: C.muted, fontWeight: 600 }}> 미·중 카드와 협력적 딜 설계는 「세계 경영 마스터플랜」에서 별도로 다룬다.</span>
+      <SecHead no="4.1" area="디지털 시대의 세계 경영" desc="지속불가능의 지구, 미·중 갈등의 한가운데 한반도, 협력공존 세계 질서로의 대전환을 설계한다." />
+      <div style={{ color: C.body, fontSize: 12.5, lineHeight: 1.4, fontWeight: 600, marginBottom: 10 }}>
+        세계경영의 핵심은 각국의 역할을 나열하는 것이 아니라, <span style={{ color: C.ink, fontWeight: 800 }}>급부상하는 중국과 견제하는 미국의 갈등을 협력공존으로 대전환</span>시켜 지속불가능에 놓인 지구를 구하는 것이다. 한반도는 그 대전환에 공헌하며 스스로의 생존을 확보한다. <span style={{ color: C.muted, fontWeight: 600 }}>미·중·한이 무엇을 두려워하고 무엇을 원하는지의 카드와 구체적 딜 설계는 「세계 경영 마스터플랜」에서 별도로 다룬다.</span>
       </div>
 
-      {/* 미·중 협력 전환 3단계 */}
-      <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 9, marginBottom: 8 }}>
-        {[
-          { no: "①", t: "공멸 방지", d: "비핵화·자율살상무기 금지·AI 군사 핫라인 — 누구도 반대 못 하는 레드라인부터 합의한다." },
-          { no: "②", t: "공존", d: "검증된 시장 접근과 고위험 AI 사전 승인으로, 봉쇄도 종속도 아닌 규칙 기반 공존으로 간다." },
-          { no: "③", t: "협력", d: "패권이 아니라 다양성의 질서로 — 각국이 정체성으로 기여하고 공동 위험에 함께 대응한다." },
-        ].map((s, i) => (
-          <div key={s.no} style={{ border: `1px solid ${C.cardBorder}`, borderRadius: 3, overflow: "hidden", borderTop: `3px solid ${i === 2 ? C.teal : C.ink}` }}>
-            <div style={{ padding: "7px 11px" }}>
-              <div style={{ display: "flex", alignItems: "baseline", gap: 6, marginBottom: 3 }}>
-                <span style={{ fontSize: 14, fontWeight: 900, color: i === 2 ? C.teal : C.ink }}>{s.no}</span>
-                <span style={{ fontSize: 12.5, fontWeight: 900, color: C.ink }}>{s.t}</span>
-              </div>
-              <div style={{ fontSize: 10.4, fontWeight: 500, color: C.body, lineHeight: 1.4 }}>{s.d}</div>
+      <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 10 }}>
+        {worldThemes.map((w, i) => (
+          <div key={w.tag} style={{ position: "relative", border: `1px solid ${C.cardBorder}`, borderRadius: 3, overflow: "hidden", borderTop: `3px solid ${w.accent}` }}>
+            <div style={{ position: "absolute", right: 6, top: -22, fontSize: 96, lineHeight: 1, fontWeight: 950, color: w.accent === C.teal ? "#d4ece8" : "#e3e5e8", opacity: 0.4, zIndex: 0 }}>{i + 1}</div>
+            <div style={{ position: "relative", zIndex: 1, padding: "9px 12px" }}>
+              <div style={{ color: w.accent, fontSize: 9.6, fontWeight: 900, letterSpacing: 0.2, marginBottom: 2 }}>{w.tag}</div>
+              <div style={{ color: C.ink, fontSize: 12.6, fontWeight: 900, lineHeight: 1.22, marginBottom: 5 }}>{w.title}</div>
+              <div style={{ color: C.body, fontSize: 10.5, fontWeight: 500, lineHeight: 1.45 }}>{w.body}</div>
             </div>
-          </div>
-        ))}
-      </div>
-
-      {/* 세계 각국의 역할 */}
-      <div style={{ color: C.ink, fontWeight: 800, fontSize: 12.5, marginBottom: 6 }}>세계 각국의 역할 — 다양성의 질서</div>
-      <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 9 }}>
-        {[
-          { actor: "한국", role: "규칙 설계자", body: "미·중 모두가 신뢰하는 AI 사회계약 실험장. 정체성 전환 여건을 보장하는 독자 모델로 두 질서를 잇는다." },
-          { actor: "미국·중국", role: "패권 → 공동 책임", body: "미국은 무규칙 AI를 막을 신뢰 기준을, 중국은 검증된 시장 접근권을 얻으며 공동 위험의 책임을 나눈다." },
-          { actor: "EU·일본", role: "기준·표준", body: "유럽은 권리·감사 기준(AI Act), 일본은 제조·안보 표준으로 다자 레버리지를 형성한다." },
-          { actor: "동남아·아프리카", role: "수요시장 → 참여 주체", body: "디지털 인프라 협력으로 다양성의 질서에 참여시킨다. 착취가 아니라 끌어올림으로 종속 구조를 반복하지 않는다." },
-          { actor: "신흥·중견국", role: "다극 균형", body: "특정 패권에 종속되지 않고 각자의 정체성·산업으로 다극 질서의 균형추가 된다." },
-          { actor: "국제기구", role: "감사·검증", body: "독립적 안전 검증과 공동위·기술 감사단으로 안보·경제 규칙을 함께 검증한다." },
-        ].map((r) => (
-          <div key={r.actor} style={{ border: `1px solid ${C.cardBorder}`, borderRadius: 3, overflow: "hidden", display: "grid", gridTemplateColumns: "92px 1fr" }}>
-            <div style={{ background: C.ink, color: "#fff", padding: "6px 8px", display: "flex", flexDirection: "column", justifyContent: "center" }}>
-              <span style={{ fontSize: 11.5, fontWeight: 900, lineHeight: 1.15 }}>{r.actor}</span>
-              <span style={{ fontSize: 8.6, fontWeight: 600, opacity: 0.85, marginTop: 2 }}>{r.role}</span>
-            </div>
-            <div style={{ padding: "6px 9px", fontSize: 9.8, fontWeight: 500, color: C.body, lineHeight: 1.36 }}>{r.body}</div>
           </div>
         ))}
       </div>
@@ -112,10 +105,10 @@ function NationSection() {
   return (
     <section>
       <SecHead no="4.2" area="디지털 시대의 국가 경영" desc="전략·산업·정치·미디어 운영체계로 핵심 기관을 잇고 산업 벨트 생태계를 조직한다." />
-      <div style={{ color: C.body, fontWeight: 600, fontSize: 12.5, lineHeight: 1.42, marginBottom: 8 }}>
+      <div style={{ color: C.body, fontWeight: 600, fontSize: 12.5, lineHeight: 1.42, marginBottom: 10 }}>
         국가는 위에서 표준화하는 대신 전략(싱크탱크·대학)·산업(기업)·정치(정부·정당·군대)·미디어가 방향에서 보호까지 이어지는 하나의 운영체계를 설계하고, 시산학 생태계는 도시가 맡는다. <span style={{ color: C.muted, fontWeight: 600 }}>마리아나 마추카토(UCL)는 국가가 위험을 감수하고 방향을 제시하는 미션 지향 주체가 되어야 한다고 본다.</span>
       </div>
-      <div style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: 9, marginBottom: 6 }}>
+      <div style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: 10, marginBottom: 8 }}>
         {governanceAxes.map((axis) => (
           <div key={axis.label} style={{ border: `1px solid ${C.cardBorder}`, borderRadius: 3, overflow: "hidden", display: "grid", gridTemplateColumns: "52px 1fr" }}>
             <div style={{ background: C.ink, color: "#fff", display: "flex", alignItems: "center", justifyContent: "center", fontSize: 14, fontWeight: 900, letterSpacing: -0.3, textAlign: "center", lineHeight: 1.15, padding: "0 2px" }}>{axis.label}</div>
@@ -128,8 +121,8 @@ function NationSection() {
           </div>
         ))}
       </div>
-      <div style={{ color: C.ink, fontWeight: 800, fontSize: 12.5, marginBottom: 6 }}>핵심 산업의 역할과 지역 배치 — 산업 벨트 생태계</div>
-      <div style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: 9, marginBottom: 7 }}>
+      <div style={{ color: C.ink, fontWeight: 800, fontSize: 12.5, marginBottom: 7 }}>핵심 산업의 역할과 지역 배치 — 산업 벨트 생태계</div>
+      <div style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: 10, marginBottom: 9 }}>
         {nationalBelts.map((belt, i) => (
           <div key={belt.name} style={{ border: `1px solid ${C.cardBorder}`, borderRadius: 3, overflow: "hidden" }}>
             <div style={{ background: C.surface, borderBottom: `1px solid ${C.cardBorder}`, padding: "4px 8px", display: "flex", alignItems: "center", gap: 5 }}>
@@ -155,7 +148,7 @@ function SmallSection({ s }: { s: typeof small[number] }) {
   return (
     <section style={{ display: "flex", flexDirection: "column", height: "100%" }}>
       <SecHead no={s.no} area={s.area} desc={s.title} />
-      <div style={{ border: `1px solid ${C.cardBorder}`, borderRadius: 3, padding: "8px 14px 8px", flex: 1, display: "flex", flexDirection: "column", gap: 6 }}>
+      <div style={{ border: `1px solid ${C.cardBorder}`, borderRadius: 3, padding: "10px 14px 10px", flex: 1, display: "flex", flexDirection: "column", gap: 7 }}>
         <div style={{ color: C.body, fontWeight: 600, fontSize: 12.2, lineHeight: 1.42 }}>{s.lead}</div>
         <ul style={{ margin: 0, paddingLeft: 16, display: "flex", flexDirection: "column", gap: 4, flex: 1 }}>
           {s.bullets.map((b) => (
@@ -176,15 +169,15 @@ export function GovernanceExpansionPage() {
         thesis="디지털 시대에는 강화된 개인의 정체성이 공동체의 생산성으로 이어지도록 세계·국가·도시·가정의 운영 조건을 다시 설계해야 한다."
         summary="새 사회계약은 선언만으로 실현되지 않는다. 세계는 안전한 경합의 규칙을 만들고, 국가는 전략·산업·정치·미디어와 산업 벨트를 조직하며, 도시는 시산학 강소도시-서버시티 벨트에서 생활권 실증을 수행하고, 가정은 개인 성장의 기반을 만든다."
       />
-      <div style={{ padding: "6px 44px 4px", display: "flex", flexDirection: "column", gap: 8, flex: 1, minHeight: 0 }}>
+      <div style={{ padding: "10px 44px 6px", display: "flex", flexDirection: "column", gap: 12, justifyContent: "space-between", flex: 1, minHeight: 0 }}>
         <WorldSection />
         <NationSection />
-        <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 16, alignItems: "stretch" }}>
+        <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 18, alignItems: "stretch" }}>
           <SmallSection s={small[0]} />
           <SmallSection s={small[1]} />
         </div>
       </div>
-      {/* Footer omitted on P4 per request. */}
+      <Footer version={VERSION} />
     </div>
   );
 }

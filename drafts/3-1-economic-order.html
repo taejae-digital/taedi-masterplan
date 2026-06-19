@@ -1,0 +1,363 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8" />
+<title>3.1 경제질서 시안</title>
+<style>
+  :root {
+    --navy: #12233f;
+    --navy2: #1d3557;
+    --blue: #2f6f9f;
+    --cyan: #e7f1f7;
+    --pale: #f4f7fb;
+    --line: #c9d6e4;
+    --text: #182338;
+    --muted: #657184;
+    --green: #2f6f68;
+    --orange: #a45b2a;
+  }
+  @page { size: A3 landscape; margin: 0; }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    width: 1600px;
+    height: 1131px;
+    background: #e9eef5;
+    font-family: -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Noto Sans KR", "Pretendard", sans-serif;
+    color: var(--text);
+  }
+  .page {
+    width: 1600px;
+    height: 1131px;
+    padding: 58px 68px 54px;
+    background: linear-gradient(180deg, #f8fafc 0%, #eef3f8 100%);
+    position: relative;
+    overflow: hidden;
+  }
+  .page:before {
+    content: "";
+    position: absolute;
+    inset: 28px;
+    border: 1px solid #d6e0ec;
+    border-radius: 26px;
+    pointer-events: none;
+  }
+  .header {
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    margin-bottom: 30px;
+    z-index: 1;
+  }
+  .eyebrow {
+    color: var(--blue);
+    font-size: 24px;
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    margin-bottom: 9px;
+  }
+  h1 {
+    margin: 0;
+    font-size: 52px;
+    line-height: 1.08;
+    letter-spacing: -0.055em;
+    color: var(--navy);
+    font-weight: 900;
+  }
+  .summary {
+    width: 585px;
+    padding: 18px 22px;
+    border-radius: 18px;
+    background: #ffffffcc;
+    border: 1px solid #d5e0ec;
+    box-shadow: 0 12px 30px rgba(18, 35, 63, 0.07);
+    font-size: 21px;
+    line-height: 1.42;
+    letter-spacing: -0.035em;
+    color: #25344d;
+  }
+  .summary b { color: var(--navy); font-weight: 900; }
+  .main {
+    position: relative;
+    z-index: 1;
+    display: grid;
+    grid-template-columns: 485px 1fr;
+    gap: 30px;
+    height: 842px;
+  }
+  .panel {
+    background: #fff;
+    border: 1px solid #d3deeb;
+    border-radius: 24px;
+    box-shadow: 0 18px 42px rgba(18, 35, 63, 0.10);
+    overflow: hidden;
+  }
+  .panel-title {
+    background: var(--navy);
+    color: #fff;
+    padding: 18px 24px;
+    font-size: 25px;
+    font-weight: 900;
+    letter-spacing: -0.045em;
+  }
+  .left-body {
+    padding: 24px 24px 22px;
+    height: calc(100% - 65px);
+    display: flex;
+    flex-direction: column;
+  }
+  .logic-card {
+    position: relative;
+    background: linear-gradient(180deg, #ffffff 0%, #f6f9fc 100%);
+    border: 1px solid #cad8e7;
+    border-radius: 20px;
+    padding: 21px 22px 20px 80px;
+    min-height: 171px;
+  }
+  .logic-card + .logic-card { margin-top: 24px; }
+  .logic-card + .logic-card:before {
+    content: "↓";
+    position: absolute;
+    top: -25px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #7b8da5;
+    font-size: 25px;
+    font-weight: 900;
+  }
+  .num {
+    position: absolute;
+    left: 22px;
+    top: 24px;
+    width: 42px;
+    height: 42px;
+    display: grid;
+    place-items: center;
+    border-radius: 50%;
+    background: var(--navy2);
+    color: white;
+    font-size: 24px;
+    font-weight: 900;
+  }
+  .logic-kicker {
+    font-size: 17px;
+    color: var(--blue);
+    font-weight: 900;
+    margin-bottom: 7px;
+    letter-spacing: -0.02em;
+  }
+  .logic-title {
+    font-size: 28px;
+    color: var(--navy);
+    font-weight: 900;
+    letter-spacing: -0.055em;
+    line-height: 1.12;
+    margin-bottom: 12px;
+  }
+  .logic-text {
+    font-size: 21px;
+    line-height: 1.43;
+    letter-spacing: -0.045em;
+    color: #27384f;
+    word-break: keep-all;
+  }
+  .left-footer {
+    margin-top: auto;
+    padding: 15px 18px;
+    border-radius: 17px;
+    background: #e8f1f7;
+    color: #24445e;
+    font-size: 19px;
+    line-height: 1.35;
+    letter-spacing: -0.04em;
+    border: 1px solid #c5d7e6;
+  }
+  .right.panel { display: flex; flex-direction: column; }
+  .table-wrap { padding: 16px 20px 14px; height: 100%; }
+  table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    table-layout: fixed;
+    height: 100%;
+    overflow: hidden;
+    border: 1px solid var(--line);
+    border-radius: 18px;
+  }
+  th, td {
+    border-right: 1px solid var(--line);
+    border-bottom: 1px solid var(--line);
+    vertical-align: top;
+    word-break: keep-all;
+  }
+  tr:last-child td { border-bottom: 0; }
+  th:last-child, td:last-child { border-right: 0; }
+  thead th {
+    padding: 13px 13px 12px;
+    text-align: center;
+    color: #fff;
+    background: var(--navy2);
+    font-size: 20px;
+    font-weight: 900;
+    letter-spacing: -0.04em;
+  }
+  thead th.row-head {
+    width: 142px;
+    background: #20304c;
+    color: #dbe8f4;
+  }
+  thead th.ai { background: #1f5f83; }
+  tbody th {
+    width: 142px;
+    padding: 13px 14px;
+    background: #eef3f8;
+    color: var(--navy);
+    font-size: 19px;
+    line-height: 1.18;
+    font-weight: 900;
+    letter-spacing: -0.05em;
+    text-align: left;
+  }
+  td {
+    padding: 12px 15px 11px;
+    background: #fff;
+    font-size: 17.5px;
+    line-height: 1.28;
+    letter-spacing: -0.042em;
+    color: #26374f;
+  }
+  td.agri { background: #fbfbf7; }
+  td.ind { background: #f8fafc; }
+  td.ai {
+    background: #f0f8fb;
+    border-left: 2px solid #8bbdd2;
+  }
+  .cell-title {
+    display: block;
+    font-size: 19.5px;
+    line-height: 1.15;
+    letter-spacing: -0.05em;
+    font-weight: 900;
+    color: var(--navy);
+    margin-bottom: 6px;
+  }
+  td.ai .cell-title { color: #14506f; }
+  .tagline {
+    display: inline-block;
+    margin-top: 7px;
+    padding: 4px 8px 5px;
+    border-radius: 999px;
+    background: #dcecf4;
+    color: #174e69;
+    font-size: 15px;
+    font-weight: 900;
+    letter-spacing: -0.035em;
+  }
+  .danger {
+    color: #753a21;
+    font-weight: 800;
+  }
+  .footer {
+    position: absolute;
+    right: 72px;
+    bottom: 28px;
+    color: #7b8796;
+    font-size: 15px;
+    letter-spacing: -0.01em;
+  }
+</style>
+</head>
+<body>
+  <section class="page">
+    <header class="header">
+      <div>
+        <div class="eyebrow">3.1 경제 질서</div>
+        <h1>높은 생산비의 시대에서<br/>정체성 기반 생산자 경제로</h1>
+      </div>
+      <div class="summary">
+        AI가 실행비용을 낮출수록 표준화된 생산은 흡수되고, 경쟁력은 <b>무엇을 만들지 정하는 정체성</b>과 이를 생산으로 전환하는 능력으로 이동한다.
+      </div>
+    </header>
+
+    <main class="main">
+      <aside class="panel left">
+        <div class="panel-title">경제질서 전환의 인과</div>
+        <div class="left-body">
+          <div class="logic-card">
+            <div class="num">1</div>
+            <div class="logic-kicker">기존 질서</div>
+            <div class="logic-title">높은 생산비와<br/>규모의 경제</div>
+            <div class="logic-text">높은 생산비는 대량생산·표준화·대중시장을 요구했고, 노동자는 일자리를 통해 생산에 참여했다.</div>
+          </div>
+
+          <div class="logic-card">
+            <div class="num">2</div>
+            <div class="logic-kicker">디지털 변화</div>
+            <div class="logic-title">생산비 하락과<br/>노동 재편</div>
+            <div class="logic-text">AI는 실행비용을 낮추고 표준 노동을 대체하며, 작은 수요와 세분화된 시장도 경제성을 갖게 한다.</div>
+          </div>
+
+          <div class="logic-card">
+            <div class="num">3</div>
+            <div class="logic-kicker">새 질서</div>
+            <div class="logic-title">정체성 기반<br/>생산자 경제</div>
+            <div class="logic-text">일자리 중심 질서는 약해지고, 각자는 정체성에 근접한 고유 생산영역을 만들어 경쟁한다.</div>
+          </div>
+
+          <div class="left-footer">핵심 흐름: 높은 생산비 → 규모의 경제·표준 노동 → AI 생산비 하락 → 시장 분화 → 정체성 기반 생산자</div>
+        </div>
+      </aside>
+
+      <section class="panel right">
+        <div class="panel-title">생산수단 변화와 경제질서 전환</div>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th class="row-head">구분</th>
+                <th>농업시대</th>
+                <th>산업시대</th>
+                <th class="ai">디지털/AI 시대</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th>생산<br/>수단</th>
+                <td class="agri"><span class="cell-title">토지</span>토지 소유가 생산과 생존을 좌우</td>
+                <td class="ind"><span class="cell-title">자본·기계·공장</span>공장·설비·분업이 대량생산을 가능하게 함</td>
+                <td class="ai"><span class="cell-title">AI·데이터·컴퓨팅·정체성</span>실행비용을 낮추는 기술 인프라와, 무엇을 만들지 정하는 정체성이 결합<span class="tagline">정체성 = 생산 방향의 기준</span></td>
+              </tr>
+              <tr>
+                <th>시장<br/>조건</th>
+                <td class="agri"><span class="cell-title">지역·생존 중심</span>지역 공동체 안에서 생존과 자급이 생산을 규정</td>
+                <td class="ind"><span class="cell-title">대중시장·표준 수요</span>높은 생산비를 회수하려면 큰 시장과 표준화된 수요가 필요</td>
+                <td class="ai"><span class="cell-title">세분화된 시장</span>작은 수요와 고유한 취향도 생산비 하락으로 경제성을 획득</td>
+              </tr>
+              <tr>
+                <th>노동/<br/>개인 위치</th>
+                <td class="agri"><span class="cell-title">농민·가족 노동</span>개인은 토지와 가족 단위 생산에 묶여 생존</td>
+                <td class="ind"><span class="cell-title">임금노동자</span>조직 안의 일자리를 통해 생산에 참여하고 소득과 지위를 확보</td>
+                <td class="ai"><span class="cell-title">분화된 생산자</span>개인은 생산자가 되지만, 생산수단 접근과 활용 역량에 따라 리더·프로·아마·소외계층으로 분화</td>
+              </tr>
+              <tr>
+                <th>경쟁력</th>
+                <td class="agri"><span class="cell-title">토지·노동력</span>토지 소유, 노동력, 기후와 지역 조건 적응</td>
+                <td class="ind"><span class="cell-title">자본·효율·표준화</span>설비 투자, 분업, 원가 절감, 대량 유통 능력</td>
+                <td class="ai"><span class="cell-title">정체성·AI 지휘력</span>잘하는 것·좋아하는 것·사회가 원하는 것의 교집합을 AI 생산력과 결합</td>
+              </tr>
+              <tr>
+                <th>위험과<br/>조건</th>
+                <td class="agri"><span class="cell-title">소유 격차</span>토지 소유 격차와 흉작·기후에 따른 생존 불안</td>
+                <td class="ind"><span class="cell-title">자본-노동 격차</span>생산수단을 소유한 자본과 일자리에 의존하는 노동자의 격차</td>
+                <td class="ai"><span class="cell-title danger">접근권 집중</span>AI·데이터·컴퓨팅·플랫폼 접근이 집중되면 고유 생산영역도 독점 질서에 흡수</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+    </main>
+    <div class="footer">Taejae Digital Masterplan · 3.1 경제질서 시안</div>
+  </section>
+</body>
+</html>

@@ -1,0 +1,217 @@
+<!doctype html><html lang="ko"><head><meta charset="utf-8" />
+<title>마스터플랜 5.3 자문 학자 프로필·학습 자료</title>
+<style>
+@page { size: A4; margin: 16mm 15mm 18mm; }
+* { box-sizing: border-box; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+body { margin:0; font-family: Pretendard, -apple-system, BlinkMacSystemFont, "Noto Sans KR", "Apple SD Gothic Neo", sans-serif; color:#151515; background:#fff; word-break:keep-all; }
+.cover { min-height: 245mm; padding: 22mm 15mm; position: relative; overflow:hidden; background: linear-gradient(135deg,#fff 0%,#fff 58%,#f1f5f4 58%,#f1f5f4 100%); page-break-after: always; }
+.cover::before { content:"05.3"; position:absolute; right:-8mm; top:5mm; font-size:118pt; line-height:1; font-weight:950; letter-spacing:-9px; color:#e5e7eb; }
+.cover .kicker { font-size:11pt; font-weight:850; letter-spacing:.18em; color:#0d7d72; border-top:5px solid #111; padding-top:7mm; width:55mm; }
+.cover h1 { margin:18mm 0 0; font-size:32pt; line-height:1.08; letter-spacing:-1.8px; max-width:135mm; }
+.cover .sub { margin-top:9mm; font-size:13pt; line-height:1.65; color:#4b5563; font-weight:600; max-width:130mm; }
+.cover .grid { position:absolute; left:15mm; right:15mm; bottom:22mm; display:grid; grid-template-columns: repeat(3,1fr); gap:5mm; }
+.cover .tile { border:1.3px solid #151515; border-top:5px solid #0d7d72; background:#fff; padding:5mm; min-height:34mm; }
+.tile b { display:block; font-size:13pt; margin-bottom:2mm; }
+.tile span { color:#4b5563; font-size:10.5pt; line-height:1.45; font-weight:600; }
+.meta { position:absolute; right:15mm; top:18mm; text-align:right; font-size:9pt; color:#6b7280; font-weight:700; letter-spacing:.04em; }
+.toc { page-break-after: always; padding-top:4mm; }
+.toc h2 { font-size:22pt; margin:0 0 8mm; border-bottom:3px solid #111; padding-bottom:4mm; }
+.toc-grid { display:grid; grid-template-columns:1fr 1fr; gap:5mm; }
+.toc-card { border:1px solid #d1d5db; padding:5mm; border-left:5px solid #111; min-height:34mm; }
+.toc-card .no { color:#0d7d72; font-size:9pt; font-weight:900; letter-spacing:.12em; }
+.toc-card .title { font-size:15pt; font-weight:900; margin:2mm 0; }
+.toc-card .desc { color:#4b5563; font-size:10.5pt; line-height:1.45; font-weight:600; }
+.chapter { position:relative; page-break-before: always; padding-top:2mm; }
+.chapter:first-of-type { page-break-before: auto; }
+.chapterNo { position:absolute; right:0; top:-12mm; font-size:54pt; font-weight:950; color:#e5e7eb; letter-spacing:-4px; z-index:-1; }
+h1 { font-size:21pt; line-height:1.15; margin:0 0 6mm; padding-bottom:4mm; border-bottom:3px solid #111; letter-spacing:-.9px; }
+h2 { font-size:16pt; line-height:1.25; margin:8mm 0 3mm; letter-spacing:-.5px; }
+h2.scholar-title { page-break-before: always; margin-top:0; padding:5mm 6mm; border:1.2px solid #111; border-top:6px solid #0d7d72; background:#fff; }
+h3 { font-size:10.5pt; margin:5mm 0 2mm; color:#0d7d72; font-weight:900; letter-spacing:.05em; }
+p { margin:0 0 3.1mm; font-size:10.2pt; line-height:1.62; color:#2b2b2b; }
+ul { margin:0 0 3.5mm; padding:0; list-style:none; }
+li { position:relative; margin:0 0 1.8mm; padding-left:5mm; font-size:9.8pt; line-height:1.48; color:#30343a; }
+li::before { content:""; position:absolute; left:0; top:.62em; width:2.1mm; height:2.1mm; background:#0d7d72; }
+strong { color:#111; font-weight:900; }
+em { font-style:normal; color:#6b7280; font-weight:700; }
+code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; background:#f3f4f6; padding:.5mm 1mm; border-radius:1mm; }
+.rule { height:1px; background:#d1d5db; margin:5mm 0; }
+.headerline { position: fixed; top: 0; left:0; right:0; height:3mm; background:#111; }
+.footer { position: fixed; bottom: 7mm; left:15mm; right:15mm; display:flex; justify-content:space-between; border-top:1px solid #d1d5db; padding-top:2.5mm; color:#6b7280; font-size:8.3pt; font-weight:650; }
+@media print { .no-print { display:none; } }
+</style></head><body>
+<div class="headerline"></div><div class="footer"><span>태재미래전략연구원 · 디지털팀 학습 자료</span><span>v0.11.5 · 2026.06</span></div>
+<section class="cover">
+  <div class="meta">MASTERPLAN 5.3<br/>SCHOLAR LEARNING PACK<br/>v0.11.5</div>
+  <div class="kicker">ADVISORY SCHOLARS</div>
+  <h1>마스터플랜 5.3<br/>자문 학자 프로필·학습 자료</h1>
+  <div class="sub">경제질서, 정치질서, 새로운 사회계약을 검증하기 위한 8명 학자 프로필과 팀 학습 운영안.</div>
+  <div class="grid">
+    <div class="tile"><b>O1 경제질서</b><span>브린욜프슨 · 서스킨드 · 마추카토<br/>AI 생산성, 노동 전환, 공공가치</span></div>
+    <div class="tile"><b>O2 정치질서</b><span>아세모글루 · 벤지오 · 플로리다<br/>권력 재배치, AI 안전, 도시 다양성</span></div>
+    <div class="tile"><b>O3 사회계약</b><span>주보프 · 플로리디<br/>플랫폼 권력, 정보윤리, 디지털 권리</span></div>
+  </div>
+</section>
+<section class="toc">
+  <h2>읽는 순서</h2>
+  <div class="toc-grid">
+    <div class="toc-card"><div class="no">01</div><div class="title">경제질서</div><div class="desc">AI가 표준 노동과 생산비 구조를 바꿀 때, 개인 생산자 경제가 성립하는 조건.</div></div>
+    <div class="toc-card"><div class="no">02</div><div class="title">정치질서</div><div class="desc">기술과 도시가 국가 독점 권력을 흔들 때, 제도와 권력이 재배치되는 방식.</div></div>
+    <div class="toc-card"><div class="no">03</div><div class="title">사회계약</div><div class="desc">플랫폼·AI·데이터 권력이 선택지와 인정 구조를 좌우할 때 필요한 공적 조정.</div></div>
+    <div class="toc-card"><div class="no">04</div><div class="title">팀 학습 운영</div><div class="desc">4주 학습 순서, 산출물, 학자별 자문 질문 초안.</div></div>
+  </div>
+</section>
+<section class="chapter"><div class="chapterNo">1</div><h1>마스터플랜 5.3 자문 학자 프로필·학습 자료</h1>
+<p>대상: 5.3 Objectives and Key Results에 배치된 8명 자문 학자</p>
+<ul><li>O1 경제질서: 에릭 브린욜프슨, 다니엘 서스킨드, 마리아나 마추카토</li><li>O2 정치질서: 대런 아세모글루, 요슈아 벤지오, 리처드 플로리다</li><li>O3 새로운 사회계약: 쇼샤나 주보프, 루치아노 플로리디</li></ul>
+<div class="rule"></div>
+<h2 class="">0. 학습 목적</h2>
+<p>이 자료는 학자 소개가 아니라 마스터플랜의 세 논지를 검증하기 위한 학습 자료다.</p>
+<ul><li>경제질서: AI가 표준 노동을 대체하고 개인 생산능력을 강화할 때, 어떤 생산자 경제가 가능한가.</li><li>정치질서: 강화된 개인·도시·국가·세계정부·플랫폼 권력이 어떻게 재배치되는가.</li><li>사회계약: 플랫폼·AI·데이터 권력이 개인의 자유와 인정 조건을 좌우할 때, 어떤 권리와 공적 조정이 필요한가.</li></ul>
+<div class="rule"></div>
+</section><section class="chapter"><div class="chapterNo">2</div><h1>O1. 경제질서 연구</h1>
+<h2 class=" scholar-title">1. 에릭 브린욜프슨 Erik Brynjolfsson</h2>
+<h3>프로필</h3>
+<ul><li>소속: Stanford Institute for Human-Centered AI Senior Fellow, Stanford Digital Economy Lab Director</li><li>분야: 디지털 경제, AI와 생산성, 노동시장 변화, 기술 보완성</li><li>대표 키워드: AI augmentation, productivity, digital economy, intangible assets, human-centered AI</li><li>마스터플랜 연결: 3.1의 “AI·데이터·컴퓨팅이 개인의 생산능력을 강화하고 표준 노동을 재편한다”는 논지의 핵심 근거.</li></ul>
+<h3>핵심 관점</h3>
+<p>브린욜프슨은 AI를 단순 자동화 도구가 아니라 인간의 과업을 보완하고 확장하는 기술로 본다. 생산성 향상은 기술 자체보다 조직 재설계, 업무 분해, 인간-AI 보완 구조에서 나온다. 마스터플랜에서는 “표준 노동 대체 → 개인 생산능력 강화 → 정체성 기반 생산자 경제”의 경제적 메커니즘을 설명하는 데 쓴다.</p>
+<h3>읽을 자료</h3>
+<p>1. <em>The Second Machine Age</em> — 디지털 기술이 경제·노동·생산성에 미치는 구조적 변화.</p>
+<p>2. <em>Machine, Platform, Crowd</em> — 플랫폼과 기계지능이 기업·시장 조직을 바꾸는 방식.</p>
+<p>3. Stanford Digital Economy Lab 자료 — AI와 생산성, 노동시장 전환 관련 최신 글·강연.</p>
+<h3>학습 질문</h3>
+<ul><li>AI는 어떤 업무를 대체하고, 어떤 업무를 인간에게 남기는가?</li><li>생산비 하락이 개인 생산자와 마이크로 시장을 어떻게 가능하게 하는가?</li><li>“정체성”은 경제학적으로 어떤 차별화 자산이 되는가?</li><li>AI 도입이 생산성을 높이지 못하는 이유는 기술 부족인가, 조직 재설계 부족인가?</li></ul>
+<h3>마스터플랜 반영 포인트</h3>
+<ul><li>AI는 직업 전체보다 과업 단위를 먼저 바꾼다.</li><li>생산성 증가는 자동화보다 인간의 판단·목적 설정·도메인 감각과 결합될 때 커진다.</li><li>표준 노동의 가치가 약해질수록 개인의 고유한 문제의식과 기여 영역이 경제적 차별화 기준이 된다.</li></ul>
+<div class="rule"></div>
+<h2 class=" scholar-title">2. 다니엘 서스킨드 Daniel Susskind</h2>
+<h3>프로필</h3>
+<ul><li>소속: King’s College London 경제학자, Oxford Institute for Ethics in AI Senior Research Associate</li><li>분야: 기술과 노동, 자동화, 경제성장, 분배, 일의 미래</li><li>대표 키워드: world without work, technological unemployment, distribution, meaning of work</li><li>마스터플랜 연결: 3.1의 “표준 직업 중심 질서가 약해지고 개인이 자기 기여 영역을 만들어야 한다”는 논지의 노동·분배 근거.</li></ul>
+<h3>핵심 관점</h3>
+<p>서스킨드는 AI와 자동화가 단순히 일자리 일부를 바꾸는 것이 아니라, 노동을 통해 소득·정체성·사회적 인정을 배분해 온 산업시대 질서를 흔든다고 본다. 마스터플랜에서는 “직업 보장”보다 “정체성 기반 기여 영역 창출”과 “생산수단·기회 접근 보장”이 중요해지는 이유를 설명하는 데 쓴다.</p>
+<h3>읽을 자료</h3>
+<p>1. <em>A World Without Work</em> — 자동화가 노동·소득·의미를 어떻게 재편하는가.</p>
+<p>2. <em>Growth: A History and a Reckoning</em> — 성장의 역사와 한계, 다음 경제질서의 조건.</p>
+<p>3. 일의 미래 관련 강연·기고 — 기술실업, 분배, 사회적 인정 문제.</p>
+<h3>학습 질문</h3>
+<ul><li>AI가 직업을 줄이면 소득과 사회적 인정은 무엇을 통해 배분되는가?</li><li>일자리 보장과 생산수단 접근 보장은 같은 정책인가, 다른 정책인가?</li><li>정체성 기반 생산자 경제는 “일 없는 미래”의 대안이 될 수 있는가?</li><li>기술실업 논의를 복지 논의가 아니라 생산질서 전환 논의로 바꾸려면 무엇이 필요한가?</li></ul>
+<h3>마스터플랜 반영 포인트</h3>
+<ul><li>AI 시대의 핵심 문제는 직업 숫자만이 아니라 일·소득·인정의 연결 방식 붕괴다.</li><li>표준 직업을 지키는 정책만으로는 강화된 개인의 기여 가능성을 만들 수 없다.</li><li>새 사회계약은 소득 안전망과 함께 AI·데이터·시장 접근을 보장해야 한다.</li></ul>
+<div class="rule"></div>
+<h2 class=" scholar-title">3. 마리아나 마추카토 Mariana Mazzucato</h2>
+<h3>프로필</h3>
+<ul><li>소속: University College London, Institute for Innovation and Public Purpose 창립 디렉터</li><li>분야: 혁신경제학, 공공가치, 미션 지향 산업정책, 국가의 시장 형성 역할</li><li>대표 키워드: mission economy, public value, market shaping, entrepreneurial state</li><li>마스터플랜 연결: AI·데이터·컴퓨팅 같은 생산수단을 시장에만 맡기지 않고 공공 목적과 접근권의 관점에서 설계해야 한다는 논지의 근거.</li></ul>
+<h3>핵심 관점</h3>
+<p>마추카토는 국가는 시장 실패를 사후 보정하는 존재가 아니라, 새로운 시장을 형성하고 공공가치를 창출하는 행위자라고 본다. AI 시대에는 정부가 규제자에 머무르지 않고 데이터, 컴퓨팅, 공공 AI 인프라, 미션 기반 조달을 통해 생산수단의 접근 구조를 설계해야 한다.</p>
+<h3>읽을 자료</h3>
+<p>1. <em>The Entrepreneurial State</em> — 혁신에서 국가의 선도적 역할.</p>
+<p>2. <em>Mission Economy</em> — 사회적 미션을 중심으로 공공·민간 역량을 조직하는 방법.</p>
+<p>3. IIPP Public Value 자료 — 공공가치와 미션 지향 정책 프레임.</p>
+<h3>학습 질문</h3>
+<ul><li>AI 생산수단을 민간 플랫폼에만 맡기면 어떤 접근 격차가 생기는가?</li><li>국가는 AI 시장을 규제만 해야 하는가, 아니면 형성해야 하는가?</li><li>“공공 AI 인프라”는 복지인가, 생산정책인가?</li><li>정체성 기반 생산자 경제에서 공공가치는 어떻게 정의되는가?</li></ul>
+<h3>마스터플랜 반영 포인트</h3>
+<ul><li>AI·데이터·컴퓨팅 접근은 사회계약의 기본 여건이다.</li><li>국가는 시장 뒤처리를 하는 존재가 아니라, 새 생산수단의 접근 규칙을 설계하는 주체다.</li><li>마스터플랜의 경제질서는 “혁신을 민간에 맡긴다”가 아니라 “공공 목적 아래 생산수단을 개방한다”에 가깝다.</li></ul>
+<div class="rule"></div>
+</section><section class="chapter"><div class="chapterNo">3</div><h1>O2. 정치질서 연구</h1>
+<h2 class=" scholar-title">4. 대런 아세모글루 Daron Acemoglu</h2>
+<h3>프로필</h3>
+<ul><li>소속: MIT Institute Professor</li><li>분야: 정치경제학, 제도경제학, 기술과 노동, 권력과 제도</li><li>대표 키워드: institutions, power, democracy, automation, directed technological change</li><li>마스터플랜 연결: 기술 변화가 권력과 제도를 어떻게 바꾸며, AI 자동화가 민주주의와 노동에 어떤 긴장을 만드는지 설명하는 근거.</li></ul>
+<h3>핵심 관점</h3>
+<p>아세모글루는 경제 성과가 기술만으로 결정되지 않고 제도와 권력 배분에 의해 좌우된다고 본다. AI도 마찬가지다. AI가 누구의 권력을 강화하는지, 자동화의 이익이 누구에게 귀속되는지, 민주적 제도가 기술 방향을 통제할 수 있는지가 핵심이다.</p>
+<h3>읽을 자료</h3>
+<p>1. <em>Why Nations Fail</em> — 포용적 제도와 착취적 제도의 차이.</p>
+<p>2. <em>Power and Progress</em> — 기술 진보가 모두에게 이익이 되려면 권력과 제도 설계가 필요하다는 논지.</p>
+<p>3. AI와 노동시장 관련 논문·강연 — 자동화 편향과 인간 보완 기술의 차이.</p>
+<h3>학습 질문</h3>
+<ul><li>AI 기술은 자동으로 민주주의를 강화하는가, 아니면 권력 집중을 키우는가?</li><li>기술 진보의 방향을 누가 결정하는가?</li><li>플랫폼·알고리즘 권력은 기존 국가 권력과 어떻게 다른가?</li><li>도시·국가·세계정부가 AI 권력을 나눠 조정하려면 어떤 제도 조건이 필요한가?</li></ul>
+<h3>마스터플랜 반영 포인트</h3>
+<ul><li>AI 시대 정치는 기술 문제가 아니라 권력 배분 문제다.</li><li>플랫폼과 알고리즘은 경제 인프라이자 정치 권력이다.</li><li>국가는 독점 통치자가 아니라 분산된 권력을 조정하는 오케스트레이터로 재편되어야 한다.</li></ul>
+<div class="rule"></div>
+<h2 class=" scholar-title">5. 요슈아 벤지오 Yoshua Bengio</h2>
+<h3>프로필</h3>
+<ul><li>소속: Université de Montréal 교수, Mila 창립자·과학디렉터, 2018 튜링상 수상자</li><li>분야: 딥러닝, AI 안전, 고도 AI 거버넌스, 기술권력과 위험</li><li>대표 키워드: deep learning, AI safety, frontier AI governance, concentration of power</li><li>마스터플랜 연결: 4.1의 “미·중 AI 패권경쟁을 안전한 경합과 국제 거버넌스로 전환한다”는 논지의 기술·안전 근거.</li></ul>
+<h3>핵심 관점</h3>
+<p>벤지오는 고도 AI가 생산성만 높이는 기술이 아니라, 권력 집중·안보 위험·통제 실패를 동시에 키울 수 있는 범용 기술이라고 본다. 따라서 프런티어 AI는 기업이나 강대국의 속도 경쟁에만 맡길 수 없고, 독립적 안전 검증, 국제 협력, 공적 연구 기반이 필요하다. 마스터플랜에서는 한국이 AI 사회계약 실험장과 글로벌 규칙 설계자로 나서야 하는 이유를 보강한다.</p>
+<h3>읽을 자료</h3>
+<p>1. AI safety·frontier AI governance 관련 공개 서한과 인터뷰.</p>
+<p>2. 딥러닝·AI 안전성 관련 강연 — 고도 AI의 능력 확장과 통제 문제.</p>
+<p>3. Mila 및 국제 AI 안전 거버넌스 자료 — 독립 검증, 안전 연구, 공공 거버넌스.</p>
+<h3>학습 질문</h3>
+<ul><li>고도 AI 위험은 기술 안전 문제인가, 국제정치 문제인가?</li><li>미·중 AI 경쟁에서 한국이 제안할 수 있는 안전 검증·공동위·테스트베드는 무엇인가?</li><li>AI 생산수단 개방과 고위험 AI 통제는 어떻게 함께 설계할 수 있는가?</li><li>프런티어 AI 거버넌스에서 기업, 국가, 국제기구의 권한은 어떻게 나뉘어야 하는가?</li></ul>
+<h3>마스터플랜 반영 포인트</h3>
+<ul><li>AI 패권경쟁은 산업정책이면서 동시에 안전·안보 질서 문제다.</li><li>한국의 역할은 중립 구호가 아니라 검증 가능한 AI 사회계약 실험장 제공이다.</li><li>고도 AI에는 접근권 보장과 위험 통제를 동시에 담는 국제 규칙이 필요하다.</li></ul>
+<div class="rule"></div>
+<h2 class=" scholar-title">6. 리처드 플로리다 Richard Florida</h2>
+<h3>프로필</h3>
+<ul><li>소속: University of Toronto Rotman School of Management, 도시·창조경제 연구자</li><li>분야: 도시경제, 창조계급, 지역혁신, 도시 다양성</li><li>대표 키워드: creative class, cities, talent, tolerance, urban innovation</li><li>마스터플랜 연결: 도시가 정체성 기반 생산과 생활정치의 실행 단위가 된다는 3.2·4.3 논지를 보강.</li></ul>
+<h3>핵심 관점</h3>
+<p>플로리다는 도시의 경쟁력이 물리 인프라만이 아니라 창의적 인재, 다양성, 관용, 문화적 밀도에서 나온다고 본다. 디지털 시대에도 도시는 사라지지 않는다. 오히려 정체성·창의성·산업·교육·생활이 가까이 붙는 도시가 개인 생산자의 실험장으로 중요해진다.</p>
+<h3>읽을 자료</h3>
+<p>1. <em>The Rise of the Creative Class</em> — 창조계급과 도시 경쟁력.</p>
+<p>2. <em>The New Urban Crisis</em> — 창조도시의 불평등과 주거 문제.</p>
+<p>3. 도시혁신·지역경제 관련 강연 — 도시 밀도와 다양성의 경제적 가치.</p>
+<h3>학습 질문</h3>
+<ul><li>AI 시대에 도시가 여전히 필요한 이유는 무엇인가?</li><li>강소도시는 대도시의 축소판인가, 다른 운영 단위인가?</li><li>다양성은 문화 구호인가, 경제 생산성의 조건인가?</li><li>정체성 기반 생산자에게 필요한 도시 조건은 무엇인가?</li></ul>
+<h3>마스터플랜 반영 포인트</h3>
+<ul><li>도시는 행정 하청이 아니라 생활정치와 정체성 생산의 실행 단위다.</li><li>강소도시는 정체성 훈련, 산업 연결, 시장 실험이 가까운 곳이어야 한다.</li><li>도시 간 차이는 불균형이 아니라 다양한 정체성 생태계의 조건으로 설계될 수 있다.</li></ul>
+<div class="rule"></div>
+</section><section class="chapter"><div class="chapterNo">4</div><h1>O3. 새로운 사회계약 연구</h1>
+<h2 class=" scholar-title">7. 쇼샤나 주보프 Shoshana Zuboff</h2>
+<h3>프로필</h3>
+<ul><li>소속: Harvard Business School 명예교수</li><li>분야: 감시자본주의, 디지털 권력, 플랫폼 경제, 데이터 추출</li><li>대표 키워드: surveillance capitalism, behavioral surplus, instrumentarian power, platform power</li><li>마스터플랜 연결: 플랫폼·알고리즘 권력이 개인의 선택지·노출·인정 구조를 좌우한다는 3.3 사회계약 논지의 핵심 근거.</li></ul>
+<h3>핵심 관점</h3>
+<p>주보프는 디지털 플랫폼이 인간 행동 데이터를 추출하고 예측·수정 가능한 대상으로 만드는 새로운 권력 형태를 만들었다고 본다. 이 권력은 단순한 시장 권력이 아니라 개인의 선택 환경을 설계하는 권력이다. 따라서 AI 시대 사회계약은 데이터 수집 동의만으로 부족하고, 노출·추천·평판·인정 구조에 대한 공적 조정까지 포함해야 한다.</p>
+<h3>읽을 자료</h3>
+<p>1. <em>The Age of Surveillance Capitalism</em> — 감시자본주의의 구조와 권력.</p>
+<p>2. Harvard Business School faculty profile 및 관련 강연 — 디지털 권력 비판.</p>
+<p>3. 플랫폼 거버넌스·데이터 권리 자료 — 추천·노출·행동수정 권력의 제도화 문제.</p>
+<h3>학습 질문</h3>
+<ul><li>플랫폼은 단순한 시장 중개자인가, 선택지를 배열하는 정치 권력인가?</li><li>개인화 추천은 편의인가, 행동수정 권력인가?</li><li>데이터 소유권만으로 플랫폼 권력을 통제할 수 있는가?</li><li>정체성 기반 생산자가 플랫폼에 종속되지 않으려면 어떤 사회계약이 필요한가?</li></ul>
+<h3>마스터플랜 반영 포인트</h3>
+<ul><li>플랫폼 권력의 핵심은 데이터 보유가 아니라 선택지 배열과 인정 구조 통제다.</li><li>AI 시대 사회계약은 생산수단 접근, 기여 경로 연결, 플랫폼 권력 조정을 포함해야 한다.</li><li>설명권·거부권·조정권은 사용자 편의 기능이 아니라 정치적 권리 UI다.</li></ul>
+<div class="rule"></div>
+<h2 class=" scholar-title">8. 루치아노 플로리디 Luciano Floridi</h2>
+<h3>프로필</h3>
+<ul><li>소속: Yale University Digital Ethics Center</li><li>분야: 정보철학, 디지털 윤리, AI 윤리, 거버넌스</li><li>대표 키워드: philosophy of information, infosphere, digital ethics, AI governance</li><li>마스터플랜 연결: 디지털 사회에서 개인·공동체·기술 환경을 하나의 정보 생태계로 보고, 권리와 책임을 재정의하는 이론적 기반.</li></ul>
+<h3>핵심 관점</h3>
+<p>플로리디는 인간이 정보환경 안에서 살아가는 존재이며, 디지털 기술은 단순 도구가 아니라 삶의 조건을 재구성하는 환경이라고 본다. 따라서 AI 윤리는 사후 규제가 아니라 정보 생태계 전체의 설계 문제다. 마스터플랜에서는 “정체성이 고유한 기여로 전환될 여건”을 개인 권리, 기술 설계, 공동체 책임의 결합으로 설명하는 데 쓴다.</p>
+<h3>읽을 자료</h3>
+<p>1. <em>The Fourth Revolution</em> — 정보기술이 인간 이해와 사회를 바꾸는 방식.</p>
+<p>2. <em>The Ethics of Information</em> — 정보환경에서 윤리와 책임의 재구성.</p>
+<p>3. AI4People 및 디지털 윤리 관련 글 — AI 거버넌스 원칙과 사회적 책임.</p>
+<h3>학습 질문</h3>
+<ul><li>AI는 도구인가, 인간이 살아가는 환경의 일부인가?</li><li>정보환경이 바뀌면 자유와 책임의 정의는 어떻게 바뀌는가?</li><li>디지털 사회계약은 권리 목록인가, 정보 생태계 설계 원칙인가?</li><li>정체성의 형성·발현·인정 조건을 윤리적으로 어떻게 설계할 것인가?</li></ul>
+<h3>마스터플랜 반영 포인트</h3>
+<ul><li>디지털 사회계약은 기술 사용 규칙이 아니라 정보환경 설계 원칙이다.</li><li>개인의 정체성은 플랫폼·데이터·AI 환경 안에서 형성되고 인정된다.</li><li>윤리는 선언이 아니라 설계·감사·조정 가능한 운영 체계로 구현되어야 한다.</li></ul>
+<div class="rule"></div>
+</section><section class="chapter"><div class="chapterNo">5</div><h1>7. 팀 학습 운영안</h1>
+<h2 class="">1주차: 경제질서</h2>
+<ul><li>읽기: 브린욜프슨 1개 강연/글 + 서스킨드 <em>A World Without Work</em> 요약 + 마추카토 미션경제 요약</li><li>산출물: “AI가 개인 생산능력을 강화하는 조건 5개”</li><li>토론 질문: 생산수단 개방은 복지인가, 성장전략인가?</li></ul>
+<h2 class="">2주차: 정치질서</h2>
+<ul><li>읽기: 아세모글루 <em>Power and Progress</em> 요약 + 벤지오 AI 안전 거버넌스 자료 + 플로리다 창조도시 요약</li><li>산출물: “개인·도시·국가·세계정부·플랫폼 권력 재배치 표”</li><li>토론 질문: 도시는 왜 생활정치의 기본 단위가 되는가?</li></ul>
+<h2 class="">3주차: 사회계약</h2>
+<ul><li>읽기: 주보프 감시자본주의 요약 + 플로리디 정보윤리 요약</li><li>산출물: “생산수단 개방 / 기여 경로 연결 / 플랫폼 권력 조정”별 권리·제도 초안</li><li>토론 질문: 설명권·거부권·조정권은 사용자 권리인가, 정치 권리인가?</li></ul>
+<h2 class="">4주차: 마스터플랜 반영</h2>
+<ul><li>산출물 1: 3.1·3.2·3.3별 근거 문장 3개씩</li><li>산출물 2: 외부 자문 질문지 8개 — 학자별 1문항</li><li>산출물 3: Working Paper 참고문헌 초안</li></ul>
+<div class="rule"></div>
+</section><section class="chapter"><div class="chapterNo">6</div><h1>8. 학자별 자문 질문 초안</h1>
+<h2 class="">브린욜프슨</h2>
+<p>AI가 표준 노동을 대체하면서도 인간의 목적 설정과 도메인 감각을 강화하는 방향으로 설계되려면, 어떤 생산성 지표와 조직 조건을 봐야 하는가?</p>
+<h2 class="">서스킨드</h2>
+<p>AI가 직업·소득·인정의 연결 방식을 약화시킬 때, 정체성 기반 생산자 경제와 생산수단 접근 보장은 어떤 대안적 분배·기여 질서가 될 수 있는가?</p>
+<h2 class="">마추카토</h2>
+<p>AI·데이터·컴퓨팅을 공공 생산수단으로 개방하려면, 국가는 시장 규제자가 아니라 어떤 방식의 시장 형성자·공공가치 설계자가 되어야 하는가?</p>
+<h2 class="">아세모글루</h2>
+<p>AI 권력이 플랫폼과 알고리즘에 집중될 때, 민주적 제도는 기술 진보의 방향을 어떻게 통제하고 포용적 제도로 전환할 수 있는가?</p>
+<h2 class="">벤지오</h2>
+<p>미·중 AI 패권경쟁 속에서 한국이 제안할 수 있는 독립 안전 검증, 공동 테스트베드, 국제 AI 거버넌스 규칙은 무엇이어야 하는가?</p>
+<h2 class="">플로리다</h2>
+<p>정체성 기반 생산자 경제에서 강소도시는 어떤 밀도, 다양성, 산업 연결 조건을 가져야 하며, 대도시 집중의 부작용을 어떻게 피할 수 있는가?</p>
+<h2 class="">주보프</h2>
+<p>추천·노출·평판·행동예측 시스템이 개인의 기회와 정체성 형성에 영향을 미칠 때, 사회계약은 플랫폼 권력을 어디까지 조정해야 하는가?</p>
+<h2 class="">플로리디</h2>
+<p>디지털 사회계약을 권리 목록이 아니라 정보환경 설계 원칙으로 본다면, 정체성의 형성·발현·인정 조건은 어떤 윤리 원칙으로 구성되어야 하는가?</p>
+<div class="rule"></div>
+</section><section class="chapter"><div class="chapterNo">7</div><h1>9. 출처 확인용 링크</h1>
+<ul><li>Erik Brynjolfsson — Stanford HAI: https://hai.stanford.edu/people/erik-brynjolfsson</li><li>Daniel Susskind — King’s College London: https://www.kcl.ac.uk/people/daniel-susskind</li><li>Daron Acemoglu — MIT Economics: https://economics.mit.edu/people/faculty/daron-acemoglu</li><li>Yoshua Bengio — Mila: https://mila.quebec/en/yoshua-bengio</li><li>Richard Florida — University of Toronto Rotman: https://www.rotman.utoronto.ca/FacultyAndResearch/Faculty/FacultyBios/Florida</li><li>Shoshana Zuboff — Harvard Business School: https://www.hbs.edu/faculty/Pages/profile.aspx?facId=6582</li><li>Mariana Mazzucato — UCL Institute for Innovation and Public Purpose: https://www.ucl.ac.uk/bartlett/public-purpose/</li><li>Luciano Floridi — Yale Digital Ethics Center: https://digitalethics.yale.edu/</li></ul></section>
+</body></html>

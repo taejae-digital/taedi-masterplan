@@ -1,0 +1,266 @@
+import fs from 'fs';
+import path from 'path';
+import puppeteer from 'puppeteer';
+const root=process.cwd();
+const outHtml=path.join(root,'drafts/scholar-pack-fable-prose.html');
+const outPdf=path.join(root,'archive/pdf/scholar-learning-pack-v0.11.5-fable.pdf');
+const imgDirs=[path.join(root,'drafts/scholar-images-parallel'), path.join(root,'drafts/scholar-images')];
+const slug=s=>s.toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'');
+function findImg(en){for(const d of imgDirs){if(!fs.existsSync(d))continue;for(const ext of ['.jpg','.jpeg','.png','.webp']){const p=path.join(d,slug(en)+ext);if(fs.existsSync(p))return 'file://'+p;}}return ''}
+
+// ============ 인용 학자 8명 — 줄글 ============
+const cited=[
+{ko:'에릭 브린욜프슨',en:'Erik Brynjolfsson',axis:'경제질서',axisNo:'O1',place:'미국 · Stanford HAI / Digital Economy Lab',field:'디지털 경제 · AI 생산성 · 인간-AI 보완',
+paras:[
+['누구인가','브린욜프슨은 디지털 기술이 경제를 어떻게 바꾸는지를 30년 가까이 실증적으로 추적해 온 경제학자다. MIT에서 오래 가르치다 지금은 스탠퍼드 인간중심 AI 연구소(HAI)와 디지털경제연구소를 이끈다. 그가 학계에서 차지하는 위치는 분명하다. “기술이 일자리를 없앤다/만든다”는 거친 논쟁을, 측정 가능한 생산성·과업·조직의 문제로 바꿔 놓은 사람이다.'],
+['핵심 주장','그의 출발점은 생산성 역설이다. 기업들이 컴퓨터와 AI에 막대한 돈을 쓰는데도 생산성 통계는 한참 동안 움직이지 않는다. 브린욜프슨의 답은 기술 자체가 아니라 조직에 있다. 새 기술의 이익은 업무를 과업 단위로 분해하고, 인간과 기계의 역할을 다시 짜고, 데이터·소프트웨어·운영방식 같은 무형자산을 함께 바꿀 때에야 나타난다. 그래서 그는 AI를 “대체 기술”이 아니라 “증강(augmentation) 기술”로 설계해야 한다고 주장한다. 같은 AI라도 인간을 흉내 내 대체하는 방향으로 쓰면 임금과 권력이 자본 쪽으로 쏠리고, 인간의 판단을 확장하는 방향으로 쓰면 더 많은 사람이 더 큰 생산 단위를 다루게 된다는 것이다.'],
+['마스터플랜과의 연결','마스터플랜 3.1은 “AI·데이터·컴퓨팅이 생산비를 떨어뜨려 개인이 기획·제작·분석·유통까지 다루는 생산자가 된다”는 논지로 시작한다. 이 문장의 경제학적 근거가 바로 브린욜프슨이다. 표준 과업의 비용이 0에 수렴할수록, 차별화는 “무엇을 만들지 정하는 기준” — 즉 정체성 — 에서 나온다. 그에게 물어야 할 것은 추상적 비전이 아니라 조건이다. 개인 생산자가 실제로 생산성을 내려면 어떤 데이터·컴퓨팅 접근과 업무 재설계가 필요한가.'],
+['읽을 자료와 논쟁','『The Second Machine Age』(2014)는 기계가 인지 과업까지 확장될 때 경제 전체가 어떻게 재편되는지 그린 입문서이고, 『Machine, Platform, Crowd』(2017)는 기업·시장·전문가의 경계가 기계지능·플랫폼·대중으로 대체되는 구조를 다룬다. 최신 논의는 스탠퍼드 디지털경제연구소의 브리핑이 가장 빠르다. 논쟁점은 두 가지다. 생산성 역설은 결국 시간이 해결하는가, 아니면 제도 개입이 필요한가. 그리고 증강이냐 대체냐의 갈림길에서 시장은 스스로 증강을 선택하는가.'],
+],ask:'한국형 공공 AI 인프라는 개인 생산자의 과업 재설계를 어떻게 지원해야 하는가?'},
+
+{ko:'다니엘 서스킨드',en:'Daniel Susskind',axis:'경제질서',axisNo:'O1',place:'영국 · King’s College London / Oxford Ethics in AI',field:'기술실업 · 일의 미래 · 분배와 의미',
+paras:[
+['누구인가','서스킨드는 옥스퍼드에서 경제학을 가르치다 지금은 킹스칼리지 런던에 있는, “일의 미래” 논의에서 가장 자주 인용되는 젊은 세대 경제학자다. 영국 총리실 정책 유닛에서 일한 경험이 있어 이론과 정책 언어를 모두 쓴다. 아버지 리처드 서스킨드와 함께 전문직의 미래를 다룬 연구로 출발해, 이후 자동화와 노동 전체의 문제로 시야를 넓혔다.'],
+['핵심 주장','그의 논지는 불편할 만큼 직선적이다. “기술이 일자리를 없애도 새 일자리가 생긴다”는 위로는 역사적으로 맞았지만, 앞으로도 맞으리라는 보장이 없다는 것이다. AI가 인간의 인지 과업까지 잠식하면, 남는 일자리가 있더라도 모두에게 돌아가지는 않는다. 더 중요한 것은 그 다음 질문이다. 산업사회는 노동을 통해 소득만이 아니라 지위·정체성·사회적 인정까지 배분해 왔다. 일이 줄어든다는 것은 분배 장치와 의미 장치가 동시에 흔들린다는 뜻이다. 그래서 그는 “일자리를 지키는 정책”보다 “일 없이도 소득과 의미가 배분되는 사회의 설계”를 미리 고민해야 한다고 주장한다.'],
+['마스터플랜과의 연결','마스터플랜이 “표준 직업에 편입되는 삶”에서 “자기 기여 영역을 만드는 삶”으로 과제를 옮긴 것은, 서스킨드가 제기한 공백 — 일이 약해질 때 소득·인정·의미를 무엇으로 배분할 것인가 — 에 대한 하나의 답이다. 정체성 기반 생산자 경제는 “일 없는 미래”를 복지로 버티는 그림이 아니라, 노동 중심 배분 질서 이후의 새 생산·기여 질서를 제시하는 것이다. 그에게는 기본소득과 생산수단 접근권의 차이를 따져 물어야 한다.'],
+['읽을 자료와 논쟁','『A World Without Work』(2020)가 대표작이다. 기술실업의 역사·메커니즘·정책 대응을 한 권으로 정리했고, “의미의 분배”라는 마지막 장이 마스터플랜과 가장 깊게 닿는다. 『Growth: A History and a Reckoning』(2024)은 성장이라는 목표 자체를 역사적으로 재검토한다. 논쟁점: 그의 비관적 고용 전망은 과장인가(오터의 과업 분석과 비교해 볼 것), 그리고 일이 줄어든 사회에서 인정과 지위는 정말 재설계 가능한가.'],
+],ask:'노동 중심 사회계약이 약해질 때 한국은 소득·기여·인정을 어떤 구조로 다시 묶어야 하는가?'},
+
+{ko:'마리아나 마추카토',en:'Mariana Mazzucato',axis:'경제질서',axisNo:'O1',place:'영국 · UCL Institute for Innovation and Public Purpose',field:'미션경제 · 공공가치 · 시장 형성 국가',
+paras:[
+['누구인가','마추카토는 UCL에 혁신·공공목적 연구소(IIPP)를 직접 만들어 이끄는 혁신경제학자다. 이탈리아 태생으로 미국에서 공부했고, 지금은 각국 정부와 EU·UN의 산업정책 자문으로 가장 바쁘게 불려 다니는 경제학자 중 하나다. 그의 영향력은 학술 논문보다 정부의 언어를 바꾼 데 있다. “국가는 시장의 심판이 아니라 공동 창조자”라는 명제가 그것이다.'],
+['핵심 주장','통념은 국가를 시장 실패의 사후 수리공으로 본다. 마추카토는 역사로 반박한다. 인터넷, GPS, 터치스크린, mRNA — 아이폰과 백신을 만든 핵심 기술의 뿌리는 모두 공공투자였다. 국가는 늘 시장을 만들어 왔으면서도 그 공을 민간에 넘겨 왔다는 것이다. 그래서 그는 국가가 명확한 미션을 정하고, 조달·투자·규제를 그 미션에 정렬시켜 새 시장을 형성해야 한다고 주장한다. 아폴로 계획이 그랬듯, 공공가치는 시장이 만든 가치를 재분배하는 것이 아니라 처음부터 함께 만드는 것이다.'],
+['마스터플랜과의 연결','마스터플랜 3.3의 “생산수단의 개방” — AI·데이터·컴퓨팅의 집중을 막고 개인의 접근을 보장한다 — 는 마추카토의 프레임 없이는 복지 정책으로 오독되기 쉽다. 그의 언어로 읽으면 이것은 분배가 아니라 생산정책이다. 공공 AI 인프라는 시혜가 아니라, 정체성 기반 생산자 경제라는 새 시장을 국가가 형성하는 미션이다. 한국이 디지털 사회계약 실험장이 되려면 어떤 미션 설정과 조달 구조가 필요한지가 그에게 던질 질문이다.'],
+['읽을 자료와 논쟁','『The Entrepreneurial State』(2013)는 “국가는 혁신하지 못한다”는 통념을 뒤집은 출세작이고, 『Mission Economy』(2021)는 미션 중심으로 정부를 재조직하는 방법론이다. IIPP의 공공가치 워킹페이퍼들은 정책 설계 도구로 바로 쓸 수 있다. 논쟁점: 국가가 시장을 형성할 때 관료의 무능과 이익집단 포획은 어떻게 막는가. 미션의 성패를 GDP가 아니면 무엇으로 측정하는가. 비판자들은 그가 국가의 실패 사례를 과소평가한다고 말한다 — 이 반론까지 알고 가야 대화가 된다.'],
+],ask:'태재가 제안할 공공 AI 인프라 미션은 교육·도시·산업 중 어디서 먼저 실험해야 하는가?'},
+
+{ko:'대런 아세모글루',en:'Daron Acemoglu',axis:'정치질서',axisNo:'O2',place:'미국 · MIT Institute Professor',field:'제도경제학 · 정치경제 · 기술과 권력',
+paras:[
+['누구인가','아세모글루는 현존 경제학자 중 가장 많이 인용되는 인물군에 속하는 MIT 석좌교수이고, 2024년 노벨경제학상 수상자다. 터키 출신으로, 국가의 흥망을 제도의 차이로 설명한 연구로 이름을 얻었다. 최근 10년은 연구의 무게중심을 기술로 옮겨, AI와 자동화가 권력과 분배에 미치는 효과를 파고들고 있다.'],
+['핵심 주장','그의 평생 명제는 하나로 요약된다. 번영을 가르는 것은 지리도 문화도 기술도 아니고 제도다. 소수가 권력과 기회를 독점하는 착취적 제도는 결국 실패하고, 권력이 분산되고 기회가 열린 포용적 제도가 장기 번영을 만든다. 『Power and Progress』에서 이 명제를 기술에 적용한다. 기술 진보의 이익이 모두에게 돌아간 시기는 자동으로 온 것이 아니라, 노동조합·민주주의·규제가 기술의 방향을 강제로 틀었을 때였다. AI도 마찬가지다. 지금의 AI는 “과도한 자동화” — 생산성 이득은 작은데 노동 대체와 권력 집중은 큰 방향 — 으로 쏠려 있고, 이 방향은 시장이 아니라 사회가 바꿔야 한다.'],
+['마스터플랜과의 연결','마스터플랜 3.2가 “플랫폼·알고리즘은 경제 인프라이자 정치 권력”이라고 쓸 때, 그리고 국가를 “독점 통치자가 아니라 분산 권력의 오케스트레이터”로 재정의할 때, 그 이론적 기둥이 아세모글루다. 정체성 기반 생산자 경제도 그의 언어로 번역하면 “포용적 제도의 디지털 버전”이다. AI·데이터·컴퓨팅이라는 새 생산수단에 대한 접근이 열려 있는가, 닫혀 있는가가 디지털 시대의 포용/착취를 가른다.'],
+['읽을 자료와 논쟁','『Why Nations Fail』(2012)은 제도론의 대중적 완성판이고, 『Power and Progress』(2023, 사이먼 존슨 공저)는 천 년의 기술사로 “진보는 방향 설정의 문제”임을 논증한다. AI 자동화 논문들은 과업 모델로 자동화 편향을 측정한다. 논쟁점: 기술의 방향을 민주적으로 정한다는 것이 구체적으로 어떤 제도인가. 그리고 노벨상 수상 이후 그의 AI 비관론 — “AI의 생산성 효과는 과대평가됐다” — 은 브린욜프슨의 낙관과 정면으로 부딪힌다. 두 사람을 같은 테이블에 놓고 읽어야 한다.'],
+],ask:'한국은 AI 기술 방향을 민주적으로 조정할 제도 실험을 도시 단위에서 어떻게 만들 수 있는가?'},
+
+{ko:'요슈아 벤지오',en:'Yoshua Bengio',axis:'정치질서',axisNo:'O2',place:'캐나다 · Université de Montréal / Mila',field:'딥러닝 · AI 안전 · 프런티어 거버넌스',
+paras:[
+['누구인가','벤지오는 힌턴, 르쿤과 함께 딥러닝을 만든 “3인방”의 한 사람으로 2018년 튜링상을 받았다. 몬트리올대 교수이자 세계 최대 규모의 학술 AI 연구소인 Mila의 설립자다. 그가 특별한 것은 경력의 방향 전환이다. 자신이 만든 기술이 프런티어 모델로 거대해지자, 최근 수년은 연구 시간의 대부분을 AI 안전과 국제 거버넌스에 쓰고 있다. 국제 AI 안전성 보고서의 의장을 맡아 각국 정부에 보고하는 역할도 그의 몫이다.'],
+['핵심 주장','벤지오의 경고는 기술자의 경고라서 무겁다. 고도 AI는 생산성 도구이면서 동시에 권력 집중·안보 위험·통제 실패를 키울 수 있는 범용 기술이다. 더 능력 있는 AI는 더 큰 경제·군사적 보상을 주기 때문에, 기업과 강대국은 안전이 검증되기 전에 속도를 선택할 구조적 유인을 갖는다. 그래서 자율규제는 답이 될 수 없다. 그는 독립적 안전 평가, 프런티어 모델에 대한 공적 검증, 그리고 항공·원자력처럼 국제적으로 합의된 안전 기준을 요구한다. 최근에는 행위자성(agency)을 갖지 않는 “과학자 AI” 같은 안전한 설계 경로를 직접 연구한다.'],
+['마스터플랜과의 연결','마스터플랜 4.1은 미·중 AI 패권경쟁을 “안전한 경합”으로 전환하는 레드라인과 교환물을 설계한다. 벤지오는 이 그림의 기술적 신뢰성을 담보하는 인물이다. 공동위원회·기술 감사단·군사 AI 핫라인 같은 4.1의 실행 장치들은 그가 요구해 온 독립 검증 체제와 정확히 겹친다. 한국이 “검증 가능한 AI 사회계약 실험장”을 제안한다면, 그 검증의 기준과 권한을 그에게 물어야 한다.'],
+['읽을 자료와 논쟁','단행본보다 문서가 중요한 학자다. 그가 의장을 맡은 International AI Safety Report, AI 위험 공개서한들, Mila의 거버넌스 자료, 그리고 안전한 AI 설계에 관한 최근 논문·강연이 핵심이다. 논쟁점: 오픈소스 모델 공개와 안전 통제는 양립하는가(개방을 주장하는 진영과 정면충돌). 국제 안전기구는 권고 기관인가, 감사·제재 권한을 가져야 하는가. 그리고 실존적 위험론은 현재의 구체적 해악 — 차별·감시·노동 — 에서 시선을 빼앗는다는 비판(크로퍼드, 휘터커)에 어떻게 답하는가.'],
+],ask:'한국이 제안할 AI 안전 검증 도시·산업 테스트베드는 어떤 권한과 데이터를 가져야 하는가?'},
+
+{ko:'리처드 플로리다',en:'Richard Florida',axis:'도시·정치질서',axisNo:'O2',place:'캐나다 · University of Toronto Rotman School',field:'도시경제 · 창조계급 · 지역혁신',
+paras:[
+['누구인가','플로리다는 토론토대 로트먼 경영대학원에 있는 도시연구자로, 2000년대 “창조도시” 담론을 사실상 혼자 만들었다. 학자이면서 도시 정책 컨설턴트로도 활동해, 전 세계 시장(市長)들이 가장 많이 불러간 학자라는 말을 듣는다. 그만큼 비판도 가장 많이 받았고 — 드물게도 — 자기 이론의 어두운 면을 스스로 정정한 책을 낸 학자다.'],
+['핵심 주장','도시의 경쟁력은 공장도 항만도 아니고 사람이다. 그의 3T — 인재(Talent)·관용(Tolerance)·기술(Technology) — 공식에서 핵심은 관용이다. 다양한 정체성과 생활방식을 받아들이는 도시가 창의적 인재를 끌어모으고, 그 밀도가 혁신을 만든다. 창조계급은 엔지니어·예술가·연구자·디자이너처럼 새로움을 만드는 일로 먹고사는 사람들이고, 이들은 일자리를 따라가는 것이 아니라 살고 싶은 도시를 먼저 고른다. 후기 저작에서는 정반대 문제를 다룬다. 성공한 창조도시일수록 주거비가 폭등해 그 도시를 만든 사람들을 밀어낸다는 “새로운 도시 위기”다.'],
+['마스터플랜과의 연결','마스터플랜 4.3의 강소도시는 플로리다의 통찰을 한국 지형에 번역한 것이다. 도시는 행정 단위가 아니라 정체성·산업·교육·생활이 가까이 붙는 실험장이고, 도시 간 차이는 격차가 아니라 다양한 정체성 생태계의 조건이다. 단, 마스터플랜은 그의 대도시 중심 모델을 그대로 따르지 않는다. 3~5만 규모 강소도시 + 서버시티 벨트라는 구조는 “창조도시의 혜택을 대도시 바깥으로 분산할 수 있는가”라는, 플로리다 본인도 풀지 못한 질문에 대한 우리의 가설이다.'],
+['읽을 자료와 논쟁','『The Rise of the Creative Class』(2002)는 출발점이고, 『The New Urban Crisis』(2017)는 자기 정정판 — 창조도시가 만든 불평등·젠트리피케이션을 정면으로 다룬다. 두 권을 세트로 읽어야 균형이 잡힌다. 논쟁점: 창조계급 유치 전략은 결국 카페와 자전거도로로 부유층을 모으는 정책 아니냐는 비판, 관용→혁신의 인과가 실증되느냐는 방법론 시비, 그리고 원격근무 시대에 밀도의 가치는 여전히 유효한가.'],
+],ask:'한국의 강소도시는 어떤 산업·문화·교육 조합으로 정체성 기반 생산자를 길러야 하는가?'},
+
+{ko:'쇼샤나 주보프',en:'Shoshana Zuboff',axis:'사회계약',axisNo:'O3',place:'미국 · Harvard Business School 명예교수',field:'감시자본주의 · 플랫폼 권력 · 행동 데이터',
+paras:[
+['누구인가','주보프는 하버드 경영대학원 종신교수직을 가진 최초의 여성 중 한 명으로, 1980년대부터 정보기술과 노동의 관계를 연구해 왔다. 30년의 연구를 집약해 일흔을 앞두고 내놓은 『감시자본주의 시대』(2019)는 빅테크 비판의 표준 어휘를 만들었다. “감시자본주의”라는 말 자체가 그의 발명품이다.'],
+['핵심 주장','구글이 발견한 것은 검색이 아니라 부산물이었다. 사용자의 행동 데이터 중 서비스 개선에 쓰고 남는 잉여 — 행동잉여 — 를 모으면 인간의 미래 행동을 예측할 수 있고, 그 예측은 광고주에게 팔린다. 여기서 새로운 축적 논리가 태어난다. 인간 경험 자체가 무상의 원료가 되는 경제, 감시자본주의다. 더 나아가 플랫폼은 예측을 넘어 개입한다. 추천·노출·기본값·넛지로 선택의 환경 자체를 설계해 행동을 유도하는 권력 — 그는 이를 도구주의 권력이라 부른다 — 은 명령하지 않기 때문에 저항도 받지 않는다. 문제의 본질은 프라이버시 침해가 아니라, 미래 시제에 대한 권리의 침탈이다.'],
+['마스터플랜과의 연결','마스터플랜 3.3이 “플랫폼 권력의 조정”을 새 사회계약의 3대 합의에 넣은 직접적 근거가 주보프다. 정체성 기반 생산자는 플랫폼의 추천·노출·평판 구조를 통해서만 시장에 도달한다. 그 구조가 불투명한 채로 남으면, 개인의 정체성이 기여로 전환될 “여건” 자체가 사적 권력에 저당잡힌다. 설명권·거부권·조정권이라는 마스터플랜의 권리 설계는 그의 진단에 대한 제도적 응답이다.'],
+['읽을 자료와 논쟁','『The Age of Surveillance Capitalism』(2019)이 모든 것의 출발점이다. 700쪽이 부담스러우면 핵심 개념 — 행동잉여, 예측상품, 도구주의 권력 — 을 다룬 1·2부와 결론을 먼저 읽는다. 강연과 인터뷰가 요약 경로로 훌륭하다. 논쟁점: “감시자본주의”는 자본주의의 변종인가, 그냥 자본주의인가(좌파 쪽 비판). 데이터 소유권을 개인에게 주면 해결되는가, 아니면 소유권 프레임 자체가 함정인가. 규제는 추출을 금지해야 하는가, 투명하게 관리해야 하는가.'],
+],ask:'마스터플랜의 권리 UI는 추천·노출·평판 권력을 어디까지 설명·거부·조정하게 해야 하는가?'},
+
+{ko:'루치아노 플로리디',en:'Luciano Floridi',axis:'사회계약',axisNo:'O3',place:'미국/이탈리아 · Yale Digital Ethics Center / Bologna',field:'정보윤리 · 디지털 거버넌스 · Infosphere',
+paras:[
+['누구인가','플로리디는 “정보철학”이라는 분야를 사실상 창설한 철학자다. 옥스퍼드에서 오래 가르쳤고 지금은 예일 디지털윤리센터를 이끈다. 철학자로는 드물게 정책 현장 깊숙이 들어가 있어, EU의 AI 윤리 가이드라인과 각국 디지털 규제 설계에 직접 참여해 왔다. 추상적 윤리학을 입법 언어로 번역할 수 있는 거의 유일한 인물이라는 평가를 받는다.'],
+['핵심 주장','그의 출발점은 존재론이다. 디지털 혁명은 네 번째 혁명이다. 코페르니쿠스가 우주의 중심에서, 다윈이 생명의 중심에서, 프로이트가 의식의 중심에서 인간을 끌어내렸듯, 정보기술은 인간이 정보권(infosphere)의 유일한 지적 행위자라는 특권을 끝냈다. 인간은 이제 온라인과 오프라인이 융합된 “온라이프(onlife)” 조건에서, 알고리즘과 함께 정보환경을 구성하며 산다. 그렇다면 윤리의 단위도 바뀌어야 한다. 개별 데이터의 보호가 아니라 정보환경 전체의 설계가 윤리의 문제다. 정체성도 마찬가지다. 우리는 정보환경 속에서 자신을 구성하므로, 그 환경의 품질이 곧 자아의 조건이 된다.'],
+['마스터플랜과의 연결','마스터플랜 3.3이 사회계약을 “권리 목록”이 아니라 “정체성이 형성·발현·인정되는 여건의 보장”으로 정의한 것은 플로리디의 관점과 정확히 공명한다. 형성·발현·인정은 모두 정보환경 안에서 일어나는 과정이고, 따라서 새 사회계약은 그 환경을 누가 어떤 원칙으로 설계하는가에 대한 합의다. AI 윤리를 금지 목록이 아니라 “공동체가 보장할 정보환경의 최소 품질”로 읽는 마스터플랜의 태도가 곧 그의 방법론이다.'],
+['읽을 자료와 논쟁','『The Fourth Revolution』(2014)이 가장 접근하기 좋은 입문서이고, 『The Ethics of Information』(2013)은 이론적 본체다. 정책 쪽으로는 AI4People 프레임워크 — EU AI 윤리 가이드라인의 모태 — 관련 논문들이 실용적이다. 논쟁점: 윤리 원칙은 실제 권력을 움직이는가, 아니면 빅테크의 “윤리 세탁(ethics washing)”에 알리바이를 제공하는가(그 자신이 이 비판의 표적이 된 적도, 가장 날카로운 응답자였던 적도 있다). 정보권 개념은 보편적인가, 서구 중심적인가.'],
+],ask:'정체성의 형성·발현·인정을 보장하는 정보환경의 최소 조건은 무엇인가?'}
+];
+
+// ============ 후보 학자 16명 — 줄글 단락 ============
+const candidates=[
+['데이비드 오터','David Autor','미국 · MIT · 노동경제학','오터는 “기술이 일자리를 없앤다”는 거친 문장을 과업(task) 단위로 분해해, 어떤 일이 기계로 가고 어떤 일이 사람에게 남는지를 측정 가능하게 만든 노동경제학자다. 중간숙련 일자리가 비어가는 노동시장 양극화 분석이 그의 대표 업적이다. 서스킨드의 비관론을 검증할 때 반대편 저울로 읽는다. 최근에는 AI가 오히려 중간층의 전문성 접근을 넓힐 수 있다는 신중한 낙관도 내놓았다.','3.1 노동 재편 논지의 실증 보강 — 서스킨드와 짝으로 읽기'],
+['요하이 벤클러','Yochai Benkler','미국 · Harvard Law School','벤클러는 위키피디아와 오픈소스가 보여준 “시장도 기업도 아닌 생산” — 공유지 기반 동료생산(commons-based peer production) — 을 이론화한 법학자다. 네트워크가 생산비를 낮추면 개인들의 자발적 협업이 기업과 경쟁하는 생산양식이 된다는 그의 논지는, 정체성 기반 생산자들이 어떻게 조직 없이 협업하는가에 대한 가장 오래된 답이다.','정체성 기반 생산자 경제의 협업 구조 이론'],
+['캐시 오닐','Cathy O’Neil','미국 · 수학자·데이터과학자','월가 퀀트 출신의 수학자로, 신용점수·채용·보험·치안의 알고리즘이 어떻게 불평등을 자동화하는지 내부자의 눈으로 고발했다. 『대량살상수학무기』가 대표작. 알고리즘 감사(audit) 회사를 직접 운영하며 비판을 실무로 옮겼다. 마스터플랜의 설명권·거부권 설계에 가장 구체적인 사례집을 제공한다.','권리 UI — 알고리즘 설명·거부권의 사례 기반'],
+['케이트 크로퍼드','Kate Crawford','미국/호주 · USC / Microsoft Research','크로퍼드는 AI를 알고리즘이 아니라 지도(atlas)로 그린다. 데이터 노동, 리튬 광산, 데이터센터 전력, 군사 계약 — AI는 지구적 자원과 노동을 추출하는 물질적 권력 체계라는 것이다. AI 인프라의 “접근”을 말하기 전에 그 인프라가 무엇으로 만들어지는지 묻게 하는 학자다.','AI 인프라 접근권 논의의 물질적 토대'],
+['버지니아 유뱅크스','Virginia Eubanks','미국 · University at Albany','유뱅크스는 복지 자동화 시스템이 빈곤층을 어떻게 감시하고 처벌하는지를 현장 추적했다. “디지털 구빈원”이라는 그의 표현대로, 알고리즘 행정은 가장 약한 곳에서 가장 가혹하게 작동한다. 마스터플랜의 안전망 설계가 “효율화된 배제”로 변질되지 않으려면 반드시 거쳐야 할 경고다.','국가 안전망의 알고리즘화 위험 점검'],
+['메러디스 휘터커','Meredith Whittaker','미국 · Signal Foundation','구글에서 노동 행동을 조직하다 나와 AI Now 연구소를 공동 설립했고, 지금은 시그널 재단 회장이다. AI 산업이 소수 빅테크의 컴퓨팅·데이터 독점 위에 서 있다는 구조 비판과, 감시 없는 인프라의 실존 증명(시그널) 양쪽을 모두 가진 드문 인물이다.','플랫폼 권력 조정과 공공 AI의 실천 사례'],
+['사피야 우모자 노블','Safiya Umoja Noble','미국 · UCLA','노블은 검색엔진이 중립적 도구가 아니라 인종·성별 편견을 재생산하는 상업 시스템임을 보였다. 『억압의 알고리즘』이 대표작. 노출과 검색이 정체성의 사회적 인정을 좌우한다는 그의 논지는, 마스터플랜의 “인정 조건” 설계와 직결된다.','노출·추천 구조의 정치성 — 인정 조건 보강'],
+['루하 벤저민','Ruha Benjamin','미국 · Princeton','벤저민은 기술이 “중립”을 가장할 때 차별이 더 깊게 코드화된다는 New Jim Code 개념으로, 설계 단계의 정의(design justice)를 요구한다. 기술 낙관도 비관도 아닌 “상상력의 재분배”를 말하는 점이 독특하다. 사회계약의 차별 방지 기준을 설계할 때의 준거다.','AI 사회계약의 차별 방지 기준'],
+['제프리 힌턴','Geoffrey Hinton','캐나다/영국 · University of Toronto','딥러닝의 아버지이자 2024년 노벨물리학상 수상자. 구글을 떠나며 자신이 만든 기술의 위험을 경고하는 쪽으로 돌아섰다. 벤지오와 함께 “기술 창시자의 경고”라는 가장 무거운 형태의 AI 안전론을 대표한다. 위험 시간표에 대한 그의 발언은 4.1 레드라인 설계의 긴급성 근거가 된다.','4.1 AI 안전·안보 논지의 무게 보강'],
+['스튜어트 러셀','Stuart Russell','미국 · UC Berkeley','세계 표준 AI 교과서의 저자이면서, “목표를 고정한 AI”라는 설계 패러다임 자체를 바꾸자고 주장한다. AI는 인간의 선호를 불확실하게 추정하며 인간에게 꺼질 여지를 남겨야 한다는 Human Compatible 설계론이다. 자율살상무기 금지 운동의 핵심 인물이기도 하다.','프런티어 거버넌스의 기술철학적 기초'],
+['아제이 아그라왈','Ajay Agrawal','캐나다 · University of Toronto','아그라왈은 AI를 신비화하지 않고 “예측 비용의 하락”이라는 경제학 한 줄로 환원한다. 예측이 싸지면 판단·데이터·행동 같은 보완재의 가치가 오른다는 프레임은, AI 시대에 인간의 어떤 역량이 비싸지는가 — 곧 정체성과 판단 — 를 설명하는 가장 깔끔한 도구다.','AI 경제질서의 비용 구조 프레임'],
+['카를로타 페레스','Carlota Perez','영국/베네수엘라 · 기술혁명 연구','페레스는 증기기관부터 정보기술까지 다섯 번의 기술혁명이 모두 “금융 거품 → 붕괴 → 제도 재편 → 황금기”의 파동을 그렸음을 보였다. 지금이 정보기술 혁명의 제도 재편기라면, 마스터플랜의 새 사회계약은 바로 그 황금기를 여는 제도 설계에 해당한다. 전체 기획을 역사적 시간축 위에 놓아 주는 학자다.','디지털 전환의 장기 역사 프레임'],
+['사스키아 사센','Saskia Sassen','미국 · Columbia','사센은 “글로벌 도시” 개념의 창시자다. 세계화는 공간을 해체하는 것이 아니라 금융·정보·이주 네트워크의 결절점 도시들로 권력을 재집중시킨다는 통찰이다. 국가 아래가 아니라 국가를 가로지르는 도시 네트워크라는 그의 시각은 4.3 도시경영과 4.1 세계질서를 잇는 다리다.','도시경영과 세계질서의 연결 이론'],
+['에드워드 글레이저','Edward Glaeser','미국 · Harvard','글레이저는 도시를 “인간의 가장 위대한 발명”이라 부르는 도시경제학의 대표 낙관론자다. 도시의 본질은 건물이 아니라 근접성이 만드는 학습과 혁신의 증폭이라는 것. 플로리다가 누가 도시를 택하는가를 묻는다면, 글레이저는 도시가 사람을 어떻게 키우는가를 묻는다. 강소도시의 학습 밀도 설계에 직접 쓰인다.','4.3 강소도시 — 학습·혁신 밀도의 근거'],
+['앨리슨 고프닉','Alison Gopnik','미국 · UC Berkeley','고프닉은 아동의 학습을 연구하는 발달심리학자로, 아이는 지시된 수행이 아니라 탐색과 놀이 속에서 세계 모델을 만든다는 것을 실험으로 보였다. 양육을 “목수(설계)가 아니라 정원사(환경)”로 비유한 것이 유명하다. 가정을 정체성 발견의 첫 현장으로 정의한 4.4의 과학적 토대이며, AI 연구자들이 아동 학습에서 배우려 할 만큼 AI와의 접점도 있다.','4.4 가정경영 — 정체성 발견의 발달과학'],
+['아마르티아 센','Amartya Sen','미국/인도 · Harvard · 1998 노벨경제학상','센의 역량 접근은 발전을 소득이 아니라 “사람이 실제로 할 수 있고 될 수 있는 것의 확장”으로 재정의했다. 마스터플랜의 “여건 보장” — 결과가 아니라 정체성이 기여로 전환될 조건의 보장 — 은 센의 역량 개념을 디지털 시대에 번역한 것이다. 새 사회계약의 규범적 기초로 가장 깊은 뿌리를 제공한다.','새 사회계약의 자유·역량 규범 기초'],
+];
+
+const G='#c9a227';
+const INK='#101216';
+const axisColor={O1:'#0d7d72',O2:'#2f5fa8',O3:'#b08322'};
+
+function photoEl(s){
+  const u=findImg(s.en);
+  if(u) return `<div class="pwrap"><img class="photo" src="${u}"/></div>`;
+  return `<div class="pwrap"><div class="photo ph">${s.ko.slice(0,2)}</div></div>`;
+}
+
+const scholarPages=cited.map((s,i)=>{
+const ac=axisColor[s.axisNo];
+return `<section class="sheet scholar">
+  <div class="bigno">${String(i+1).padStart(2,'0')}</div>
+  <div class="shead">
+    ${photoEl(s)}
+    <div class="sid">
+      <div class="axisline"><span class="axchip" style="background:${ac}">${s.axisNo}</span><span class="axname">${s.axis}</span></div>
+      <h1>${s.ko}</h1>
+      <div class="en">${s.en}</div>
+      <div class="meta">${s.place} — ${s.field}</div>
+    </div>
+  </div>
+  <div class="rule"><span style="background:${ac}"></span></div>
+  <div class="prose">
+    ${s.paras.map(p=>`<div class="pblock"><div class="plab" style="color:${ac}">${p[0]}</div><p>${p[1]}</p></div>`).join('')}
+  </div>
+  <div class="askband" style="border-color:${ac}">
+    <div class="asklab" style="color:${ac}">자문 질문</div>
+    <div class="askq">${s.ask}</div>
+  </div>
+  <div class="pfoot"><span>TAEJAE FUTURE STRATEGY INSTITUTE</span><span>SCHOLAR LEARNING PACK · v0.11.5</span><span>${String(i+3).padStart(2,'0')}</span></div>
+</section>`}).join('\n');
+
+const candEntry=(c,i)=>`<div class="centry">
+  <div class="chead"><span class="cno">${String(i+1).padStart(2,'0')}</span><h3>${c[0]}</h3><span class="cen">${c[1]}</span><span class="cpl">${c[2]}</span></div>
+  <p>${c[3]}</p>
+  <div class="cuse">${c[4]}</div>
+</div>`;
+const candA=candidates.slice(0,6).map((c,i)=>candEntry(c,i)).join('');
+const candB=candidates.slice(6,11).map((c,i)=>candEntry(c,i+6)).join('');
+const candC=candidates.slice(11).map((c,i)=>candEntry(c,i+11)).join('');
+
+function candPage(no,kicker,title,lead,body,pageNo){
+return `<section class="sheet candpage">
+  <div class="gk">${kicker}</div>
+  <h1>${title}</h1>
+  ${lead?`<div class="lead">${lead}</div>`:''}
+  <div class="clist">${body}</div>
+  <div class="pfoot"><span>TAEJAE FUTURE STRATEGY INSTITUTE</span><span>SCHOLAR LEARNING PACK · v0.11.5</span><span>${pageNo}</span></div>
+</section>`}
+
+const html=`<!doctype html><html lang="ko"><head><meta charset="utf-8"/><style>
+@page{size:A4;margin:0}
+*{box-sizing:border-box;-webkit-print-color-adjust:exact;print-color-adjust:exact;margin:0;padding:0}
+body{font-family:Pretendard,-apple-system,BlinkMacSystemFont,"Noto Sans KR","Apple SD Gothic Neo",sans-serif;color:${INK};word-break:keep-all}
+.sheet{width:210mm;height:297mm;position:relative;overflow:hidden;page-break-after:always;background:#fbfaf7}
+/* COVER */
+.cover{background:${INK};color:#f5f2ea;padding:24mm 20mm}
+.cover .frame{position:absolute;inset:9mm;border:0.4mm solid rgba(201,162,39,.55)}
+.cover .frame:after{content:"";position:absolute;inset:1.6mm;border:0.15mm solid rgba(201,162,39,.3)}
+.cv{position:relative;height:100%;display:flex;flex-direction:column;padding:8mm 6mm}
+.cv .org{font-size:9.5pt;letter-spacing:.42em;color:rgba(245,242,234,.75);font-weight:700}
+.cv .gold-rule{width:34mm;height:0.8mm;background:${G};margin:9mm 0 12mm}
+.cv h1{font-size:42pt;line-height:1.12;font-weight:850;letter-spacing:-1.2px}
+.cv h1 em{font-style:normal;color:${G}}
+.cv .sub{margin-top:9mm;font-size:12.5pt;line-height:1.78;color:rgba(245,242,234,.78);max-width:148mm;font-weight:450}
+.cv .stats{margin-top:auto;display:grid;grid-template-columns:repeat(3,1fr);gap:6mm}
+.cv .stat{border-top:0.5mm solid rgba(201,162,39,.65);padding-top:4mm}
+.cv .stat b{font-size:23pt;font-weight:850;color:${G};display:block;letter-spacing:-0.5px}
+.cv .stat span{font-size:9.5pt;color:rgba(245,242,234,.72);line-height:1.5;display:block;margin-top:1.5mm}
+.cv .edition{position:absolute;right:6mm;top:7mm;text-align:right;font-size:8.5pt;letter-spacing:.28em;color:rgba(245,242,234,.55);line-height:2}
+/* GUIDE */
+.guide{padding:20mm 19mm 16mm}
+.gk{font-size:9pt;font-weight:800;letter-spacing:.34em;color:${G}}
+.guide h1,.candpage h1{font-size:25pt;font-weight:850;letter-spacing:-0.8px;margin:4mm 0 4mm}
+.guide .gp{font-size:11pt;line-height:1.88;color:#33373f;margin-bottom:4.5mm;max-width:172mm}
+.guide .gp b{font-weight:850;color:${INK}}
+.axes{display:grid;grid-template-columns:repeat(3,1fr);gap:5mm;margin:7mm 0 8mm}
+.axis-card{border:0.3mm solid #d9d5ca;background:#fff;padding:5.5mm;position:relative}
+.axis-card .top{height:1.1mm;position:absolute;left:0;right:0;top:0}
+.axis-card .no{font-size:9pt;font-weight:900;letter-spacing:.2em;margin-bottom:2mm}
+.axis-card b{font-size:14pt;font-weight:850;display:block;margin-bottom:2mm}
+.axis-card .who{font-size:9.5pt;font-weight:700;color:#30343a;margin-bottom:2mm;line-height:1.5}
+.axis-card p{font-size:9.5pt;line-height:1.6;color:#5a5f68}
+/* SCHOLAR */
+.scholar{padding:15mm 17mm 13mm}
+.bigno{position:absolute;right:10mm;top:5mm;font-size:58pt;font-weight:950;color:#e9e5d8;letter-spacing:-3px;line-height:1}
+.shead{display:grid;grid-template-columns:30mm 1fr;gap:6mm;align-items:center;position:relative}
+.pwrap{width:28mm;height:28mm;position:relative}
+.pwrap:after{content:"";position:absolute;inset:-1.6mm;border:0.35mm solid ${G};border-radius:50%}
+.photo{width:28mm;height:28mm;border-radius:50%;object-fit:cover;filter:grayscale(100%) contrast(1.04)}
+.ph{display:flex;align-items:center;justify-content:center;background:#ece8dd;font-size:15pt;font-weight:900;color:#9b9483;border-radius:50%}
+.axisline{display:flex;align-items:center;gap:2.5mm;margin-bottom:1.6mm}
+.axchip{color:#fff;font-size:8pt;font-weight:900;letter-spacing:.12em;padding:0.8mm 2.4mm;border-radius:0.8mm}
+.axname{font-size:9.5pt;font-weight:800;letter-spacing:.14em;color:#6a6f78}
+.scholar h1{font-size:22pt;font-weight:880;letter-spacing:-0.7px;line-height:1.05;display:inline}
+.en{font-size:10pt;color:#8a8576;font-weight:650;letter-spacing:.05em;margin:1mm 0 1.6mm}
+.meta{font-size:9.6pt;color:#30343a;font-weight:600;line-height:1.55}
+.rule{height:0.5mm;background:#e2ddd0;margin:5mm 0 5.5mm;position:relative}
+.rule span{position:absolute;left:0;top:0;bottom:0;width:34mm}
+.prose{}
+.pblock{margin-bottom:4.6mm}
+.plab{font-size:8.5pt;font-weight:900;letter-spacing:.22em;margin-bottom:1.6mm}
+.pblock p{font-size:10.1pt;line-height:1.78;color:#2c3038;text-align:justify}
+.askband{margin-top:5mm;background:${INK};padding:5.5mm 7mm;display:grid;grid-template-columns:22mm 1fr;gap:5mm;align-items:center;border-left:1.6mm solid}
+.asklab{font-size:8.5pt;font-weight:900;letter-spacing:.24em}
+.askq{color:#f5f2ea;font-size:12.5pt;line-height:1.5;font-weight:750;letter-spacing:-0.2px}
+.pfoot{position:absolute;left:17mm;right:17mm;bottom:7mm;display:flex;justify-content:space-between;font-size:7.5pt;letter-spacing:.22em;color:#a59f8e;font-weight:700;border-top:0.25mm solid #e0dbce;padding-top:2.2mm}
+/* CANDIDATES prose list */
+.candpage{padding:17mm 19mm 14mm}
+.candpage .lead{font-size:10.5pt;line-height:1.7;color:#4a4f58;margin-bottom:6mm;max-width:165mm}
+.clist{}
+.centry{margin-bottom:5.2mm;padding-bottom:4.6mm;border-bottom:0.2mm solid #e2ddd0}
+.centry:last-child{border-bottom:none}
+.chead{display:flex;align-items:baseline;gap:2.6mm;margin-bottom:1.8mm}
+.cno{font-size:10pt;font-weight:950;color:${G}}
+.chead h3{font-size:13pt;font-weight:850;letter-spacing:-0.3px}
+.cen{font-size:8.8pt;color:#8a8576;font-weight:650}
+.cpl{font-size:8.8pt;color:#5a5f68;font-weight:700;margin-left:auto}
+.centry p{font-size:9.9pt;line-height:1.74;color:#33373f;text-align:justify}
+.cuse{margin-top:1.8mm;font-size:8.6pt;font-weight:850;color:#8a8576;letter-spacing:.02em}
+.cuse:before{content:"▸ 마스터플랜 활용 — ";color:${G}}
+</style></head><body>
+
+<section class="sheet cover">
+  <div class="frame"></div>
+  <div class="cv">
+    <div class="edition">MASTERPLAN v0.11.5<br/>PROSE EDITION · 2026.06</div>
+    <div class="org">TAEJAE FUTURE STRATEGY INSTITUTE</div>
+    <div class="gold-rule"></div>
+    <h1>학자 학습자료<br/><em>Scholar Learning Pack</em></h1>
+    <div class="sub">마스터플랜의 세 축 — 경제질서·정치질서·사회계약 — 을 검증하기 위한 대화 준비 자료. 인용 학자 8명을 한 사람당 한 페이지의 줄글로 깊게 읽고, 후보 학자 16명을 이어 읽는다. 목표는 이름의 암기가 아니라, 이 분야의 전문 학자와 마주 앉아 바로 토론할 수 있는 수준이다.</div>
+    <div class="stats">
+      <div class="stat"><b>8</b><span>인용 학자 — 누구인가 · 핵심 주장 · 마스터플랜 연결 · 읽을 자료와 논쟁</span></div>
+      <div class="stat"><b>16</b><span>후보 학자 — 인용 학자의 2배수, 빠진 논쟁을 보강하는 확장 독서</span></div>
+      <div class="stat"><b>3</b><span>마스터플랜 축 — 경제질서 · 정치질서 · 사회계약</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="sheet guide">
+  <div class="gk">HOW TO READ</div>
+  <h1>왜 이 24명인가</h1>
+  <div class="gp">마스터플랜은 하나의 인과 사슬 위에 서 있다. <b>AI·데이터·컴퓨팅이 생산비를 떨어뜨려 개인이 생산자가 되고(경제질서), 강화된 개인은 국가 평균 규칙에 맞지 않아 권력이 도시와 세계로 재배치되며(정치질서), 그 전환이 작동하려면 정체성이 고유한 기여로 전환될 여건을 공동체가 보장해야 한다(사회계약).</b> 이 사슬의 고리 하나하나는 우리가 발명한 것이 아니라, 지난 20년의 학문적 논쟁 위에 서 있다. 이 자료는 그 논쟁의 원래 주인들을 만나기 위한 준비다.</div>
+  <div class="gp">읽는 순서는 이렇다. 먼저 각 학자 페이지 하단의 <b>자문 질문</b>만 여덟 개를 이어서 읽으면 마스터플랜이 학계에 던지는 질문 전체가 보인다. 그 다음 학자별로 <b>누구인가 → 핵심 주장 → 마스터플랜과의 연결 → 읽을 자료와 논쟁</b>의 순서로 읽는다. 특히 ‘논쟁’ 부분을 건너뛰지 말 것 — 학자와의 대화는 그의 주장을 아는 데서가 아니라, 그가 받는 비판을 아는 데서 시작된다.</div>
+  <div class="gp">세 축의 학자들은 서로 충돌한다. 브린욜프슨의 낙관과 아세모글루의 비관, 벤지오의 실존 위험론과 크로퍼드·휘터커의 현재 해악론, 플로리다의 창조도시와 그 자신의 자기비판. <b>이 충돌이 마스터플랜의 진짜 시험대다.</b> 우리는 어느 한쪽을 편들기 위해서가 아니라, 충돌 지점 위에 한국의 실험을 놓기 위해 이들을 읽는다.</div>
+  <div class="axes">
+    <div class="axis-card"><div class="top" style="background:${axisColor.O1}"></div><div class="no" style="color:${axisColor.O1}">O1 · 경제질서</div><b>생산의 주인이 바뀐다</b><div class="who">브린욜프슨 · 서스킨드 · 마추카토</div><p>AI가 표준 노동을 대체할 때 개인 생산자 경제가 성립하는 조건과, 그 생산수단을 여는 국가의 역할.</p></div>
+    <div class="axis-card"><div class="top" style="background:${axisColor.O2}"></div><div class="no" style="color:${axisColor.O2}">O2 · 정치질서</div><b>권력의 자리가 바뀐다</b><div class="who">아세모글루 · 벤지오 · 플로리다</div><p>기술의 방향을 정하는 제도, 프런티어 AI의 안전 검증, 그리고 정체성 실험장으로서의 도시.</p></div>
+    <div class="axis-card"><div class="top" style="background:${axisColor.O3}"></div><div class="no" style="color:${axisColor.O3}">O3 · 사회계약</div><b>계약의 내용이 바뀐다</b><div class="who">주보프 · 플로리디</div><p>플랫폼 권력이 선택지·노출·인정을 배열하는 시대, 정보환경의 설계 원칙으로서의 새 사회계약.</p></div>
+  </div>
+  <div class="pfoot"><span>TAEJAE FUTURE STRATEGY INSTITUTE</span><span>SCHOLAR LEARNING PACK · v0.11.5</span><span>02</span></div>
+</section>
+
+${scholarPages}
+
+${candPage('11','CANDIDATES · 1/3','후보 학자 16명 — 확장 독서','인용 학자 8명의 2배수 후보군이다. 한 사람당 한 단락으로, 누구이고 왜 우리 논의에 필요한지를 적었다. 자문·세미나 초청 후보이자, 인용 학자들이 받는 비판의 출처이기도 하다.',candA,'11')}
+${candPage('12','CANDIDATES · 2/3','후보 학자 — 계속','',candB,'12')}
+${candPage('13','CANDIDATES · 3/3','후보 학자 — 계속','',candC,'13')}
+
+</body></html>`;
+fs.writeFileSync(outHtml,html);
+const browser=await puppeteer.launch({headless:'new',args:['--no-sandbox']});
+const page=await browser.newPage();
+await page.goto('file://'+outHtml,{waitUntil:'networkidle0'});
+await page.pdf({path:outPdf,width:'210mm',height:'297mm',printBackground:true,preferCSSPageSize:true});
+await browser.close();
+console.log('PDF written:',outPdf);

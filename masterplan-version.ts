@@ -1,5 +1,5 @@
-export const MASTERPLAN_VERSION = "v0.11.7";
-export const MASTERPLAN_ROUTE = "/mp7";
+export const MASTERPLAN_VERSION = "v0.12.1";
+export const MASTERPLAN_ROUTE = "/mp121";
 export const MASTERPLAN_PDF_DIR = "archive/pdf";
 
 export const MASTERPLAN_COMPACT_VERSION = MASTERPLAN_VERSION

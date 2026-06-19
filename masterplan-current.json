@@ -1,0 +1,7 @@
+{
+  "versionSource": "masterplan-version.ts",
+  "route": "app/mp",
+  "pdfDir": "archive/pdf",
+  "makeScript": "make_masterplan_pdf.js",
+  "policy": "masterplan-version.ts is the only version constant. /mp always renders latest; PDF filename is derived from MASTERPLAN_VERSION."
+}

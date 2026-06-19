@@ -1,0 +1,11 @@
+
+body { font-family: -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Noto Sans KR", sans-serif; line-height: 1.72; color: #20242b; }
+h1 { font-size: 1.7em; line-height: 1.28; margin: 1.2em 0 .55em; color: #15171c; }
+h2 { font-size: 1.15em; margin: 1.15em 0 .45em; border-bottom: 1px solid #ddd7ca; padding-bottom: .25em; color: #15171c; }
+p { margin: 0 0 .92em; }
+blockquote { border-left: .28em solid #b58a1e; margin: 1em 0; padding: .2em 0 .2em .9em; color: #333840; font-weight: 600; }
+ul { padding-left: 1.35em; }
+li { margin: .35em 0; }
+img { max-width: 42%; height: auto; display: block; margin: .6em auto 1em; border-radius: 999px; }
+em { color: #6a6f78; }
+strong { color: #15171c; }
