@@ -32,6 +32,7 @@ export type LifeStage = {
   process: string; // 정체성 과정(능동 관점)
   indTags: string[];
   digTags: string[];
+  ind: { lead: string; pro: string; ama: string; margin: string }; // 산업화 시대 개인 상태
   digitalPerson: PersonTier;
 };
 
@@ -41,6 +42,7 @@ export const lifeStages: LifeStage[] = [
     process: "단서 드러남",
     indTags: ["가정", "국가"],
     digTags: ["가정", "국가"],
+    ind: { lead: "양육·의료 자원이 풍부한 가정", pro: "기본 돌봄이 안정된 가정", ama: "돌봄 공백이 잦은 가정", margin: "의료·보호 사각지대" },
     digitalPerson: {
       trait: "모든 가능성을 지닌 출생",
       lead: "일찍 풍부하게 읽히는 단서", pro: "비교적 선명하게 읽히는 단서", ama: "단편적으로만 읽히는 단서", margin: "데이터·관찰의 사각지대",
@@ -53,6 +55,7 @@ export const lifeStages: LifeStage[] = [
     process: "발견 · 실험",
     indTags: ["가정", "도시"],
     digTags: ["가정", "이웃", "마을"],
+    ind: { lead: "사교육·선행학습이 풍부", pro: "표준 교육에 충실", ama: "교육 자원이 부족", margin: "기초 보육·교육서 이탈" },
     digitalPerson: {
       trait: "다양한 체험을 통한 단서 확인",
       lead: "폭넓은 체험으로 또렷해진 강점", pro: "꾸준한 관심 분야 탐색", ama: "제한적인 체험 기회", margin: "발견을 도울 환경의 부재",
@@ -65,6 +68,7 @@ export const lifeStages: LifeStage[] = [
     process: "훈련 · 방향 정함",
     indTags: ["도시"],
     digTags: ["마을", "도시"],
+    ind: { lead: "상위권 성적의 명문대행", pro: "중상위권의 대학 진학", ama: "성적 경쟁서 밀려남", margin: "진학 경로서 탈락" },
     digitalPerson: {
       trait: "기여 큰 정체성의 선정·훈련",
       lead: "강점 집중 훈련을 통한 두각", pro: "방향을 정한 꾸준한 단련", ama: "제한적인 훈련 기회", margin: "훈련 경로의 단절",
@@ -77,6 +81,7 @@ export const lifeStages: LifeStage[] = [
     process: "발휘",
     indTags: ["도시"],
     digTags: ["도시", "세계"],
+    ind: { lead: "명문대·대기업 진입", pro: "정규직 노동시장 진입", ama: "불안정 고용에 머묾", margin: "취업시장서 배제" },
     digitalPerson: {
       trait: "정체성의 실제 기여 발휘",
       lead: "창업·전문직의 영향력 발휘", pro: "전문 영역의 기여 정착", ama: "산발적인 기여 기회", margin: "발휘 무대의 부재",
@@ -89,6 +94,7 @@ export const lifeStages: LifeStage[] = [
     process: "재설계 · 확장",
     indTags: ["도시", "국가"],
     digTags: ["가정", "도시", "국가"],
+    ind: { lead: "관리직·고소득의 안정", pro: "고용 유지·경력 축적", ama: "고용 불안에 노출", margin: "실직·경력 단절" },
     digitalPerson: {
       trait: "정체성의 재설계·확장",
       lead: "경험·데이터를 통한 영향력 확장", pro: "기여 방식의 갱신·심화", ama: "부족한 재학습 기회", margin: "전환 지원에서 소외",
@@ -101,6 +107,7 @@ export const lifeStages: LifeStage[] = [
     process: "전수 · 연결",
     indTags: ["국가"],
     digTags: ["가정", "이웃", "마을"],
+    ind: { lead: "자산·건강의 여유로운 노년", pro: "연금 기반 생활 유지", ama: "노후 준비 부족", margin: "빈곤·고립에 방치" },
     digitalPerson: {
       trait: "정체성의 전수·연결",
       lead: "멘토·자문을 통한 세대 연결", pro: "후속 세대로의 경험 전수", ama: "제한적인 전수 기회", margin: "역할 없는 단절",

@@ -34,11 +34,15 @@ export function IndividualCommunityPage() {
     </div>
   );
 
-  // 4계층 상태 + 필요 기능 셀
-  const tierCell = (key: string, state: string, need: string) => (
-    <div key={key} style={{ padding: "5px 7px", borderLeft: `1px solid ${C.cardBorder}`, borderTop: `1px solid ${C.cardBorder}`, background: "#fff", minHeight: 40, display: "flex", flexDirection: "column", justifyContent: "center", gap: 3 }}>
-      <span style={{ fontSize: 9.6, fontWeight: 700, color: C.ink, lineHeight: 1.22 }}>{state}</span>
-      <span style={{ fontSize: 8.8, fontWeight: 800, color: "#2f6f8f", lineHeight: 1.2 }}>필요 · {need}</span>
+  // 4계층 셀 — 산업화 상태 → 디지털 상태(+필요 기능) 대비
+  const tierCell = (key: string, indState: string, digState: string, need: string) => (
+    <div key={key} style={{ padding: "5px 8px", borderLeft: `1px solid ${C.cardBorder}`, borderTop: `1px solid ${C.cardBorder}`, background: "#fff", minHeight: 46, display: "flex", flexDirection: "column", justifyContent: "center", gap: 3 }}>
+      <span style={{ fontSize: 9, fontWeight: 600, color: "#9a8c6a", lineHeight: 1.22 }}>{indState}</span>
+      <div style={{ display: "flex", alignItems: "baseline", gap: 4 }}>
+        <span style={{ fontSize: 8.6, color: C.faint, fontWeight: 900 }}>→</span>
+        <span style={{ fontSize: 9.6, fontWeight: 800, color: C.ink, lineHeight: 1.22 }}>{digState}</span>
+      </div>
+      <span style={{ fontSize: 8.4, fontWeight: 800, color: "#2f6f8f", lineHeight: 1.18 }}>필요 · {need}</span>
     </div>
   );
 
@@ -47,8 +51,8 @@ export function IndividualCommunityPage() {
       <Header subtitle="2. 개인의 생애주기와 필요" chapterNo="02" version={VERSION} />
 
       <div style={{ padding: "12px 48px 10px", borderBottom: `1px solid ${C.line}` }}>
-        <div style={{ fontSize: 18.6, fontWeight: 900, color: C.ink, lineHeight: 1.22, letterSpacing: -0.45 }}>개인의 필요는 생애주기와 계층마다 다르다.</div>
-        <div style={{ marginTop: 5, fontSize: 12.2, lineHeight: 1.4, color: C.muted, fontWeight: 500 }}>모든 사람은 모든 가능성을 지니고 태어난다. 정체성을 <b style={{ color: C.ink }}>드러내고 · 발견하고 · 훈련하고 · 발휘하고 · 전수하는</b> 과정에서, 같은 단계라도 리더·프로·아마추어·소외 네 위치마다 필요한 지원이 달라진다. 디지털 시대 공동체는 이 필요를 단계·계층별로 정밀하게 채운다.</div>
+        <div style={{ fontSize: 18.6, fontWeight: 900, color: C.ink, lineHeight: 1.22, letterSpacing: -0.45 }}>표준 경로에 줄 세우던 개인이, 생애주기마다 정체성을 키우는 주체로 바뀐다.</div>
+        <div style={{ marginTop: 5, fontSize: 12.2, lineHeight: 1.4, color: C.muted, fontWeight: 500 }}>산업화 시대에는 성적·학벌·고용이라는 하나의 잣대가 리더·프로·아마·소외를 갈랐다. 디지털 시대에는 단계마다 정체성을 <b style={{ color: C.ink }}>드러내고·발견하고·훈련하고·발휘하고·전수하며</b>, 계층마다 다른 필요를 공동체가 채운다. <span style={{ color: "#9a8c6a", fontWeight: 700 }}>회색=산업화</span> <b style={{ color: C.ink }}>→ 진한색=디지털</b>.</div>
       </div>
 
       <div style={{ padding: "14px 48px 0", flex: 1, display: "flex", flexDirection: "column" }}>
@@ -60,8 +64,8 @@ export function IndividualCommunityPage() {
           {/* 4계층 행 */}
           {CLASS_ROWS.map((r) => (
             <React.Fragment key={r.key}>
-              {labelCell(r.label, "필요 기능", "#6b7280")}
-              {lifeStages.map((s) => tierCell(`${r.key}-${s.stage}`, s.digitalPerson[r.key], s.digitalPerson[`${r.key}N` as "leadN" | "proN" | "amaN" | "marginN"]))}
+              {labelCell(r.label, "산업화→디지털", "#6b7280")}
+              {lifeStages.map((s) => tierCell(`${r.key}-${s.stage}`, s.ind[r.key], s.digitalPerson[r.key], s.digitalPerson[`${r.key}N` as "leadN" | "proN" | "amaN" | "marginN"]))}
             </React.Fragment>
           ))}
         </div>

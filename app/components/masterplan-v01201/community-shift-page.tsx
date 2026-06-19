@@ -15,38 +15,35 @@ export function CommunityShiftPage() {
         <div style={{ marginTop: 5, fontSize: 12.2, lineHeight: 1.4, color: C.muted, fontWeight: 500 }}>앞 장의 단계·계층별 필요가 모여 <b style={{ color: C.ink }}>6단계 공동체</b>를 만든다. 산업화 시대에는 가정·도시·국가만 비대해지고 이웃·마을·세계는 약화됐다. 디지털 시대에는 여섯 공동체가 모두 살아나 각자의 필요에 답한다.</div>
       </div>
 
-      <div style={{ padding: "14px 40px 0", flex: 1, display: "flex", flexDirection: "column", gap: 9 }}>
-        {communityShift.map((c) => (
-          <div key={c.unit} style={{ display: "grid", gridTemplateColumns: "64px 1fr 1fr 150px", gap: 0, border: `1px solid ${C.cardBorder}`, borderRadius: 6, overflow: "hidden", flex: 1 }}>
-            {/* 공동체 이름 */}
-            <div style={{ background: cardGrad(c.unit), color: "#fff", display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", padding: "6px 4px", textAlign: "center" }}>
-              <div style={{ fontSize: 16, fontWeight: 900 }}>{c.unit}</div>
-            </div>
+      <div style={{ padding: "14px 40px 0", flex: 1, display: "flex", flexDirection: "column" }}>
+        <div style={{ display: "grid", gridTemplateColumns: "60px 1fr 1fr 156px", gap: 0, border: `1px solid ${C.cardBorder}`, borderRadius: 6, overflow: "hidden", flex: 1 }}>
+          {/* 컬럼 헤더 — 시대 단어는 여기 한 번만 */}
+          <div style={{ background: "#1f2430" }} />
+          <div style={{ background: "#efeee9", color: "#9a8c6a", fontSize: 11, fontWeight: 900, letterSpacing: 0.5, padding: "6px 12px", borderLeft: `1px solid ${C.cardBorder}`, display: "flex", alignItems: "center" }}>산업화</div>
+          <div style={{ background: "#eaf1fa", color: "#2f5eb0", fontSize: 11, fontWeight: 900, letterSpacing: 0.5, padding: "6px 12px", borderLeft: `2px solid #2f5eb0`, display: "flex", alignItems: "center" }}>디지털</div>
+          <div style={{ background: "#f4f5f7", color: C.faint, fontSize: 10, fontWeight: 900, letterSpacing: 0.3, padding: "6px 11px", borderLeft: `1px solid ${C.cardBorder}`, display: "flex", alignItems: "center" }}>채우는 필요</div>
 
-            {/* 산업화 (before) */}
-            <div style={{ padding: "7px 12px", borderLeft: `1px solid ${C.cardBorder}`, background: "#f6f6f5", display: "flex", flexDirection: "column", justifyContent: "center" }}>
-              <div style={{ fontSize: 8.6, fontWeight: 900, color: "#9a8c6a", letterSpacing: 0.5, marginBottom: 2 }}>산업화 시대</div>
-              <div style={{ fontSize: 10.6, fontWeight: 800, color: "#3a4250", lineHeight: 1.28, marginBottom: 2 }}>{c.indRole}</div>
-              <div style={{ fontSize: 9.4, fontWeight: 550, color: C.muted, lineHeight: 1.32 }}>{c.indFacility} · {c.indOrg}</div>
-            </div>
+          {/* 6공동체 행 */}
+          {communityShift.map((c) => (
+            <React.Fragment key={c.unit}>
+              <div style={{ background: cardGrad(c.unit), color: "#fff", display: "flex", alignItems: "center", justifyContent: "center", padding: "6px 4px", borderTop: `1px solid ${C.cardBorder}`, fontSize: 15, fontWeight: 900 }}>{c.unit}</div>
+              <div style={{ padding: "7px 12px", borderLeft: `1px solid ${C.cardBorder}`, borderTop: `1px solid ${C.cardBorder}`, background: "#faf9f6", display: "flex", flexDirection: "column", justifyContent: "center" }}>
+                <div style={{ fontSize: 10.6, fontWeight: 800, color: "#3a4250", lineHeight: 1.28, marginBottom: 2 }}>{c.indRole}</div>
+                <div style={{ fontSize: 9.4, fontWeight: 550, color: C.muted, lineHeight: 1.32 }}>{c.indFacility} · {c.indOrg}</div>
+              </div>
+              <div style={{ padding: "7px 12px", borderLeft: `2px solid ${COMM[c.unit] || "#6b7280"}`, borderTop: `1px solid ${C.cardBorder}`, background: "#f7fafd", display: "flex", flexDirection: "column", justifyContent: "center" }}>
+                <div style={{ fontSize: 10.6, fontWeight: 800, color: C.ink, lineHeight: 1.28, marginBottom: 2 }}>{c.digRole}</div>
+                <div style={{ fontSize: 9.4, fontWeight: 550, color: C.body, lineHeight: 1.32 }}>{c.digFacility} · {c.digOrg}</div>
+              </div>
+              <div style={{ padding: "7px 11px", borderLeft: `1px solid ${C.cardBorder}`, borderTop: `1px solid ${C.cardBorder}`, background: "#fff", display: "flex", alignItems: "center" }}>
+                <div style={{ fontSize: 9.6, fontWeight: 700, color: C.ink, lineHeight: 1.34 }}>{c.answers}</div>
+              </div>
+            </React.Fragment>
+          ))}
+        </div>
 
-            {/* 디지털 (after) */}
-            <div style={{ padding: "7px 12px", borderLeft: `2px solid ${COMM[c.unit] || "#6b7280"}`, background: "#f5f9fc", display: "flex", flexDirection: "column", justifyContent: "center" }}>
-              <div style={{ fontSize: 8.6, fontWeight: 900, color: "#2f5eb0", letterSpacing: 0.5, marginBottom: 2 }}>디지털 시대</div>
-              <div style={{ fontSize: 10.6, fontWeight: 800, color: C.ink, lineHeight: 1.28, marginBottom: 2 }}>{c.digRole}</div>
-              <div style={{ fontSize: 9.4, fontWeight: 550, color: C.body, lineHeight: 1.32 }}>{c.digFacility} · {c.digOrg}</div>
-            </div>
-
-            {/* 답하는 필요 */}
-            <div style={{ padding: "7px 11px", borderLeft: `1px solid ${C.cardBorder}`, background: "#fff", display: "flex", flexDirection: "column", justifyContent: "center" }}>
-              <div style={{ fontSize: 8.4, fontWeight: 900, color: C.faint, letterSpacing: 0.3, marginBottom: 3 }}>답하는 필요</div>
-              <div style={{ fontSize: 9.6, fontWeight: 700, color: C.ink, lineHeight: 1.34 }}>{c.answers}</div>
-            </div>
-          </div>
-        ))}
-
-        <div style={{ marginTop: 2, fontSize: 11.2, fontWeight: 600, color: C.muted, lineHeight: 1.4 }}>
-          → 산업화가 <b style={{ color: "#9a8c6a" }}>가정·도시·국가</b>에 기능을 몰아넣었다면, 디지털은 <b style={{ color: "#2f5eb0" }}>여섯 공동체 전부</b>를 정체성 인프라로 되살려 단계·계층별 필요에 정밀하게 답한다.
+        <div style={{ marginTop: 12, fontSize: 11.2, fontWeight: 600, color: C.muted, lineHeight: 1.4 }}>
+          → <b style={{ color: "#9a8c6a" }}>가정·도시·국가</b>에 기능이 몰렸던 분업 질서가, <b style={{ color: "#2f5eb0" }}>여섯 공동체 전부</b>를 정체성 인프라로 되살려 단계·계층별 필요에 답하는 질서로 바뀐다.
         </div>
       </div>
 
