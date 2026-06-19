@@ -1,3 +1,4 @@
+import React from "react";
 import { C } from "./constants";
 import { Header, Footer } from "./shared";
 import { VERSION } from "./version";
@@ -124,7 +125,7 @@ export function IndividualCommunityPage() {
   );
 
   const cell = (key: string, children: React.ReactNode, opts: { bg?: string; borderTop?: boolean } = {}) => (
-    <div key={key} style={{ padding: "5px 7px", borderLeft: `1px solid ${C.cardBorder}`, borderTop: opts.borderTop ? `1px solid ${C.cardBorder}` : undefined, background: opts.bg || "#fff", minHeight: 84, display: "flex", flexDirection: "column", justifyContent: "center" }}>
+    <div key={key} style={{ padding: "5px 7px", borderLeft: `1px solid ${C.cardBorder}`, borderTop: opts.borderTop ? `1px solid ${C.cardBorder}` : undefined, background: opts.bg || "#fff", minHeight: 64, display: "flex", flexDirection: "column", justifyContent: "center" }}>
       {children}
     </div>
   );
@@ -143,17 +144,17 @@ export function IndividualCommunityPage() {
             const cc = COMM[c.unit] || "#6b7280";
             return (
             <div key={c.unit} style={{ border: `1px solid ${C.cardBorder}`, borderRadius: 4, overflow: "hidden", display: "flex", flexDirection: "column" }}>
-              <div style={{ background: cardGrad(c.unit), color: "#fff", padding: "7px 9px", textAlign: "center", letterSpacing: -0.3 }}>
-                <div style={{ fontSize: 13.5, fontWeight: 900 }}>{c.unit}</div>
-                <div style={{ fontSize: 8.6, fontWeight: 600, opacity: 0.86, marginTop: 2, lineHeight: 1.25 }}>{c.role}</div>
+              <div style={{ background: cardGrad(c.unit), color: "#fff", padding: "5px 9px", textAlign: "center", letterSpacing: -0.3 }}>
+                <div style={{ fontSize: 13, fontWeight: 900 }}>{c.unit}</div>
+                <div style={{ fontSize: 8.4, fontWeight: 600, opacity: 0.86, marginTop: 1, lineHeight: 1.2 }}>{c.role}</div>
               </div>
-              <div style={{ padding: "8px 11px", background: "#f4f5f7", borderBottom: `1px solid ${C.cardBorder}` }}>
-                <div style={{ fontSize: 8.6, fontWeight: 900, color: "#6b7280", letterSpacing: 0.3, marginBottom: 3 }}>주된 기능</div>
-                <div style={{ fontSize: 11, fontWeight: 800, color: "#3a4250", lineHeight: 1.34 }}>{c.facility}</div>
+              <div style={{ padding: "5px 11px", background: "#f4f5f7", borderBottom: `1px solid ${C.cardBorder}` }}>
+                <div style={{ fontSize: 8.4, fontWeight: 900, color: "#6b7280", letterSpacing: 0.3, marginBottom: 2 }}>주된 기능</div>
+                <div style={{ fontSize: 10.4, fontWeight: 800, color: "#3a4250", lineHeight: 1.28 }}>{c.facility}</div>
               </div>
-              <div style={{ padding: "8px 11px 9px", flex: 1 }}>
-                <div style={{ fontSize: 8.6, fontWeight: 900, color: C.faint, letterSpacing: 0.3, marginBottom: 3 }}>운영 방식</div>
-                <div style={{ fontSize: 10.2, fontWeight: 600, color: C.body, lineHeight: 1.42 }}>{c.org}</div>
+              <div style={{ padding: "5px 11px 6px", flex: 1 }}>
+                <div style={{ fontSize: 8.4, fontWeight: 900, color: C.faint, letterSpacing: 0.3, marginBottom: 2 }}>운영 방식</div>
+                <div style={{ fontSize: 9.6, fontWeight: 600, color: C.body, lineHeight: 1.34 }}>{c.org}</div>
               </div>
             </div>
             );
@@ -172,7 +173,7 @@ export function IndividualCommunityPage() {
     </div>
   );
 
-  // 개인 셀: 문자열이면 한 줄, 객체면 리더·프로·아마·소외 4계층 분기
+  // 개인 데이터: trait(생애주기 특징) + 4계층 기준
   type PersonValue = string | { trait: string; lead: string; pro: string; ama: string; margin: string };
   const CLASS_ROWS: { key: "lead" | "pro" | "ama" | "margin"; label: string; color: string }[] = [
     { key: "lead", label: "리더", color: "#1f3a5f" },
@@ -180,38 +181,37 @@ export function IndividualCommunityPage() {
     { key: "ama", label: "아마", color: "#7a8a52" },
     { key: "margin", label: "소외", color: "#9a6a4a" },
   ];
-  const personCell = (key: string, value: PersonValue, oneLineStyle: React.CSSProperties, bg: string) => {
-    if (typeof value === "string") {
-      return cell(key, <div style={oneLineStyle}>{value}</div>, { borderTop: true, bg });
-    }
-    return cell(key, (
-      <div style={{ display: "flex", flexDirection: "column", gap: 4 }}>
-        <div style={{ fontSize: 10.6, fontWeight: 900, color: C.ink, lineHeight: 1.26, paddingBottom: 3, borderBottom: `1px solid ${C.cardBorder}` }}>{value.trait}</div>
-        <div style={{ display: "flex", flexDirection: "column", gap: 3 }}>
-          {CLASS_ROWS.map((r) => (
-            <div key={r.key} style={{ display: "flex", alignItems: "flex-start", gap: 5 }}>
-              <span style={{ flexShrink: 0, width: 4, alignSelf: "stretch", background: r.color, borderRadius: 2, marginTop: 1, marginBottom: 1 }} />
-              <span style={{ fontSize: 9.4, fontWeight: 650, color: C.muted, lineHeight: 1.24 }}>{value[r.key]}</span>
-            </div>
-          ))}
-        </div>
-      </div>
-    ), { borderTop: true, bg });
-  };
 
-  // 개인 행 라벨 — 4계층 범례를 한 번만 표시
-  const personRowLabel = (title: string, sub: string) => (
-    <div style={{ background: "#6b7280", color: "#fff", padding: "8px 6px", display: "flex", flexDirection: "column", justifyContent: "center", textAlign: "center" }}>
-      <div style={{ fontSize: 10.4, fontWeight: 900, lineHeight: 1.2 }}>{title}</div>
-      <div style={{ marginTop: 2, fontSize: 8, fontWeight: 700, opacity: 0.8, lineHeight: 1.2 }}>{sub}</div>
-      <div style={{ marginTop: 6, display: "flex", flexDirection: "column", gap: 2.5, alignItems: "flex-start" }}>
+  // 개인 영역 — 테이블(A안): 특징 1행 + 4계층 4행. 셀마다 라벨 반복 없이 좌측 컬럼에 한 번만.
+  const personRows = (
+    eraTitle: string,
+    pick: (s: typeof lifeStages[number]) => Exclude<PersonValue, string>,
+    bg: string,
+  ) => {
+    return (
+      <>
+        {/* 특징 행 */}
+        <div style={{ background: "#6b7280", color: "#fff", padding: "6px 6px", borderTop: `1px solid ${C.cardBorder}`, display: "flex", flexDirection: "column", justifyContent: "center", textAlign: "center" }}>
+          <div style={{ fontSize: 10, fontWeight: 900, lineHeight: 1.18 }}>{eraTitle}</div>
+          <div style={{ marginTop: 2, fontSize: 7.8, fontWeight: 700, opacity: 0.8 }}>생애주기 특징</div>
+        </div>
+        {lifeStages.map((s) => personTcell_(`${eraTitle}-trait-${s.stage}`, pick(s).trait, bg, true))}
+        {/* 4계층 행 */}
         {CLASS_ROWS.map((r) => (
-          <div key={r.key} style={{ display: "flex", alignItems: "center", gap: 4 }}>
-            <span style={{ width: 7, height: 7, borderRadius: 2, background: r.color, flexShrink: 0 }} />
-            <span style={{ fontSize: 8.2, fontWeight: 800 }}>{r.label}</span>
-          </div>
+          <React.Fragment key={`${eraTitle}-${r.key}`}>
+            <div style={{ background: r.color, color: "#fff", padding: "4px 8px", borderTop: `1px solid ${C.cardBorder}`, display: "flex", alignItems: "center", justifyContent: "center" }}>
+              <span style={{ fontSize: 9.6, fontWeight: 900, letterSpacing: 0.5 }}>{r.label}</span>
+            </div>
+            {lifeStages.map((s) => personTcell_(`${eraTitle}-${r.key}-${s.stage}`, pick(s)[r.key], bg, false))}
+          </React.Fragment>
         ))}
-      </div>
+      </>
+    );
+  };
+  // 개인 테이블 셀
+  const personTcell_ = (key: string, text: string, bg: string, bold: boolean) => (
+    <div key={key} style={{ padding: "2px 7px", borderLeft: `1px solid ${C.cardBorder}`, borderTop: `1px solid ${C.cardBorder}`, background: bg, minHeight: 19, display: "flex", alignItems: "center" }}>
+      <span style={{ fontSize: bold ? 10 : 9.2, fontWeight: bold ? 900 : 650, color: bold ? C.ink : C.muted, lineHeight: 1.2 }}>{text}</span>
     </div>
   );
 
@@ -242,8 +242,7 @@ export function IndividualCommunityPage() {
             {commTagRow(s.indTags)}
           </>, { bg: "#f4f5f7" }))}
 
-          {rowLabel("산업화 개인", "특징 · 4계층 기준", "#6b7280")}
-          {lifeStages.map((s, i) => personCell(`ip-${s.stage}`, s.industrialPerson, { fontSize: 11.5, fontWeight: 650, color: C.muted, lineHeight: 1.36 }, "#fafbfc"))}
+          {personRows("산업화 개인", (s) => s.industrialPerson as Exclude<PersonValue, string>, "#fafbfc")}
 
           {rowLabel("삶의 단계", "정체성 과정", "#1f2430")}
           {lifeStages.map((s, i) => cell(`life-${s.stage}`, <div style={{ position: "relative", textAlign: "center" }}>
@@ -253,8 +252,7 @@ export function IndividualCommunityPage() {
             <div style={{ position: "relative", zIndex: 1, marginTop: 3, fontSize: 9.2, fontWeight: 750, color: C.muted }}>{s.need}</div>
           </div>, { borderTop: true }))}
 
-          {rowLabel("디지털 개인", "특징 · 4계층 기준", "#6b7280")}
-          {lifeStages.map((s, i) => personCell(`dp-${s.stage}`, s.digitalPerson, { fontSize: 11.5, fontWeight: 700, color: C.muted, lineHeight: 1.36 }, "#fafbfc"))}
+          {personRows("디지털 개인", (s) => s.digitalPerson as Exclude<PersonValue, string>, "#fafbfc")}
 
           {rowLabel("디지털 공동체", "과정 지원·연결", "#4b5563")}
           {lifeStages.map((s, i) => cell(`dc-${s.stage}`, <>
