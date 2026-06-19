@@ -77,8 +77,8 @@ export function IndividualCommunityPage() {
       <Header subtitle="2. 개인의 생애주기와 공동체" chapterNo="02" version={VERSION} />
 
       <div style={{ padding: "12px 48px 10px", borderBottom: `1px solid ${C.line}` }}>
-        <div style={{ fontSize: 17, fontWeight: 900, color: C.ink, lineHeight: 1.25, letterSpacing: -0.4 }}>개인을 표준 경로에 맞추던 공동체가, 생애 단계마다 필요한 기능을 맡고 끝나면 권한을 돌려주는 가변 질서로 바뀐다.</div>
-        <div style={{ marginTop: 6, fontSize: 13, lineHeight: 1.55, color: C.body, fontWeight: 500 }}>산업화 시대에는 표준 제도가 가정{"\u00b7"}도시{"\u00b7"}국가에 기능을 몰아넣고 개인을 하나의 경로에 맞췄다. 디지털 시대에는 정체성을 <b style={{ color: C.ink }}>드러내고{"\u00b7"}발견하고{"\u00b7"}훈련하고{"\u00b7"}발휘하고{"\u00b7"}전수하는</b> 각 단계마다, 필요한 공동체가 고유 기능을 맡고 끝나면 권한을 돌려준다.</div>
+        <div style={{ fontSize: 17, fontWeight: 900, color: C.ink, lineHeight: 1.25, letterSpacing: -0.4 }}>개인을 하나의 표준 경로에 맞추던 공동체가, 생애 단계마다 필요한 공동체가 고유 기능을 맡는 질서로 바뀐다.</div>
+        <div style={{ marginTop: 6, fontSize: 13, lineHeight: 1.55, color: C.body, fontWeight: 500 }}>산업화 시대에는 표준 제도가 가정{"\u00b7"}도시{"\u00b7"}국가에 기능을 몰아넣고 개인을 하나의 경로에 맞췄다. 디지털 시대에는 정체성을 <b style={{ color: C.ink }}>드러내고{"\u00b7"}발견하고{"\u00b7"}훈련하고{"\u00b7"}발휘하고{"\u00b7"}전수하는</b> 각 단계마다, 그 단계에 필요한 공동체가 고유 기능을 맡는다.</div>
       </div>
 
       <div style={{ padding: "12px 48px 0", flex: 1, display: "flex", flexDirection: "column", gap: 14 }}>
@@ -95,7 +95,7 @@ export function IndividualCommunityPage() {
         />
         <EraBlock
           label="디지털 시대"
-          sub="단계마다 필요한 공동체가 고유 기능을 맡고, 끝나면 권한을 돌려준다"
+          sub="단계마다 필요한 공동체가 저마다 고유 기능을 맡는다"
           accent={C.accent}
           pick={(s, k) => s.digitalPerson[k]}
           proc={(s) => s.process}
