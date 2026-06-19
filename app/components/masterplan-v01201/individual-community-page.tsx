@@ -194,51 +194,41 @@ export function IndividualCommunityPage() {
     { key: "margin", label: "소외", color: "#6b7280", need: "보호·재연결", comm: ["가정", "국가"] },
   ];
 
-  // 개인 영역 — 테이블(A안): 특징 1행 + 4계층 4행. 셀마다 라벨 반복 없이 좌측 컬럼에 한 번만.
+  // 개인 영역 — 테이블: 특징+공동체 pill 1행 + 4계층 4행.
   const personRows = (
     eraTitle: string,
     pick: (s: typeof lifeStages[number]) => Exclude<PersonValue, string>,
+    tags: (s: typeof lifeStages[number]) => string[],
     bg: string,
   ) => {
     return (
       <>
-        {/* 특징 행 */}
+        {/* 특징 + 생애주기별 공동체 pill 행 */}
         <div style={{ background: "#6b7280", color: "#fff", padding: "6px 6px", borderTop: `1px solid ${C.cardBorder}`, display: "flex", flexDirection: "column", justifyContent: "center", textAlign: "center" }}>
           <div style={{ fontSize: 10, fontWeight: 900, lineHeight: 1.18 }}>{eraTitle}</div>
-          <div style={{ marginTop: 2, fontSize: 7.8, fontWeight: 700, opacity: 0.8 }}>생애주기 특징</div>
+          <div style={{ marginTop: 2, fontSize: 7.8, fontWeight: 700, opacity: 0.8 }}>특징 · 공동체</div>
         </div>
-        {lifeStages.map((s) => personTcell_(`${eraTitle}-trait-${s.stage}`, pick(s).trait, bg, true))}
-        {/* 4계층 행 */}
+        {lifeStages.map((s) => personTcell_(`${eraTitle}-trait-${s.stage}`, pick(s).trait, bg, true, tags(s)))}
+        {/* 4계층 행 — 상태 텍스트만 */}
         {CLASS_ROWS.map((r) => (
           <React.Fragment key={`${eraTitle}-${r.key}`}>
             <div style={{ background: "#6b7280", color: "#fff", padding: "4px 8px", borderTop: `1px solid ${C.cardBorder}`, display: "flex", alignItems: "center", justifyContent: "center" }}>
               <span style={{ fontSize: 9.6, fontWeight: 900, letterSpacing: 0.5 }}>{r.label}</span>
             </div>
-            {lifeStages.map((s) => {
-              const v = pick(s);
-              const commKey = `${r.key}C` as "leadC" | "proC" | "amaC" | "marginC";
-              const needKey = `${r.key}N` as "leadN" | "proN" | "amaN" | "marginN";
-              const rec = v as Record<string, unknown>;
-              const comm = rec[commKey] as string[] | undefined;
-              const need = rec[needKey] as string | undefined;
-              return personTcell_(`${eraTitle}-${r.key}-${s.stage}`, v[r.key], bg, false, comm, need);
-            })}
+            {lifeStages.map((s) => personTcell_(`${eraTitle}-${r.key}-${s.stage}`, pick(s)[r.key], bg, false))}
           </React.Fragment>
         ))}
       </>
     );
   };
-  // 개인 테이블 셀 — 계층 상태 → 필요 기능 → 공동체 pill
-  const personTcell_ = (key: string, text: string, bg: string, bold: boolean, comm?: string[], need?: string) => (
-    <div key={key} style={{ padding: "3px 6px", borderLeft: `1px solid ${C.cardBorder}`, borderTop: `1px solid ${C.cardBorder}`, background: bg, minHeight: 19, display: "flex", flexDirection: "column", justifyContent: "center", gap: 2 }}>
-      <span style={{ fontSize: bold ? 10 : 8.8, fontWeight: bold ? 900 : 650, color: bold ? C.ink : C.muted, lineHeight: 1.18 }}>{text}</span>
-      {need && (
-        <span style={{ fontSize: 8, fontWeight: 800, color: "#2f6f8f", lineHeight: 1.18 }}>필요 · {need}</span>
-      )}
+  // 개인 테이블 셀 — 텍스트 (+ 생애주기 행에만 공동체 pill)
+  const personTcell_ = (key: string, text: string, bg: string, bold: boolean, comm?: string[]) => (
+    <div key={key} style={{ padding: "3px 6px", borderLeft: `1px solid ${C.cardBorder}`, borderTop: `1px solid ${C.cardBorder}`, background: bg, minHeight: 19, display: "flex", flexDirection: "column", justifyContent: "center", gap: 2.5 }}>
+      <span style={{ fontSize: bold ? 9.8 : 9, fontWeight: bold ? 900 : 650, color: bold ? C.ink : C.muted, lineHeight: 1.2 }}>{text}</span>
       {comm && comm.length > 0 && (
-        <div style={{ display: "flex", flexWrap: "wrap", gap: 2 }}>
+        <div style={{ display: "flex", flexWrap: "wrap", gap: 2.5, justifyContent: "center" }}>
           {comm.map((t) => (
-            <span key={t} style={{ fontSize: 7.4, fontWeight: 900, color: "#fff", background: COMM[t] || "#9ca3af", padding: "0.5px 5px", borderRadius: 7, letterSpacing: 0.1 }}>{t}</span>
+            <span key={t} style={{ fontSize: 7.6, fontWeight: 900, color: "#fff", background: COMM[t] || "#9ca3af", padding: "0.5px 5px", borderRadius: 7, letterSpacing: 0.1 }}>{t}</span>
           ))}
         </div>
       )}
@@ -254,18 +244,19 @@ export function IndividualCommunityPage() {
         <div style={{ marginTop: 4, fontSize: 12.2, lineHeight: 1.36, color: C.muted, fontWeight: 500 }}>공동체는 개인을 통제·배치하는 제도에서, 정체성 발견·실험·훈련·발휘·돌봄/보호·조정을 지원하고 연결하는 생활 인프라로 바뀐다.</div>
       </div>
 
-      <div style={{ padding: "10px 48px 0", flex: 1, display: "flex", flexDirection: "column", gap: 8, justifyContent: "space-between" }}>
-        {/* 최상단 — 산업화 시대: 개인을 표준 경로에 배치하는 공동체 */}
-        <div style={{ fontSize: 11.4, fontWeight: 550, color: C.muted, lineHeight: 1.25, letterSpacing: -0.15 }}><span style={{ color: C.ink, fontWeight: 900 }}>분업의 산업화 시대</span>에는 교육·고용·복지의 표준 필요를 처리하기 위해 개인이 가정-학교-회사-국가복지 경로에 배치되었다.</div>
+      <div style={{ padding: "10px 48px 0", flex: 1, display: "flex", flexDirection: "column", gap: 7, justifyContent: "space-between" }}>
+        {/* 상단 — 6공동체: 산업화 ↔ 디지털 before/after 붙여서 비교 */}
+        <div style={{ fontSize: 11, fontWeight: 550, color: C.muted, lineHeight: 1.25, letterSpacing: -0.15 }}><span style={{ color: C.ink, fontWeight: 900 }}>6단계 공동체의 변화</span> — 산업화 시대 개인을 표준 경로에 배치하던 공동체가, 디지털 시대 정체성을 지원·연결하는 생활 인프라로 바뀐다.</div>
         <ReshapeCards data={industrialReshape} era="산업화" />
+        <ReshapeCards data={communityReshape} era="디지털" />
 
-        {/* 중간 — 생애 단계 타임라인 */}
+        {/* 하단 — 개인: 생애주기 × 4계층 */}
         <div style={{ display: "flex", alignItems: "center", gap: 8, flexWrap: "wrap" }}>
           <span style={{ fontSize: 11, fontWeight: 900, color: C.ink }}>개인의 네 위치 — 리더 · 프로 · 아마추어 · 소외</span>
-          <span style={{ fontSize: 10, fontWeight: 600, color: C.muted }}>개인 행은 시대별 <b style={{ color: C.ink }}>4계층 구분 기준</b>을 제시한다.</span>
+          <span style={{ fontSize: 10, fontWeight: 600, color: C.muted }}>생애주기 행에 그 단계가 연결되는 <b style={{ color: C.ink }}>공동체</b>를 표시한다.</span>
         </div>
         <div style={{ display: "grid", gridTemplateColumns: "86px repeat(6, 1fr)", gap: 0, border: `1px solid ${C.cardBorder}`, borderRadius: 4, overflow: "hidden" }}>
-          {personRows("산업화 개인", (s) => s.industrialPerson as Exclude<PersonValue, string>, "#fafbfc")}
+          {personRows("산업화 개인", (s) => s.industrialPerson as Exclude<PersonValue, string>, (s) => s.indTags, "#fafbfc")}
 
           {rowLabel("삶의 단계", "정체성 과정", "#1f2430")}
           {lifeStages.map((s, i) => cell(`life-${s.stage}`, <div style={{ position: "relative", textAlign: "center" }}>
@@ -275,12 +266,8 @@ export function IndividualCommunityPage() {
             <div style={{ position: "relative", zIndex: 1, marginTop: 3, fontSize: 9.2, fontWeight: 750, color: C.muted }}>{s.need}</div>
           </div>, { borderTop: true }))}
 
-          {personRows("디지털 개인", (s) => s.digitalPerson as Exclude<PersonValue, string>, "#fafbfc")}
+          {personRows("디지털 개인", (s) => s.digitalPerson as Exclude<PersonValue, string>, (s) => s.digTags, "#fafbfc")}
         </div>
-
-        {/* 최하단 — 디지털 시대: 개인의 생애주기별 필요를 지원·연결하는 공동체 */}
-        <div style={{ fontSize: 11.4, fontWeight: 550, color: C.muted, lineHeight: 1.25, letterSpacing: -0.15 }}><span style={{ color: C.ink, fontWeight: 900 }}>정체성 연결의 디지털 시대</span>에는 개인이 가진 여러 강점 중 사회에 가장 크게 기여할 정체성을 찾아 훈련·발휘하도록 공동체가 생활권 인프라로 이를 지원·연결한다.</div>
-        <ReshapeCards data={communityReshape} era="디지털" />
       </div>
 
       <div style={{ marginTop: 14 }} />
