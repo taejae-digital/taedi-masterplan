@@ -17,6 +17,7 @@ export function IndividualCommunityPage() {
     commRole,
     commDetail,
     commAnswers,
+    ansLabel,
   }: {
     label: string;
     sub: string;
@@ -26,6 +27,7 @@ export function IndividualCommunityPage() {
     commRole: (c: typeof communityShift[number]) => string;
     commDetail: (c: typeof communityShift[number]) => string;
     commAnswers?: (c: typeof communityShift[number]) => string;
+    ansLabel?: string;
   }) => (
     <div style={{ display: "flex", flexDirection: "column" }}>
       <div style={{ fontSize: 13.5, fontWeight: 900, color: accent, marginBottom: 6, letterSpacing: -0.2, paddingBottom: 4, borderBottom: `2px solid ${accent}` }}>
@@ -61,7 +63,7 @@ export function IndividualCommunityPage() {
             <div style={{ fontSize: 9.8, fontWeight: 500, color: C.muted, lineHeight: 1.35 }}>{commDetail(c)}</div>
             {commAnswers && (
               <div style={{ marginTop: 5, paddingTop: 5, borderTop: `1px dashed ${C.cardBorder}`, fontSize: 9.6, fontWeight: 700, color: accent, lineHeight: 1.32 }}>
-                <span style={{ color: C.faint, fontWeight: 800 }}>답하는 단계 </span>{commAnswers(c)}
+                <span style={{ color: C.faint, fontWeight: 800 }}>{ansLabel} </span>{commAnswers(c)}
               </div>
             )}
           </div>
@@ -88,6 +90,8 @@ export function IndividualCommunityPage() {
           proc={(s) => s.indProcess}
           commRole={(c) => c.indRole}
           commDetail={(c) => c.indOrg}
+          commAnswers={(c) => c.indAnswers}
+          ansLabel="이 시대엔"
         />
         <EraBlock
           label="디지털 시대"
@@ -98,6 +102,7 @@ export function IndividualCommunityPage() {
           commRole={(c) => c.digRole}
           commDetail={(c) => c.digOrg}
           commAnswers={(c) => c.answers}
+          ansLabel="맡는 단계"
         />
       </div>
 
