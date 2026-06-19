@@ -13,28 +13,30 @@ export function IndividualCommunityPage() {
     accent,
     headBg,
     pick,
+    proc,
     bg,
   }: {
     era: string;
     accent: string;
     headBg: string;
     pick: (s: typeof lifeStages[number], k: TierKey) => string;
+    proc: (s: typeof lifeStages[number]) => string;
     bg: string;
   }) => (
-    <div style={{ display: "grid", gridTemplateColumns: "58px repeat(6, 1fr)", gap: 0, border: `1px solid ${C.cardBorder}`, borderRadius: 5, overflow: "hidden" }}>
-      <div style={{ background: headBg, color: "#fff", display: "flex", alignItems: "center", justifyContent: "center", padding: "5px 4px", fontSize: 12, fontWeight: 900, letterSpacing: 1, writingMode: "vertical-rl", textOrientation: "upright" as const }}>{era}</div>
+    <div style={{ display: "grid", gridTemplateColumns: "54px repeat(6, 1fr)", gap: 0, border: `1px solid ${C.cardBorder}`, borderRadius: 5, overflow: "hidden" }}>
+      <div style={{ background: headBg, color: "#fff", display: "flex", alignItems: "center", justifyContent: "center", padding: "5px 4px", fontSize: 13, fontWeight: 900, letterSpacing: 1, writingMode: "vertical-rl", textOrientation: "upright" as const }}>{era}</div>
       {lifeStages.map((s, i) => (
-        <div key={`h-${era}-${s.stage}`} style={{ background: headBg, color: "#fff", borderLeft: `1px solid rgba(255,255,255,0.18)`, padding: "5px 6px", textAlign: "center", display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center" }}>
-          <div style={{ fontSize: 11, fontWeight: 900, letterSpacing: -0.3 }}>{i + 1}. {s.stage}</div>
-          <div style={{ fontSize: 9, fontWeight: 700, opacity: 0.82, marginTop: 2 }}>{s.process}</div>
+        <div key={`h-${era}-${s.stage}`} style={{ background: headBg, color: "#fff", borderLeft: `1px solid rgba(255,255,255,0.18)`, padding: "6px 6px", textAlign: "center", display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center" }}>
+          <div style={{ fontSize: 12, fontWeight: 900, letterSpacing: -0.3 }}>{i + 1}. {s.stage}</div>
+          <div style={{ fontSize: 10.5, fontWeight: 700, opacity: 0.85, marginTop: 2 }}>{proc(s)}</div>
         </div>
       ))}
       {CLASS_ROWS.map((r) => (
         <React.Fragment key={`${era}-${r.key}`}>
-          <div style={{ background: accent, color: "#fff", display: "flex", alignItems: "center", justifyContent: "center", borderTop: `1px solid ${C.cardBorder}`, padding: "4px", fontSize: 11, fontWeight: 900 }}>{r.label}</div>
+          <div style={{ background: accent, color: "#fff", display: "flex", alignItems: "center", justifyContent: "center", borderTop: `1px solid ${C.cardBorder}`, padding: "4px", fontSize: 12.5, fontWeight: 900 }}>{r.label}</div>
           {lifeStages.map((s) => (
-            <div key={`${era}-${r.key}-${s.stage}`} style={{ padding: "6px 8px", borderLeft: `1px solid ${C.cardBorder}`, borderTop: `1px solid ${C.cardBorder}`, background: bg, display: "flex", alignItems: "center" }}>
-              <span style={{ fontSize: 9.6, fontWeight: 550, color: C.body, lineHeight: 1.4 }}>{pick(s, r.key)}</span>
+            <div key={`${era}-${r.key}-${s.stage}`} style={{ padding: "7px 9px", borderLeft: `1px solid ${C.cardBorder}`, borderTop: `1px solid ${C.cardBorder}`, background: bg, display: "flex", alignItems: "center" }}>
+              <span style={{ fontSize: 11, fontWeight: 550, color: C.body, lineHeight: 1.45 }}>{pick(s, r.key)}</span>
             </div>
           ))}
         </React.Fragment>
@@ -54,11 +56,11 @@ export function IndividualCommunityPage() {
       <div style={{ padding: "14px 48px 0", flex: 1, display: "flex", flexDirection: "column", gap: 14 }}>
         <div>
           <div style={{ fontSize: 13, fontWeight: 900, color: "#9a8c6a", marginBottom: 6, letterSpacing: -0.2 }}>산업화 시대 — 하나의 잣대로 줄 세운다</div>
-          <PersonTable era="산업화" accent="#9a8c6a" headBg="#7c715a" pick={(s, k) => s.ind[k]} bg="#faf9f6" />
+          <PersonTable era="산업화" accent="#9a8c6a" headBg="#7c715a" pick={(s, k) => s.ind[k]} proc={(s) => s.indProcess} bg="#faf9f6" />
         </div>
         <div>
           <div style={{ fontSize: 13, fontWeight: 900, color: "#2f5eb0", marginBottom: 6, letterSpacing: -0.2 }}>디지털 시대 — 단계·계층마다 다른 필요를 채운다</div>
-          <PersonTable era="디지털" accent="#2f5eb0" headBg="#274f8c" pick={(s, k) => s.digitalPerson[k]} bg="#f7fafd" />
+          <PersonTable era="디지털" accent="#2f5eb0" headBg="#274f8c" pick={(s, k) => s.digitalPerson[k]} proc={(s) => s.process} bg="#f7fafd" />
         </div>
       </div>
 

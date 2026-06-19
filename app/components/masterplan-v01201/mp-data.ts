@@ -29,7 +29,8 @@ export type PersonTier = {
 
 export type LifeStage = {
   stage: string;
-  process: string; // 정체성 과정(능동 관점)
+  process: string; // 디지털 시대 정체성 과정(능동 관점)
+  indProcess: string; // 산업화 시대 단계 성격(표준 경로 관점)
   indTags: string[];
   digTags: string[];
   ind: { lead: string; pro: string; ama: string; margin: string }; // 산업화 시대 개인 상태
@@ -40,6 +41,7 @@ export const lifeStages: LifeStage[] = [
   {
     stage: "태아+영아",
     process: "단서 드러남",
+    indProcess: "출산·양육",
     indTags: ["가정", "국가"],
     digTags: ["가정", "국가"],
     ind: {
@@ -61,6 +63,7 @@ export const lifeStages: LifeStage[] = [
   {
     stage: "유아+아동기",
     process: "발견 · 실험",
+    indProcess: "취학 준비",
     indTags: ["가정", "도시"],
     digTags: ["가정", "이웃", "마을"],
     ind: {
@@ -82,6 +85,7 @@ export const lifeStages: LifeStage[] = [
   {
     stage: "청소년기",
     process: "훈련 · 방향 정함",
+    indProcess: "입시 경쟁",
     indTags: ["도시"],
     digTags: ["마을", "도시"],
     ind: {
@@ -103,6 +107,7 @@ export const lifeStages: LifeStage[] = [
   {
     stage: "청년기",
     process: "발휘",
+    indProcess: "취업·정착",
     indTags: ["도시"],
     digTags: ["도시", "세계"],
     ind: {
@@ -124,6 +129,7 @@ export const lifeStages: LifeStage[] = [
   {
     stage: "중장년기",
     process: "재설계 · 확장",
+    indProcess: "고용 유지",
     indTags: ["도시", "국가"],
     digTags: ["가정", "도시", "국가"],
     ind: {
@@ -145,6 +151,7 @@ export const lifeStages: LifeStage[] = [
   {
     stage: "노년기",
     process: "전수 · 연결",
+    indProcess: "은퇴·부양",
     indTags: ["국가"],
     digTags: ["가정", "이웃", "마을"],
     ind: {
