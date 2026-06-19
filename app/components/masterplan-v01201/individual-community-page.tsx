@@ -34,6 +34,7 @@ export function IndividualCommunityPage() {
       digTags: ["가정", "국가"],
       industrialPerson: { trait: "가정 환경이 정하는 출발선", lead: "양육·의료 자원이 풍부한 가정", pro: "기본 돌봄이 안정된 가정", ama: "돌봄 공백이 잦은 가정", margin: "의료·보호에서 소외된 가정" },
       digitalPerson: { trait: "모든 가능성을 지닌 출생", lead: "일찍 풍부하게 읽히는 단서", pro: "비교적 선명하게 읽히는 단서", ama: "단편적으로만 읽히는 단서", margin: "데이터·관찰의 사각지대",
+        leadN: "단서 기록·해석", proN: "단서 기록·해석", amaN: "관찰 손길", marginN: "기초 돌봄·접근",
         leadC: ["가정", "의료"], proC: ["가정", "의료"], amaC: ["가정", "이웃"], marginC: ["가정", "국가"] },
       digitalCommunity: "가정 · 의료 · 돌봄",
       digitalFeature: "가정이 돌봄을, 의료가 정체성 단서 분석을 지원한다",
@@ -47,6 +48,7 @@ export function IndividualCommunityPage() {
       digTags: ["가정", "이웃"],
       industrialPerson: { trait: "조기교육·사교육이 만드는 격차", lead: "사교육·선행학습이 풍부", pro: "표준 교육에 충실", ama: "교육 자원이 부족", margin: "기초 보육·교육에서 이탈" },
       digitalPerson: { trait: "다양한 체험을 통한 단서 확인", lead: "폭넓은 체험으로 또렷해진 강점", pro: "꾸준한 관심 분야 탐색", ama: "제한적인 체험 기회", margin: "발견을 도울 환경의 부재",
+        leadN: "체험 폭 확장", proN: "탐색 지원", amaN: "체험 기회 제공", marginN: "발견 환경 보완",
         leadC: ["이웃", "마을"], proC: ["가정", "이웃"], amaC: ["가정", "이웃"], marginC: ["가정", "국가"] },
       digitalCommunity: "가정 · 이웃 · 마을",
       digitalFeature: "가정·이웃·마을이 다양한 체험과 발견을 돕는다",
@@ -60,6 +62,7 @@ export function IndividualCommunityPage() {
       digTags: ["마을", "도시"],
       industrialPerson: { trait: "입시 성적이 가르는 진로", lead: "상위권 성적의 명문대 진학", pro: "중상위권의 대학 진학", ama: "성적 경쟁에서 밀려남", margin: "진학 경로에서 탈락" },
       digitalPerson: { trait: "기여 큰 정체성의 선정·훈련", lead: "강점 집중 훈련을 통한 두각", pro: "방향을 정한 꾸준한 단련", ama: "제한적인 훈련 기회", margin: "훈련 경로의 단절",
+        leadN: "심화 훈련 경로", proN: "훈련·멘토 연결", amaN: "훈련 기회 확대", marginN: "이탈 방지·재진입",
         leadC: ["마을", "도시"], proC: ["마을", "학교"], amaC: ["마을", "이웃"], marginC: ["마을", "국가"] },
       digitalCommunity: "마을 · 학교 · 멘토",
       digitalFeature: "마을·학교·멘토가 정체성 훈련을 함께한다",
@@ -73,6 +76,7 @@ export function IndividualCommunityPage() {
       digTags: ["도시"],
       industrialPerson: { trait: "학벌·취업이 정하는 위치", lead: "명문대·대기업 진입", pro: "정규직 노동시장 진입", ama: "불안정 고용에 머묾", margin: "취업시장에서 배제" },
       digitalPerson: { trait: "정체성의 실제 기여 발휘", lead: "창업·전문직의 영향력 발휘", pro: "전문 영역의 기여 정착", ama: "산발적인 기여 기회", margin: "발휘 무대의 부재",
+        leadN: "넓은 발휘 무대", proN: "기여 정착 기반", amaN: "기여 기회 연결", marginN: "진입 장벽 완화",
         leadC: ["도시", "세계"], proC: ["도시"], amaC: ["마을", "도시"], marginC: ["도시", "국가"] },
       digitalCommunity: "도시 · 일 경험 · 멘토",
       digitalFeature: "도시가 일 경험과 시장 진입을 연결한다",
@@ -86,6 +90,7 @@ export function IndividualCommunityPage() {
       digTags: ["가정", "도시", "국가"],
       industrialPerson: { trait: "직위·고용 안정성의 분화", lead: "관리직·고소득의 안정", pro: "고용 유지와 경력 축적", ama: "고용 불안에 노출", margin: "실직·경력 단절" },
       digitalPerson: { trait: "정체성의 재설계·확장", lead: "경험·데이터를 통한 영향력 확장", pro: "기여 방식의 갱신·심화", ama: "부족한 재학습 기회", margin: "전환 지원에서 소외",
+        leadN: "확장 무대·협업", proN: "재학습·갱신", amaN: "재학습 접근", marginN: "전환기 보호",
         leadC: ["도시", "세계"], proC: ["도시", "마을"], amaC: ["마을", "도시"], marginC: ["가정", "국가"] },
       digitalCommunity: "가정 · 마을 · 도시 · 의료",
       digitalFeature: "가정·도시·의료가 재학습과 건강을 받친다",
@@ -99,6 +104,7 @@ export function IndividualCommunityPage() {
       digTags: ["가정", "이웃", "마을"],
       industrialPerson: { trait: "은퇴 후 자산·건강의 좌우", lead: "자산·건강으로 여유로운 노년", pro: "연금을 통한 생활 유지", ama: "부족한 노후 준비", margin: "빈곤·고립에 방치" },
       digitalPerson: { trait: "정체성의 전수·연결", lead: "멘토·자문을 통한 세대 연결", pro: "후속 세대로의 경험 전수", ama: "제한적인 전수 기회", margin: "역할 없는 단절",
+        leadN: "전수 무대 연결", proN: "전수 통로 제공", amaN: "역할 연결", marginN: "고립 방지·돌봄",
         leadC: ["마을", "도시"], proC: ["가정", "마을"], amaC: ["가정", "이웃"], marginC: ["가정", "국가"] },
       digitalCommunity: "가정 · 이웃 · 돌봄",
       digitalFeature: "가정·이웃이 멘토링과 세대 연결을 돕는다",
@@ -211,22 +217,28 @@ export function IndividualCommunityPage() {
             {lifeStages.map((s) => {
               const v = pick(s);
               const commKey = `${r.key}C` as "leadC" | "proC" | "amaC" | "marginC";
-              const comm = (v as Record<string, unknown>)[commKey] as string[] | undefined;
-              return personTcell_(`${eraTitle}-${r.key}-${s.stage}`, v[r.key], bg, false, comm);
+              const needKey = `${r.key}N` as "leadN" | "proN" | "amaN" | "marginN";
+              const rec = v as Record<string, unknown>;
+              const comm = rec[commKey] as string[] | undefined;
+              const need = rec[needKey] as string | undefined;
+              return personTcell_(`${eraTitle}-${r.key}-${s.stage}`, v[r.key], bg, false, comm, need);
             })}
           </React.Fragment>
         ))}
       </>
     );
   };
-  // 개인 테이블 셀
-  const personTcell_ = (key: string, text: string, bg: string, bold: boolean, comm?: string[]) => (
-    <div key={key} style={{ padding: "3px 7px", borderLeft: `1px solid ${C.cardBorder}`, borderTop: `1px solid ${C.cardBorder}`, background: bg, minHeight: 19, display: "flex", flexDirection: "column", justifyContent: "center", gap: 2.5 }}>
-      <span style={{ fontSize: bold ? 10 : 9.2, fontWeight: bold ? 900 : 650, color: bold ? C.ink : C.muted, lineHeight: 1.2 }}>{text}</span>
+  // 개인 테이블 셀 — 계층 상태 → 필요 기능 → 공동체 pill
+  const personTcell_ = (key: string, text: string, bg: string, bold: boolean, comm?: string[], need?: string) => (
+    <div key={key} style={{ padding: "3px 6px", borderLeft: `1px solid ${C.cardBorder}`, borderTop: `1px solid ${C.cardBorder}`, background: bg, minHeight: 19, display: "flex", flexDirection: "column", justifyContent: "center", gap: 2 }}>
+      <span style={{ fontSize: bold ? 10 : 8.8, fontWeight: bold ? 900 : 650, color: bold ? C.ink : C.muted, lineHeight: 1.18 }}>{text}</span>
+      {need && (
+        <span style={{ fontSize: 8, fontWeight: 800, color: "#2f6f8f", lineHeight: 1.18 }}>필요 · {need}</span>
+      )}
       {comm && comm.length > 0 && (
-        <div style={{ display: "flex", flexWrap: "wrap", gap: 2.5 }}>
+        <div style={{ display: "flex", flexWrap: "wrap", gap: 2 }}>
           {comm.map((t) => (
-            <span key={t} style={{ fontSize: 7.6, fontWeight: 900, color: "#fff", background: COMM[t] || "#9ca3af", padding: "0.5px 5px", borderRadius: 7, letterSpacing: 0.1 }}>{t}</span>
+            <span key={t} style={{ fontSize: 7.4, fontWeight: 900, color: "#fff", background: COMM[t] || "#9ca3af", padding: "0.5px 5px", borderRadius: 7, letterSpacing: 0.1 }}>{t}</span>
           ))}
         </div>
       )}
