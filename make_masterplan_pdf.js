@@ -9,9 +9,24 @@ const routeMatch = versionSource.match(/MASTERPLAN_ROUTE\s*=\s*["']([^"']+)["']/
 const pdfDirMatch = versionSource.match(/MASTERPLAN_PDF_DIR\s*=\s*["']([^"']+)["']/);
 if (!versionMatch || !routeMatch || !pdfDirMatch) throw new Error('Cannot read masterplan shared constants');
 
-const VERSION = versionMatch[1];
 const ROUTE = routeMatch[1];
 const PDF_DIR = pdfDirMatch[1];
+
+// 버전 자동증가: --keep 플래그가 없으면 patch 번호를 +1 하고 masterplan-version.ts에 다시 쓴다.
+const KEEP_VERSION = process.argv.includes('--keep');
+let VERSION = versionMatch[1];
+if (!KEEP_VERSION) {
+  const m = VERSION.match(/^v?(\d+)\.(\d+)\.(\d+)$/);
+  if (!m) throw new Error(`Cannot bump version: ${VERSION}`);
+  const bumped = `v${m[1]}.${m[2]}.${Number(m[3]) + 1}`;
+  const newSource = versionSource.replace(
+    /(MASTERPLAN_VERSION\s*=\s*["'])[^"']+(["'])/,
+    `$1${bumped}$2`
+  );
+  fs.writeFileSync(path.join(ROOT, 'masterplan-version.ts'), newSource);
+  VERSION = bumped;
+  console.log('Version bumped to:', VERSION);
+}
 const outPath = path.join(ROOT, PDF_DIR, `masterplan-${VERSION}.pdf`);
 
 (async () => {

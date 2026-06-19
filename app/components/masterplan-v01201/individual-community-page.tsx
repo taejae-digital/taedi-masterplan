@@ -35,7 +35,7 @@ export function IndividualCommunityPage() {
       industrialPerson: { trait: "가정 환경이 정하는 출발선", lead: "양육·의료 자원이 풍부한 가정", pro: "기본 돌봄이 안정된 가정", ama: "돌봄 공백이 잦은 가정", margin: "의료·보호에서 소외된 가정" },
       digitalPerson: { trait: "모든 가능성을 지닌 출생", lead: "일찍 풍부하게 읽히는 단서", pro: "비교적 선명하게 읽히는 단서", ama: "단편적으로만 읽히는 단서", margin: "데이터·관찰의 사각지대",
         leadN: "단서 기록·해석", proN: "단서 기록·해석", amaN: "관찰 손길", marginN: "기초 돌봄·접근",
-        leadC: ["가정", "의료"], proC: ["가정", "의료"], amaC: ["가정", "이웃"], marginC: ["가정", "국가"] },
+        leadC: ["가정"], proC: ["가정"], amaC: ["가정", "이웃"], marginC: ["가정", "국가"] },
       digitalCommunity: "가정 · 의료 · 돌봄",
       digitalFeature: "가정이 돌봄을, 의료가 정체성 단서 분석을 지원한다",
     },
