@@ -205,7 +205,7 @@ export const communityShift: CommunityShift[] = [
     digFacility: "돌봄/보호 · 정체성 관찰",
     digOrg: "초기 신호 기록 · 가족 대화 · 생활 리듬 조정",
     answers: "태아·영아의 단서 드러남, 노년의 전수·돌봄",
-    indAnswers: "양육·부양을 홀로 떠맡음 (태아~아동, 노년)",
+    indAnswers: "태아·아동의 양육과 노년 부양이 모두 가정 몫",
   },
   {
     unit: "이웃",
@@ -216,7 +216,7 @@ export const communityShift: CommunityShift[] = [
     digFacility: "관계 실험 · 흥미 발견 · 상호 돌봄",
     digOrg: "관심 기반 모임 · 생활 멘토 · 돌봄 품앗이",
     answers: "유아·아동의 발견·실험, 단절 계층의 재연결",
-    indAnswers: "생활 기능이 약화돼 거의 빈 자리",
+    indAnswers: "어느 단계도 받치지 못하는 빈 자리",
   },
   {
     unit: "마을",
@@ -227,7 +227,7 @@ export const communityShift: CommunityShift[] = [
     digFacility: "정체성 훈련 · 전환 지원 · 보호",
     digOrg: "훈련경로 설계 · 마을 멘토단 · 통합 돌봄",
     answers: "청소년의 훈련, 중장년의 재학습 접근",
-    indAnswers: "도시에 흡수돼 역할이 사라짐",
+    indAnswers: "청소년 훈련을 도시 입시에 넘기고 사라짐",
   },
   {
     unit: "도시",
@@ -238,7 +238,7 @@ export const communityShift: CommunityShift[] = [
     digFacility: "기여 발휘 · 프로젝트 실험 · 이동성",
     digOrg: "프로젝트 연결 · 직무 전환 · 생활 조정",
     answers: "청년·중장년의 발휘, 리더·프로의 무대",
-    indAnswers: "취학·입시·취업을 모두 빨아들임 (아동~중장년)",
+    indAnswers: "아동~중장년의 학습·취업을 한곳에 몰아 경쟁",
   },
   {
     unit: "국가",
@@ -249,7 +249,7 @@ export const communityShift: CommunityShift[] = [
     digFacility: "기본 조건 보장 · 위험 조정",
     digOrg: "전환기 보호 · 학습 접근 · 기여 조건 조정",
     answers: "소외 계층의 보호·재진입, 전 단계 안전망",
-    indAnswers: "표준 교육·복지·고용을 중앙이 떠맡음 (전 단계)",
+    indAnswers: "전 단계를 표준 제도 하나로 일괄 관리",
   },
   {
     unit: "세계",
@@ -260,6 +260,6 @@ export const communityShift: CommunityShift[] = [
     digFacility: "국경 넘는 발휘 · 협력 · 인정",
     digOrg: "글로벌 협업 규칙 · 공동위험 조정 · 이동성 보장",
     answers: "청년·중장년 리더의 국경 넘는 발휘·인정",
-    indAnswers: "개인에는 닿지 않는 국가 간 질서",
+    indAnswers: "어느 단계 개인에게도 닿지 않음",
   },
 ];

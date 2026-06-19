@@ -91,7 +91,7 @@ export function IndividualCommunityPage() {
           commRole={(c) => c.indRole}
           commDetail={(c) => c.indOrg}
           commAnswers={(c) => c.indAnswers}
-          ansLabel="이 시대엔"
+          ansLabel="몰린 단계"
         />
         <EraBlock
           label="디지털 시대"
