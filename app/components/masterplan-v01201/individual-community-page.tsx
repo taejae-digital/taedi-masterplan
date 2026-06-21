@@ -83,8 +83,8 @@ export function IndividualCommunityPage() {
 
       <div style={{ padding: "12px 48px 0", flex: 1, display: "flex", flexDirection: "column", gap: 14 }}>
         <EraBlock
-          label="산업화 시대"
-          sub="표준 제도가 가정·도시·국가에 기능을 몰아넣고 개인을 한 경로에 맞춘다"
+          label="산업화 시대 · 분업"
+          sub="분업 질서가 가정·도시·국가에 기능을 몰아넣고 개인을 한 경로에 맞춘다"
           accent={C.navySoft}
           pick={(s, k) => s.ind[k]}
           proc={(s) => s.indProcess}
@@ -94,8 +94,8 @@ export function IndividualCommunityPage() {
           ansLabel="생애 기능"
         />
         <EraBlock
-          label="디지털 시대"
-          sub="단계마다 필요한 공동체가 저마다 고유 기능을 맡는다"
+          label="디지털 시대 · 다양성"
+          sub="다양성 질서에서 단계마다 필요한 공동체가 저마다 고유 기능을 맡는다"
           accent={C.accent}
           pick={(s, k) => s.digitalPerson[k]}
           proc={(s) => s.process}

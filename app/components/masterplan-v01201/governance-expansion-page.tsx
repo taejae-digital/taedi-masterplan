@@ -77,7 +77,7 @@ function WorldSection() {
           <div style={{ position: "relative", zIndex: 1, padding: "10px 13px" }}>
             <div style={{ color: C.ink, fontSize: 13.6, fontWeight: 900, marginBottom: 6 }}>다음 단계 시대가치</div>
             <div style={{ color: C.body, fontSize: 12.2, fontWeight: 500, lineHeight: 1.52 }}>
-              산업화 시대가 <span style={{ color: C.teal, fontWeight: 900 }}>욕망</span>을 끊임없이 추구하며 속도·규모·점유율을 키워 온 질서였다면, 디지털 시대에는 그 욕망을 <span style={{ color: C.teal, fontWeight: 900 }}>절제</span>하고 <span style={{ color: C.teal, fontWeight: 900 }}>균형</span>을 맞추는 가치가 필요하다. 다음 질서는 안전, 자유, 다양성, 상호의존을 생산성과 함께 다루는 가치 체계여야 한다.
+              <span style={{ color: C.teal, fontWeight: 900 }}>분업</span>으로 속도·규모·점유율을 키워 온 산업화 시대의 질서가 한계에 이르면, <span style={{ color: C.teal, fontWeight: 900 }}>다양성</span>을 절제와 균형 위에서 살리는 디지털 시대의 가치가 필요하다. 다음 질서는 안전, 자유, 다양성, 상호의존을 생산성과 함께 다루는 가치 체계여야 한다.
             </div>
           </div>
         </div>
