@@ -53,7 +53,7 @@ const polTransitionRows: PolTransitionRow[] = [
   {
     label: "핵심 기능",
     industrial: "표준 교육·고용·복지로 평균 필요를 처리",
-    change: "P2의 단서 발견·실험·훈련·발휘·안전망·위험 관리가 새 정치 의제가 됨",
+    change: "단서 발견·실험·훈련·발휘·안전망·위험 관리가 새 정치 의제가 됨",
     newOrder: "여섯 공동체 기능이 끊기지 않도록 제도·시장·플랫폼을 연결",
   },
   {
@@ -66,8 +66,8 @@ const polTransitionRows: PolTransitionRow[] = [
 
 const contractResponsibilities = [
   { title: "생활 조건의 보장", detail: "가정·이웃·마을의 발견·실험·훈련 기능을 누구나 이용할 수 있도록 건강·돌봄·학습·주거의 기본 조건을 보장한다." },
-  { title: "생산 인프라의 공정한 이용 보장", detail: "3.1 경제질서가 작동하도록 AI·데이터·컴퓨팅·시장 연결을 공정하게 이용할 조건을 보장한다." },
-  { title: "조정 질서의 공정성 보장", detail: "3.2 정치질서가 작동하도록 공동체 간 권한 위임, 플랫폼 규칙, 국가·세계 조정이 일방적으로 기회를 막지 못하게 한다." },
+  { title: "생산 인프라의 공정한 이용 보장", detail: "AI·데이터·컴퓨팅·시장 연결을 공정하게 이용해 정체성이 일·소득·기여로 이어질 조건을 보장한다." },
+  { title: "조정 질서의 공정성 보장", detail: "공동체 간 권한 위임, 플랫폼 규칙, 국가·세계 조정이 개인의 기회를 일방적으로 막지 못하게 한다." },
 ];
 
 function CausalSpine({ rows }: { rows: Array<{ k: string; t: string; d: string }> }) {
@@ -177,12 +177,12 @@ function PolTable({ rows }: { rows: PolTransitionRow[] }) {
 
 export function CombinedPage() {
   const econSpine = [
-    { k: "P2 연결", t: "도시는 정체성이 발휘되는 장", d: "가정·이웃·마을에서 발견·실험·훈련된 정체성이 도시에서 실제 기여로 전환" },
+    { k: "생활 기반", t: "정체성은 생활 속에서 형성", d: "가정·이웃·마을에서 발견·실험·훈련된 정체성이 도시에서 실제 기여로 전환" },
     { k: "경제 변화", t: "AI가 실행비용을 낮춤", d: "개인은 기획·제작·분석·유통 능력을 얻고, 표준 직무 밖에서도 생산자가 될 수 있음" },
     { k: "새 질서", t: "정체성이 일·소득·기여로 전환", d: "4계층의 위치가 재배치되고, 고유 기여를 만드는 사람이 생산질서의 중심이 됨" },
   ];
   const polSpine = [
-    { k: "P2 연결", t: "기능이 여섯 공동체로 재배치", d: "단서 발견·실험·훈련·발휘·안전망·위험 관리를 국가 하나가 처리할 수 없음" },
+    { k: "생활 기반", t: "필요가 여러 공동체로 분화", d: "단서 발견·실험·훈련·발휘·안전망·위험 관리를 국가 하나가 처리할 수 없음" },
     { k: "정치 변화", t: "국민국가 민주주의의 한계", d: "산업화 민주주의는 개인을 국민으로 묶어 국가에 포괄 위임하는 질서" },
     { k: "새 질서", t: "다층 공동체 거버넌스", d: "개인이 필요별로 권한을 나누어 위임하고, 도시·국가·세계가 기능과 책임을 조정" },
   ];
@@ -196,10 +196,10 @@ export function CombinedPage() {
         <div style={{ paddingBottom: 6, borderBottom: `1px solid ${C.line}`, marginBottom: 0 }}>
           <div style={{ fontSize: 11, letterSpacing: 3, color: C.ink, fontWeight: 800, marginBottom: 5 }}>질서의 전환</div>
           <div style={{ fontSize: 19, color: C.ink, lineHeight: 1.3, fontWeight: 900, letterSpacing: -0.5 }}>
-            P2의 공동체 기능 재편은 경제질서와 정치질서를 거쳐 사회계약으로 제도화된다.
+            정체성 실현은 생활 공동체의 기능 변화가 생산과 권한의 질서로 이어질 때 가능하다.
           </div>
           <div style={{ marginTop: 6, fontSize: 12.8, color: C.body, lineHeight: 1.5, fontWeight: 500 }}>
-            P2는 가정의 단서 발견, 이웃의 실험, 마을의 훈련, 도시의 발휘, 국가의 안전망, 세계의 위험 관리를 제시한다. 3.1은 이 기능이 일·소득·기여로 이어지는 경제질서를, 3.2는 여러 공동체에 권한을 나누어 위임하고 조정하는 정치질서를 정리한다. 그 위에 3.3 사회계약이 선다.
+            개인의 정체성은 가정에서 단서로 드러나고, 이웃에서 실험되며, 마을에서 훈련되고, 도시에서 실제 기여로 발휘된다. 국가는 그 과정의 안전망을 보장하고, 세계는 개인의 삶까지 흔드는 위험을 공동으로 관리한다. 경제질서는 이 흐름을 일·소득·기여로 연결하고, 정치질서는 여러 공동체에 나뉜 권한과 책임을 조정한다.
           </div>
         </div>
         <div>
@@ -207,7 +207,7 @@ export function CombinedPage() {
           <SectionGrid spine={econSpine}>
             <div style={{ display: "flex", flexDirection: "column", gap: 6, height: "100%" }}> 
               <div style={{ padding: "7px 12px", background: "#fff", borderLeft: `3px solid ${C.ink}`, borderRadius: 2, fontSize: 12.0, lineHeight: 1.38, color: C.ink, fontWeight: 600 }}>
-                2장에서 도시는 정체성을 실제 기여로 발휘하는 장이다. 경제질서는 발견·실험·훈련을 거친 정체성이 도시·시장·플랫폼과 연결되어 일·소득·기여로 전환되는 구조를 만든다. <span style={{ color: C.muted, fontWeight: 600 }}>에릭 브린욜프슨은 AI가 개인 생산성을 끌어올린다고 보고, 다니엘 서스킨드는 AI가 일·소득·삶의 의미를 재설계하게 만든다고 본다.</span>
+                도시는 정체성이 실제 기여로 발휘되는 장이다. 경제질서는 발견·실험·훈련을 거친 정체성이 도시·시장·플랫폼과 연결되어 일·소득·기여로 전환되는 구조를 만든다. <span style={{ color: C.muted, fontWeight: 600 }}>에릭 브린욜프슨은 AI가 개인 생산성을 끌어올린다고 보고, 다니엘 서스킨드는 AI가 일·소득·삶의 의미를 재설계하게 만든다고 본다.</span>
               </div>
               <div style={{ flex: 1 }}>
                 <EconTable rows={econClassRows} />
