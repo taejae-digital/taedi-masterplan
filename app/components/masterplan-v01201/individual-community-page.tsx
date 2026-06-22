@@ -12,9 +12,8 @@ export function IndividualCommunityPage() {
     <>
       <div style={{ background: "#fafafa", borderBottom: `2px solid ${C.ink}` }} />
       {ERAS.map((e) => (
-        <div key={e.key} style={{ background: "#fafafa", borderLeft: `1px solid ${C.cardBorder}`, borderBottom: `2px solid ${C.ink}`, padding: "5px 11px", display: "flex", alignItems: "baseline", gap: 8 }}>
+        <div key={e.key} style={{ background: "#fafafa", borderLeft: `1px solid ${C.cardBorder}`, borderBottom: `2px solid ${C.ink}`, padding: "5px 11px", display: "flex", alignItems: "center" }}>
           <span style={{ fontSize: 13.1, fontWeight: 900, color: C.ink }}>{e.label}</span>
-          <span style={{ fontSize: 10.8, fontWeight: 850, color: e.accent }}>{"\u00b7"} {e.tag}</span>
         </div>
       ))}
     </>
@@ -22,7 +21,7 @@ export function IndividualCommunityPage() {
 
   const EraOverview = () => (
     <div style={{ display: "grid", gridTemplateColumns: colTpl, border: `1px solid ${C.cardBorder}`, borderRadius: 7, overflow: "hidden", background: "#fff" }}>
-      <div style={{ background: C.ink, color: "#fff", padding: "7px 8px", display: "flex", alignItems: "center", justifyContent: "center", textAlign: "center", fontSize: 10.6, lineHeight: 1.25, fontWeight: 900, letterSpacing: 1.5 }}>시대\n목표</div>
+      <div style={{ background: C.ink, color: "#fff", padding: "7px 8px", display: "flex", alignItems: "center", justifyContent: "center", textAlign: "center", fontSize: 10.6, lineHeight: 1.25, fontWeight: 900, letterSpacing: 0.2 }}>시대별 목표</div>
       {ERAS.map((e) => (
         <div key={e.key} style={{ borderLeft: `1px solid ${C.cardBorder}`, padding: "6px 11px 7px", background: "#fff" }}>
           <div style={{ display: "flex", alignItems: "baseline", gap: 8, marginBottom: 4 }}>
