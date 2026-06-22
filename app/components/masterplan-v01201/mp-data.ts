@@ -1,22 +1,24 @@
 // P2 공유 데이터 — 개인 축(P2-a)과 공동체 축(P2-b)이 함께 사용
 
-// 6단계 공동체 색 — 가정→세계 초록→파랑 그라데이션 보간
+// 6단계 공동체 색 — 가까운 생활권(주황)에서 넓은 단위(남보라)로 무지개형 팔레트
 export const COMM_ORDER = ["가정", "이웃", "마을", "도시", "국가", "세계"];
-const GRAD_START = [0x2f, 0x9e, 0x6b]; // 가정: 초록
-const GRAD_END = [0x2f, 0x5e, 0xb0]; // 세계: 파랑
-const lerp = (a: number, b: number, t: number) => Math.round(a + (b - a) * t);
-export const gradAt = (t: number) =>
-  `rgb(${lerp(GRAD_START[0], GRAD_END[0], t)}, ${lerp(GRAD_START[1], GRAD_END[1], t)}, ${lerp(GRAD_START[2], GRAD_END[2], t)})`;
-export const COMM: Record<string, string> = COMM_ORDER.reduce((acc, unit, i) => {
-  acc[unit] = gradAt(i / (COMM_ORDER.length - 1));
-  return acc;
-}, {} as Record<string, string>);
+export const COMM: Record<string, string> = {
+  "가정": "#d9722b",
+  "이웃": "#c79a1e",
+  "마을": "#3f9e4d",
+  "도시": "#13988f",
+  "국가": "#2f6fc0",
+  "세계": "#5b4bc4",
+};
+export const gradAt = (t: number) => {
+  const i = Math.min(COMM_ORDER.length - 1, Math.round(t * (COMM_ORDER.length - 1)));
+  return COMM[COMM_ORDER[i]];
+};
 export const cardGrad = (unit: string) => {
   const i = COMM_ORDER.indexOf(unit);
-  const n = COMM_ORDER.length - 1;
-  const t0 = Math.max(0, (i - 0.5) / n);
-  const t1 = Math.min(1, (i + 0.5) / n);
-  return `linear-gradient(90deg, ${gradAt(t0)}, ${gradAt(t1)})`;
+  const a = COMM[COMM_ORDER[Math.max(0, i)]];
+  const b = COMM[COMM_ORDER[Math.min(COMM_ORDER.length - 1, i + 1)]];
+  return `linear-gradient(90deg, ${a}, ${b})`;
 };
 
 // ── P2-a 개인 축: 생애주기 6단계 × 4계층 ──

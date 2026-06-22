@@ -1,11 +1,11 @@
 // P2 전용: 농업·산업화·디지털 3시대 × (개인 생애주기 / 6공동체)
 
 export const ERAS = [
-  { key: "agri", label: "농업 시대", tag: "생존", accent: "#8a6d3b",
+  { key: "agri", label: "농업 시대", tag: "생존", accent: "#3a3a3a",
     summary: "타고난 신분과 가문 안에서 대를 잇고 땅을 지키는 것이 목표라, 가족·마을이 노동·돌봄·교육을 함께 떠안는 자급 공동체가 만들어진다." },
   { key: "ind", label: "산업화 시대", tag: "분업", accent: "#3a3a3a",
     summary: "표준 교육으로 좋은 일자리를 얻는 것이 목표라, 학교·기업·국가가 인재를 한 줄로 세워 관리하는 공동체가 만들어진다." },
-  { key: "dig", label: "디지털 시대", tag: "다양성", accent: "#0d7d72",
+  { key: "dig", label: "디지털 시대", tag: "다양성", accent: "#3a3a3a",
     summary: "저마다 다른 정체성을 발휘하는 것이 목표라, 생애 단계마다 필요한 공동체가 고유 기능을 나눠 맡는다." },
 ] as const;
 
