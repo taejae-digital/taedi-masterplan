@@ -203,7 +203,7 @@ export function CombinedPage() {
           </div>
         </div>
         <div>
-          <div style={h3s}>3.1 경제질서 — 정체성이 일·소득·기여로 이어지는 구조</div>
+          <div style={h3s}>3.1 경제질서 — 분업의 경제에서 다양성의 경제로</div>
           <SectionGrid spine={econSpine}>
             <div style={{ display: "flex", flexDirection: "column", gap: 6, height: "100%" }}> 
               <div style={{ padding: "7px 12px", background: "#fff", borderLeft: `3px solid ${C.ink}`, borderRadius: 2, fontSize: 12.0, lineHeight: 1.38, color: C.ink, fontWeight: 600 }}>
