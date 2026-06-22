@@ -6,7 +6,7 @@ export const ERAS = [
   { key: "ind", label: "산업화 시대", tag: "분업", accent: "#3a3a3a",
     summary: "표준 교육으로 좋은 일자리를 얻는 것이 목표라, 학교·기업·국가가 인재를 획일적으로 관리하는 공동체가 만들어진다." },
   { key: "dig", label: "디지털 시대", tag: "다양성", accent: "#3a3a3a",
-    summary: "저마다 다른 정체성을 발휘하는 것이 목표라, 생애 단계마다 필요한 공동체가 고유 기능을 나눠 맡는다." },
+    summary: "저마다 다른 정체성을 발휘하는 것이 목표라, 가정은 단서 발견, 이웃은 실험, 마을은 훈련, 도시는 발휘, 국가는 안전망, 세계는 위험 관리를 맡는다." },
 ] as const;
 
 export type Pill = { c: string; role: string };
