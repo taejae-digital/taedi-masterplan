@@ -3,12 +3,12 @@
 // 6단계 공동체 색 — 가까운 생활권(주황)에서 넓은 단위(남보라)로 무지개형 팔레트
 export const COMM_ORDER = ["가정", "이웃", "마을", "도시", "국가", "세계"];
 export const COMM: Record<string, string> = {
-  "가정": "#d9722b",
-  "이웃": "#c79a1e",
-  "마을": "#3f9e4d",
-  "도시": "#13988f",
-  "국가": "#2f6fc0",
-  "세계": "#5b4bc4",
+  "가정": "#b9763f",
+  "이웃": "#a8902f",
+  "마을": "#5a8a55",
+  "도시": "#3f8580",
+  "국가": "#4f6d9e",
+  "세계": "#6a5f9c",
 };
 export const gradAt = (t: number) => {
   const i = Math.min(COMM_ORDER.length - 1, Math.round(t * (COMM_ORDER.length - 1)));
