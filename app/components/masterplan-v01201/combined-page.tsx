@@ -97,7 +97,7 @@ function CausalSpine({ rows }: { rows: Array<{ k: string; t: string; d: string }
               {/* 연결선 */}
               {!isLast && (
                 <div style={{ flex: 1, display: "flex", justifyContent: "flex-start", paddingLeft: 15, marginTop: 2 }}>
-                  <div style={{ width: 2.5, flex: 1, background: C.ink, opacity: 0.22 }} />
+                  <div style={{ width: 2, height: "100%", minHeight: 18, background: C.line, opacity: 1 }} />
                 </div>
               )}
             </div>
