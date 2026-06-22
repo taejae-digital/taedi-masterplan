@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8" />
+<title>Slide 2 Preview — agriculture industry digital</title>
+<style>
+  @page { size: A4 landscape; margin: 0; }
+  * { box-sizing: border-box; }
+  body { margin:0; background:#ddd; font-family:-apple-system,BlinkMacSystemFont,"Pretendard","Apple SD Gothic Neo","Noto Sans KR",sans-serif; color:#0a0a0a; }
+  .page { width:297mm; height:210mm; background:#fff; overflow:hidden; display:flex; flex-direction:column; }
+  .header { position:relative; padding:12px 48px 9px; border-top:5px solid #0a0a0a; border-bottom:1.5px solid #0a0a0a; overflow:hidden; }
+  .chapter { position:absolute; left:42px; top:-15px; font-size:82px; line-height:1; font-weight:950; color:#ced3da; letter-spacing:-7px; z-index:0; }
+  .headrow { position:relative; z-index:1; display:flex; justify-content:space-between; align-items:flex-end; }
+  .title { padding-left:84px; font-size:21px; font-weight:900; letter-spacing:-0.6px; }
+  .inst { text-align:right; line-height:1.5; }
+  .inst .kr { font-size:10.5px; font-weight:850; letter-spacing:2.5px; }
+  .inst .sub { font-size:9.5px; color:#6b7280; font-weight:600; letter-spacing:.6px; }
+  .lead { padding:9px 48px 7px; border-bottom:1px solid #c9c9c9; }
+  .lead .thesis { font-size:18.5px; font-weight:950; letter-spacing:-.7px; line-height:1.18; }
+  .lead .summary { margin-top:5px; font-size:11.6px; color:#2b2b2b; line-height:1.32; font-weight:550; }
+  .content { padding:7px 48px 0; flex:1; display:grid; grid-template-rows:auto auto 1fr; gap:6px; min-height:0; }
+  .section-label { font-size:11.7px; font-weight:950; color:#141414; letter-spacing:.05px; margin-bottom:4px; }
+  .era-map { display:grid; grid-template-columns:repeat(3,1fr); gap:8px; }
+  .era { border:1px solid #d9d9d9; border-radius:4px; overflow:hidden; background:#fff; min-height:82px; display:flex; flex-direction:column; }
+  .era .head { padding:5px 10px; color:#fff; font-size:13px; font-weight:950; letter-spacing:-.3px; display:flex; justify-content:space-between; align-items:baseline; }
+  .era .head span { font-size:10.5px; opacity:.9; font-weight:800; }
+  .era .body { padding:6px 10px; display:grid; grid-template-columns:86px 1fr; gap:5px 8px; font-size:10.8px; line-height:1.18; }
+  .k { color:#6b7280; font-weight:900; }
+  .v { font-weight:750; color:#1f2937; }
+  .agri .head { background:#8a6a2f; } .indus .head { background:#3a3a3a; } .digital .head { background:#0d7d72; }
+  .matrix { display:grid; grid-template-columns:78px 1fr 1fr; border:1px solid #d9d9d9; border-radius:4px; overflow:hidden; }
+  .mcell { min-height:31px; padding:4px 8px; border-left:1px solid #d9d9d9; border-top:1px solid #e8e8e8; display:flex; flex-direction:column; justify-content:center; }
+  .mcell.header { min-height:29px; padding:4px 8px; border-top:0; background:#fff; border-bottom:2px solid #0a0a0a; font-size:11.8px; font-weight:950; text-align:center; color:#0a0a0a; }
+  .mcell.first { border-left:0; color:#6b7280; text-align:left; }
+  .stage { border-left:0; background:#fafafa; font-size:11.6px; font-weight:950; color:#141414; }
+  .const { font-size:11.5px; font-weight:900; color:#141414; letter-spacing:-.2px; }
+  .chg { font-size:11.7px; font-weight:900; color:#0d7d72; letter-spacing:-.25px; }
+  .note { margin-top:1px; font-size:8.9px; color:#6b7280; font-weight:650; line-height:1.22; }
+  .communities { display:grid; grid-template-columns:repeat(6,1fr); gap:6px; min-height:0; }
+  .card { border:1px solid #d9d9d9; border-radius:4px; overflow:hidden; background:#fff; display:flex; flex-direction:column; min-height:0; }
+  .bar { padding:4px 7px; color:#fff; font-size:12.5px; font-weight:950; letter-spacing:-.25px; }
+  .body { padding:5px 6px; display:grid; grid-template-rows:repeat(3,1fr); gap:3px; flex:1; min-height:0; }
+  .box { border:1px solid #e8e8e8; border-radius:3px; padding:3px 5px; min-height:31px; }
+  .box.a { background:#fbf8ef; } .box.i { background:#fafafa; } .box.d { background:#f7fbfb; border-color:#d7ece9; }
+  .elabel { font-size:7.9px; font-weight:950; color:#6b7280; margin-bottom:2px; }
+  .box.d .elabel { color:#0d7d72; }
+  .role { font-size:9.45px; font-weight:900; color:#0a0a0a; line-height:1.18; letter-spacing:-.2px; }
+  .detail { margin-top:1px; font-size:7.9px; font-weight:650; color:#6b7280; line-height:1.18; }
+  .footer { margin:0 48px; padding:4px 0 7px; border-top:1px solid #c9c9c9; display:flex; justify-content:space-between; align-items:baseline; font-size:9px; color:#6b7280; font-weight:700; letter-spacing:1.8px; }
+</style>
+</head>
+<body>
+<div class="page">
+  <div class="header">
+    <div class="chapter">02</div>
+    <div class="headrow">
+      <div class="title">개인의 생애주기와 공동체</div>
+      <div class="inst"><div class="kr">태재미래전략연구원</div><div class="sub">디지털 전환과 사회변혁 · v0.12.17 preview · 2026.06</div></div>
+    </div>
+  </div>
+  <div class="lead">
+    <div class="thesis">생애 필요는 남고, 공동체의 작동 방식은 바뀐다</div>
+    <div class="summary">농업사회는 혈연·지연 공동체가 삶을 규정했고, 산업화는 학교·회사·국가가 개인을 표준 경로에 배치했다. 디지털 시대에는 개인의 정체성과 생애단계에 따라 공동체 기능이 다시 배치된다.</div>
+  </div>
+  <div class="content">
+    <div>
+      <div class="section-label">세 시대의 개인-공동체 관계</div>
+      <div class="era-map">
+        <div class="era agri"><div class="head">농업사회 <span>혈연·지연</span></div><div class="body"><div class="k">개인</div><div class="v">공동체 안에 태어남</div><div class="k">공동체</div><div class="v">가정·마을이 생존과 질서 담당</div><div class="k">위험</div><div class="v">신분·관습에 묶임</div></div></div>
+        <div class="era indus"><div class="head">산업화 <span>제도·조직</span></div><div class="body"><div class="k">개인</div><div class="v">표준 제도 안에 배치됨</div><div class="k">공동체</div><div class="v">학교·회사·국가가 선발·관리</div><div class="k">위험</div><div class="v">표준 경로에서 탈락</div></div></div>
+        <div class="era digital"><div class="head">디지털 <span>생애기능</span></div><div class="body"><div class="k">개인</div><div class="v">자기 삶을 구성함</div><div class="k">공동체</div><div class="v">단계별 발견·훈련·발휘·보호</div><div class="k">위험</div><div class="v">고립·불안정·기회 격차</div></div></div>
+      </div>
+    </div>
+    <div>
+      <div class="section-label">변하지 않는 생애 필요과 변하는 대응 방식</div>
+      <div class="matrix">
+        <div class="mcell header first">생애단계</div><div class="mcell header">변하지 않는 필요</div><div class="mcell header">디지털 시대의 재배치</div>
+        <div class="mcell stage">태아·영아</div><div class="mcell"><div class="const">돌봄·보호</div><div class="note">태어나고 자라는 기본 조건</div></div><div class="mcell"><div class="chg">정체성 단서 기록</div><div class="note">가정·국가가 초기 신호와 접근 보장</div></div>
+        <div class="mcell stage">유아·아동</div><div class="mcell"><div class="const">관계·놀이·학습</div><div class="note">관계 속에서 흥미와 기초 역량 형성</div></div><div class="mcell"><div class="chg">발견·실험</div><div class="note">가정·이웃·마을이 체험 기회 확장</div></div>
+        <div class="mcell stage">청소년</div><div class="mcell"><div class="const">훈련·방향</div><div class="note">자기 강점을 단련하고 진로를 찾음</div></div><div class="mcell"><div class="chg">강점의 집중 훈련</div><div class="note">마을·도시가 멘토와 훈련 경로 연결</div></div>
+        <div class="mcell stage">청년</div><div class="mcell"><div class="const">일·인정</div><div class="note">생산에 참여하고 기여를 인정받음</div></div><div class="mcell"><div class="chg">발휘 무대 연결</div><div class="note">도시·세계가 프로젝트와 시장 연결</div></div>
+        <div class="mcell stage">중장년</div><div class="mcell"><div class="const">재학습·전환</div><div class="note">변화에 맞춰 역할을 다시 구성</div></div><div class="mcell"><div class="chg">강점 재설계</div><div class="note">마을·도시·국가가 전환기 보호와 재학습 지원</div></div>
+        <div class="mcell stage">노년</div><div class="mcell"><div class="const">돌봄·전수</div><div class="note">보호받고 경험을 다음 세대에 넘김</div></div><div class="mcell"><div class="chg">전수·연결</div><div class="note">가정·이웃·마을이 역할과 관계 유지</div></div>
+      </div>
+    </div>
+    <div>
+      <div class="section-label">6공동체의 기능 변화</div>
+      <div class="communities">
+        <div class="card"><div class="bar" style="background:#2f9e6b">가정</div><div class="body"><div class="box a"><div class="elabel">농업사회</div><div class="role">생존·가업 단위</div><div class="detail">출생·양육·노동 결합</div></div><div class="box i"><div class="elabel">산업화</div><div class="role">양육·부양 집중</div><div class="detail">교육·고용은 제도에 위임</div></div><div class="box d"><div class="elabel">디지털</div><div class="role">정체성 단서 기록</div><div class="detail">생활 리듬·초기 신호</div></div></div></div>
+        <div class="card"><div class="bar" style="background:#2f9278">이웃</div><div class="body"><div class="box a"><div class="elabel">농업사회</div><div class="role">상호부조 관계망</div><div class="detail">품앗이·감시·돌봄</div></div><div class="box i"><div class="elabel">산업화</div><div class="role">생활 관계망 약화</div><div class="detail">공동 돌봄 소멸</div></div><div class="box d"><div class="elabel">디지털</div><div class="role">실험 관계망</div><div class="detail">관심 모임·생활 멘토</div></div></div></div>
+        <div class="card"><div class="bar" style="background:#2f8685">마을</div><div class="body"><div class="box a"><div class="elabel">농업사회</div><div class="role">관습·질서 공동체</div><div class="detail">역할 배분·세대 전수</div></div><div class="box i"><div class="elabel">산업화</div><div class="role">도시로 기능 흡수</div><div class="detail">자치·훈련 기능 약화</div></div><div class="box d"><div class="elabel">디지털</div><div class="role">훈련 생활권</div><div class="detail">멘토단·재학습 접근</div></div></div></div>
+        <div class="card"><div class="bar" style="background:#2f7a91">도시</div><div class="body"><div class="box a"><div class="elabel">농업사회</div><div class="role">시장·행정 거점</div><div class="detail">제한된 교환과 권력</div></div><div class="box i"><div class="elabel">산업화</div><div class="role">학교·회사 집적</div><div class="detail">입시·고용 경쟁 집중</div></div><div class="box d"><div class="elabel">디지털</div><div class="role">발휘 무대</div><div class="detail">프로젝트·직무 전환</div></div></div></div>
+        <div class="card"><div class="bar" style="background:#2f6e9e">국가</div><div class="body"><div class="box a"><div class="elabel">농업사회</div><div class="role">조세·군역 질서</div><div class="detail">신분과 영토 관리</div></div><div class="box i"><div class="elabel">산업화</div><div class="role">표준 제도 관리</div><div class="detail">교육·복지·고용 중앙화</div></div><div class="box d"><div class="elabel">디지털</div><div class="role">안전망·재진입</div><div class="detail">전환기 보호·조건 조정</div></div></div></div>
+        <div class="card"><div class="bar" style="background:#2f5eb0">세계</div><div class="body"><div class="box a"><div class="elabel">농업사회</div><div class="role">교역·전쟁의 외부</div><div class="detail">개인 생애와 먼 질서</div></div><div class="box i"><div class="elabel">산업화</div><div class="role">국가 간 협정 중심</div><div class="detail">개인 생애와 거리</div></div><div class="box d"><div class="elabel">디지털</div><div class="role">공동위험 관리</div><div class="detail">WMD·기후·AI·감염병</div></div></div></div>
+      </div>
+    </div>
+  </div>
+  <div class="footer"><span>TAEJAE FUTURE CONSENSUS INSTITUTE · 디지털 전환과 사회변혁팀</span><span>SLIDE 02 PREVIEW · NOT MERGED</span></div>
+</div>
+</body>
+</html>

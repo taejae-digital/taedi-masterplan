@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8" />
+<title>Slide 2 Preview — lifecycle community</title>
+<style>
+  @page { size: A4 landscape; margin: 0; }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: #ddd; font-family: -apple-system, BlinkMacSystemFont, "Pretendard", "Apple SD Gothic Neo", "Noto Sans KR", sans-serif; color:#0a0a0a; }
+  .page { width: 297mm; height: 210mm; background:#fff; overflow:hidden; display:flex; flex-direction:column; }
+  .header { position:relative; padding:15px 48px 12px; border-top:5px solid #0a0a0a; border-bottom:1.5px solid #0a0a0a; overflow:hidden; }
+  .chapter { position:absolute; left:42px; top:-17px; font-size:92px; line-height:1; font-weight:950; color:#ced3da; letter-spacing:-7px; z-index:0; }
+  .headrow { position:relative; z-index:1; display:flex; justify-content:space-between; align-items:flex-end; }
+  .title { padding-left:84px; font-size:22.5px; font-weight:900; letter-spacing:-0.6px; }
+  .inst { text-align:right; line-height:1.5; }
+  .inst .kr { font-size:10.5px; font-weight:850; letter-spacing:2.5px; }
+  .inst .sub { font-size:9.5px; color:#6b7280; font-weight:600; letter-spacing:.6px; }
+  .lead { padding:13px 48px 10px; border-bottom:1px solid #c9c9c9; }
+  .lead .thesis { font-size:21px; font-weight:950; letter-spacing:-.65px; line-height:1.18; }
+  .lead .summary { margin-top:5px; font-size:12.7px; color:#2b2b2b; line-height:1.45; font-weight:550; }
+  .content { padding:11px 48px 0; flex:1; display:grid; grid-template-rows:auto auto 1fr; gap:9px; min-height:0; }
+  .section-label { font-size:12px; font-weight:900; color:#141414; letter-spacing:.1px; margin-bottom:5px; }
+  .matrix { display:grid; grid-template-columns:86px 1.05fr 1.05fr 1.05fr; border:1px solid #d9d9d9; border-radius:4px; overflow:hidden; }
+  .mcell { min-height:43px; padding:7px 10px; border-left:1px solid #d9d9d9; border-top:1px solid #e8e8e8; display:flex; flex-direction:column; justify-content:center; }
+  .mcell.header { min-height:32px; padding:6px 10px; border-top:0; background:#fff; border-bottom:2px solid #0a0a0a; font-size:12.5px; font-weight:900; text-align:center; color:#0a0a0a; }
+  .mcell.first { border-left:0; text-align:left; color:#6b7280; }
+  .stage { border-left:0; background:#fafafa; font-size:12px; font-weight:900; color:#141414; }
+  .proc { font-size:14px; font-weight:900; letter-spacing:-.35px; color:#0d7d72; margin-bottom:2px; }
+  .ind { font-size:13px; font-weight:850; letter-spacing:-.25px; color:#3a3a3a; margin-bottom:2px; }
+  .comm { font-size:12.1px; font-weight:800; color:#2f5fa8; }
+  .note { font-size:10.1px; color:#6b7280; font-weight:600; }
+  .tiers { display:grid; grid-template-columns:repeat(4,1fr); border:1px solid #d9d9d9; border-radius:4px; overflow:hidden; }
+  .tier { padding:7px 12px; border-left:1px solid #e8e8e8; min-height:48px; }
+  .tier:first-child { border-left:0; }
+  .tier .name { font-size:13px; font-weight:950; margin-bottom:3px; }
+  .tier .oldnew { display:grid; grid-template-columns:45px 1fr; gap:2px 7px; font-size:11.2px; line-height:1.22; }
+  .tag { font-weight:900; color:#6b7280; }
+  .new { color:#0d7d72; font-weight:800; }
+  .old { color:#3a3a3a; font-weight:700; }
+  .communities { display:grid; grid-template-columns:repeat(6,1fr); gap:7px; min-height:0; }
+  .card { border:1px solid #d9d9d9; border-radius:4px; overflow:hidden; background:#fff; display:flex; flex-direction:column; min-height:0; }
+  .card .bar { padding:6px 8px; color:#fff; font-size:13px; font-weight:950; letter-spacing:-.25px; }
+  .card .body { padding:7px 8px 7px; display:grid; grid-template-rows:1fr 1fr; gap:5px; flex:1; }
+  .era { border:1px solid #e8e8e8; border-radius:3px; padding:6px 7px; min-height:54px; }
+  .era.oldbox { background:#fafafa; }
+  .era.newbox { background:#f7fbfb; border-color:#d7ece9; }
+  .eraLabel { font-size:9.6px; font-weight:950; color:#6b7280; margin-bottom:3px; }
+  .era.newbox .eraLabel { color:#0d7d72; }
+  .role { font-size:11.4px; font-weight:900; color:#0a0a0a; line-height:1.23; letter-spacing:-.2px; }
+  .detail { margin-top:2px; font-size:9.5px; font-weight:650; color:#6b7280; line-height:1.25; }
+  .caption { margin-top:1px; padding:7px 11px; background:#f0f0f1; border-left:4px solid #0a0a0a; font-size:11.2px; line-height:1.35; color:#2b2b2b; font-weight:650; }
+  .footer { margin:0 48px; padding:8px 0 12px; border-top:1px solid #c9c9c9; display:flex; justify-content:space-between; align-items:baseline; font-size:9px; color:#6b7280; font-weight:700; letter-spacing:1.8px; }
+</style>
+</head>
+<body>
+<div class="page">
+  <div class="header">
+    <div class="chapter">02</div>
+    <div class="headrow">
+      <div class="title">개인의 생애주기와 공동체</div>
+      <div class="inst"><div class="kr">태재미래전략연구원</div><div class="sub">디지털 전환과 사회변혁 · v0.12.17 preview · 2026.06</div></div>
+    </div>
+  </div>
+
+  <div class="lead">
+    <div class="thesis">표준 경로에서 생애별 공동체 기능으로</div>
+    <div class="summary">분업의 시대에는 개인이 표준 경로에 맞춰졌고, 다양성의 시대에는 생애 단계마다 필요한 공동체 기능이 달라진다.</div>
+  </div>
+
+  <div class="content">
+    <div>
+      <div class="section-label">생애단계별 전환</div>
+      <div class="matrix">
+        <div class="mcell header first">생애단계</div><div class="mcell header">산업화 · 분업</div><div class="mcell header">디지털 · 다양성</div><div class="mcell header">맡는 공동체</div>
+        <div class="mcell stage">태아·영아</div><div class="mcell"><div class="ind">출산·양육</div><div class="note">가정에 집중</div></div><div class="mcell"><div class="proc">단서 드러남</div><div class="note">기질·강점의 초기 신호 기록</div></div><div class="mcell"><div class="comm">가정 · 국가</div></div>
+        <div class="mcell stage">유아·아동</div><div class="mcell"><div class="ind">취학 준비</div><div class="note">표준 교육 진입</div></div><div class="mcell"><div class="proc">발견·실험</div><div class="note">흥미와 관계의 폭 확장</div></div><div class="mcell"><div class="comm">가정 · 이웃 · 마을</div></div>
+        <div class="mcell stage">청소년</div><div class="mcell"><div class="ind">입시 경쟁</div><div class="note">점수로 진로 선별</div></div><div class="mcell"><div class="proc">훈련·방향</div><div class="note">강점의 집중 훈련</div></div><div class="mcell"><div class="comm">마을 · 도시</div></div>
+        <div class="mcell stage">청년</div><div class="mcell"><div class="ind">취업·정착</div><div class="note">조직 직무에 배치</div></div><div class="mcell"><div class="proc">발휘</div><div class="note">프로젝트와 시장 연결</div></div><div class="mcell"><div class="comm">도시 · 세계</div></div>
+        <div class="mcell stage">중장년</div><div class="mcell"><div class="ind">고용 유지</div><div class="note">기술 변화 앞에서 버팀</div></div><div class="mcell"><div class="proc">재설계·확장</div><div class="note">재학습과 전환 지원</div></div><div class="mcell"><div class="comm">마을 · 도시 · 국가</div></div>
+        <div class="mcell stage">노년</div><div class="mcell"><div class="ind">은퇴·부양</div><div class="note">역할 축소와 돌봄 의존</div></div><div class="mcell"><div class="proc">전수·연결</div><div class="note">경험의 다음 세대 연결</div></div><div class="mcell"><div class="comm">가정 · 이웃 · 마을</div></div>
+      </div>
+    </div>
+
+    <div>
+      <div class="section-label">4계층 구분 기준</div>
+      <div class="tiers">
+        <div class="tier"><div class="name">리더</div><div class="oldnew"><div class="tag">산업화</div><div class="old">자본·조직·기회 보유</div><div class="tag">디지털</div><div class="new">고유 기여의 확장</div></div></div>
+        <div class="tier"><div class="name">프로</div><div class="oldnew"><div class="tag">산업화</div><div class="old">표준 직무 숙련</div><div class="tag">디지털</div><div class="new">전문성의 갱신</div></div></div>
+        <div class="tier"><div class="name">아마</div><div class="oldnew"><div class="tag">산업화</div><div class="old">주변부 기회 부족</div><div class="tag">디지털</div><div class="new">발견·실험 기회</div></div></div>
+        <div class="tier"><div class="name">소외</div><div class="oldnew"><div class="tag">산업화</div><div class="old">제도 밖 배제</div><div class="tag">디지털</div><div class="new">보호·재진입</div></div></div>
+      </div>
+    </div>
+
+    <div>
+      <div class="section-label">6공동체 기능 전환</div>
+      <div class="communities">
+        <div class="card"><div class="bar" style="background:#2f9e6b">가정</div><div class="body"><div class="era oldbox"><div class="eraLabel">산업화</div><div class="role">양육·부양 집중</div><div class="detail">표준 교육에 위임</div></div><div class="era newbox"><div class="eraLabel">디지털</div><div class="role">정체성 단서 기록</div><div class="detail">생활 리듬·초기 신호</div></div></div></div>
+        <div class="card"><div class="bar" style="background:#2f9278">이웃</div><div class="body"><div class="era oldbox"><div class="eraLabel">산업화</div><div class="role">생활 관계망 약화</div><div class="detail">공동 돌봄 소멸</div></div><div class="era newbox"><div class="eraLabel">디지털</div><div class="role">실험 관계망</div><div class="detail">관심 모임·생활 멘토</div></div></div></div>
+        <div class="card"><div class="bar" style="background:#2f8685">마을</div><div class="body"><div class="era oldbox"><div class="eraLabel">산업화</div><div class="role">도시로 기능 흡수</div><div class="detail">자치·훈련 기능 약화</div></div><div class="era newbox"><div class="eraLabel">디지털</div><div class="role">훈련 생활권</div><div class="detail">멘토단·재학습 접근</div></div></div></div>
+        <div class="card"><div class="bar" style="background:#2f7a91">도시</div><div class="body"><div class="era oldbox"><div class="eraLabel">산업화</div><div class="role">학교·회사 집적</div><div class="detail">입시·고용 경쟁 집중</div></div><div class="era newbox"><div class="eraLabel">디지털</div><div class="role">발휘 무대</div><div class="detail">프로젝트·직무 전환</div></div></div></div>
+        <div class="card"><div class="bar" style="background:#2f6e9e">국가</div><div class="body"><div class="era oldbox"><div class="eraLabel">산업화</div><div class="role">표준 제도 관리</div><div class="detail">교육·복지·고용 중앙화</div></div><div class="era newbox"><div class="eraLabel">디지털</div><div class="role">안전망·재진입</div><div class="detail">전환기 보호·조건 조정</div></div></div></div>
+        <div class="card"><div class="bar" style="background:#2f5eb0">세계</div><div class="body"><div class="era oldbox"><div class="eraLabel">산업화</div><div class="role">국가 간 협정 중심</div><div class="detail">개인 생애와 거리</div></div><div class="era newbox"><div class="eraLabel">디지털</div><div class="role">공동위험 관리</div><div class="detail">WMD·기후·AI·감염병</div></div></div></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer"><span>TAEJAE FUTURE CONSENSUS INSTITUTE · 디지털 전환과 사회변혁팀</span><span>SLIDE 02 PREVIEW · NOT MERGED</span></div>
+</div>
+</body></html>
