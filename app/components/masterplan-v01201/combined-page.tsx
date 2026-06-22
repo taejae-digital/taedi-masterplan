@@ -2,7 +2,7 @@ import { C } from "./constants";
 import { Header, Footer } from "./shared";
 import { VERSION } from "./version";
 
-const h3s: React.CSSProperties = { fontSize: 16.5, fontWeight: 800, color: C.ink, margin: "4px 0 7px", paddingBottom: 4, borderBottom: `2px solid ${C.ink}` };
+const h3s: React.CSSProperties = { fontSize: 16.5, fontWeight: 800, color: C.ink, margin: "4px 0 7px", paddingBottom: 4, borderBottom: `1px solid ${C.line}` };
 
 type EconCell = { headline: string; detail: string };
 type EconClassRow = { label: string; industrial: EconCell; digital: EconCell };
@@ -33,41 +33,41 @@ const econClassRows: EconClassRow[] = [
 
 const polTransitionRows: PolTransitionRow[] = [
   {
-    label: "개인의 지위",
-    industrial: "국민·노동자·투표자로 국가 규칙을 수용",
-    change: "정체성 실현에는 발견·실험·훈련·발휘·안전망·위험 관리가 단계별로 필요",
-    newOrder: "생애 단계와 필요에 따라 여러 공동체에 권한을 위임하는 주체",
+    label: "승인 기준",
+    industrial: "국가가 법·예산·자격 기준을 정하고 일괄 승인",
+    change: "새 공동체는 돌봄·학습·시장 연결·위험 관리처럼 기능이 서로 다름",
+    newOrder: "공동체별 목적·권한·책임·데이터 사용 범위를 사전에 정의",
   },
   {
-    label: "권한 위임",
-    industrial: "선거를 통해 국가에 포괄 위임",
-    change: "국가 하나가 개인의 세분화된 필요를 모두 대표하거나 처리하기 어려움",
-    newOrder: "가정·이웃·마을·도시·국가·세계에 필요별·기능별로 권한을 나누어 위임",
+    label: "개발자 검증",
+    industrial: "정책 설계자와 행정기관이 제도 효과를 사후 평가",
+    change: "AI·플랫폼·도시 서비스가 개인의 기회와 안전을 직접 조정",
+    newOrder: "개발자와 운영자가 안전성·공정성·설명가능성을 입증한 뒤 운영",
   },
   {
-    label: "조정 단위",
-    industrial: "국민국가가 교육·고용·복지를 중앙 기준으로 조정",
-    change: "공동체 기능이 생활권·도시·국가·세계로 분산",
-    newOrder: "도시·국가·세계가 공동체 기능의 연결과 책임 배분을 조정",
+    label: "현장 감시",
+    industrial: "선거·감사·민원으로 국가 권력을 주기적으로 견제",
+    change: "공동체 기능은 생활권에서 계속 바뀌고 부작용도 현장에서 발생",
+    newOrder: "도시·마을·이웃 단위에서 성과와 피해를 상시 관찰하고 수정",
   },
   {
-    label: "핵심 기능",
-    industrial: "표준 교육·고용·복지로 평균 필요를 처리",
-    change: "단서 발견·실험·훈련·발휘·안전망·위험 관리가 새 정치 의제가 됨",
-    newOrder: "여섯 공동체 기능이 끊기지 않도록 제도·시장·플랫폼을 연결",
+    label: "권한 조정",
+    industrial: "국가가 교육·고용·복지 권한을 중앙에서 배분",
+    change: "가정·이웃·마을·도시·국가·세계가 맡는 기능이 겹치거나 비어질 수 있음",
+    newOrder: "필요 변화에 따라 권한을 위임·회수하고 공동체 간 책임 공백을 조정",
   },
   {
-    label: "권력 감시",
-    industrial: "국가 권력 견제와 대표성 확보가 중심",
-    change: "플랫폼·도시·국가·세계 규칙이 개인의 기회를 동시에 좌우",
-    newOrder: "국가·플랫폼·도시·세계 규칙을 함께 감시하고 이의제기할 수 있는 구조",
+    label: "위험 관리",
+    industrial: "국경 밖 위험은 국가 간 협정으로 사후 대응",
+    change: "AI·감염병·기후·WMD 위험은 개인의 일상과 공동체 운영을 동시에 흔듦",
+    newOrder: "세계 단위의 공통 기준·감사·제재로 국경 넘는 위험을 공동 관리",
   },
 ];
 
 const contractResponsibilities = [
   { title: "생활 조건의 보장", detail: "가정·이웃·마을의 발견·실험·훈련 기능을 누구나 이용할 수 있도록 건강·돌봄·학습·주거의 기본 조건을 보장한다." },
   { title: "생산 인프라의 공정한 이용 보장", detail: "AI·데이터·컴퓨팅·시장 연결을 공정하게 이용해 정체성이 일·소득·기여로 이어질 조건을 보장한다." },
-  { title: "조정 질서의 공정성 보장", detail: "공동체 간 권한 위임, 플랫폼 규칙, 국가·세계 조정이 개인의 기회를 일방적으로 막지 못하게 한다." },
+  { title: "조정 질서의 공정성 보장", detail: "새 공동체의 승인·검증·감시와 권한 조정이 개인의 기회를 일방적으로 막지 못하게 한다." },
 ];
 
 function CausalSpine({ rows }: { rows: Array<{ k: string; t: string; d: string }> }) {
@@ -84,7 +84,7 @@ function CausalSpine({ rows }: { rows: Array<{ k: string; t: string; d: string }
                 <div style={{
                   minWidth: 32, height: 32, borderRadius: 4,
                   background: isLast ? C.ink : "#fff",
-                  border: `2.5px solid ${C.ink}`,
+                  border: `1.5px solid ${C.ink}`,
                   color: isLast ? "#fff" : C.ink,
                   fontSize: 16, fontWeight: 950,
                   display: "flex", alignItems: "center", justifyContent: "center",
@@ -102,7 +102,7 @@ function CausalSpine({ rows }: { rows: Array<{ k: string; t: string; d: string }
               )}
             </div>
             {/* 내용 카드 */}
-            <div style={{ padding: "8px 11px", background: isLast ? `${C.navy}08` : "#fff", border: `1px solid ${isLast ? C.navy : C.cardBorder}`, borderLeft: isLast ? `3px solid ${C.navy}` : `1px solid ${C.cardBorder}`, borderRadius: 3 }}>
+            <div style={{ padding: "8px 11px", background: isLast ? `${C.navy}06` : "#fff", border: `1px solid ${C.cardBorder}`, borderRadius: 3 }}>
               <div style={{ fontSize: 13.2, color: isLast ? C.navy : C.ink, fontWeight: 850, lineHeight: 1.22, marginBottom: 3 }}>{r.t}</div>
               <div style={{ fontSize: 11.4, color: C.body, lineHeight: 1.36, fontWeight: 500 }}>{r.d}</div>
             </div>
@@ -130,7 +130,7 @@ function Arrow({ small = false }: { small?: boolean }) {
 
 // 3.1 경제: 표 — [계층 | 산업시대 | 디지털시대]
 function EconTable({ rows }: { rows: EconClassRow[] }) {
-  const th: React.CSSProperties = { background: "#fff", color: C.navy, fontSize: 10, fontWeight: 800, letterSpacing: 0.5, padding: "5px 9px", textAlign: "left", lineHeight: 1.2, borderBottom: `2px solid ${C.ink}` };
+  const th: React.CSSProperties = { background: "#fff", color: C.navy, fontSize: 10, fontWeight: 800, letterSpacing: 0.5, padding: "5px 9px", textAlign: "left", lineHeight: 1.2, borderBottom: `1px solid ${C.cardBorder}` };
   const tdLabel: React.CSSProperties = { background: "#fff", color: C.navy, fontSize: 12, fontWeight: 900, padding: "6px 9px", textAlign: "center", whiteSpace: "nowrap", verticalAlign: "middle", borderRight: `1px solid ${C.cardBorder}` };
   return (
     <table style={{ width: "100%", height: "100%", borderCollapse: "collapse", tableLayout: "fixed" }}>
@@ -144,15 +144,14 @@ function EconTable({ rows }: { rows: EconClassRow[] }) {
       </thead>
       <tbody>
         {rows.map((row) => {
-          const isTransfer = row.digital.headline === "정체성 기반 생산 주도자";
           return (
             <tr key={row.label} style={{ borderBottom: `1px solid ${C.cardBorder}` }}>
               <td style={tdLabel}>{row.label}</td>
-              <td style={{ padding: "6px 9px", verticalAlign: "top", borderRight: `1px solid ${C.cardBorder}`, borderLeft: row.label === "리더" ? `3px solid ${C.ink}` : "none" }}>
+              <td style={{ padding: "6px 9px", verticalAlign: "top", borderRight: `1px solid ${C.cardBorder}` }}>
                 <div style={{ fontSize: 12.3, fontWeight: 800, color: C.navySoft, lineHeight: 1.18, marginBottom: 2 }}>{row.industrial.headline}</div>
                 <div style={{ fontSize: 10.5, fontWeight: 500, color: C.muted, lineHeight: 1.28 }}>{row.industrial.detail}</div>
               </td>
-              <td style={{ padding: "6px 9px", verticalAlign: "top", borderLeft: isTransfer ? `3px solid ${C.ink}` : "none" }}>
+              <td style={{ padding: "6px 9px", verticalAlign: "top", borderLeft: `1px solid ${C.cardBorder}` }}>
                 <div style={{ fontSize: 12.3, fontWeight: 800, color: C.navy, lineHeight: 1.18, marginBottom: 2 }}>{row.digital.headline}</div>
                 <div style={{ fontSize: 10.5, fontWeight: 500, color: C.body, lineHeight: 1.28 }}>{row.digital.detail}</div>
               </td>
@@ -166,7 +165,7 @@ function EconTable({ rows }: { rows: EconClassRow[] }) {
 
 // 3.2 정치: 표 — [주체 | 산업시대 | 디지털시대]
 function PolTable({ rows }: { rows: PolTransitionRow[] }) {
-  const th: React.CSSProperties = { background: "#fff", color: C.navy, fontSize: 10, fontWeight: 800, letterSpacing: 0.5, padding: "5px 8px", textAlign: "left", lineHeight: 1.2, borderBottom: `2px solid ${C.ink}` };
+  const th: React.CSSProperties = { background: "#fff", color: C.navy, fontSize: 10, fontWeight: 800, letterSpacing: 0.5, padding: "5px 8px", textAlign: "left", lineHeight: 1.2, borderBottom: `1px solid ${C.cardBorder}` };
   const tdLabel: React.CSSProperties = { background: "#fff", color: C.navy, fontSize: 11, fontWeight: 900, padding: "5px 7px", textAlign: "center", whiteSpace: "normal", wordBreak: "keep-all", verticalAlign: "middle", lineHeight: 1.15, borderRight: `1px solid ${C.cardBorder}` };
   return (
     <table style={{ width: "100%", height: "100%", borderCollapse: "collapse", tableLayout: "fixed" }}>
@@ -185,7 +184,7 @@ function PolTable({ rows }: { rows: PolTransitionRow[] }) {
             <td style={{ padding: "5px 8px", verticalAlign: "top", borderRight: `1px solid ${C.cardBorder}` }}>
               <div style={{ fontSize: 10.8, fontWeight: 600, color: C.navySoft, lineHeight: 1.26 }}>{row.industrial}</div>
             </td>
-            <td style={{ padding: "5px 8px", verticalAlign: "top", borderLeft: `3px solid ${C.ink}` }}>
+            <td style={{ padding: "5px 8px", verticalAlign: "top", borderLeft: `1px solid ${C.cardBorder}` }}>
               <div style={{ fontSize: 10.8, fontWeight: 700, color: C.navy, lineHeight: 1.26 }}>{row.newOrder}</div>
               <div style={{ fontSize: 9.3, fontWeight: 500, color: C.muted, lineHeight: 1.22, marginTop: 1 }}>{row.change}</div>
             </td>
@@ -203,9 +202,9 @@ export function CombinedPage() {
     { k: "새 질서", t: "정체성이 일·소득·기여로 전환", d: "4계층의 위치가 재배치되고, 고유 기여를 만드는 사람이 생산질서의 중심이 됨" },
   ];
   const polSpine = [
-    { k: "생활 기반", t: "필요가 여러 공동체로 분화", d: "단서 발견·실험·훈련·발휘·안전망·위험 관리를 국가 하나가 처리할 수 없음" },
-    { k: "정치 변화", t: "국민국가 민주주의의 한계", d: "산업화 민주주의는 개인을 국민으로 묶어 국가에 포괄 위임하는 질서" },
-    { k: "새 질서", t: "다층 공동체 거버넌스", d: "개인이 필요별로 권한을 나누어 위임하고, 도시·국가·세계가 기능과 책임을 조정" },
+    { k: "생활 기반", t: "공동체 기능이 새로 생김", d: "단서 발견·실험·훈련·발휘·안전망·위험 관리를 맡을 공동체를 만들고 운영해야 함" },
+    { k: "정치 변화", t: "승인과 검증의 필요", d: "공동체가 개인의 기회·데이터·안전을 다루려면 사전 기준과 운영자 검증이 필요" },
+    { k: "새 질서", t: "FDA형 다층 거버넌스", d: "목적·권한·책임을 승인하고, 개발자 검증과 현장 감시로 계속 조정" },
   ];
 
 
@@ -227,7 +226,7 @@ export function CombinedPage() {
           <div style={h3s}>3.1 경제질서 — 분업의 경제에서 다양성의 경제로</div>
           <SectionGrid spine={econSpine}>
             <div style={{ display: "flex", flexDirection: "column", gap: 6, height: "100%" }}> 
-              <div style={{ padding: "7px 12px", background: "#fff", borderLeft: `3px solid ${C.ink}`, borderRadius: 2, fontSize: 12.0, lineHeight: 1.38, color: C.ink, fontWeight: 600 }}>
+              <div style={{ padding: "7px 12px", background: "#fff", borderLeft: `1px solid ${C.cardBorder}`, borderRadius: 2, fontSize: 12.0, lineHeight: 1.38, color: C.ink, fontWeight: 600 }}>
                 도시는 정체성이 실제 기여로 발휘되는 장이다. 경제질서는 발견·실험·훈련을 거친 정체성이 도시·시장·플랫폼과 연결되어 일·소득·기여로 전환되는 구조를 만든다. <span style={{ color: C.muted, fontWeight: 600 }}>에릭 브린욜프슨은 AI가 개인 생산성을 끌어올린다고 보고, 다니엘 서스킨드는 AI가 일·소득·삶의 의미를 재설계하게 만든다고 본다.</span>
               </div>
               <div style={{ flex: 1 }}>
@@ -238,11 +237,11 @@ export function CombinedPage() {
         </div>
 
         <div style={{ marginTop: 4 }}>
-          <div style={h3s}>3.2 정치질서 — 국민국가 민주주의에서 다층 공동체 거버넌스로</div>
+          <div style={h3s}>3.2 정치질서 — 새 공동체를 승인·검증·조정하는 거버넌스로</div>
           <SectionGrid spine={polSpine}>
             <div style={{ display: "flex", flexDirection: "column", gap: 6, height: "100%" }}>
-              <div style={{ padding: "7px 12px", background: "#fff", borderLeft: `3px solid ${C.ink}`, borderRadius: 2, fontSize: 11.6, lineHeight: 1.36, color: C.ink, fontWeight: 600 }}>
-                산업화 시대 민주주의가 개인을 국민으로 묶고 국가에 권한을 집중해 표준 필요를 처리했다면, 디지털 시대 정치질서는 개인이 생애 단계와 필요에 따라 여러 공동체에 권한을 나누어 위임하고, 각 공동체가 맡은 기능을 도시·국가·세계가 조정하는 다층 공동체 거버넌스가 되어야 한다. <span style={{ color: C.muted, fontWeight: 600 }}>대런 아세모글루는 기술의 향방은 정해진 운명이 아니라 권력과 제도가 결정한다고 본다.</span>
+              <div style={{ padding: "7px 12px", background: "#fff", borderLeft: `1px solid ${C.cardBorder}`, borderRadius: 2, fontSize: 11.6, lineHeight: 1.36, color: C.ink, fontWeight: 600 }}>
+                정체성 실현을 위한 공동체는 자연발생적 관계망만으로 운영되지 않는다. 돌봄·학습·시장 연결·위험 관리를 맡는 공동체는 목적과 권한을 승인받고, 운영자는 안전성·공정성·설명가능성을 검증해야 한다. 정치질서는 FDA형 승인·감시 모델처럼 새 공동체의 설계, 운영, 부작용, 권한 회수를 지속적으로 조정해야 한다. <span style={{ color: C.muted, fontWeight: 600 }}>대런 아세모글루는 기술의 향방은 정해진 운명이 아니라 권력과 제도가 결정한다고 본다.</span>
               </div>
               <div style={{ flex: 1 }}>
                 <PolTable rows={polTransitionRows} />
