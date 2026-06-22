@@ -34,10 +34,10 @@ export function IndividualCommunityPage() {
     </div>
   );
 
-  const SectionTitle = ({ text }: { text: string }) => (
-    <div style={{ display: "flex", alignItems: "center", gap: 9, margin: "6px 0 4px" }}>
-      <div style={{ height: 2, width: 22, background: C.ink }} />
-      <div style={{ fontSize: 12.7, color: C.ink, fontWeight: 950, letterSpacing: 0.2 }}>{text}</div>
+  const SectionTitle = ({ label, desc, extraTop = 0 }: { label: string; desc: string; extraTop?: number }) => (
+    <div style={{ display: "flex", alignItems: "center", gap: 10, margin: `${6 + extraTop}px 0 5px` }}>
+      <div style={{ display: "inline-flex", alignItems: "center", justifyContent: "center", minWidth: 70, padding: "5px 12px", background: C.ink, color: "#fff", borderRadius: 3, fontSize: 13.4, fontWeight: 950, letterSpacing: 0.4 }}>{label}</div>
+      <div style={{ fontSize: 13.2, color: C.ink, fontWeight: 850, letterSpacing: -0.1 }}>{desc}</div>
       <div style={{ height: 1, flex: 1, background: C.line }} />
     </div>
   );
@@ -93,7 +93,7 @@ export function IndividualCommunityPage() {
       <div style={{ padding: "9px 48px 0", flex: 1, display: "flex", flexDirection: "column" }}>
         <EraOverview />
 
-        <SectionTitle text="개인 — 생애주기별 기대와 필요한 공동체" />
+        <SectionTitle label="개인" desc="생애주기별 기대와 필요한 공동체" />
         <div style={{ display: "grid", gridTemplateColumns: colTpl, border: `1px solid ${C.cardBorder}`, borderRadius: 7, overflow: "hidden", background: "#fff" }}>
           <EraMiniHead />
           {eraPerson.map((r) => (
@@ -105,7 +105,7 @@ export function IndividualCommunityPage() {
           ))}
         </div>
 
-        <SectionTitle text="공동체 — 개인의 필요를 뒷받침하는 관계와 제도" />
+        <SectionTitle label="공동체" desc="개인의 필요를 뒷받침하는 관계와 제도" extraTop={8} />
         <div style={{ display: "grid", gridTemplateColumns: colTpl, border: `1px solid ${C.cardBorder}`, borderRadius: 7, overflow: "hidden", background: "#fff" }}>
           <EraMiniHead />
           {eraComm.map((r) => (
