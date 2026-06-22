@@ -10,8 +10,8 @@ export function IndividualCommunityPage() {
 
   const EraHead = () => (
     <>
-      <div style={{ background: "#fff", borderBottom: `2px solid ${C.ink}`, display: "flex", alignItems: "flex-end", justifyContent: "center", padding: "8px 6px" }}>
-        <span style={{ fontSize: 10.4, fontWeight: 800, color: C.muted, letterSpacing: 0.3 }}>구분</span>
+      <div style={{ background: "#fff", borderBottom: `2px solid ${C.ink}`, padding: "8px 13px", display: "flex", alignItems: "baseline" }}>
+        <span style={{ fontSize: 14.5, fontWeight: 900, color: C.ink }}>시대</span>
       </div>
       {ERAS.map((e) => (
         <div key={e.key} style={{ background: "#fff", borderLeft: `1px solid ${C.cardBorder}`, borderBottom: `2px solid ${C.ink}`, padding: "8px 13px", display: "flex", alignItems: "baseline", gap: 8 }}>
@@ -32,7 +32,7 @@ export function IndividualCommunityPage() {
 
   const SummaryRow = () => (
     <>
-      <div style={{ background: "#fafafa", borderTop: `1px solid ${C.cardBorder}` }} />
+      <div style={{ background: "#fafafa", borderTop: `1px solid ${C.cardBorder}`, color: C.navy, display: "flex", alignItems: "center", justifyContent: "center", padding: "8px 6px", fontSize: 12.2, fontWeight: 950, textAlign: "center", lineHeight: 1.18 }}>목표</div>
       {ERAS.map((e) => (
         <div key={`sum-${e.key}`} style={{ padding: "9px 13px", borderLeft: `1px solid ${C.cardBorder}`, borderTop: `1px solid ${C.cardBorder}`, background: "#fafafa" }}>
           <span style={{ fontSize: 11.5, fontWeight: 700, color: e.accent, lineHeight: 1.42 }}>{e.summary}</span>
