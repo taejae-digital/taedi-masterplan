@@ -72,22 +72,43 @@ const contractResponsibilities = [
 
 function CausalSpine({ rows }: { rows: Array<{ k: string; t: string; d: string }> }) {
   return (
-    <div style={{ display: "flex", flexDirection: "column", gap: 7, height: "100%" }}> 
-      {rows.map((r, i) => (
-        <div key={r.k} style={{ display: "grid", gridTemplateColumns: "84px 1fr", gap: 10, alignItems: "stretch", flex: 1 }}>
-          <div style={{ display: "grid", gridTemplateColumns: "30px 1fr", gap: 7, alignItems: "start" }}>
-            <div style={{ display: "flex", flexDirection: "column", alignItems: "center", height: "100%" }}>
-              <div style={{ width: 25, height: 25, borderRadius: 3, background: i === rows.length - 1 ? C.navy : "#fff", border: `2px solid ${C.navy}`, color: i === rows.length - 1 ? "#fff" : C.navy, fontSize: 13, fontWeight: 900, display: "flex", alignItems: "center", justifyContent: "center" }}>{i + 1}</div>
-              {i < rows.length - 1 && <div style={{ flex: 1, width: 2, background: C.navy, opacity: 0.45, marginTop: 3 }} />}
+    <div style={{ display: "flex", flexDirection: "column", gap: 6, height: "100%" }}>
+      {rows.map((r, i) => {
+        const isLast = i === rows.length - 1;
+        return (
+          <div key={r.k} style={{ display: "grid", gridTemplateColumns: "88px 1fr", gap: 10, alignItems: "stretch", flex: 1 }}>
+            {/* 번호 + 레이블 */}
+            <div style={{ display: "flex", flexDirection: "column", alignItems: "stretch", gap: 0 }}>
+              <div style={{ display: "flex", alignItems: "center", gap: 8 }}>
+                {/* 번호 박스 */}
+                <div style={{
+                  minWidth: 32, height: 32, borderRadius: 4,
+                  background: isLast ? C.ink : "#fff",
+                  border: `2.5px solid ${C.ink}`,
+                  color: isLast ? "#fff" : C.ink,
+                  fontSize: 16, fontWeight: 950,
+                  display: "flex", alignItems: "center", justifyContent: "center",
+                  flexShrink: 0,
+                  letterSpacing: -0.5,
+                }}>{i + 1}</div>
+                {/* 레이블 */}
+                <div style={{ fontSize: 11.4, color: isLast ? C.navy : C.muted, fontWeight: isLast ? 900 : 700, lineHeight: 1.15, letterSpacing: 0.2 }}>{r.k}</div>
+              </div>
+              {/* 연결선 */}
+              {!isLast && (
+                <div style={{ flex: 1, display: "flex", justifyContent: "flex-start", paddingLeft: 15, marginTop: 2 }}>
+                  <div style={{ width: 2.5, flex: 1, background: C.ink, opacity: 0.22 }} />
+                </div>
+              )}
             </div>
-            <div style={{ paddingTop: 4, fontSize: 12.0, color: C.ink, fontWeight: 900, lineHeight: 1.14 }}>{r.k}</div>
+            {/* 내용 카드 */}
+            <div style={{ padding: "8px 11px", background: isLast ? `${C.navy}08` : "#fff", border: `1px solid ${isLast ? C.navy : C.cardBorder}`, borderLeft: isLast ? `3px solid ${C.navy}` : `1px solid ${C.cardBorder}`, borderRadius: 3 }}>
+              <div style={{ fontSize: 13.2, color: isLast ? C.navy : C.ink, fontWeight: 850, lineHeight: 1.22, marginBottom: 3 }}>{r.t}</div>
+              <div style={{ fontSize: 11.4, color: C.body, lineHeight: 1.36, fontWeight: 500 }}>{r.d}</div>
+            </div>
           </div>
-          <div style={{ padding: "9px 11px", background: "#fff", border: `1px solid ${C.cardBorder}`, borderRadius: 2 }}>
-            <div style={{ fontSize: 13.5, color: C.navy, fontWeight: 800, lineHeight: 1.25, marginBottom: 4 }}>{r.t}</div>
-            <div style={{ fontSize: 11.8, color: C.body, lineHeight: 1.38, fontWeight: 500 }}>{r.d}</div>
-          </div>
-        </div>
-      ))}
+        );
+      })}
     </div>
   );
 }
