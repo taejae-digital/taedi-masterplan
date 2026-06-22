@@ -226,7 +226,7 @@ export function CombinedPage() {
           <div style={h3s}>3.1 경제질서 — 분업의 경제에서 다양성의 경제로</div>
           <SectionGrid spine={econSpine}>
             <div style={{ display: "flex", flexDirection: "column", gap: 6, height: "100%" }}> 
-              <div style={{ padding: "7px 12px", background: "#fff", borderLeft: `1px solid ${C.cardBorder}`, borderRadius: 2, fontSize: 12.0, lineHeight: 1.38, color: C.ink, fontWeight: 600 }}>
+              <div style={{ padding: "7px 12px", background: "#fff", borderRadius: 2, fontSize: 12.0, lineHeight: 1.38, color: C.ink, fontWeight: 600 }}>
                 도시는 정체성이 실제 기여로 발휘되는 장이다. 경제질서는 발견·실험·훈련을 거친 정체성이 도시·시장·플랫폼과 연결되어 일·소득·기여로 전환되는 구조를 만든다. <span style={{ color: C.muted, fontWeight: 600 }}>에릭 브린욜프슨은 AI가 개인 생산성을 끌어올린다고 보고, 다니엘 서스킨드는 AI가 일·소득·삶의 의미를 재설계하게 만든다고 본다.</span>
               </div>
               <div style={{ flex: 1 }}>
@@ -240,7 +240,7 @@ export function CombinedPage() {
           <div style={h3s}>3.2 정치질서 — 새 공동체를 승인·검증·조정하는 거버넌스로</div>
           <SectionGrid spine={polSpine}>
             <div style={{ display: "flex", flexDirection: "column", gap: 6, height: "100%" }}>
-              <div style={{ padding: "7px 12px", background: "#fff", borderLeft: `1px solid ${C.cardBorder}`, borderRadius: 2, fontSize: 11.6, lineHeight: 1.36, color: C.ink, fontWeight: 600 }}>
+              <div style={{ padding: "7px 12px", background: "#fff", borderRadius: 2, fontSize: 11.6, lineHeight: 1.36, color: C.ink, fontWeight: 600 }}>
                 정체성 실현을 위한 공동체는 자연발생적 관계망만으로 운영되지 않는다. 돌봄·학습·시장 연결·위험 관리를 맡는 공동체는 목적과 권한을 승인받고, 운영자는 안전성·공정성·설명가능성을 검증해야 한다. 정치질서는 FDA형 승인·감시 모델처럼 새 공동체의 설계, 운영, 부작용, 권한 회수를 지속적으로 조정해야 한다. <span style={{ color: C.muted, fontWeight: 600 }}>대런 아세모글루는 기술의 향방은 정해진 운명이 아니라 권력과 제도가 결정한다고 본다.</span>
               </div>
               <div style={{ flex: 1 }}>
