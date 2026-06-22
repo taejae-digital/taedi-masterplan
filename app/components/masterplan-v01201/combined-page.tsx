@@ -166,7 +166,7 @@ function EconTable({ rows }: { rows: EconClassRow[] }) {
 // 3.2 정치: 표 — [주체 | 산업시대 | 디지털시대]
 function PolTable({ rows }: { rows: PolTransitionRow[] }) {
   const th: React.CSSProperties = { background: "#fff", color: C.navy, fontSize: 10, fontWeight: 800, letterSpacing: 0.5, padding: "5px 8px", textAlign: "left", lineHeight: 1.2, borderBottom: `1px solid ${C.cardBorder}` };
-  const tdLabel: React.CSSProperties = { background: "#fff", color: C.navy, fontSize: 11, fontWeight: 900, padding: "5px 7px", textAlign: "center", whiteSpace: "normal", wordBreak: "keep-all", verticalAlign: "middle", lineHeight: 1.15, borderRight: `1px solid ${C.cardBorder}` };
+  const tdLabel: React.CSSProperties = { background: "#fff", color: C.navy, fontSize: 12, fontWeight: 900, padding: "6px 9px", textAlign: "center", whiteSpace: "normal", wordBreak: "keep-all", verticalAlign: "middle", lineHeight: 1.15, borderRight: `1px solid ${C.cardBorder}` };
   return (
     <table style={{ width: "100%", height: "100%", borderCollapse: "collapse", tableLayout: "fixed" }}>
       <colgroup><col style={{ width: 104 }} /><col style={{ width: "46%" }} /><col style={{ width: "46%" }} /></colgroup>
@@ -181,12 +181,12 @@ function PolTable({ rows }: { rows: PolTransitionRow[] }) {
         {rows.map((row) => (
           <tr key={row.label} style={{ borderBottom: `1px solid ${C.cardBorder}` }}>
             <td style={tdLabel}>{row.label}</td>
-            <td style={{ padding: "5px 8px", verticalAlign: "top", borderRight: `1px solid ${C.cardBorder}` }}>
-              <div style={{ fontSize: 10.8, fontWeight: 600, color: C.navySoft, lineHeight: 1.26 }}>{row.industrial}</div>
+            <td style={{ padding: "6px 9px", verticalAlign: "top", borderRight: `1px solid ${C.cardBorder}` }}>
+              <div style={{ fontSize: 12.3, fontWeight: 700, color: C.navySoft, lineHeight: 1.2 }}>{row.industrial}</div>
             </td>
-            <td style={{ padding: "5px 8px", verticalAlign: "top", borderLeft: `1px solid ${C.cardBorder}` }}>
-              <div style={{ fontSize: 10.8, fontWeight: 700, color: C.navy, lineHeight: 1.26 }}>{row.newOrder}</div>
-              <div style={{ fontSize: 9.3, fontWeight: 500, color: C.muted, lineHeight: 1.22, marginTop: 1 }}>{row.change}</div>
+            <td style={{ padding: "6px 9px", verticalAlign: "top", borderLeft: `1px solid ${C.cardBorder}` }}>
+              <div style={{ fontSize: 12.3, fontWeight: 800, color: C.navy, lineHeight: 1.18, marginBottom: 2 }}>{row.newOrder}</div>
+              <div style={{ fontSize: 10.5, fontWeight: 500, color: C.muted, lineHeight: 1.28 }}>{row.change}</div>
             </td>
           </tr>
         ))}
@@ -240,7 +240,7 @@ export function CombinedPage() {
           <div style={h3s}>3.2 정치질서 — 사회계약을 구현하는 연결·보장·조정 체계</div>
           <SectionGrid spine={polSpine}>
             <div style={{ display: "flex", flexDirection: "column", gap: 6, height: "100%" }}>
-              <div style={{ padding: "7px 12px", background: "#fff", borderRadius: 2, fontSize: 11.6, lineHeight: 1.36, color: C.ink, fontWeight: 600 }}>
+              <div style={{ padding: "7px 12px", background: "#fff", borderRadius: 2, fontSize: 12.0, lineHeight: 1.38, color: C.ink, fontWeight: 600 }}>
                 산업화 시대에는 정당과 대표자가 개인의 이해를 포괄적으로 대변하고, 국가는 표준 교육·고용·복지를 제공했다. 디지털 시대에는 개인 에이전트가 정체성·생애 요구·이해관계를 지속적으로 표현하고, 정치는 개인의 요구를 공동체 역할과 연결하며 접근을 보장하고 충돌을 조정해야 한다. <span style={{ color: C.muted, fontWeight: 600 }}>엘리너 오스트롬은 공동체가 지속적으로 작동하려면 명확한 규칙, 참여, 감시, 분쟁 해결 절차가 함께 설계되어야 한다고 보았다.</span>
               </div>
               <div style={{ flex: 1 }}>
