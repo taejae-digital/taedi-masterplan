@@ -172,7 +172,7 @@ function PolTable({ rows }: { rows: PolTransitionRow[] }) {
       <colgroup><col style={{ width: 104 }} /><col style={{ width: "46%" }} /><col style={{ width: "46%" }} /></colgroup>
       <thead>
         <tr>
-          <th style={th}>주체</th>
+          <th style={th}>기능</th>
           <th style={th}>산업화 시대</th>
           <th style={th}>디지털 시대</th>
         </tr>
@@ -241,7 +241,7 @@ export function CombinedPage() {
           <SectionGrid spine={polSpine}>
             <div style={{ display: "flex", flexDirection: "column", gap: 6, height: "100%" }}>
               <div style={{ padding: "7px 12px", background: "#fff", borderRadius: 2, fontSize: 11.6, lineHeight: 1.36, color: C.ink, fontWeight: 600 }}>
-                정치질서는 사회계약을 실제 작동하게 하는 연결·보장·조정 체계다. 산업화 시대에는 정당과 대표자가 개인의 이해를 포괄적으로 대변하고, 국가는 표준 교육·고용·복지를 제공했다. 디지털 시대에는 개인 에이전트가 정체성·생애 요구·이해관계를 지속적으로 표현하고, 정치는 개인의 요구를 공동체 역할과 연결하며 접근을 보장하고 충돌을 조정해야 한다. <span style={{ color: C.muted, fontWeight: 600 }}>엘리너 오스트롬은 공동체가 명확한 규칙, 참여, 감시, 분쟁 해결 절차를 갖출 때 공유 자원을 지속적으로 관리할 수 있다고 본다.</span>
+                산업화 시대에는 정당과 대표자가 개인의 이해를 포괄적으로 대변하고, 국가는 표준 교육·고용·복지를 제공했다. 디지털 시대에는 개인 에이전트가 정체성·생애 요구·이해관계를 지속적으로 표현하고, 정치는 개인의 요구를 공동체 역할과 연결하며 접근을 보장하고 충돌을 조정해야 한다. <span style={{ color: C.muted, fontWeight: 600 }}>엘리너 오스트롬은 공동체가 지속적으로 작동하려면 명확한 규칙, 참여, 감시, 분쟁 해결 절차가 함께 설계되어야 한다고 보았다.</span>
               </div>
               <div style={{ flex: 1 }}>
                 <PolTable rows={polTransitionRows} />
