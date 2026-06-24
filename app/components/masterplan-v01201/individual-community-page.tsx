@@ -121,7 +121,7 @@ export function IndividualCommunityPage() {
           <SummaryRow />
           <SectionBar label="개인" desc="생애주기별 기대와 필요한 공동체"
             unchanged="태어나 자라 늙기까지, 생애 단계마다 안전·건강·보살핌·배움·역할·존엄을 필요로 하고 제 몫의 사람이 되려 한다."
-            changed="무엇을 위해 사느냐가 달라진다 — 신분을 잇는 생존(농업) → 표준 교육으로 좋은 일자리(산업화) → 저마다 다른 정체성의 발휘(디지털)." />
+            changed="원하는 바가 깊어진다 — 신분을 잇는 생존(농업) → 표준 교육으로 좋은 일자리(산업화) → 전문성을 키운 개인이 저마다의 정체성을 발휘할 무대를 원함(디지털)." />
           {eraPerson.map((r) => (
             <PersonRow key={r.stage} label={r.stage} cells={[
               { txt: r.agri, cells: r.agriC },
@@ -129,9 +129,9 @@ export function IndividualCommunityPage() {
               { txt: r.dig,  cells: r.digC  },
             ]} />
           ))}
-          <SectionBar label="공동체" desc="개인의 필요를 뒷받침하는 관계와 제도"
-            unchanged="개인의 안전·건강과 필요를 가정·이웃·마을·도시·국가·세계가 노동·돌봄·교육·안전망으로 나눠 떠받친다."
-            changed="어디에 무게가 실리느냐가 달라진다 — 가족·마을의 자급(농업) → 학교·기업·국가의 표준 관리(산업화) → 발휘는 도시·안전망은 국가로 분담(디지털)." />
+          <SectionBar label="공동체" desc="전문성을 갖춘 개인이 원하는 만큼만 권한을 맡기고, 필요가 끝나면 거두는 관계"
+            unchanged="공동체의 권한은 영구적이지 않다 — 개인이 생애단계·위험에 따라 필요한 만큼 안전·건강·돌봄·교육을 맡겼다가, 스스로 감당할 수 있게 되면 다시 거둔다."
+            changed="무게가 옮겨간다 — 가족·마을의 자급(농업) → 학교·국가의 표준 관리(산업화) → 발휘는 도시가 받치고, 자유가 남을 해치지 않게 국가가 적절한 규제로 위험을 막는 분담(디지털)." />
           {eraComm.map((r) => (
             <CommRow key={r.unit} label={r.unit} cells={[r.agri, r.ind, r.dig]} />
           ))}
