@@ -1,0 +1,10 @@
+import puppeteer from "puppeteer";
+const url = process.argv[2];
+const out = process.argv[3];
+const browser = await puppeteer.launch({ headless: "new", args: ["--no-sandbox"] });
+const page = await browser.newPage();
+await page.goto(url, { waitUntil: "domcontentloaded", timeout: 60000 });
+await new Promise((r) => setTimeout(r, 2000));
+await page.pdf({ path: out, width: "420mm", height: "236mm", printBackground: true, margin: { top: 0, bottom: 0, left: 0, right: 0 } });
+await browser.close();
+console.log("PDF written:", out);
