@@ -91,7 +91,7 @@ export function IndividualCommunityPage() {
         <div style={{ background: `${col}14`, color: col, display: "flex", alignItems: "center", justifyContent: "center", borderTop: `1px solid ${C.cardBorder}`, borderRight: `1px solid ${C.cardBorder}`, borderLeft: `4px solid ${col}`, padding: "5px 4px", fontSize: 12, fontWeight: 950, textAlign: "center", lineHeight: 1.18 }}>{label}</div>
         {cells.map((t, i) => (
           <div key={i} style={{ minHeight: 28, padding: "4px 10px", borderLeft: `1px solid ${C.cardBorder}`, borderTop: `1px solid ${C.cardBorder}`, background: "#fff", display: "flex", alignItems: "center" }}>
-            <span style={{ fontSize: 10.8, fontWeight: 520, color: C.body, lineHeight: 1.22 }}>{t}</span>
+            <span style={{ fontSize: 10.5, fontWeight: 520, color: C.body, lineHeight: 1.3 }}>{t}</span>
           </div>
         ))}
       </>
