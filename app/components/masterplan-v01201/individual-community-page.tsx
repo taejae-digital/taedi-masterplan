@@ -22,11 +22,19 @@ export function IndividualCommunityPage() {
     </>
   );
 
-  const SectionBar = ({ label, desc, extraTop = 0 }: { label: string; desc: string; extraTop?: number }) => (
-    <div style={{ gridColumn: "1 / -1", display: "flex", alignItems: "center", gap: 11, background: "#f4f5f7", borderTop: `1px solid ${C.cardBorder}`, borderBottom: `1px solid ${C.cardBorder}`, padding: "6px 14px", marginTop: extraTop }}>
-      <span style={{ display: "inline-block", width: 4, height: 16, background: C.navy, borderRadius: 1 }} />
-      <span style={{ fontSize: 13.2, fontWeight: 900, color: C.ink, letterSpacing: 0.3 }}>{label}</span>
-      <span style={{ fontSize: 11.8, fontWeight: 600, color: C.muted, letterSpacing: 0 }}>{desc}</span>
+  const SectionBar = ({ label, desc, unchanged, changed, extraTop = 0 }: { label: string; desc: string; unchanged?: string; changed?: string; extraTop?: number }) => (
+    <div style={{ gridColumn: "1 / -1", background: "#f4f5f7", borderTop: `1px solid ${C.cardBorder}`, borderBottom: `1px solid ${C.cardBorder}`, padding: "6px 14px 7px", marginTop: extraTop }}>
+      <div style={{ display: "flex", alignItems: "center", gap: 11 }}>
+        <span style={{ display: "inline-block", width: 4, height: 16, background: C.navy, borderRadius: 1 }} />
+        <span style={{ fontSize: 13.2, fontWeight: 900, color: C.ink, letterSpacing: 0.3 }}>{label}</span>
+        <span style={{ fontSize: 11.8, fontWeight: 600, color: C.muted, letterSpacing: 0 }}>{desc}</span>
+      </div>
+      {(unchanged || changed) && (
+        <div style={{ marginTop: 4, marginLeft: 15, fontSize: 10.8, lineHeight: 1.4, color: C.body, fontWeight: 520 }}>
+          {unchanged && (<div><span style={{ fontWeight: 900, color: C.accentDeep }}>변하지 않는 것 </span>{unchanged}</div>)}
+          {changed && (<div style={{ marginTop: 1 }}><span style={{ fontWeight: 900, color: C.muted }}>변하는 것 </span>{changed}</div>)}
+        </div>
+      )}
     </div>
   );
 
@@ -98,29 +106,6 @@ export function IndividualCommunityPage() {
     );
   };
 
-  // 시대 관통축 — '변하지 않는 것'은 전폭 한 줄(시대 무관 본질), '변하는 것'은 시대별 3칸(형태)
-  const AxisConst = ({ text }: { text: string }) => (
-    <div style={{ gridColumn: "1 / -1", display: "flex", alignItems: "stretch", borderTop: `2px solid ${C.ink}`, background: `${C.accent}0d` }}>
-      <div style={{ flex: "0 0 118px", display: "flex", alignItems: "center", justifyContent: "center", borderRight: `1px solid ${C.cardBorder}`, padding: "6px 8px" }}>
-        <span style={{ fontSize: 10.5, fontWeight: 950, color: C.accentDeep, lineHeight: 1.2, textAlign: "center" }}>변하지 않는 것<br /><span style={{ fontSize: 8.8, fontWeight: 700, color: C.muted }}>시대를 관통하는 본질</span></span>
-      </div>
-      <div style={{ flex: 1, display: "flex", alignItems: "center", padding: "6px 14px" }}>
-        <span style={{ fontSize: 11.2, fontWeight: 660, color: C.ink, lineHeight: 1.32 }}>{text}</span>
-      </div>
-    </div>
-  );
-
-  const AxisVary = ({ cells }: { cells: string[] }) => (
-    <>
-      <div style={{ background: "#f4f5f7", color: C.muted, display: "flex", alignItems: "center", justifyContent: "center", borderTop: `1px solid ${C.cardBorder}`, borderRight: `1px solid ${C.cardBorder}`, padding: "5px 6px", fontSize: 10.5, fontWeight: 950, textAlign: "center", lineHeight: 1.2 }}>변하는 것<br /><span style={{ fontSize: 8.8, fontWeight: 700 }}>시대마다 다른 형태</span></div>
-      {cells.map((t, i) => (
-        <div key={i} style={{ padding: "5px 10px", borderLeft: `1px solid ${C.cardBorder}`, borderTop: `1px solid ${C.cardBorder}`, background: "#fff", display: "flex", alignItems: "center" }}>
-          <span style={{ fontSize: 10.3, fontWeight: 540, color: C.body, lineHeight: 1.28 }}>{t}</span>
-        </div>
-      ))}
-    </>
-  );
-
   return (
     <div style={{ pageBreakBefore: "always", height: "281mm", overflow: "hidden", display: "flex", flexDirection: "column" }}>
       <Header subtitle="2. 시대에 따른 개인의 필요와 공동체" chapterNo="02" version={VERSION} />
@@ -134,7 +119,9 @@ export function IndividualCommunityPage() {
         <div style={{ display: "grid", gridTemplateColumns: colTpl, border: `1px solid ${C.cardBorder}`, borderRadius: 7, overflow: "hidden", background: "#fff", flex: 1 }}>
           <EraHead />
           <SummaryRow />
-          <SectionBar label="개인" desc="생애주기별 기대와 필요한 공동체" />
+          <SectionBar label="개인" desc="생애주기별 기대와 필요한 공동체"
+            unchanged="태어나 자라 늙기까지, 생애 단계마다 보살핌·배움·역할·존엄을 필요로 하고 제 몫의 사람이 되려 한다."
+            changed="무엇을 위해 사느냐가 달라진다 — 신분을 잇는 생존(농업) → 표준 교육으로 좋은 일자리(산업화) → 저마다 다른 정체성의 발휘(디지털)." />
           {eraPerson.map((r) => (
             <PersonRow key={r.stage} label={r.stage} cells={[
               { txt: r.agri, cells: r.agriC },
@@ -142,22 +129,12 @@ export function IndividualCommunityPage() {
               { txt: r.dig,  cells: r.digC  },
             ]} />
           ))}
-          <AxisConst text="개인은 태어나 자라 늙기까지, 생애 단계마다 보살핌·배움·역할·존엄을 필요로 한다 — 그 필요로 제 몫의 사람이 되려는 욕구는 어느 시대에도 같다." />
-          <AxisVary cells={[
-            "무엇을 위해 사는가 — 신분을 잇고 땅을 지키는 생존",
-            "무엇을 위해 사는가 — 표준 교육으로 좋은 일자리 얻기",
-            "무엇을 위해 사는가 — 저마다 다른 정체성을 발휘하기",
-          ]} />
-          <SectionBar label="공동체" desc="개인의 필요를 뒷받침하는 관계와 제도" />
+          <SectionBar label="공동체" desc="개인의 필요를 뒷받침하는 관계와 제도"
+            unchanged="개인의 필요를 가정·이웃·마을·도시·국가·세계가 노동·돌봄·교육·안전망으로 나눠 떠받친다."
+            changed="어디에 무게가 실리느냐가 달라진다 — 가족·마을의 자급(농업) → 학교·기업·국가의 표준 관리(산업화) → 발휘는 도시·안전망은 국가로 분담(디지털)." />
           {eraComm.map((r) => (
             <CommRow key={r.unit} label={r.unit} cells={[r.agri, r.ind, r.dig]} />
           ))}
-          <AxisConst text="공동체는 개인이 그 시기의 필요를 채우도록 노동·돌봄·교육·안전망을 떠받친다 — 가정·이웃·마을·도시·국가·세계가 그 짐을 나눠 진다는 사실은 사라지지 않는다." />
-          <AxisVary cells={[
-            "어디에 무게가 실리나 — 가족·마을이 자급으로 다 떠안음",
-            "어디에 무게가 실리나 — 학교·기업·국가가 표준으로 관리",
-            "어디에 무게가 실리나 — 발휘는 도시, 안전망은 국가로 분담",
-          ]} />
         </div>
       </div>
 
