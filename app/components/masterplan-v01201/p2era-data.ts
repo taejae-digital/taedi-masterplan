@@ -9,14 +9,18 @@ export const ERAS = [
     summary: "저마다 다른 정체성을 발휘하는 것이 목표라, 가정은 단서 발견, 이웃은 실험, 마을은 훈련, 도시는 발휘, 국가는 안전망, 세계는 위험 관리를 맡는다." },
 ] as const;
 
+// 공동체 셀 값 타입: role 문자열 + 선택적 위임 흐름 마커
+export type CommCell = { role: string; flow?: "up" | "down" };
+
 // 6공동체 키 맵 — 없으면 undefined(빈 칸)
+// 값은 string(농업·산업화) 또는 CommCell 객체(디지털, 마커 포함) — 하위 호환
 export type CommCells = {
-  가정?: string;
-  이웃?: string;
-  마을?: string;
-  도시?: string;
-  국가?: string;
-  세계?: string;
+  가정?: string | CommCell;
+  이웃?: string | CommCell;
+  마을?: string | CommCell;
+  도시?: string | CommCell;
+  국가?: string | CommCell;
+  세계?: string | CommCell;
 };
 
 // 6공동체 고정 순서
@@ -46,9 +50,9 @@ export const eraPerson: EraPersonRow[] = [
     },
     dig: "타고난 기질·강점의 단서를 일찍 읽어주기",
     digC: {
-      가정: "단서 관찰·기록",
-      이웃: "돌봄 보강",
-      국가: "취약아 기초 보장",
+      가정: { role: "단서 관찰·기록", flow: "up" },   // 보호 위임 최고조 ▲
+      이웃: { role: "돌봄 보강", flow: "up" },         // 초기 돌봄 지원 ▲
+      국가: { role: "취약아 기초 보장", flow: "up" },  // 국가 보호 위임 ▲
     },
   },
   {
@@ -67,10 +71,10 @@ export const eraPerson: EraPersonRow[] = [
     },
     dig: "다양한 체험으로 좋아하는 것을 발견·실험",
     digC: {
-      가정: "관심 지원",
-      이웃: "체험 기회",
-      마을: "발견 프로그램",
-      국가: "기회 격차 보정",
+      가정: { role: "관심 지원", flow: "down" },      // 독점 보호에서 자립 시작 ▽
+      이웃: { role: "체험 기회", flow: "up" },         // 사회 위임 확장 ▲
+      마을: { role: "발견 프로그램", flow: "up" },     // 배움 위임 이동 ▲
+      국가: { role: "기회 격차 보정" },               // 유지
     },
   },
   {
@@ -88,9 +92,9 @@ export const eraPerson: EraPersonRow[] = [
     },
     dig: "기여가 큰 강점을 골라 훈련하고 방향 정하기",
     digC: {
-      마을: "멘토·훈련",
-      도시: "심화 경로",
-      국가: "이탈 방지·재진입",
+      마을: { role: "멘토·훈련", flow: "up" },        // 훈련 위임 강화 ▲
+      도시: { role: "심화 경로", flow: "up" },         // 도시로 위임 이동 ▲
+      국가: { role: "이탈 방지·재진입" },             // 유지
     },
   },
   {
@@ -110,9 +114,9 @@ export const eraPerson: EraPersonRow[] = [
     },
     dig: "정체성을 실제 기여로 발휘할 무대",
     digC: {
-      도시: "발휘 무대·프로젝트",
-      국가: "진입 장벽 완화",
-      세계: "넓은 시장·협업",
+      도시: { role: "발휘 무대·프로젝트", flow: "up" }, // 자립 발휘 확장 ▲
+      국가: { role: "진입 장벽 완화", flow: "down" },   // 보호 위임 회수 ▽
+      세계: { role: "넓은 시장·협업", flow: "up" },     // 글로벌 위임 ▲
     },
   },
   {
@@ -132,10 +136,10 @@ export const eraPerson: EraPersonRow[] = [
     },
     dig: "강점을 재설계·확장하고 새 영역에 도전",
     digC: {
-      가정: "전환기 지지",
-      도시: "재학습·전환",
-      국가: "전환기 보호",
-      세계: "확장 협업",
+      가정: { role: "전환기 지지" },                  // 유지
+      도시: { role: "재학습·전환", flow: "down" },    // 의존 위임 줄어듦 ▽
+      국가: { role: "전환기 보호" },                  // 유지
+      세계: { role: "확장 협업", flow: "up" },        // 글로벌 역할 확장 ▲
     },
   },
   {
@@ -154,10 +158,10 @@ export const eraPerson: EraPersonRow[] = [
     },
     dig: "건강을 사전에 예측·예방하며 존엄과 판단 주도권을 지키기",
     digC: {
-      가정: "예방·돌봄·존엄",
-      이웃: "관계 유지",
-      도시: "예측 건강·생활 의료",
-      국가: "소득 보장·격차 조정",
+      가정: { role: "예방·돌봄·존엄", flow: "up" },      // 노년 보호 다시 ▲ (U자 하단)
+      이웃: { role: "관계 유지" },                        // 유지
+      도시: { role: "예측 건강·생활 의료", flow: "up" }, // 의료 위임 ▲
+      국가: { role: "소득 보장·격차 조정", flow: "up" }, // 소득 보호 ▲
     },
   },
 ];
