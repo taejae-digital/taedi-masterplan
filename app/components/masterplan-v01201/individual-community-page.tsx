@@ -3,7 +3,7 @@ import { C } from "./constants";
 import { Header, Footer } from "./shared";
 import { VERSION } from "./version";
 import { COMM } from "./mp-data";
-import { ERAS, eraPerson, eraComm, CommCells, CommCell, COMM_ORDER } from "./p2era-data";
+import { ERAS, eraPerson, eraComm, CommCells, COMM_ORDER } from "./p2era-data";
 
 export function IndividualCommunityPage() {
   const colTpl = "82px repeat(3, 1fr)";
@@ -49,45 +49,29 @@ export function IndividualCommunityPage() {
     </>
   );
 
-  // CommCell 값 파싱 (string | CommCell 하위 호환)
-  const parseCell = (val: string | CommCell | undefined): { role: string; flow?: "up" | "down" } | null => {
-    if (!val) return null;
-    if (typeof val === "string") return { role: val };
-    return val;
-  };
-
-  // 6공동체 미니 그리드 — 6칸 고정, 없는 공동체는 빈 칸. 디지털 칸은 위임(▲)/회수(▽) 마커
+  // 6공동체 미니 그리드 — 6칸 고정, 없는 공동체는 빈 칸
   const CommGrid = ({ cells }: { cells: CommCells }) => (
     <div style={{ display: "grid", gridTemplateColumns: "repeat(6, 1fr)", gap: "2px 3px", width: "100%", marginTop: 4 }}>
       {COMM_ORDER.map((c) => {
-        const parsed = parseCell(cells[c as keyof CommCells]);
+        const role = cells[c as keyof CommCells];
         const col = COMM[c] || "#6b7280";
-        if (!parsed) {
+        if (!role) {
           return (
             <div key={c} style={{ minHeight: 18, borderRadius: 3, background: "#f3f4f6", opacity: 0.45 }} />
           );
         }
-        const { role, flow } = parsed;
-        const isUp = flow === "up";
-        const isDown = flow === "down";
-        const markerColor = isUp ? "#0d9488" : isDown ? "#9ca3af" : undefined;
-        const markerSymbol = isUp ? "▲" : isDown ? "▽" : undefined;
         return (
           <div key={c} style={{
             minHeight: 18,
             borderRadius: 3,
-            background: isUp ? `${col}22` : `${col}18`,
-            border: isUp ? `1.4px solid ${col}99` : isDown ? `1.2px dashed ${col}55` : `1px solid ${col}55`,
+            background: `${col}18`,
+            border: `1px solid ${col}55`,
             padding: "1px 3px",
             display: "flex",
             flexDirection: "column",
             alignItems: "flex-start",
             gap: 0,
-            position: "relative",
           }}>
-            {markerSymbol && (
-              <span style={{ position: "absolute", top: 0, right: 2, fontSize: 8.5, fontWeight: 900, color: markerColor, lineHeight: 1 }}>{markerSymbol}</span>
-            )}
             <span style={{ fontSize: 7.8, fontWeight: 900, color: col, lineHeight: 1.3, letterSpacing: -0.2 }}>{c}</span>
             <span style={{ fontSize: 7.2, fontWeight: 600, color: col, lineHeight: 1.25, opacity: 0.88, letterSpacing: -0.2 }}>{role}</span>
           </div>
@@ -106,24 +90,6 @@ export function IndividualCommunityPage() {
         </div>
       ))}
     </>
-  );
-
-  // 위임 흐름 마커 범례
-  const FlowLegend = () => (
-    <div style={{ gridColumn: "1 / -1", background: "#f9fafb", borderTop: `1px solid ${C.cardBorder}`, padding: "3px 14px 3px", display: "flex", alignItems: "center", gap: 10 }}>
-      <span style={{ fontSize: 9.5, fontWeight: 700, color: "#6b7280", letterSpacing: 0.2 }}>디지털 시대 권한 위임 흐름:</span>
-      <span style={{ display: "flex", alignItems: "center", gap: 3 }}>
-        <span style={{ fontSize: 8.5, fontWeight: 900, color: "#0d9488" }}>▲</span>
-        <span style={{ fontSize: 9, fontWeight: 600, color: "#4b5563" }}>위임 늘어남</span>
-      </span>
-      <span style={{ color: "#d1d5db", fontSize: 9 }}>|</span>
-      <span style={{ display: "flex", alignItems: "center", gap: 3 }}>
-        <span style={{ fontSize: 8.5, fontWeight: 900, color: "#9ca3af" }}>▽</span>
-        <span style={{ fontSize: 9, fontWeight: 600, color: "#4b5563" }}>회수(자립)</span>
-      </span>
-      <span style={{ color: "#d1d5db", fontSize: 9 }}>|</span>
-      <span style={{ fontSize: 9, fontWeight: 500, color: "#9ca3af", fontStyle: "italic" }}>칸 테두리: 실선=위임↑&nbsp;&nbsp;점선=회수↓</span>
-    </div>
   );
 
   const CommRow = ({ label, cells }: { label: string; cells: string[] }) => {
@@ -163,10 +129,9 @@ export function IndividualCommunityPage() {
               { txt: r.dig,  cells: r.digC  },
             ]} />
           ))}
-          <FlowLegend />
-          <SectionBar label="공동체" desc="전문성을 갖춘 개인이 원하는 만큼만 권한을 맡기고, 필요가 끝나면 거두는 관계"
-            unchanged="공동체의 권한은 영구적이지 않다 — 개인이 생애단계·위험에 따라 필요한 만큼 위임했다가, 스스로 감당할 수 있게 되면 거둔다. 노년처럼 몸이 약해지면 보호 권한을 다시 늘리는, 한 방향이 아닌 위임 ⇄ 회수의 관계다."
-            changed="무게가 옮겨간다 — 가족·마을의 자급(농업) → 학교·국가의 표준 관리(산업화) → 발휘는 도시가 받치되, 개인이 핵무기조차 만들 수 있는 시대라 자유를 받치는 일에는 '적절한 규제'로 위험을 막는 것까지 포함되는 분담(디지털)." />
+          <SectionBar label="공동체" desc="개인이 필요로 하는 만큼 권한을 맡고, 충족되면 거두는 관계"
+            unchanged="공동체의 권한은 영구적이지 않다 — 개인이 생애단계·위험에 따라 필요한 만큼 맡겼다가, 스스로 감당할 수 있게 되면 거둔다."
+            changed="무게가 옮겨간다 — 가족·마을의 자급(농업) → 학교·국가의 표준 관리(산업화) → 발휘는 도시가 받치고, 자유가 남을 해치지 않게 국가가 적절히 규제하는 분담(디지털)." />
           {eraComm.map((r) => (
             <CommRow key={r.unit} label={r.unit} cells={[r.agri, r.ind, r.dig]} />
           ))}
