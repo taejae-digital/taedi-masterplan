@@ -32,6 +32,27 @@ for s in doc.sections:
     s.left_margin = Mm(30)
     s.right_margin = Mm(30)
 
+def add_page_numbers(document):
+    """모든 섹션 푸터에 가운데 정렬 페이지 번호(현재/전체) 필드 삽입."""
+    for section in document.sections:
+        footer = section.footer
+        footer.is_linked_to_previous = False
+        p = footer.paragraphs[0] if footer.paragraphs else footer.add_paragraph()
+        p.alignment = WD_ALIGN_PARAGRAPH.CENTER
+        p.text = ""
+        def field(instr):
+            run = p.add_run()
+            b = OxmlElement('w:fldChar'); b.set(qn('w:fldCharType'), 'begin')
+            i = OxmlElement('w:instrText'); i.set(qn('xml:space'), 'preserve'); i.text = instr
+            e = OxmlElement('w:fldChar'); e.set(qn('w:fldCharType'), 'end')
+            run._r.append(b); run._r.append(i); run._r.append(e)
+            run.font.size = Pt(9); run.font.name = HEAD_FONT
+            run.font.color.rgb = BLACK
+            return run
+        field("PAGE")
+        sep = p.add_run(" / "); sep.font.size = Pt(9); sep.font.name = HEAD_FONT; sep.font.color.rgb = BLACK
+        field("NUMPAGES")
+
 def set_run_font(run, name=BODY_FONT, size=10.5, bold=False, italic=False):
     run.font.name = name
     run.font.size = Pt(size)
@@ -139,8 +160,10 @@ para(
     "역할을 정합적으로 연결한다. 산업화 시대에 국가라는 특정 공동체로 권리가 과도하게 집중·고착되면서 위임의 회수가 "
     "어려워졌고, 표준화·획일화·중앙집중의 폐해가 생겼다는 것이 이 연구의 비판적 초점이다. "
     "디지털 시대는 그 집중된 권리를 가정·이웃·마을·도시·국가·세계 여러 층위로 다시 분산하는 전환으로 해석된다. "
-    "사회계약론(홉스·로크·루소), 오스트롬의 다층 거버넌스, 브론펜브레너의 생태체계, 에릭슨의 발달단계, "
-    "센·누스바움의 역량 이론, 폴라니의 재착근이 이론적 근거로 동원된다.",
+    "공동체를 권리 위임의 계약으로 보는 시각은 홉스·로크·루소의 사회계약론에 뿌리를 두며, 권리가 한곳에 쏠리지 않고 "
+    "여러 층위로 나뉘어야 한다는 주장은 오스트롬의 다층 거버넌스 연구와 맞닿는다. 개인의 생애 흐름은 에릭슨의 발달 연구로, "
+    "공동체의 층위 구조는 브론펜브레너의 생태체계 연구로, 위임이 실제로 개인의 삶을 넓히는지를 가늠하는 잣대는 "
+    "센과 누스바움의 역량 이론으로 설명한다.",
     space_after=8, indent_first=None)
 rich([("키워드  ", True),
       ("권리 위임, 권리 회수, 계약으로서의 공동체, 생애주기, 노동 원리, 디지털 전환, 사회계약론", False)],
@@ -539,6 +562,7 @@ for pre, ital, post in refs:
     if post:
         r3 = p.add_run(post); set_run_font(r3, name=BODY_FONT, size=9.5)
 
+add_page_numbers(doc)
 os.makedirs(os.path.dirname(OUT), exist_ok=True)
 doc.save(OUT)
 print("saved:", OUT)
