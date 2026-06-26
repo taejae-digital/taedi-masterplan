@@ -64,10 +64,9 @@ function WorldSection() {
 
   return (
     <section>
-      <SecHead no="4.1" area="디지털 시대의 세계 경영" desc="다음 단계 시대가치, 지속 불가능성 거버넌스, 갈등에서 협력으로의 대전환을 설계한다." />
-      <div style={{ color: C.body, fontSize: 13, lineHeight: 1.42, fontWeight: 600, marginBottom: 10 }}>
-        세계경영의 핵심은 각국의 역할을 나열하는 것이 아니라, 산업화 시대의 패권 경쟁이 더 이상 지속될 수 없다는 조건 위에서 모두가 받아들일 수밖에 없는 협력 질서를 만드는 것이다. <span style={{ color: C.muted, fontWeight: 600 }}>요슈아 벤지오(몬트리올대·Mila)는 고도 AI가 권력 집중과 안전 위험을 키우므로 국제 거버넌스와 독립적 안전 검증이 필요하다고 본다.</span>
-        <span style={{ color: C.muted, fontWeight: 600 }}> 미·중 카드와 구체적 딜 설계는 「세계 경영 마스터플랜」에서 별도로 다룬다.</span>
+      <SecHead no="4.1" area="디지털 시대의 세계 경영" desc="기존 UN 체제의 한계를 넘어 새 글로벌 거버넌스의 필요성을 설계한다." />
+      <div style={{ color: C.body, fontSize: 12.6, lineHeight: 1.42, fontWeight: 600, marginBottom: 10 }}>
+        세계경영의 핵심은 각국의 역할을 나열하는 것이 아니라, 산업화 시대의 패권 경쟁과 기존 국제기구의 재정·집행 한계가 동시에 드러난 조건 위에서 새 협력 질서를 만드는 것이다. <span style={{ color: C.muted, fontWeight: 600 }}>중앙일보는 2026년 5월 31일 UN이 미국·중국 분담금 지연으로 8월 현금 고갈 위험에 놓였다고 보도했다. 요슈아 벤지오(몬트리올대·Mila)는 고도 AI가 권력 집중과 안전 위험을 키우므로 국제 거버넌스와 독립적 안전 검증이 필요하다고 본다.</span>
       </div>
 
       <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 10 }}>
@@ -86,7 +85,7 @@ function WorldSection() {
           <div style={{ padding: "10px 13px" }}>
             <div style={{ color: C.ink, fontSize: 13.6, fontWeight: 900, marginBottom: 6 }}>지속 불가능성 거버넌스</div>
             <div style={{ color: C.body, fontSize: 12.2, fontWeight: 500, lineHeight: 1.52 }}>
-              현재 거버넌스는 패권 경쟁을 관리하는 장치가 아니라 확전·핵 확산·AI 군사화·기술 블록화를 증폭하는 구조가 되고 있다. 세계경영은 <span style={{ color: C.teal, fontWeight: 900 }}>FDA형 사전승인</span>·<span style={{ color: C.teal, fontWeight: 900 }}>안전성 검증</span>·<span style={{ color: C.teal, fontWeight: 900 }}>사후감시</span> 거버넌스로 이 지속 불가능성을 멈추는 <span style={{ color: C.teal, fontWeight: 900 }}>공동 규칙</span>을 먼저 세운다.
+              현재 거버넌스는 패권 경쟁을 관리하는 장치가 아니라 확전·핵 확산·AI 군사화·기술 블록화를 증폭하는 구조가 되고 있다. UN의 재정 위기는 기존 다자기구가 위험을 집행할 능력까지 흔들리고 있음을 보여준다. 세계경영은 <span style={{ color: C.teal, fontWeight: 900 }}>FDA형 사전승인</span>·<span style={{ color: C.teal, fontWeight: 900 }}>안전성 검증</span>·<span style={{ color: C.teal, fontWeight: 900 }}>사후감시</span> 거버넌스로 지속 불가능성을 멈추는 <span style={{ color: C.teal, fontWeight: 900 }}>공동 규칙</span>을 새로 세운다.
             </div>
           </div>
         </div>
