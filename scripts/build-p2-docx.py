@@ -157,8 +157,8 @@ doc.add_page_break()
 h1("", "초록")
 para(
     "공동체는 개인이 자신의 필요에 의해 권리의 일부를 위임하는 계약을 통해 구현되는 실체다. "
-    "개인이 먼저 있고, 생애의 단계마다 달라지는 필요가 공동체를 불러낸다. 위임의 집합이 공동체를 만들고, "
-    "더 이상 그 공동체를 필요로 하지 않을 때 개인은 위임한 권리를 거두어들일 수 있어야 한다. "
+    "개인이 먼저 있고, 생애의 단계마다 필요가 달라지면 그 필요를 감당하기 위해 공동체가 만들어진다. 위임이 모여 공동체가 서고, "
+    "더 이상 그 공동체가 필요하지 않을 때 개인은 위임한 권리를 거두어들일 수 있어야 한다. "
     "이 연구는 그 '위임과 회수의 계약 논리'를 이론적 토대로 삼아, 농업·산업화·디지털 세 시대의 노동 원리, "
     "생애주기별 필요, 그 필요에 응답하는 공동체의 형성과 역할을 정합적으로 연결한다. "
     "산업화 시대에는 표준 교육과 안정된 일자리라는 그 시대 개인의 필요에 맞추어 권리가 국가로 모였다. "
@@ -177,7 +177,7 @@ rich([("키워드  ", True),
 h1("1.", "서론 — 공동체는 어떻게 생겨나는가")
 para(
     "이 연구는 공동체를 개인이 자신의 필요에 의해 권리의 일부를 위임하는 계약으로 구현된 실체로 본다. "
-    "개인이 먼저 있고, 살아가면서 마주치는 필요가 공동체를 불러낸다. 위임이 철회되면 공동체는 근거를 잃는다. "
+    "개인이 먼저 있고, 살아가면서 마주치는 필요에 따라 공동체가 만들어진다. 위임이 철회되면 공동체는 근거를 잃는다. "
     "어떤 부모가 아이를 위해 마을 돌봄 협동조합에 시간과 결정권 일부를 맡기는 것이 곧 위임이며, "
     "이사를 떠나거나 역할을 다하지 못한다고 판단하면 그 위임을 거두어들일 수 있어야 한다는 것이 이 연구의 출발점이다. "
     "이 관점은 공동체를 개인보다 앞서 존재하는 유기체나 자연 질서가 아닌, "
@@ -530,7 +530,7 @@ refs = [
     ("Polanyi, K. (1944). ", "The great transformation: The political and economic origins of our time", ". Farrar & Rinehart."),
     ("Rousseau, J.-J. (1997). ", "The social contract and other later political writings", " (V. Gourevitch, Ed. & Trans.). Cambridge University Press. (Original work published 1762)"),
     ("Sen, A. (1999). ", "Development as freedom", ". Oxford University Press."),
-    ("Young, M. (1958). ", "The rise of the meritocracy, 1870–2033", ". Thames and Hudson."),
+    ("Young, M. (1958). ", "The rise of the meritocracy, 1870–2033: An essay on education and equality", ". Thames & Hudson."),
 ]
 for pre, ital, post in refs:
     p = doc.add_paragraph()
