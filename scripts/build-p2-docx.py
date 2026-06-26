@@ -117,7 +117,7 @@ def hr():
 # ════════════════════════ 표지 ════════════════════════
 for _ in range(3):
     doc.add_paragraph()
-para("태재미래전략연구원 마스터플랜 연구시리즈 · 제2호",
+para("태재미래전략연구원 · 디지털 시대 마스터플랜 연구",
      size=10, align=WD_ALIGN_PARAGRAPH.CENTER, space_after=24, font=HEAD_FONT, indent_first=None)
 para("개인의 생애주기적 필요와\n공동체의 구조적 전환",
      size=22, bold=True, align=WD_ALIGN_PARAGRAPH.CENTER, space_after=10, line=1.3, font=HEAD_FONT, indent_first=None)
