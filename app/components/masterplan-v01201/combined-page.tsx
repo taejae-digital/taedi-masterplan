@@ -132,6 +132,13 @@ function Arrow({ small = false }: { small?: boolean }) {
 function EconTable({ rows }: { rows: EconClassRow[] }) {
   const th: React.CSSProperties = { background: "#fff", color: C.navy, fontSize: 10, fontWeight: 800, letterSpacing: 0.5, padding: "5px 9px", textAlign: "left", lineHeight: 1.2, borderBottom: `1px solid ${C.cardBorder}` };
   const tdLabel: React.CSSProperties = { background: "#fff", color: C.navy, fontSize: 12, fontWeight: 900, padding: "6px 9px", textAlign: "center", whiteSpace: "nowrap", verticalAlign: "middle", borderRight: `1px solid ${C.cardBorder}` };
+  const KEY_ROLE = "정체성 기반 생산 주도자";
+  const keyHeadline: React.CSSProperties = {
+    color: C.accent,
+    borderBottom: `1px solid ${C.accent}55`,
+    paddingBottom: 1,
+    display: "inline",
+  };
   return (
     <table style={{ width: "100%", height: "100%", borderCollapse: "collapse", tableLayout: "fixed" }}>
       <colgroup><col style={{ width: 66 }} /><col style={{ width: "47%" }} /><col style={{ width: "47%" }} /></colgroup>
@@ -148,11 +155,11 @@ function EconTable({ rows }: { rows: EconClassRow[] }) {
             <tr key={row.label} style={{ borderBottom: `1px solid ${C.cardBorder}` }}>
               <td style={tdLabel}>{row.label}</td>
               <td style={{ padding: "6px 9px", verticalAlign: "top", borderRight: `1px solid ${C.cardBorder}` }}>
-                <div style={{ fontSize: 12.3, fontWeight: 800, color: C.navySoft, lineHeight: 1.18, marginBottom: 2 }}>{row.industrial.headline}</div>
+                <div style={{ fontSize: 12.3, fontWeight: 800, color: C.navySoft, lineHeight: 1.18, marginBottom: 2 }}>{row.industrial.headline === KEY_ROLE ? <span style={keyHeadline}>{row.industrial.headline}</span> : row.industrial.headline}</div>
                 <div style={{ fontSize: 10.5, fontWeight: 500, color: C.muted, lineHeight: 1.28 }}>{row.industrial.detail}</div>
               </td>
               <td style={{ padding: "6px 9px", verticalAlign: "top", borderLeft: `1px solid ${C.cardBorder}` }}>
-                <div style={{ fontSize: 12.3, fontWeight: 800, color: C.navy, lineHeight: 1.18, marginBottom: 2 }}>{row.digital.headline}</div>
+                <div style={{ fontSize: 12.3, fontWeight: 800, color: C.navy, lineHeight: 1.18, marginBottom: 2 }}>{row.digital.headline === KEY_ROLE ? <span style={keyHeadline}>{row.digital.headline}</span> : row.digital.headline}</div>
                 <div style={{ fontSize: 10.5, fontWeight: 500, color: C.body, lineHeight: 1.28 }}>{row.digital.detail}</div>
               </td>
             </tr>
