@@ -495,31 +495,35 @@ para(
     "그 공동체에 권리를 위임하며, 상황이 바뀌면 권리를 거두어들일 수 있어야 한다. "
     "그 순환이 작동하는 사회가 디지털 시대 마스터플랜이 지향하는 공동체의 모습이다.")
 
-# ════════════════════════ 참고문헌 ════════════════════════
+# ════════════════════════ 참고문헌 (APA 7th) ════════════════════════
 h1("", "참고문헌")
+# 각 항목: (저자·연도 등 정자, 이탤릭 제목/저널, 나머지 정자)
 refs = [
-    "Bronfenbrenner, U. (1979). The Ecology of Human Development. Harvard University Press.",
-    "Erikson, E. H. (1950). Childhood and Society. W. W. Norton.",
-    "Erikson, E. H. (1968). Identity: Youth and Crisis. W. W. Norton.",
-    "Esping-Andersen, G. (1999). Social Foundations of Postindustrial Economies. Oxford University Press.",
-    "Heckman, J. J. (2006). Skill formation and the economics of investing in disadvantaged children. Science, 312(5782), 1900–1902.",
-    "Hobbes, T. (1651). Leviathan. Andrew Crooke.",
-    "Locke, J. (1689). Two Treatises of Government. Awnsham Churchill.",
-    "Nussbaum, M. C. (2011). Creating Capabilities: The Human Development Approach. Harvard University Press.",
-    "Ostrom, E. (1990). Governing the Commons. Cambridge University Press.",
-    "Ostrom, E. (2009). A polycentric approach for coping with climate change. World Bank Policy Research Working Paper, No. 5095.",
-    "Polanyi, K. (1944). The Great Transformation. Farrar & Rinehart.",
-    "Rousseau, J.-J. (1762). Du Contrat Social. Marc-Michel Rey.",
-    "Sen, A. (1999). Development as Freedom. Anchor Books.",
-    "Young, M. (1958). The Rise of the Meritocracy: 1870–2033. Thames and Hudson.",
+    ("Bronfenbrenner, U. (1979). ", "The ecology of human development: Experiments by nature and design", ". Harvard University Press."),
+    ("Erikson, E. H. (1950). ", "Childhood and society", ". W. W. Norton."),
+    ("Erikson, E. H. (1968). ", "Identity: Youth and crisis", ". W. W. Norton."),
+    ("Esping-Andersen, G. (1999). ", "Social foundations of postindustrial economies", ". Oxford University Press."),
+    ("Heckman, J. J. (2006). Skill formation and the economics of investing in disadvantaged children. ", "Science, 312", "(5782), 1900–1902. https://doi.org/10.1126/science.1128898"),
+    ("Hobbes, T. (1996). ", "Leviathan", " (R. Tuck, Ed.). Cambridge University Press. (Original work published 1651)"),
+    ("Locke, J. (1988). ", "Two treatises of government", " (P. Laslett, Ed.). Cambridge University Press. (Original work published 1689)"),
+    ("Nussbaum, M. C. (2011). ", "Creating capabilities: The human development approach", ". Harvard University Press."),
+    ("Ostrom, E. (1990). ", "Governing the commons: The evolution of institutions for collective action", ". Cambridge University Press."),
+    ("Ostrom, E. (2009). ", "A polycentric approach for coping with climate change", " (Policy Research Working Paper No. 5095). World Bank."),
+    ("Polanyi, K. (1944). ", "The great transformation: The political and economic origins of our time", ". Farrar & Rinehart."),
+    ("Rousseau, J.-J. (1997). ", "The social contract and other later political writings", " (V. Gourevitch, Ed. & Trans.). Cambridge University Press. (Original work published 1762)"),
+    ("Sen, A. (1999). ", "Development as freedom", ". Oxford University Press."),
+    ("Young, M. (1958). ", "The rise of the meritocracy, 1870–2033", ". Thames and Hudson."),
 ]
-for r in refs:
+for pre, ital, post in refs:
     p = doc.add_paragraph()
     pf = p.paragraph_format
-    pf.space_after = Pt(3); pf.line_spacing = 1.35
+    pf.space_after = Pt(3); pf.line_spacing = 1.4
     pf.left_indent = Mm(8); pf.first_line_indent = Mm(-8)  # hanging indent
-    run = p.add_run(r)
-    set_run_font(run, name=BODY_FONT, size=9.5)
+    r1 = p.add_run(pre); set_run_font(r1, name=BODY_FONT, size=9.5)
+    if ital:
+        r2 = p.add_run(ital); set_run_font(r2, name=BODY_FONT, size=9.5, italic=True)
+    if post:
+        r3 = p.add_run(post); set_run_font(r3, name=BODY_FONT, size=9.5)
 
 os.makedirs(os.path.dirname(OUT), exist_ok=True)
 doc.save(OUT)
