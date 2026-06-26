@@ -66,7 +66,7 @@ function WorldSection() {
     <section>
       <SecHead no="4.1" area="디지털 시대의 세계 경영" desc="기존 UN 체제의 한계를 넘어 새 글로벌 거버넌스의 필요성을 설계한다." />
       <div style={{ color: C.body, fontSize: 12.6, lineHeight: 1.42, fontWeight: 600, marginBottom: 10 }}>
-        세계경영의 핵심은 각국의 역할을 나열하는 것이 아니라, 산업화 시대의 패권 경쟁과 기존 국제기구의 재정·집행 한계가 동시에 드러난 조건 위에서 새 협력 질서를 만드는 것이다. <span style={{ color: C.muted, fontWeight: 600 }}>중앙일보는 2026년 5월 31일 UN이 미국·중국 분담금 지연으로 8월 현금 고갈 위험에 놓였다고 보도했다. 요슈아 벤지오(몬트리올대·Mila)는 고도 AI가 권력 집중과 안전 위험을 키우므로 국제 거버넌스와 독립적 안전 검증이 필요하다고 본다.</span>
+        세계경영의 핵심은 각국의 역할을 나열하는 것이 아니라, 산업화 시대의 패권 경쟁과 기존 국제기구의 재정·집행 한계가 동시에 드러난 조건 위에서 새 협력 질서를 만드는 것이다. <span style={{ color: C.muted, fontWeight: 600 }}>국가들을 대표하는 UN 체제는 각국의 분담금·거부권·이해관계에 묶여 전쟁과 기술 위험을 제때 멈추지 못하고 있다. 요슈아 벤지오(몬트리올대·Mila)는 고도 AI가 권력 집중과 안전 위험을 키우므로 국제 거버넌스와 독립적 안전 검증이 필요하다고 본다.</span>
       </div>
 
       <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 10 }}>
