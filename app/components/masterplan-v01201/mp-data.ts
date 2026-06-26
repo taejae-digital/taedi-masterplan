@@ -1,14 +1,16 @@
 // P2 공유 데이터 — 개인 축(P2-a)과 공동체 축(P2-b)이 함께 사용
 
-// 6단계 공동체 색 — 가까운 생활권(주황)에서 넓은 단위(남보라)로 무지개형 팔레트
+// 6단계 공동체 색 — constants.ts의 COMMUNITY 단일 팔레트를 참조한다.
+// 가까운 생활권(주황)에서 넓은 단위(남보라)로 가는 무지개형 팔레트.
+import { COMMUNITY } from "./constants";
 export const COMM_ORDER = ["가정", "이웃", "마을", "도시", "국가", "세계"];
 export const COMM: Record<string, string> = {
-  "가정": "#b9763f",
-  "이웃": "#a8902f",
-  "마을": "#5a8a55",
-  "도시": "#3f8580",
-  "국가": "#4f6d9e",
-  "세계": "#6a5f9c",
+  "가정": COMMUNITY.home,
+  "이웃": COMMUNITY.neighbor,
+  "마을": COMMUNITY.village,
+  "도시": COMMUNITY.city,
+  "국가": COMMUNITY.nation,
+  "세계": COMMUNITY.world,
 };
 export const gradAt = (t: number) => {
   const i = Math.min(COMM_ORDER.length - 1, Math.round(t * (COMM_ORDER.length - 1)));
