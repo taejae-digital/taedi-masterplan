@@ -135,8 +135,6 @@ function EconTable({ rows }: { rows: EconClassRow[] }) {
   const KEY_ROLE = "정체성 기반 생산 주도자";
   const keyHeadline: React.CSSProperties = {
     color: C.accent,
-    borderBottom: `1px solid ${C.accent}55`,
-    paddingBottom: 1,
     display: "inline",
   };
   return (
