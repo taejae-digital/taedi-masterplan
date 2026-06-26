@@ -121,7 +121,7 @@ export function IndividualCommunityPage() {
           <SummaryRow />
           <SectionBar label="개인" desc="생애주기별 기대와 필요한 공동체"
             unchanged="태어나 자라 늙기까지, 생애 단계마다 안전·건강·보살핌·배움·역할·존엄을 필요로 하고 제 몫의 사람이 되려 한다."
-            changed="원하는 바가 깊어진다 — 신분을 잇는 생존(농업) → 표준 교육으로 좋은 일자리(산업화) → 전문성을 키운 개인이 저마다의 정체성을 발휘할 무대를 원함(디지털)." />
+            changed="원하는 바가 깊어진다 — 신분을 잇는 생존(농업) → 표준 교육으로 좋은 일자리(산업화) → 전문성을 키운 개인이 저마다의 정체성을 기여로 발휘할 무대를 원함(디지털)." />
           {eraPerson.map((r) => (
             <PersonRow key={r.stage} label={r.stage} cells={[
               { txt: r.agri, cells: r.agriC },
@@ -131,7 +131,7 @@ export function IndividualCommunityPage() {
           ))}
           <SectionBar label="공동체" desc="개인이 필요로 하는 만큼 권한을 맡고, 충족되면 거두는 관계"
             unchanged="공동체의 권한은 영구적이지 않다 — 개인이 생애단계·위험에 따라 필요한 만큼 맡겼다가, 스스로 감당할 수 있게 되면 거둔다."
-            changed="무게가 옮겨간다 — 가족·마을의 자급(농업) → 학교·국가의 표준 관리(산업화) → 도시는 발휘·생활·조세를 책임지고, 국가는 도시들의 실험을 조율하며 권리 바닥과 위험 규칙을 세우는 분담(디지털)." />
+            changed="무게가 옮겨간다 — 가족·마을의 자급(농업) → 학교·국가의 표준 관리(산업화) → 도시는 발휘·생활·조세를 책임지고, 국가는 도시들의 실험을 조율하며 최소 권리선과 위험 규칙을 세우는 분담(디지털)." />
           {eraComm.map((r) => (
             <CommRow key={r.unit} label={r.unit} cells={[r.agri, r.ind, r.dig]} />
           ))}
