@@ -258,21 +258,6 @@ export function CombinedPage() {
               <div style={{ fontSize: 22, lineHeight: 1.28, fontWeight: 850, color: "#fff" }}>
                 개인이 정체성을 발휘할 기본 여건을 보장한다.
               </div>
-              <div style={{ marginTop: 14, paddingTop: 12, borderTop: "1px solid rgba(255,255,255,0.25)" }}>
-                <div style={{ fontSize: 10.5, fontWeight: 800, opacity: 0.8, letterSpacing: 1, marginBottom: 6 }}>핵심 가치</div>
-                <div style={{ display: "flex", flexWrap: "nowrap", gap: 6 }}>
-                  {[
-                    { v: "정체성", d: "직업이 아니라 고유한 기여로 본다" },
-                    { v: "개방", d: "AI·데이터·컴퓨팅을 소수가 가두지 않는다" },
-                    { v: "균형", d: "욕망의 극대화가 아니라 지속가능한 조정을 택한다" },
-                  ].map((c) => (
-                    <div key={c.v} style={{ display: "flex", flexDirection: "column", flex: "1 1 0", minWidth: 0, background: "rgba(255,255,255,0.12)", borderRadius: 2, padding: "6px 8px" }}>
-                      <span style={{ fontSize: 12.5, fontWeight: 900, letterSpacing: 0.5, color: "#fff" }}>{c.v}</span>
-                      <span style={{ fontSize: 9, lineHeight: 1.28, color: "#fff", opacity: 0.85, marginTop: 1 }}>{c.d}</span>
-                    </div>
-                  ))}
-                </div>
-              </div>
             </div>
 
             <div style={{ display: "flex", flexDirection: "column", gap: 7, justifyContent: "center" }}>
