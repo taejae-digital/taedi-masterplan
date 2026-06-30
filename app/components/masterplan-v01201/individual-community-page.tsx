@@ -117,12 +117,12 @@ export function IndividualCommunityPage() {
           </div>
         </div>
 
-        <div style={{ display: "flex", flexDirection: "column", flex: 1, justifyContent: "space-between", gap: 14 }}>
+        <div style={{ display: "flex", flexDirection: "column", gap: 16, marginTop: 6 }}>
 
           {/* 2.1 시대적 변화 */}
-          <div style={{ display: "flex", flexDirection: "column", flex: 1, minHeight: 0 }}>
+          <div style={{ display: "flex", flexDirection: "column" }}>
             <SectionLabel no="2.1" title="시대적 변화" lead="농업은 땅이, 산업화는 자본이, 디지털은 정체성이 생산수단이다." />
-            <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr 1fr", gap: 11, flex: 1, minHeight: 0 }}>
+            <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr 1fr", gap: 11 }}>
               {ERAS.map((era) => (
                 <div key={era.label} style={{
                   border: `1px solid ${C.cardBorder}`,
@@ -133,7 +133,6 @@ export function IndividualCommunityPage() {
                   display: "flex",
                   flexDirection: "column",
                   gap: 6,
-                  justifyContent: "space-between",
                 }}>
                   <div style={{ display: "flex", alignItems: "baseline", gap: 7 }}>
                     <span style={{ fontSize: 14.5, fontWeight: 900, color: C.ink }}>{era.label}</span>
@@ -151,9 +150,9 @@ export function IndividualCommunityPage() {
           </div>
 
           {/* 2.2 디지털과 개인의 변화 */}
-          <div style={{ display: "flex", flexDirection: "column", flex: 1, minHeight: 0 }}>
+          <div style={{ display: "flex", flexDirection: "column" }}>
             <SectionLabel no="2.2" title="디지털 기술과 개인의 변화" lead="정체성을 아는 것이 곧 생존이 된다. 단, 몸이라는 조건은 그대로다." />
-            <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr 1fr 1fr 1fr", gap: 11, flex: 1, minHeight: 0 }}>
+            <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr 1fr 1fr 1fr", gap: 11 }}>
               {INDIVIDUAL_CARDS.map((card, i) => (
                 <div key={card.num} style={{
                   border: `1px solid ${C.cardBorder}`,
@@ -164,7 +163,6 @@ export function IndividualCommunityPage() {
                   display: "flex",
                   flexDirection: "column",
                   gap: 7,
-                  justifyContent: "space-between",
                   position: "relative",
                 }}>
                   <div style={{ display: "flex", alignItems: "center", gap: 6 }}>
@@ -184,9 +182,9 @@ export function IndividualCommunityPage() {
           </div>
 
           {/* 2.3 공동체의 변화 */}
-          <div style={{ display: "flex", flexDirection: "column", flex: 1.25, minHeight: 0 }}>
+          <div style={{ display: "flex", flexDirection: "column" }}>
             <SectionLabel no="2.3" title="공동체의 변화" lead="끌려가는 게 아니라 내가 원하는 공동체를 선택하고 만드는 주체가 된다." />
-            <div style={{ display: "grid", gridTemplateColumns: "repeat(6, 1fr)", gap: 9, flex: 1, minHeight: 0 }}>
+            <div style={{ display: "grid", gridTemplateColumns: "repeat(6, 1fr)", gap: 9 }}>
               {COMM_DATA.map((item, i) => (
                 <div key={item.unit} style={{
                   border: `1px solid ${C.cardBorder}`,
@@ -197,7 +195,6 @@ export function IndividualCommunityPage() {
                   display: "flex",
                   flexDirection: "column",
                   gap: 7,
-                  justifyContent: "space-between",
                   position: "relative",
                 }}>
                   <div style={{ display: "flex", alignItems: "baseline", gap: 6 }}>
