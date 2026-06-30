@@ -108,11 +108,11 @@ export function IndividualCommunityPage() {
 
   return (
     <div style={{ pageBreakBefore: "always", height: "281mm", overflow: "hidden", display: "flex", flexDirection: "column" }}>
-      <Header subtitle="2. 시대에 따른 개인의 필요와 공동체" chapterNo="02" version={VERSION} />
+      <Header subtitle="2.1 시대적 변화 — 정체성의 시대" chapterNo="02" version={VERSION} />
 
       <div style={{ padding: "16px 48px 5px", borderBottom: `1px solid ${C.line}` }}>
-        <div style={{ fontSize: 16.6, fontWeight: 900, color: C.ink, lineHeight: 1.22, letterSpacing: -0.4 }}>개인이 시대마다 다른 것을 필요로 했고, 그 필요가 공동체의 모양을 바꿔 왔다.</div>
-        <div style={{ marginTop: 3, fontSize: 11.5, lineHeight: 1.4, color: C.body, fontWeight: 550 }}>농업은 신분과 생존, 산업화는 표준 교육과 일자리, 디지털은 정체성 실현을 중심으로 개인과 공동체의 관계를 다시 짠다.</div>
+        <div style={{ fontSize: 16.6, fontWeight: 900, color: C.ink, lineHeight: 1.22, letterSpacing: -0.4 }}>농업은 땅이, 산업화는 자본이, 디지털은 정체성이 생산수단이다.</div>
+        <div style={{ marginTop: 3, fontSize: 11.5, lineHeight: 1.4, color: C.body, fontWeight: 550 }}>각 시대마다 무엇을 갖춰야 살아남는가가 달랐고, 그것이 개인과 공동체의 관계를 만들었다.</div>
       </div>
 
       <div style={{ padding: "8px 48px 0", flex: 1, display: "flex", flexDirection: "column" }}>
