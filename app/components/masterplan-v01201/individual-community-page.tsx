@@ -54,6 +54,13 @@ const INDIVIDUAL_CARDS = [
     body: "남는 것은 나만이 할 수 있는 것 — 고유한 관점과 조합이다. 일찍 정체성을 발견하고 키우는 것이 생존의 조건이 된다.",
     color: C.gov,
   },
+  {
+    num: "05",
+    layer: "불변",
+    title: "몸과 곁은 그대로다",
+    body: "AI가 바꾸는 건 정체성을 발견·발휘하는 방식이지, 인간이라는 조건이 아니다. 먹고·자고·아프고·곁을 필요로 하는 몸은 디지털이 대체하지 못한다.",
+    color: C.muted,
+  },
 ];
 
 const COMM_DATA = [
@@ -61,42 +68,42 @@ const COMM_DATA = [
     unit: "가정",
     color: COMMUNITY.home,
     flow: "개인의 정체성 발견이 시작되는 곳",
-    unchanged: "생애 전환기와 일상의 안전망",
+    unchanged: "먹이고 재우고 돌보는 생애 안전망 — 몸을 건사하는 일은 집을 떠나지 않는다",
     changed: "도시 기능(교육·진료·일·쇼핑)이 가정으로 들어오면서, 정체성을 가장 먼저 발견하는 공간이 된다",
   },
   {
     unit: "이웃",
     color: COMMUNITY.neighbor,
     flow: "가정에서 찾은 정체성을 밖에서 비춰보는 곳",
-    unchanged: "우연한 만남과 일상의 관계",
+    unchanged: "위급할 때 걸어서 닿는 거리 — 우연한 만남과 손 내미는 관계는 화면이 대신 못 한다",
     changed: "지리로 묶이던 관계가 취향·가치 기반으로 — 서로의 다름을 비추며 정체성을 실험한다",
   },
   {
     unit: "마을",
     color: COMMUNITY.village,
     flow: "이웃과의 실험을 훈련으로 잇는 곳",
-    unchanged: "물리적 생활 인프라 (편의점·의료·공원)",
+    unchanged: "편의점·의료·소방·치안 — 불과 범죄와 응급은 앱이 못 막으니, 걸어서 닿는 생활 인프라는 그대로다",
     changed: "생존 공동체에서 정체성 훈련 공간으로 — 공방·스튜디오·동호회가 생활권 안에 들어온다",
   },
   {
     unit: "도시",
     color: COMMUNITY.city,
     flow: "훈련된 정체성을 기여로 펼치는 곳",
-    unchanged: "기여를 발휘하는 무대",
+    unchanged: "응급의료·대중교통·상하수도 — 사람이 모이는 물리 기반은 클릭으로 오지 않는다",
     changed: "교육·고용 집적 기능은 가정·마을로 분산되고, 정체성을 실제 기여로 잇는 생태계로 재정의된다",
   },
   {
     unit: "국가",
     color: COMMUNITY.nation,
     flow: "도시들의 기여가 충돌하지 않게 조율하는 곳",
-    unchanged: "공통 위험 관리와 최소 권리선",
+    unchanged: "국방·치안·화폐·법 — 폭력 독점과 최종 안전은 누구에게도 위임되지 않는다",
     changed: "직접 공급자에서 도시 간 조율자로 — 이동권·기회의 바닥·위험 규칙을 세운다",
   },
   {
     unit: "세계",
     color: COMMUNITY.world,
     flow: "국가를 넘는 공동 위험을 함께 다루는 곳",
-    unchanged: "국경을 넘는 위험과 협력의 무대",
+    unchanged: "영토·자원·생태계 — 공기와 기후는 국경을 가리지 않는 물리적 지구다",
     changed: "힘 대 힘 충돌을 멈추고 공멸을 막는 것이 최우선 — 새로운 세계 질서 설계가 필요해진다",
   },
 ];
@@ -156,8 +163,8 @@ export function IndividualCommunityPage() {
 
         {/* 2.2 디지털과 개인의 변화 — 4카드 가로 */}
         <div style={{ display: "flex", flexDirection: "column", flex: 1, minHeight: 0 }}>
-          <SectionLabel no="2.2" title="디지털 기술과 개인의 변화" lead="정체성을 아는 것이 곧 생존이 된다." />
-          <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr 1fr 1fr", gap: 11, flex: 1, minHeight: 0 }}>
+          <SectionLabel no="2.2" title="디지털 기술과 개인의 변화" lead="정체성을 아는 것이 곧 생존이 된다. 단, 몸이라는 조건은 그대로다." />
+          <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr 1fr 1fr 1fr", gap: 11, flex: 1, minHeight: 0 }}>
             {INDIVIDUAL_CARDS.map((card, i) => (
               <div key={card.num} style={{
                 border: `1px solid ${C.cardBorder}`,
@@ -179,7 +186,7 @@ export function IndividualCommunityPage() {
                 <div style={{ fontSize: 11.3, fontWeight: 500, color: C.body, lineHeight: 1.55 }}>
                   {card.body}
                 </div>
-                {i < 3 && (
+                {i < 4 && (
                   <span style={{ position: "absolute", right: -10, top: "50%", transform: "translateY(-50%)", fontSize: 14, fontWeight: 900, color: C.faint, zIndex: 2 }}>›</span>
                 )}
               </div>
@@ -223,6 +230,11 @@ export function IndividualCommunityPage() {
                 )}
               </div>
             ))}
+          </div>
+          <div style={{ marginTop: 7, padding: "6px 11px", background: C.accentSoft, borderRadius: 5, borderLeft: `3px solid ${C.accentDeep}` }}>
+            <span style={{ fontSize: 10.3, fontWeight: 800, color: C.accentDeep, lineHeight: 1.45 }}>
+              디지털이 대체하는 것은 거리·매개·정보다. 대체하지 못하는 것은 몸·안전·직접 만남이다 — 모든 공동체에 물리적 최후 보루가 하나씩 남는다.
+            </span>
           </div>
         </div>
 
